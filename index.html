@@ -932,10 +932,14 @@
         const premiumTabs = ['ch5', 'ch6'];
 
         // THEO DÕI ĐĂNG NHẬP
+        function getDevice() {
+  const ua = navigator.userAgent;
+  if (/mobile/i.test(ua)) return "Mobile";
+  return "Desktop";
+}
+        
         auth.onAuthStateChanged((user) => {
             if (user) {
-                auth.onAuthStateChanged((user) => {
-  if (user) {
     const userRef = db.ref("online_users/" + user.uid);
 
     userRef.set({
