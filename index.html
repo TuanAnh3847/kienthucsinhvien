@@ -923,41 +923,17 @@ const premiumTabs = ['ch5', 'ch6'];
 
 // THEO DÕI ĐĂNG NHẬP
 auth.onAuthStateChanged((user) => {
-  if (user) {
-
-    const userRef = db.ref("online_users/" + user.uid);
-
-    userRef.set({
-      name: user.displayName,
-      email: user.email,
-      avatar: user.photoURL,
-      device: getDevice(),
-      online: true,
-      time: Date.now()
-    });
-
-    userRef.onDisconnect().remove();
-
-    // HIỆN PROFILE
-    document.getElementById('nav-login-btn').classList.add('hidden');
-    document.getElementById('nav-user-profile').classList.remove('hidden');
-
-    document.getElementById('user-avatar').src = user.photoURL;
-    document.getElementById('user-name').innerText = user.displayName;
-
-    userRole = 'premium';
-
-  } else {
-    // HIỆN LOGIN LẠI
-    document.getElementById('nav-login-btn').classList.remove('hidden');
-    document.getElementById('nav-user-profile').classList.add('hidden');
-
-    userRole = 'guest';
-  }
-
-  updateUserUI();
-  forceSwitchTab(activeTabId);
+if (user) {
+userRole = 'premium'; localStorage.setItem('onthi_role', 'premium');
+document.getElementById('user-avatar').src = user.photoURL; document.getElementById('user-name').innerText = user.displayName;
+document.getElementById('welcome-modal').classList.add('hidden'); document.getElementById('unlock-modal').classList.add('hidden');
+updateUserUI();
+if (pendingTabId) { forceSwitchTab(pendingTabId); pendingTabId = null; } else { forceSwitchTab(activeTabId); }
+} else if (userRole !== 'guest') {
+showWelcomeModal();
+} else { updateUserUI(); forceSwitchTab(activeTabId); }
 });
+
 function showWelcomeModal() {
 const m = document.getElementById('welcome-modal');
 m.classList.remove('hidden'); setTimeout(() => { m.classList.remove('opacity-0'); document.getElementById('welcome-modal-content').classList.remove('scale-95'); }, 10);
