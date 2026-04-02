@@ -954,15 +954,31 @@
     userRef.onDisconnect().remove();
   }
 });
-                userRole = 'premium'; localStorage.setItem('onthi_role', 'premium');
-                document.getElementById('user-avatar').src = user.photoURL; document.getElementById('user-name').innerText = user.displayName;
-                document.getElementById('welcome-modal').classList.add('hidden'); document.getElementById('unlock-modal').classList.add('hidden');
-                updateUserUI();
-                if (pendingTabId) { forceSwitchTab(pendingTabId); pendingTabId = null; } else { forceSwitchTab(activeTabId); }
-            } else if (userRole !== 'guest') {
-                showWelcomeModal();
-            } else { updateUserUI(); forceSwitchTab(activeTabId); }
-        });
+                userRole = 'premium';
+        localStorage.setItem('onthi_role', 'premium');
+
+        document.getElementById('user-avatar').src = user.photoURL;
+        document.getElementById('user-name').innerText = user.displayName;
+
+        document.getElementById('welcome-modal').classList.add('hidden');
+        document.getElementById('unlock-modal').classList.add('hidden');
+
+        updateUserUI();
+
+        if (pendingTabId) {
+            forceSwitchTab(pendingTabId);
+            pendingTabId = null;
+        } else {
+            forceSwitchTab(activeTabId);
+        }
+
+    } else if (userRole !== 'guest') {
+        showWelcomeModal();
+    } else {
+        updateUserUI();
+        forceSwitchTab(activeTabId);
+    }
+});
 
         function showWelcomeModal() {
             const m = document.getElementById('welcome-modal');
