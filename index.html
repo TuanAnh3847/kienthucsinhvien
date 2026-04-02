@@ -923,43 +923,42 @@ const premiumTabs = ['ch5', 'ch6'];
 
 // THEO DÕI ĐĂNG NHẬP
 auth.onAuthStateChanged((user) => {
-    if (user) {
-        // LOGIN
-        userRole = 'premium';
-        localStorage.setItem('onthi_role', 'premium');
+  if (user) {
 
-        document.getElementById('nav-login-btn').classList.add('hidden');
-        document.getElementById('nav-user-profile').classList.remove('hidden');
+    const userRef = db.ref("online_users/" + user.uid);
 
-        document.getElementById('user-avatar').src = user.photoURL;
-        document.getElementById('user-name').innerText = user.displayName;
+    userRef.set({
+      name: user.displayName,
+      email: user.email,
+      avatar: user.photoURL,
+      device: getDevice(),
+      online: true,
+      time: Date.now()
+    });
 
-        document.getElementById('welcome-modal').classList.add('hidden');
-        document.getElementById('unlock-modal').classList.add('hidden');
+    userRef.onDisconnect().remove();
 
-        updateUserUI();
+    // UI LOGIN
+    userRole = 'premium';
+    localStorage.setItem('onthi_role', 'premium');
 
-        if (pendingTabId) {
-            forceSwitchTab(pendingTabId);
-            pendingTabId = null;
-        } else {
-            forceSwitchTab(activeTabId);
-        }
+    document.getElementById('user-avatar').src = user.photoURL;
+    document.getElementById('user-name').innerText = user.displayName;
 
+    updateUserUI();
+
+    if (pendingTabId) {
+      forceSwitchTab(pendingTabId);
+      pendingTabId = null;
     } else {
-        // CHƯA LOGIN
-        userRole = 'guest';
-
-        document.getElementById('nav-login-btn').classList.remove('hidden');
-        document.getElementById('nav-user-profile').classList.add('hidden');
-
-        showWelcomeModal();
-
-        updateUserUI();
-        forceSwitchTab(activeTabId);
+      forceSwitchTab(activeTabId);
     }
-});
 
+  } else {
+    updateUserUI();
+    forceSwitchTab(activeTabId);
+  }
+});
 function showWelcomeModal() {
 const m = document.getElementById('welcome-modal');
 m.classList.remove('hidden'); setTimeout(() => { m.classList.remove('opacity-0'); document.getElementById('welcome-modal-content').classList.remove('scale-95'); }, 10);
