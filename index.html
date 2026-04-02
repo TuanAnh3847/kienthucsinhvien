@@ -1005,9 +1005,7 @@
         }
 
         // --- BỘ ĐẾM SMART MOCK (BÙNG NỔ FOMO) ---
-        const connRef = db.ref('online_users'); const connectedRef = db.ref('.info/connected');
-        let realCount = 1, currentDisplay = 0, isSpiking = false;
-        connectedRef.on('value', s => { if(s.val()) { const c = connRef.push(); c.onDisconnect().remove(); c.set(true); } });
+
         connRef.on('value', s => {
             realCount = s.numChildren() || 1;
             if (currentDisplay === 0) { 
