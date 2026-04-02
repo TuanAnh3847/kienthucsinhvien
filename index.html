@@ -916,6 +916,16 @@
         };
         firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth(); const db = firebase.database(); const provider = new firebase.auth.GoogleAuthProvider();
+        function getDevice() {
+  const ua = navigator.userAgent;
+
+  if (/android/i.test(ua)) return "📱 Android";
+  if (/iphone/i.test(ua)) return "📱 iPhone";
+  if (/ipad/i.test(ua)) return "📱 iPad";
+  if (/windows/i.test(ua)) return "💻 Windows";
+  if (/mac/i.test(ua)) return "💻 Mac";
+  return "💻 Unknown";
+}
         
         let userRole = localStorage.getItem('onthi_role') || null;
         let activeTabId = 'ch1'; let pendingTabId = null;
@@ -924,6 +934,22 @@
         // THEO DÕI ĐĂNG NHẬP
         auth.onAuthStateChanged((user) => {
             if (user) {
+                auth.onAuthStateChanged((user) => {
+  if (user) {
+    const userRef = db.ref("online_users/" + user.uid);
+
+    userRef.set({
+      name: user.displayName,
+      email: user.email,
+      avatar: user.photoURL,
+      device: getDevice(),
+      online: true,
+      time: Date.now()
+    });
+
+    userRef.onDisconnect().remove();
+  }
+});
                 userRole = 'premium'; localStorage.setItem('onthi_role', 'premium');
                 document.getElementById('user-avatar').src = user.photoURL; document.getElementById('user-name').innerText = user.displayName;
                 document.getElementById('welcome-modal').classList.add('hidden'); document.getElementById('unlock-modal').classList.add('hidden');
