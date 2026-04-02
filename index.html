@@ -938,26 +938,25 @@ auth.onAuthStateChanged((user) => {
 
     userRef.onDisconnect().remove();
 
-    // UI LOGIN
-    userRole = 'premium';
-    localStorage.setItem('onthi_role', 'premium');
+    // HIỆN PROFILE
+    document.getElementById('nav-login-btn').classList.add('hidden');
+    document.getElementById('nav-user-profile').classList.remove('hidden');
 
     document.getElementById('user-avatar').src = user.photoURL;
     document.getElementById('user-name').innerText = user.displayName;
 
-    updateUserUI();
-
-    if (pendingTabId) {
-      forceSwitchTab(pendingTabId);
-      pendingTabId = null;
-    } else {
-      forceSwitchTab(activeTabId);
-    }
+    userRole = 'premium';
 
   } else {
-    updateUserUI();
-    forceSwitchTab(activeTabId);
+    // HIỆN LOGIN LẠI
+    document.getElementById('nav-login-btn').classList.remove('hidden');
+    document.getElementById('nav-user-profile').classList.add('hidden');
+
+    userRole = 'guest';
   }
+
+  updateUserUI();
+  forceSwitchTab(activeTabId);
 });
 function showWelcomeModal() {
 const m = document.getElementById('welcome-modal');
