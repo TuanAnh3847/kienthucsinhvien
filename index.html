@@ -923,15 +923,41 @@ const premiumTabs = ['ch5', 'ch6'];
 
 // THEO DÕI ĐĂNG NHẬP
 auth.onAuthStateChanged((user) => {
-if (user) {
-userRole = 'premium'; localStorage.setItem('onthi_role', 'premium');
-document.getElementById('user-avatar').src = user.photoURL; document.getElementById('user-name').innerText = user.displayName;
-document.getElementById('welcome-modal').classList.add('hidden'); document.getElementById('unlock-modal').classList.add('hidden');
-updateUserUI();
-if (pendingTabId) { forceSwitchTab(pendingTabId); pendingTabId = null; } else { forceSwitchTab(activeTabId); }
-} else if (userRole !== 'guest') {
-showWelcomeModal();
-} else { updateUserUI(); forceSwitchTab(activeTabId); }
+    if (user) {
+        // LOGIN
+        userRole = 'premium';
+        localStorage.setItem('onthi_role', 'premium');
+
+        document.getElementById('nav-login-btn').classList.add('hidden');
+        document.getElementById('nav-user-profile').classList.remove('hidden');
+
+        document.getElementById('user-avatar').src = user.photoURL;
+        document.getElementById('user-name').innerText = user.displayName;
+
+        document.getElementById('welcome-modal').classList.add('hidden');
+        document.getElementById('unlock-modal').classList.add('hidden');
+
+        updateUserUI();
+
+        if (pendingTabId) {
+            forceSwitchTab(pendingTabId);
+            pendingTabId = null;
+        } else {
+            forceSwitchTab(activeTabId);
+        }
+
+    } else {
+        // CHƯA LOGIN
+        userRole = 'guest';
+
+        document.getElementById('nav-login-btn').classList.remove('hidden');
+        document.getElementById('nav-user-profile').classList.add('hidden');
+
+        showWelcomeModal();
+
+        updateUserUI();
+        forceSwitchTab(activeTabId);
+    }
 });
 
 function showWelcomeModal() {
