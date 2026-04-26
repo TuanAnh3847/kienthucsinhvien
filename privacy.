@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính Sách Bảo Mật - Edu Connect</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased">
+    <nav class="bg-white border-b border-stone-200 py-4">
+        <div class="max-w-4xl mx-auto px-4 flex items-center gap-3">
+            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8">
+            <h1 class="font-extrabold text-blue-800 text-xl">EDU CONNECT</h1>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200">
+            <h2 class="text-3xl font-bold mb-6 border-b pb-4">Chính Sách Bảo Mật (Privacy Policy)</h2>
+            
+            <div class="space-y-6 text-stone-600 leading-relaxed">
+                <section>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">1. Giới thiệu chung</h3>
+                    <p>Edu Connect cam kết bảo vệ thông tin cá nhân của người dùng (sinh viên). Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ dữ liệu khi bạn sử dụng tính năng đăng nhập bằng Google trên nền tảng của chúng tôi.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">2. Dữ liệu chúng tôi thu thập</h3>
+                    <p>Khi bạn sử dụng "Đăng nhập bằng Google" (Google OAuth), chúng tôi chỉ yêu cầu quyền truy cập vào các thông tin cơ bản nhất bao gồm:</p>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Địa chỉ Email cá nhân.</li>
+                        <li>Tên hiển thị (Display Name).</li>
+                        <li>Ảnh đại diện (Profile Picture).</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">3. Mục đích sử dụng dữ liệu</h3>
+                    <p>Chúng tôi sử dụng thông tin của bạn ĐƠN THUẦN cho các mục đích:</p>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Tạo và quản lý tài khoản người dùng trên Edu Connect.</li>
+                        <li>Đồng bộ lịch sử học tập và tiến độ giải bài tập.</li>
+                        <li>Hiển thị tên và avatar trên giao diện để cá nhân hóa trải nghiệm.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">4. Cam kết bảo mật</h3>
+                    <p>Edu Connect tuyệt đối KHÔNG bán, trao đổi hoặc chia sẻ thông tin cá nhân của bạn cho bất kỳ bên thứ ba nào. Dữ liệu được lưu trữ an toàn trên nền tảng Firebase của Google.</p>
+                </section>
+                
+                <div class="mt-8 pt-6 border-t border-stone-200 text-sm text-stone-500">
+                    <p>Cập nhật lần cuối: Tháng 4/2026</p>
+                    <p>Liên hệ: tuannguyen3847@gmail.com</p>
+                    <a href="index.html" class="text-blue-600 font-bold mt-4 inline-block hover:underline">← Quay lại Trang chủ</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
