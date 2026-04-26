@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu Connect - Nền tảng Ôn thi Trực tuyến</title>
+    
+    <!-- FAVICON LOGO EDU CONNECT CỦA BẠN -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+
+    <style>
+        .glass-panel { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .course-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .course-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .bg-pattern { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased bg-pattern min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Brand -->
+                <div class="flex items-center gap-3">
+                    <img src="/android-chrome-192x192.png" alt="Edu Connect Logo" class="h-10 w-10 object-contain rounded-full shadow-sm border border-stone-200">
+                    <div>
+                        <h1 class="font-extrabold text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
+                        <p class="text-[10px] text-stone-500 font-semibold uppercase tracking-wider hidden sm:block">Nâng tầm tri thức - Kết nối tương lai</p>
+                    </div>
+                </div>
+
+                <!-- User Area -->
+                <div class="flex items-center">
+                    <button id="nav-login-btn" onclick="loginGoogle()" class="text-sm font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg border border-blue-200 transition-colors shadow-sm flex items-center gap-2">
+                        <span class="text-lg">G</span> Đăng nhập
+                    </button>
+                    <div id="nav-user-profile" class="hidden flex items-center gap-3 cursor-pointer group bg-white px-3 py-1.5 rounded-full border border-stone-200 shadow-sm" onclick="logout()">
+                        <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-blue-200">
+                        <span id="user-name" class="text-sm font-bold text-slate-700 hidden sm:block group-hover:text-blue-600 transition-colors">Sinh Viên</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="flex-grow flex flex-col items-center pt-16 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">Hệ Sinh Thái Ôn Thi <br><span class="text-blue-600">Độc Quyền</span></h2>
+            <p class="text-lg text-stone-600 leading-relaxed">Chọn môn học bên dưới để mở khóa kho tàng bí kíp, trắc nghiệm và mô hình tính toán thông minh. Cày cuốc hôm nay, A+ ngày mai!</p>
+        </div>
+
+        <!-- Lưới Chọn Môn Học -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
+
+            <!-- CARD 1: KINH TẾ QUỐC TẾ (Link tới file ktqt.html) -->
+            <a href="ktqt.html" class="course-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm relative overflow-hidden group block cursor-pointer">
+                <div class="absolute top-0 right-0 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">HOT</div>
+                <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">🌍</div>
+                <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-teal-600 transition-colors">Kinh Tế Quốc Tế</h3>
+                <p class="text-sm text-stone-500 mb-4 line-clamp-2">Lý thuyết cổ điển, thuế quan, hạn ngạch, đồ thị Bath-tub di chuyển nguồn lực và máy tính ERP.</p>
+                <div class="flex items-center gap-2 text-teal-600 text-sm font-bold mt-auto pt-4 border-t border-stone-100">
+                    <span>Vào học ngay</span> <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+            </a>
+
+            <!-- CARD 2: COMING SOON -->
+            <div class="bg-stone-50 rounded-2xl p-6 border border-stone-200 border-dashed relative overflow-hidden cursor-not-allowed opacity-80">
+                <div class="w-14 h-14 bg-stone-200 text-stone-500 rounded-2xl flex items-center justify-center text-3xl mb-4">📐</div>
+                <h3 class="text-xl font-bold text-stone-400 mb-2">Toán Cao Cấp</h3>
+                <p class="text-sm text-stone-400 mb-4 line-clamp-2">Đạo hàm, tích phân, ma trận nghịch đảo và hệ phương trình tuyến tính.</p>
+                <div class="flex items-center gap-2 text-stone-400 text-sm font-bold mt-auto pt-4 border-t border-stone-100">
+                    <span>⏳ Sắp ra mắt...</span>
+                </div>
+            </div>
+
+            <!-- CARD 3: COMING SOON -->
+            <div class="bg-stone-50 rounded-2xl p-6 border border-stone-200 border-dashed relative overflow-hidden cursor-not-allowed opacity-80">
+                <div class="w-14 h-14 bg-stone-200 text-stone-500 rounded-2xl flex items-center justify-center text-3xl mb-4">📈</div>
+                <h3 class="text-xl font-bold text-stone-400 mb-2">Kinh Tế Vĩ Mô</h3>
+                <p class="text-sm text-stone-400 mb-4 line-clamp-2">Mô hình IS-LM, lạm phát, thất nghiệp và các chính sách tài khóa, tiền tệ.</p>
+                <div class="flex items-center gap-2 text-stone-400 text-sm font-bold mt-auto pt-4 border-t border-stone-100">
+                    <span>⏳ Sắp ra mắt...</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-200 bg-white py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 mx-auto mb-3 opacity-50 grayscale">
+            <p class="text-sm text-stone-500 font-medium">© 2024 Edu Connect. Developed for Students.</p>
+            <p class="text-xs text-stone-400 mt-1">Hệ sinh thái học tập trực tuyến thông minh</p>
+        </div>
+    </footer>
+
+    <!-- Firebase Logic for Homepage -->
+    <script>
+        // CẤU HÌNH FIREBASE DÙNG CHUNG CỦA BẠN
+        const firebaseConfig = {
+            apiKey: "AIzaSyAumlNTtA9jjwTTvQzRGEKkPnVbYcsd-TA",
+            authDomain: "tuananh-6b0a0.firebaseapp.com",
+            databaseURL: "https://tuananh-6b0a0-default-rtdb.firebaseio.com",
+            projectId: "tuananh-6b0a0",
+            storageBucket: "tuananh-6b0a0.firebasestorage.app",
+            messagingSenderId: "935684041177",
+            appId: "1:935684041177:web:f2cfe5dbc27275d8c611c8"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        // Đăng nhập
+        window.loginGoogle = () => auth.signInWithPopup(provider).catch(e => alert(e.message));
+        
+        // Đăng xuất
+        window.logout = () => { 
+            if(confirm("Bạn có muốn đăng xuất khỏi Edu Connect?")) { 
+                auth.signOut().then(() => {
+                    localStorage.removeItem('onthi_role');
+                    window.location.reload();
+                }); 
+            } 
+        };
+
+        // Theo dõi trạng thái đăng nhập
+        auth.onAuthStateChanged((user) => {
+            const loginBtn = document.getElementById('nav-login-btn');
+            const userProfile = document.getElementById('nav-user-profile');
+            
+            if (user) {
+                // Đã đăng nhập
+                localStorage.setItem('onthi_role', 'premium'); // Set quyền để khi vào trang KTQT không bị hỏi lại
+                loginBtn.classList.add('hidden');
+                userProfile.classList.remove('hidden');
+                document.getElementById('user-avatar').src = user.photoURL;
+                document.getElementById('user-name').innerText = user.displayName;
+            } else {
+                // Chưa đăng nhập
+                loginBtn.classList.remove('hidden');
+                userProfile.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
