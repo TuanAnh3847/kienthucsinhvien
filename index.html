@@ -13,12 +13,12 @@
 <title>Ôn thi Kinh tế Quốc tế UEL - Trắc nghiệm, tài liệu, đề thi</title>
 <meta name="description" content="Website ôn thi Kinh tế Quốc tế UEL, trắc nghiệm, đề thi, tài liệu giúp sinh viên ôn tập hiệu quả">
 <script src="https://cdn.tailwindcss.com"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- FIREBASE COMPAT SDKs -->
-<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
-<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<!-- TỐI ƯU: Thêm thuộc tính defer để không chặn tải trang -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
 
 <style>
 .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; background-color: #ffffff; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
@@ -744,7 +744,6 @@ Nước 2: $L_2 = -14 + 29 =$ <span id="ex-l2-calc" class="font-bold text-rose-7
 <span class="text-orange-700 text-2xl font-black">+<span id="ex-v2-gnp">2</span>$</span>
 </li>
 </ul>
-<!-- Hidden elements for script references -->
 </div>
 </div>
 </div>
@@ -757,29 +756,22 @@ Nước 2: $L_2 = -14 + 29 =$ <span id="ex-l2-calc" class="font-bold text-rose-7
 <script>
 // 1. Calculator ERP
 function calculateERP() { 
-    const tVal = document.getElementById('erp-t').value;
-    const tiVal = document.getElementById('erp-ti').value;
-    const aiVal = document.getElementById('erp-ai').value;
+const tVal = document.getElementById('erp-t').value;
+const tiVal = document.getElementById('erp-ti').value;
+const aiVal = document.getElementById('erp-ai').value;
 
-    // Check rỗng hoặc nhập chữ
-    if(!tVal || !tiVal || !aiVal) return; 
+if(!tVal || !tiVal || !aiVal) return; 
 
-    const t = parseFloat(tVal)/100;
-    const ti = parseFloat(tiVal)/100;
-    const ai = parseFloat(aiVal); 
-    
-    if (isNaN(t) || isNaN(ti) || isNaN(ai)) return;
-    if (ai >= 1) { alert("Tỷ trọng ai phải < 1"); return; }
-    
-    const ep = ((t-(ai*ti))/(1-ai)*100).toFixed(2); 
-    // ... phần còn lại giữ nguyên
-}
-const t=parseFloat(document.getElementById('erp-t').value)/100, ti=parseFloat(document.getElementById('erp-ti').value)/100, ai=parseFloat(document.getElementById('erp-ai').value); 
+const t=parseFloat(tVal)/100, ti=parseFloat(tiVal)/100, ai=parseFloat(aiVal); 
+
+if (isNaN(t) || isNaN(ti) || isNaN(ai)) return;
 if(ai>=1){alert("Tỷ trọng ai phải < 1");return;}
+
 const ep=((t-(ai*ti))/(1-ai)*100).toFixed(2); 
 document.getElementById('erp-value').innerText=ep+"%"; 
 document.getElementById('erp-interpretation').innerText = ep > (t*100) ? "Bảo hộ thực sự." : (ep < 0 ? "Bẫy ERP Âm - Bị trừng phạt" : "Bảo hộ kém.");
 document.getElementById('erp-result-box').classList.remove('hidden'); 
+
 const rb = document.getElementById('erp-result-box'), vd = document.getElementById('erp-value');
 if(ep > (t*100)) { rb.className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200"; vd.className="text-3xl font-extrabold text-green-700"; }
 else if(ep < 0) { rb.className="mt-4 p-4 bg-red-50 rounded-lg border border-red-200"; vd.className="text-3xl font-extrabold text-red-700"; }
@@ -879,9 +871,7 @@ else { statusEl.innerText = "Tiền lương CÂN BẰNG!"; statusEl.className = 
 dualLaborChart.data.datasets[2].data = [{x: L1, y: 0}, {x: L1, y: 30}]; dualLaborChart.update();
 
 // LIVE UPDATE CÁC VÍ DỤ TỰ LUẬN
-document.getElementById('ex-w1-init').innerText = w1; document.getElementById('ex-w2-init').innerText = w2; 
-document.getElementById('ex-w1-calc').innerText = w1; document.getElementById('ex-w2-calc').innerText = w2; 
-
+document.getElementById('ex-l1-calc').innerText = L1; document.getElementById('ex-l2-calc').innerText = L2; 
 
 const L1Star=18, L2Star=17; 
 let mA = 0, flowText = "", moveCalcStr = ""; 
@@ -916,7 +906,7 @@ document.getElementById('ex-v2-gdp').innerText = 0; document.getElementById('ex-
 }
 </script>
 
-<!-- 🚀 FIREBASE, AUTH & SMART COUNTER 🚀 -->
+<!-- 🚀 FIREBASE, AUTH, TRACKER & SMART COUNTER 🚀 -->
 <script>
 // CHÌA KHÓA VÀNG FIREBASE CỦA ÔNG TÚ
 const firebaseConfig = {
@@ -936,6 +926,39 @@ let userRole = localStorage.getItem('onthi_role') || null;
 let activeTabId = 'ch1'; let pendingTabId = null;
 const premiumTabs = ['ch5', 'ch6'];
 
+
+// ==========================================
+// TÍNH NĂNG MỚI: THEO DÕI THÔNG TIN NGƯỜI DÙNG
+// ==========================================
+function saveUserInfoToDatabase(user) {
+    // 1. Phân tích thiết bị (Làm cho đẹp log)
+    const ua = navigator.userAgent;
+    let deviceName = "Khác/Desktop";
+    if (/android/i.test(ua)) deviceName = "Điện thoại Android";
+    else if (/iPad|iPhone|iPod/.test(ua)) deviceName = "iPhone/iPad (iOS)";
+    else if (/Windows/.test(ua)) deviceName = "Máy tính Windows";
+    else if (/Macintosh/.test(ua)) deviceName = "Macbook (macOS)";
+
+    // 2. Gom dữ liệu cần lưu
+    const userInfo = {
+        name: user.displayName,
+        email: user.email,
+        photoURL: user.photoURL,
+        uid: user.uid,
+        device_type: deviceName,
+        raw_user_agent: ua,
+        last_login_time: new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" }),
+        timestamp: firebase.database.ServerValue.TIMESTAMP // Giờ chuẩn của server Firebase
+    };
+
+    // 3. Đẩy lên Realtime Database (Ghi đè hoặc cập nhật vào node 'users/<uid>')
+    db.ref('users/' + user.uid).update(userInfo)
+      .then(() => console.log("Đã lưu thông tin người dùng thành công!"))
+      .catch((error) => console.error("Lỗi khi lưu thông tin:", error));
+}
+// ==========================================
+
+
 // THEO DÕI ĐĂNG NHẬP
 auth.onAuthStateChanged((user) => {
 if (user) {
@@ -943,6 +966,10 @@ userRole = 'premium'; localStorage.setItem('onthi_role', 'premium');
 document.getElementById('user-avatar').src = user.photoURL; document.getElementById('user-name').innerText = user.displayName;
 document.getElementById('welcome-modal').classList.add('hidden'); document.getElementById('unlock-modal').classList.add('hidden');
 updateUserUI();
+
+// Gọi hàm lưu thông tin ngay tại đây!
+saveUserInfoToDatabase(user);
+
 if (pendingTabId) { forceSwitchTab(pendingTabId); pendingTabId = null; } else { forceSwitchTab(activeTabId); }
 } else if (userRole !== 'guest') {
 showWelcomeModal();
