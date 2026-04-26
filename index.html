@@ -35,6 +35,8 @@
 .modal-overlay { background-color: rgba(28, 25, 23, 0.75); backdrop-filter: blur(4px); }
 .google-btn { background-color: #ffffff; color: #3c4043; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); transition: background-color 0.2s, box-shadow 0.2s; }
 .google-btn:hover { background-color: #f8f9fa; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); }
+
+/* Đã sửa tên animation thành pulse-dot */
 @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 .live-pulse { animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 </style>
@@ -756,99 +758,156 @@ Nước 2: $L_2 = -14 + 29 =$ <span id="ex-l2-calc" class="font-bold text-rose-7
 <script>
 // 1. Calculator ERP
 function calculateERP() { 
-const tVal = document.getElementById('erp-t').value;
-const tiVal = document.getElementById('erp-ti').value;
-const aiVal = document.getElementById('erp-ai').value;
+    const tVal = document.getElementById('erp-t').value;
+    const tiVal = document.getElementById('erp-ti').value;
+    const aiVal = document.getElementById('erp-ai').value;
 
-if(!tVal || !tiVal || !aiVal) return; 
+    // Check trường hợp chưa nhập đủ
+    if(!tVal || !tiVal || !aiVal) return; 
 
-const t=parseFloat(tVal)/100, ti=parseFloat(tiVal)/100, ai=parseFloat(aiVal); 
+    const t = parseFloat(tVal)/100;
+    const ti = parseFloat(tiVal)/100;
+    const ai = parseFloat(aiVal); 
 
-if (isNaN(t) || isNaN(ti) || isNaN(ai)) return;
-if(ai>=1){alert("Tỷ trọng ai phải < 1");return;}
+    // Check trường hợp nhập tào lao (chữ, ký tự đặc biệt)
+    if (isNaN(t) || isNaN(ti) || isNaN(ai)) return;
+    if (ai >= 1) { alert("Tỷ trọng ai phải < 1"); return; }
 
-const ep=((t-(ai*ti))/(1-ai)*100).toFixed(2); 
-document.getElementById('erp-value').innerText=ep+"%"; 
-document.getElementById('erp-interpretation').innerText = ep > (t*100) ? "Bảo hộ thực sự." : (ep < 0 ? "Bẫy ERP Âm - Bị trừng phạt" : "Bảo hộ kém.");
-document.getElementById('erp-result-box').classList.remove('hidden'); 
-
-const rb = document.getElementById('erp-result-box'), vd = document.getElementById('erp-value');
-if(ep > (t*100)) { rb.className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200"; vd.className="text-3xl font-extrabold text-green-700"; }
-else if(ep < 0) { rb.className="mt-4 p-4 bg-red-50 rounded-lg border border-red-200"; vd.className="text-3xl font-extrabold text-red-700"; }
-else { rb.className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200"; vd.className="text-3xl font-extrabold text-amber-700"; }
+    const ep = ((t-(ai*ti))/(1-ai)*100).toFixed(2); 
+    document.getElementById('erp-value').innerText = ep + "%"; 
+    document.getElementById('erp-interpretation').innerText = ep > (t*100) ? "Bảo hộ thực sự." : (ep < 0 ? "Bẫy ERP Âm - Bị trừng phạt" : "Bảo hộ kém.");
+    document.getElementById('erp-result-box').classList.remove('hidden'); 
+    
+    const rb = document.getElementById('erp-result-box'), vd = document.getElementById('erp-value');
+    if(ep > (t*100)) { rb.className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200"; vd.className="text-3xl font-extrabold text-green-700"; }
+    else if(ep < 0) { rb.className="mt-4 p-4 bg-red-50 rounded-lg border border-red-200"; vd.className="text-3xl font-extrabold text-red-700"; }
+    else { rb.className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200"; vd.className="text-3xl font-extrabold text-amber-700"; }
 }
 
 // 2. Charts Initialization
 let sdChart, laborChart, dualLaborChart; const maxMPL = 20;
 
-// Plugin vẽ chữ a,b,c,d và vạch ngăn cách lên đồ thị Cung Cầu Thuế Quan
+// Plugin vẽ chữ a,b,c,d, màu nền, vạch ngăn cách và chú thích Cung Cầu
 const sdLabelPlugin = {
     id: 'sdLabels',
+    beforeDraw(chart) {
+        // TÔ MÀU NỀN TRƯỚC KHI VẼ ĐƯỜNG ĐỂ KHÔNG BỊ ĐÈ LÊN ĐƯỜNG KẺ
+        const ctx = chart.ctx;
+        const xAxis = chart.scales.x;
+        const yAxis = chart.scales.y;
+        ctx.save();
+
+        // 1. Tô màu vùng DWL (b và d) - Vàng
+        ctx.fillStyle = 'rgba(245, 158, 11, 0.3)'; // Vàng amber
+        // Tam giác b
+        ctx.beginPath();
+        ctx.moveTo(xAxis.getPixelForValue(0), yAxis.getPixelForValue(20));
+        ctx.lineTo(xAxis.getPixelForValue(20), yAxis.getPixelForValue(20));
+        ctx.lineTo(xAxis.getPixelForValue(20), yAxis.getPixelForValue(30));
+        ctx.fill();
+        // Tam giác d
+        ctx.beginPath();
+        ctx.moveTo(xAxis.getPixelForValue(80), yAxis.getPixelForValue(30));
+        ctx.lineTo(xAxis.getPixelForValue(80), yAxis.getPixelForValue(20));
+        ctx.lineTo(xAxis.getPixelForValue(100), yAxis.getPixelForValue(20));
+        ctx.fill();
+
+        // 2. Tô màu vùng Ngân sách CP (c) - Xanh lá nhạt
+        ctx.fillStyle = 'rgba(21, 128, 61, 0.15)'; // Xanh lá
+        ctx.fillRect(
+            xAxis.getPixelForValue(20),
+            yAxis.getPixelForValue(30),
+            xAxis.getPixelForValue(80) - xAxis.getPixelForValue(20),
+            yAxis.getPixelForValue(20) - yAxis.getPixelForValue(30)
+        );
+
+        // 3. Tô màu vùng Thặng dư SX (a) - Xanh dương nhạt (Bonus cho đẹp)
+        ctx.fillStyle = 'rgba(29, 78, 216, 0.15)'; // Xanh blue
+        ctx.beginPath();
+        ctx.moveTo(xAxis.getPixelForValue(0), yAxis.getPixelForValue(20));
+        ctx.lineTo(xAxis.getPixelForValue(20), yAxis.getPixelForValue(30));
+        ctx.lineTo(xAxis.getPixelForValue(0), yAxis.getPixelForValue(30));
+        ctx.fill();
+
+        ctx.restore();
+    },
     afterDraw(chart) {
         const ctx = chart.ctx; 
         const xAxis = chart.scales.x; 
         const yAxis = chart.scales.y;
-        
         ctx.save();
         
-        // ==================================================
-        // TÍNH NĂNG MỚI: VẼ ĐƯỜNG NGĂN CÁCH CÁC Ô (NET ĐỨT)
-        // ==================================================
-        ctx.lineWidth = 1.5; // Độ dày của vạch
-        ctx.strokeStyle = '#4b5563'; // Màu xám đậm (stone-600 cho tệp với viền)
-        ctx.setLineDash([5, 5]); // Tạo nét đứt (5px gạch, 5px khoảng trống) chuẩn SGK
+        // Vẽ đường ngăn cách nét đứt cho 3 ô
+        ctx.lineWidth = 1.5; 
+        ctx.strokeStyle = '#4b5563'; 
+        ctx.setLineDash([5, 5]); 
         ctx.beginPath();
-        
-        // Vạch 1: Tại Q = 20, kéo từ P = 30 xuống P = 20 (Ngăn ô a,b với ô c)
         ctx.moveTo(xAxis.getPixelForValue(20), yAxis.getPixelForValue(30));
         ctx.lineTo(xAxis.getPixelForValue(20), yAxis.getPixelForValue(20));
-        
-        // Vạch 2: Tại Q = 80, kéo từ P = 30 xuống P = 20 (Ngăn ô c với ô d)
         ctx.moveTo(xAxis.getPixelForValue(80), yAxis.getPixelForValue(30));
         ctx.lineTo(xAxis.getPixelForValue(80), yAxis.getPixelForValue(20));
-        
-        ctx.stroke(); // Thực thi nét vẽ
-        ctx.setLineDash([]); // Reset lại nét liền để không bị lây sang nét vẽ chữ
-        // ==================================================
+        ctx.stroke(); 
+        ctx.setLineDash([]); 
 
         // Cài đặt font chữ cho a, b, c, d
         ctx.font = 'bold 20px sans-serif'; 
         ctx.textAlign = 'center'; 
         ctx.textBaseline = 'middle';
         
-        // Vùng a (PS tăng)
-        ctx.fillStyle = '#1d4ed8'; 
+        ctx.fillStyle = '#1d4ed8'; // a (Xanh)
         ctx.fillText('a', xAxis.getPixelForValue(6), yAxis.getPixelForValue(26.5));
-        
-        // Vùng b (DWL sx)
-        ctx.fillStyle = '#b91c1c'; 
+        ctx.fillStyle = '#b91c1c'; // b (Đỏ)
         ctx.fillText('b', xAxis.getPixelForValue(13), yAxis.getPixelForValue(23.5));
-        
-        // Vùng c (Thuế CP)
-        ctx.fillStyle = '#15803d'; 
+        ctx.fillStyle = '#15803d'; // c (Xanh lá)
         ctx.fillText('c', xAxis.getPixelForValue(50), yAxis.getPixelForValue(25));
-        
-        // Vùng d (DWL td)
-        ctx.fillStyle = '#b91c1c'; 
+        ctx.fillStyle = '#b91c1c'; // d (Đỏ)
         ctx.fillText('d', xAxis.getPixelForValue(86), yAxis.getPixelForValue(23.5));
-        
+
+        // ==========================================
+        // VẼ KÝ HIỆU CUNG, CẦU, GIÁ LÊN ĐỒ THỊ
+        // ==========================================
+        ctx.font = 'bold 14px sans-serif';
+        // Cầu (D)
+        ctx.fillStyle = '#ef4444'; // Màu đỏ cho Cầu
+        ctx.textAlign = 'left';
+        ctx.fillText('D (Cầu)', xAxis.getPixelForValue(125), yAxis.getPixelForValue(10));
+        // Cung (S)
+        ctx.fillStyle = '#3b82f6'; // Màu xanh cho Cung
+        ctx.fillText('S (Cung)', xAxis.getPixelForValue(88), yAxis.getPixelForValue(68));
+        // Pw
+        ctx.fillStyle = '#6b7280'; // Màu xám cho Pw
+        ctx.fillText('Pw = 20$', xAxis.getPixelForValue(120), yAxis.getPixelForValue(17));
+        // Pd
+        ctx.fillStyle = '#10b981'; // Màu xanh green cho Pd
+        ctx.fillText('Pd = 30$', xAxis.getPixelForValue(120), yAxis.getPixelForValue(33));
+
         ctx.restore();
     }
 };
+
 function initSDChart() { 
-const ctx = document.getElementById('sdChart').getContext('2d'); 
-sdChart = new Chart(ctx, { 
-type: 'line', 
-data: { datasets: [ 
-{label:'Cầu (D)',data:[{x:0,y:70},{x:140,y:0}],borderColor:'#ef4444',borderWidth:2,pointRadius:0}, 
-{label:'Cung (S)',data:[{x:0,y:20},{x:100,y:70}],borderColor:'#3b82f6',borderWidth:2,pointRadius:0}, 
-{label:'Pw=20',data:[{x:0,y:20},{x:140,y:20}],borderColor:'#9ca3af',borderDash:[5,5],borderWidth:2,pointRadius:0}, 
-{label:'Pd=30',data:[{x:0,y:30},{x:140,y:30}],borderColor:'#10b981',borderDash:[5,5],borderWidth:2,pointRadius:0}, 
-{label:'DWL',data:[{x:0,y:20},{x:20,y:30},{x:80,y:30},{x:100,y:20}],backgroundColor:'rgba(245, 158, 11, 0.3)',fill:'-2',borderWidth:0,pointRadius:0} 
-] }, 
-options: {responsive:true,maintainAspectRatio:false,plugins:{tooltip:{enabled:false},legend:{position:'bottom',labels:{boxWidth:10}}},scales:{x:{title:{display:true,text:'Sản lượng (Q)',font:{weight:'bold'}},type:'linear',min:0,max:140},y:{title:{display:true,text:'Giá cả (P)',font:{weight:'bold'}},min:0,max:80}}},
-plugins: [sdLabelPlugin]
-}); 
+    const ctx = document.getElementById('sdChart').getContext('2d'); 
+    sdChart = new Chart(ctx, { 
+        type: 'line', 
+        data: { 
+            datasets: [ 
+                {label:'Cầu (D)',data:[{x:0,y:70},{x:140,y:0}],borderColor:'#ef4444',borderWidth:2,pointRadius:0}, 
+                {label:'Cung (S)',data:[{x:0,y:20},{x:100,y:70}],borderColor:'#3b82f6',borderWidth:2,pointRadius:0}, 
+                {label:'Pw=20',data:[{x:0,y:20},{x:140,y:20}],borderColor:'#9ca3af',borderDash:[5,5],borderWidth:2,pointRadius:0}, 
+                {label:'Pd=30',data:[{x:0,y:30},{x:140,y:30}],borderColor:'#10b981',borderDash:[5,5],borderWidth:2,pointRadius:0}
+            ] 
+        }, 
+        options: {
+            responsive:true,
+            maintainAspectRatio:false,
+            plugins:{tooltip:{enabled:false},legend:{position:'bottom',labels:{boxWidth:10}}},
+            scales:{
+                x:{title:{display:true,text:'Sản lượng (Q)',font:{weight:'bold'}},type:'linear',min:0,max:140},
+                y:{title:{display:true,text:'Giá cả (P)',font:{weight:'bold'}},min:0,max:80}
+            }
+        },
+        plugins: [sdLabelPlugin]
+    }); 
 }
 
 // Plugin vẽ chữ A, B lên đồ thị 1 Quốc gia
@@ -1000,12 +1059,9 @@ function saveUserInfoToDatabase(user) {
     const userInfo = {
         name: user.displayName,
         email: user.email,
-        photoURL: user.photoURL,
-        uid: user.uid,
         device_type: detectDevice(ua), // <--- Dữ liệu thiết bị siêu chi tiết sẽ nằm ở đây!
         raw_user_agent: ua,
         last_login_time: new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" }),
-        timestamp: firebase.database.ServerValue.TIMESTAMP
     };
 
     // 4. Ghi đè/Cập nhật lên Database
