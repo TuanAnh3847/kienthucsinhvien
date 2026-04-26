@@ -928,30 +928,53 @@ const premiumTabs = ['ch5', 'ch6'];
 
 
 // ==========================================
-// TÍNH NĂNG MỚI: THEO DÕI THÔNG TIN NGƯỜI DÙNG
+// TÍNH NĂNG MỚI: THEO DÕI THÔNG TIN NGƯỜI DÙNG (BẢN NÂNG CẤP XỊN SÒ)
 // ==========================================
 function saveUserInfoToDatabase(user) {
-    // 1. Phân tích thiết bị (Làm cho đẹp log)
     const ua = navigator.userAgent;
-    let deviceName = "Khác/Desktop";
-    if (/android/i.test(ua)) deviceName = "Điện thoại Android";
-    else if (/iPad|iPhone|iPod/.test(ua)) deviceName = "iPhone/iPad (iOS)";
-    else if (/Windows/.test(ua)) deviceName = "Máy tính Windows";
-    else if (/Macintosh/.test(ua)) deviceName = "Macbook (macOS)";
+    
+    // Hàm tự động "soi" thiết bị và trình duyệt cực xịn
+    function detectDevice(userAgent) {
+        let device = "Khác/Desktop";
+        
+        // 1. Check hệ điều hành & Thiết bị Apple/Android/Win
+        if (/iPhone/i.test(userAgent)) device = "📱 iPhone";
+        else if (/iPad/i.test(userAgent)) device = "📿 iPad";
+        else if (/Macintosh/i.test(userAgent)) device = "💻 Máy Mac (Macbook/iMac)";
+        else if (/Android/i.test(userAgent)) {
+            // Ráng "soi" thêm mã máy Android (nếu trình duyệt có cung cấp)
+            const match = userAgent.match(/Android\s+[0-9\.]+(?:;\s+([^;]+)\s+Build)?/i);
+            const model = (match && match[1]) ? ` [Mã máy: ${match[1].trim()}]` : "";
+            device = "🤖 Android" + model;
+        }
+        else if (/Windows/i.test(userAgent)) device = "🖥️ Máy tính Windows";
+        else if (/Linux/i.test(userAgent)) device = "🐧 Máy tính Linux";
 
-    // 2. Gom dữ liệu cần lưu
+        // 2. Check luôn trình duyệt cho chuyên nghiệp
+        let browser = "Trình duyệt lạ";
+        if (/Edg/i.test(userAgent)) browser = "Edge";
+        else if (/Chrome|CriOS/i.test(userAgent)) browser = "Chrome";
+        else if (/Firefox|FxiOS/i.test(userAgent)) browser = "Firefox";
+        else if (/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) browser = "Safari";
+
+        return `${device} (Dùng ${browser})`;
+    }
+
+    // 3. Gom dữ liệu đẩy lên Firebase
     const userInfo = {
         name: user.displayName,
         email: user.email,
         photoURL: user.photoURL,
-        device_type: deviceName,
+        uid: user.uid,
+        device_type: detectDevice(ua), // <--- Dữ liệu thiết bị siêu chi tiết sẽ nằm ở đây!
         raw_user_agent: ua,
         last_login_time: new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" }),
+        timestamp: firebase.database.ServerValue.TIMESTAMP
     };
 
-    // 3. Đẩy lên Realtime Database (Ghi đè hoặc cập nhật vào node 'users/<uid>')
+    // 4. Ghi đè/Cập nhật lên Database
     db.ref('users/' + user.uid).update(userInfo)
-      .then(() => console.log("Đã lưu thông tin người dùng thành công!"))
+      .then(() => console.log("Đã lưu thông tin người dùng cực chi tiết!"))
       .catch((error) => console.error("Lỗi khi lưu thông tin:", error));
 }
 // ==========================================
