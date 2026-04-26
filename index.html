@@ -13,12 +13,12 @@
 <title>Ôn thi Kinh tế Quốc tế UEL - Trắc nghiệm, tài liệu, đề thi</title>
 <meta name="description" content="Website ôn thi Kinh tế Quốc tế UEL, trắc nghiệm, đề thi, tài liệu giúp sinh viên ôn tập hiệu quả">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <!-- FIREBASE COMPAT SDKs -->
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
 
 <style>
 .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; background-color: #ffffff; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
@@ -35,8 +35,8 @@
 .modal-overlay { background-color: rgba(28, 25, 23, 0.75); backdrop-filter: blur(4px); }
 .google-btn { background-color: #ffffff; color: #3c4043; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); transition: background-color 0.2s, box-shadow 0.2s; }
 .google-btn:hover { background-color: #f8f9fa; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); }
-@keyframes pulse-red { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-.live-pulse { animation: pulse-red 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.live-pulse { animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 </style>
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
@@ -745,7 +745,6 @@ Nước 2: $L_2 = -14 + 29 =$ <span id="ex-l2-calc" class="font-bold text-rose-7
 </li>
 </ul>
 <!-- Hidden elements for script references -->
-<div class="hidden"><span id="ex-w1-init"></span><span id="ex-w2-init"></span><span id="ex-w1-calc"></span><span id="ex-w2-calc"></span><span id="ex-l1-calc2"></span><span id="ex-l2-calc2"></span><span id="ex-v2-mpl-text"></span><span id="ex-v2-title1"></span><span id="ex-v2-w1"></span><span id="ex-v2-w2"></span><span id="ex-v2-w3"></span><span id="ex-v2-gdp2"></span><span id="ex-v2-remit2"></span><span id="ex-v2-title2"></span></div>
 </div>
 </div>
 </div>
@@ -758,6 +757,23 @@ Nước 2: $L_2 = -14 + 29 =$ <span id="ex-l2-calc" class="font-bold text-rose-7
 <script>
 // 1. Calculator ERP
 function calculateERP() { 
+    const tVal = document.getElementById('erp-t').value;
+    const tiVal = document.getElementById('erp-ti').value;
+    const aiVal = document.getElementById('erp-ai').value;
+
+    // Check rỗng hoặc nhập chữ
+    if(!tVal || !tiVal || !aiVal) return; 
+
+    const t = parseFloat(tVal)/100;
+    const ti = parseFloat(tiVal)/100;
+    const ai = parseFloat(aiVal); 
+    
+    if (isNaN(t) || isNaN(ti) || isNaN(ai)) return;
+    if (ai >= 1) { alert("Tỷ trọng ai phải < 1"); return; }
+    
+    const ep = ((t-(ai*ti))/(1-ai)*100).toFixed(2); 
+    // ... phần còn lại giữ nguyên
+}
 const t=parseFloat(document.getElementById('erp-t').value)/100, ti=parseFloat(document.getElementById('erp-ti').value)/100, ai=parseFloat(document.getElementById('erp-ai').value); 
 if(ai>=1){alert("Tỷ trọng ai phải < 1");return;}
 const ep=((t-(ai*ti))/(1-ai)*100).toFixed(2); 
@@ -865,8 +881,7 @@ dualLaborChart.data.datasets[2].data = [{x: L1, y: 0}, {x: L1, y: 30}]; dualLabo
 // LIVE UPDATE CÁC VÍ DỤ TỰ LUẬN
 document.getElementById('ex-w1-init').innerText = w1; document.getElementById('ex-w2-init').innerText = w2; 
 document.getElementById('ex-w1-calc').innerText = w1; document.getElementById('ex-w2-calc').innerText = w2; 
-document.getElementById('ex-l1-calc').innerText = L1; document.getElementById('ex-l2-calc').innerText = L2; 
-document.getElementById('ex-l1-calc2').innerText = L1; document.getElementById('ex-l2-calc2').innerText = L2;
+
 
 const L1Star=18, L2Star=17; 
 let mA = 0, flowText = "", moveCalcStr = ""; 
