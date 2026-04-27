@@ -1,13 +1,13 @@
 // ==================== CONFIG FIREBASE ====================
 // THAY ĐỔI: Chỉ thay YOUR_PROJECT_ID, giữ nguyên authDomain theo yêu cầu
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",                    // ← Thay bằng apiKey của bạn
+    apiKey: "AIzaSyAumlNTtA9jjwTTvQzRGEKkPnVbYcsd-TA",    // ← Thay bằng apiKey của bạn
     authDomain: "tuananh-6b0a0.firebaseapp.com",  // ← BẮT BUỘC giữ định dạng này
-    databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com", // ← Thay nếu cần
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    databaseURL: "https://tuananh-6b0a0-default-rtdb.firebaseio.com", // ← Thay nếu cần
+    projectId: "tuananh-6b0a0",
+    storageBucket: "tuananh-6b0a0.firebasestorage.app",
+    messagingSenderId: "935684041177",
+    appId: "1:935684041177:web:f2cfe5dbc27275d8c611c8"
 };
 
 // Khởi tạo Firebase (compat version)
