@@ -1,0 +1,25 @@
+{
+  "rules": {
+    "users": {
+      ".read": "auth.token.email === 'tuannguyen3847@gmail.com'",
+      ".write": "auth.token.email === 'tuannguyen3847@gmail.com'",
+
+      "$uid": {
+        ".write": "$uid === auth.uid",
+        ".read": "$uid === auth.uid"
+      }
+    },
+
+    "online_users": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+
+    "settings": {
+      "online_counter": {
+        ".read": true,
+        ".write": "auth != null && auth.token.email === 'tuannguyen3847@gmail.com'"
+      }
+    }
+  }
+}
