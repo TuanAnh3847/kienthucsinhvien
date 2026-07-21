@@ -1,0 +1,3277 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luyện đề Tài chính cá nhân - Edu Connect</title>
+<meta name="description" content="Trang luyện trắc nghiệm Tài chính cá nhân UEL hệ E: luyện theo chương, test nhanh 20 câu, luyện thi 50 câu có timer và giải thích chi tiết.">
+<meta name="keywords" content="tài chính cá nhân, personal finance, UEL, trắc nghiệm tài chính cá nhân, luyện đề TCCN, Edu Connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Luyện đề Tài chính cá nhân - Edu Connect">
+<meta property="og:description" content="150 câu ôn tập Personal Finance: làm theo chương, test nhanh và luyện thi có timer, đáp án và giải thích chi tiết.">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png">
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/TCCN-LuyenDe">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.glass-panel { background: rgba(255,255,255,.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.bg-pattern { background-image: radial-gradient(#e7e5e4 1px, transparent 1px); background-size: 22px 22px; }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 900; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn .42s ease-out forwards; }
+.mode-card { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.mode-card:hover { transform: translateY(-3px); box-shadow: 0 20px 45px -30px rgba(13,148,136,.55); border-color: #5eead4; }
+.answer-btn { transition: all .15s ease; }
+.answer-btn:hover:not(:disabled) { border-color:#14b8a6; background:#f0fdfa; transform: translateY(-1px); }
+.answer-selected { border-color:#0d9488!important; background:#ccfbf1!important; color:#115e59!important; }
+.answer-correct { border-color:#22c55e!important; background:#dcfce7!important; color:#166534!important; }
+.answer-wrong { border-color:#f43f5e!important; background:#ffe4e6!important; color:#9f1239!important; }
+.pill { border:1px solid #ccfbf1; background:#f0fdfa; color:#0f766e; }
+.progress-bar { transition: width .25s ease; }
+.question-card { scroll-margin-top: 96px; }
+</style>
+</head>
+<body class="bg-stone-50 bg-pattern text-slate-800 font-sans antialiased leading-relaxed">
+
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+        <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+        <div class="flex flex-col justify-center min-w-0">
+          <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
+          <div class="max-w-[185px] sm:max-w-[275px] overflow-hidden" style="-webkit-mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);">
+            <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">💳 Luyện đề Tài Chính Cá Nhân</p>
+          </div>
+        </div>
+      </a>
+      <div class="hidden md:flex space-x-1 items-center" id="nav-menu">
+        <button onclick="switchTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
+        <button onclick="switchTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
+        <button onclick="switchTab('quick')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Test 20 câu</button>
+        <button onclick="switchTab('exam')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Luyện thi</button>
+        <button onclick="switchTab('mistakes')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Câu sai</button>
+      </div>
+      <div class="flex items-center shrink-0">
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+          <span id="online-count" class="mr-1">...</span><span class="hidden sm:inline">online</span>
+        </div>
+        <div class="border-l border-stone-300 pl-3 sm:pl-4">
+          <button id="nav-login-btn" onclick="safeLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+          <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="safeLogout()" title="Đăng xuất">
+            <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+            <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh viên</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+      <select id="mobile-nav" onchange="switchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+        <option value="overview">Tổng quan</option><option value="chapter">Luyện theo chương</option><option value="quick">Test 20 câu</option><option value="exam">Luyện thi</option><option value="mistakes">Câu sai</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+  <section id="overview" class="tab-content block">
+    <div class="relative overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-sm p-6 md:p-10 mb-8">
+      <div class="absolute right-0 top-0 h-56 w-56 bg-teal-100 rounded-full blur-3xl opacity-80"></div>
+      <div class="absolute left-8 bottom-0 h-40 w-40 bg-blue-100 rounded-full blur-3xl opacity-70"></div>
+      <div class="relative z-10 grid lg:grid-cols-[1.35fr_.8fr] gap-8 items-center">
+        <div>
+          <span class="inline-flex items-center pill px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-4">⚡ Personal Finance Practice Hub</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">Luyện đề Tài Chính Cá Nhân</h2>
+          <p class="text-lg text-stone-600 max-w-2xl mb-6">Bộ 150 câu ôn tập từ 3 đề LMS, sắp xếp lại thành chế độ học theo chương, test nhanh và luyện thi có đồng hồ. Phần học hiện đáp án ngay; phần luyện thi phải nộp bài mới xem đáp án.</p>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="switchTab('chapter')" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl shadow-sm transition-transform active:scale-[.98]">Bắt đầu theo chương</button>
+            <button onclick="switchTab('exam')" class="bg-white hover:bg-stone-50 text-teal-800 font-black px-5 py-3 rounded-xl border border-teal-200 shadow-sm transition-transform active:scale-[.98]">Vào luyện thi</button>
+            <a href="/TaiChinhCaNhan" class="bg-blue-50 hover:bg-blue-100 text-blue-800 font-black px-5 py-3 rounded-xl border border-blue-200 shadow-sm transition-transform active:scale-[.98]">Xem lý thuyết</a>
+          </div>
+        </div>
+        <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-xl">
+          <p class="text-xs uppercase tracking-widest text-teal-300 font-black mb-4">Tình trạng bộ câu hỏi</p>
+          <div class="grid grid-cols-2 gap-3" id="overview-stats"></div>
+          <div class="mt-5 rounded-xl bg-white/10 p-4 border border-white/10">
+            <p class="text-sm text-stone-200"><strong>Flow:</strong> Học theo chương → chọn là xem giải thích ngay. Luyện thi → làm đủ bài → nộp → xem điểm, câu sai và giải thích.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5 mb-8">
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm"><div class="text-3xl mb-3">📚</div><h3 class="font-black text-lg text-slate-900 mb-2">Học theo chương</h3><p class="text-sm text-stone-600">Chọn từng cụm kiến thức, bấm đáp án là hiện đúng/sai và giải thích ngay.</p></div>
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm"><div class="text-3xl mb-3">⏱️</div><h3 class="font-black text-lg text-slate-900 mb-2">Test nhanh 20 câu</h3><p class="text-sm text-stone-600">Random 20 câu từ ngân hàng câu hỏi để check độ chắc bài trong vài phút.</p></div>
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm"><div class="text-3xl mb-3">🎯</div><h3 class="font-black text-lg text-slate-900 mb-2">Luyện thi thật</h3><p class="text-sm text-stone-600">Đề 50 câu có timer 60 phút, khóa đáp án cho tới khi nộp bài.</p></div>
+    </div>
+  </section>
+
+  <section id="chapter" class="tab-content hidden">
+    <div class="mb-8"><h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện theo chương</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Chế độ học: chọn đáp án xong hiện ngay đáp án đúng, giải thích, bẫy cần né và keyword để nhớ.</p></div>
+    <div id="chapter-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <section id="quick" class="tab-content hidden">
+    <div class="mb-8"><h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Test nhanh 20 câu</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Random 20 câu từ toàn bộ ngân hàng. Mỗi lần bấm sẽ ra đề mới. Đây là mode học nên giải thích hiện ngay sau khi chọn.</p></div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="mode-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <span class="pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider">Random practice</span>
+        <h3 class="font-black text-2xl text-slate-900 mt-4 mb-2">20 câu trộn toàn bộ</h3>
+        <p class="text-stone-600 mb-5">Phù hợp trước khi ngủ hoặc trước giờ thi: làm nhanh, sai câu nào xem giải thích luôn.</p>
+        <button onclick="startQuick20()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-3 rounded-xl">Tạo đề 20 câu</button>
+      </div>
+      <div class="mode-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <span class="pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider">Weak spot</span>
+        <h3 class="font-black text-2xl text-slate-900 mt-4 mb-2">20 câu ưu tiên câu sai</h3>
+        <p class="text-stone-600 mb-5">Nếu đã làm bài trước đó, web sẽ ưu tiên kéo các câu từng sai để ôn lại.</p>
+        <button onclick="startWeak20()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-black py-3 rounded-xl">Luyện câu dễ sai</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="exam" class="tab-content hidden">
+    <div class="mb-8"><h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện thi</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Mode thi: làm bài có timer, chưa nộp sẽ không xem đáp án. Hết giờ hệ thống tự nộp bài.</p></div>
+    <div id="exam-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+  </section>
+
+  <section id="mistakes" class="tab-content hidden">
+    <div class="mb-8"><h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Ôn lại câu sai</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Các câu làm sai được lưu trong trình duyệt của máy này. Không cần database, không tốn Firestore.</p></div>
+    <div id="mistakes-panel"></div>
+  </section>
+
+  <section id="practice-panel" class="hidden mt-10 animate-fade-in">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+      <button onclick="closePracticePanel()" class="bg-white hover:bg-stone-50 text-stone-700 font-bold px-4 py-2 rounded-xl border border-stone-200 shadow-sm w-fit">← Quay lại</button>
+      <div class="flex flex-wrap gap-2 items-center">
+        <span id="practice-badge" class="pill text-xs font-black px-3 py-1 rounded-full"></span>
+        <span id="timer-pill" class="bg-slate-900 text-white text-xs font-black px-3 py-1 rounded-full hidden">00:00</span>
+      </div>
+    </div>
+    <div id="practice-content"></div>
+  </section>
+</main>
+
+<footer class="border-t border-stone-200 bg-white mt-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-stone-500 flex flex-col md:flex-row justify-between gap-3">
+    <p><strong class="text-teal-700">Edu Connect</strong> · Luyện đề Tài Chính Cá Nhân</p>
+    <p>Static-first · Không Firestore · Built for UEL English Program</p>
+  </div>
+</footer>
+
+<script id="question-data" type="application/json">
+[
+  {
+    "sourceExam": 1,
+    "sourceNumber": 1,
+    "clo": "CLO 3",
+    "question": "What is a major benefit of using a credit card instead of cash?",
+    "options": [
+      "No obligation to repay",
+      "No need to assess financial capacity",
+      "No spending limit",
+      "Cashback rewards, loyalty points, and installment payment options"
+    ],
+    "answer": 3,
+    "correctText": "Cashback rewards, loyalty points, and installment payment options",
+    "id": "e1_q1",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Credit card có thể có cashback, loyalty points và installment options, nhưng vẫn phải trả nợ đúng hạn.",
+    "trap": "Không có nghĩa là không cần trả nợ hay không có hạn mức.",
+    "keyword": "Credit card benefit = rewards/installments."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 2,
+    "clo": "CLO 1",
+    "question": "Which factor is most important in helping an individual achieve a higher income?",
+    "options": [
+      "Accurately predicting stock market movements",
+      "Receiving financial support from family",
+      "Investing in real estate as early as possible",
+      "Developing professional skills and knowledge"
+    ],
+    "answer": 3,
+    "correctText": "Developing professional skills and knowledge",
+    "id": "e1_q2",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Muốn tăng thu nhập dài hạn cần nâng kỹ năng, kiến thức và kinh nghiệm để tăng giá trị cá nhân trên thị trường lao động.",
+    "trap": "Dự đoán thị trường hoặc đầu tư tất tay không phải nền tảng bền vững.",
+    "keyword": "Higher income = skills + knowledge + experience."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 3,
+    "clo": "CLO 3",
+    "question": "Which factor does NOT affect life insurance premiums?",
+    "options": [
+      "Health condition",
+      "Cash value of the policy",
+      "Educational background",
+      "Gender"
+    ],
+    "answer": 2,
+    "correctText": "Educational background",
+    "id": "e1_q3",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Life insurance premium thường phụ thuộc vào tuổi, giới tính, sức khỏe, loại hợp đồng/cash value; educational background không phải yếu tố chính.",
+    "trap": "Health/gender/cash-value policy đều có thể ảnh hưởng chi phí bảo hiểm.",
+    "keyword": "Premium factors ≠ education."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 4,
+    "clo": "CLO 2",
+    "question": "In personal financial planning, what is the most important factor?",
+    "options": [
+      "Setting specific goals and monitoring progress",
+      "Predicting financial markets",
+      "Focusing only on saving without investing",
+      "Investing all funds in a single asset class"
+    ],
+    "answer": 0,
+    "correctText": "Setting specific goals and monitoring progress",
+    "id": "e1_q4",
+    "chapter": "Chapter 1: Personal Finance Foundations",
+    "explanation": "Personal financial planning hiệu quả cần mục tiêu rõ, đo được và theo dõi tiến độ thường xuyên.",
+    "trap": "Không nên dựa vào dự đoán thị trường hoặc đầu tư một tài sản duy nhất.",
+    "keyword": "Planning = goals + monitoring."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 5,
+    "clo": "CLO 2",
+    "question": "The Debt-to-Asset Ratio measures:",
+    "options": [
+      "Income-generating capacity of assets",
+      "Short-term solvency",
+      "Short-term vs. long-term debt structure",
+      "Degree of reliance on debt financing"
+    ],
+    "answer": 3,
+    "correctText": "Degree of reliance on debt financing",
+    "id": "e1_q5",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Debt-to-Asset Ratio = Total liabilities / Total assets, nên nó đo mức độ tài sản được tài trợ bằng nợ.",
+    "trap": "Short-term solvency/liquidity là nhóm liquidity ratio, không phải debt-to-asset.",
+    "keyword": "Debt-to-Asset = reliance on debt."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 6,
+    "clo": "CLO 5",
+    "question": "Which budgeting method does not impose spending limits for individual expense categories but instead emphasizes saving before spending?",
+    "options": [
+      "The Envelope Budgeting Method",
+      "The Percentage Budgeting Method",
+      "Pay Yourself First",
+      "Zero-Based Budgeting"
+    ],
+    "answer": 2,
+    "correctText": "Pay Yourself First",
+    "id": "e1_q6",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Đáp án đúng là “Pay Yourself First” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 7,
+    "clo": "CLO 5",
+    "question": "Customer E applies for a loan online through a credit institution's mobile application. Which of the following is the most important step before confirming the loan?",
+    "options": [
+      "Carefully read the electronic loan agreement, review the interest rates, fees, and disbursement method, and verify that the application is the official app of the credit institution.",
+      "Take screenshots of advertisements, carefully read the electronic loan agreement, and review the interest rates and fees.",
+      "Carefully read the electronic loan agreement, review comments on social media, take screenshots of advertisements, and review the interest rates and fees.",
+      "Review comments on social media, take screenshots of advertisements, carefully read the electronic loan agreement, and review the interest rates and fees."
+    ],
+    "answer": 0,
+    "correctText": "Carefully read the electronic loan agreement, review the interest rates, fees, and disbursement method, and verify that the application is the official app of the credit institution.",
+    "id": "e1_q7",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Vay online phải kiểm tra app chính thức, đọc hợp đồng điện tử, lãi suất, phí và phương thức giải ngân trước khi xác nhận.",
+    "trap": "Review mạng xã hội/screenshot quảng cáo không thay thế hợp đồng chính thức.",
+    "keyword": "Online loan → official app + contract + fees."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 8,
+    "clo": "CLO 5",
+    "question": "When using the Envelope Budgeting Method, what happens if the money in one envelope is exhausted before the end of the month?",
+    "options": [
+      "No additional spending is allowed in that category unless funds are transferred from another category.",
+      "Transfer all the money from another envelope to cover the shortage.",
+      "You may use a credit card to continue spending.",
+      "Borrow money to make up the difference."
+    ],
+    "answer": 0,
+    "correctText": "No additional spending is allowed in that category unless funds are transferred from another category.",
+    "id": "e1_q8",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Envelope method chia tiền vào từng category. Hết tiền trong phong bì thì dừng chi hoặc phải chuyển từ phong bì khác.",
+    "trap": "Không dùng credit card/borrow để tiếp tục chi tiêu nếu phong bì đã hết.",
+    "keyword": "Envelope = category limit."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 9,
+    "clo": "CLO 2",
+    "question": "Which common budgeting principle is most effective for spending control?",
+    "options": [
+      "Cash-only spending",
+      "Spend first, save later",
+      "Impulse purchasing",
+      "The 50/30/20 rule"
+    ],
+    "answer": 3,
+    "correctText": "The 50/30/20 rule",
+    "id": "e1_q9",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Đáp án đúng là “The 50/30/20 rule” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 10,
+    "clo": "CLO 1",
+    "question": "When negotiating salary for your first job, what is the most important consideration?",
+    "options": [
+      "Accept the employer’s offer immediately to avoid missing the opportunity.",
+      "Focus only on salary and ignore other benefits.",
+      "Research the average salary for similar positions and negotiate based on your value.",
+      "Demand the highest possible salary even without experience."
+    ],
+    "answer": 2,
+    "correctText": "Research the average salary for similar positions and negotiate based on your value.",
+    "id": "e1_q10",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Khi chọn/đàm phán công việc đầu tiên, nên xét learning opportunities, market salary, value bản thân và tổng giá trị lương + benefits.",
+    "trap": "Đừng chỉ nhìn lương khởi điểm hoặc bỏ qua bảo hiểm/retirement benefits.",
+    "keyword": "Job choice = learning + total compensation."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 11,
+    "clo": "CLO 3",
+    "question": "When using a credit card, __________ is the interest rate charged on your outstanding balance if you fail to make at least the minimum payment on time.",
+    "options": [
+      "Over-limit fee",
+      "Cash advance fee",
+      "Penalty interest rate",
+      "Late payment fee"
+    ],
+    "answer": 2,
+    "correctText": "Penalty interest rate",
+    "id": "e1_q11",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Penalty interest rate là lãi suất phạt áp trên outstanding balance khi không trả tối thiểu đúng hạn.",
+    "trap": "Late payment fee là phí, không phải interest rate.",
+    "keyword": "Fail minimum payment → penalty interest."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 12,
+    "clo": "CLO 3",
+    "question": "If a time deposit is withdrawn before maturity, what usually happens?",
+    "options": [
+      "No impact on the deposit",
+      "No interest or only the demand deposit rate is applied",
+      "The original interest rate is fully paid",
+      "A penalty fee is charged but the original rate remains"
+    ],
+    "answer": 1,
+    "correctText": "No interest or only the demand deposit rate is applied",
+    "id": "e1_q12",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Rút time deposit trước hạn thường không được hưởng lãi suất kỳ hạn đầy đủ; có thể chỉ hưởng demand deposit rate hoặc không có lãi.",
+    "trap": "Không được hưởng full original rate.",
+    "keyword": "Early withdrawal → demand/no interest."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 13,
+    "clo": "CLO 3",
+    "question": "When investing in an open-end mutual fund, what is an advantage compared to direct stock investment?",
+    "options": [
+      "Guaranteed fixed annual returns",
+      "Professionally managed by financial experts",
+      "No risk involved",
+      "No personal income tax"
+    ],
+    "answer": 1,
+    "correctText": "Professionally managed by financial experts",
+    "id": "e1_q13",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Open-end mutual fund được quản lý bởi chuyên gia và giúp nhà đầu tư tiếp cận danh mục đa dạng hơn so với tự chọn cổ phiếu đơn lẻ.",
+    "trap": "Không có guaranteed fixed return và vẫn có risk.",
+    "keyword": "Mutual fund = professionally managed."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 14,
+    "clo": "CLO 1",
+    "question": "How should a recent graduate manage their first income to ensure financial stability?",
+    "options": [
+      "Spend according to personal needs first and save whatever remains",
+      "Create a clear budget and prioritize saving from the beginning",
+      "Invest all income without maintaining an emergency fund",
+      "Borrow money to purchase expensive assets as soon as income is earned"
+    ],
+    "answer": 1,
+    "correctText": "Create a clear budget and prioritize saving from the beginning",
+    "id": "e1_q14",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Người mới đi làm nên lập budget rõ ràng và ưu tiên saving từ đầu để tránh lifestyle inflation.",
+    "trap": "Không nên spend first save later.",
+    "keyword": "First income = budget + save early."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 15,
+    "clo": "CLO 1",
+    "question": "What is passive income?",
+    "options": [
+      "Income received from a monthly salary",
+      "Income that is not subject to taxation",
+      "Income earned without continuous active work",
+      "Income that applies only to retirees"
+    ],
+    "answer": 2,
+    "correctText": "Income earned without continuous active work",
+    "id": "e1_q15",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Passive income là thu nhập không cần lao động liên tục hằng ngày, ví dụ lãi, cổ tức, cho thuê, royalties.",
+    "trap": "Monthly salary là active income.",
+    "keyword": "Passive income = not continuous active work."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 16,
+    "clo": "CLO 5",
+    "question": "Which budgeting method is most suitable for individuals with irregular income?",
+    "options": [
+      "Zero-Based Budgeting",
+      "Flexible Budgeting Method",
+      "The 50/30/20 Budgeting Method",
+      "Pay Yourself First Budgeting Method"
+    ],
+    "answer": 1,
+    "correctText": "Flexible Budgeting Method",
+    "id": "e1_q16",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Đáp án đúng là “Flexible Budgeting Method” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 17,
+    "clo": "CLO 3",
+    "question": "Which type of insurance provides financial support to beneficiaries in the event of death?",
+    "options": [
+      "Life insurance",
+      "Auto insurance",
+      "Homeowners insurance",
+      "Health insurance"
+    ],
+    "answer": 0,
+    "correctText": "Life insurance",
+    "id": "e1_q17",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Đáp án đúng là “Life insurance” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 18,
+    "clo": "CLO 3",
+    "question": "What is a major benefit of using a credit card instead of cash?",
+    "options": [
+      "No obligation to repay",
+      "No need to assess financial capacity",
+      "No spending limit",
+      "Cashback rewards, loyalty points, and installment payment options"
+    ],
+    "answer": 3,
+    "correctText": "Cashback rewards, loyalty points, and installment payment options",
+    "id": "e1_q18",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Credit card có thể có cashback, loyalty points và installment options, nhưng vẫn phải trả nợ đúng hạn.",
+    "trap": "Không có nghĩa là không cần trả nợ hay không có hạn mức.",
+    "keyword": "Credit card benefit = rewards/installments."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 19,
+    "clo": "CLO 3",
+    "question": "Most credit cards offer a grace period. The grace period typically ranges from:",
+    "options": [
+      "45 to 55 days",
+      "10 to 20 days",
+      "60 to 90 days",
+      "1 to 10 days"
+    ],
+    "answer": 0,
+    "correctText": "45 to 55 days",
+    "id": "e1_q19",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Grace period của credit card thường khoảng 45–55 ngày nếu tính từ ngày giao dịch trong kỳ đến due date, và chỉ có lợi khi trả đúng hạn.",
+    "trap": "Cash advance thường bị tính lãi ngay, không hưởng grace period như purchases.",
+    "keyword": "Grace period = 45–55 days."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 20,
+    "clo": "CLO 1",
+    "question": "What is an individual's disposable income?",
+    "options": [
+      "Profits earned from stock market investments",
+      "Total income before taxes",
+      "The amount of money remaining after taxes and essential expenses are deducted",
+      "Money used to repay loans"
+    ],
+    "answer": 2,
+    "correctText": "The amount of money remaining after taxes and essential expenses are deducted",
+    "id": "e1_q20",
+    "chapter": "Chapter 1: Personal Finance Foundations",
+    "explanation": "Theo key của bộ LMS này, disposable income là phần còn lại sau taxes và essential expenses.",
+    "trap": "Đừng chọn total income before taxes.",
+    "keyword": "Disposable income trong đề LMS = money left after taxes & essential expenses."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 21,
+    "clo": "CLO 2",
+    "question": "Beginning balance in your checking account is $1,000. During the month: Two checks written: $45 and $75 (only the first cleared); Two debit card transactions: $50 and $35.20; Bank service fee: $6 ; A $100 check deposited but not yet cleared. What is your end-of-month account balance?",
+    "options": [
+      "$1,052.13",
+      "$863.80",
+      "$875.45",
+      "$888.80"
+    ],
+    "answer": 1,
+    "correctText": "$863.80",
+    "id": "e1_q21",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "End-of-month balance = 1,000 - 45 - 50 - 35.20 - 6 = 863.80 USD. Check 75 USD chưa clear nên chưa trừ; deposit 100 USD chưa clear nên chưa cộng.",
+    "trap": "Đừng cộng/trừ các khoản chưa cleared.",
+    "keyword": "Bank reconciliation: chỉ tính giao dịch đã cleared."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 22,
+    "clo": "CLO 5",
+    "question": "Mr. Bach plans to purchase an apartment valued at VND 3 billion as his primary residence. He applies for financing from Bank X, which agrees to finance 50% of the property's value over a term of 5 years. Under the bank's current consumer mortgage policy, the total monthly loan repayment is fixed throughout the loan term, with interest calculated on the beginning outstanding balance at an annual interest rate of 8%. Mr. Bach's monthly income available for debt repayment is VND 25 million. Based on his current financial capacity, should the bank approve the loan? Why?",
+    "options": [
+      "No. Mr. Bach's income is lower than the required monthly loan repayment.",
+      "No. Mr. Bach's income is only sufficient to repay the loan, leaving nothing for other living expenses.",
+      "There is insufficient information to calculate the required monthly loan repayment.",
+      "Yes. Mr. Bach's income available for debt repayment exceeds the required monthly loan repayment."
+    ],
+    "answer": 0,
+    "correctText": "No. Mr. Bach's income is lower than the required monthly loan repayment.",
+    "id": "e1_q22",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,000 × 50% = 1,500 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 30.41 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: không đủ theo đáp án LMS.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 23,
+    "clo": "CLO 3",
+    "question": "If a borrower repays a mortgage early, they may incur:",
+    "options": [
+      "Foreign exchange fee",
+      "Loan insurance fee",
+      "Loan extension fee",
+      "Prepayment penalty"
+    ],
+    "answer": 3,
+    "correctText": "Prepayment penalty",
+    "id": "e1_q23",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Trả mortgage sớm có thể bị prepayment penalty vì ngân hàng mất một phần thu nhập lãi dự kiến.",
+    "trap": "Không phải loan extension fee hay foreign exchange fee.",
+    "keyword": "Early mortgage repayment → prepayment penalty."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 24,
+    "clo": "CLO 2",
+    "question": "Which asset is considered the most liquid in a personal balance sheet?",
+    "options": [
+      "Corporate bonds",
+      "Real estate",
+      "Cash and bank deposits",
+      "Stocks"
+    ],
+    "answer": 2,
+    "correctText": "Cash and bank deposits",
+    "id": "e1_q24",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Cash and bank deposits là tài sản thanh khoản nhất vì có thể dùng ngay hoặc chuyển thành tiền gần như ngay lập tức.",
+    "trap": "Stocks/bonds có thể bán được nhưng vẫn có biến động giá và thời gian xử lý.",
+    "keyword": "Most liquid = cash/bank deposits."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 25,
+    "clo": "CLO 1",
+    "question": "How does inflation affect personal finances?",
+    "options": [
+      "It increases the value of borrowed funds.",
+      "It reduces the real value of savings.",
+      "It has no impact on individuals.",
+      "It lowers living expenses."
+    ],
+    "answer": 1,
+    "correctText": "It reduces the real value of savings.",
+    "id": "e1_q25",
+    "chapter": "Chapter 1: Personal Finance Foundations",
+    "explanation": "Inflation làm sức mua của tiền giảm, nên giá trị thực của savings giảm nếu lãi suất không bù được lạm phát.",
+    "trap": "Không phải làm living expenses giảm.",
+    "keyword": "Inflation reduces real purchasing power."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 26,
+    "clo": "CLO 3",
+    "question": "When using a credit card, if you do not pay the full outstanding balance by the due date, what will happen?",
+    "options": [
+      "The bank will immediately suspend card services",
+      "No issue arises if the minimum payment is made",
+      "The bank will contact the customer for a reminder",
+      "Interest will be charged on the unpaid balance"
+    ],
+    "answer": 3,
+    "correctText": "Interest will be charged on the unpaid balance",
+    "id": "e1_q26",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Nếu không trả full outstanding balance trước due date, phần chưa trả sẽ bị tính interest.",
+    "trap": "Trả minimum chỉ giúp tránh một số penalty, không xóa lãi trên dư nợ.",
+    "keyword": "Unpaid balance → interest charged."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 27,
+    "clo": "CLO 1",
+    "question": "To maximize long-term earning potential, which strategy should a recent graduate prioritize?",
+    "options": [
+      "Building skills and gaining experience to increase personal value in the future",
+      "Taking on multiple jobs simultaneously to earn a high income immediately",
+      "Accepting only high-paying jobs from the outset without considering learning opportunities",
+      "Investing all income in the stock market immediately after getting a job"
+    ],
+    "answer": 0,
+    "correctText": "Building skills and gaining experience to increase personal value in the future",
+    "id": "e1_q27",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Muốn tăng thu nhập dài hạn cần nâng kỹ năng, kiến thức và kinh nghiệm để tăng giá trị cá nhân trên thị trường lao động.",
+    "trap": "Dự đoán thị trường hoặc đầu tư tất tay không phải nền tảng bền vững.",
+    "keyword": "Higher income = skills + knowledge + experience."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 28,
+    "clo": "CLO 5",
+    "question": "What is the primary advantage of the Flexible Budgeting Method?",
+    "options": [
+      "It helps optimize spending each month based on actual income and expenses.",
+      "It requires users to strictly follow a predetermined budget plan.",
+      "It does not require any adjustments when income changes.",
+      "It automatically tracks spending."
+    ],
+    "answer": 0,
+    "correctText": "It helps optimize spending each month based on actual income and expenses.",
+    "id": "e1_q28",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Flexible budgeting điều chỉnh ngân sách theo thu nhập/chi phí thực tế nên hợp với người có income không đều.",
+    "trap": "50/30/20 đơn giản nhưng ít linh hoạt nếu income biến động mạnh.",
+    "keyword": "Flexible = adjusts to actual income/expenses."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 29,
+    "clo": "CLO 3",
+    "question": "Which savings product typically offers the highest interest rate?",
+    "options": [
+      "Flexible installment savings",
+      "Demand deposit",
+      "Online savings account",
+      "Time deposit"
+    ],
+    "answer": 3,
+    "correctText": "Time deposit",
+    "id": "e1_q29",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Time deposit thường có lãi suất cao hơn demand deposit vì người gửi cam kết giữ tiền đến maturity.",
+    "trap": "Demand deposit linh hoạt hơn nhưng lãi thấp hơn.",
+    "keyword": "Highest deposit rate → time deposit."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 30,
+    "clo": "CLO 3",
+    "question": "A disadvantage of whole life insurance is:",
+    "options": [
+      "Frozen and unusable cash value",
+      "Changing face value over time",
+      "Significantly higher cost than term life insurance",
+      "Unpredictable premiums"
+    ],
+    "answer": 2,
+    "correctText": "Significantly higher cost than term life insurance",
+    "id": "e1_q30",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Whole life insurance có cash value và bảo vệ dài hạn nên chi phí thường cao hơn term life insurance.",
+    "trap": "Premium thường ổn định, không phải unpredictable là nhược điểm chính trong câu này.",
+    "keyword": "Whole life = more expensive than term."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 31,
+    "clo": "CLO 2",
+    "question": "Which factor would immediately reduce net worth?",
+    "options": [
+      "Increase in savings interest rates",
+      "Receiving a year-end bonus",
+      "Receiving stock dividends",
+      "Making an early mortgage repayment"
+    ],
+    "answer": 3,
+    "correctText": "Making an early mortgage repayment",
+    "id": "e1_q31",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Theo key LMS, early mortgage repayment được chọn vì có thể làm giảm tài sản thanh khoản ngay và/hoặc phát sinh penalty/fees. Khi gặp câu này, hãy bám theo đáp án LMS.",
+    "trap": "Về lý thuyết thuần túy trả gốc có thể không đổi net worth; nhưng đề này gắn với tác động tức thời/penalty.",
+    "keyword": "Early mortgage repayment trong bộ LMS → reduce net worth."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 32,
+    "clo": "CLO 5",
+    "question": "Mr. Bien plans to purchase an apartment valued at VND 3 billion as a rental property. He applies for financing from Bank X, which agrees to finance 70% of the property's value over a term of 5 years. Under the bank's current consumer mortgage policy, loan repayments are made monthly, with equal principal repayments each month and interest calculated on the beginning outstanding balance at an annual interest rate of 8%. How much must Mr. Bien repay to the bank in the third month?",
+    "options": [
+      "VND 48.53 million",
+      "VND 70.00 million",
+      "VND 35.00 million",
+      "VND 48.77 million"
+    ],
+    "answer": 0,
+    "correctText": "VND 48.53 million",
+    "id": "e1_q32",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,000 × 70% = 2,100 triệu VND. Trả gốc đều: gốc mỗi tháng = 35.00 triệu. Đầu tháng 3, dư nợ = 2,100 - 2×35.00 = 2,030.00 triệu. Lãi = 2,030.00×8%/12 = 13.53 triệu. Tổng trả ≈ 48.53 triệu.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 33,
+    "clo": "CLO 3",
+    "question": "When investing in rental real estate, which factor is most important?",
+    "options": [
+      "Location and appreciation potential",
+      "Interior furnishings",
+      "Unsecured loan interest rate",
+      "Number of banks offering mortgage loans"
+    ],
+    "answer": 0,
+    "correctText": "Location and appreciation potential",
+    "id": "e1_q33",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Rental real estate phụ thuộc mạnh vào location và appreciation potential vì hai yếu tố này ảnh hưởng rent, vacancy và tăng giá tài sản.",
+    "trap": "Nội thất quan trọng nhưng không bằng vị trí và tiềm năng tăng giá.",
+    "keyword": "Real estate = location, location, location."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 34,
+    "clo": "CLO 1",
+    "question": "Which factor is most important when choosing a first job to build a strong financial career foundation?",
+    "options": [
+      "Opportunities for learning and skill development",
+      "The highest possible starting salary",
+      "A convenient work location",
+      "Attractive compensation and benefits packages"
+    ],
+    "answer": 0,
+    "correctText": "Opportunities for learning and skill development",
+    "id": "e1_q34",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Khi chọn/đàm phán công việc đầu tiên, nên xét learning opportunities, market salary, value bản thân và tổng giá trị lương + benefits.",
+    "trap": "Đừng chỉ nhìn lương khởi điểm hoặc bỏ qua bảo hiểm/retirement benefits.",
+    "keyword": "Job choice = learning + total compensation."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 35,
+    "clo": "CLO 5",
+    "question": "Mr. Giau uses a credit card issued by Finance Bank with a credit limit of VND 50,000,000. According to the bank's policy, the statement closing date is the 20th of each month, and the payment due date is the 5th of the following month. His transaction history is as follows: January 15, 2025: Purchase at Co.op Supermarket – VND 1,200,000; January 19, 2025: Payment at Tuoi Restaurant – VND 1,450,000; January 24, 2025: Purchase at Bach Hoa Xanh – VND 650,000; February 2, 2025: Purchase at E-Mart – VND 1,370,000; February 4, 2025: Airline ticket purchase – VND 6,000,000; February 10, 2025: Purchase at Tot Shop – VND 1,000,000. How much must Mr. Giau pay on February 5, 2025?",
+    "options": [
+      "VND 3,300",
+      "VND 11,670,000",
+      "VND 2,650,000",
+      "VND 10,670,000"
+    ],
+    "answer": 2,
+    "correctText": "VND 2,650,000",
+    "id": "e1_q35",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Statement closing date là 20/1, nên kỳ thanh toán 5/2 chỉ gồm các giao dịch trước hoặc đúng ngày chốt: 1,200,000 + 1,450,000 = 2,650,000 VND. Các giao dịch sau 20/1 sang kỳ sau.",
+    "trap": "Đừng cộng các giao dịch sau statement closing date.",
+    "keyword": "Credit card statement: chỉ trả giao dịch trong billing cycle đã chốt."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 36,
+    "clo": "CLO 2",
+    "question": "Han’s assets include one electric vehicle valued at $12,000 and a checking account balance of $3,000. Her liabilities include a credit card balance of $4,000 and an outstanding auto loan balance of $7,000. What is Han’s net worth?",
+    "options": [
+      "$4,000",
+      "$5,000",
+      "$7,000",
+      "$12,000"
+    ],
+    "answer": 0,
+    "correctText": "$4,000",
+    "id": "e1_q36",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Net worth = total assets - total liabilities = (12,000 + 3,000) - (4,000 + 7,000) = 4,000 USD.",
+    "trap": "Income không dùng trực tiếp khi tính net worth.",
+    "keyword": "Net worth = Assets - Liabilities."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 37,
+    "clo": "CLO 3",
+    "question": "What is the primary difference between secured and unsecured loans?",
+    "options": [
+      "Secured loans require collateral; unsecured loans do not",
+      "Unsecured loans are only for businesses",
+      "Unsecured loans have lower interest rates",
+      "Secured loans require no credit assessment"
+    ],
+    "answer": 0,
+    "correctText": "Secured loans require collateral; unsecured loans do not",
+    "id": "e1_q37",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Secured loans có collateral; unsecured loans không có tài sản bảo đảm nên thường dựa nhiều hơn vào creditworthiness.",
+    "trap": "Unsecured loan không đồng nghĩa lãi thấp hơn.",
+    "keyword": "Secured = collateral."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 38,
+    "clo": "CLO 5",
+    "question": "How should the following situations be matched with the most appropriate borrowing decisions? (1) Having a stable income but no emergency fund; (2) Having income that fluctuates based on commission; (3) Wanting to borrow to invest in professional skills; (4) Wanting to borrow to buy the latest smartphone simply because friends already have one. (a) Carefully evaluate repayment capacity because cash flow is unstable; (b) Borrowing may be appropriate if the long-term benefits outweigh the borrowing costs; (c) Build an emergency fund before taking on a large loan; (d) Borrowing is not recommended if it is solely to satisfy short-term consumption needs.",
+    "options": [
+      "(1)-c; (2)-a; (3)-b; (4)-d",
+      "(1)-a; (2)-c; (3)-b; (4)-d",
+      "(1)-d; (2)-a; (3)-b; (4)-c",
+      "(1)-c; (2)-b; (3)-a; (4)-d"
+    ],
+    "answer": 0,
+    "correctText": "(1)-c; (2)-a; (3)-b; (4)-d",
+    "id": "e1_q38",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Quỹ khẩn cấp thường nên đủ 3–6 tháng living expenses để xử lý mất việc, bệnh, chi phí bất ngờ.",
+    "trap": "1–2 tháng thường quá mỏng; 12–24 tháng thường quá cao cho mức tối thiểu.",
+    "keyword": "Emergency fund = 3–6 months."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 39,
+    "clo": "CLO 1",
+    "question": "When considering a job offer, which of the following factors is often underestimated but can have a significant impact on personal finances?",
+    "options": [
+      "Insurance benefits and retirement plans",
+      "Working environment and company culture",
+      "Distance from home to the workplace",
+      "Bonuses and 13th-month salary"
+    ],
+    "answer": 0,
+    "correctText": "Insurance benefits and retirement plans",
+    "id": "e1_q39",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Khi chọn/đàm phán công việc đầu tiên, nên xét learning opportunities, market salary, value bản thân và tổng giá trị lương + benefits.",
+    "trap": "Đừng chỉ nhìn lương khởi điểm hoặc bỏ qua bảo hiểm/retirement benefits.",
+    "keyword": "Job choice = learning + total compensation."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 40,
+    "clo": "CLO 5",
+    "question": "In the 50/30/20 budgeting method, the 50% portion is typically allocated to which type of expenses?",
+    "options": [
+      "Debt repayment",
+      "Entertainment and personal wants",
+      "Savings and investments",
+      "Essential needs (housing, food, healthcare, and utilities)"
+    ],
+    "answer": 3,
+    "correctText": "Essential needs (housing, food, healthcare, and utilities)",
+    "id": "e1_q40",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "50/30/20 phân bổ 50% cho needs, 30% wants, 20% savings/investment hoặc debt repayment.",
+    "trap": "Đừng đảo 50% sang entertainment hoặc savings.",
+    "keyword": "50 = needs, 30 = wants, 20 = savings."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 41,
+    "clo": "CLO 2",
+    "question": "Tai and Chinh are reviewing their financial position. They will pay off their auto loan in three years. Their total household income is $3,800 per month, and they earn $75 per month in investment interest income. Based on their most recent financial statements, they report: Savings account: $1,200; Checking account: $800; Credit card balance: $1,000; Outstanding auto loan balance: $12,000; Market value of car: $8,000; Furniture (market value): $2,000; Stocks and bonds: $10,000. What is their current net worth?",
+    "options": [
+      "$13,000",
+      "$35,000",
+      "$9,000",
+      "$22,000"
+    ],
+    "answer": 2,
+    "correctText": "$9,000",
+    "id": "e1_q41",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "End-of-month balance = 1,000 - 45 - 50 - 35.20 - 6 = 863.80 USD. Check 75 USD chưa clear nên chưa trừ; deposit 100 USD chưa clear nên chưa cộng.",
+    "trap": "Đừng cộng/trừ các khoản chưa cleared.",
+    "keyword": "Bank reconciliation: chỉ tính giao dịch đã cleared."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 42,
+    "clo": "CLO 1",
+    "question": "Why is building personal financial management skills important for one’s career?",
+    "options": [
+      "Because all companies provide personal financial management services to employees.",
+      "It helps individuals manage income, expenses, and investments effectively.",
+      "Having a high income alone is sufficient.",
+      "It is unrelated to career development."
+    ],
+    "answer": 1,
+    "correctText": "It helps individuals manage income, expenses, and investments effectively.",
+    "id": "e1_q42",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Quản lý tài chính cá nhân giúp kiểm soát income, expenses, investments, debt và ra quyết định tốt hơn trong sự nghiệp.",
+    "trap": "High income alone không đảm bảo ổn định tài chính.",
+    "keyword": "Personal finance skills = manage income/expenses/investments."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 43,
+    "clo": "CLO 2",
+    "question": "A student wants to increase income but has limited experience. What is the most reasonable approach?",
+    "options": [
+      "Use savings to start a company immediately",
+      "Wait for promotion opportunities in the current job",
+      "Borrow money to invest for quick high returns",
+      "Seek part-time or freelance work to gain experience and generate income"
+    ],
+    "answer": 3,
+    "correctText": "Seek part-time or freelance work to gain experience and generate income",
+    "id": "e1_q43",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Khi còn ít kinh nghiệm, cách hợp lý là làm part-time/freelance để vừa có thu nhập vừa tích lũy experience.",
+    "trap": "Vay tiền để đầu tư nhanh hoặc mở công ty ngay thường rủi ro cao.",
+    "keyword": "Limited experience = part-time/freelance."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 44,
+    "clo": "CLO 1",
+    "question": "Which of the following characteristics applies to monetary assets?",
+    "options": [
+      "They involve high risk and a strong temptation to spend.",
+      "They are characterized by high returns and a strong temptation to spend.",
+      "They are characterized by low returns, low risk, and a strong temptation to spend.",
+      "They are characterized by low returns and high risk."
+    ],
+    "answer": 2,
+    "correctText": "They are characterized by low returns, low risk, and a strong temptation to spend.",
+    "id": "e1_q44",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Monetary assets như cash/bank deposits có rủi ro thấp, lợi suất thấp và dễ chi tiêu vì rất thanh khoản.",
+    "trap": "Đừng chọn high return/high risk vì đó thường là investment assets.",
+    "keyword": "Monetary assets = liquid, low risk, low return."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 45,
+    "clo": "CLO 1",
+    "question": "Assuming you are 21 years old and a university student, which stage of the financial life cycle are you currently in?",
+    "options": [
+      "Stage 1: Wealth Accumulation Stage",
+      "Stage 4: Early Life Stage",
+      "Stage 2: Golden Years of Life",
+      "Stage 3: Retirement Years"
+    ],
+    "answer": 0,
+    "correctText": "Stage 1: Wealth Accumulation Stage",
+    "id": "e1_q45",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Sinh viên/đầu đời thuộc giai đoạn Wealth Accumulation Stage: xây kỹ năng, thu nhập, thói quen tiết kiệm và tích lũy tài sản.",
+    "trap": "Retirement/golden years là giai đoạn sau.",
+    "keyword": "Age 21/student = Stage 1 Wealth Accumulation."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 46,
+    "clo": "CLO 5",
+    "question": "Mr. Bach plans to purchase an apartment valued at VND 2.4 billion as a rental property. He applies for a loan from Bank X, which agrees to finance 50% of the property's value over a term of 5 years. Under the bank's consumer mortgage policy, the total monthly loan repayment is fixed throughout the loan term, while interest is calculated on the beginning outstanding balance at an annual interest rate of 8%. Mr. Bach's monthly income available for debt repayment is VND 25 million. Based on his current financial capacity, should the bank approve the loan? Why?",
+    "options": [
+      "No. Mr. Bach's income is lower than the required monthly loan repayment.",
+      "There is insufficient information to calculate the required monthly loan repayment.",
+      "Yes. Mr. Bach's income available for debt repayment is greater than the required monthly loan repayment.",
+      "No. Mr. Bach's income is only sufficient to repay the loan, leaving nothing for other living expenses."
+    ],
+    "answer": 2,
+    "correctText": "Yes. Mr. Bach's income available for debt repayment is greater than the required monthly loan repayment.",
+    "id": "e1_q46",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 2,400 × 50% = 1,200 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 24.33 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: đủ theo đáp án LMS.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 47,
+    "clo": "CLO 3",
+    "question": "What is the primary difference between secured and unsecured loans?",
+    "options": [
+      "Secured loans require collateral; unsecured loans do not",
+      "Unsecured loans have lower interest rates",
+      "Unsecured loans are only for businesses",
+      "Secured loans require no credit assessment"
+    ],
+    "answer": 0,
+    "correctText": "Secured loans require collateral; unsecured loans do not",
+    "id": "e1_q47",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Secured loans có collateral; unsecured loans không có tài sản bảo đảm nên thường dựa nhiều hơn vào creditworthiness.",
+    "trap": "Unsecured loan không đồng nghĩa lãi thấp hơn.",
+    "keyword": "Secured = collateral."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 48,
+    "clo": "CLO 3",
+    "question": "For which insurance product is the insurer’s financial rating most critical?",
+    "options": [
+      "Life insurance",
+      "Home insurance",
+      "Disability insurance",
+      "Auto insurance"
+    ],
+    "answer": 0,
+    "correctText": "Life insurance",
+    "id": "e1_q48",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Life insurance là cam kết dài hạn, nên financial rating của insurer rất quan trọng để đảm bảo khả năng chi trả trong tương lai.",
+    "trap": "Các bảo hiểm ngắn hạn cũng cần uy tín, nhưng life insurance kéo dài nhiều năm nhất.",
+    "keyword": "Insurer rating most critical → life insurance."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 49,
+    "clo": "CLO 3",
+    "question": "When investing in an open-end mutual fund, what is an advantage compared to direct stock investment?",
+    "options": [
+      "Professionally managed by financial experts",
+      "Guaranteed fixed annual returns",
+      "No personal income tax",
+      "No risk involved"
+    ],
+    "answer": 0,
+    "correctText": "Professionally managed by financial experts",
+    "id": "e1_q49",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Open-end mutual fund được quản lý bởi chuyên gia và giúp nhà đầu tư tiếp cận danh mục đa dạng hơn so với tự chọn cổ phiếu đơn lẻ.",
+    "trap": "Không có guaranteed fixed return và vẫn có risk.",
+    "keyword": "Mutual fund = professionally managed."
+  },
+  {
+    "sourceExam": 1,
+    "sourceNumber": 50,
+    "clo": "CLO 3",
+    "question": "If a borrower repays a mortgage early, they may incur:",
+    "options": [
+      "Loan extension fee",
+      "Prepayment penalty",
+      "Foreign exchange fee",
+      "Loan insurance fee"
+    ],
+    "answer": 1,
+    "correctText": "Prepayment penalty",
+    "id": "e1_q50",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Trả mortgage sớm có thể bị prepayment penalty vì ngân hàng mất một phần thu nhập lãi dự kiến.",
+    "trap": "Không phải loan extension fee hay foreign exchange fee.",
+    "keyword": "Early mortgage repayment → prepayment penalty."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 1,
+    "clo": "CLO 5",
+    "question": "Tài sets a goal of purchasing a collection of CDs by his five favorite music artists. He writes down his goal and develops a plan to achieve it. Which of the following steps in his financial goal and plan should you advise him to change in order to make the plan more effective?",
+    "options": [
+      "\"I want to achieve my goal within eight weeks.\"",
+      "\"I will purchase one CD from each artist.\"",
+      "\"I will spend all of the money I earn from my job until I achieve my goal.\"",
+      "\"I will need USD 80 to complete the collection.\""
+    ],
+    "answer": 2,
+    "correctText": "\"I will spend all of the money I earn from my job until I achieve my goal.\"",
+    "id": "e2_q1",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Mục tiêu mua CDs có số lượng, thời hạn và số tiền rõ, nhưng “spend all money earned” là không bền vững vì bỏ qua saving/needs.",
+    "trap": "SMART không đồng nghĩa tiêu toàn bộ thu nhập cho mục tiêu.",
+    "keyword": "Goal plan must not sacrifice all income."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 2,
+    "clo": "CLO 5",
+    "question": "What is a major disadvantage of Zero-Based Budgeting?",
+    "options": [
+      "It is difficult to implement because it requires creating a new budget from scratch each month.",
+      "It is suitable only for high-income individuals.",
+      "It does not allow for savings.",
+      "It is ineffective in controlling spending."
+    ],
+    "answer": 0,
+    "correctText": "It is difficult to implement because it requires creating a new budget from scratch each month.",
+    "id": "e2_q2",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Zero-based budgeting yêu cầu phân bổ toàn bộ income về 0 và thường phải lập lại ngân sách từ đầu mỗi tháng nên tốn công.",
+    "trap": "Nó kiểm soát chi tốt, nhưng nhược điểm là mất thời gian/khó triển khai.",
+    "keyword": "Zero-based = every dollar has a job."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 3,
+    "clo": "CLO 1",
+    "question": "Which factor is most important in helping an individual achieve a higher income?",
+    "options": [
+      "Accurately predicting stock market movements",
+      "Developing professional skills and knowledge",
+      "Receiving financial support from family",
+      "Investing in real estate as early as possible"
+    ],
+    "answer": 1,
+    "correctText": "Developing professional skills and knowledge",
+    "id": "e2_q3",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Muốn tăng thu nhập dài hạn cần nâng kỹ năng, kiến thức và kinh nghiệm để tăng giá trị cá nhân trên thị trường lao động.",
+    "trap": "Dự đoán thị trường hoặc đầu tư tất tay không phải nền tảng bền vững.",
+    "keyword": "Higher income = skills + knowledge + experience."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 4,
+    "clo": "CLO 5",
+    "question": "Suppose you have USD 2,000 and invest it in a 3-year Certificate of Deposit (CD) that earns 4% annual interest, compounded annually. How much money will you have when the CD matures?",
+    "options": [
+      "USD 2,249.73",
+      "USD 2,854.13",
+      "USD 2,591.45",
+      "USD 2,324.89"
+    ],
+    "answer": 0,
+    "correctText": "USD 2,249.73",
+    "id": "e2_q4",
+    "chapter": "Mixed Foundations",
+    "explanation": "Compound interest: FV = 2,000 × (1 + 4%)^3 = 2,249.73 USD.",
+    "trap": "Không dùng lãi đơn 2,000×4%×3 nếu đề nói compounded annually.",
+    "keyword": "Compound interest = lãi sinh lãi."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 5,
+    "clo": "CLO 3",
+    "question": "What is a major benefit of using a credit card instead of cash?",
+    "options": [
+      "No need to assess financial capacity",
+      "No obligation to repay",
+      "Cashback rewards, loyalty points, and installment payment options",
+      "No spending limit"
+    ],
+    "answer": 2,
+    "correctText": "Cashback rewards, loyalty points, and installment payment options",
+    "id": "e2_q5",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Credit card có thể có cashback, loyalty points và installment options, nhưng vẫn phải trả nợ đúng hạn.",
+    "trap": "Không có nghĩa là không cần trả nợ hay không có hạn mức.",
+    "keyword": "Credit card benefit = rewards/installments."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 6,
+    "clo": "CLO 5",
+    "question": "How should the following situations be matched with the most appropriate borrowing decisions? (1) Having a stable income but no emergency fund; (2) Having income that fluctuates based on commission; (3) Wanting to borrow to invest in professional skills; (4) Wanting to borrow to buy the latest smartphone simply because friends already have one. (a) Carefully evaluate repayment capacity because cash flow is unstable; (b) Borrowing may be appropriate if the long-term benefits outweigh the borrowing costs; (c) Build an emergency fund before taking on a large loan; (d) Borrowing is not recommended if it is solely to satisfy short-term consumption needs.",
+    "options": [
+      "(1)-d; (2)-a; (3)-b; (4)-c",
+      "(1)-a; (2)-c; (3)-b; (4)-d",
+      "(1)-c; (2)-b; (3)-a; (4)-d",
+      "(1)-c; (2)-a; (3)-b; (4)-d"
+    ],
+    "answer": 3,
+    "correctText": "(1)-c; (2)-a; (3)-b; (4)-d",
+    "id": "e2_q6",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Quỹ khẩn cấp thường nên đủ 3–6 tháng living expenses để xử lý mất việc, bệnh, chi phí bất ngờ.",
+    "trap": "1–2 tháng thường quá mỏng; 12–24 tháng thường quá cao cho mức tối thiểu.",
+    "keyword": "Emergency fund = 3–6 months."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 7,
+    "clo": "CLO 3",
+    "question": "A short-term loan typically has a maximum maturity of:",
+    "options": [
+      "12 months",
+      "24 months",
+      "36 months",
+      "6 months"
+    ],
+    "answer": 0,
+    "correctText": "12 months",
+    "id": "e2_q7",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Trong bộ câu hỏi này, short-term loan có maturity tối đa 12 tháng.",
+    "trap": "24/36 tháng thường là trung hạn.",
+    "keyword": "Short-term loan = ≤ 12 months."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 8,
+    "clo": "CLO 3",
+    "question": "When using a credit card, __________ is the interest rate charged on your outstanding balance if you fail to make at least the minimum payment on time.",
+    "options": [
+      "Over-limit fee",
+      "Cash advance fee",
+      "Late payment fee",
+      "Penalty interest rate"
+    ],
+    "answer": 3,
+    "correctText": "Penalty interest rate",
+    "id": "e2_q8",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Penalty interest rate là lãi suất phạt áp trên outstanding balance khi không trả tối thiểu đúng hạn.",
+    "trap": "Late payment fee là phí, không phải interest rate.",
+    "keyword": "Fail minimum payment → penalty interest."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 9,
+    "clo": "CLO 1",
+    "question": "What does compound interest mean in personal finance?",
+    "options": [
+      "Interest is applied only to the initial principal amount.",
+      "It applies only to stock market investments.",
+      "Interest is earned on both the principal and the accumulated interest from previous periods.",
+      "Interest is applied only to loans."
+    ],
+    "answer": 2,
+    "correctText": "Interest is earned on both the principal and the accumulated interest from previous periods.",
+    "id": "e2_q9",
+    "chapter": "Chapter 1: Personal Finance Foundations",
+    "explanation": "Compound interest là interest được tính trên cả principal và phần interest đã tích lũy từ kỳ trước.",
+    "trap": "Simple interest chỉ tính trên principal ban đầu.",
+    "keyword": "Compound = interest on interest."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 10,
+    "clo": "CLO 3",
+    "question": "For which insurance product is the insurer’s financial rating most critical?",
+    "options": [
+      "Home insurance",
+      "Disability insurance",
+      "Life insurance",
+      "Auto insurance"
+    ],
+    "answer": 2,
+    "correctText": "Life insurance",
+    "id": "e2_q10",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Life insurance là cam kết dài hạn, nên financial rating của insurer rất quan trọng để đảm bảo khả năng chi trả trong tương lai.",
+    "trap": "Các bảo hiểm ngắn hạn cũng cần uy tín, nhưng life insurance kéo dài nhiều năm nhất.",
+    "keyword": "Insurer rating most critical → life insurance."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 11,
+    "clo": "CLO 1",
+    "question": "To maximize long-term earning potential, which strategy should a recent graduate prioritize?",
+    "options": [
+      "Accepting only high-paying jobs from the outset without considering learning opportunities",
+      "Building skills and gaining experience to increase personal value in the future",
+      "Investing all income in the stock market immediately after getting a job",
+      "Taking on multiple jobs simultaneously to earn a high income immediately"
+    ],
+    "answer": 1,
+    "correctText": "Building skills and gaining experience to increase personal value in the future",
+    "id": "e2_q11",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Muốn tăng thu nhập dài hạn cần nâng kỹ năng, kiến thức và kinh nghiệm để tăng giá trị cá nhân trên thị trường lao động.",
+    "trap": "Dự đoán thị trường hoặc đầu tư tất tay không phải nền tảng bền vững.",
+    "keyword": "Higher income = skills + knowledge + experience."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 12,
+    "clo": "CLO 1",
+    "question": "Which type of expense can be controlled over time and managed more easily?",
+    "options": [
+      "Short-term expenses",
+      "Recurring expenses",
+      "Variable expenses",
+      "Fixed expenses"
+    ],
+    "answer": 2,
+    "correctText": "Variable expenses",
+    "id": "e2_q12",
+    "chapter": "Mixed Foundations",
+    "explanation": "Variable expenses thay đổi theo hành vi tiêu dùng nên có thể điều chỉnh dần, ví dụ ăn ngoài, mua sắm, giải trí.",
+    "trap": "Fixed expenses như rent/loan thường khó đổi trong ngắn hạn.",
+    "keyword": "Variable expense = controllable."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 13,
+    "clo": "CLO 3",
+    "question": "If a borrower repays a mortgage early, they may incur:",
+    "options": [
+      "Prepayment penalty",
+      "Loan insurance fee",
+      "Loan extension fee",
+      "Foreign exchange fee"
+    ],
+    "answer": 0,
+    "correctText": "Prepayment penalty",
+    "id": "e2_q13",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Trả mortgage sớm có thể bị prepayment penalty vì ngân hàng mất một phần thu nhập lãi dự kiến.",
+    "trap": "Không phải loan extension fee hay foreign exchange fee.",
+    "keyword": "Early mortgage repayment → prepayment penalty."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 14,
+    "clo": "CLO 2",
+    "question": "The personal income statement reflects:",
+    "options": [
+      "Income and expenses over a specific period",
+      "Total asset value",
+      "Changes in net worth over time",
+      "Current bank account balances"
+    ],
+    "answer": 0,
+    "correctText": "Income and expenses over a specific period",
+    "id": "e2_q14",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Personal income statement phản ánh income và expenses trong một khoảng thời gian cụ thể, không phải snapshot tài sản tại một ngày.",
+    "trap": "Balance sheet mới là assets/liabilities/net worth tại một thời điểm.",
+    "keyword": "Income statement = income & expenses over a period."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 15,
+    "clo": "CLO 5",
+    "question": "Mr. Bien plans to purchase an apartment valued at VND 3 billion as a rental property. He applies for financing from Bank X, which agrees to finance 70% of the property's value over a term of 5 years. Under the bank's current consumer mortgage policy, loan repayments are made monthly, with equal principal repayments each month and interest calculated on the beginning outstanding balance at an annual interest rate of 8%. How much must Mr. Bien repay to the bank in the third month?",
+    "options": [
+      "VND 70.00 million",
+      "VND 35.00 million",
+      "VND 48.53 million",
+      "VND 48.77 million"
+    ],
+    "answer": 2,
+    "correctText": "VND 48.53 million",
+    "id": "e2_q15",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,000 × 70% = 2,100 triệu VND. Trả gốc đều: gốc mỗi tháng = 35.00 triệu. Đầu tháng 3, dư nợ = 2,100 - 2×35.00 = 2,030.00 triệu. Lãi = 2,030.00×8%/12 = 13.53 triệu. Tổng trả ≈ 48.53 triệu.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 16,
+    "clo": "CLO 1",
+    "question": "What is passive income?",
+    "options": [
+      "Income that applies only to retirees",
+      "Income that is not subject to taxation",
+      "Income received from a monthly salary",
+      "Income earned without continuous active work"
+    ],
+    "answer": 3,
+    "correctText": "Income earned without continuous active work",
+    "id": "e2_q16",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Passive income là thu nhập không cần lao động liên tục hằng ngày, ví dụ lãi, cổ tức, cho thuê, royalties.",
+    "trap": "Monthly salary là active income.",
+    "keyword": "Passive income = not continuous active work."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 17,
+    "clo": "CLO 3",
+    "question": "What is the primary difference between secured and unsecured loans?",
+    "options": [
+      "Unsecured loans have lower interest rates",
+      "Unsecured loans are only for businesses",
+      "Secured loans require collateral; unsecured loans do not",
+      "Secured loans require no credit assessment"
+    ],
+    "answer": 2,
+    "correctText": "Secured loans require collateral; unsecured loans do not",
+    "id": "e2_q17",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Secured loans có collateral; unsecured loans không có tài sản bảo đảm nên thường dựa nhiều hơn vào creditworthiness.",
+    "trap": "Unsecured loan không đồng nghĩa lãi thấp hơn.",
+    "keyword": "Secured = collateral."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 18,
+    "clo": "CLO 5",
+    "question": "A borrower falls behind on loan repayments after losing their job for three months. From a personal financial management perspective, what is the most appropriate course of action?",
+    "options": [
+      "Do not contact the credit institution because there is currently no money to repay the loan.",
+      "Borrow from a fast-loan mobile application to repay the existing loan.",
+      "Proactively inform the credit institution and request that it consider an appropriate repayment solution.",
+      "Wait until a new job is secured before taking any action."
+    ],
+    "answer": 2,
+    "correctText": "Proactively inform the credit institution and request that it consider an appropriate repayment solution.",
+    "id": "e2_q18",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khi gặp khó khăn trả nợ, nên chủ động liên hệ credit institution để xin phương án cơ cấu/giải pháp phù hợp.",
+    "trap": "Vay app nhanh để trả nợ cũ dễ tạo vòng xoáy nợ.",
+    "keyword": "Can’t repay → contact lender early."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 19,
+    "clo": "CLO 3",
+    "question": "For unsecured loans, which factor most strongly affects the interest rate?",
+    "options": [
+      "Personal credit score",
+      "Years of work experience",
+      "Collateral value",
+      "Loan currency"
+    ],
+    "answer": 0,
+    "correctText": "Personal credit score",
+    "id": "e2_q19",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Với unsecured loans, ngân hàng không có collateral nên credit score/history là yếu tố quan trọng để đánh giá khả năng trả nợ và định lãi.",
+    "trap": "Collateral value không áp dụng mạnh cho unsecured loan.",
+    "keyword": "Unsecured loan → credit score matters."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 20,
+    "clo": "CLO 3",
+    "question": "What is the primary difference between secured and unsecured loans?",
+    "options": [
+      "Unsecured loans have lower interest rates",
+      "Secured loans require no credit assessment",
+      "Secured loans require collateral; unsecured loans do not",
+      "Unsecured loans are only for businesses"
+    ],
+    "answer": 2,
+    "correctText": "Secured loans require collateral; unsecured loans do not",
+    "id": "e2_q20",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Secured loans có collateral; unsecured loans không có tài sản bảo đảm nên thường dựa nhiều hơn vào creditworthiness.",
+    "trap": "Unsecured loan không đồng nghĩa lãi thấp hơn.",
+    "keyword": "Secured = collateral."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 21,
+    "clo": "CLO 5",
+    "question": "Mr. Liem plans to purchase an apartment valued at VND 3.5 billion. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 15 years. Loan repayments are made monthly, with equal principal repayments each month and interest calculated on the beginning outstanding balance at an annual interest rate of 10%. After making two monthly repayments, what is Mr. Liem's remaining outstanding loan balance?",
+    "options": [
+      "VND 2,436.39 million",
+      "VND 2,422.78 million",
+      "VND 2,438.13 million",
+      "VND 2,432.12 million"
+    ],
+    "answer": 1,
+    "correctText": "VND 2,422.78 million",
+    "id": "e2_q21",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,500 × 70% = 2,450 triệu VND. Trả gốc đều: gốc mỗi tháng = 2,450/180 = 13.61 triệu. Sau 2 tháng, dư nợ còn = 2,450 - 2×13.61 = 2,422.78 triệu VND.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 22,
+    "clo": "CLO 3",
+    "question": "If a borrower repays a mortgage early, they may incur:",
+    "options": [
+      "Foreign exchange fee",
+      "Loan insurance fee",
+      "Prepayment penalty",
+      "Loan extension fee"
+    ],
+    "answer": 2,
+    "correctText": "Prepayment penalty",
+    "id": "e2_q22",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Trả mortgage sớm có thể bị prepayment penalty vì ngân hàng mất một phần thu nhập lãi dự kiến.",
+    "trap": "Không phải loan extension fee hay foreign exchange fee.",
+    "keyword": "Early mortgage repayment → prepayment penalty."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 23,
+    "clo": "CLO 1",
+    "question": "How should a recent graduate manage their first income to ensure financial stability?",
+    "options": [
+      "Create a clear budget and prioritize saving from the beginning",
+      "Borrow money to purchase expensive assets as soon as income is earned",
+      "Spend according to personal needs first and save whatever remains",
+      "Invest all income without maintaining an emergency fund"
+    ],
+    "answer": 0,
+    "correctText": "Create a clear budget and prioritize saving from the beginning",
+    "id": "e2_q23",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Người mới đi làm nên lập budget rõ ràng và ưu tiên saving từ đầu để tránh lifestyle inflation.",
+    "trap": "Không nên spend first save later.",
+    "keyword": "First income = budget + save early."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 24,
+    "clo": "CLO 2",
+    "question": "When calculating net worth, which factor does NOT directly affect it?",
+    "options": [
+      "Total liabilities",
+      "Total monthly income",
+      "Market value of owned assets",
+      "Changes in investment asset values"
+    ],
+    "answer": 1,
+    "correctText": "Total monthly income",
+    "id": "e2_q24",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Net worth phụ thuộc vào assets và liabilities. Total monthly income không trực tiếp làm đổi net worth nếu chưa chuyển thành tài sản hoặc dùng để trả nợ.",
+    "trap": "Income ảnh hưởng gián tiếp qua saving/debt repayment, không phải yếu tố trực tiếp.",
+    "keyword": "Net worth = assets - liabilities; income ≠ net worth."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 25,
+    "clo": "CLO 3",
+    "question": "When investing in rental real estate, which factor is most important?",
+    "options": [
+      "Unsecured loan interest rate",
+      "Number of banks offering mortgage loans",
+      "Location and appreciation potential",
+      "Interior furnishings"
+    ],
+    "answer": 2,
+    "correctText": "Location and appreciation potential",
+    "id": "e2_q25",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Rental real estate phụ thuộc mạnh vào location và appreciation potential vì hai yếu tố này ảnh hưởng rent, vacancy và tăng giá tài sản.",
+    "trap": "Nội thất quan trọng nhưng không bằng vị trí và tiềm năng tăng giá.",
+    "keyword": "Real estate = location, location, location."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 26,
+    "clo": "CLO 5",
+    "question": "When preparing a personal budget, which factor should be considered first?",
+    "options": [
+      "Savings account balance",
+      "Desired spending",
+      "Total monthly income",
+      "Credit card interest rate"
+    ],
+    "answer": 2,
+    "correctText": "Total monthly income",
+    "id": "e2_q26",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Khi lập budget, phải biết total monthly income trước rồi mới phân bổ needs, wants, savings và debt repayment.",
+    "trap": "Desired spending không nên đi trước income.",
+    "keyword": "Budget starts with income."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 27,
+    "clo": "CLO 3",
+    "question": "Which loan type typically carries the lowest interest rate?",
+    "options": [
+      "Unsecured consumer loan",
+      "Mortgage loan",
+      "Informal (black market) loan",
+      "Credit card loan"
+    ],
+    "answer": 1,
+    "correctText": "Mortgage loan",
+    "id": "e2_q27",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Mortgage loan thường có lãi thấp hơn vì có tài sản bảo đảm là bất động sản và thời hạn dài.",
+    "trap": "Credit card và unsecured consumer loan thường lãi cao hơn.",
+    "keyword": "Lowest loan rate → mortgage."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 28,
+    "clo": "CLO 5",
+    "question": "Customer E applies for a loan online through a credit institution's mobile application. Which of the following is the most important step before confirming the loan?",
+    "options": [
+      "Carefully read the electronic loan agreement, review comments on social media, take screenshots of advertisements, and review the interest rates and fees.",
+      "Take screenshots of advertisements, carefully read the electronic loan agreement, and review the interest rates and fees.",
+      "Carefully read the electronic loan agreement, review the interest rates, fees, and disbursement method, and verify that the application is the official app of the credit institution.",
+      "Review comments on social media, take screenshots of advertisements, carefully read the electronic loan agreement, and review the interest rates and fees."
+    ],
+    "answer": 2,
+    "correctText": "Carefully read the electronic loan agreement, review the interest rates, fees, and disbursement method, and verify that the application is the official app of the credit institution.",
+    "id": "e2_q28",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Vay online phải kiểm tra app chính thức, đọc hợp đồng điện tử, lãi suất, phí và phương thức giải ngân trước khi xác nhận.",
+    "trap": "Review mạng xã hội/screenshot quảng cáo không thay thế hợp đồng chính thức.",
+    "keyword": "Online loan → official app + contract + fees."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 29,
+    "clo": "CLO 1",
+    "question": "What is the most important principle of personal financial management?",
+    "options": [
+      "Borrow money to maintain a higher standard of living.",
+      "Develop a budget and control spending.",
+      "Spend first and save later.",
+      "Earn as much money as possible."
+    ],
+    "answer": 1,
+    "correctText": "Develop a budget and control spending.",
+    "id": "e2_q29",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Nguyên tắc nền tảng của quản lý tài chính cá nhân là lập budget và kiểm soát spending để không rơi vào chi tiêu vượt khả năng.",
+    "trap": "Earn more không đủ nếu không kiểm soát chi tiêu.",
+    "keyword": "PF management = budget + control spending."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 30,
+    "clo": "CLO 3",
+    "question": "What is a common advantage of an online savings account compared to a traditional savings account?",
+    "options": [
+      "No early withdrawal allowed",
+      "Not covered by deposit insurance",
+      "Typically higher interest rates",
+      "No initial deposit required"
+    ],
+    "answer": 2,
+    "correctText": "Typically higher interest rates",
+    "id": "e2_q30",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Online savings account thường có lãi suất nhỉnh hơn hoặc ưu đãi hơn vì chi phí vận hành thấp và ngân hàng khuyến khích kênh số.",
+    "trap": "Vẫn có điều kiện/rủi ro tương tự tiền gửi ngân hàng, không phải không được bảo hiểm.",
+    "keyword": "Online savings = typically higher interest."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 31,
+    "clo": "CLO 3",
+    "question": "If a time deposit is withdrawn before maturity, what usually happens?",
+    "options": [
+      "No interest or only the demand deposit rate is applied",
+      "A penalty fee is charged but the original rate remains",
+      "The original interest rate is fully paid",
+      "No impact on the deposit"
+    ],
+    "answer": 0,
+    "correctText": "No interest or only the demand deposit rate is applied",
+    "id": "e2_q31",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Rút time deposit trước hạn thường không được hưởng lãi suất kỳ hạn đầy đủ; có thể chỉ hưởng demand deposit rate hoặc không có lãi.",
+    "trap": "Không được hưởng full original rate.",
+    "keyword": "Early withdrawal → demand/no interest."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 32,
+    "clo": "CLO 5",
+    "question": "Mr. Hoa plans to purchase an apartment valued at VND 3.5 billion as a rental property. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 10 years. Loan repayments are made monthly with equal total monthly installments (fixed-payment loan), and interest is calculated on the beginning outstanding balance at an annual interest rate of 10%. What is Mr. Hoa's total monthly loan repayment?",
+    "options": [
+      "VND 32.38 million",
+      "VND 40.83 million",
+      "VND 20.42 million",
+      "VND 11.48 million"
+    ],
+    "answer": 0,
+    "correctText": "VND 32.38 million",
+    "id": "e2_q32",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,500 × 70% = 2,450 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)] ≈ 32.38 triệu/tháng.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 33,
+    "clo": "CLO 3",
+    "question": "What is an advantage of investing in ETFs (Exchange-Traded Funds) compared to individual stocks?",
+    "options": [
+      "Guaranteed higher returns than the market",
+      "Immune to market volatility",
+      "Portfolio diversification at lower cost",
+      "No transaction costs"
+    ],
+    "answer": 2,
+    "correctText": "Portfolio diversification at lower cost",
+    "id": "e2_q33",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "ETFs giúp đa dạng hóa danh mục với chi phí thấp hơn so với tự mua nhiều cổ phiếu riêng lẻ.",
+    "trap": "ETF không đảm bảo cao hơn thị trường và vẫn chịu volatility.",
+    "keyword": "ETF = low-cost diversification."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 34,
+    "clo": "CLO 1",
+    "question": "To ensure sustainable financial growth throughout a career, what should students do as soon as they start working?",
+    "options": [
+      "Borrow money to upgrade their lifestyle as soon as they have a stable income.",
+      "Learn personal financial management, saving, and prudent investing.",
+      "Invest all income in high-risk investments to achieve quick profits.",
+      "Focus solely on work without paying attention to personal finances."
+    ],
+    "answer": 1,
+    "correctText": "Learn personal financial management, saving, and prudent investing.",
+    "id": "e2_q34",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Đáp án đúng là “Learn personal financial management, saving, and prudent investing.” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 35,
+    "clo": "CLO 3",
+    "question": "Which factor does NOT affect life insurance premiums?",
+    "options": [
+      "Educational background",
+      "Health condition",
+      "Gender",
+      "Cash value of the policy"
+    ],
+    "answer": 0,
+    "correctText": "Educational background",
+    "id": "e2_q35",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Life insurance premium thường phụ thuộc vào tuổi, giới tính, sức khỏe, loại hợp đồng/cash value; educational background không phải yếu tố chính.",
+    "trap": "Health/gender/cash-value policy đều có thể ảnh hưởng chi phí bảo hiểm.",
+    "keyword": "Premium factors ≠ education."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 36,
+    "clo": "CLO 3",
+    "question": "When investing in an open-end mutual fund, what is an advantage compared to direct stock investment?",
+    "options": [
+      "Guaranteed fixed annual returns",
+      "No personal income tax",
+      "No risk involved",
+      "Professionally managed by financial experts"
+    ],
+    "answer": 3,
+    "correctText": "Professionally managed by financial experts",
+    "id": "e2_q36",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Open-end mutual fund được quản lý bởi chuyên gia và giúp nhà đầu tư tiếp cận danh mục đa dạng hơn so với tự chọn cổ phiếu đơn lẻ.",
+    "trap": "Không có guaranteed fixed return và vẫn có risk.",
+    "keyword": "Mutual fund = professionally managed."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 37,
+    "clo": "CLO 5",
+    "question": "Mr. Bach plans to purchase an apartment valued at VND 2.4 billion as a rental property. He applies for a loan from Bank X, which agrees to finance 50% of the property's value over a term of 5 years. Under the bank's consumer mortgage policy, the total monthly loan repayment is fixed throughout the loan term, while interest is calculated on the beginning outstanding balance at an annual interest rate of 8%. Mr. Bach's monthly income available for debt repayment is VND 25 million. Based on his current financial capacity, should the bank approve the loan? Why?",
+    "options": [
+      "Yes. Mr. Bach's income available for debt repayment is greater than the required monthly loan repayment.",
+      "No. Mr. Bach's income is only sufficient to repay the loan, leaving nothing for other living expenses.",
+      "No. Mr. Bach's income is lower than the required monthly loan repayment.",
+      "There is insufficient information to calculate the required monthly loan repayment."
+    ],
+    "answer": 0,
+    "correctText": "Yes. Mr. Bach's income available for debt repayment is greater than the required monthly loan repayment.",
+    "id": "e2_q37",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 2,400 × 50% = 1,200 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 24.33 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: đủ theo đáp án LMS.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 38,
+    "clo": "CLO 2",
+    "question": "The personal liquidity ratio measures:",
+    "options": [
+      "Ability to cover short-term liabilities with liquid assets",
+      "Passive income ratio",
+      "Investment profitability",
+      "Ability to repay long-term debt"
+    ],
+    "answer": 0,
+    "correctText": "Ability to cover short-term liabilities with liquid assets",
+    "id": "e2_q38",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Personal liquidity ratio đo khả năng dùng liquid assets để cover nghĩa vụ/ngắn hạn hoặc chi phí sống ngắn hạn.",
+    "trap": "Đừng nhầm với khả năng trả nợ dài hạn hoặc profitability.",
+    "keyword": "Liquidity = liquid assets cover short-term needs."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 39,
+    "clo": "CLO 2",
+    "question": "A student wants to increase income but has limited experience. What is the most reasonable approach?",
+    "options": [
+      "Wait for promotion opportunities in the current job",
+      "Borrow money to invest for quick high returns",
+      "Use savings to start a company immediately",
+      "Seek part-time or freelance work to gain experience and generate income"
+    ],
+    "answer": 3,
+    "correctText": "Seek part-time or freelance work to gain experience and generate income",
+    "id": "e2_q39",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Khi còn ít kinh nghiệm, cách hợp lý là làm part-time/freelance để vừa có thu nhập vừa tích lũy experience.",
+    "trap": "Vay tiền để đầu tư nhanh hoặc mở công ty ngay thường rủi ro cao.",
+    "keyword": "Limited experience = part-time/freelance."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 40,
+    "clo": "CLO 3",
+    "question": "For which insurance product is the insurer’s financial rating most critical?",
+    "options": [
+      "Home insurance",
+      "Life insurance",
+      "Disability insurance",
+      "Auto insurance"
+    ],
+    "answer": 1,
+    "correctText": "Life insurance",
+    "id": "e2_q40",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Life insurance là cam kết dài hạn, nên financial rating của insurer rất quan trọng để đảm bảo khả năng chi trả trong tương lai.",
+    "trap": "Các bảo hiểm ngắn hạn cũng cần uy tín, nhưng life insurance kéo dài nhiều năm nhất.",
+    "keyword": "Insurer rating most critical → life insurance."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 41,
+    "clo": "CLO 2",
+    "question": "Han’s assets include one electric vehicle valued at $12,000 and a checking account balance of $3,000. Her liabilities include a credit card balance of $4,000 and an outstanding auto loan balance of $7,000. What is Han’s net worth?",
+    "options": [
+      "$5,000",
+      "$4,000",
+      "$12,000",
+      "$7,000"
+    ],
+    "answer": 1,
+    "correctText": "$4,000",
+    "id": "e2_q41",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Net worth = total assets - total liabilities = (12,000 + 3,000) - (4,000 + 7,000) = 4,000 USD.",
+    "trap": "Income không dùng trực tiếp khi tính net worth.",
+    "keyword": "Net worth = Assets - Liabilities."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 42,
+    "clo": "CLO 5",
+    "question": "Mr. Tung plans to purchase an apartment valued at VND 3 billion. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 10 years. Loan repayments are made monthly with equal total monthly installments (fixed-payment loan), and interest is calculated on the beginning outstanding balance at an annual interest rate of 8%. After making two monthly repayments, what is Mr. Tung's remaining loan balance?",
+    "options": [
+      "VND 2,065.00 million",
+      "VND 2,076.97 million",
+      "VND 2,088.52 million",
+      "VND 2,082.50 million"
+    ],
+    "answer": 1,
+    "correctText": "VND 2,076.97 million",
+    "id": "e2_q42",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,000 × 70% = 2,100 triệu VND. Khoản vay trả góp cố định dùng công thức PMT. PMT ≈ 25.48 triệu/tháng. Sau 2 kỳ, dư nợ ≈ 2,076.97 triệu VND.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 43,
+    "clo": "CLO 3",
+    "question": "When using a credit card, __________ is the interest rate charged on your outstanding balance if you fail to make at least the minimum payment on time.",
+    "options": [
+      "Late payment fee",
+      "Penalty interest rate",
+      "Cash advance fee",
+      "Over-limit fee"
+    ],
+    "answer": 1,
+    "correctText": "Penalty interest rate",
+    "id": "e2_q43",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Penalty interest rate là lãi suất phạt áp trên outstanding balance khi không trả tối thiểu đúng hạn.",
+    "trap": "Late payment fee là phí, không phải interest rate.",
+    "keyword": "Fail minimum payment → penalty interest."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 44,
+    "clo": "CLO 3",
+    "question": "When saving in foreign currency, which factor most significantly affects actual returns?",
+    "options": [
+      "Deposit insurance limits",
+      "Personal income tax policy",
+      "Foreign currency deposit rate",
+      "Exchange rate fluctuations"
+    ],
+    "answer": 3,
+    "correctText": "Exchange rate fluctuations",
+    "id": "e2_q44",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Khi gửi tiết kiệm bằng ngoại tệ, actual return chịu ảnh hưởng lớn bởi exchange rate fluctuations khi quy đổi về nội tệ.",
+    "trap": "Lãi suất tiền gửi chỉ là một phần của return thực tế.",
+    "keyword": "Foreign currency saving → exchange rate risk."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 45,
+    "clo": "CLO 2",
+    "question": "Which widely used budgeting rule helps determine an appropriate spending allocation from income?",
+    "options": [
+      "10% savings, 20% investment, 70% spending",
+      "50% needs, 30% wants, 20% savings & investment",
+      "90% investment, 10% personal spending",
+      "80% spending, 20% entertainment"
+    ],
+    "answer": 1,
+    "correctText": "50% needs, 30% wants, 20% savings & investment",
+    "id": "e2_q45",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Đáp án đúng là “50% needs, 30% wants, 20% savings & investment” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 46,
+    "clo": "CLO 2",
+    "question": "When building an emergency fund, the recommended minimum amount should cover how many months of living expenses?",
+    "options": [
+      "9–12 months",
+      "12–24 months",
+      "3–6 months",
+      "1–2 months"
+    ],
+    "answer": 2,
+    "correctText": "3–6 months",
+    "id": "e2_q46",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Quỹ khẩn cấp thường nên đủ 3–6 tháng living expenses để xử lý mất việc, bệnh, chi phí bất ngờ.",
+    "trap": "1–2 tháng thường quá mỏng; 12–24 tháng thường quá cao cho mức tối thiểu.",
+    "keyword": "Emergency fund = 3–6 months."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 47,
+    "clo": "CLO 5",
+    "question": "Which budgeting method is most appropriate for someone who wants to optimize their budget while focusing on debt repayment?",
+    "options": [
+      "Pay Yourself First Budgeting Method",
+      "Envelope Budgeting Method",
+      "Zero-Based Budgeting",
+      "Snowball or Avalanche Debt Repayment Method"
+    ],
+    "answer": 3,
+    "correctText": "Snowball or Avalanche Debt Repayment Method",
+    "id": "e2_q47",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Đáp án đúng là “Snowball or Avalanche Debt Repayment Method” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 48,
+    "clo": "CLO 5",
+    "question": "In the 50/30/20 budgeting method, the 50% portion is typically allocated to which type of expenses?",
+    "options": [
+      "Entertainment and personal wants",
+      "Savings and investments",
+      "Debt repayment",
+      "Essential needs (housing, food, healthcare, and utilities)"
+    ],
+    "answer": 3,
+    "correctText": "Essential needs (housing, food, healthcare, and utilities)",
+    "id": "e2_q48",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "50/30/20 phân bổ 50% cho needs, 30% wants, 20% savings/investment hoặc debt repayment.",
+    "trap": "Đừng đảo 50% sang entertainment hoặc savings.",
+    "keyword": "50 = needs, 30 = wants, 20 = savings."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 49,
+    "clo": "CLO 3",
+    "question": "Most credit cards offer a grace period. The grace period typically ranges from:",
+    "options": [
+      "60 to 90 days",
+      "10 to 20 days",
+      "45 to 55 days",
+      "1 to 10 days"
+    ],
+    "answer": 2,
+    "correctText": "45 to 55 days",
+    "id": "e2_q49",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Grace period của credit card thường khoảng 45–55 ngày nếu tính từ ngày giao dịch trong kỳ đến due date, và chỉ có lợi khi trả đúng hạn.",
+    "trap": "Cash advance thường bị tính lãi ngay, không hưởng grace period như purchases.",
+    "keyword": "Grace period = 45–55 days."
+  },
+  {
+    "sourceExam": 2,
+    "sourceNumber": 50,
+    "clo": "CLO 3",
+    "question": "Most credit cards offer a grace period. The grace period typically ranges from:",
+    "options": [
+      "60 to 90 days",
+      "10 to 20 days",
+      "1 to 10 days",
+      "45 to 55 days"
+    ],
+    "answer": 3,
+    "correctText": "45 to 55 days",
+    "id": "e2_q50",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Grace period của credit card thường khoảng 45–55 ngày nếu tính từ ngày giao dịch trong kỳ đến due date, và chỉ có lợi khi trả đúng hạn.",
+    "trap": "Cash advance thường bị tính lãi ngay, không hưởng grace period như purchases.",
+    "keyword": "Grace period = 45–55 days."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 1,
+    "clo": "CLO 1",
+    "question": "When choosing between a high-paying job with no benefits and a lower-paying job that includes insurance, retirement plans, and allowances, what should be considered?",
+    "options": [
+      "Salary alone",
+      "Benefits alone",
+      "Benefits are unimportant and do not need consideration",
+      "The total long-term financial value of both salary and benefits"
+    ],
+    "answer": 3,
+    "correctText": "The total long-term financial value of both salary and benefits",
+    "id": "e3_q1",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Khi chọn/đàm phán công việc đầu tiên, nên xét learning opportunities, market salary, value bản thân và tổng giá trị lương + benefits.",
+    "trap": "Đừng chỉ nhìn lương khởi điểm hoặc bỏ qua bảo hiểm/retirement benefits.",
+    "keyword": "Job choice = learning + total compensation."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 2,
+    "clo": "CLO 5",
+    "question": "Mr. Tung plans to purchase an apartment valued at VND 3.5 billion. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 15 years. Loan repayments are made monthly with equal total monthly installments (fixed-payment loan), and interest is calculated on the beginning outstanding balance at an annual interest rate of 10%. After making two monthly repayments, what is Mr. Tung's remaining outstanding loan balance?",
+    "options": [
+      "VND 2,432.12 million",
+      "VND 2,438.13 million",
+      "VND 2,442.78 million",
+      "VND 2,436.39 million"
+    ],
+    "answer": 1,
+    "correctText": "VND 2,438.13 million",
+    "id": "e3_q2",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,500 × 70% = 2,450 triệu VND. Khoản vay trả góp cố định dùng công thức PMT. PMT ≈ 26.33 triệu/tháng. Sau 2 kỳ, dư nợ ≈ 2,438.13 triệu VND.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 3,
+    "clo": "CLO 5",
+    "question": "What is a major disadvantage of Zero-Based Budgeting?",
+    "options": [
+      "It is difficult to implement because it requires creating a new budget from scratch each month.",
+      "It does not allow for savings.",
+      "It is ineffective in controlling spending.",
+      "It is suitable only for high-income individuals."
+    ],
+    "answer": 0,
+    "correctText": "It is difficult to implement because it requires creating a new budget from scratch each month.",
+    "id": "e3_q3",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Zero-based budgeting yêu cầu phân bổ toàn bộ income về 0 và thường phải lập lại ngân sách từ đầu mỗi tháng nên tốn công.",
+    "trap": "Nó kiểm soát chi tốt, nhưng nhược điểm là mất thời gian/khó triển khai.",
+    "keyword": "Zero-based = every dollar has a job."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 4,
+    "clo": "CLO 5",
+    "question": "Mr. Bien plans to purchase an apartment valued at VND 3 billion as a rental property. He applies for financing from Bank X, which agrees to finance 70% of the property's value over a term of 5 years. Under the bank's current consumer mortgage policy, loan repayments are made monthly, with equal principal repayments each month and interest calculated on the beginning outstanding balance at an annual interest rate of 8%. How much must Mr. Bien repay to the bank in the third month?",
+    "options": [
+      "VND 48.53 million",
+      "VND 35.00 million",
+      "VND 48.77 million",
+      "VND 70.00 million"
+    ],
+    "answer": 0,
+    "correctText": "VND 48.53 million",
+    "id": "e3_q4",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,000 × 70% = 2,100 triệu VND. Trả gốc đều: gốc mỗi tháng = 35.00 triệu. Đầu tháng 3, dư nợ = 2,100 - 2×35.00 = 2,030.00 triệu. Lãi = 2,030.00×8%/12 = 13.53 triệu. Tổng trả ≈ 48.53 triệu.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 5,
+    "clo": "CLO 3",
+    "question": "Which loan type typically carries the lowest interest rate?",
+    "options": [
+      "Credit card loan",
+      "Unsecured consumer loan",
+      "Informal (black market) loan",
+      "Mortgage loan"
+    ],
+    "answer": 3,
+    "correctText": "Mortgage loan",
+    "id": "e3_q5",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Mortgage loan thường có lãi thấp hơn vì có tài sản bảo đảm là bất động sản và thời hạn dài.",
+    "trap": "Credit card và unsecured consumer loan thường lãi cao hơn.",
+    "keyword": "Lowest loan rate → mortgage."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 6,
+    "clo": "CLO 3",
+    "question": "Which indicator do banks use to assess an individual’s repayment capacity?",
+    "options": [
+      "After-tax income",
+      "Credit history and credit score",
+      "Marital status",
+      "Number of credit cards owned"
+    ],
+    "answer": 1,
+    "correctText": "Credit history and credit score",
+    "id": "e3_q6",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Với unsecured loans, ngân hàng không có collateral nên credit score/history là yếu tố quan trọng để đánh giá khả năng trả nợ và định lãi.",
+    "trap": "Collateral value không áp dụng mạnh cho unsecured loan.",
+    "keyword": "Unsecured loan → credit score matters."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 7,
+    "clo": "CLO 3",
+    "question": "A short-term loan typically has a maximum maturity of:",
+    "options": [
+      "24 months",
+      "36 months",
+      "12 months",
+      "6 months"
+    ],
+    "answer": 2,
+    "correctText": "12 months",
+    "id": "e3_q7",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Trong bộ câu hỏi này, short-term loan có maturity tối đa 12 tháng.",
+    "trap": "24/36 tháng thường là trung hạn.",
+    "keyword": "Short-term loan = ≤ 12 months."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 8,
+    "clo": "CLO 1",
+    "question": "Which factor is most important in helping an individual achieve a higher income?",
+    "options": [
+      "Accurately predicting stock market movements",
+      "Receiving financial support from family",
+      "Investing in real estate as early as possible",
+      "Developing professional skills and knowledge"
+    ],
+    "answer": 3,
+    "correctText": "Developing professional skills and knowledge",
+    "id": "e3_q8",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Muốn tăng thu nhập dài hạn cần nâng kỹ năng, kiến thức và kinh nghiệm để tăng giá trị cá nhân trên thị trường lao động.",
+    "trap": "Dự đoán thị trường hoặc đầu tư tất tay không phải nền tảng bền vững.",
+    "keyword": "Higher income = skills + knowledge + experience."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 9,
+    "clo": "CLO 3",
+    "question": "A disadvantage of whole life insurance is:",
+    "options": [
+      "Unpredictable premiums",
+      "Changing face value over time",
+      "Frozen and unusable cash value",
+      "Significantly higher cost than term life insurance"
+    ],
+    "answer": 3,
+    "correctText": "Significantly higher cost than term life insurance",
+    "id": "e3_q9",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Whole life insurance có cash value và bảo vệ dài hạn nên chi phí thường cao hơn term life insurance.",
+    "trap": "Premium thường ổn định, không phải unpredictable là nhược điểm chính trong câu này.",
+    "keyword": "Whole life = more expensive than term."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 10,
+    "clo": "CLO 3",
+    "question": "Which investment instrument carries the lowest risk?",
+    "options": [
+      "Derivatives",
+      "Technology stocks",
+      "Cryptocurrency",
+      "Government bonds"
+    ],
+    "answer": 3,
+    "correctText": "Government bonds",
+    "id": "e3_q10",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Government bonds thường có rủi ro thấp hơn cổ phiếu công nghệ, derivatives hay cryptocurrency vì được chính phủ phát hành/bảo đảm.",
+    "trap": "Rủi ro thấp không có nghĩa là không có rủi ro lãi suất/lạm phát.",
+    "keyword": "Lowest risk among options = government bonds."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 11,
+    "clo": "CLO 1",
+    "question": "How does inflation affect personal finances?",
+    "options": [
+      "It has no impact on individuals.",
+      "It increases the value of borrowed funds.",
+      "It lowers living expenses.",
+      "It reduces the real value of savings."
+    ],
+    "answer": 3,
+    "correctText": "It reduces the real value of savings.",
+    "id": "e3_q11",
+    "chapter": "Chapter 1: Personal Finance Foundations",
+    "explanation": "Inflation làm sức mua của tiền giảm, nên giá trị thực của savings giảm nếu lãi suất không bù được lạm phát.",
+    "trap": "Không phải làm living expenses giảm.",
+    "keyword": "Inflation reduces real purchasing power."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 12,
+    "clo": "CLO 2",
+    "question": "Which asset is considered the most liquid in a personal balance sheet?",
+    "options": [
+      "Stocks",
+      "Real estate",
+      "Cash and bank deposits",
+      "Corporate bonds"
+    ],
+    "answer": 2,
+    "correctText": "Cash and bank deposits",
+    "id": "e3_q12",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Cash and bank deposits là tài sản thanh khoản nhất vì có thể dùng ngay hoặc chuyển thành tiền gần như ngay lập tức.",
+    "trap": "Stocks/bonds có thể bán được nhưng vẫn có biến động giá và thời gian xử lý.",
+    "keyword": "Most liquid = cash/bank deposits."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 13,
+    "clo": "CLO 5",
+    "question": "Mr. Liem plans to purchase an apartment valued at VND 3.5 billion. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 15 years. Loan repayments are made monthly, with equal principal repayments each month and interest calculated on the beginning outstanding balance at an annual interest rate of 10%. After making two monthly repayments, what is Mr. Liem's remaining outstanding loan balance?",
+    "options": [
+      "VND 2,436.39 million",
+      "VND 2,438.13 million",
+      "VND 2,432.12 million",
+      "VND 2,422.78 million"
+    ],
+    "answer": 3,
+    "correctText": "VND 2,422.78 million",
+    "id": "e3_q13",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,500 × 70% = 2,450 triệu VND. Trả gốc đều: gốc mỗi tháng = 2,450/180 = 13.61 triệu. Sau 2 tháng, dư nợ còn = 2,450 - 2×13.61 = 2,422.78 triệu VND.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 14,
+    "clo": "CLO 3",
+    "question": "Most credit cards offer a grace period. The grace period typically ranges from:",
+    "options": [
+      "60 to 90 days",
+      "1 to 10 days",
+      "10 to 20 days",
+      "45 to 55 days"
+    ],
+    "answer": 3,
+    "correctText": "45 to 55 days",
+    "id": "e3_q14",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Grace period của credit card thường khoảng 45–55 ngày nếu tính từ ngày giao dịch trong kỳ đến due date, và chỉ có lợi khi trả đúng hạn.",
+    "trap": "Cash advance thường bị tính lãi ngay, không hưởng grace period như purchases.",
+    "keyword": "Grace period = 45–55 days."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 15,
+    "clo": "CLO 1",
+    "question": "Which factor is most important when choosing a first job to build a strong financial career foundation?",
+    "options": [
+      "The highest possible starting salary",
+      "A convenient work location",
+      "Opportunities for learning and skill development",
+      "Attractive compensation and benefits packages"
+    ],
+    "answer": 2,
+    "correctText": "Opportunities for learning and skill development",
+    "id": "e3_q15",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Khi chọn/đàm phán công việc đầu tiên, nên xét learning opportunities, market salary, value bản thân và tổng giá trị lương + benefits.",
+    "trap": "Đừng chỉ nhìn lương khởi điểm hoặc bỏ qua bảo hiểm/retirement benefits.",
+    "keyword": "Job choice = learning + total compensation."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 16,
+    "clo": "CLO 5",
+    "question": "Mr. Xuan plans to purchase an apartment valued at VND 2.4 billion as a rental property. He applies for a loan from Bank X, which agrees to finance 50% of the property's value over a term of 2 years. Under the bank's consumer mortgage policy, loan repayments are made monthly, with equal principal repayments each month and interest calculated on the beginning outstanding balance at an annual interest rate of 8%. Mr. Xuan's total monthly income available for debt repayment is VND 55 million. Based on his current financial capacity, should the bank approve the loan? Why?",
+    "options": [
+      "No. Mr. Xuan's income is only sufficient to repay the loan, leaving nothing for other living expenses.",
+      "Yes. Mr. Xuan's income is sufficient to cover the loan repayments.",
+      "No. Mr. Xuan's income is lower than the required monthly loan repayment.",
+      "There is insufficient information to calculate the required monthly loan repayment."
+    ],
+    "answer": 2,
+    "correctText": "No. Mr. Xuan's income is lower than the required monthly loan repayment.",
+    "id": "e3_q16",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Đáp án đúng là “No. Mr. Xuan's income is lower than the required monthly loan repayment.” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 17,
+    "clo": "CLO 5",
+    "question": "Mr. Hoa plans to purchase an apartment valued at VND 3 billion as a rental property. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 10 years. Loan repayments are made monthly with equal total monthly installments (fixed-payment loan), and interest is calculated on the beginning outstanding balance at an annual interest rate of 8%. What is Mr. Hoa's total monthly loan repayment?",
+    "options": [
+      "VND 31.50 million",
+      "VND 11.48 million",
+      "VND 25.48 million",
+      "VND 17.50 million"
+    ],
+    "answer": 2,
+    "correctText": "VND 25.48 million",
+    "id": "e3_q17",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,000 × 70% = 2,100 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)] ≈ 25.48 triệu/tháng.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 18,
+    "clo": "CLO 3",
+    "question": "Which factor does NOT affect life insurance premiums?",
+    "options": [
+      "Health condition",
+      "Educational background",
+      "Gender",
+      "Cash value of the policy"
+    ],
+    "answer": 1,
+    "correctText": "Educational background",
+    "id": "e3_q18",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Life insurance premium thường phụ thuộc vào tuổi, giới tính, sức khỏe, loại hợp đồng/cash value; educational background không phải yếu tố chính.",
+    "trap": "Health/gender/cash-value policy đều có thể ảnh hưởng chi phí bảo hiểm.",
+    "keyword": "Premium factors ≠ education."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 19,
+    "clo": "CLO 5",
+    "question": "A customer earns VND 28 million per month and has fixed monthly expenses of VND 20 million. The customer intends to borrow VND 400 million to purchase a car. After assessing the application, the bank informs the customer that the loan is approved. As a personal financial advisor, what would be your recommendation?",
+    "options": [
+      "Take the loan if the interest rate is low and the bank has already approved it.",
+      "Before making a decision, further evaluate repayment capacity in the event of a decline in income, unexpected expenses, and the total borrowing cost over the entire loan term.",
+      "Take the loan immediately because the bank has already approved it.",
+      "Take the loan if the interest rate is low."
+    ],
+    "answer": 1,
+    "correctText": "Before making a decision, further evaluate repayment capacity in the event of a decline in income, unexpected expenses, and the total borrowing cost over the entire loan term.",
+    "id": "e3_q19",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Dù bank đã approve, cá nhân vẫn nên stress-test khả năng trả nợ nếu thu nhập giảm, có chi phí bất ngờ và tổng chi phí vay toàn kỳ.",
+    "trap": "Đừng chỉ nhìn khoản vay được duyệt.",
+    "keyword": "Loan approved ≠ personally affordable."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 20,
+    "clo": "CLO 1",
+    "question": "Han currently has $11,167 in a savings account. What annual interest rate is required for the account balance to grow to $20,000 in 10 years?",
+    "options": [
+      "10%",
+      "6%",
+      "Insufficient information to determine the answer",
+      "8%"
+    ],
+    "answer": 1,
+    "correctText": "6%",
+    "id": "e3_q20",
+    "chapter": "Mixed Foundations",
+    "explanation": "Cần r sao cho 11,167×(1+r)^10 = 20,000. r = (20,000/11,167)^(1/10)-1 ≈ 6%/năm.",
+    "trap": "Đừng lấy chênh lệch chia thẳng cho 10 năm vì đây là lãi kép.",
+    "keyword": "Tìm lãi suất: r = (FV/PV)^(1/n)-1."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 21,
+    "clo": "CLO 3",
+    "question": "If a time deposit is withdrawn before maturity, what usually happens?",
+    "options": [
+      "No impact on the deposit",
+      "A penalty fee is charged but the original rate remains",
+      "The original interest rate is fully paid",
+      "No interest or only the demand deposit rate is applied"
+    ],
+    "answer": 3,
+    "correctText": "No interest or only the demand deposit rate is applied",
+    "id": "e3_q21",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Rút time deposit trước hạn thường không được hưởng lãi suất kỳ hạn đầy đủ; có thể chỉ hưởng demand deposit rate hoặc không có lãi.",
+    "trap": "Không được hưởng full original rate.",
+    "keyword": "Early withdrawal → demand/no interest."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 22,
+    "clo": "CLO 2",
+    "question": "If total assets equal 3 billion VND and total liabilities equal 2 billion VND, what is net worth?",
+    "options": [
+      "3 billion VND",
+      "1 billion VND",
+      "2 billion VND",
+      "5 billion VND"
+    ],
+    "answer": 1,
+    "correctText": "1 billion VND",
+    "id": "e3_q22",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Net worth = total assets - total liabilities = 3 tỷ - 2 tỷ = 1 tỷ VND.",
+    "trap": "Đừng nhầm net worth với income hoặc cash flow.",
+    "keyword": "Net worth = Assets - Liabilities."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 23,
+    "clo": "CLO 3",
+    "question": "When saving in foreign currency, which factor most significantly affects actual returns?",
+    "options": [
+      "Deposit insurance limits",
+      "Personal income tax policy",
+      "Exchange rate fluctuations",
+      "Foreign currency deposit rate"
+    ],
+    "answer": 2,
+    "correctText": "Exchange rate fluctuations",
+    "id": "e3_q23",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Khi gửi tiết kiệm bằng ngoại tệ, actual return chịu ảnh hưởng lớn bởi exchange rate fluctuations khi quy đổi về nội tệ.",
+    "trap": "Lãi suất tiền gửi chỉ là một phần của return thực tế.",
+    "keyword": "Foreign currency saving → exchange rate risk."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 24,
+    "clo": "CLO 3",
+    "question": "Investment returns in the stock market are most strongly influenced by:",
+    "options": [
+      "Real estate prices",
+      "Bank deposit rates",
+      "Market volatility and company performance",
+      "Inflation rate"
+    ],
+    "answer": 2,
+    "correctText": "Market volatility and company performance",
+    "id": "e3_q24",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Return của stock chịu ảnh hưởng lớn bởi biến động thị trường và hiệu quả hoạt động của công ty.",
+    "trap": "Lãi tiền gửi hay giá bất động sản không phải yếu tố trực tiếp nhất.",
+    "keyword": "Stocks = market volatility + company performance."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 25,
+    "clo": "CLO 5",
+    "question": "Mr. Hoa plans to purchase an apartment valued at VND 3.5 billion as a rental property. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 10 years. Loan repayments are made monthly with equal total monthly installments (fixed-payment loan), and interest is calculated on the beginning outstanding balance at an annual interest rate of 10%. What is Mr. Hoa's total monthly loan repayment?",
+    "options": [
+      "VND 20.42 million",
+      "VND 32.38 million",
+      "VND 11.48 million",
+      "VND 40.83 million"
+    ],
+    "answer": 1,
+    "correctText": "VND 32.38 million",
+    "id": "e3_q25",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,500 × 70% = 2,450 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)] ≈ 32.38 triệu/tháng.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 26,
+    "clo": "CLO 1",
+    "question": "After retirement begins, which aspect of financial planning becomes most critical?",
+    "options": [
+      "Committing to long-term borrowing",
+      "Estate planning",
+      "The impact of inflation",
+      "Maintaining a regular saving habit"
+    ],
+    "answer": 1,
+    "correctText": "Estate planning",
+    "id": "e3_q26",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Khi bước vào retirement, estate planning trở nên quan trọng để quản lý, phân phối tài sản và bảo vệ người thụ hưởng.",
+    "trap": "Lúc này ưu tiên không còn là tích lũy nghề nghiệp.",
+    "keyword": "Retirement begins → estate planning."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 27,
+    "clo": "CLO 2",
+    "question": "The Debt Service Coverage Ratio (DSCR) measures:",
+    "options": [
+      "Ability to cover principal and interest payments from income",
+      "Investment portfolio risk",
+      "Insurance affordability",
+      "Financial asset returns"
+    ],
+    "answer": 0,
+    "correctText": "Ability to cover principal and interest payments from income",
+    "id": "e3_q27",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "DSCR đo khả năng dùng income/cash flow để cover principal and interest payments.",
+    "trap": "Không phải debt-to-asset hay liquidity ratio.",
+    "keyword": "DSCR = income covers debt service."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 28,
+    "clo": "CLO 1",
+    "question": "Which of the following characteristics applies to monetary assets?",
+    "options": [
+      "They are characterized by low returns and high risk.",
+      "They are characterized by high returns and a strong temptation to spend.",
+      "They are characterized by low returns, low risk, and a strong temptation to spend.",
+      "They involve high risk and a strong temptation to spend."
+    ],
+    "answer": 2,
+    "correctText": "They are characterized by low returns, low risk, and a strong temptation to spend.",
+    "id": "e3_q28",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Monetary assets như cash/bank deposits có rủi ro thấp, lợi suất thấp và dễ chi tiêu vì rất thanh khoản.",
+    "trap": "Đừng chọn high return/high risk vì đó thường là investment assets.",
+    "keyword": "Monetary assets = liquid, low risk, low return."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 29,
+    "clo": "CLO 1",
+    "question": "Which factors have the greatest impact on an individual’s financial situation?",
+    "options": [
+      "Fluctuations in gold prices",
+      "Monetary policies of developed countries",
+      "Global stock market indices",
+      "Income, expenses, investments, inflation, and debt"
+    ],
+    "answer": 3,
+    "correctText": "Income, expenses, investments, inflation, and debt",
+    "id": "e3_q29",
+    "chapter": "Chapter 1: Personal Finance Foundations",
+    "explanation": "Quản lý tài chính cá nhân giúp kiểm soát income, expenses, investments, debt và ra quyết định tốt hơn trong sự nghiệp.",
+    "trap": "High income alone không đảm bảo ổn định tài chính.",
+    "keyword": "Personal finance skills = manage income/expenses/investments."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 30,
+    "clo": "CLO 3",
+    "question": "What is an advantage of investing in ETFs (Exchange-Traded Funds) compared to individual stocks?",
+    "options": [
+      "No transaction costs",
+      "Immune to market volatility",
+      "Guaranteed higher returns than the market",
+      "Portfolio diversification at lower cost"
+    ],
+    "answer": 3,
+    "correctText": "Portfolio diversification at lower cost",
+    "id": "e3_q30",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "ETFs giúp đa dạng hóa danh mục với chi phí thấp hơn so với tự mua nhiều cổ phiếu riêng lẻ.",
+    "trap": "ETF không đảm bảo cao hơn thị trường và vẫn chịu volatility.",
+    "keyword": "ETF = low-cost diversification."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 31,
+    "clo": "CLO 5",
+    "question": "Mr. Thong plans to purchase an apartment valued at VND 3.5 billion. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 15 years. Loan repayments are made monthly, with equal principal repayments each month and interest calculated on the beginning outstanding balance at an annual interest rate of 10%. In preparing his monthly budget, how much should Mr. Thong budget for the total loan repayment in the second month?",
+    "options": [
+      "VND 34.03 million",
+      "VND 33.91 million",
+      "VND 33.80 million",
+      "VND 26.33 million"
+    ],
+    "answer": 1,
+    "correctText": "VND 33.91 million",
+    "id": "e3_q31",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,500 × 70% = 2,450 triệu VND. Trả gốc đều: gốc mỗi tháng = 13.61 triệu. Đầu tháng 2, dư nợ = 2,450 - 1×13.61 = 2,436.39 triệu. Lãi = 2,436.39×10%/12 = 20.30 triệu. Tổng trả ≈ 33.91 triệu.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 32,
+    "clo": "CLO 1",
+    "question": "When negotiating salary for your first job, what is the most important consideration?",
+    "options": [
+      "Research the average salary for similar positions and negotiate based on your value.",
+      "Focus only on salary and ignore other benefits.",
+      "Accept the employer’s offer immediately to avoid missing the opportunity.",
+      "Demand the highest possible salary even without experience."
+    ],
+    "answer": 0,
+    "correctText": "Research the average salary for similar positions and negotiate based on your value.",
+    "id": "e3_q32",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Khi chọn/đàm phán công việc đầu tiên, nên xét learning opportunities, market salary, value bản thân và tổng giá trị lương + benefits.",
+    "trap": "Đừng chỉ nhìn lương khởi điểm hoặc bỏ qua bảo hiểm/retirement benefits.",
+    "keyword": "Job choice = learning + total compensation."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 33,
+    "clo": "CLO 3",
+    "question": "When investing in rental real estate, which factor is most important?",
+    "options": [
+      "Number of banks offering mortgage loans",
+      "Location and appreciation potential",
+      "Unsecured loan interest rate",
+      "Interior furnishings"
+    ],
+    "answer": 1,
+    "correctText": "Location and appreciation potential",
+    "id": "e3_q33",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Rental real estate phụ thuộc mạnh vào location và appreciation potential vì hai yếu tố này ảnh hưởng rent, vacancy và tăng giá tài sản.",
+    "trap": "Nội thất quan trọng nhưng không bằng vị trí và tiềm năng tăng giá.",
+    "keyword": "Real estate = location, location, location."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 34,
+    "clo": "CLO 3",
+    "question": "What is the primary difference between secured and unsecured loans?",
+    "options": [
+      "Secured loans require collateral; unsecured loans do not",
+      "Unsecured loans are only for businesses",
+      "Unsecured loans have lower interest rates",
+      "Secured loans require no credit assessment"
+    ],
+    "answer": 0,
+    "correctText": "Secured loans require collateral; unsecured loans do not",
+    "id": "e3_q34",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Secured loans có collateral; unsecured loans không có tài sản bảo đảm nên thường dựa nhiều hơn vào creditworthiness.",
+    "trap": "Unsecured loan không đồng nghĩa lãi thấp hơn.",
+    "keyword": "Secured = collateral."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 35,
+    "clo": "CLO 3",
+    "question": "Which savings product typically offers the highest interest rate?",
+    "options": [
+      "Time deposit",
+      "Flexible installment savings",
+      "Online savings account",
+      "Demand deposit"
+    ],
+    "answer": 0,
+    "correctText": "Time deposit",
+    "id": "e3_q35",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Time deposit thường có lãi suất cao hơn demand deposit vì người gửi cam kết giữ tiền đến maturity.",
+    "trap": "Demand deposit linh hoạt hơn nhưng lãi thấp hơn.",
+    "keyword": "Highest deposit rate → time deposit."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 36,
+    "clo": "CLO 2",
+    "question": "What is their months of living expenses covered ratio?",
+    "options": [
+      "Insufficient information to determine",
+      "1.69 months",
+      "2 months",
+      "2.44 months"
+    ],
+    "answer": 0,
+    "correctText": "Insufficient information to determine",
+    "id": "e3_q36",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Muốn tính months of living expenses covered phải có liquid assets và monthly living expenses. Nếu thiếu một trong hai thì không đủ thông tin.",
+    "trap": "Không suy đoán từ thông tin không được đề cho.",
+    "keyword": "Months covered = liquid assets / monthly living expenses."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 37,
+    "clo": "CLO 3",
+    "question": "Which type of insurance provides financial support to beneficiaries in the event of death?",
+    "options": [
+      "Life insurance",
+      "Homeowners insurance",
+      "Auto insurance",
+      "Health insurance"
+    ],
+    "answer": 0,
+    "correctText": "Life insurance",
+    "id": "e3_q37",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Đáp án đúng là “Life insurance” vì đây là lựa chọn phù hợp nhất với nguyên tắc tài chính cá nhân trong câu hỏi. Hãy ưu tiên phương án an toàn, có kế hoạch, có khả năng trả nợ và tránh các lựa chọn cực đoan như đầu tư tất cả, vay để tiêu dùng ngắn hạn hoặc bỏ qua rủi ro.",
+    "trap": "Các lựa chọn còn lại thường quá cực đoan, không đúng bản chất hoặc nhầm sang khái niệm khác.",
+    "keyword": "Nhớ đáp án theo keyword trong câu hỏi."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 38,
+    "clo": "CLO 3",
+    "question": "When investing in an open-end mutual fund, what is an advantage compared to direct stock investment?",
+    "options": [
+      "Professionally managed by financial experts",
+      "Guaranteed fixed annual returns",
+      "No risk involved",
+      "No personal income tax"
+    ],
+    "answer": 0,
+    "correctText": "Professionally managed by financial experts",
+    "id": "e3_q38",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Open-end mutual fund được quản lý bởi chuyên gia và giúp nhà đầu tư tiếp cận danh mục đa dạng hơn so với tự chọn cổ phiếu đơn lẻ.",
+    "trap": "Không có guaranteed fixed return và vẫn có risk.",
+    "keyword": "Mutual fund = professionally managed."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 39,
+    "clo": "CLO 3",
+    "question": "When investing in an open-end mutual fund, what is an advantage compared to direct stock investment?",
+    "options": [
+      "No personal income tax",
+      "Professionally managed by financial experts",
+      "No risk involved",
+      "Guaranteed fixed annual returns"
+    ],
+    "answer": 1,
+    "correctText": "Professionally managed by financial experts",
+    "id": "e3_q39",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Open-end mutual fund được quản lý bởi chuyên gia và giúp nhà đầu tư tiếp cận danh mục đa dạng hơn so với tự chọn cổ phiếu đơn lẻ.",
+    "trap": "Không có guaranteed fixed return và vẫn có risk.",
+    "keyword": "Mutual fund = professionally managed."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 40,
+    "clo": "CLO 2",
+    "question": "Beginning balance in your checking account is $1,000. During the month: Two checks written: $45 and $75 (only the first cleared); Two debit card transactions: $50 and $35.20; Bank service fee: $6 ; A $100 check deposited but not yet cleared. What is your end-of-month account balance?",
+    "options": [
+      "$1,052.13",
+      "$875.45",
+      "$863.80",
+      "$888.80"
+    ],
+    "answer": 2,
+    "correctText": "$863.80",
+    "id": "e3_q40",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "End-of-month balance = 1,000 - 45 - 50 - 35.20 - 6 = 863.80 USD. Check 75 USD chưa clear nên chưa trừ; deposit 100 USD chưa clear nên chưa cộng.",
+    "trap": "Đừng cộng/trừ các khoản chưa cleared.",
+    "keyword": "Bank reconciliation: chỉ tính giao dịch đã cleared."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 41,
+    "clo": "CLO 1",
+    "question": "Assuming you are 21 years old and a university student, which stage of the financial life cycle are you currently in?",
+    "options": [
+      "Stage 2: Golden Years of Life",
+      "Stage 1: Wealth Accumulation Stage",
+      "Stage 4: Early Life Stage",
+      "Stage 3: Retirement Years"
+    ],
+    "answer": 1,
+    "correctText": "Stage 1: Wealth Accumulation Stage",
+    "id": "e3_q41",
+    "chapter": "Chapter 2: Career, Income & Life Cycle",
+    "explanation": "Sinh viên/đầu đời thuộc giai đoạn Wealth Accumulation Stage: xây kỹ năng, thu nhập, thói quen tiết kiệm và tích lũy tài sản.",
+    "trap": "Retirement/golden years là giai đoạn sau.",
+    "keyword": "Age 21/student = Stage 1 Wealth Accumulation."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 42,
+    "clo": "CLO 2",
+    "question": "The Debt-to-Asset Ratio measures:",
+    "options": [
+      "Short-term vs. long-term debt structure",
+      "Short-term solvency",
+      "Income-generating capacity of assets",
+      "Degree of reliance on debt financing"
+    ],
+    "answer": 3,
+    "correctText": "Degree of reliance on debt financing",
+    "id": "e3_q42",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Debt-to-Asset Ratio = Total liabilities / Total assets, nên nó đo mức độ tài sản được tài trợ bằng nợ.",
+    "trap": "Short-term solvency/liquidity là nhóm liquidity ratio, không phải debt-to-asset.",
+    "keyword": "Debt-to-Asset = reliance on debt."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 43,
+    "clo": "CLO 3",
+    "question": "Which best explains why many Vietnamese households do not purchase life insurance?",
+    "options": [
+      "Preference for leisure spending",
+      "Reluctance to make periodic payments",
+      "Avoid thinking about death",
+      "No immediate financial benefit"
+    ],
+    "answer": 3,
+    "correctText": "No immediate financial benefit",
+    "id": "e3_q43",
+    "chapter": "Chapter 5: Protection & Insurance",
+    "explanation": "Nhiều hộ gia đình ngại mua life insurance vì không thấy lợi ích tài chính ngay lập tức, dù sản phẩm bảo vệ rủi ro dài hạn.",
+    "trap": "Các lý do khác có thể tồn tại, nhưng đáp án LMS ưu tiên immediate benefit.",
+    "keyword": "Life insurance hesitation = no immediate benefit."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 44,
+    "clo": "CLO 5",
+    "question": "A borrower falls behind on loan repayments after losing their job for three months. From a personal financial management perspective, what is the most appropriate course of action?",
+    "options": [
+      "Do not contact the credit institution because there is currently no money to repay the loan.",
+      "Borrow from a fast-loan mobile application to repay the existing loan.",
+      "Wait until a new job is secured before taking any action.",
+      "Proactively inform the credit institution and request that it consider an appropriate repayment solution."
+    ],
+    "answer": 3,
+    "correctText": "Proactively inform the credit institution and request that it consider an appropriate repayment solution.",
+    "id": "e3_q44",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khi gặp khó khăn trả nợ, nên chủ động liên hệ credit institution để xin phương án cơ cấu/giải pháp phù hợp.",
+    "trap": "Vay app nhanh để trả nợ cũ dễ tạo vòng xoáy nợ.",
+    "keyword": "Can’t repay → contact lender early."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 45,
+    "clo": "CLO 5",
+    "question": "When preparing a personal budget, which factor should be considered first?",
+    "options": [
+      "Total monthly income",
+      "Desired spending",
+      "Credit card interest rate",
+      "Savings account balance"
+    ],
+    "answer": 0,
+    "correctText": "Total monthly income",
+    "id": "e3_q45",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Khi lập budget, phải biết total monthly income trước rồi mới phân bổ needs, wants, savings và debt repayment.",
+    "trap": "Desired spending không nên đi trước income.",
+    "keyword": "Budget starts with income."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 46,
+    "clo": "CLO 5",
+    "question": "Mr. Tung plans to purchase an apartment valued at VND 3 billion. He applies for financing from Bank Y. After credit assessment, the bank agrees to finance 70% of the property's value over a term of 10 years. Loan repayments are made monthly with equal total monthly installments (fixed-payment loan), and interest is calculated on the beginning outstanding balance at an annual interest rate of 8%. After making two monthly repayments, what is Mr. Tung's remaining loan balance?",
+    "options": [
+      "VND 2,076.97 million",
+      "VND 2,065.00 million",
+      "VND 2,088.52 million",
+      "VND 2,082.50 million"
+    ],
+    "answer": 0,
+    "correctText": "VND 2,076.97 million",
+    "id": "e3_q46",
+    "chapter": "Chapter 6: Loans & Credit Cards",
+    "explanation": "Khoản vay = 3,000 × 70% = 2,100 triệu VND. Khoản vay trả góp cố định dùng công thức PMT. PMT ≈ 25.48 triệu/tháng. Sau 2 kỳ, dư nợ ≈ 2,076.97 triệu VND.",
+    "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
+    "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 47,
+    "clo": "CLO 2",
+    "question": "When calculating net worth, which factor does NOT directly affect it?",
+    "options": [
+      "Total liabilities",
+      "Changes in investment asset values",
+      "Total monthly income",
+      "Market value of owned assets"
+    ],
+    "answer": 2,
+    "correctText": "Total monthly income",
+    "id": "e3_q47",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "Net worth phụ thuộc vào assets và liabilities. Total monthly income không trực tiếp làm đổi net worth nếu chưa chuyển thành tài sản hoặc dùng để trả nợ.",
+    "trap": "Income ảnh hưởng gián tiếp qua saving/debt repayment, không phải yếu tố trực tiếp.",
+    "keyword": "Net worth = assets - liabilities; income ≠ net worth."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 48,
+    "clo": "CLO 3",
+    "question": "Which savings product typically offers the highest interest rate?",
+    "options": [
+      "Demand deposit",
+      "Time deposit",
+      "Flexible installment savings",
+      "Online savings account"
+    ],
+    "answer": 1,
+    "correctText": "Time deposit",
+    "id": "e3_q48",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Time deposit thường có lãi suất cao hơn demand deposit vì người gửi cam kết giữ tiền đến maturity.",
+    "trap": "Demand deposit linh hoạt hơn nhưng lãi thấp hơn.",
+    "keyword": "Highest deposit rate → time deposit."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 49,
+    "clo": "CLO 5",
+    "question": "In the 50/30/20 budgeting method, the 50% portion is typically allocated to which type of expenses?",
+    "options": [
+      "Savings and investments",
+      "Entertainment and personal wants",
+      "Essential needs (housing, food, healthcare, and utilities)",
+      "Debt repayment"
+    ],
+    "answer": 2,
+    "correctText": "Essential needs (housing, food, healthcare, and utilities)",
+    "id": "e3_q49",
+    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+    "explanation": "50/30/20 phân bổ 50% cho needs, 30% wants, 20% savings/investment hoặc debt repayment.",
+    "trap": "Đừng đảo 50% sang entertainment hoặc savings.",
+    "keyword": "50 = needs, 30 = wants, 20 = savings."
+  },
+  {
+    "sourceExam": 3,
+    "sourceNumber": 50,
+    "clo": "CLO 3",
+    "question": "Investment returns in the stock market are most strongly influenced by:",
+    "options": [
+      "Market volatility and company performance",
+      "Inflation rate",
+      "Real estate prices",
+      "Bank deposit rates"
+    ],
+    "answer": 0,
+    "correctText": "Market volatility and company performance",
+    "id": "e3_q50",
+    "chapter": "Chapter 3: Banking & Investment Products",
+    "explanation": "Return của stock chịu ảnh hưởng lớn bởi biến động thị trường và hiệu quả hoạt động của công ty.",
+    "trap": "Lãi tiền gửi hay giá bất động sản không phải yếu tố trực tiếp nhất.",
+    "keyword": "Stocks = market volatility + company performance."
+  }
+]
+</script>
+
+<script>
+const QUESTION_BANK = JSON.parse(document.getElementById('question-data').textContent);
+const CHAPTERS = [...new Set(QUESTION_BANK.map(q => q.chapter))];
+let currentSession = null;
+let selectedAnswers = {};
+let revealed = {};
+let timerInterval = null;
+let startTime = 0;
+let remainingSeconds = 0;
+let lastTab = 'overview';
+const STORAGE_WRONG = 'edu_tccn_wrong_ids_v1';
+const STORAGE_ATTEMPTS = 'edu_tccn_attempts_v1';
+
+function safeLogin() {
+  if (typeof window.showWelcomeModal === 'function') return window.showWelcomeModal();
+  if (typeof window.loginGoogleReal === 'function') return window.loginGoogleReal();
+  if (window.firebase && firebase.auth) {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).catch(err => alert('Không đăng nhập được: ' + err.message));
+  } else alert('Firebase Auth chưa sẵn sàng. Kiểm tra auth.js nhé.');
+}
+function safeLogout() {
+  if (typeof window.logoutReal === 'function') return window.logoutReal();
+  if (window.firebase && firebase.auth) firebase.auth().signOut();
+}
+function initAuthUi() {
+  try {
+    if (!(window.firebase && firebase.auth)) { document.getElementById('nav-login-btn')?.classList.remove('hidden'); return; }
+    firebase.auth().onAuthStateChanged(user => {
+      const loginBtn = document.getElementById('nav-login-btn');
+      const profile = document.getElementById('nav-user-profile');
+      if (user) {
+        loginBtn?.classList.add('hidden'); profile?.classList.remove('hidden');
+        const avatar = document.getElementById('user-avatar'); if (avatar) avatar.src = user.photoURL || '/android-chrome-192x192.png';
+        const name = document.getElementById('user-name'); if (name) name.textContent = user.displayName || 'Sinh viên';
+      } else { loginBtn?.classList.remove('hidden'); profile?.classList.add('hidden'); }
+    });
+  } catch(e) { document.getElementById('nav-login-btn')?.classList.remove('hidden'); }
+}
+function fallbackOnlineCount() {
+  setTimeout(() => { const el = document.getElementById('online-count'); if (el && (!el.textContent || el.textContent === '...')) el.textContent = 12 + Math.floor(Math.random()*18); }, 1100);
+}
+function escapeHtml(str) { return String(str).replace(/[&<>'"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[s])); }
+function shuffle(arr) { const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function mmss(sec) { sec=Math.max(0, Math.floor(sec)); const m=String(Math.floor(sec/60)).padStart(2,'0'); const s=String(sec%60).padStart(2,'0'); return `${m}:${s}`; }
+function getWrongIds() { try { return JSON.parse(localStorage.getItem(STORAGE_WRONG)||'[]'); } catch { return []; } }
+function setWrongIds(ids) { localStorage.setItem(STORAGE_WRONG, JSON.stringify([...new Set(ids)])); }
+function addWrongIds(ids) { setWrongIds([...getWrongIds(), ...ids]); }
+function removeWrongIds(ids) { const drop=new Set(ids); setWrongIds(getWrongIds().filter(id => !drop.has(id))); }
+function getAttempts() { try { return JSON.parse(localStorage.getItem(STORAGE_ATTEMPTS)||'[]'); } catch { return []; } }
+function saveAttempt(record) { const attempts=getAttempts(); attempts.unshift(record); localStorage.setItem(STORAGE_ATTEMPTS, JSON.stringify(attempts.slice(0,12))); }
+
+function switchTab(tabId) {
+  stopTimer();
+  currentSession = null; selectedAnswers = {}; revealed = {};
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  const target = document.getElementById(tabId);
+  if (target) { target.classList.remove('hidden'); target.classList.add('animate-fade-in'); }
+  document.querySelectorAll('.nav-btn').forEach(btn => { btn.classList.remove('tab-active'); btn.classList.add('text-stone-500'); });
+  document.querySelectorAll('.nav-btn').forEach(btn => { if ((btn.getAttribute('onclick') || '').includes(`'${tabId}'`)) { btn.classList.add('tab-active'); btn.classList.remove('text-stone-500'); } });
+  const mobile = document.getElementById('mobile-nav'); if (mobile) mobile.value = tabId;
+  document.getElementById('practice-panel')?.classList.add('hidden');
+  lastTab = tabId;
+  if (tabId === 'mistakes') renderMistakes();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function closePracticePanel() { stopTimer(); document.getElementById('practice-panel')?.classList.add('hidden'); document.getElementById(lastTab)?.classList.remove('hidden'); window.scrollTo({top:0, behavior:'smooth'}); }
+
+function renderOverview() {
+  const stats = document.getElementById('overview-stats'); if (!stats) return;
+  const wrongCount = getWrongIds().length;
+  stats.innerHTML = `
+    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${QUESTION_BANK.length}</div><div class="text-xs text-stone-300 font-bold">câu hỏi</div></div>
+    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">3</div><div class="text-xs text-stone-300 font-bold">đề LMS</div></div>
+    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${CHAPTERS.length}</div><div class="text-xs text-stone-300 font-bold">nhóm kiến thức</div></div>
+    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${wrongCount}</div><div class="text-xs text-stone-300 font-bold">câu sai đã lưu</div></div>`;
+}
+function renderChapterGrid() {
+  const el = document.getElementById('chapter-grid'); if (!el) return;
+  const chapterIcons = ['🧭','💼','🏦','📊','🛡️','💳','🧩'];
+  el.innerHTML = CHAPTERS.map((ch, i) => {
+    const qs = QUESTION_BANK.filter(q => q.chapter === ch);
+    return `<article class="mode-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col min-h-[245px]">
+      <div class="flex justify-between items-start gap-3 mb-4"><div class="w-13 h-13 text-4xl">${chapterIcons[i%chapterIcons.length]}</div><span class="pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider">${qs.length} câu</span></div>
+      <h3 class="font-black text-slate-900 text-lg mb-2 leading-snug">${escapeHtml(ch)}</h3>
+      <p class="text-sm text-stone-600 flex-grow">Mode học theo chương: chọn đáp án là hiện giải thích ngay, rất hợp để ôn nền.</p>
+      <button onclick='startChapter(${JSON.stringify(ch)})' class="mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-2.5 rounded-xl transition-colors">Luyện chương này</button>
+    </article>`;
+  }).join('');
+}
+function renderExamGrid() {
+  const el = document.getElementById('exam-grid'); if (!el) return;
+  const cards = [1,2,3].map(n => ({type:'source', title:`Đề luyện thi ${n}`, subtitle:`50 câu từ bộ LMS số ${n}`, questions:QUESTION_BANK.filter(q=>q.sourceExam===n), minutes:60, accent:'teal'}));
+  cards.push({type:'random', title:'Final Mix 50 câu', subtitle:'Random 50 câu từ toàn bộ ngân hàng', questions:shuffle(QUESTION_BANK).slice(0,50), minutes:60, accent:'slate'});
+  el.innerHTML = cards.map((c, idx) => `<article class="mode-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col min-h-[240px]">
+    <span class="pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider w-fit">Exam mode</span>
+    <h3 class="font-black text-slate-900 text-xl mt-4 mb-2 leading-snug">${c.title}</h3>
+    <p class="text-sm text-stone-600 flex-grow">${c.subtitle}. Phải nộp bài mới xem đáp án và giải thích.</p>
+    <div class="grid grid-cols-2 gap-2 text-center text-xs my-4"><div class="bg-stone-50 rounded-lg p-2 border border-stone-100"><strong class="block text-slate-900">${c.questions.length}</strong><span class="text-stone-500">Câu</span></div><div class="bg-stone-50 rounded-lg p-2 border border-stone-100"><strong class="block text-slate-900">${c.minutes}'</strong><span class="text-stone-500">Timer</span></div></div>
+    <button onclick="startExam(${idx})" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-black py-2.5 rounded-xl transition-colors">Bắt đầu làm bài</button>
+  </article>`).join('');
+  window.__examCards = cards;
+}
+function renderMistakes() {
+  const panel = document.getElementById('mistakes-panel'); if (!panel) return;
+  const ids = getWrongIds();
+  const qs = QUESTION_BANK.filter(q => ids.includes(q.id));
+  if (!qs.length) {
+    panel.innerHTML = `<div class="bg-white border border-stone-200 rounded-2xl p-8 text-center shadow-sm"><div class="text-5xl mb-3">🎉</div><h3 class="text-xl font-black text-slate-900 mb-2">Chưa có câu sai nào được lưu</h3><p class="text-stone-600 mb-5">Làm một bài test hoặc luyện thi trước, câu sai sẽ tự xuất hiện ở đây.</p><button onclick="switchTab('quick')" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl">Làm test nhanh</button></div>`;
+  } else {
+    panel.innerHTML = `<div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5"><div><h3 class="font-black text-xl text-slate-900">Có ${qs.length} câu cần ôn lại</h3><p class="text-stone-600 text-sm">Mode này hiện đáp án ngay để chữa lỗi nhanh.</p></div><div class="flex gap-3"><button onclick="startMistakes()" class="bg-rose-500 hover:bg-rose-600 text-white font-black px-5 py-3 rounded-xl">Ôn câu sai</button><button onclick="clearMistakes()" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-black px-5 py-3 rounded-xl">Xóa danh sách</button></div></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">${qs.slice(0,12).map(q=>`<div class="bg-white border border-stone-200 rounded-xl p-4 shadow-sm"><span class="text-xs font-black text-teal-700">${q.chapter}</span><p class="text-sm font-bold text-slate-800 mt-2 line-clamp-3">${escapeHtml(q.question)}</p></div>`).join('')}</div>`;
+  }
+}
+function clearMistakes(){ if(confirm('Xóa toàn bộ danh sách câu sai trên máy này?')) { setWrongIds([]); renderMistakes(); renderOverview(); } }
+
+function startChapter(chapter) { const qs = QUESTION_BANK.filter(q => q.chapter === chapter); startSession({title: chapter, questions: qs, mode:'study', showInstant:true, countdown:false, minutes:0, source:'chapter'}); }
+function startQuick20() { startSession({title:'Test nhanh 20 câu', questions: shuffle(QUESTION_BANK).slice(0,20), mode:'study', showInstant:true, countdown:false, minutes:0, source:'quick'}); }
+function startWeak20() { const wrongQs = QUESTION_BANK.filter(q => getWrongIds().includes(q.id)); const fill = QUESTION_BANK.filter(q => !getWrongIds().includes(q.id)); const qs = shuffle([...shuffle(wrongQs).slice(0,14), ...shuffle(fill).slice(0,6)]).slice(0,20); startSession({title:'20 câu ưu tiên câu sai', questions: qs.length?qs:shuffle(QUESTION_BANK).slice(0,20), mode:'study', showInstant:true, countdown:false, minutes:0, source:'weak'}); }
+function startMistakes() { const qs = QUESTION_BANK.filter(q => getWrongIds().includes(q.id)); if(qs.length) startSession({title:'Ôn lại câu sai', questions: qs, mode:'study', showInstant:true, countdown:false, minutes:0, source:'mistakes'}); }
+function startExam(index) { const c=window.__examCards[index]; startSession({title:c.title, questions:c.type==='random'?shuffle(QUESTION_BANK).slice(0,50):c.questions, mode:'exam', showInstant:false, countdown:true, minutes:c.minutes, source:'exam'}); }
+
+function startSession(session) {
+  stopTimer();
+  currentSession = session; selectedAnswers = {}; revealed = {};
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  const panel=document.getElementById('practice-panel'); panel.classList.remove('hidden');
+  document.getElementById('practice-badge').textContent = `${session.mode === 'exam' ? 'Luyện thi' : 'Mode học'} · ${session.questions.length} câu`;
+  renderPractice();
+  startTime = Date.now();
+  const timerPill=document.getElementById('timer-pill'); timerPill.classList.remove('hidden');
+  if (session.countdown) { remainingSeconds=session.minutes*60; updateTimerDisplay(); timerInterval=setInterval(()=>{ remainingSeconds--; updateTimerDisplay(); if(remainingSeconds<=0){ stopTimer(); submitSession(true); } },1000); }
+  else { timerInterval=setInterval(()=>{ const elapsed=Math.floor((Date.now()-startTime)/1000); timerPill.textContent = '⏱️ ' + mmss(elapsed); },1000); }
+  panel.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function stopTimer(){ if(timerInterval){ clearInterval(timerInterval); timerInterval=null; } const pill=document.getElementById('timer-pill'); if(pill) pill.classList.add('hidden'); }
+function updateTimerDisplay(){ const pill=document.getElementById('timer-pill'); if(pill){ pill.textContent = '⏳ ' + mmss(remainingSeconds); pill.classList.toggle('bg-rose-600', remainingSeconds <= 300); pill.classList.toggle('bg-slate-900', remainingSeconds > 300); } }
+
+function renderPractice(showReview=false) {
+  const s=currentSession;
+  const answered=Object.keys(selectedAnswers).length;
+  const pct = s.questions.length ? Math.round(answered/s.questions.length*100) : 0;
+  const content=document.getElementById('practice-content');
+  content.innerHTML = `<div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
+    <div class="bg-gradient-to-r from-teal-700 to-blue-700 text-white p-6 md:p-8">
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-4"><div><h2 class="text-2xl md:text-3xl font-black mb-2">${escapeHtml(s.title)}</h2><p class="text-teal-50">${s.mode==='exam' ? 'Chưa nộp bài thì chưa hiện đáp án. Hết giờ sẽ tự nộp.' : 'Chọn đáp án xong hiện giải thích ngay để học nhanh.'}</p></div><div class="bg-white/15 border border-white/20 rounded-xl p-3 text-sm"><strong id="answered-num">${answered}</strong>/${s.questions.length} câu đã chọn</div></div>
+      <div class="h-2 bg-white/20 rounded-full overflow-hidden mt-6"><div id="progress-inner" class="progress-bar h-full bg-white rounded-full" style="width:${pct}%"></div></div>
+    </div>
+    <div class="p-5 md:p-8">
+      <div id="question-list" class="space-y-5">${s.questions.map((q,i)=>questionHtml(q,i,showReview)).join('')}</div>
+      <div class="sticky bottom-4 bg-white/95 backdrop-blur border border-teal-100 rounded-2xl p-4 mt-8 shadow-lg flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+        <div class="text-sm text-stone-600"><strong>${answered}</strong>/${s.questions.length} câu đã chọn · ${s.mode==='exam' ? 'Nộp bài để xem đáp án' : 'Bấm đáp án để học ngay'}</div>
+        <div class="flex flex-wrap gap-3"><button onclick="restartCurrentSession()" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-black px-4 py-2 rounded-xl">Làm lại</button>${s.mode==='exam' ? `<button onclick="submitSession(false)" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl">Nộp bài</button>` : `<button onclick="finishStudySession()" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl">Tổng kết nhanh</button>`}</div>
+      </div>
+      <div id="result-box" class="hidden mt-6"></div>
+    </div>
+  </div>`;
+  updateProgress();
+}
+function questionHtml(q, idx, showReview) {
+  const selected = selectedAnswers[q.id];
+  const shouldShow = showReview || (currentSession.showInstant && revealed[q.id]);
+  const isCorrect = selected === q.answer;
+  return `<div id="q-${q.id}" class="question-card rounded-2xl border border-stone-200 bg-stone-50/60 p-5">
+    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4"><div class="flex gap-3"><span class="w-8 h-8 rounded-full bg-teal-600 text-white font-black flex items-center justify-center shrink-0">${idx+1}</span><div><div class="flex flex-wrap gap-2 mb-2"><span class="text-[11px] font-black px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-100">${q.clo}</span><span class="text-[11px] font-black px-2 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-100">${escapeHtml(q.chapter.replace('Chapter ', 'Ch. '))}</span><span class="text-[11px] font-black px-2 py-0.5 rounded-full bg-stone-100 text-stone-600 border border-stone-200">Đề ${q.sourceExam} · Câu ${q.sourceNumber}</span></div><h3 class="font-bold text-slate-900 leading-relaxed">${escapeHtml(q.question)}</h3></div></div>${shouldShow ? `<span class="text-xs font-black px-3 py-1 rounded-full ${isCorrect?'bg-green-100 text-green-700 border border-green-200':'bg-rose-100 text-rose-700 border border-rose-200'}">${isCorrect?'Đúng':'Sai'}</span>`:''}</div>
+    <div class="grid md:grid-cols-2 gap-3">${q.options.map((opt,oi)=>answerHtml(q,oi,opt,shouldShow)).join('')}</div>
+    ${shouldShow ? explanationHtml(q, isCorrect) : ''}
+  </div>`;
+}
+function answerHtml(q, oi, opt, shouldShow) {
+  const selected = selectedAnswers[q.id] === oi;
+  let cls='answer-btn bg-white border border-stone-200 rounded-xl p-3 text-sm font-semibold text-left cursor-pointer';
+  if (!shouldShow && selected) cls += ' answer-selected';
+  if (shouldShow && oi === q.answer) cls += ' answer-correct';
+  if (shouldShow && selected && oi !== q.answer) cls += ' answer-wrong';
+  const disabled = shouldShow ? 'disabled' : '';
+  return `<button class="${cls}" onclick="selectAnswer('${q.id}',${oi})" ${disabled}><span class="font-black mr-2">${String.fromCharCode(65+oi)}.</span>${escapeHtml(opt)}</button>`;
+}
+function explanationHtml(q, isCorrect) {
+  return `<div class="mt-4 grid lg:grid-cols-[1fr_.8fr] gap-4">
+    <div class="bg-white border-l-4 ${isCorrect?'border-green-500':'border-rose-500'} rounded-r-xl p-4 text-sm shadow-sm"><strong class="block text-slate-900 mb-1">Giải thích:</strong><p class="text-stone-700">${escapeHtml(q.explanation)}</p></div>
+    <div class="bg-amber-50 border border-amber-100 rounded-xl p-4 text-sm"><strong class="block text-amber-900 mb-1">Keyword:</strong><p class="text-amber-800 mb-2">${escapeHtml(q.keyword)}</p><strong class="block text-amber-900 mb-1">Bẫy cần né:</strong><p class="text-amber-800">${escapeHtml(q.trap)}</p></div>
+  </div>`;
+}
+function selectAnswer(qid, idx) {
+  if (!currentSession) return;
+  const q=currentSession.questions.find(x=>x.id===qid);
+  if (!q) return;
+  if (currentSession.showInstant && revealed[qid]) return;
+  selectedAnswers[qid]=idx;
+  if (currentSession.showInstant) {
+    revealed[qid]=true;
+    if (idx !== q.answer) addWrongIds([qid]); else removeWrongIds([qid]);
+  }
+  renderPractice(false);
+  const card=document.getElementById('q-'+qid); if (card) card.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+function updateProgress() {
+  const answered=Object.keys(selectedAnswers).length;
+  const total=currentSession?.questions.length || 1;
+  const pct=Math.round(answered/total*100);
+  const p=document.getElementById('progress-inner'); if(p) p.style.width=pct+'%';
+}
+function restartCurrentSession() { if(!currentSession) return; const old={...currentSession, questions:[...currentSession.questions]}; selectedAnswers={}; revealed={}; startSession(old); }
+function finishStudySession(){
+  if(!currentSession) return;
+  const total=currentSession.questions.length;
+  const answered=Object.keys(selectedAnswers).length;
+  const score=currentSession.questions.reduce((sum,q)=> sum + (selectedAnswers[q.id]===q.answer ? 1 : 0),0);
+  showResultBox(score,total,answered,false);
+}
+function submitSession(auto){
+  if(!currentSession) return;
+  if(!auto && currentSession.mode==='exam' && Object.keys(selectedAnswers).length < currentSession.questions.length){
+    if(!confirm(`Ông mới làm ${Object.keys(selectedAnswers).length}/${currentSession.questions.length} câu. Vẫn nộp bài chứ?`)) return;
+  }
+  stopTimer();
+  const total=currentSession.questions.length;
+  const score=currentSession.questions.reduce((sum,q)=> sum + (selectedAnswers[q.id]===q.answer ? 1 : 0),0);
+  const wrong=currentSession.questions.filter(q => selectedAnswers[q.id] !== q.answer).map(q=>q.id);
+  const correct=currentSession.questions.filter(q => selectedAnswers[q.id] === q.answer).map(q=>q.id);
+  addWrongIds(wrong); removeWrongIds(correct);
+  renderPractice(true);
+  showResultBox(score,total,Object.keys(selectedAnswers).length,auto);
+  saveAttempt({title:currentSession.title, score, total, percent:Math.round(score/total*100), at:new Date().toISOString(), seconds:Math.floor((Date.now()-startTime)/1000)});
+  renderOverview();
+}
+function showResultBox(score,total,answered,auto){
+  const percent=Math.round(score/total*100);
+  const box=document.getElementById('result-box'); if(!box) return;
+  const tone=percent>=80?'green':percent>=60?'amber':'rose';
+  const title=percent>=80?'Ngon rồi bro, nền khá chắc 🔥':percent>=60?'Ổn áp, nhưng vẫn nên chữa câu sai':'Cần ôn lại trọng tâm trước khi thi nha bro';
+  box.classList.remove('hidden');
+  box.innerHTML = `<div class="rounded-2xl border-2 border-${tone}-300 bg-${tone}-50 p-6 text-center animate-fade-in"><div class="text-5xl font-black mb-2">${score}/${total}</div><div class="text-lg font-black mb-2">${percent}% correct</div><p class="text-sm text-stone-700">${auto?'Hết giờ nên hệ thống tự nộp bài. ':''}${title}. Đã làm ${answered}/${total} câu.</p><div class="flex justify-center gap-3 mt-4 flex-wrap"><button onclick="scrollToFirstWrong()" class="bg-white hover:bg-stone-50 text-stone-800 border border-stone-200 font-black px-4 py-2 rounded-xl">Xem câu sai đầu tiên</button><button onclick="switchTab('mistakes')" class="bg-slate-900 hover:bg-slate-800 text-white font-black px-4 py-2 rounded-xl">Ôn lại câu sai</button></div></div>`;
+  box.scrollIntoView({behavior:'smooth', block:'center'});
+}
+function scrollToFirstWrong(){
+  if(!currentSession) return;
+  const q=currentSession.questions.find(q=> selectedAnswers[q.id] !== q.answer);
+  if(q){ document.getElementById('q-'+q.id)?.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+
+function init(){
+  renderOverview(); renderChapterGrid(); renderExamGrid(); renderMistakes(); fallbackOnlineCount(); setTimeout(initAuthUi, 700);
+}
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

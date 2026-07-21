@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta name="google-site-verification" content="wXFetqPPe7KsMk4BUPnmxSaSTpmeoqbbTU3hY5aZHSM" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON / EDU CONNECT BRAND -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Ôn thi Tài chính cá nhân UEL - Lý thuyết, công thức, flashcard</title>
+    <meta name="description" content="Sổ tay ôn thi Tài chính cá nhân UEL hệ E: lý thuyết trọng tâm, bảng công thức, flashcard, bẫy trắc nghiệm và ví dụ tính nhanh.">
+    <meta name="keywords" content="tài chính cá nhân, personal finance, UEL hệ E, 50/30/20, net worth, credit card, insurance, loan, budgeting, compound interest, Edu Connect">
+    <meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sổ Tay Tài Chính Cá Nhân - Edu Connect">
+    <meta property="og:description" content="Bản ôn thi Personal Finance UEL: học nhanh bằng bảng so sánh, flashcard, công thức và bẫy đề final.">
+    <meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png">
+    <meta property="og:url" content="https://kienthucsinhvien.id.vn/TaiChinhCaNhan">
+    <meta property="og:type" content="article">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+    <script defer src="auth.js?v=2"></script>
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f4; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+        .glass-panel { background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 800; }
+        .tab-content { animation: fadeIn 0.35s ease-out both; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        .study-card { transition: all .25s ease; }
+        .study-card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(15, 23, 42, .08); }
+        .formula { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+        .pill { border: 1px solid rgba(13,148,136,.2); background: rgba(240,253,250,.7); color: #0f766e; }
+        .soft-grid { background-image: radial-gradient(#e7e5e4 1px, transparent 1px); background-size: 20px 20px; }
+        .flip-card { perspective: 1000px; min-height: 132px; }
+        .flip-inner { position: relative; width: 100%; min-height: 132px; transition: transform .55s; transform-style: preserve-3d; }
+        .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+        .flip-front, .flip-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 1rem; }
+        .flip-back { transform: rotateY(180deg); }
+        .solution-step { border-left: 4px solid #0d9488; padding-left: 1rem; margin: .75rem 0; }
+        .mini-label { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; font-weight: 900; }
+        .answer-chip { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; padding: .35rem .7rem; font-size: .75rem; font-weight: 900; }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed soft-grid">
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+                <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+                <div class="flex flex-col justify-center min-w-0">
+                    <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
+                    <div class="max-w-[165px] sm:max-w-[240px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
+                        <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">💳 Tài Chính Cá Nhân</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex space-x-1 items-center" id="nav-menu">
+                <button onclick="attemptSwitchTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Tổng quan</button>
+                <button onclick="attemptSwitchTab('ch12')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.1-2</button>
+                <button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3</button>
+                <button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.4</button>
+                <button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.5</button>
+                <button onclick="attemptSwitchTab('ch6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.6</button>
+                <button onclick="attemptSwitchTab('lastminute')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Cứu điểm</button>
+            </div>
+
+            <div class="flex items-center shrink-0">
+                <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+                    <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+                    <span id="online-count" class="mr-1">...</span>
+                    <span class="hidden sm:inline">online</span>
+                </div>
+                <div class="border-l border-stone-300 pl-3 sm:pl-4">
+                    <button id="nav-login-btn" onclick="loginGoogleReal()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+                    <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+                        <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+                        <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center lg:hidden py-2 border-t border-stone-100 relative">
+            <select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+                <option value="overview">Tổng quan môn học</option>
+                <option value="ch12">Chương 1-2: Nền tảng & nghề nghiệp</option>
+                <option value="ch3">Chương 3: Sản phẩm tài chính</option>
+                <option value="ch4">Chương 4: Báo cáo & ngân sách</option>
+                <option value="ch5">Chương 5: Bảo vệ tài chính</option>
+                <option value="ch6">Chương 6: Vay & thẻ tín dụng</option>
+                <option value="lastminute">Cứu điểm trước thi</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- HERO -->
+    <section class="mb-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full pill font-black text-xs mb-4 shadow-sm">
+            <span>Hệ E UEL</span><span>•</span><span>Final 60 phút</span><span>•</span><span>Lý thuyết + công thức</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Sổ Tay “Phá Đảo” Tài Chính Cá Nhân</h1>
+        <p class="text-base md:text-lg text-stone-600 max-w-3xl mx-auto mb-6">Bản học nhanh được thiết kế theo kiểu dễ ôn: <strong>keyword → bảng so sánh → công thức → bẫy đề</strong>. Mục tiêu là đọc tới đâu nhớ được tới đó, làm trắc nghiệm tiếng Anh không bị ngợp.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <button onclick="attemptSwitchTab('ch4')" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-3 rounded-xl font-black shadow-md shadow-teal-600/20">Ôn phần công thức trước</button>
+            <a href="/trac-nghiem-tccn.html" class="bg-white hover:bg-stone-50 border border-stone-200 text-slate-800 px-5 py-3 rounded-xl font-black shadow-sm">Sang file bài tập →</a>
+        </div>
+    </section>
+
+    <!-- ================= OVERVIEW ================= -->
+    <section id="overview" class="tab-content block">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <div class="lg:col-span-2 bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h2 class="text-2xl font-black text-teal-800 mb-3 flex items-center gap-2">🧭 Cách ôn môn này để dễ ăn điểm</h2>
+                <p class="text-stone-700 mb-4">Môn Tài chính cá nhân không khó theo kiểu học thuộc dài, mà khó ở chỗ đề rất hay hỏi <strong>tình huống thực tế</strong>: chọn phương án vay, phân biệt loại ngân sách, xử lý nợ, chọn bảo hiểm, tính nhanh net worth hoặc khoản trả nợ.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-teal-50 border border-teal-100 rounded-xl p-4">
+                        <div class="font-black text-teal-900 mb-1">Ưu tiên 1: Chapter 4</div>
+                        <p class="text-sm text-teal-800">Balance sheet, cash flow, ratios, budgeting, FV/PV. Đây là mỏ điểm tính toán.</p>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 rounded-xl p-4">
+                        <div class="font-black text-amber-900 mb-1">Ưu tiên 2: Chapter 6</div>
+                        <p class="text-sm text-amber-800">Loans, credit cards, grace period, repayment. Dễ ra câu tình huống.</p>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-4">
+                        <div class="font-black text-blue-900 mb-1">Ưu tiên 3: Chapter 5</div>
+                        <p class="text-sm text-blue-800">Risk, insurance, term vs whole life, risk transfer. Cần nhớ đúng keyword.</p>
+                    </div>
+                    <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
+                        <div class="font-black text-rose-900 mb-1">Ưu tiên 4: Chapter 1-3</div>
+                        <p class="text-sm text-rose-800">Personal finance principles, career, banking, investment products. Nhiều câu lý thuyết nhanh.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-sm study-card">
+                <div class="text-3xl mb-3">🎯</div>
+                <h3 class="text-xl font-black mb-3">Luật chọn đáp án</h3>
+                <ul class="space-y-3 text-sm text-slate-200">
+                    <li><strong class="text-teal-300">Financial stability:</strong> budget + save first + emergency fund.</li>
+                    <li><strong class="text-teal-300">Debt safety:</strong> đọc hợp đồng, tính khả năng trả, tránh vay vì tiêu dùng ngắn hạn.</li>
+                    <li><strong class="text-teal-300">Investment:</strong> risk-return, diversification, không có lợi nhuận đảm bảo.</li>
+                    <li><strong class="text-teal-300">Insurance:</strong> xử lý pure risk, bảo vệ biến cố lớn.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-black text-slate-900 mb-4">📌 Bản đồ kiến thức 6 chương</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <button onclick="attemptSwitchTab('ch12')" class="text-left p-4 rounded-xl border border-stone-200 hover:border-teal-300 hover:bg-teal-50 transition"><div class="font-black text-teal-800">Ch.1 Overview</div><p class="text-sm text-stone-600">10 principles, behavioral finance, planning process, SMART goals.</p></button>
+                <button onclick="attemptSwitchTab('ch12')" class="text-left p-4 rounded-xl border border-stone-200 hover:border-teal-300 hover:bg-teal-50 transition"><div class="font-black text-teal-800">Ch.2 Career</div><p class="text-sm text-stone-600">Career plan, income potential, employee benefits, legal rights.</p></button>
+                <button onclick="attemptSwitchTab('ch3')" class="text-left p-4 rounded-xl border border-stone-200 hover:border-teal-300 hover:bg-teal-50 transition"><div class="font-black text-teal-800">Ch.3 Services</div><p class="text-sm text-stone-600">Savings, loans, credit cards, e-wallets, stocks/bonds/funds.</p></button>
+                <button onclick="attemptSwitchTab('ch4')" class="text-left p-4 rounded-xl border border-stone-200 hover:border-teal-300 hover:bg-teal-50 transition"><div class="font-black text-teal-800">Ch.4 Statements</div><p class="text-sm text-stone-600">Net worth, cash flow, ratios, budgets, compound interest.</p></button>
+                <button onclick="attemptSwitchTab('ch5')" class="text-left p-4 rounded-xl border border-stone-200 hover:border-teal-300 hover:bg-teal-50 transition"><div class="font-black text-teal-800">Ch.5 Protection</div><p class="text-sm text-stone-600">Risk management, insurance, home/auto/health/life.</p></button>
+                <button onclick="attemptSwitchTab('ch6')" class="text-left p-4 rounded-xl border border-stone-200 hover:border-teal-300 hover:bg-teal-50 transition"><div class="font-black text-teal-800">Ch.6 Loan</div><p class="text-sm text-stone-600">Lending methods, credit score, repayment, credit card fees.</p></button>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-teal-50 to-white rounded-2xl border border-teal-100 shadow-sm p-6">
+            <h3 class="text-xl font-black text-teal-900 mb-4">⚡ Quick Flashcards: click để lật</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="overview-flashcards"></div>
+        </div>
+    </section>
+
+    <!-- ================= CHAPTER 1-2 ================= -->
+    <section id="ch12" class="tab-content hidden">
+        <div class="mb-8">
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1-2: Nền tảng tài chính cá nhân & nghề nghiệp</h2>
+            <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg"><strong>Mục tiêu:</strong> Nắm tư duy tài chính: lập kế hoạch, hiểu hành vi tiêu dùng, đặt mục tiêu SMART, rồi gắn tài chính với nghề nghiệp và thu nhập dài hạn.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-3">💡 Personal finance là gì?</h3>
+                <p class="text-stone-700 mb-4">Personal finance là quá trình quản lý cách cá nhân/gia đình <strong>spend, save, protect, borrow và invest</strong> để đạt mục tiêu tài chính, đồng thời chuẩn bị cho biến cố như bệnh tật, mất việc, tai nạn hoặc thay đổi thu nhập.</p>
+                <div class="bg-stone-50 rounded-xl p-4 border border-stone-200">
+                    <div class="mini-label text-stone-500 mb-2">Câu thi thường hỏi</div>
+                    <p class="font-bold text-slate-800">Personal finance không chỉ là “kiếm nhiều tiền”, mà là <span class="text-teal-700">lập kế hoạch + kiểm soát chi tiêu + bảo vệ + đầu tư</span>.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-3">🏗️ Financial needs pyramid</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="bg-rose-50 border border-rose-100 rounded-lg p-3"><strong>1. Basic needs:</strong> chi phí sống, dòng tiền, ăn ở, đi lại.</div>
+                    <div class="bg-amber-50 border border-amber-100 rounded-lg p-3"><strong>2. Safety:</strong> emergency fund, insurance, risk protection.</div>
+                    <div class="bg-blue-50 border border-blue-100 rounded-lg p-3"><strong>3. Wealth accumulation:</strong> saving, investing, assets.</div>
+                    <div class="bg-teal-50 border border-teal-100 rounded-lg p-3"><strong>4. Financial freedom:</strong> retirement, education, independence.</div>
+                    <div class="bg-slate-100 border border-slate-200 rounded-lg p-3"><strong>5. Legacy:</strong> estate, tax, business succession.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-black text-slate-900 mb-4">🔟 Ten principles of Personal Finance</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 rounded-xl border border-stone-200"><strong>1. Knowledge protects you:</strong> hiểu kiến thức cơ bản và biết hỏi chuyên gia.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>2. Nothing happens without a plan:</strong> không lập kế hoạch thì saving rất khó xảy ra.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>3. Time value of money:</strong> tiền hôm nay đáng giá hơn tiền tương lai.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>4. Taxes matter:</strong> so sánh lợi nhuận nên nhìn sau thuế.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>5. Liquidity matters:</strong> nên có quỹ 3-6 tháng living expenses.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>6. Smart spending:</strong> phân biệt needs vs wants, mua có nghiên cứu.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>7. Protect catastrophes:</strong> dùng insurance cho biến cố lớn.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>8. Risk-return tradeoff:</strong> return cao thường đi với risk cao; diversification giảm rủi ro.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>9. Mind games:</strong> bias khiến quyết định tiền bạc bị lệch.</div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>10. Just do it:</strong> bắt đầu sớm, pay yourself first.</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🧠 Behavioral finance: bảng nhận diện bẫy</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse">
+                        <thead><tr class="bg-slate-900 text-white"><th class="p-3 text-left">Bias</th><th class="p-3 text-left">Nghĩa nhanh</th><th class="p-3 text-left">Cách né</th></tr></thead>
+                        <tbody class="divide-y divide-stone-200">
+                            <tr><td class="p-3 font-bold">Procrastination</td><td class="p-3">Trì hoãn tiết kiệm/trả bill.</td><td class="p-3">Tự động hóa, bắt đầu nhỏ.</td></tr>
+                            <tr><td class="p-3 font-bold">Discounting</td><td class="p-3">Ưu tiên vui hiện tại hơn tương lai.</td><td class="p-3">Chờ 24h trước khi mua.</td></tr>
+                            <tr><td class="p-3 font-bold">Anchoring</td><td class="p-3">Bị neo bởi giá/con số ban đầu.</td><td class="p-3">So sánh thị trường, tự đặt anchor.</td></tr>
+                            <tr><td class="p-3 font-bold">Mental accounting</td><td class="p-3">Chia tiền thành “ngăn” sai lệch.</td><td class="p-3">Nhớ tiền là fungible.</td></tr>
+                            <tr><td class="p-3 font-bold">Bandwagon</td><td class="p-3">Làm theo đám đông/trend.</td><td class="p-3">Tính toán bằng dữ liệu của mình.</td></tr>
+                            <tr><td class="p-3 font-bold">Diderot effect</td><td class="p-3">Mua 1 món kéo theo chuỗi mua thêm.</td><td class="p-3">Đặt giới hạn, mua phù hợp hệ hiện tại.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🛠️ Financial planning process</h3>
+                <ol class="space-y-3">
+                    <li class="solution-step"><strong>1. Evaluate current condition:</strong> thu nhập, chi tiêu, education/career.</li>
+                    <li class="solution-step"><strong>2. Define financial goals:</strong> mục tiêu rõ ràng.</li>
+                    <li class="solution-step"><strong>3. Develop plan of action:</strong> chọn phương án, cân nhắc liquidity/protection/tax.</li>
+                    <li class="solution-step"><strong>4. Implement spending plan:</strong> budget để theo dõi tiến độ.</li>
+                    <li class="solution-step"><strong>5. Review and revise:</strong> cập nhật khi đời sống thay đổi.</li>
+                </ol>
+                <div class="mt-4 bg-teal-50 border border-teal-100 rounded-xl p-4">
+                    <div class="font-black text-teal-900">SMART goal</div>
+                    <p class="text-sm text-teal-800 mt-1"><strong>S</strong>pecific, <strong>M</strong>easurable, <strong>A</strong>ttainable, <strong>R</strong>elevant, <strong>T</strong>ime-bound. Ví dụ: “Save 36 million VND for emergency fund within 6 months.”</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+            <h3 class="text-xl font-black text-slate-900 mb-4">💼 Chapter 2: Career planning & income</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-4"><strong>Job</strong><p class="text-sm mt-1">Một vị trí làm việc được trả lương.</p></div>
+                <div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong>Career</strong><p class="text-sm mt-1">Lộ trình nghề nghiệp gồm nhiều job liên quan, phát triển theo thời gian.</p></div>
+                <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><strong>Career plan</strong><p class="text-sm mt-1">Mục tiêu ngắn/trung/dài hạn + education + work experiences.</p></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-black text-slate-800 mb-2">Khi chọn job/career, xét gì?</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-stone-700">
+                        <li><strong>Values:</strong> integrity, adaptability, responsibility, willingness to learn.</li>
+                        <li><strong>Professional interests:</strong> môn học, project, sở thích, làm với người hay hậu trường.</li>
+                        <li><strong>Benefits & costs:</strong> salary, growth, job satisfaction vs travel, work hours, location.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900 text-white rounded-xl p-4">
+                    <h4 class="font-black mb-2">Bẫy thi Chapter 2</h4>
+                    <p class="text-sm text-slate-200">Đề hay hỏi “muốn income cao dài hạn thì làm gì?”. Đáp án an toàn thường là: <strong class="text-teal-300">build skills, gain experience, increase personal value</strong>. Đừng chọn dự đoán chứng khoán, vay đầu tư nhanh, hoặc chỉ nhìn salary mà bỏ qua benefits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CHAPTER 3 ================= -->
+    <section id="ch3" class="tab-content hidden">
+        <div class="mb-8">
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Financial instruments & banking services</h2>
+            <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg"><strong>Mục tiêu:</strong> Biết sản phẩm nào dùng cho mục tiêu nào: saving để an toàn, credit để chi tiêu/vay, insurance để bảo vệ, fund/stocks/bonds để đầu tư.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🏦 Savings products</h3>
+                <p class="text-stone-700 mb-4">Savings products thường có <strong>low risk</strong> và tạo fixed income. Ví dụ: book of saving, certificate of deposit, time deposit, online savings, target savings.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse">
+                        <thead><tr class="bg-teal-700 text-white"><th class="p-3 text-left">Sản phẩm</th><th class="p-3 text-left">Điểm nhớ</th></tr></thead>
+                        <tbody class="divide-y divide-stone-200">
+                            <tr><td class="p-3 font-bold">Demand deposit</td><td class="p-3">Thanh khoản cao, lãi thường thấp.</td></tr>
+                            <tr><td class="p-3 font-bold">Time deposit / CD</td><td class="p-3">Lãi cao hơn, có maturity. Rút trước hạn thường mất full interest/chỉ hưởng demand rate.</td></tr>
+                            <tr><td class="p-3 font-bold">Online savings</td><td class="p-3">Thường tiện hơn và có thể lãi cao hơn truyền thống.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-4">💳 Consumer loans & credit cards</h3>
+                <ul class="space-y-3 text-stone-700">
+                    <li><strong>Consumer loan:</strong> vay cho chi tiêu cá nhân/gia đình; có thể secured hoặc unsecured.</li>
+                    <li><strong>Mortgage:</strong> mua nhà, thường có tài sản đảm bảo nên lãi thấp hơn loan không đảm bảo.</li>
+                    <li><strong>Credit card:</strong> mua trước trả sau, có statement, due date, minimum payment, interest.</li>
+                    <li><strong>Cash advance:</strong> rất dễ bị tính phí/lãi ngay, không nên dùng nếu không cần thiết.</li>
+                </ul>
+                <div class="mt-4 bg-amber-50 border border-amber-100 rounded-xl p-4 text-sm text-amber-900"><strong>Bẫy:</strong> credit card không phải “free money”. Benefit là cashback/points/installment, nhưng unpaid balance sẽ bị tính interest.</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-lg font-black text-slate-900 mb-3">🔗 Bancassurance</h3>
+                <p class="text-sm text-stone-700">Bank hợp tác với insurance company để bán bảo hiểm qua mạng lưới ngân hàng. Bank nhận fees/commissions.</p>
+            </div>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-lg font-black text-slate-900 mb-3">📲 Non-bank payment</h3>
+                <p class="text-sm text-stone-700">Gồm payment gateway, financial switch, clearing, digital wallet, cash collection/payment, wire transfer support.</p>
+            </div>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-lg font-black text-slate-900 mb-3">🧺 Portfolio</h3>
+                <p class="text-sm text-stone-700">Tập hợp investments để đạt mục tiêu. Diversification giúp giảm random risk.</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+            <h3 class="text-xl font-black text-slate-900 mb-4">📈 Investment instruments: bảng so sánh nhanh</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead><tr class="bg-slate-900 text-white"><th class="p-3 text-left">Instrument</th><th class="p-3 text-left">Bản chất</th><th class="p-3 text-left">Bẫy đề</th></tr></thead>
+                    <tbody class="divide-y divide-stone-200">
+                        <tr><td class="p-3 font-bold">Stock</td><td class="p-3">Ownership share in a corporation.</td><td class="p-3">Không đảm bảo return, rủi ro cao hơn bond.</td></tr>
+                        <tr><td class="p-3 font-bold">Bond</td><td class="p-3">Debt instrument, trả interest và principal.</td><td class="p-3">Government bonds thường là nhóm thấp rủi ro hơn.</td></tr>
+                        <tr><td class="p-3 font-bold">Mutual fund</td><td class="p-3">Quỹ được quản lý chuyên nghiệp.</td><td class="p-3">Ưu điểm: professional management, không phải guaranteed return.</td></tr>
+                        <tr><td class="p-3 font-bold">ETF</td><td class="p-3">Quỹ giao dịch trên sàn, đa dạng hóa.</td><td class="p-3">Ưu điểm: portfolio diversification at lower cost.</td></tr>
+                        <tr><td class="p-3 font-bold">Real estate rental</td><td class="p-3">Tạo rent + kỳ vọng tăng giá.</td><td class="p-3">Yếu tố quan trọng: location & appreciation potential.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CHAPTER 4 ================= -->
+    <section id="ch4" class="tab-content hidden">
+        <div class="mb-8">
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 4: Personal financial statements & budgeting</h2>
+            <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg"><strong>Đây là chương trọng tâm nhất.</strong> Học thuộc công thức, hiểu ratio nào đo cái gì, và biết chọn budgeting method theo tình huống.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-4">📋 Balance sheet / Net worth statement</h3>
+                <p class="text-stone-700 mb-4">Là “ảnh chụp” tình trạng tài chính tại một ngày cụ thể.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4 text-sm">
+                    <div class="bg-teal-50 border border-teal-100 p-3 rounded-xl"><strong>Assets</strong><br>What you own.</div>
+                    <div class="bg-rose-50 border border-rose-100 p-3 rounded-xl"><strong>Liabilities</strong><br>What you owe.</div>
+                    <div class="bg-blue-50 border border-blue-100 p-3 rounded-xl"><strong>Net worth</strong><br>Assets - Liabilities.</div>
+                </div>
+                <div class="bg-slate-900 text-white rounded-xl p-4 formula text-center text-lg font-black">Net worth = Total assets - Total liabilities</div>
+                <p class="text-sm text-stone-600 mt-3"><strong>Nếu Net worth &lt; 0:</strong> tình trạng insolvent.</p>
+            </div>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-4">💸 Cash flow statement</h3>
+                <p class="text-stone-700 mb-4">Tổng hợp income và expenses trong một giai đoạn, trả lời câu hỏi: tiền đến từ đâu và đi đâu?</p>
+                <div class="bg-slate-900 text-white rounded-xl p-4 formula text-center text-lg font-black mb-3">Cash surplus = Total income - Total expenses</div>
+                <ul class="list-disc pl-5 space-y-1 text-sm text-stone-700">
+                    <li><strong>Fixed expenses:</strong> rent, loan payments, insurance premiums.</li>
+                    <li><strong>Variable expenses:</strong> food, transportation, utilities, entertainment.</li>
+                    <li><strong>Surplus:</strong> phần còn lại cho saving/investment.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-black text-slate-900 mb-4">🧮 Bảng công thức sống còn</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><div class="font-black text-teal-800">Net worth</div><div class="formula mt-1">Assets - Liabilities</div></div>
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><div class="font-black text-teal-800">Savings rate</div><div class="formula mt-1">Savings / Income × 100%</div></div>
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><div class="font-black text-teal-800">Debt-to-asset</div><div class="formula mt-1">Liabilities / Assets</div></div>
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><div class="font-black text-teal-800">Solvency ratio</div><div class="formula mt-1">Net worth / Assets</div></div>
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><div class="font-black text-teal-800">Liquidity ratio</div><div class="formula mt-1">Liquid assets / Monthly expenses</div></div>
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><div class="font-black text-teal-800">Future value</div><div class="formula mt-1">FV = PV(1+i)^n</div></div>
+            </div>
+            <div class="mt-4 bg-amber-50 border border-amber-100 rounded-xl p-4 text-sm text-amber-900"><strong>Keyword:</strong> Debt-to-asset = reliance on debt financing. Liquidity = ability to cover short-term needs/emergency with liquid assets.</div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🔎 Ratio mini calculator</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                    <label class="block"><span class="font-bold text-stone-700">Total assets</span><input id="calc-assets" type="number" value="15000" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                    <label class="block"><span class="font-bold text-stone-700">Total liabilities</span><input id="calc-liabilities" type="number" value="9000" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                    <label class="block"><span class="font-bold text-stone-700">Liquid assets</span><input id="calc-liquid" type="number" value="3000" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                    <label class="block"><span class="font-bold text-stone-700">Monthly expenses</span><input id="calc-expenses" type="number" value="1200" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                    <label class="block"><span class="font-bold text-stone-700">Monthly income</span><input id="calc-income" type="number" value="2000" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                    <label class="block"><span class="font-bold text-stone-700">Monthly savings</span><input id="calc-savings" type="number" value="400" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                </div>
+                <button onclick="calculateRatios()" class="mt-4 w-full bg-teal-600 hover:bg-teal-700 text-white rounded-xl py-3 font-black">Tính nhanh</button>
+                <div id="ratio-output" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-sm"></div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">📊 Budgeting methods: chọn đúng theo tình huống</h3>
+                <div class="space-y-3">
+                    <div class="p-4 rounded-xl border border-stone-200"><strong>Traditional budget:</strong> track chi tiết income/expenses. Hợp người cẩn thận, có thời gian.</div>
+                    <div class="p-4 rounded-xl border border-stone-200"><strong>Pay Yourself First:</strong> saving là “bill” đầu tiên. Hợp người muốn ưu tiên tiết kiệm.</div>
+                    <div class="p-4 rounded-xl border border-stone-200"><strong>50/30/20:</strong> 50% needs, 30% wants, 20% savings/debt. Dễ nhớ, linh hoạt.</div>
+                    <div class="p-4 rounded-xl border border-stone-200"><strong>Envelope/Zero-based:</strong> chia tiền theo phong bì/category. Hết tiền là dừng hoặc chuyển từ category khác.</div>
+                    <div class="p-4 rounded-xl border border-stone-200"><strong>Flexible budget:</strong> hợp income không đều, điều chỉnh theo actual income/expenses.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-black text-slate-900 mb-4">🧠 Needs vs Wants & overspending control</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong>Needs</strong><p class="text-sm mt-1">Basic food, shelter, clothing, healthcare, basic transportation.</p></div>
+                <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><strong>Wants</strong><p class="text-sm mt-1">Dining out, vacations, luxury items, hobbies, entertainment.</p></div>
+                <div class="bg-slate-900 text-white rounded-xl p-4"><strong>Bẫy</strong><p class="text-sm mt-1 text-slate-200">Needs/wants không tuyệt đối. Nhưng trong 50/30/20, 50% là essential needs.</p></div>
+            </div>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-stone-700">
+                <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Track spending & credit transactions.</div>
+                <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Wait 1-2 months before expensive purchases.</div>
+                <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Shop purposefully: “Do I really need it?”</div>
+                <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Use envelope system for strongest control.</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+            <h3 class="text-xl font-black text-slate-900 mb-4">📈 Compound interest mini calculator</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-sm">
+                <label><span class="font-bold">PV</span><input id="fv-pv" type="number" value="2000" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                <label><span class="font-bold">Annual rate %</span><input id="fv-rate" type="number" value="4" step="0.01" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                <label><span class="font-bold">Years</span><input id="fv-years" type="number" value="3" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                <label><span class="font-bold">Compounds/year</span><input id="fv-comp" type="number" value="1" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+            </div>
+            <button onclick="calculateFV()" class="mt-4 bg-teal-600 hover:bg-teal-700 text-white px-5 py-3 rounded-xl font-black">Tính FV</button>
+            <div id="fv-output" class="mt-4 hidden rounded-xl bg-teal-50 border border-teal-100 p-4"></div>
+        </div>
+    </section>
+
+    <!-- ================= CHAPTER 5 ================= -->
+    <section id="ch5" class="tab-content hidden">
+        <div class="mb-8">
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 5: Personal financial protection plan</h2>
+            <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg"><strong>Mục tiêu:</strong> Hiểu risk, chọn cách quản trị risk và phân biệt bảo hiểm. Chìa khóa: insurance chỉ xử lý pure risk.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-4">⚠️ Risk: pure vs speculative</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-rose-50 border border-rose-100 rounded-xl p-4"><strong>Pure risk</strong><p class="text-sm mt-1">Chỉ có khả năng loss, không có gain. Ví dụ: cháy nhà, tai nạn, bệnh, trộm. Insurance xử lý loại này.</p></div>
+                    <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><strong>Speculative risk</strong><p class="text-sm mt-1">Có thể gain hoặc loss. Ví dụ: stock market, crypto, investment. Không phải đối tượng insurance thông thường.</p></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🛡️ Risk-management process</h3>
+                <ol class="space-y-2 text-sm text-stone-700">
+                    <li class="solution-step"><strong>1. Identify exposures</strong> - nhận diện rủi ro.</li>
+                    <li class="solution-step"><strong>2. Estimate risk & losses</strong> - ước lượng xác suất/thiệt hại.</li>
+                    <li class="solution-step"><strong>3. Choose how to handle</strong> - chọn cách xử lý.</li>
+                    <li class="solution-step"><strong>4. Implement program</strong> - thực hiện kế hoạch.</li>
+                    <li class="solution-step"><strong>5. Evaluate & adjust</strong> - đánh giá và điều chỉnh.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-black text-slate-900 mb-4">🔁 4 cách xử lý risk</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-4 rounded-xl border border-stone-200"><strong>Risk avoidance</strong><p class="text-sm mt-1">Không làm hoạt động tạo risk.</p></div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>Risk reduction</strong><p class="text-sm mt-1">Giảm xác suất/mức thiệt hại.</p></div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>Risk retention</strong><p class="text-sm mt-1">Tự chịu rủi ro nhỏ.</p></div>
+                <div class="p-4 rounded-xl border border-stone-200"><strong>Risk transfer</strong><p class="text-sm mt-1">Chuyển risk cho insurer qua bảo hiểm.</p></div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">📜 Insurance basics</h3>
+                <ul class="space-y-3 text-stone-700 text-sm">
+                    <li><strong>Insurance:</strong> mechanism for transferring and reducing pure risk.</li>
+                    <li><strong>Premium:</strong> phí bảo hiểm hằng tháng/năm.</li>
+                    <li><strong>Insurance policy:</strong> hợp đồng giữa insured và insurer.</li>
+                    <li><strong>Hazard:</strong> điều kiện làm tăng xác suất peril xảy ra.</li>
+                    <li><strong>Law of large numbers:</strong> nhóm càng đông, dự đoán tổn thất càng chính xác.</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🏠🚗 Types of insurance</h3>
+                <div class="space-y-3 text-sm">
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Homeowner’s:</strong> property + liability cho dwelling, structures, personal property, loss of use.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Automobile:</strong> liability, medical payments, uninsured/underinsured, physical damage.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Health:</strong> chi trả/reimburse health care expenses do sickness/injury.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Life:</strong> trả death benefit cho beneficiary khi insured chết.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+            <h3 class="text-xl font-black text-slate-900 mb-4">👨‍👩‍👧 Life insurance: term vs cash-value</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead><tr class="bg-slate-900 text-white"><th class="p-3 text-left">Loại</th><th class="p-3 text-left">Đặc điểm</th><th class="p-3 text-left">Bẫy đề</th></tr></thead>
+                    <tbody class="divide-y divide-stone-200">
+                        <tr><td class="p-3 font-bold">Term life</td><td class="p-3">Pure protection, chi trả nếu chết trong term, không build cash value.</td><td class="p-3">Thường rẻ hơn, phù hợp bảo vệ thu nhập.</td></tr>
+                        <tr><td class="p-3 font-bold">Cash-value / Whole life</td><td class="p-3">Death benefit + saving/investment element.</td><td class="p-3">Nhược điểm hay hỏi: cost cao hơn term life.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-4 bg-amber-50 border border-amber-100 rounded-xl p-4 text-sm text-amber-900"><strong>Keyword LMS:</strong> Financial rating của insurer quan trọng nhất với <strong>life insurance</strong> vì hợp đồng dài hạn, cần công ty đủ khả năng chi trả trong tương lai.</div>
+        </div>
+    </section>
+
+    <!-- ================= CHAPTER 6 ================= -->
+    <section id="ch6" class="tab-content hidden">
+        <div class="mb-8">
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 6: Personal loan and repayment</h2>
+            <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg"><strong>Mục tiêu:</strong> Biết vay khi nào hợp lý, đọc điều kiện vay, tính repayment, hiểu credit card và tránh bẫy grace period/cash advance.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🏛️ Credit institutions & lending methods</h3>
+                <div class="space-y-3 text-sm text-stone-700">
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Bank:</strong> commercial banks, policy banks, cooperative banks.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Non-bank credit institution:</strong> finance companies, financial leasing companies.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Microfinance institution:</strong> tổ chức tài chính vi mô.</div>
+                </div>
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                    <div class="p-3 rounded-xl bg-teal-50 border border-teal-100"><strong>Single loan</strong><br>Vay 1 lần cho car/house/studying.</div>
+                    <div class="p-3 rounded-xl bg-blue-50 border border-blue-100"><strong>Line of credit</strong><br>Vay trong hạn mức, nhiều lần.</div>
+                    <div class="p-3 rounded-xl bg-amber-50 border border-amber-100"><strong>Overdraft</strong><br>Chi vượt số dư checking account.</div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
+                <h3 class="text-xl font-black text-slate-900 mb-4">✅ Conditions for borrowing</h3>
+                <ol class="space-y-3 text-stone-700 text-sm">
+                    <li class="solution-step"><strong>1. Legal condition</strong></li>
+                    <li class="solution-step"><strong>2. Lawful purpose</strong></li>
+                    <li class="solution-step"><strong>3. Feasible loan use plan</strong></li>
+                    <li class="solution-step"><strong>4. Financial capability to repay debt</strong></li>
+                </ol>
+                <div class="mt-4 bg-rose-50 border border-rose-100 rounded-xl p-4 text-sm text-rose-900"><strong>Bẫy:</strong> vay online phải đọc electronic loan agreement, lãi, fees, disbursement method và xác minh app chính thức của credit institution.</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-black text-slate-900 mb-4">💰 Loan concepts & repayment</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong>Short-term loan</strong><p class="text-sm mt-1">Thường tối đa 12 months.</p></div>
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-4"><strong>Medium-term loan</strong><p class="text-sm mt-1">Thời hạn trung bình.</p></div>
+                <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><strong>Long-term loan</strong><p class="text-sm mt-1">Mortgage/large assets, nhiều năm.</p></div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead><tr class="bg-slate-900 text-white"><th class="p-3 text-left">Term</th><th class="p-3 text-left">Ý nghĩa</th></tr></thead>
+                    <tbody class="divide-y divide-stone-200">
+                        <tr><td class="p-3 font-bold">Principal</td><td class="p-3">Nợ gốc.</td></tr>
+                        <tr><td class="p-3 font-bold">Interest</td><td class="p-3">Chi phí vay tiền.</td></tr>
+                        <tr><td class="p-3 font-bold">Current debt</td><td class="p-3">Nợ trong hạn.</td></tr>
+                        <tr><td class="p-3 font-bold">Overdue debt</td><td class="p-3">Nợ quá hạn.</td></tr>
+                        <tr><td class="p-3 font-bold">Prepayment penalty</td><td class="p-3">Phí có thể phát sinh khi trả mortgage sớm.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">💳 Credit card essentials</h3>
+                <ul class="space-y-3 text-stone-700 text-sm">
+                    <li><strong>Credit limit:</strong> maximum amount you can borrow.</li>
+                    <li><strong>Statement:</strong> bill cuối billing cycle, ghi transactions, balance, due date, minimum payment.</li>
+                    <li><strong>Minimum payment:</strong> số tối thiểu phải trả để tránh penalty/bad debt.</li>
+                    <li><strong>Interest:</strong> tính trên unpaid balance nếu không trả full đúng hạn.</li>
+                    <li><strong>Penalty interest rate:</strong> interest rate charged if you fail to make at least minimum payment on time.</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🎁 Pros / Cons of credit</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong>Advantages</strong><ul class="list-disc pl-5 mt-2 space-y-1"><li>Buy home/car.</li><li>Build credit history.</li><li>Convenient, no cash.</li><li>Track expenses.</li></ul></div>
+                    <div class="bg-rose-50 border border-rose-100 rounded-xl p-4"><strong>Disadvantages</strong><ul class="list-disc pl-5 mt-2 space-y-1"><li>High cost.</li><li>Easy to overspend.</li><li>Impulse purchases.</li><li>Damage credit rating.</li></ul></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-black text-slate-900 mb-4">🗓️ Grace period & credit card fees</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                    <p class="text-stone-700 mb-4"><strong>Grace period</strong> là thời gian miễn lãi cho purchase nếu trả full đúng hạn. LMS hay dùng khoảng <strong>45-55 days</strong>. Nhưng cash advance thường bị tính lãi ngay từ ngày rút.</p>
+                    <div class="bg-teal-50 border border-teal-100 rounded-xl p-4 text-sm text-teal-900"><strong>Ví dụ:</strong> mua ngày 3/6, closing date 30/6, due date 20/7 → khoảng 47 ngày free credit.</div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Annual fee</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Card issuance fee</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Over-limit fee</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">International transaction fee</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Late payment fee</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Cash withdrawal fee</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Cancellation fee</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Statement printing fee</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+            <h3 class="text-xl font-black text-slate-900 mb-4">🏠 Mortgage quick calculator: equal principal</h3>
+            <p class="text-sm text-stone-600 mb-4">Dùng để luyện dạng “tháng thứ 3 phải trả bao nhiêu?” với <strong>equal principal repayment</strong> và interest tính trên beginning outstanding balance.</p>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
+                <label><span class="font-bold">Property value</span><input id="loan-value" type="number" value="3000" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"><span class="text-xs text-stone-400">million VND</span></label>
+                <label><span class="font-bold">Finance %</span><input id="loan-percent" type="number" value="70" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                <label><span class="font-bold">Years</span><input id="loan-years" type="number" value="5" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                <label><span class="font-bold">Annual rate %</span><input id="loan-rate" type="number" value="8" step="0.01" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+                <label><span class="font-bold">Month</span><input id="loan-month" type="number" value="3" class="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 bg-stone-50"></label>
+            </div>
+            <button onclick="calculateEqualPrincipal()" class="mt-4 bg-teal-600 hover:bg-teal-700 text-white px-5 py-3 rounded-xl font-black">Tính khoản trả tháng</button>
+            <div id="loan-output" class="mt-4 hidden rounded-xl bg-teal-50 border border-teal-100 p-4"></div>
+        </div>
+    </section>
+
+    <!-- ================= LAST MINUTE ================= -->
+    <section id="lastminute" class="tab-content hidden">
+        <div class="mb-8">
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Cứu điểm trước thi: keyword bank</h2>
+            <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg">Phần này dùng để quét nhanh trước khi ngủ hoặc trước giờ vào phòng thi. Thấy keyword là chọn đáp án tương ứng.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">⚡ Keyword → Answer</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>3-6 months living expenses</strong> → emergency fund / liquidity.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Save before spending</strong> → Pay Yourself First.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>50% needs, 30% wants, 20% savings</strong> → 50/30/20.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>No more spending in category</strong> → Envelope Budget.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Irregular income</strong> → Flexible Budgeting.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Create new budget from scratch each month</strong> → Zero-Based Budgeting.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Debt-to-asset</strong> → degree of reliance on debt financing.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Most liquid asset</strong> → cash and bank deposits.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Compound interest</strong> → interest on principal + accumulated interest.</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+                <h3 class="text-xl font-black text-slate-900 mb-4">🚨 Credit / insurance keywords</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Credit card benefit</strong> → cashback, loyalty points, installment options.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Grace period</strong> → 45-55 days.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Unpaid balance</strong> → interest charged.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Fail minimum payment</strong> → penalty interest rate / late payment consequences.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Secured loan</strong> → require collateral.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Mortgage early repayment</strong> → prepayment penalty.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Insurance handles</strong> → pure risk.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Term life</strong> → pure protection, no cash value.</div>
+                    <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Whole life disadvantage</strong> → significantly higher cost than term life.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-sm mb-8">
+            <h3 class="text-xl font-black mb-4">🧪 10 câu tự check siêu nhanh</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-200">
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">1</span> Net worth = assets - liabilities.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">2</span> Income statement reflects income & expenses over a period.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">3</span> Inflation reduces the real value of savings.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">4</span> Passive income = income without continuous active work.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">5</span> Online savings may offer higher interest than traditional savings.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">6</span> Open-end mutual fund advantage: professional management.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">7</span> ETF advantage: diversification at lower cost.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">8</span> Foreign currency savings: exchange rate fluctuation matters.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">9</span> Unsecured loan interest is strongly affected by credit score.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">10</span> First job foundation: learning & skill development.</div>
+            </div>
+        </div>
+
+        <div class="text-center bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
+            <h3 class="text-xl font-black text-slate-900 mb-2">Xong lý thuyết rồi thì qua bài tập</h3>
+            <p class="text-stone-600 mb-4">File bài tập sẽ làm theo kiểu chọn đáp án xong hiện giải thích ngay, giống cách ôn ông muốn.</p>
+            <a href="/trac-nghiem-tccn.html" class="inline-flex bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-black shadow-md shadow-teal-600/20">Qua trang bài tập →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="border-t border-stone-200 bg-white py-8 mt-10">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 mx-auto mb-3 opacity-50 grayscale">
+        <p class="text-sm text-stone-500 font-medium">© 2026 Edu Connect. Developed for Students.</p>
+        <div class="mt-3 flex justify-center gap-4 text-xs font-bold text-blue-600">
+            <a href="https://kienthucsinhvien.id.vn/privacy.html" class="hover:underline">Chính sách bảo mật</a>
+            <span>|</span>
+            <a href="https://kienthucsinhvien.id.vn/privacy.html" class="hover:underline">Điều khoản dịch vụ</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const tabs = ['overview','ch12','ch3','ch4','ch5','ch6','lastminute'];
+
+    function attemptSwitchTab(tabId) {
+        tabs.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.classList.toggle('hidden', id !== tabId);
+            if (el) el.classList.toggle('block', id === tabId);
+        });
+
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.classList.remove('tab-active');
+            btn.classList.add('text-stone-500');
+        });
+        const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(btn => btn.getAttribute('onclick')?.includes(`'${tabId}'`));
+        if (activeBtn) {
+            activeBtn.classList.add('tab-active');
+            activeBtn.classList.remove('text-stone-500');
+        }
+        const mobile = document.getElementById('mobile-nav');
+        if (mobile) mobile.value = tabId;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const flashcards = [
+        ['Debt-to-Asset', 'Total liabilities / Total assets. Đo mức phụ thuộc vào nợ.'],
+        ['Liquidity Ratio', 'Liquid assets / Monthly expenses. Đo khả năng chống emergency.'],
+        ['Pay Yourself First', 'Save first, spend later. Không giới hạn từng category.'],
+        ['Envelope Budget', 'Chia tiền theo phong bì. Hết phong bì thì dừng/transfer.'],
+        ['Grace Period', 'Khoảng miễn lãi credit card cho purchases nếu trả full đúng hạn.'],
+        ['Pure Risk', 'Chỉ có khả năng loss. Insurance xử lý pure risk.'],
+        ['Compound Interest', 'Interest on principal + accumulated interest.'],
+        ['SMART Goal', 'Specific, Measurable, Attainable, Relevant, Time-bound.']
+    ];
+
+    function renderFlashcards() {
+        const box = document.getElementById('overview-flashcards');
+        if (!box) return;
+        box.innerHTML = flashcards.map(([front, back], idx) => `
+            <div class="flip-card cursor-pointer" onclick="this.classList.toggle('flipped')" title="Click để lật">
+                <div class="flip-inner">
+                    <div class="flip-front bg-white border border-teal-100 shadow-sm p-4 flex flex-col justify-center">
+                        <div class="mini-label text-teal-600 mb-2">Flashcard ${idx + 1}</div>
+                        <div class="text-lg font-black text-slate-900">${front}</div>
+                        <div class="text-xs text-stone-400 mt-2">Click để xem nghĩa</div>
+                    </div>
+                    <div class="flip-back bg-slate-900 text-white p-4 flex flex-col justify-center">
+                        <div class="text-sm text-slate-200">${back}</div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function money(v) {
+        if (!isFinite(v)) return '0';
+        return new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(v);
+    }
+
+    function calculateRatios() {
+        const assets = Number(document.getElementById('calc-assets').value || 0);
+        const liabilities = Number(document.getElementById('calc-liabilities').value || 0);
+        const liquid = Number(document.getElementById('calc-liquid').value || 0);
+        const expenses = Number(document.getElementById('calc-expenses').value || 0);
+        const income = Number(document.getElementById('calc-income').value || 0);
+        const savings = Number(document.getElementById('calc-savings').value || 0);
+        const net = assets - liabilities;
+        const debtAsset = assets ? liabilities / assets : 0;
+        const solvency = assets ? net / assets : 0;
+        const liquidity = expenses ? liquid / expenses : 0;
+        const savingsRate = income ? savings / income : 0;
+        const out = document.getElementById('ratio-output');
+        out.innerHTML = `
+            <div class="p-3 rounded-xl bg-teal-50 border border-teal-100"><b>Net worth:</b><br>${money(net)}</div>
+            <div class="p-3 rounded-xl bg-rose-50 border border-rose-100"><b>Debt-to-asset:</b><br>${(debtAsset*100).toFixed(2)}%</div>
+            <div class="p-3 rounded-xl bg-blue-50 border border-blue-100"><b>Solvency:</b><br>${(solvency*100).toFixed(2)}%</div>
+            <div class="p-3 rounded-xl bg-amber-50 border border-amber-100"><b>Liquidity:</b><br>${liquidity.toFixed(2)} months</div>
+            <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-100 md:col-span-2"><b>Savings rate:</b><br>${(savingsRate*100).toFixed(2)}% ${savingsRate >= .2 ? '✅ đạt mốc 20%' : '⚠️ dưới mốc 20%'}</div>
+        `;
+    }
+
+    function calculateFV() {
+        const pv = Number(document.getElementById('fv-pv').value || 0);
+        const rate = Number(document.getElementById('fv-rate').value || 0) / 100;
+        const years = Number(document.getElementById('fv-years').value || 0);
+        const comp = Number(document.getElementById('fv-comp').value || 1);
+        const i = rate / comp;
+        const n = years * comp;
+        const fv = pv * Math.pow(1 + i, n);
+        const out = document.getElementById('fv-output');
+        out.classList.remove('hidden');
+        out.innerHTML = `<div class="font-black text-teal-900 text-lg">FV = ${money(fv)}</div><div class="text-sm text-teal-800 mt-1 formula">${money(pv)} × (1 + ${(i*100).toFixed(4)}%)^${n}</div>`;
+    }
+
+    function calculateEqualPrincipal() {
+        const property = Number(document.getElementById('loan-value').value || 0);
+        const finance = Number(document.getElementById('loan-percent').value || 0) / 100;
+        const years = Number(document.getElementById('loan-years').value || 0);
+        const rate = Number(document.getElementById('loan-rate').value || 0) / 100;
+        const month = Number(document.getElementById('loan-month').value || 1);
+        const loan = property * finance;
+        const totalMonths = years * 12;
+        const principalMonthly = totalMonths ? loan / totalMonths : 0;
+        const beginningBalance = loan - principalMonthly * (month - 1);
+        const interest = beginningBalance * rate / 12;
+        const payment = principalMonthly + interest;
+        const remainingAfter = Math.max(loan - principalMonthly * month, 0);
+        const out = document.getElementById('loan-output');
+        out.classList.remove('hidden');
+        out.innerHTML = `
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-sm">
+                <div><b>Loan amount</b><br>${money(loan)} million</div>
+                <div><b>Monthly principal</b><br>${money(principalMonthly)} million</div>
+                <div><b>Interest month ${month}</b><br>${money(interest)} million</div>
+                <div><b>Total payment</b><br><span class="text-teal-800 font-black">${money(payment)} million</span></div>
+            </div>
+            <div class="mt-3 text-xs text-teal-900 formula">Beginning balance month ${month} = ${money(beginningBalance)} million; remaining after payment = ${money(remainingAfter)} million.</div>
+        `;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        renderFlashcards();
+        calculateRatios();
+        calculateFV();
+        calculateEqualPrincipal();
+    });
+</script>
+</body>
+</html>

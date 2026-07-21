@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ôn thi Nguyên lý Kế toán - Trắc nghiệm, tài liệu, đề thi</title>
+<meta name="description" content="Website ôn thi Nguyên lý Kế toán, trắc nghiệm, đề thi, bài tập tự luận có giải chi tiết.">
+
+<!-- SEO CƠ BẢN (Đã sửa từ khóa cho chuẩn môn Kế Toán) -->
+<meta name="keywords" content="nguyên lý kế toán, bài tập kế toán, định khoản, bảng cân đối kế toán, kế toán UEL, tài khoản chữ T, edu connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta name="robots" content="index, follow"> 
+
+<!-- SEO MẠNG XÃ HỘI (Open Graph) -->
+<meta property="og:title" content="Bí Kíp Phá Đảo Nguyên Lý Kế Toán - Edu Connect">
+<meta property="og:description" content="Tổng hợp lý thuyết trọng tâm, sơ đồ tư duy trực quan và bộ công cụ tính toán kế toán tự động dành riêng cho sinh viên UEL.">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png"> 
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/NguyenLyKeToan"> <!-- Sửa link trỏ đích danh về trang Kế Toán -->
+<meta property="og:type" content="article"> <!-- Trang bài học thì dùng type article thay vì website -->
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+
+<style>
+/* CUSTOM CSS FOR EDU CONNECT */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 700; }
+.glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.modal-overlay { background-color: rgba(28, 25, 23, 0.75); backdrop-filter: blur(4px); }
+.google-btn { background-color: #ffffff; color: #3c4043; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); transition: background-color 0.2s, box-shadow 0.2s; }
+.google-btn:hover { background-color: #f8f9fa; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); }
+
+/* 3D FLASHCARD CSS */
+.perspective { perspective: 1000px; }
+.preserve-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; }
+.my-rotate-y-180 { transform: rotateY(180deg); }
+
+/* TIMELINE CSS */
+.timeline-step { border-left: 3px solid #0d9488; padding-left: 1.5rem; margin-bottom: 1.5rem; position: relative; }
+.timeline-step::before { content: ''; position: absolute; left: -0.5rem; top: 0; width: 1rem; height: 1rem; background-color: #0d9488; border-radius: 50%; box-shadow: 0 0 0 4px #ccfbf1; }
+
+/* NOTE BOX */
+.note-box { border-left: 4px solid #f59e0b; background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem; }
+
+/* MINDMAP CSS */
+.mindmap-node { background: white; border: 2px solid #0d9488; border-radius: 0.75rem; padding: 1rem; text-align: center; font-weight: bold; color: #0f766e; box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.1); position: relative; z-index: 10; }
+.mindmap-node-sub { background: #f0fdfa; border: 1px solid #5eead4; border-radius: 0.5rem; padding: 0.75rem; text-align: center; font-weight: 600; color: #115e59; font-size: 0.875rem; z-index: 10; }
+.mindmap-line-v { width: 2px; height: 1.5rem; background-color: #0d9488; margin: 0 auto; }
+.mindmap-line-h { height: 2px; background-color: #0d9488; width: 100%; position: absolute; top: -0.75rem; z-index: 1; }
+
+/* FLOWCHART CSS */
+.flow-arrow { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  color: #0d9488; 
+  font-weight: bold; 
+}
+</style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<!-- INITIAL WELCOME MODAL -->
+<div id="welcome-modal" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+<div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="welcome-modal-content">
+<div class="text-center mb-6">
+<div class="text-5xl mb-4">📊</div>
+<h2 class="text-2xl font-extrabold text-slate-900 mb-2">Hệ thống Nguyên Lý Kế Toán</h2>
+<p class="text-stone-600 text-sm">Đăng nhập để mở khóa bài tập tự luận, biểu mẫu chứng từ và các chương nghiệp vụ chuyên sâu.</p>
+</div>
+<div class="space-y-4">
+<button onclick="loginGoogleReal()" class="google-btn w-full py-3 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3">
+<span class="text-lg font-black text-blue-600">G</span> 
+<span>Đăng nhập bằng Google</span>
+</button>
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-stone-200"></div>
+<span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
+<div class="flex-grow border-t border-stone-200"></div>
+</div>
+<button onclick="window.location.href='index.html'" 
+        style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
+        onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
+        onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
+    🏠 Quay về Trang chủ
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+        
+
+        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+            <div class="flex flex-col justify-center min-w-0">
+                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
+                
+                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
+                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">📈 Nguyên Lý Kế Toán</p>
+                </div>
+            </div>
+        </a>
+
+<div class="hidden md:flex space-x-1 items-center overflow-x-auto" id="nav-menu">
+<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Tổng Quan</button>
+<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: BCTC</button>
+<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3: TK & Ghi Sổ</button>
+<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Tính Giá <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: Chứng Từ <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.6: Sản Xuất <span class="premium-lock text-xs"></span></button>
+</div>
+
+<div class="flex items-center shrink-0">
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+            <span id="online-count" class="mr-1 sm:mr-1">...</span> 
+            <span class="hidden sm:inline">online</span>
+        </div>
+<div class="border-l border-stone-300 pl-4">
+<button id="nav-login-btn" onclick="showWelcomeModal()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+<div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+<img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Mobile Menu Select -->
+<div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+<select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+<option value="ch1">Chương 1: Tổng Quan Kế Toán</option>
+<option value="ch2">Chương 2: Báo Cáo Tài Chính</option>
+<option value="ch3">Chương 3: Tài Khoản & Ghi Sổ Kép</option>
+<option value="ch4">Chương 4: Phương Pháp Tính Giá</option>
+<option value="ch5">Chương 5: Chứng Từ & Sổ Sách</option>
+<option value="ch6">Chương 6: Kế Toán Quá Trình SX</option>
+</select>
+<!-- NÚT MENU 3 GẠCH (Dự phòng chức năng sau này) -->
+        <div class="absolute right-8 top-1/2 transform -translate-y-1/2 flex items-center">
+            <button id="mobile-sidebar-btn" class="p-1.5 text-teal-700 hover:bg-teal-100 rounded transition-colors focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+</div>
+</div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+
+<!-- ================= HERO SECTION & HƯỚNG DẪN SỬ DỤNG ================= -->
+<div class="mb-12 text-center">
+    <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Bí Kíp "Phá Đảo" Nguyên Lý Kế Toán</h1>
+    <p class="text-lg text-stone-600 max-w-2xl mx-auto mb-8">Hệ thống tổng hợp lý thuyết trọng tâm, sơ đồ tư duy trực quan và bộ công cụ tính toán tự động.</p>
+
+    <!-- Hướng dẫn sử dụng nhanh -->
+    <div class="inline-block bg-white border-2 border-teal-100 rounded-2xl p-6 text-left max-w-4xl shadow-sm hover:shadow-md transition-shadow">
+        <h3 class="font-bold text-teal-800 text-xl mb-4 flex items-center border-b border-teal-100 pb-3">
+            <span class="text-2xl mr-2">💡</span> Hướng Dẫn Ôn Tập Hiệu Quả
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ul class="text-base text-stone-700 space-y-4">
+                <li class="flex items-start">
+                    <span class="text-teal-600 mr-3 mt-0.5 text-xl">🎯</span> 
+                    <div>
+                        <strong class="block text-slate-800">Học theo lộ trình cơ bản:</strong>
+                        <span class="text-sm">Sử dụng thanh Menu phía trên để đi từ Tổng quan (Ch.1) đến Kế toán Sản xuất (Ch.6). Hãy ưu tiên nắm chắc nguyên tắc Nợ/Có ở Chương 3 trước tiên.</span>
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-teal-600 mr-3 mt-0.5 text-xl">🧠</span> 
+                    <div>
+                        <strong class="block text-slate-800">Tận dụng Sơ đồ tư duy (Mindmap):</strong>
+                        <span class="text-sm">Mỗi chương đều có Mindmap tóm tắt. Hãy nhìn bức tranh tổng thể trước khi học thuộc lòng các định khoản chi tiết để tránh bị "ngợp".</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="text-base text-stone-700 space-y-4">
+                <li class="flex items-start">
+                    <span class="text-teal-600 mr-3 mt-0.5 text-xl">🧮</span> 
+                    <div>
+                        <strong class="block text-slate-800">Sử dụng Công cụ tương tác:</strong>
+                        <span class="text-sm">Đừng chỉ đọc lý thuyết! Hãy thử nhập các con số từ bài tập thực tế của bạn vào Máy tính T-Account, Báo cáo P&L để hệ thống tự động kiểm tra kết quả.</span>
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-teal-600 mr-3 mt-0.5 text-xl">📝</span> 
+                    <div>
+                        <strong class="block text-slate-800">Thực chiến bài tập tự luận:</strong>
+                        <span class="text-sm">Cuối mỗi chương đều có bài tập mô phỏng đề thi. Hãy lấy nháp ra tự giải trước khi bấm nút <span class="bg-teal-100 text-teal-800 font-bold px-1.5 py-0.5 rounded text-xs border border-teal-200">Xem / Ẩn Lời Giải</span>.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mt-5 bg-rose-50/80 p-3 rounded-lg border border-rose-100 text-sm text-rose-800 flex items-center">
+            <span class="text-lg mr-2">🔒</span> 
+            <span><strong>Đừng quên:</strong> Hãy đăng nhập hệ thống để mở khóa trọn bộ kiến thức tính giá, chứng từ và tập hợp chi phí chuyên sâu nhé!</span>
+        </div>
+    </div>
+</div>
+
+<!-- ================= SECTION: CHƯƠNG 1 ================= -->
+<section id="ch1" class="tab-content block">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1: Tổng Quan Về Kế Toán</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Nắm vững các nguyên tắc kế toán căn bản, phương trình kế toán cốt lõi và phân biệt được kế toán quản trị vs tài chính.</p>
+</div>
+
+<!-- Mindmap Chương 1 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto">
+    <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">🧠 Sơ đồ Đối Tượng Kế Toán Cơ Bản</h3>
+    <div class="flex flex-col items-center min-w-[600px]">
+        <div class="mindmap-node bg-teal-50">ĐỐI TƯỢNG KẾ TOÁN</div>
+        <div class="mindmap-line-v"></div>
+        <div class="relative w-full max-w-4xl">
+            <!-- Đường ngang -->
+            <div class="mindmap-line-h left-[16.66%] w-[66.66%]"></div>
+            <div class="flex justify-between w-full relative">
+                <!-- Nhánh 1 -->
+                <div class="flex flex-col items-center w-1/3 px-2">
+                    <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                    <div class="mindmap-node-sub w-full bg-blue-50 border-blue-400 text-blue-800">Tình hình Tài chính<br>(Bảng CĐKT)</div>
+                    <div class="mindmap-line-v"></div>
+                    <div class="flex w-full justify-between gap-2">
+                        <div class="w-1/2 flex flex-col items-center">
+                            <div class="mindmap-node-sub w-full text-xs bg-white">Tài Sản (A)</div>
+                        </div>
+                        <div class="w-1/2 flex flex-col items-center">
+                            <div class="mindmap-node-sub w-full text-xs bg-white">Nguồn Vốn (L+E)</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nhánh 2 -->
+                <div class="flex flex-col items-center w-1/3 px-2">
+                    <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                    <div class="mindmap-node-sub w-full bg-green-50 border-green-400 text-green-800">Kết quả Kinh doanh<br>(Báo cáo KQKD)</div>
+                    <div class="mindmap-line-v"></div>
+                    <div class="flex w-full justify-between gap-2">
+                        <div class="w-1/2 flex flex-col items-center">
+                            <div class="mindmap-node-sub w-full text-xs bg-white">Doanh Thu (R)</div>
+                        </div>
+                        <div class="w-1/2 flex flex-col items-center">
+                            <div class="mindmap-node-sub w-full text-xs bg-white">Chi Phí (Ex)</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nhánh 3 -->
+                <div class="flex flex-col items-center w-1/3 px-2">
+                    <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                    <div class="mindmap-node-sub w-full bg-purple-50 border-purple-400 text-purple-800">Lưu chuyển Tiền tệ<br>(Báo cáo LCTT)</div>
+                    <div class="mindmap-line-v"></div>
+                    <div class="mindmap-node-sub w-full text-xs bg-white">Dòng tiền Thu/Chi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ví dụ minh họa inline -->
+<div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-lg mb-8 shadow-sm">
+    <h4 class="font-bold text-blue-800 mb-2">💡 Ví dụ minh họa: Nguyên tắc Cơ sở dồn tích</h4>
+    <p class="text-sm text-stone-700">Ngày 25/12/2023, doanh nghiệp xuất bán lô hàng trị giá 100 triệu, khách hàng đã nhận hàng nhưng hẹn sang tháng 01/2024 mới thanh toán.</p>
+    <ul class="list-disc ml-5 mt-2 text-sm text-stone-700">
+        <li><strong>Theo cơ sở tiền mặt (Cash basis):</strong> Doanh thu chỉ được ghi nhận vào tháng 01/2024 (khi nhận được tiền). <em>(Kế toán tài chính KHÔNG dùng cách này).</em></li>
+        <li><strong>Theo cơ sở dồn tích (Accrual basis):</strong> Doanh thu bắt buộc phải ghi nhận ngay vào tháng 12/2023 vì nghiệp vụ kinh tế (giao hàng) đã hoàn thành.</li>
+    </ul>
+</div>
+
+<!-- Flashcards -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8">
+<h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center">🃏 Từ Khóa Đi Thi Quan Trọng (Rẽ chuột để lật)</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    <div class="group perspective h-32 cursor-pointer">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-500">
+            <div class="absolute backface-hidden w-full h-full bg-stone-50 border border-stone-200 rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-sm">
+                <span class="text-2xl mb-1">⏳</span><h4 class="font-bold text-teal-800 text-sm">Cơ sở dồn tích<br>(Accrual Basis)</h4>
+            </div>
+            <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-teal-600 text-white rounded-xl p-3 flex items-center justify-center text-center shadow-md">
+                <p class="text-xs">Ghi nhận nghiệp vụ ngay khi phát sinh, không chờ thu/chi tiền thực tế.</p>
+            </div>
+        </div>
+    </div>
+    <div class="group perspective h-32 cursor-pointer">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-500">
+            <div class="absolute backface-hidden w-full h-full bg-stone-50 border border-stone-200 rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-sm">
+                <span class="text-2xl mb-1">🔄</span><h4 class="font-bold text-teal-800 text-sm">Hoạt động liên tục<br>(Going Concern)</h4>
+            </div>
+            <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-teal-600 text-white rounded-xl p-3 flex items-center justify-center text-center shadow-md">
+                <p class="text-xs">Giả định DN hoạt động vô thời hạn, là cơ sở để ghi nhận TS theo giá gốc.</p>
+            </div>
+        </div>
+    </div>
+    <div class="group perspective h-32 cursor-pointer">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-500">
+            <div class="absolute backface-hidden w-full h-full bg-stone-50 border border-stone-200 rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-sm">
+                <span class="text-2xl mb-1">🏷️</span><h4 class="font-bold text-teal-800 text-sm">Nguyên tắc giá gốc<br>(Cost Principle)</h4>
+            </div>
+            <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-teal-600 text-white rounded-xl p-3 flex items-center justify-center text-center shadow-md">
+                <p class="text-xs">Tài sản ghi theo giá mua ban đầu, KHÔNG điều chỉnh theo giá thị trường.</p>
+            </div>
+        </div>
+    </div>
+    <div class="group perspective h-32 cursor-pointer">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-500">
+            <div class="absolute backface-hidden w-full h-full bg-stone-50 border border-stone-200 rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-sm">
+                <span class="text-2xl mb-1">📏</span><h4 class="font-bold text-teal-800 text-sm">Nhất quán<br>(Consistency)</h4>
+            </div>
+            <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-teal-600 text-white rounded-xl p-3 flex items-center justify-center text-center shadow-md">
+                <p class="text-xs">Áp dụng thống nhất chính sách kế toán ít nhất 1 kỳ năm để so sánh được.</p>
+            </div>
+        </div>
+    </div>
+    <div class="group perspective h-32 cursor-pointer">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-500">
+            <div class="absolute backface-hidden w-full h-full bg-stone-50 border border-stone-200 rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-sm">
+                <span class="text-2xl mb-1">⚖️</span><h4 class="font-bold text-teal-800 text-sm">Trọng yếu<br>(Materiality)</h4>
+            </div>
+            <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-teal-600 text-white rounded-xl p-3 flex items-center justify-center text-center shadow-md">
+                <p class="text-xs">Bỏ qua sai sót nhỏ không làm thay đổi quyết định kinh tế của người dùng báo cáo.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Timeline -->
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+        <h3 class="text-lg font-bold text-slate-800 mb-6">📅 Quy Trình Kế Toán (Accounting Cycles)</h3>
+        <div class="ml-2">
+            <div class="timeline-step"><strong class="text-teal-700">Bước 1: Thu thập (Collating)</strong><p class="text-sm text-stone-600 mt-1">Ghi nhận các sự kiện kinh tế phát sinh.</p></div>
+            <div class="timeline-step"><strong class="text-teal-700">Bước 2: Quy trình (Processing)</strong><p class="text-sm text-stone-600 mt-1">Định lượng đối tượng bằng số lượng, khối lượng, tiền tệ.</p></div>
+            <div class="timeline-step"><strong class="text-teal-700">Bước 3: Kiểm tra (Checking)</strong><p class="text-sm text-stone-600 mt-1">Sử dụng phương pháp kế toán để tính chỉ tiêu tổng hợp.</p></div>
+            <div class="timeline-step"><strong class="text-teal-700">Bước 4: Phân tích (Analyzing)</strong><p class="text-sm text-stone-600 mt-1">Ghi nhận nghiệp vụ vào hệ thống sổ sách.</p></div>
+            <div class="timeline-step border-none pb-0"><strong class="text-teal-700">Bước 5: Cung cấp thông tin (Provide)</strong><p class="text-sm text-stone-600 mt-1">Lập Báo cáo tài chính cho người ra quyết định.</p></div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 overflow-x-auto">
+        <h3 class="text-lg font-bold text-slate-800 mb-4">🆚 Phân biệt Kế toán Quản trị & Tài chính</h3>
+        <table class="w-full text-sm text-left border-collapse">
+            <thead class="bg-teal-50 text-teal-800">
+                <tr><th class="p-3 border border-teal-200 rounded-tl-lg">Tiêu chí</th><th class="p-3 border border-teal-200">Kế toán Quản trị</th><th class="p-3 border border-teal-200 rounded-tr-lg">Kế toán Tài chính</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="p-3 border border-stone-200 font-semibold">Đối tượng</td><td class="p-3 border border-stone-200">Nội bộ (Giám đốc)</td><td class="p-3 border border-stone-200">Bên ngoài (Cổ đông, Thuế)</td></tr>
+                <tr class="bg-stone-50"><td class="p-3 border border-stone-200 font-semibold">Kỳ báo cáo</td><td class="p-3 border border-stone-200">Khi có nhu cầu</td><td class="p-3 border border-stone-200">Định kỳ (Bắt buộc)</td></tr>
+                <tr><td class="p-3 border border-stone-200 font-semibold">Đặc điểm</td><td class="p-3 border border-stone-200">Hướng tương lai, linh hoạt</td><td class="p-3 border border-stone-200">Phản ánh quá khứ, khách quan</td></tr>
+                <tr class="bg-stone-50"><td class="p-3 border border-stone-200 font-semibold">Chuẩn mực</td><td class="p-3 border border-stone-200 text-stone-500">Không bắt buộc GAAP/VAS</td><td class="p-3 border border-stone-200 text-rose-600 font-bold">Bắt buộc tuân thủ tuyệt đối</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-stone-200 mb-8">
+    <h3 class="text-xl font-bold text-slate-800 mb-6 text-center border-b border-stone-100 pb-3">🧠 1. Sơ Đồ Đối Tượng Kế Toán (Accounting Objects)</h3>
+    
+    <div class="flex flex-col items-center mb-8 overflow-x-auto">
+        <div class="mindmap-node bg-teal-600 text-white border-teal-700 shadow-md mb-6 text-lg w-64 uppercase tracking-widest">
+            Đối Tượng Kế Toán<br><span class="text-xs font-normal opacity-80">(Accounting Objects)</span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 max-w-4xl relative">
+            <div class="w-full h-0.5 bg-teal-500 absolute top-[-1.5rem] hidden md:block"></div>
+            <div class="bg-blue-50 border-2 border-blue-400 text-blue-800 font-bold px-4 py-2 rounded-lg text-center w-32 relative shadow-sm"><div class="hidden md:block w-0.5 h-6 bg-teal-500 absolute top-[-1.5rem] left-1/2"></div>Tài sản<br><span class="text-xs font-normal">Asset</span></div>
+            <div class="bg-rose-50 border-2 border-rose-400 text-rose-800 font-bold px-4 py-2 rounded-lg text-center w-32 relative shadow-sm"><div class="hidden md:block w-0.5 h-6 bg-teal-500 absolute top-[-1.5rem] left-1/2"></div>Nợ phải trả<br><span class="text-xs font-normal">Liabilities</span></div>
+            <div class="bg-amber-50 border-2 border-amber-400 text-amber-800 font-bold px-4 py-2 rounded-lg text-center w-32 relative shadow-sm"><div class="hidden md:block w-0.5 h-6 bg-teal-500 absolute top-[-1.5rem] left-1/2"></div>Vốn CSH<br><span class="text-xs font-normal">Equity</span></div>
+            <div class="bg-green-50 border-2 border-green-400 text-green-800 font-bold px-4 py-2 rounded-lg text-center w-32 relative shadow-sm"><div class="hidden md:block w-0.5 h-6 bg-teal-500 absolute top-[-1.5rem] left-1/2"></div>Doanh thu<br><span class="text-xs font-normal">Revenue</span></div>
+            <div class="bg-purple-50 border-2 border-purple-400 text-purple-800 font-bold px-4 py-2 rounded-lg text-center w-32 relative shadow-sm"><div class="hidden md:block w-0.5 h-6 bg-teal-500 absolute top-[-1.5rem] left-1/2"></div>Chi phí<br><span class="text-xs font-normal">Expense</span></div>
+            <div class="bg-indigo-50 border-2 border-indigo-400 text-indigo-800 font-bold px-4 py-2 rounded-lg text-center w-36 relative shadow-sm"><div class="hidden md:block w-0.5 h-6 bg-teal-500 absolute top-[-1.5rem] left-1/2"></div>Thu nhập khác<br><span class="text-xs font-normal">Other Income</span></div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+        <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100 hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-blue-800 text-lg mb-2 border-b border-blue-200 pb-1">Tài Sản (Assets)</h4>
+            <p class="text-stone-700 mb-2">Nguồn lực DN <strong>kiểm soát</strong>, mang lại <strong>lợi ích kinh tế trong tương lai</strong>.</p>
+            <ul class="list-disc ml-5 text-stone-600 mb-2">
+                <li><strong>Ngắn hạn:</strong> Tiền mặt, Phải thu KH, Hàng tồn kho.</li>
+                <li><strong>Dài hạn:</strong> Nhà xưởng, Máy móc, Thiết bị.</li>
+            </ul>
+        </div>
+        <div class="bg-rose-50/50 p-4 rounded-xl border border-rose-100 hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-rose-800 text-lg mb-2 border-b border-rose-200 pb-1">Nợ Phải Trả (Liabilities)</h4>
+            <p class="text-stone-700 mb-2">Nghĩa vụ tài chính hiện tại phải thanh toán bằng nguồn lực của mình.</p>
+            <ul class="list-disc ml-5 text-stone-600 mb-2">
+                <li><strong>Ngắn hạn:</strong> Phải trả người bán, Vay NH ngắn hạn.</li>
+                <li><strong>Dài hạn:</strong> Vay dài hạn, Trái phiếu phát hành.</li>
+            </ul>
+        </div>
+        <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-100 hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-amber-800 text-lg mb-2 border-b border-amber-200 pb-1">Vốn Chủ Sở Hữu (Equity)</h4>
+            <p class="text-stone-700 mb-2">Giá trị còn lại (<strong>E = A - L</strong>). Phần vốn thuộc về chủ doanh nghiệp.</p>
+            <ul class="list-disc ml-5 text-stone-600 mb-2">
+                <li><strong>Vốn góp:</strong> Số tiền cổ đông đóng góp.</li>
+                <li><strong>Lợi nhuận giữ lại:</strong> Lãi tích lũy chưa chia.</li>
+            </ul>
+        </div>
+        <div class="bg-green-50/50 p-4 rounded-xl border border-green-100 hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-green-800 text-lg mb-2 border-b border-green-200 pb-1">Doanh Thu (Revenue)</h4>
+            <p class="text-stone-700 mb-2">Lợi ích thu được làm tăng Vốn CSH (không tính vốn góp thêm).</p>
+            <ul class="list-disc ml-5 text-stone-600 mb-2">
+                <li><strong>DT bán hàng:</strong> Tiền thu từ bán SP/DV cốt lõi.</li>
+                <li><strong>DT tài chính:</strong> Lãi tiền gửi, cổ tức được chia.</li>
+            </ul>
+        </div>
+        <div class="bg-purple-50/50 p-4 rounded-xl border border-purple-100 hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-purple-800 text-lg mb-2 border-b border-purple-200 pb-1">Chi Phí (Expenses)</h4>
+            <p class="text-stone-700 mb-2">Khoản chi làm giảm lợi ích kinh tế, giảm sút Vốn CSH.</p>
+            <ul class="list-disc ml-5 text-stone-600 mb-2">
+                <li><strong>Giá vốn (COGS):</strong> Chi phí tạo ra SP.</li>
+                <li><strong>CP Hoạt động:</strong> CP Bán hàng, CP Quản lý.</li>
+                <li><strong>CP Tài chính:</strong> Tiền trả lãi vay.</li>
+            </ul>
+        </div>
+        <div class="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-indigo-800 text-lg mb-2 border-b border-indigo-200 pb-1">Thu Nhập Khác (Other Income)</h4>
+            <p class="text-stone-700 mb-2">Thu nhập <strong>ngoài hoạt động sản xuất kinh doanh</strong> thông thường.</p>
+            <ul class="list-disc ml-5 text-stone-600 mb-2">
+                <li>Lãi từ thanh lý Tài sản cố định.</li>
+                <li>Tiền phạt vi phạm hợp đồng thu được.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-stone-200 mb-8">
+    <h3 class="text-xl font-bold text-slate-800 mb-6 text-center border-b border-stone-100 pb-3">⚖️ 2. Các Nguyên Tắc Kế Toán Chung (Accounting Principles)</h3>
+    
+    <div class="flex flex-col items-center mb-8 overflow-x-auto">
+        <div class="mindmap-node bg-slate-800 text-white border-slate-900 shadow-md mb-6 text-lg px-6 uppercase tracking-widest relative z-20">
+            7 Nguyên Tắc Cơ Bản
+        </div>
+        <div class="flex flex-wrap justify-center gap-3 max-w-5xl relative">
+            <div class="w-[90%] h-0.5 bg-slate-300 absolute top-[-1.5rem] hidden lg:block"></div>
+            
+            <div class="bg-white border border-stone-300 text-slate-700 font-bold px-3 py-2 rounded-lg text-center w-[120px] relative shadow-sm"><div class="hidden lg:block w-0.5 h-6 bg-slate-300 absolute top-[-1.5rem] left-1/2"></div>⏳ Dồn tích</div>
+            <div class="bg-white border border-stone-300 text-slate-700 font-bold px-3 py-2 rounded-lg text-center w-[120px] relative shadow-sm"><div class="hidden lg:block w-0.5 h-6 bg-slate-300 absolute top-[-1.5rem] left-1/2"></div>🔄 Liên tục</div>
+            <div class="bg-white border border-stone-300 text-slate-700 font-bold px-3 py-2 rounded-lg text-center w-[120px] relative shadow-sm"><div class="hidden lg:block w-0.5 h-6 bg-slate-300 absolute top-[-1.5rem] left-1/2"></div>🏷️ Giá gốc</div>
+            <div class="bg-white border border-stone-300 text-slate-700 font-bold px-3 py-2 rounded-lg text-center w-[120px] relative shadow-sm"><div class="hidden lg:block w-0.5 h-6 bg-slate-300 absolute top-[-1.5rem] left-1/2"></div>🧩 Phù hợp</div>
+            <div class="bg-white border border-stone-300 text-slate-700 font-bold px-3 py-2 rounded-lg text-center w-[120px] relative shadow-sm"><div class="hidden lg:block w-0.5 h-6 bg-slate-300 absolute top-[-1.5rem] left-1/2"></div>📏 Nhất quán</div>
+            <div class="bg-white border border-stone-300 text-slate-700 font-bold px-3 py-2 rounded-lg text-center w-[120px] relative shadow-sm"><div class="hidden lg:block w-0.5 h-6 bg-slate-300 absolute top-[-1.5rem] left-1/2"></div>🛡️ Thận trọng</div>
+            <div class="bg-white border border-stone-300 text-slate-700 font-bold px-3 py-2 rounded-lg text-center w-[120px] relative shadow-sm"><div class="hidden lg:block w-0.5 h-6 bg-slate-300 absolute top-[-1.5rem] left-1/2"></div>⚖️ Trọng yếu</div>
+        </div>
+    </div>
+
+    <div class="space-y-4">
+        <div class="bg-stone-50 border-l-4 border-teal-500 p-4 rounded-r-lg">
+            <h4 class="font-bold text-teal-800 text-base mb-1">1. Cơ sở dồn tích (Accrual Basis)</h4>
+            <p class="text-sm text-stone-700">Ghi nhận nghiệp vụ ngay khi phát sinh, không căn cứ vào thời điểm thực tế thu hoặc chi tiền.</p>
+        </div>
+        <div class="bg-stone-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+            <h4 class="font-bold text-blue-800 text-base mb-1">2. Bản chất (Substance Over Form Principle)</h4>
+            <p class="text-sm text-stone-700">Giả định doanh nghiệp đang hoạt động liên tục (cơ sở để ghi nhận Tài sản theo "Giá gốc" thay vì giá thanh lý).</p>
+        </div>
+        <div class="bg-stone-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+            <h4 class="font-bold text-orange-800 text-base mb-1">3. Giá gốc (Cost Principle)</h4>
+            <p class="text-sm text-stone-700">Tài sản phải được ghi nhận theo giá mua ban đầu, KHÔNG được tự ý điều chỉnh thay đổi theo giá thị trường.</p>
+        </div>
+        <div class="bg-stone-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+            <h4 class="font-bold text-purple-800 text-base mb-1">4. Phù hợp (Matching Principle)</h4>
+            <p class="text-sm text-stone-700">Ghi nhận một khoản Doanh thu thì phải ghi nhận một khoản Chi phí tương ứng tạo ra doanh thu đó.</p>
+        </div>
+        <div class="bg-stone-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+            <h4 class="font-bold text-green-800 text-base mb-1">5. Nhất quán (Consistency Principle)</h4>
+            <p class="text-sm text-stone-700">Các chính sách kế toán phải được áp dụng thống nhất ít nhất 1 kỳ năm để số liệu có thể so sánh được.</p>
+        </div>
+        <div class="bg-stone-50 border-l-4 border-rose-500 p-4 rounded-r-lg">
+            <h4 class="font-bold text-rose-800 text-base mb-1">6. Thận trọng (Prudence/Conservatism principle)</h4>
+            <p class="text-sm text-stone-700">Doanh thu/Tài sản ghi nhận khi có bằng chứng CHẮC CHẮN. Chi phí/Nợ ghi nhận ngay khi CÓ THỂ XẢY RA.</p>
+        </div>
+        <div class="bg-stone-50 border-l-4 border-indigo-500 p-4 rounded-r-lg">
+            <h4 class="font-bold text-indigo-800 text-base mb-1">7. Trọng yếu (Materiality Principle)</h4>
+            <p class="text-sm text-stone-700">Cho phép bỏ qua sai sót nhỏ không làm sai lệch quyết định kinh tế của người đọc báo cáo.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Calculator: Equation -->
+<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-stone-200 mb-8">
+    <h3 class="text-xl font-bold text-slate-800 mb-2">🧮 4. Máy Tính Phương Trình Kế Toán (Mở rộng & Tìm X)</h3>
+    <p class="text-sm text-stone-600 mb-6 bg-teal-50 p-3 rounded-lg border border-teal-100">
+        <strong>💡 Hướng dẫn:</strong> Bấm <strong class="text-blue-600">+ Thêm mục</strong> để tạo các khoản mục thực tế. Nhập số tiền vào các ô. 
+        Nếu đề bài bắt tìm 1 ẩn số, hãy <strong>để trống (hoặc nhập chữ "x") vào duy nhất 1 ô đó</strong>, máy tính sẽ tự tìm ra X và điền lại vào chỗ trống.
+    </p>
+    
+    <div class="bg-stone-800 rounded-xl p-4 text-center shadow-md mb-6">
+        <div class="text-lg md:text-xl font-extrabold tracking-wide flex justify-center items-center gap-2 flex-wrap">
+            <span class="text-blue-300">TỔNG TÀI SẢN (A)</span> 
+            <span class="text-white">=</span> 
+            <span class="text-rose-400">TỔNG NỢ (L)</span> 
+            <span class="text-white">+</span> 
+            <span class="text-amber-400">TỔNG VỐN (E)</span>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-stone-50 p-4 md:p-6 rounded-xl border border-stone-200 mb-6">
+        
+        <div class="flex flex-col">
+            <label class="block font-bold text-blue-700 mb-3 border-b-2 border-blue-200 pb-1 flex justify-between">
+                <span>Tài Sản (Assets)</span>
+            </label>
+            <div id="eq-list-a" class="space-y-2 flex-grow">
+                <div class="flex gap-2 items-center">
+                    <input type="text" placeholder="VD: Tiền mặt" class="w-1/2 p-2 border border-stone-300 rounded text-sm outline-none focus:border-blue-500 bg-white">
+                    <input type="text" placeholder="Số tiền hoặc x" class="w-1/2 p-2 border border-stone-300 rounded text-sm font-bold text-blue-700 outline-none focus:border-blue-500 bg-white val-a">
+                    <button onclick="this.parentElement.remove()" class="text-stone-400 hover:text-red-500 font-bold px-1">&times;</button>
+                </div>
+            </div>
+            <button onclick="addEqRow('a')" class="mt-3 text-sm text-blue-600 hover:text-blue-800 font-bold text-center border border-dashed border-blue-300 bg-blue-50/50 hover:bg-blue-100 p-2 rounded transition-colors">+ Thêm Tài sản</button>
+        </div>
+
+        <div class="flex flex-col">
+            <label class="block font-bold text-rose-600 mb-3 border-b-2 border-rose-200 pb-1">Nợ Phải Trả (Liabilities)</label>
+            <div id="eq-list-l" class="space-y-2 flex-grow">
+                <div class="flex gap-2 items-center">
+                    <input type="text" placeholder="VD: Vay NH" class="w-1/2 p-2 border border-stone-300 rounded text-sm outline-none focus:border-rose-500 bg-white">
+                    <input type="text" placeholder="Số tiền hoặc x" class="w-1/2 p-2 border border-stone-300 rounded text-sm font-bold text-rose-700 outline-none focus:border-rose-500 bg-white val-l">
+                    <button onclick="this.parentElement.remove()" class="text-stone-400 hover:text-red-500 font-bold px-1">&times;</button>
+                </div>
+            </div>
+            <button onclick="addEqRow('l')" class="mt-3 text-sm text-rose-600 hover:text-rose-800 font-bold text-center border border-dashed border-rose-300 bg-rose-50/50 hover:bg-rose-100 p-2 rounded transition-colors">+ Thêm Nợ</button>
+        </div>
+
+        <div class="flex flex-col">
+            <label class="block font-bold text-amber-600 mb-3 border-b-2 border-amber-200 pb-1">Vốn CSH (Equity)</label>
+            <div id="eq-list-e" class="space-y-2 flex-grow">
+                <div class="flex gap-2 items-center">
+                    <input type="text" placeholder="VD: Vốn góp" class="w-1/2 p-2 border border-stone-300 rounded text-sm outline-none focus:border-amber-500 bg-white">
+                    <input type="text" placeholder="Số tiền hoặc x" class="w-1/2 p-2 border border-stone-300 rounded text-sm font-bold text-amber-700 outline-none focus:border-amber-500 bg-white val-e">
+                    <button onclick="this.parentElement.remove()" class="text-stone-400 hover:text-red-500 font-bold px-1">&times;</button>
+                </div>
+            </div>
+            <button onclick="addEqRow('e')" class="mt-3 text-sm text-amber-600 hover:text-amber-800 font-bold text-center border border-dashed border-amber-300 bg-amber-50/50 hover:bg-amber-100 p-2 rounded transition-colors">+ Thêm Vốn</button>
+        </div>
+
+    </div>
+
+    <button onclick="solveAdvancedEquation()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-black tracking-wide py-3 md:py-4 rounded-xl text-lg transition-transform transform active:scale-[0.98] shadow-md flex justify-center items-center">
+        <span class="mr-2">🚀</span> TÍNH TOÁN & TÌM X
+    </button>
+    
+    <div id="eq-result-box" class="mt-6 hidden animate-fade-in"></div>
+</div>
+
+<!-- EXERCISES CH1 -->
+<div class="border-t-2 border-dashed border-teal-200 pt-8 mt-12">
+    <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Tập Tự Luận (Chương 1)</h3>
+    
+    <!-- Bài 1 -->
+    <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+        <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 1: Phân loại đối tượng kế toán</h4>
+        <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded">Phân loại các khoản sau vào: (A) Tài sản, (L) Nợ phải trả, (E) Vốn CSH.<br>
+        1. Tiền mặt tại quỹ<br>2. Vay ngắn hạn ngân hàng<br>3. Lợi nhuận chưa phân phối<br>4. Máy móc thiết bị<br>5. Phải trả người bán</p>
+        <button onclick="document.getElementById('sol-ch1-1').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors">Xem / Ẩn Lời Giải</button>
+        <div id="sol-ch1-1" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800">
+            <strong>Đáp án:</strong><br>
+            1. Tiền mặt - <span class="text-blue-700 font-bold">(A) Tài sản</span><br>
+            2. Vay ngắn hạn - <span class="text-rose-600 font-bold">(L) Nợ phải trả</span><br>
+            3. LN chưa phân phối - <span class="text-amber-600 font-bold">(E) Vốn CSH</span><br>
+            4. Máy móc - <span class="text-blue-700 font-bold">(A) Tài sản dài hạn</span><br>
+            5. Phải trả người bán - <span class="text-rose-600 font-bold">(L) Nợ phải trả</span>
+        </div>
+    </div>
+
+    <!-- Bài 2 -->
+    <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+        <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 2: Phương trình Kế toán</h4>
+        <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded">Tại ngày 31/12/2024, Công ty ABC có tổng Tài sản là 500.000$, Vốn đầu tư của chủ sở hữu là 200.000$ và Lợi nhuận giữ lại là 50.000$. Tính tổng Nợ phải trả của công ty.</p>
+        <button onclick="document.getElementById('sol-ch1-2').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors">Xem / Ẩn Lời Giải</button>
+        <div id="sol-ch1-2" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800">
+            <strong>Phân tích:</strong><br>
+            - Tài sản (A) = 500.000$<br>
+            - Tổng Vốn CSH (E) = Vốn đầu tư + LN giữ lại = 200.000 + 50.000 = 250.000$<br>
+            <strong>Giải:</strong><br>
+            Áp dụng phương trình: A = L + E  =>  500.000 = L + 250.000<br>
+            => Nợ phải trả (L) = 500.000 - 250.000 = <strong>250.000$</strong>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 2 ================= -->
+<section id="ch2" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 2: Báo Cáo Tài Chính</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Đọc hiểu Bảng Cân đối kế toán (Tại một thời điểm) và Báo cáo Kết quả Kinh doanh (Cho một thời kỳ).</p>
+</div>
+
+<!-- Mindmap Chương 2 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto">
+    <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">🧠 Hệ Thống Báo Cáo Tài Chính Bắt Buộc</h3>
+    <div class="flex flex-col items-center min-w-[600px]">
+        <div class="mindmap-node bg-teal-50">BỘ BCTC HOÀN CHỈNH</div>
+        <div class="mindmap-line-v"></div>
+        <div class="relative w-full max-w-4xl">
+            <div class="mindmap-line-h left-[12.5%] w-[75%]"></div>
+            <div class="flex justify-between w-full relative">
+                <div class="flex flex-col items-center w-1/4 px-2">
+                    <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                    <div class="mindmap-node-sub w-full bg-blue-50 border-blue-400">Bảng CĐKT<br><span class="text-xs font-normal">(Balance Sheet)</span></div>
+                    <p class="text-[10px] text-center mt-2 text-stone-500">Tại 1 thời điểm. Cân bằng TS = NV.</p>
+                </div>
+                <div class="flex flex-col items-center w-1/4 px-2">
+                    <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                    <div class="mindmap-node-sub w-full bg-green-50 border-green-400">Báo cáo KQKD<br><span class="text-xs font-normal">(Income Statement)</span></div>
+                    <p class="text-[10px] text-center mt-2 text-stone-500">Cho 1 thời kỳ. Lãi/Lỗ = DT - CP.</p>
+                </div>
+                <div class="flex flex-col items-center w-1/4 px-2">
+                    <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                    <div class="mindmap-node-sub w-full bg-purple-50 border-purple-400">Báo cáo LCTT<br><span class="text-xs font-normal">(Cash Flows)</span></div>
+                    <p class="text-[10px] text-center mt-2 text-stone-500">Cho 1 thời kỳ. Dòng tiền Thực Thu/Chi.</p>
+                </div>
+                <div class="flex flex-col items-center w-1/4 px-2">
+                    <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                    <div class="mindmap-node-sub w-full bg-amber-50 border-amber-400">Thuyết minh<br><span class="text-xs font-normal">(Notes)</span></div>
+                    <p class="text-[10px] text-center mt-2 text-stone-500">Diễn giải chi tiết các số liệu ở 3 báo cáo kia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+    <!-- Notes -->
+    <div class="note-box shadow-sm">
+        <h3 class="font-bold text-amber-900 text-lg mb-2">📌 4 Trường hợp biến động Bảng CĐKT</h3>
+        <p class="text-sm text-amber-800 mb-3">Mọi nghiệp vụ kinh tế đều không làm mất đi tính cân bằng (Tổng TS = Tổng NV).</p>
+        <ul class="space-y-2 text-sm text-stone-800 font-medium">
+            <li class="flex items-center"><span class="w-6 text-center text-teal-600">1.</span> Tăng TS này, Giảm TS khác &rarr; Quy mô không đổi.</li>
+            <li class="flex items-center"><span class="w-6 text-center text-teal-600">2.</span> Tăng NV này, Giảm NV khác &rarr; Quy mô không đổi.</li>
+            <li class="flex items-center"><span class="w-6 text-center text-rose-600">3.</span> Cùng Tăng TS và Tăng NV &rarr; Quy mô TĂNG.</li>
+            <li class="flex items-center"><span class="w-6 text-center text-rose-600">4.</span> Cùng Giảm TS và Giảm NV &rarr; Quy mô GIẢM.</li>
+        </ul>
+    </div>
+    
+    <!-- Ví dụ biến động BCDKT -->
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-lg shadow-sm">
+        <h4 class="font-bold text-blue-800 mb-2">💡 Ví dụ Biến động CĐKT</h4>
+        <p class="text-sm text-stone-700"><em>Nghiệp vụ:</em> Vay ngắn hạn ngân hàng 500tr nhập quỹ Tiền mặt.</p>
+        <ul class="list-disc ml-5 mt-2 text-sm text-stone-700">
+            <li><strong>Phân tích:</strong> Vay NH làm "Nợ phải trả" (Nguồn vốn) TĂNG 500. Nhập quỹ làm "Tiền mặt" (Tài sản) TĂNG 500.</li>
+            <li><strong>Kết luận:</strong> Thuộc trường hợp 3 (Cùng tăng TS, tăng NV). Tổng TS và Tổng NV cùng tăng thêm 500tr. Bảng CĐKT vẫn cân bằng.</li>
+        </ul>
+    </div>
+</div>
+
+
+
+    <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-stone-200 mb-8">
+        <h3 class="text-xl font-bold text-slate-800 mb-2">📊 1. Tình Trạng Tài Chính (Financial Position) & Bảng CĐKT</h3>
+        <p class="text-sm text-stone-600 mb-6">Tình trạng tài chính của một doanh nghiệp được phản ánh trạng thái tĩnh thông qua Bảng cân đối kế toán (Balance Sheet) dựa trên 3 yếu tố nền tảng cấu thành.</p>
+        
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="group h-40 cursor-pointer [perspective:1000px]">
+        <div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 [backface-visibility:hidden] bg-blue-50 border border-blue-200 rounded-xl p-4 flex flex-col justify-between shadow-sm">
+                <div class="flex justify-between items-start">
+                    <span class="text-2xl">📦</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-200 text-blue-800 px-2 py-0.5 rounded">Yếu tố 1</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-blue-900 text-base">Tài Sản (Assets)</h4>
+                    <p class="text-xs text-blue-700 mt-1">Nguồn lực kinh tế do doanh nghiệp kiểm soát...</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-blue-600 text-white rounded-xl p-4 flex flex-col justify-between shadow-md">
+                <p class="text-xs leading-relaxed">Là nguồn lực kinh tế do doanh nghiệp kiểm soát, có thể xác định được giá trị một cách đáng tin cậy và chắc chắn mang lại lợi ích kinh tế trong tương lai.</p>
+                <span class="text-[10px] font-mono opacity-75">Ví dụ: Tiền mặt, Máy móc, Bản quyền</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="group h-40 cursor-pointer [perspective:1000px]">
+        <div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 [backface-visibility:hidden] bg-rose-50 border border-rose-200 rounded-xl p-4 flex flex-col justify-between shadow-sm">
+                <div class="flex justify-between items-start">
+                    <span class="text-2xl">🤝</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider bg-rose-200 text-rose-800 px-2 py-0.5 rounded">Yếu tố 2</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-rose-900 text-base">Nợ Phải Trả (Liabilities)</h4>
+                    <p class="text-xs text-rose-700 mt-1">Nghĩa vụ hiện tại của doanh nghiệp...</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-rose-600 text-white rounded-xl p-4 flex flex-col justify-between shadow-md">
+                <p class="text-xs leading-relaxed">Nghĩa vụ hiện tại của doanh nghiệp phát sinh từ các giao dịch và sự kiện đã qua, việc thanh toán nghĩa vụ dẫn đến sự sụt giảm nguồn lực lợi ích kinh tế.</p>
+                <span class="text-[10px] font-mono opacity-75">Ví dụ: Vay ngân hàng, Phải trả người bán</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="group h-40 cursor-pointer [perspective:1000px]">
+        <div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 [backface-visibility:hidden] bg-amber-50 border border-amber-200 rounded-xl p-4 flex flex-col justify-between shadow-sm">
+                <div class="flex justify-between items-start">
+                    <span class="text-2xl">👑</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-200 text-amber-800 px-2 py-0.5 rounded">Yếu tố 3</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-amber-900 text-base">Vốn CSH (Equity)</h4>
+                    <p class="text-xs text-amber-700 mt-1">Giá trị tài sản thuần còn lại...</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-amber-600 text-white rounded-xl p-4 flex flex-col justify-between shadow-md">
+                <p class="text-xs leading-relaxed">Là giá trị tài sản thuần của doanh nghiệp, bằng tổng giá trị Tài sản trừ đi tổng Nợ phải trả. Thuộc quyền sở hữu của các nhà đầu tư.</p>
+                <span class="text-[10px] font-mono opacity-75">Công thức: Equity = Assets - Liabilities</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+            <div class="note-box shadow-sm border-l-4 border-amber-500 bg-amber-50/60 p-5 rounded-r-xl">
+                <h4 class="font-bold text-amber-900 text-base mb-2">📌 Quy Luật 4 Trường Hợp Biến Động Định Khoản</h4>
+                <ul class="space-y-2 text-sm text-stone-800 font-medium">
+                    <li><span class="text-teal-600 font-bold">Trường hợp 1:</span> Tăng Tài sản này, Giảm Tài sản khác &rarr; Quy mô tổng tài sản Không đổi.</li>
+                    <li><span class="text-teal-600 font-bold">Trường hợp 2:</span> Tăng Nguồn vốn này, Giảm Nguồn vốn khác &rarr; Quy mô tổng nguồn vốn Không đổi.</li>
+                    <li><span class="text-rose-600 font-bold">Trường hợp 3:</span> Cùng Tăng cả Tài sản và Nguồn vốn &rarr; Quy mô Bảng CĐKT Tăng lên.</li>
+                    <li><span class="text-rose-600 font-bold">Trường hợp 4:</span> Cùng Giảm cả Tài sản và Nguồn vốn &rarr; Quy mô Bảng CĐKT Giảm xuống.</li>
+                </ul>
+            </div>
+            
+            <div class="bg-blue-50 border border-blue-200 p-5 rounded-xl flex flex-col justify-center shadow-sm">
+                <h4 class="font-bold text-blue-800 text-base mb-1">💡 Ví dụ Thực tế về Biến động tính cân bằng</h4>
+                <p class="text-sm text-stone-700"><em>N nghiệp vụ:</em> Doanh nghiệp vay ngắn hạn ngân hàng 500 triệu đồng để thanh toán nợ cũ cho người bán hàng.</p>
+                <p class="text-xs text-stone-600 mt-2 leading-relaxed"><strong>Phân tích:</strong> Vay ngắn hạn tăng (Nguồn vốn tăng 500), đồng thời Phải trả người bán giảm (Nguồn vốn giảm 500). Đây là <strong>Trường hợp 2</strong>. Quy mô tổng tài sản không đổi, bảng cân đối kế toán giữ vững vị thế cân bằng tuyệt đối.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-stone-200 mb-8">
+        <h3 class="text-xl font-bold text-slate-800 mb-2">🌊 2. Báo Cáo Lưu Chuyển Tiền Tệ (Cash Flows Statement)</h3>
+        <p class="text-sm text-stone-600 mb-6">Báo cáo phản ánh dòng tiền thu vào (Cash inflows) và chi ra (Cash outflows) trong một kỳ kế toán, giúp nhà quản trị đánh giá chính xác khả năng tạo tiền thực tế của đơn vị kinh doanh.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="border border-stone-200 rounded-xl p-4 bg-stone-50/80 hover:border-teal-400 transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="p-1.5 bg-teal-100 text-teal-800 rounded font-bold text-xs font-mono">1</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">HĐ Kinh Doanh<br><span class="text-xs font-normal text-stone-500">(Operating Activities)</span></h4>
+                </div>
+                <p class="text-xs text-stone-600 leading-relaxed">Là các dòng tiền thu/chi liên quan trực tiếp đến hoạt động tạo doanh thu chính của doanh nghiệp.</p>
+                <span class="block text-[11px] text-teal-700 font-semibold mt-2">VD: Thu tiền bán hàng, trả lương nhân viên, nộp thuế...</span>
+            </div>
+
+            <div class="border border-stone-200 rounded-xl p-4 bg-stone-50/80 hover:border-teal-400 transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="p-1.5 bg-teal-100 text-teal-800 rounded font-bold text-xs font-mono">2</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">HĐ Đầu Tư<br><span class="text-xs font-normal text-stone-500">(Investing Activities)</span></h4>
+                </div>
+                <p class="text-xs text-stone-600 leading-relaxed">Dòng tiền thu/chi liên quan đến việc mua sắm, thanh lý các tài sản dài hạn và các khoản đầu tư tài chính ngoài khối.</p>
+                <span class="block text-[11px] text-teal-700 font-semibold mt-2">VD: Mua xe tải, xây nhà kho, bán chứng khoán đầu tư...</span>
+            </div>
+
+            <div class="border border-stone-200 rounded-xl p-4 bg-stone-50/80 hover:border-teal-400 transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="p-1.5 bg-teal-100 text-teal-800 rounded font-bold text-xs font-mono">3</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">HĐ Tài Trợ<br><span class="text-xs font-normal text-stone-500">(Financing Activities)</span></h4>
+                </div>
+                <p class="text-xs text-stone-600 leading-relaxed">Dòng tiền phát sinh từ các hoạt động làm thay đổi quy mô và kết cấu của Vốn chủ sở hữu và Vốn vay.</p>
+                <span class="block text-[11px] text-teal-700 font-semibold mt-2">VD: Phát hành cổ phiếu, nhận vốn góp, trả nợ gốc vay, chia cổ tức...</span>
+            </div>
+        </div>
+
+        <div class="bg-teal-50 border border-teal-200 rounded-xl p-4 text-center">
+            <span class="text-xs font-bold text-teal-700 uppercase tracking-widest block mb-1">Công thức quản trị dòng tiền</span>
+            <div class="text-lg font-extrabold text-teal-900">
+                Dòng tiền thuần = Dòng tiền thu vào - Dòng tiền chi ra
+            </div>
+            <div class="text-xs text-teal-600 font-mono mt-1">
+                (Net cash flows = Cash inflows - Cash outflows)
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-stone-200 mb-8">
+        <h3 class="text-xl font-bold text-slate-800 mb-2">📑 3. Thuyết Minh Báo Cáo Tài Chính (Notes of Financial Statements)</h3>
+        <p class="text-sm text-stone-600 mb-6">Thuyết minh là bộ phận không thể tách rời, dùng để phân tích chi tiết, cụ thể hóa các chỉ tiêu số liệu tổng hợp được trình bày trên Bảng CĐKT, Báo cáo KQKD và Báo cáo Lưu chuyển tiền tệ.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-stone-50 border border-stone-200 p-4 rounded-xl shadow-sm">
+                <div class="text-teal-600 font-extrabold text-lg mb-1">🧮 Phương pháp tính</div>
+                <h4 class="font-bold text-slate-800 text-sm mb-1">Diễn giải số liệu</h4>
+                <p class="text-xs text-stone-600 leading-relaxed">Minh hoạ chi tiết cách thức kế toán tính toán ra các số liệu tổng hợp, bảng biểu kê chi tiết từng nhóm hàng tồn kho, nợ phải thu.</p>
+            </div>
+            <div class="bg-stone-50 border border-stone-200 p-4 rounded-xl shadow-sm">
+                <div class="text-teal-600 font-extrabold text-lg mb-1">🛡️ Chính sách áp dụng</div>
+                <h4 class="font-bold text-slate-800 text-sm mb-1">Chính sách Kế toán</h4>
+                <p class="text-xs text-stone-600 leading-relaxed">Công khai chính sách áp dụng tại doanh nghiệp (Ví dụ: áp dụng Khấu hao đường thẳng, phương pháp tính giá xuất kho theo FIFO hay Bình quân gia quyền).</p>
+            </div>
+            <div class="bg-stone-50 border border-stone-200 p-4 rounded-xl shadow-sm">
+                <div class="text-teal-600 font-extrabold text-lg mb-1">🌍 Thông tin bổ sung</div>
+                <h4 class="font-bold text-slate-800 text-sm mb-1">Nguồn lực Phi tài chính</h4>
+                <p class="text-xs text-stone-600 leading-relaxed">Cung cấp thông tin phi tài chính quan trọng khác ảnh hưởng đến doanh nghiệp như cấu trúc nhân sự, rủi ro thị trường, cam kết tương lai.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Calculator: P&L -->
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 mb-8">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">🧮 Máy tính Báo cáo Kết quả Kinh doanh (P&L)</h3>
+    <div class="flex flex-col lg:flex-row gap-8">
+        <div class="flex-1 space-y-4">
+            <div class="flex justify-between items-center bg-stone-50 p-2 rounded">
+                <label class="text-sm font-bold text-stone-700">1. Doanh thu bán hàng (Sales)</label>
+                <input type="number" id="pnl-sales" value="10000" class="w-32 p-2 border rounded text-right outline-none focus:ring-2 focus:ring-teal-500" oninput="calcPnL()">
+            </div>
+            <div class="flex justify-between items-center bg-stone-50 p-2 rounded">
+                <label class="text-sm font-bold text-stone-700">2. Các khoản giảm trừ</label>
+                <input type="number" id="pnl-deduct" value="500" class="w-32 p-2 border rounded text-right outline-none text-red-600 focus:ring-2 focus:ring-teal-500" oninput="calcPnL()">
+            </div>
+            <div class="flex justify-between items-center bg-teal-50 p-2 rounded border border-teal-200 shadow-sm">
+                <label class="text-sm font-black text-teal-800">3. Doanh thu thuần (Net Sales)</label>
+                <span id="pnl-net-sales" class="font-bold text-teal-800">9500</span>
+            </div>
+            <div class="flex justify-between items-center bg-stone-50 p-2 rounded">
+                <label class="text-sm font-bold text-stone-700">4. Giá vốn hàng bán (COGS)</label>
+                <input type="number" id="pnl-cogs" value="4000" class="w-32 p-2 border rounded text-right outline-none text-red-600 focus:ring-2 focus:ring-teal-500" oninput="calcPnL()">
+            </div>
+            <div class="flex justify-between items-center bg-teal-100 p-2 rounded border border-teal-300 shadow-sm">
+                <label class="text-sm font-black text-teal-900">5. Lợi nhuận gộp (Gross Profit)</label>
+                <span id="pnl-gross" class="font-bold text-teal-900 text-lg">5500</span>
+            </div>
+        </div>
+        
+        <div class="flex-1 space-y-4">
+            <div class="flex justify-between items-center bg-stone-50 p-2 rounded">
+                <label class="text-sm font-bold text-stone-700">6. DT Tài chính + Thu nhập khác</label>
+                <input type="number" id="pnl-other-rev" value="200" class="w-32 p-2 border rounded text-right outline-none focus:ring-2 focus:ring-teal-500" oninput="calcPnL()">
+            </div>
+            <div class="flex justify-between items-center bg-stone-50 p-2 rounded">
+                <label class="text-sm font-bold text-stone-700">7. Chi phí (TC, Bán hàng, QLDN, Khác)</label>
+                <input type="number" id="pnl-exp" value="2500" class="w-32 p-2 border rounded text-right outline-none text-red-600 focus:ring-2 focus:ring-teal-500" oninput="calcPnL()">
+            </div>
+            <div class="flex justify-between items-center bg-amber-50 p-2 rounded border border-amber-200 shadow-sm">
+                <label class="text-sm font-black text-amber-900">8. Lợi nhuận trước thuế</label>
+                <span id="pnl-ebt" class="font-bold text-amber-900 text-lg">3200</span>
+            </div>
+            <div class="flex justify-between items-center bg-stone-50 p-2 rounded">
+                <label class="text-sm font-bold text-stone-700">9. Chi phí thuế TNDN (VD: 20%)</label>
+                <input type="number" id="pnl-tax" value="640" class="w-32 p-2 border rounded text-right outline-none text-red-600 focus:ring-2 focus:ring-teal-500" oninput="calcPnL()">
+            </div>
+            <div class="flex justify-between items-center bg-green-100 p-3 rounded-lg border-2 border-green-400 shadow-inner">
+                <label class="text-base font-black text-green-900 uppercase">10. Lợi nhuận sau thuế (Net Profit)</label>
+                <span id="pnl-net-profit" class="font-black text-green-700 text-2xl">2560</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EXERCISES CH2 -->
+<div class="border-t-2 border-dashed border-teal-200 pt-8 mt-12">
+    <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Tập Tự Luận (Chương 2)</h3>
+    
+    <!-- Bài 1 -->
+    <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+        <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 1: Xác định chiều hướng biến động Bảng CĐKT</h4>
+        <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded">Cho các nghiệp vụ sau, hãy cho biết quy mô Bảng CĐKT (Tổng TS) sẽ Tăng, Giảm hay Không đổi?<br>
+        1. Rút tiền gửi ngân hàng nhập quỹ tiền mặt (10 triệu).<br>
+        2. Mua nợ hàng hóa của người bán (50 triệu).<br>
+        3. Dùng tiền gửi ngân hàng trả nợ người bán (20 triệu).</p>
+        <button onclick="document.getElementById('sol-ch4-1').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors">Xem / Ẩn Lời Giải</button>
+        <div id="sol-ch4-1" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800">
+            <strong>Đáp án:</strong><br>
+            1. Tăng Tiền mặt (TS), Giảm TGNH (TS) &rarr; Quy mô <strong>Không đổi</strong>.<br>
+            2. Tăng Hàng hóa (TS), Tăng Phải trả người bán (NV) &rarr; Quy mô <strong>Tăng</strong>.<br>
+            3. Giảm TGNH (TS), Giảm Phải trả người bán (NV) &rarr; Quy mô <strong>Giảm</strong>.
+        </div>
+    </div>
+
+    <!-- Bài 2-->
+    <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 2: Phân loại dòng tiền trên Báo cáo LCTT</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded">Hãy xếp các nghiệp vụ phát sinh tiền sau đây vào đúng 3 nhóm hoạt động của Báo cáo lưu chuyển tiền tệ:<br>
+            1. Thu tiền bán hàng hóa cho khách hàng: 150 triệu.<br>
+            2. Chi tiền mặt mua sắm một hệ thống máy tính văn phòng: 45 triệu.<br>
+            3. Nhận tiền góp vốn điều lệ từ thành viên liên doanh: 800 triệu.<br>
+            4. Chi tiền trả lãi vay và nợ gốc vay ngân hàng: 60 triệu.</p>
+            <button onclick="document.getElementById('sol-ch4-2').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch4-2" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Phân tích phân loại dòng tiền:</strong><br>
+                1. Thu tiền bán hàng: Dòng tiền vào thuộc <strong>Hoạt động kinh doanh (Operating)</strong>.<br>
+                2. Chi tiền mua máy tính văn phòng (Tài sản cố định): Dòng tiền ra thuộc <strong>Hoạt động đầu tư (Investing)</strong>.<br>
+                3. Nhận tiền góp vốn điều lệ: Dòng tiền vào thuộc <strong>Hoạt động tài trợ / Hoạt động tài chính (Financing)</strong>.<br>
+                4. Chi tiền trả nợ gốc vay: Thuộc <strong>Hoạt động tài trợ (Financing)</strong> <em>(Lưu ý: Tiền trả phần lãi vay có thể xếp vào HĐ kinh doanh hoặc HĐ tài chính tuỳ thuộc chính sách áp dụng hạch toán của doanh nghiệp)</em>.
+            </div>
+        </div>
+
+        <!-- Bài 3 -->
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 3: Tính toán Lợi nhuận giữ lại từ Bảng CĐKT</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded">Đầu kỳ, doanh nghiệp có tổng Tài sản là 900 triệu đồng và Nợ phải trả là 400 triệu đồng. Trong kỳ kinh doanh, doanh nghiệp tạo ra tổng Doanh thu thuần là 300 triệu đồng, tổng Chi phí phát sinh là 180 triệu đồng và tiến hành chia cổ tức cho các chủ sở hữu là 40 triệu đồng. Hãy xác định giá trị Vốn chủ sở hữu của doanh nghiệp tại thời điểm cuối kỳ.</p>
+            <button onclick="document.getElementById('sol-ch4-3').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch4-3" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Các bước giải chi tiết:</strong><br>
+                - <strong>Bước 1:</strong> Tính Vốn chủ sở hữu (Equity) đầu kỳ:<br>
+                &nbsp;&nbsp; E_{ĐK} = A_{ĐK} - L_{ĐK} = 900 - 400 = 500 triệu đồng.<br>
+                - <strong>Bước 2:</strong> Tính Lợi nhuận thuần tạo ra trong kỳ kinh doanh:<br>
+                &nbsp;&nbsp; Lợi nhuận = Doanh thu - Chi phí = 300 - 180 = 120 triệu đồng.<br>
+                - <strong>Bước 3:</strong> Tính biến động tăng ròng của Lợi nhuận giữ lại sau khi đã phân phối chia cổ tức:<br>
+                &nbsp;&nbsp; Lợi nhuận giữ lại tăng thêm = 120 - 40 = 80 triệu đồng.<br>
+                - <strong>Bước 4:</strong> Xác định tổng Vốn chủ sở hữu thời điểm cuối kỳ:<br>
+                &nbsp;&nbsp; E_{CK} = E_{ĐK} + Biến động tăng ròng = 500 + 80 = 580 <strong>triệu đồng.</strong>
+            </div>
+        </div>
+    
+
+    <!-- Bài 4-->
+    <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+        <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 4: Lập Báo cáo Kết quả Kinh doanh cơ bản</h4>
+        <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded">Có dữ liệu kinh doanh (đơn vị: triệu VNĐ): Doanh thu bán hàng (500), Chiết khấu thương mại (20), Giá vốn (300), Chi phí bán hàng (40), Chi phí QLDN (60). Hãy tính Lợi nhuận gộp và Lợi nhuận thuần từ HĐKD theo đúng thứ tự các bước.</p>
+        <button onclick="document.getElementById('sol-ch4-4').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors">Xem / Ẩn Lời Giải</button>
+        <div id="sol-ch4-4" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800">
+            <strong>Giải:</strong><br>
+            - Bước 1: Doanh thu thuần = 500 (Bán hàng) - 20 (Giảm trừ) = <strong>480</strong><br>
+            - Bước 2: Lợi nhuận gộp = 480 (DT Thuần) - 300 (Giá vốn) = <strong>180</strong><br>
+            - Bước 3: LN Thuần từ HĐKD = 180 (LN Gộp) - 40 (CP BH) - 60 (CP QLDN) = <strong>80</strong>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 3 ================= -->
+<section id="ch3" class="tab-content hidden">
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Tài Khoản & Ghi Sổ Kép</h2>
+        <p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Nắm lòng quy tắc Nợ/Có cho 5 loại tài khoản cơ bản. Hiểu cấu trúc tài khoản chữ T và định khoản chuẩn xác các nghiệp vụ kinh tế.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="group h-36 cursor-pointer [perspective:1000px]">
+            <div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div class="absolute inset-0 [backface-visibility:hidden] bg-teal-50 border border-teal-200 rounded-xl p-5 flex flex-col justify-center items-center shadow-sm text-center">
+                    <span class="text-3xl mb-2">📖</span>
+                    <h4 class="font-bold text-teal-900 text-lg">Tài Khoản Kế Toán Là Gì?</h4>
+                    <span class="text-[10px] bg-teal-200 text-teal-800 px-2 py-0.5 rounded mt-2">Rẽ chuột để lật</span>
+                </div>
+                <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-teal-600 text-white rounded-xl p-5 flex flex-col justify-center shadow-md">
+                    <p class="text-sm leading-relaxed text-center">Là công cụ ghi chép sự <strong>gia tăng</strong> và <strong>sụt giảm</strong> của một Tài sản, Nợ phải trả, Vốn CSH, Doanh thu hoặc Chi phí cụ thể.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm flex items-center justify-center">
+            <div class="w-full">
+                <h4 class="font-bold text-slate-800 text-base mb-3 text-center border-b border-stone-100 pb-2">Dạng cơ bản: Tài Khoản Chữ T (T-Account)</h4>
+                <div class="flex justify-center mt-2">
+                    <div class="text-center w-full max-w-[250px] relative">
+                        <div class="border-b-[3px] border-slate-800 font-extrabold text-slate-800 pb-1 text-lg">Tên Tài Khoản</div>
+                        <div class="absolute top-8 bottom-[-10px] left-1/2 w-[3px] bg-slate-800 transform -translate-x-1/2"></div>
+                        <div class="flex justify-between mt-2 text-sm font-bold">
+                            <div class="w-1/2 text-teal-700 pr-4 text-right">BÊN NỢ<br><span class="text-xs font-normal text-stone-500">(Debit)</span></div>
+                            <div class="w-1/2 text-rose-700 pl-4 text-left">BÊN CÓ<br><span class="text-xs font-normal text-stone-500">(Credit)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto flex flex-col justify-center items-center">
+        <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">🧠 Sơ Đồ Hệ Thống Tài Khoản (Theo Thông tư 200)</h3>
+        <div class="flex flex-col items-center min-w-[700px]">
+            <div class="mindmap-node bg-teal-50 w-full max-w-sm mb-4">MẸO NHỚ ĐẦU TÀI KHOẢN<br><span class="text-sm font-normal">Tài sản & Chi phí (Bên Trái) | Nguồn vốn & DT (Bên Phải)</span></div>
+            <div class="w-full flex justify-center gap-6">
+                <div class="bg-stone-50 border border-stone-200 rounded-xl p-4 w-1/2 shadow-sm">
+                    <div class="text-center font-bold text-teal-700 mb-3 border-b border-stone-200 pb-2">NHÓM TĂNG BÊN NỢ (Dư Nợ)</div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="bg-blue-600 text-white px-3 py-1 rounded font-bold w-12 text-center">1, 2</div> <span class="text-sm font-semibold text-slate-800">= TÀI SẢN (Tiền, Hàng, TSCĐ...)</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="bg-orange-500 text-white px-3 py-1 rounded font-bold w-12 text-center">6, 8</div> <span class="text-sm font-semibold text-slate-800">= CHI PHÍ (NVL, Lương, Khấu hao...)</span>
+                    </div>
+                </div>
+                <div class="bg-stone-50 border border-stone-200 rounded-xl p-4 w-1/2 shadow-sm">
+                    <div class="text-center font-bold text-rose-700 mb-3 border-b border-stone-200 pb-2">NHÓM TĂNG BÊN CÓ (Dư Có)</div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="bg-rose-600 text-white px-3 py-1 rounded font-bold w-12 text-center">3, 4</div> <span class="text-sm font-semibold text-slate-800">= NGUỒN VỐN (Nợ PT, Vốn CSH)</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="bg-green-600 text-white px-3 py-1 rounded font-bold w-12 text-center">5, 7</div> <span class="text-sm font-semibold text-slate-800">= DOANH THU, THU NHẬP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-purple-100 text-purple-900 border border-purple-300 rounded px-6 py-2 mt-4 font-bold text-sm">
+                Loại 9 = Xác định KQKD (Tài khoản trung gian, Không có số dư)
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 overflow-x-auto">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">⚖️ Quy tắc Ghi Nợ / Có (Debit / Credit)</h3>
+            <table class="w-full text-sm text-center border-collapse min-w-[400px]">
+                <thead class="bg-slate-800 text-white">
+                    <tr><th class="p-2 border border-slate-700">Loại Tài Khoản</th><th class="p-2 border border-slate-700 text-teal-300">Bên Nợ (Debit)</th><th class="p-2 border border-slate-700 text-rose-300">Bên Có (Credit)</th><th class="p-2 border border-slate-700">Số Dư</th></tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-teal-50 font-bold"><td class="p-2 border border-stone-300 text-left">Tài sản (Assets)</td><td class="p-2 border border-stone-300 text-teal-700">+ Tăng</td><td class="p-2 border border-stone-300 text-rose-700">- Giảm</td><td class="p-2 border border-stone-300">Dư Nợ</td></tr>
+                    <tr class="bg-teal-50 font-bold"><td class="p-2 border border-stone-300 text-left">Chi phí (Expenses)</td><td class="p-2 border border-stone-300 text-teal-700">+ Tăng</td><td class="p-2 border border-stone-300 text-rose-700">- Giảm</td><td class="p-2 border border-stone-300 font-normal italic text-stone-500">Không có</td></tr>
+                    <tr class="bg-rose-50 font-bold"><td class="p-2 border border-stone-300 text-left">Nợ Phải trả (Liab.)</td><td class="p-2 border border-stone-300 text-teal-700">- Giảm</td><td class="p-2 border border-stone-300 text-rose-700">+ Tăng</td><td class="p-2 border border-stone-300">Dư Có</td></tr>
+                    <tr class="bg-rose-50 font-bold"><td class="p-2 border border-stone-300 text-left">Vốn CSH (Equity)</td><td class="p-2 border border-stone-300 text-teal-700">- Giảm</td><td class="p-2 border border-stone-300 text-rose-700">+ Tăng</td><td class="p-2 border border-stone-300">Dư Có</td></tr>
+                    <tr class="bg-rose-50 font-bold"><td class="p-2 border border-stone-300 text-left">Doanh thu (Rev.)</td><td class="p-2 border border-stone-300 text-teal-700">- Giảm</td><td class="p-2 border border-stone-300 text-rose-700">+ Tăng</td><td class="p-2 border border-stone-300 font-normal italic text-stone-500">Không có</td></tr>
+                </tbody>
+            </table>
+            <div class="mt-4 p-3 bg-amber-50 border-l-4 border-amber-500 text-xs text-amber-900 rounded">
+                ⚠️ <strong>Bẫy Lưỡng Tính:</strong> TK Phải thu KH (131) và Phải trả NB (331) có thể có Dư Nợ HOẶC Dư Có.<br>
+                ⚠️ <strong>Bẫy TK Điều Chỉnh:</strong> Hao mòn TSCĐ (214) là Tài sản nhưng kết cấu ngược (Tăng ghi Có, Dư Có).
+            </div>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-lg shadow-sm flex flex-col justify-center">
+            <h4 class="font-bold text-blue-800 mb-4">💡 Ví dụ Định khoản Ghi sổ kép</h4>
+            <p class="text-sm text-stone-700 font-semibold mb-2"><em>Nghiệp vụ:</em> Thanh toán tiền lương cho nhân viên bằng chuyển khoản 50 triệu.</p>
+            <ul class="list-none space-y-3 text-sm text-stone-800">
+                <li class="bg-white p-3 rounded border border-blue-200">
+                    <strong>B1. Xác định TK ảnh hưởng:</strong> Tiền gửi NH (TK 112) và Phải trả người lao động (TK 334).
+                </li>
+                <li class="bg-white p-3 rounded border border-blue-200">
+                    <strong>B2. Xác định chiều hướng:</strong><br>
+                    - Trả lương -> Nợ phải trả (334) GIẢM -> Ghi <strong>NỢ</strong>.<br>
+                    - Rút tiền -> Tài sản (112) GIẢM -> Ghi <strong>CÓ</strong>.
+                </li>
+                <li class="bg-white p-3 rounded border border-blue-200 font-mono text-base font-bold bg-blue-100">
+                    <span class="text-teal-700">Nợ TK 334: 50.000.000</span><br>
+                    <span class="text-rose-700 ml-6">Có TK 112: 50.000.000</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-stone-200 mb-8">
+        <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-3 flex items-center"><span class="text-2xl mr-2">🔗</span> Phương Trình Kế Toán Mở Rộng</h3>
+        <p class="text-sm text-stone-600 mb-6">Mọi nghiệp vụ kinh tế ghi sổ kép phải luôn đảm bảo sự cân bằng của phương trình này. Trong thực hành, tổng số tiền bên <strong class="text-teal-700">∑ Nợ</strong> luôn phải bằng tổng số tiền bên <strong class="text-rose-700">∑ Có</strong>.</p>
+        
+        <div class="bg-stone-50 border-2 border-stone-200 rounded-xl p-4 md:p-6 text-center shadow-inner overflow-x-auto">
+            <div class="text-sm md:text-xl font-black text-slate-800 tracking-wide flex flex-wrap justify-center items-center gap-2 md:gap-3 min-w-max">
+                <span class="text-blue-700 bg-blue-100 px-3 py-1.5 rounded">TÀI SẢN</span> 
+                <span>=</span> 
+                <span class="text-rose-600 bg-rose-100 px-3 py-1.5 rounded">NỢ PHẢI TRẢ</span> 
+                <span>+</span> 
+                <span class="text-amber-600 bg-amber-100 px-3 py-1.5 rounded">VỐN CSH</span> 
+                <span>+</span>
+                <span class="text-stone-700 bg-stone-200 px-3 py-1.5 rounded border border-stone-300 shadow-sm">
+                    (<span class="text-green-700">DOANH THU</span> - <span class="text-purple-700">CHI PHÍ</span>)
+                </span>
+            </div>
+        </div>
+        <div class="text-center mt-3 text-xs md:text-sm text-stone-500 font-mono italic">
+            Assets = Liabilities + Equity + (Revenues - Expenses)
+        </div>
+    </div>
+
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 mb-8">
+        <h3 class="text-xl font-bold text-slate-800 mb-6 text-center">Tài Khoản Chữ T (T-Account) - Máy tính Số Dư</h3>
+        
+        <div class="max-w-md mx-auto relative">
+            <div class="border-b-4 border-slate-800 pb-2 mb-4 text-center text-lg font-black tracking-widest text-slate-800 uppercase">
+                TÊN TÀI KHOẢN (VD: TIỀN MẶT)
+            </div>
+            <div class="absolute top-10 bottom-0 left-1/2 w-[3px] bg-slate-800 transform -translate-x-1/2 z-0"></div>
+            
+            <div class="flex justify-between relative z-10">
+                <div class="w-[45%] pr-4 text-right bg-white py-2">
+                    <h4 class="font-bold text-teal-700 text-xl mb-4 text-center">BÊN NỢ</h4>
+                    <div class="space-y-2">
+                        <input type="number" id="t-ob-dr" placeholder="Dư đầu kỳ..." class="w-full p-2 border-b-2 border-stone-300 focus:border-teal-500 outline-none text-right font-bold text-teal-800 bg-teal-50" oninput="calcTAcc()">
+                        <input type="number" id="t-ps1-dr" placeholder="Phát sinh..." class="w-full p-2 border-b border-stone-200 outline-none text-right" oninput="calcTAcc()">
+                        <input type="number" id="t-ps2-dr" placeholder="Phát sinh..." class="w-full p-2 border-b border-stone-200 outline-none text-right" oninput="calcTAcc()">
+                    </div>
+                </div>
+                <div class="w-[45%] pl-4 text-left bg-white py-2">
+                    <h4 class="font-bold text-rose-700 text-xl mb-4 text-center">BÊN CÓ</h4>
+                    <div class="space-y-2">
+                        <input type="number" id="t-ob-cr" placeholder="Dư đầu kỳ..." class="w-full p-2 border-b-2 border-stone-300 focus:border-rose-500 outline-none text-left font-bold text-rose-800 bg-rose-50" oninput="calcTAcc()">
+                        <input type="number" id="t-ps1-cr" placeholder="Phát sinh..." class="w-full p-2 border-b border-stone-200 outline-none text-left" oninput="calcTAcc()">
+                        <input type="number" id="t-ps2-cr" placeholder="Phát sinh..." class="w-full p-2 border-b border-stone-200 outline-none text-left" oninput="calcTAcc()">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 border-t-2 border-dashed border-stone-400 pt-4 flex justify-between">
+                <div class="w-[45%] text-right font-black text-teal-800 text-xl bg-white" id="t-cb-dr"></div>
+                <div class="w-[45%] text-left font-black text-rose-800 text-xl bg-white" id="t-cb-cr"></div>
+            </div>
+            <p class="text-center text-xs text-stone-500 mt-4">*VD: Tài sản dư Nợ = Dư Đầu kỳ Nợ + Tổng PS Tăng Nợ - Tổng PS Giảm Có.</p>
+        </div>
+    </div>
+
+    <div class="border-t-2 border-dashed border-teal-200 pt-8 mt-12">
+        <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Tập Tự Luận (Chương 3)</h3>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 1: Định khoản cơ bản</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Khách hàng trả nợ cho doanh nghiệp bằng chuyển khoản 100.000. Hãy xác định tài khoản bị ảnh hưởng, hướng biến động và định khoản (Ghi Nợ/Có).</p>
+            <button onclick="document.getElementById('sol-ch3-1').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch3-1" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Phân tích:</strong><br>
+                - Tiền gửi ngân hàng (Tài sản) TĂNG &rarr; Ghi NỢ.<br>
+                - Phải thu khách hàng (Tài sản) GIẢM &rarr; Ghi CÓ.<br>
+                <strong>Định khoản:</strong><br>
+                <span class="font-mono bg-white px-2 rounded">Nợ TK 112 (Tiền gửi NH): 100.000</span><br>
+                <span class="font-mono bg-white px-2 rounded ml-4">Có TK 131 (Phải thu KH): 100.000</span>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 2: Tính số dư chữ T</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Tài khoản Phải trả người bán (NV) có Dư đầu kỳ: 100. Trong kỳ phát sinh mua chịu hàng hóa (Ghi Có 200), trả nợ người bán bằng tiền mặt (Ghi Nợ 50). Tính Số dư cuối kỳ của TK này.</p>
+            <button onclick="document.getElementById('sol-ch3-2').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch3-2" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Giải:</strong><br>
+                Phải trả người bán là TK Nguồn vốn &rarr; Có số dư bên CÓ.<br>
+                Số dư cuối kỳ = Dư đầu kỳ (Có) + Tổng PS Tăng (Có) - Tổng PS Giảm (Nợ)<br>
+                SDCK = 100 + 200 - 50 = <strong>250 (Dư Có)</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 4 (PREMIUM) ================= -->
+<section id="ch4" class="tab-content hidden">
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 4: Phương Pháp Tính Giá (Measurement Method) <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
+        <p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Nắm vững các nhân tố ảnh hưởng đến tính giá, công thức tính Nguyên giá tài sản, khấu hao TSCĐ và các hệ thống theo dõi hàng tồn kho (KKTX & KKĐK).</p>
+    </div>
+
+    <div class="note-box shadow-sm mb-8 border-l-4 border-amber-500 bg-amber-50 p-6 rounded-xl">
+        <h3 class="font-bold text-amber-900 text-lg mb-2 flex items-center"><span class="text-2xl mr-2">⚖️</span> Các nhân tố ảnh hưởng đến Tính giá</h3>
+        <ul class="list-disc ml-5 text-sm text-stone-800 space-y-3">
+            <li><strong>Sự thay đổi của mặt bằng giá cả chung (Lạm phát hoặc Giảm phát):</strong> Khi sự thay đổi quá lớn, giá trị đồng tiền biến động mạnh, kế toán phải tuân thủ các quy định điều chỉnh giá của Nhà nước.</li>
+            <li><strong>Yêu cầu quản lý nội bộ:</strong> Áp dụng để giản đơn hóa thủ tục kế toán (VD: Sử dụng giá hạch toán/giá ước tính xuất kho hàng ngày) hoặc đáp ứng yêu cầu quản trị cụ thể cho từng đối tượng chi tiết.</li>
+        </ul>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto">
+        <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">🧠 Các Loại Giá Trị Kế Toán</h3>
+        <div class="flex flex-col items-center min-w-[600px]">
+            <div class="mindmap-node bg-teal-50">CÁC LOẠI GIÁ TRỊ (VALUATION)</div>
+            <div class="mindmap-line-v"></div>
+            <div class="relative w-full max-w-3xl">
+                <div class="mindmap-line-h left-[16.66%] w-[66.66%]"></div>
+                <div class="flex justify-between w-full relative">
+                    <div class="flex flex-col items-center w-1/3 px-2">
+                        <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                        <div class="mindmap-node-sub w-full bg-blue-50 border-blue-400">Giá Gốc<br>(Historical Cost)</div>
+                        <p class="text-xs text-center mt-2 text-stone-600">Giá mua ban đầu + Chi phí mang TS về trạng thái sẵn sàng.</p>
+                    </div>
+                    <div class="flex flex-col items-center w-1/3 px-2">
+                        <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                        <div class="mindmap-node-sub w-full bg-green-50 border-green-400">Giá trị hợp lý<br>(Fair Value)</div>
+                        <p class="text-xs text-center mt-2 text-stone-600">Giá thuận mua vừa bán trên thị trường đang hoạt động.</p>
+                    </div>
+                    <div class="flex flex-col items-center w-1/3 px-2">
+                        <div class="mindmap-line-v mt-[-0.75rem]"></div>
+                        <div class="mindmap-node-sub w-full bg-purple-50 border-purple-400">Giá trị thuần (NRV)</div>
+                        <p class="text-xs text-center mt-2 text-stone-600">Giá bán ước tính trừ (-) đi chi phí ước tính để bán.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+            <h3 class="text-lg font-bold text-slate-800 mb-2">🛒 Tính Nguyên Giá TSCĐ</h3>
+            <p class="text-xs text-stone-500 mb-4 font-mono">Nguyên giá = Giá mua + Thuế không hoàn lại + CP trực tiếp - Chiết khấu</p>
+            <div class="space-y-3 bg-stone-50 p-4 rounded-lg">
+                <div class="flex justify-between items-center">
+                    <label class="text-sm font-semibold">Giá mua (Purchase Price)</label>
+                    <input type="number" id="acq-price" value="1000" class="w-24 p-1 border rounded text-right focus:ring-2 outline-none" oninput="calcAcq()">
+                </div>
+                <div class="flex justify-between items-center">
+                    <label class="text-sm font-semibold">Thuế KHÔNG hoàn lại (+)</label>
+                    <input type="number" id="acq-tax" value="100" class="w-24 p-1 border rounded text-right focus:ring-2 outline-none" oninput="calcAcq()">
+                </div>
+                <div class="flex justify-between items-center">
+                    <label class="text-sm font-semibold">Chi phí trực tiếp liên quan (+)</label>
+                    <input type="number" id="acq-freight" value="50" class="w-24 p-1 border rounded text-right focus:ring-2 outline-none" oninput="calcAcq()">
+                </div>
+                <div class="flex justify-between items-center">
+                    <label class="text-sm font-semibold text-rose-600">Chiết khấu thương mại (-)</label>
+                    <input type="number" id="acq-disc" value="20" class="w-24 p-1 border rounded text-right text-rose-600 focus:ring-2 outline-none" oninput="calcAcq()">
+                </div>
+                <div class="border-t border-stone-300 pt-3 flex justify-between items-center font-black text-lg text-teal-800">
+                    <span>NGUYÊN GIÁ:</span>
+                    <span id="acq-result">1130</span>
+                </div>
+            </div>
+            <div class="text-[11px] text-stone-600 mt-3 p-2 bg-blue-50 border border-blue-100 rounded">
+                <strong class="text-blue-800">Lưu ý cực kỳ quan trọng:</strong><br>
+                - Thuế không hoàn lại bao gồm: Thuế nhập khẩu, Thuế TTĐB.<br>
+                - <strong>KHÔNG bao gồm</strong> Thuế GTGT được khấu trừ.<br>
+                - <strong>KHÔNG trừ</strong> Chiết khấu thanh toán (Khoản này đưa vào doanh thu tài chính TK 515).
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">📉 Khấu hao đường thẳng (Straight-Line)</h3>
+            <div class="space-y-3 bg-stone-50 p-4 rounded-lg">
+                <div class="flex justify-between items-center">
+                    <label class="text-sm font-semibold">Nguyên giá (Acquisition Cost)</label>
+                    <input type="number" id="dep-cost" value="1130" class="w-24 p-1 border rounded text-right focus:ring-2 outline-none" oninput="calcDep()">
+                </div>
+                <div class="flex justify-between items-center">
+                    <label class="text-sm font-semibold">Thời gian sử dụng (Năm)</label>
+                    <input type="number" id="dep-years" value="5" class="w-24 p-1 border rounded text-right focus:ring-2 outline-none" oninput="calcDep()">
+                </div>
+                <div class="flex justify-between items-center">
+                    <label class="text-sm font-semibold">Năm muốn tính giá trị còn lại</label>
+                    <input type="number" id="dep-current-year" value="2" class="w-24 p-1 border rounded text-right focus:ring-2 outline-none" oninput="calcDep()">
+                </div>
+                
+                <div class="border-t border-stone-300 pt-3 space-y-2">
+                    <div class="flex justify-between font-bold text-slate-700">
+                        <span>Mức khấu hao 1 năm:</span>
+                        <span id="dep-annual">226</span>
+                    </div>
+                    <div class="flex justify-between font-black text-lg text-rose-700">
+                        <span>GIÁ TRỊ CÒN LẠI:</span>
+                        <span id="dep-carrying">678</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-stone-500 mt-2 italic">*Giá trị còn lại = Nguyên giá - Khấu hao lũy kế.</p>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto">
+        <h3 class="text-lg font-bold text-slate-800 mb-4">📦 Tính giá xuất Hàng tồn kho (Inventory Systems)</h3>
+        
+        <table class="w-full text-sm text-left border-collapse mb-6">
+            <thead class="bg-slate-100 text-slate-800">
+                <tr>
+                    <th class="p-3 border border-stone-300 w-1/4">Hệ thống</th>
+                    <th class="p-3 border border-stone-300">Đặc điểm</th>
+                    <th class="p-3 border border-stone-300">Công thức trọng tâm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-3 border border-stone-300 font-bold text-teal-800">Kê khai thường xuyên<br><span class="text-xs font-normal text-stone-500">(Perpetual System)</span></td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Theo dõi liên tục, thường xuyên từng lần nhập xuất hàng hóa trên sổ sách. Ghi nhận giá trị ngay lúc xuất.</td>
+                    <td class="p-3 border border-stone-300 bg-teal-50 font-mono text-teal-900 font-bold">
+                        Tồn Cuối Kỳ = Tồn Đầu Kỳ + Nhập - Xuất
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p-3 border border-stone-300 font-bold text-rose-800">Kiểm kê định kỳ<br><span class="text-xs font-normal text-stone-500">(Periodic System)</span></td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Không theo dõi xuất kho liên tục. Cuối kỳ phải đếm thực tế trong kho còn bao nhiêu, từ đó mới tính ngược ra lượng đã xuất bán.</td>
+                    <td class="p-3 border border-stone-300 bg-rose-50 font-mono text-rose-900 font-bold">
+                        Giá trị Xuất = Tồn Đầu Kỳ + Nhập - Tồn Cuối Kỳ (Đếm thực tế)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h4 class="font-bold text-slate-800 text-base mb-3 border-t border-stone-200 pt-4">🔄 Các phương pháp tính giá xuất kho (Cost Flow Assumptions)</h4>
+        <div class="space-y-4 ml-2 mt-4">
+            <div class="flex items-start">
+                <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0 mt-0.5">1</div>
+                <div class="ml-4 border-b border-stone-100 pb-3 w-full">
+                    <strong class="text-blue-900 block text-base">Phương pháp Đích danh (Specific Identification)</strong>
+                    <span class="text-sm text-stone-600 block mt-1">Quản lý chặt theo từng lô hàng cụ thể. Lô nào xuất kho thì lấy đúng đơn giá nhập của lô đó. Thường áp dụng cho tài sản giá trị cao, nhận diện độc lập (VD: Ô tô, trang sức).</span>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="bg-green-100 text-green-800 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0 mt-0.5">2</div>
+                <div class="ml-4 border-b border-stone-100 pb-3 w-full">
+                    <strong class="text-green-900 block text-base">Phương pháp Nhập trước Xuất trước (FIFO)</strong>
+                    <span class="text-sm text-stone-600 block mt-1">Lô hàng nào nhập kho đầu tiên sẽ được ưu tiên xuất kho đầu tiên. <br><strong class="text-stone-800">Hệ quả:</strong> Giá trị Hàng tồn kho cuối kỳ chính là giá của các lô hàng được nhập vào gần nhất.</span>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="bg-purple-100 text-purple-800 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0 mt-0.5">3</div>
+                <div class="ml-4 w-full">
+                    <strong class="text-purple-900 block text-base mb-2">Phương pháp Bình quân gia quyền (Weighted Average Cost)</strong>
+                    <div class="bg-purple-50 p-3 rounded-lg border border-purple-200 inline-block">
+                        <span class="font-bold text-purple-800 text-sm">Đơn giá BQ = </span>
+                        <span class="text-sm font-mono text-purple-900">(Giá trị Tồn ĐK + Tổng Giá trị Nhập) / (Số lượng Tồn ĐK + Tổng Số lượng Nhập)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t-2 border-dashed border-teal-200 pt-8 mt-12">
+        <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Tập Tự Luận (Chương 4)</h3>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 1: Tính Nguyên giá Thiết bị (Có Thuế & Chiết khấu)</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Mua máy móc A, giá chưa thuế GTGT 10% là 100.000. Chi phí vận chuyển máy về xưởng là 2.000 (đã gồm 10% thuế GTGT). Chiết khấu thanh toán được hưởng vì trả tiền sớm là 1.000. Doanh nghiệp nộp thuế GTGT theo phương pháp KHẤU TRỪ. Tính Nguyên giá máy A.</p>
+            <button onclick="document.getElementById('sol-ch4-1').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch4-1" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Phân tích:</strong><br>
+                - DN nộp thuế Khấu trừ &rarr; Loại bỏ toàn bộ phần thuế GTGT ra khỏi nguyên giá.<br>
+                - Giá mua (Chưa thuế): 100.000<br>
+                - CP Vận chuyển (Chưa thuế) = 2.000 / 1.1 = 1.818<br>
+                - Chiết khấu thanh toán (Chỉ liên quan đến dòng tiền tài chính TK 515, KHÔNG trừ vào nguyên giá).<br>
+                <strong>Nguyên giá = 100.000 + 1.818 = 101.818</strong>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 2: Phương pháp Nhập trước - Xuất trước (FIFO)</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Tháng 1: <br>Tồn đầu kỳ: 10 sp, giá 50/sp.<br>Nhập ngày 5: 20 sp, giá 55/sp.<br>Xuất ngày 10: 15 sp.<br>Tính trị giá hàng xuất kho ngày 10 theo phương pháp FIFO.</p>
+            <button onclick="document.getElementById('sol-ch4-2').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch4-2" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Giải (FIFO):</strong> Lấy lô cũ nhất xuất trước.<br>
+                Cần xuất 15 sp. <br>
+                - Lấy toàn bộ 10 sp từ Tồn đầu kỳ: 10 * 50 = 500<br>
+                - Lấy thêm 5 sp từ lô ngày 5: 5 * 55 = 275<br>
+                <strong>Tổng trị giá xuất kho = 500 + 275 = 775</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 5 (PREMIUM) ================= -->
+<section id="ch5" class="tab-content hidden">
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 5: Chứng Từ, Sổ Sách & Kiểm Kê (Documents, Books, Physical Counts) <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
+        <p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Nắm được tính pháp lý của chứng từ, luân chuyển chứng từ, các loại sổ kế toán phổ biến, quy định về kiểm kê và quan trọng nhất là các phương pháp sửa sai trên sổ.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="note-box shadow-sm border-l-4 border-amber-500 bg-amber-50 p-6 rounded-xl flex flex-col justify-center">
+            <h3 class="font-bold text-amber-900 text-lg mb-4 flex items-center">
+                <span class="text-2xl mr-2">📑</span> 7 Nội dung BẮT BUỘC của chứng từ
+            </h3>
+            <ol class="list-decimal list-inside space-y-2 text-sm text-stone-800 font-medium ml-2">
+                <li>Tên và mã hiệu của chứng từ.</li>
+                <li>Ngày, tháng, năm lập chứng từ.</li>
+                <li>Tên, địa chỉ của người/đơn vị lập.</li>
+                <li>Tên, địa chỉ của người/đơn vị nhận.</li>
+                <li>Nội dung nghiệp vụ kinh tế phát sinh.</li>
+                <li>Số lượng, đơn giá, số tiền (ghi bằng số và bằng chữ).</li>
+                <li>Chữ ký, họ tên đầy đủ của người lập, người duyệt và những người liên quan.</li>
+            </ol>
+            <div class="mt-4 p-3 bg-white/60 rounded border border-amber-200 text-xs text-red-700 font-bold">
+                ⚠️ Yêu cầu pháp lý: Không được tẩy xóa, sửa chữa, viết tắt. Phải viết bằng bút mực (tuyệt đối không dùng mực đỏ, bút chì).
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+            <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center">
+                <span class="text-2xl mr-2">🔄</span> Trình tự luân chuyển chứng từ (Rotation Order)
+            </h3>
+            <div class="ml-2">
+                <div class="timeline-step">
+                    <strong class="text-teal-700">Bước 1: Lập & Tiếp nhận</strong>
+                    <p class="text-xs text-stone-600 mt-1">Lập chứng từ hoặc tiếp nhận từ bên ngoài, tiến hành xử lý sơ bộ.</p>
+                </div>
+                <div class="timeline-step">
+                    <strong class="text-teal-700">Bước 2: Kiểm tra & Ký duyệt</strong>
+                    <p class="text-xs text-stone-600 mt-1">Kiểm tra tính hợp lệ, hợp pháp và độ chính xác của số liệu. Sau đó trình ký duyệt.</p>
+                </div>
+                <div class="timeline-step">
+                    <strong class="text-teal-700">Bước 3: Hoàn thiện chứng từ</strong>
+                    <p class="text-xs text-stone-600 mt-1">Tiến hành phân loại và định khoản nghiệp vụ kinh tế.</p>
+                </div>
+                <div class="timeline-step">
+                    <strong class="text-teal-700">Bước 4: Ghi sổ</strong>
+                    <p class="text-xs text-stone-600 mt-1">Luân chuyển chứng từ để làm căn cứ ghi sổ kế toán.</p>
+                </div>
+                <div class="timeline-step border-none pb-0">
+                    <strong class="text-teal-700">Bước 5: Bảo quản & Lưu trữ</strong>
+                    <p class="text-xs text-stone-600 mt-1">Đưa vào lưu trữ theo đúng thời hạn quy định của Luật Kế toán.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto">
+        <h3 class="text-lg font-bold text-slate-800 mb-4">🗂️ Phân loại Chứng từ và Sổ kế toán</h3>
+        <table class="w-full text-sm text-left border-collapse min-w-[600px]">
+            <thead class="bg-slate-800 text-white">
+                <tr>
+                    <th class="p-3 border border-slate-700 w-1/4">Tiêu chí</th>
+                    <th class="p-3 border border-slate-700 w-3/8 text-teal-300">Phân loại Chứng từ (Documents)</th>
+                    <th class="p-3 border border-slate-700 w-3/8 text-blue-300">Phân loại Sổ kế toán (Books)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-stone-50">
+                    <td class="p-3 border border-stone-300 font-bold text-slate-700">Theo Mức độ tổng hợp</td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Chứng từ gốc (Source)<br>Chứng từ ghi sổ (Vouchers)</td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Sổ tổng hợp (General)<br>Sổ chi tiết (Subsidiary)</td>
+                </tr>
+                <tr>
+                    <td class="p-3 border border-stone-300 font-bold text-slate-700">Theo Công dụng / PP Ghi</td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Mệnh lệnh (Command)<br>Chấp hành (Compliance)<br>Liên hợp</td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Sổ ghi theo thời gian (Chronological)<br>Sổ ghi theo Hệ thống (Systematic)<br>Liên hợp</td>
+                </tr>
+                <tr class="bg-stone-50">
+                    <td class="p-3 border border-stone-300 font-bold text-slate-700">Theo Nơi lập / Hình thức</td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Chứng từ Nội bộ<br>Chứng từ Bên ngoài</td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Sổ tờ rời<br>Sổ đóng thành quyển<br>Sổ điện tử</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto">
+        <h3 class="text-lg font-bold text-slate-800 mb-4">🛠️ Các phương pháp Sửa chữa Sổ kế toán thủ công</h3>
+        <table class="w-full text-sm text-left border-collapse min-w-[600px]">
+            <thead class="bg-teal-50 text-teal-900 border-b-2 border-teal-500">
+                <tr>
+                    <th class="p-3 border border-stone-300 w-1/4">Phương pháp</th>
+                    <th class="p-3 border border-stone-300 w-1/3">Trường hợp áp dụng</th>
+                    <th class="p-3 border border-stone-300">Cách thực hiện</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-3 border border-stone-300 font-bold text-teal-700 text-base">1. Cải chính<br><span class="text-xs font-normal text-stone-500">(Rectification)</span></td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Sai diễn giải, sai số tiền <strong class="text-rose-600">không ảnh hưởng quan hệ Nợ-Có</strong>.</td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Gạch 1 đường ngang chỗ sai (vẫn nhìn rõ chữ cũ), viết số đúng lên trên. Kế toán trưởng phải ký xác nhận bên cạnh.</td>
+                </tr>
+                <tr class="bg-rose-50/30">
+                    <td class="p-3 border border-stone-300 font-bold text-rose-700 text-base">2. Ghi âm / Ghi đỏ<br><span class="text-xs font-normal text-stone-500">(Negative Amount)</span></td>
+                    <td class="p-3 border border-stone-300 text-stone-700">
+                        <ul class="list-disc ml-4 space-y-1">
+                            <li>Sai tài khoản định khoản.</li>
+                            <li>Trùng bút toán.</li>
+                            <li>Số tiền sai <strong>LỚN HƠN (>)</strong> Số tiền đúng.</li>
+                        </ul>
+                    </td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Ghi lại bút toán sai bằng mực đỏ (hoặc trong ngoặc đơn <span class="font-bold text-rose-600">(...)</span>) để triệt tiêu số liệu sai. Sau đó ghi bổ sung 1 bút toán đúng bằng mực thường.</td>
+                </tr>
+                <tr>
+                    <td class="p-3 border border-stone-300 font-bold text-blue-700 text-base">3. Ghi bổ sung<br><span class="text-xs font-normal text-stone-500">(Adjustment)</span></td>
+                    <td class="p-3 border border-stone-300 text-stone-700">
+                        <ul class="list-disc ml-4 space-y-1">
+                            <li>Định khoản đúng tài khoản nhưng Số tiền sai <strong>NHỎ HƠN (<)</strong> Số tiền đúng.</li>
+                            <li>Bỏ sót nghiệp vụ chưa ghi sổ.</li>
+                        </ul>
+                    </td>
+                    <td class="p-3 border border-stone-300 text-stone-700">Lập chứng từ để ghi bổ sung thêm đúng phần chênh lệch bị thiếu (cùng chiều định khoản cũ).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl shadow-sm mb-8">
+        <h3 class="font-bold text-blue-900 text-lg mb-2 flex items-center">
+            <span class="text-2xl mr-2">🔎</span> Kiểm kê (Physical Count) và Phân loại
+        </h3>
+        <p class="text-sm text-stone-700 mb-3 leading-relaxed">
+            Là việc cân, đong, đo, đếm, đánh giá chất lượng tài sản thực tế tại kho so với số liệu trên sổ sách kế toán để phát hiện chênh lệch (Thừa/Thiếu) và tìm nguyên nhân xử lý.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div class="bg-white p-3 rounded border border-blue-200">
+                <strong class="text-blue-800 text-sm block border-b border-blue-100 pb-1 mb-2">Bắt buộc thực hiện khi:</strong>
+                <ul class="list-disc ml-4 text-xs text-stone-600 space-y-1">
+                    <li>Cuối năm tài chính.</li>
+                    <li>Thay đổi loại hình doanh nghiệp, sáp nhập, chia tách.</li>
+                    <li>Xảy ra thiên tai, hỏa hoạn.</li>
+                    <li>Cơ quan nhà nước yêu cầu đánh giá lại.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-3 rounded border border-blue-200 flex flex-col justify-center">
+                <strong class="text-blue-800 text-sm block border-b border-blue-100 pb-1 mb-2">Phân loại Kiểm kê:</strong>
+                <ul class="list-disc ml-4 text-xs text-stone-600 space-y-2">
+                    <li><strong>Theo phạm vi:</strong> Kiểm kê toàn diện (Comprehensive) / Kiểm kê từng phần (Partial).</li>
+                    <li><strong>Theo thời gian:</strong> Kiểm kê định kỳ (Periodic) / Kiểm kê bất thường (Unscheduled).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t-2 border-dashed border-teal-200 pt-8">
+        <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Tập Tự Luận (Chương 5)</h3>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 1: Lựa chọn phương pháp sửa sai</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Mua TSCĐ chưa thanh toán giá 50.000. Kế toán định khoản: Nợ TK 211: 500.000 / Có TK 331: 500.000. Phải dùng phương pháp nào để sửa? Trình bày cách sửa.</p>
+            <button onclick="document.getElementById('sol-ch5-1').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch5-1" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Giải:</strong><br>
+                - Quan hệ Nợ/Có ĐÚNG (Nợ 211/Có 331).<br>
+                - Số tiền ghi sai (500.000) > Số tiền đúng (50.000).<br>
+                &rarr; Dùng <strong>Phương pháp Ghi âm (Ghi đỏ)</strong>.<br>
+                <strong>Cách sửa:</strong> Ghi một bút toán âm phần chênh lệch (500.000 - 50.000 = 450.000).<br>
+                Bút toán: Nợ 211: (450.000) / Có 331: (450.000) để triệt tiêu phần ghi lố.
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 2: Tính pháp lý của chứng từ</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Phiếu chi tiền mặt thanh toán cho NCC thiếu chữ ký của Giám đốc (Kế toán trưởng và Thủ quỹ đã ký). Phiếu chi này có hợp lệ để dùng làm căn cứ ghi sổ không? Tại sao?</p>
+            <button onclick="document.getElementById('sol-ch5-2').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch5-2" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Giải:</strong><br>
+                <strong>Không hợp lệ.</strong> Theo nguyên tắc 7 nội dung bắt buộc của chứng từ, Phiếu chi xuất tiền ra khỏi doanh nghiệp bắt buộc phải có chữ ký phê duyệt của Người đứng đầu (Giám đốc). Kế toán không được phép ghi sổ, thủ quỹ không được phép xuất tiền nếu thiếu chữ ký này.
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 3: Xử lý Thừa/Thiếu khi Kiểm kê</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Cuối năm kiểm kê kho, số dư sổ kế toán TK 156 là 100 triệu, nhưng kiểm đếm thực tế chỉ có 95 triệu. Chưa rõ nguyên nhân. Kế toán phải ghi sổ nghiệp vụ này như thế nào?</p>
+            <button onclick="document.getElementById('sol-ch5-3').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch5-3" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Giải:</strong><br>
+                - Phân tích: Thiếu 5 triệu (100 - 95). Kế toán bắt buộc phải điều chỉnh sổ sách cho khớp với thực tế kiểm đếm, phần thiếu ghi vào Tài sản thiếu chờ xử lý (TK 1381).<br>
+                <strong>Bút toán:</strong><br>
+                <span class="font-mono bg-white px-2 rounded mt-1 inline-block">Nợ TK 1381 (TS thiếu chờ xử lý): 5.000.000</span><br>
+                <span class="font-mono bg-white px-2 rounded mt-1 inline-block">Có TK 156 (Hàng hóa): 5.000.000</span><br>
+                <em>(Khi có quyết định bồi thường hay đưa vào chi phí thì sẽ xử lý TK 1381 sau).</em>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 6 (PREMIUM) ================= -->
+<section id="ch6" class="tab-content hidden">
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 6: Kế Toán Sản Xuất Và Tiêu Thụ (Manufacturing & Sales) <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
+        <p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Nắm vững tiêu chuẩn ghi nhận và thanh lý TSCĐ, làm chủ quy trình tập hợp chi phí sản xuất (tính giá thành Z), và thực hiện chính xác các bút toán kết chuyển xác định kết quả kinh doanh (TK 911)[cite: 39].</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="note-box shadow-sm border-l-4 border-amber-500 bg-amber-50 p-6 rounded-xl">
+            <h3 class="font-bold text-amber-900 text-lg mb-4 flex items-center">
+                <span class="text-2xl mr-2">🏭</span> 4 Tiêu chuẩn ghi nhận Tài sản Cố định
+            </h3>
+            <p class="text-sm text-stone-700 mb-3">Một tài sản chỉ được ghi nhận là TSCĐ khi thỏa mãn ĐỒNG THỜI 4 điều kiện sau.:</p>
+            <ul class="space-y-2 text-sm text-stone-800 font-medium ml-2">
+                <li class="flex items-start"><span class="text-teal-600 mr-2">1.</span> Chắc chắn thu được lợi ích kinh tế trong tương lai..</li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">2.</span> Nguyên giá phải được xác định một cách đáng tin cậy..</li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">3.</span> Thời gian sử dụng ước tính trên 1 năm (> 1 năm)..</li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">4.</span> Thỏa mãn tiêu chuẩn về giá trị theo quy định hiện hành (VD: ≥ 30 triệu đồng)..</li>
+            </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+            <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center">
+                <span class="text-2xl mr-2">♻️</span> Kế toán Thanh lý Tài sản Cố định
+            </h3>
+            <p class="text-sm text-stone-600 mb-4">Khi thanh lý, nhượng bán TSCĐ, kế toán bắt buộc phải ghi nhận đồng thời 2 bút toán.:</p>
+            <div class="space-y-4">
+                <div class="border border-stone-200 rounded-lg p-3 bg-stone-50">
+                    <strong class="text-rose-700 block text-sm mb-1">Bước 1: Xóa sổ TSCĐ (Giảm nguyên giá & Hao mòn LK)</strong>
+                    <div class="font-mono text-sm bg-white p-2 rounded border border-stone-200">
+                        Nợ TK 811 (Giá trị còn lại)<br>
+                        Nợ TK 214 (Hao mòn lũy kế)<br>
+                        &nbsp;&nbsp;Có TK 211 / 213 (Nguyên giá) .
+                    </div>
+                </div>
+                <div class="border border-stone-200 rounded-lg p-3 bg-stone-50">
+                    <strong class="text-green-700 block text-sm mb-1">Bước 2: Ghi nhận Thu nhập từ thanh lý</strong>
+                    <div class="font-mono text-sm bg-white p-2 rounded border border-stone-200">
+                        Nợ TK 111, 112, 131<br>
+                        &nbsp;&nbsp;Có TK 711 (Thu nhập khác)<br>
+                        &nbsp;&nbsp;Có TK 3331 (Thuế GTGT phải nộp - nếu có) .
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto">
+        <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">🧠 Sơ Đồ Tập Hợp Chi Phí Sản Xuất</h3>
+        <div class="flex items-center justify-center min-w-[700px] gap-4">
+            <div class="flex flex-col gap-4 w-1/3">
+                <div class="bg-blue-50 border border-blue-400 p-3 rounded text-center shadow-sm">
+                    <span class="font-bold text-blue-800 block">CP NVL Trực tiếp</span>
+                    <span class="text-sm font-mono text-blue-600">TK 621</span>
+                </div>
+                <div class="bg-green-50 border border-green-400 p-3 rounded text-center shadow-sm">
+                    <span class="font-bold text-green-800 block">CP Nhân công TT</span>
+                    <span class="text-sm font-mono text-green-600">TK 622</span>
+                </div>
+                <div class="bg-purple-50 border border-purple-400 p-3 rounded text-center shadow-sm">
+                    <span class="font-bold text-purple-800 block">CP Sản xuất chung</span>
+                    <span class="text-sm font-mono text-purple-600">TK 627</span>
+                </div>
+            </div>
+            <div class="flow-arrow text-3xl text-teal-500">&rarr;</div>
+            <div class="bg-amber-50 border-2 border-amber-500 p-6 rounded-xl text-center shadow-md w-1/4">
+                <span class="font-black text-amber-800 block text-lg">CP SX Dở Dang</span>
+                <span class="text-base font-mono text-amber-700 bg-amber-100 px-2 py-1 rounded">TK 154</span>
+            </div>
+            <div class="flow-arrow text-3xl text-teal-500">&rarr;</div>
+            <div class="bg-teal-50 border-2 border-teal-500 p-6 rounded-xl text-center shadow-md w-1/4">
+                <span class="font-black text-teal-800 block text-lg">Thành Phẩm</span>
+                <span class="text-base font-mono text-teal-700 bg-teal-100 px-2 py-1 rounded">TK 155</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8 overflow-x-auto">
+        <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="text-2xl mr-2">💼</span> Tỷ lệ trích các khoản trích theo lương (Salary Deductions)</h3>
+        <table class="w-full text-sm text-center border-collapse min-w-[600px]">
+            <thead class="bg-slate-800 text-white border-b-2 border-slate-900">
+                <tr>
+                    <th class="p-3 border border-slate-700 w-1/4 text-left">Các khoản trích (TK 338) .</th>
+                    <th class="p-3 border border-slate-700 text-rose-300">Trừ vào lương NLĐ<br>(Nợ TK 334) .</th>
+                    <th class="p-3 border border-slate-700 text-teal-300">Tính vào Chi phí DN<br>(Nợ 622, 627, 641, 642) .</th>
+                    <th class="p-3 border border-slate-700 font-bold text-amber-300">Tổng cộng .</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-3 border border-stone-300 text-left font-semibold">Bảo hiểm xã hội (BHXH - TK 3383) .</td>
+                    <td class="p-3 border border-stone-300 text-rose-700 font-bold">8% .</td>
+                    <td class="p-3 border border-stone-300 text-teal-700 font-bold">17.5% .</td>
+                    <td class="p-3 border border-stone-300 font-bold">25.5% .</td>
+                </tr>
+                <tr class="bg-stone-50">
+                    <td class="p-3 border border-stone-300 text-left font-semibold">Bảo hiểm y tế (BHYT - TK 3384) .</td>
+                    <td class="p-3 border border-stone-300 text-rose-700 font-bold">1.5% .</td>
+                    <td class="p-3 border border-stone-300 text-teal-700 font-bold">3% .</td>
+                    <td class="p-3 border border-stone-300 font-bold">4.5% .</td>
+                </tr>
+                <tr>
+                    <td class="p-3 border border-stone-300 text-left font-semibold">Bảo hiểm thất nghiệp (BHTN - TK 3386) .</td>
+                    <td class="p-3 border border-stone-300 text-rose-700 font-bold">1% .</td>
+                    <td class="p-3 border border-stone-300 text-teal-700 font-bold">1% .</td>
+                    <td class="p-3 border border-stone-300 font-bold">2% .</td>
+                </tr>
+                <tr class="bg-stone-50">
+                    <td class="p-3 border border-stone-300 text-left font-semibold">Kinh phí Công đoàn (KPCĐ - TK 3382) .</td>
+                    <td class="p-3 border border-stone-300 text-stone-500 font-bold">0% .</td>
+                    <td class="p-3 border border-stone-300 text-teal-700 font-bold">2% .</td>
+                    <td class="p-3 border border-stone-300 font-bold">2% .</td>
+                </tr>
+                <tr class="bg-amber-100 font-black">
+                    <td class="p-3 border border-amber-300 text-left text-amber-900">TỔNG CỘNG .</td>
+                    <td class="p-3 border border-amber-300 text-rose-800">10.5% .</td>
+                    <td class="p-3 border border-amber-300 text-teal-800">23.5% .</td>
+                    <td class="p-3 border border-amber-300 text-amber-900 text-lg">34% .</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-stone-200">
+            <h3 class="text-xl font-bold text-slate-800 mb-2">🧮 Máy tính Giá thành Sản phẩm</h3>
+            <p class="text-xs text-stone-500 mb-4 font-mono">Tại tài khoản CP SXKD dở dang (TK 154) .</p>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center bg-stone-50 p-3 rounded border border-stone-200">
+                    <label class="font-semibold text-stone-700 text-sm">1. Dở dang Đầu kỳ (WIP Op.)</label>
+                    <input type="number" id="z-wip-op" value="500" class="w-24 p-2 border rounded text-right outline-none focus:ring-2 focus:ring-teal-500" oninput="calcZ()">
+                </div>
+                <div class="flex justify-between items-center bg-teal-50 p-3 rounded border border-teal-200">
+                    <label class="font-semibold text-teal-800 text-sm">2. Phát sinh trong kỳ (621+622+627)</label>
+                    <input type="number" id="z-incurred" value="4000" class="w-24 p-2 border rounded text-right outline-none focus:ring-2 focus:ring-teal-500 text-teal-700 font-bold" oninput="calcZ()">
+                </div>
+                <div class="flex justify-between items-center bg-stone-50 p-3 rounded border border-stone-200">
+                    <label class="font-semibold text-stone-700 text-sm">3. Dở dang Cuối kỳ (WIP Cl.) [-]</label>
+                    <input type="number" id="z-wip-cl" value="300" class="w-24 p-2 border rounded text-right outline-none focus:ring-2 focus:ring-teal-500 text-rose-600" oninput="calcZ()">
+                </div>
+                <div class="flex justify-between items-center bg-stone-50 p-3 rounded border border-stone-200">
+                    <label class="font-semibold text-stone-700 text-sm">4. Phế liệu thu hồi [-]</label>
+                    <input type="number" id="z-scrap" value="0" class="w-24 p-2 border rounded text-right outline-none focus:ring-2 focus:ring-teal-500 text-rose-600" oninput="calcZ()">
+                </div>
+                <div class="flex justify-between items-center bg-stone-50 p-3 rounded border border-stone-200">
+                    <label class="font-semibold text-stone-700 text-sm">5. Số lượng SP hoàn thành</label>
+                    <input type="number" id="z-qty" value="100" class="w-24 p-2 border rounded text-right outline-none focus:ring-2 focus:ring-teal-500" oninput="calcZ()">
+                </div>
+                
+                <div class="border-t-2 border-stone-300 pt-4 grid grid-cols-2 gap-4">
+                    <div class="bg-amber-100 p-3 rounded-xl text-center border border-amber-200 shadow-sm">
+                        <span class="block text-[11px] font-bold text-amber-900 mb-1">TỔNG GIÁ THÀNH (Z) [cite: 135]</span>
+                        <span id="z-total" class="text-xl font-black text-amber-700">4200</span>
+                    </div>
+                    <div class="bg-green-100 p-3 rounded-xl text-center border border-green-200 shadow-sm">
+                        <span class="block text-[11px] font-bold text-green-900 mb-1">GIÁ THÀNH ĐƠN VỊ (z) [cite: 135]</span>
+                        <span id="z-unit" class="text-xl font-black text-green-700">42</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-stone-200">
+            <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center">
+                <span class="text-2xl mr-2">📈</span> Kế toán Xác định KQKD (TK 911)
+            </h3>
+            <div class="ml-2">
+                <div class="timeline-step">
+                    <strong class="text-teal-700">Bước 1: Kết chuyển Doanh thu & Thu nhập .</strong>
+                    <div class="font-mono text-sm bg-stone-50 p-2 rounded border border-stone-200 mt-1 inline-block w-full">
+                        Nợ TK 511, 515, 711<br>
+                        &nbsp;&nbsp;Có TK 911.
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <strong class="text-rose-700">Bước 2: Kết chuyển Chi phí.</strong>
+                    <div class="font-mono text-sm bg-stone-50 p-2 rounded border border-stone-200 mt-1 inline-block w-full">
+                        Nợ TK 911<br>
+                        &nbsp;&nbsp;Có TK 632, 641, 642, 635, 811.
+                    </div>
+                </div>
+                <div class="timeline-step border-none pb-0">
+                    <strong class="text-amber-700">Bước 3: Xác định Lãi / Lỗ.</strong>
+                    <div class="bg-amber-50 p-3 rounded border border-amber-200 mt-1 text-sm text-stone-800">
+                        <p class="mb-2">🔹 <strong>Nếu Tổng Có 911 > Tổng Nợ 911 &rarr; LÃI:</strong><br>
+                        <span class="font-mono bg-white px-1 border border-stone-200 rounded text-green-700">Nợ TK 911 / Có TK 421</span>.</p>
+                        <p>🔹 <strong>Nếu Tổng Nợ 911 > Tổng Có 911 &rarr; LỖ:</strong><br>
+                        <span class="font-mono bg-white px-1 border border-stone-200 rounded text-rose-700">Nợ TK 421 / Có TK 911</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t-2 border-dashed border-teal-200 pt-8 mt-4">
+        <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Tập Tự Luận (Chương 6)</h3>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 mb-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 1: Tính các khoản trích theo lương</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Tổng quỹ lương công nhân sản xuất trực tiếp là 100.000, nhân viên quản lý phân xưởng là 20.000. Yêu cầu định khoản tiền lương và các khoản trích theo lương (BHXH, BHYT, BHTN, KPCĐ) theo tỷ lệ hiện hành. (DN trích 23.5%, trừ vào lương 10.5%).</p>
+            <button onclick="document.getElementById('sol-ch6-1').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch6-1" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Giải:</strong><br>
+                <strong>1. Định khoản tiền lương:</strong><br>
+                <span class="font-mono">Nợ 622 (Nhân công TT): 100.000<br>Nợ 627 (QL Phân xưởng): 20.000<br>&nbsp;&nbsp;Có 334: 120.000</span><br><br>
+                <strong>2. Trích theo lương trừ vào thu nhập NLĐ (10.5%):</strong><br>
+                <span class="font-mono">Nợ 334: 12.600 (120.000 * 10.5%)<br>&nbsp;&nbsp;Có 338: 12.600</span><br><br>
+                <strong>3. Tính vào chi phí DN (23.5%):</strong><br>
+                <span class="font-mono">Nợ 622: 23.500 (100.000 * 23.5%)<br>Nợ 627: 4.700 (20.000 * 23.5%)<br>&nbsp;&nbsp;Có 338: 28.200</span>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+            <h4 class="font-bold text-lg text-slate-800 mb-2">Bài 2: Xác định kết quả kinh doanh</h4>
+            <p class="text-stone-700 mb-4 bg-stone-50 p-3 rounded text-sm">Cuối kỳ kế toán, doanh nghiệp có các số dư sau: Doanh thu bán hàng (511): 500.000. Doanh thu tài chính (515): 20.000. Giá vốn hàng bán (632): 300.000. Chi phí bán hàng (641): 40.000. Chi phí QLDN (642): 50.000. Thực hiện các bút toán kết chuyển và xác định kết quả kinh doanh (Bỏ qua thuế TNDN).</p>
+            <button onclick="document.getElementById('sol-ch6-2').classList.toggle('hidden')" class="bg-teal-100 text-teal-800 px-4 py-2 rounded font-bold hover:bg-teal-200 transition-colors text-xs">Xem / Ẩn Lời Giải</button>
+            <div id="sol-ch6-2" class="hidden mt-4 bg-teal-50 p-4 border-l-4 border-teal-500 rounded text-stone-800 text-sm">
+                <strong>Giải:</strong><br>
+                <strong>1. Kết chuyển Doanh thu (Tổng = 520.000):</strong><br>
+                <span class="font-mono">Nợ 511: 500.000<br>Nợ 515: 20.000<br>&nbsp;&nbsp;Có 911: 520.000</span><br><br>
+                <strong>2. Kết chuyển Chi phí (Tổng = 390.000):</strong><br>
+                <span class="font-mono">Nợ 911: 390.000<br>&nbsp;&nbsp;Có 632: 300.000<br>&nbsp;&nbsp;Có 641: 40.000<br>&nbsp;&nbsp;Có 642: 50.000</span><br><br>
+                <strong>3. Xác định Lãi/Lỗ:</strong><br>
+                Tổng Có 911 (520.000) > Tổng Nợ 911 (390.000) &rarr; DN Lãi: 130.000.<br>
+                Bút toán kết chuyển Lãi:<br>
+                <span class="font-mono bg-green-100 text-green-800 px-1 rounded">Nợ 911: 130.000 / Có 421: 130.000</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- CORE UI SCRIPTS -->  
+
+
+
+<script>
+let activeTabId = 'ch1';
+
+
+// Chuyển Tab có check bảo mật
+window.attemptSwitchTab = (t) => { 
+    forceSwitchTab(t); 
+};
+
+// Hàm chuyển UI Tab
+function forceSwitchTab(t) { 
+    activeTabId = t; 
+    
+    document.querySelectorAll('.tab-content').forEach(s => { 
+        s.classList.add('hidden'); 
+        s.classList.remove('animate-fade-in'); 
+    }); 
+    
+    const targetTab = document.getElementById(t);
+    if (targetTab) {
+        targetTab.classList.remove('hidden'); 
+        targetTab.classList.add('animate-fade-in');
+        
+       // 3. TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG (Đã fix lỗi sập web)
+        const offset = 150; 
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetTab.getBoundingClientRect().top; // Đã sửa target -> targetTab
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+    
+    // Xử lý thanh nav và vạch kẻ dưới (Đã dùng màu emerald-600 riêng cho Kế toán)
+    document.querySelectorAll('.nav-btn').forEach(b => { 
+        b.classList.remove('tab-active','text-emerald-600'); 
+        b.classList.add('text-stone-500'); 
+        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
+            b.classList.add('tab-active','text-emerald-600'); 
+            b.classList.remove('text-stone-500'); 
+        }
+    }); 
+    
+    const mobileNav = document.getElementById('mobile-nav');
+    if(mobileNav) mobileNav.value = t;
+}
+
+// ==========================================
+// CÁC HÀM MÁY TÍNH (GIỮ NGUYÊN BẢN CỦA SẾP)
+// ==========================================
+
+// --- CH1: Equation ---
+// --- CH1: MÁY TÍNH PHƯƠNG TRÌNH KẾ TOÁN (DẠNG LIST & TÌM X) ---
+
+// Hàm tự động sinh thêm ô nhập liệu
+window.addEqRow = function(type) {
+    const container = document.getElementById(`eq-list-${type}`);
+    let colorClass = type === 'a' ? 'text-blue-700 focus:border-blue-500' : (type === 'l' ? 'text-rose-700 focus:border-rose-500' : 'text-amber-700 focus:border-amber-500');
+    let phText = type === 'a' ? 'VD: Hàng tồn kho' : (type === 'l' ? 'VD: Phải trả người bán' : 'VD: Lợi nhuận giữ lại');
+    
+    const row = document.createElement('div');
+    row.className = 'flex gap-2 items-center animate-fade-in mt-2';
+    row.innerHTML = `
+        <input type="text" placeholder="${phText}" class="w-1/2 p-2 border border-stone-300 rounded text-sm outline-none bg-white">
+        <input type="text" placeholder="Số tiền hoặc x" class="w-1/2 p-2 border border-stone-300 rounded text-sm font-bold ${colorClass} outline-none bg-white val-${type}">
+        <button onclick="this.parentElement.remove()" class="text-stone-400 hover:text-red-500 font-bold px-1" title="Xóa mục này">&times;</button>
+    `;
+    container.appendChild(row);
+}
+
+// Hàm tính toán và truy tìm X
+window.solveAdvancedEquation = function() {
+    const inputsA = document.querySelectorAll('.val-a');
+    const inputsL = document.querySelectorAll('.val-l');
+    const inputsE = document.querySelectorAll('.val-e');
+
+    let sumA = 0, sumL = 0, sumE = 0;
+    let unknownInput = null;
+    let unknownCount = 0;
+    let unknownType = '';
+
+    // Hàm quét dọn lấy số, đếm X
+    function processNodes(nodes, type) {
+        let sum = 0;
+        nodes.forEach(inp => {
+            let val = inp.value.trim().toLowerCase();
+            // Nếu bỏ trống hoặc gõ x
+            if (val === '' || val === 'x' || val === '?') {
+                unknownCount++;
+                unknownInput = inp;
+                unknownType = type;
+            } else {
+                let num = parseFloat(val.replace(/,/g, '')); // Cho phép gõ dấu phẩy
+                if (!isNaN(num)) sum += num;
+            }
+        });
+        return sum;
+    }
+
+    sumA = processNodes(inputsA, 'a');
+    sumL = processNodes(inputsL, 'l');
+    sumE = processNodes(inputsE, 'e');
+
+    const resultBox = document.getElementById('eq-result-box');
+    resultBox.classList.remove('hidden');
+
+    // Chặn lỗi: Cố tình để trống quá nhiều ô
+    if (unknownCount > 1) {
+        resultBox.innerHTML = `
+            <div class="bg-red-50 text-red-700 p-4 rounded-xl border-2 border-red-200 font-bold text-center flex items-center justify-center">
+                <span class="text-2xl mr-2">❌</span> Lỗi: Đang có tới ${unknownCount} ẩn số. Máy chỉ giải được khi bạn để trống (hoặc nhập X) vào TỐI ĐA 1 ô duy nhất!
+            </div>`;
+        return;
+    }
+
+    let X = 0;
+    // Bắt đầu giải X
+    if (unknownCount === 1) {
+        if (unknownType === 'a') {
+            X = sumL + sumE - sumA;
+        } else if (unknownType === 'l') {
+            X = sumA - sumE - sumL;
+        } else if (unknownType === 'e') {
+            X = sumA - sumL - sumE;
+        }
+        
+        // Cập nhật lại X vào ô input cho người dùng thấy
+        unknownInput.value = X;
+        unknownInput.classList.add('bg-green-100', 'border-green-400', 'transition-colors', 'duration-500');
+        setTimeout(() => { unknownInput.classList.remove('bg-green-100', 'border-green-400'); }, 3000);
+        
+        // Cộng luôn X vào Tổng
+        if (unknownType === 'a') sumA += X;
+        if (unknownType === 'l') sumL += X;
+        if (unknownType === 'e') sumE += X;
+    }
+
+    // Kiểm tra và in bảng báo cáo
+    let isBalanced = Math.abs(sumA - (sumL + sumE)) < 0.001;
+    
+    let balTitle = isBalanced 
+        ? `<h4 class="text-center text-xl font-extrabold text-green-700 mb-4 border-b border-green-200 pb-3 flex justify-center items-center"><span class="mr-2">⚖️</span> TRẠNG THÁI: CÂN BẰNG TUYỆT ĐỐI</h4>` 
+        : `<h4 class="text-center text-xl font-extrabold text-red-700 mb-4 border-b border-red-200 pb-3 flex justify-center items-center"><span class="mr-2">⚠️</span> LỖI: PHƯƠNG TRÌNH KHÔNG CÂN BẰNG</h4>`;
+
+    let xFoundMsg = (unknownCount === 1) 
+        ? `<div class="text-center text-lg font-black text-teal-800 mb-5 bg-teal-100 py-3 rounded-lg border-2 border-teal-300 shadow-sm mx-auto max-w-md">🎯 Đã tìm được X = ${X}</div>` 
+        : '';
+
+    resultBox.innerHTML = `
+        <div class="bg-white border-2 ${isBalanced ? 'border-green-300' : 'border-red-300'} rounded-2xl p-6 shadow-sm relative overflow-hidden">
+            ${balTitle}
+            ${xFoundMsg}
+            <div class="grid grid-cols-3 gap-3 md:gap-6 text-center">
+                <div class="bg-blue-50 p-4 rounded-xl border border-blue-200 shadow-sm">
+                    <div class="text-xs md:text-sm font-bold text-blue-800 mb-1 uppercase">Tổng Tài Sản</div>
+                    <div class="text-xl md:text-3xl font-black text-blue-700 break-words">${sumA}</div>
+                </div>
+                <div class="bg-rose-50 p-4 rounded-xl border border-rose-200 shadow-sm relative">
+                    <div class="absolute top-1/2 -left-3 md:-left-5 transform -translate-y-1/2 text-xl font-black text-stone-400">=</div>
+                    <div class="text-xs md:text-sm font-bold text-rose-800 mb-1 uppercase">Tổng Nợ</div>
+                    <div class="text-xl md:text-3xl font-black text-rose-700 break-words">${sumL}</div>
+                </div>
+                <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 shadow-sm relative">
+                    <div class="absolute top-1/2 -left-3 md:-left-5 transform -translate-y-1/2 text-xl font-black text-stone-400">+</div>
+                    <div class="text-xs md:text-sm font-bold text-amber-800 mb-1 uppercase">Tổng Vốn</div>
+                    <div class="text-xl md:text-3xl font-black text-amber-700 break-words">${sumE}</div>
+                </div>
+            </div>
+            ${!isBalanced ? `<div class="text-center text-sm font-bold text-red-600 mt-4 bg-red-50 p-2 rounded">Đang chênh lệch: ${Math.abs(sumA - (sumL + sumE))}</div>` : ''}
+        </div>
+    `;
+}
+
+// --- CH2: P&L ---
+window.calcPnL = function() {
+    const sales = parseFloat(document.getElementById('pnl-sales').value) || 0;
+    const deduct = parseFloat(document.getElementById('pnl-deduct').value) || 0;
+    const cogs = parseFloat(document.getElementById('pnl-cogs').value) || 0;
+    const otherRev = parseFloat(document.getElementById('pnl-other-rev').value) || 0;
+    const exp = parseFloat(document.getElementById('pnl-exp').value) || 0;
+    const tax = parseFloat(document.getElementById('pnl-tax').value) || 0;
+
+    const netSales = sales - deduct;
+    const gross = netSales - cogs;
+    const ebt = gross + otherRev - exp;
+    const netProfit = ebt - tax;
+
+    document.getElementById('pnl-net-sales').innerText = netSales;
+    document.getElementById('pnl-gross').innerText = gross;
+    document.getElementById('pnl-ebt').innerText = ebt;
+    document.getElementById('pnl-net-profit').innerText = netProfit;
+}
+
+// --- CH3: T-Account ---
+window.calcTAcc = function() {
+    const obDr = parseFloat(document.getElementById('t-ob-dr').value) || 0;
+    const ps1Dr = parseFloat(document.getElementById('t-ps1-dr').value) || 0;
+    const ps2Dr = parseFloat(document.getElementById('t-ps2-dr').value) || 0;
+    const obCr = parseFloat(document.getElementById('t-ob-cr').value) || 0;
+    const ps1Cr = parseFloat(document.getElementById('t-ps1-cr').value) || 0;
+    const ps2Cr = parseFloat(document.getElementById('t-ps2-cr').value) || 0;
+
+    const totalDr = obDr + ps1Dr + ps2Dr;
+    const totalCr = obCr + ps1Cr + ps2Cr;
+    
+    document.getElementById('t-cb-dr').innerText = '';
+    document.getElementById('t-cb-cr').innerText = '';
+    
+    if(totalDr > totalCr) { document.getElementById('t-cb-dr').innerText = 'SD: ' + (totalDr - totalCr); } 
+    else if(totalCr > totalDr) { document.getElementById('t-cb-cr').innerText = 'SD: ' + (totalCr - totalDr); }
+    else if(totalDr > 0 || totalCr > 0) { document.getElementById('t-cb-dr').innerText = 'SD: 0'; document.getElementById('t-cb-cr').innerText = 'SD: 0'; }
+}
+
+// --- CH4: Acq Cost & Dep ---
+window.calcAcq = function() {
+    const p = parseFloat(document.getElementById('acq-price').value) || 0;
+    const t = parseFloat(document.getElementById('acq-tax').value) || 0;
+    const f = parseFloat(document.getElementById('acq-freight').value) || 0;
+    const d = parseFloat(document.getElementById('acq-disc').value) || 0;
+    document.getElementById('acq-result').innerText = (p + t + f - d);
+    document.getElementById('dep-cost').value = (p + t + f - d); // Auto link
+    calcDep();
+}
+
+window.calcDep = function() {
+    const c = parseFloat(document.getElementById('dep-cost').value) || 0;
+    const y = parseFloat(document.getElementById('dep-years').value) || 1;
+    const cur = parseFloat(document.getElementById('dep-current-year').value) || 1;
+    
+    const annual = c / y;
+    const accumulated = annual * cur;
+    const carrying = c - accumulated;
+    
+    document.getElementById('dep-annual').innerText = annual.toFixed(2).replace(/\.00$/, '');
+    document.getElementById('dep-carrying').innerText = Math.max(0, carrying).toFixed(2).replace(/\.00$/, '');
+}
+
+// --- CH6: Cost Z ---
+window.calcZ = function() {
+    const op = parseFloat(document.getElementById('z-wip-op').value) || 0;
+    const inc = parseFloat(document.getElementById('z-incurred').value) || 0;
+    const cl = parseFloat(document.getElementById('z-wip-cl').value) || 0;
+    const scr = parseFloat(document.getElementById('z-scrap').value) || 0;
+    const qty = parseFloat(document.getElementById('z-qty').value) || 1;
+    
+    const totalZ = op + inc - cl - scr;
+    const unitZ = totalZ / qty;
+    
+    document.getElementById('z-total').innerText = totalZ;
+    document.getElementById('z-unit').innerText = isFinite(unitZ) ? unitZ.toFixed(2).replace(/\.00$/, '') : 0;
+}
+
+// Khởi tạo ban đầu
+window.onload = () => {
+    calcPnL();
+    calcTAcc();
+    calcAcq();
+    calcZ();
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ôn thi Luật Thương Mại Quốc Tế - Trắc nghiệm, tài liệu, đề thi</title>
+<meta name="description" content="Website ôn thi Luật Thương Mại Quốc Tế dành cho sinh viên khối Kinh doanh quốc tế, chuẩn chương trình đại học, tổng hợp lý thuyết WTO, GATT, GATS.">
+
+<meta name="keywords" content="luật thương mại quốc tế, WTO, GATT, GATS, nguyên tắc MFN, nguyên tắc NT, giải quyết tranh chấp WTO, ôn thi UEL, edu connect">
+<meta name="author" content="Edu Connect">
+<meta name="robots" content="index, follow"> 
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.tab-active { border-bottom: 3px solid #0d9488; color: #0d9488; font-weight: 700; background-color: #f0fdfa; border-radius: 0.5rem 0.5rem 0 0; }
+.glass-panel { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.modal-overlay { background-color: rgba(28, 25, 23, 0.75); backdrop-filter: blur(4px); }
+.google-btn { background-color: #ffffff; color: #3c4043; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); transition: background-color 0.2s, box-shadow 0.2s; }
+.google-btn:hover { background-color: #f8f9fa; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); }
+
+/* Custom UI */
+.theory-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.theory-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+.step-container { position: relative; padding-left: 2rem; border-left: 2px dashed #99f6e4; margin-bottom: 1.5rem; }
+.step-number { position: absolute; left: -1rem; top: 0; width: 2rem; height: 2rem; background: #0d9488; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.875rem; border: 4px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.timeline-item { position: relative; padding-left: 2.5rem; padding-bottom: 1.5rem; border-left: 2px solid #e7e5e4; }
+.timeline-item::before { content: ''; position: absolute; left: -0.4rem; top: 0; width: 0.75rem; height: 0.75rem; border-radius: 50%; background: #0d9488; border: 2px solid white; box-shadow: 0 0 0 2px #0d9488; }
+.timeline-item:last-child { border-left-color: transparent; }
+.flashcard-inner { perspective: 1000px; }
+</style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<div id="welcome-modal" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="welcome-modal-content">
+        <div class="text-center mb-6">
+            <div class="text-5xl mb-4">⚖️</div>
+            <h2 class="text-2xl font-extrabold text-slate-900 mb-2">Sổ Tay Luật TMQT</h2>
+            <p class="text-stone-600 text-sm">Đăng nhập để mở khóa các phân tích chuyên sâu về Điều ước quốc tế, case study WTO và công cụ tính toán thuế quan cho dân Kinh doanh quốc tế.</p>
+        </div>
+        <div class="space-y-4">
+            <button onclick="loginGoogleReal()" class="google-btn w-full py-3 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3">
+                <span class="text-lg font-black text-blue-600">G</span> 
+                <span>Đăng nhập bằng Google</span>
+            </button>
+            <button onclick="window.location.href='index.html'" class="w-full p-3 mt-2 bg-slate-100 text-slate-600 border border-slate-300 rounded-lg font-semibold hover:bg-slate-200 transition-colors flex items-center justify-center gap-2">
+                🏠 Quay về Trang chủ
+            </button>
+        </div>
+    </div>
+</div>
+
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center min-h-[4rem] py-2">
+            <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+                <div class="h-8 w-8 sm:h-10 sm:w-10 bg-teal-700 text-white rounded-full flex items-center justify-center font-bold shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">EC</div>
+                <div class="flex flex-col justify-center min-w-0">
+                    <h1 class="font-extrabold text-base sm:text-xl text-teal-800 tracking-tight leading-none">EDU CONNECT</h1>
+                    <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden">
+                        <p class="text-[10px] sm:text-xs text-stone-500 font-bold uppercase tracking-wider mt-1 truncate">⚖️ Luật Thương Mại Quốc Tế</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="hidden md:flex flex-wrap justify-center gap-1 items-end h-full px-2" id="nav-menu">
+                <button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Tổng Quan</button>
+                <button onclick="attemptSwitchTab('ch2')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Không Phân Biệt Đối Xử</button>
+                <button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.3: TM Hàng Hóa <span class="premium-lock text-xs">🔒</span></button>
+                <button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Giải Quyết Tranh Chấp <span class="premium-lock text-xs">🔒</span></button>
+            </div>
+
+            <div class="flex items-center shrink-0">
+                <div class="border-l border-stone-300 pl-4">
+                    <button id="nav-login-btn" onclick="showWelcomeModal()" class="whitespace-nowrap hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+                    <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+                        <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+                        <span id="user-name" class="whitespace-nowrap text-sm font-bold text-slate-800 hidden sm:block">Sinh Viên</span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+            <select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+                <option value="ch1">Chương 1: Tổng Quan Về Luật TMQT</option>
+                <option value="ch2">Chương 2: Các Nguyên Tắc Không Phân Biệt Đối Xử</option>
+                <option value="ch3" class="premium-opt">Chương 3: Thương Mại Hàng Hóa 🔒</option>
+                <option value="ch4" class="premium-opt">Chương 4: Cơ Chế GQ Tranh Chấp WTO 🔒</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+
+    <div class="mb-10 text-center">
+        <div class="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide mb-3 uppercase">Dành Cho Chuyên Ngành Kinh Doanh Quốc Tế</div>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Hệ Thống Hóa Luật Thương Mại Quốc Tế</h1>
+        <p class="text-stone-600 max-w-2xl mx-auto">Chinh phục các Hiệp định WTO, quy tắc GATT/GATS và cơ chế giải quyết tranh chấp với tư duy logic pháp lý kết hợp kinh tế sắc bén.</p>
+    </div>
+
+    <section id="ch1" class="tab-content block">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 1: Tổng Quan Về Luật Thương Mại Quốc Tế</h2>
+        
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg flex items-center gap-2">🌍 Khái niệm cốt lõi</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-teal-50 border border-teal-100 rounded-xl">
+                        <strong class="text-teal-800 block mb-1">Toàn cầu hóa (Globalization)</strong>
+                        <p class="text-sm text-stone-700">Quá trình các doanh nghiệp hoặc tổ chức phát triển tầm ảnh hưởng quốc tế hoặc bắt đầu hoạt động trên quy mô quốc tế[cite: 39].</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 border border-blue-100 rounded-xl">
+                        <strong class="text-blue-800 block mb-1">Thương mại quốc tế (International Trade)</strong>
+                        <p class="text-sm text-stone-700">Hoạt động trao đổi hàng hóa, dịch vụ và sở hữu trí tuệ vượt qua ranh giới quốc gia[cite: 40].</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg flex items-center gap-2">🤝 Các Hiệp định Thương mại ngoài WTO</h3>
+                <ul class="space-y-3 text-sm text-stone-700">
+                    <li class="p-3 border rounded bg-stone-50">
+                        <strong class="text-slate-800 text-base block mb-1">RTAs (Hiệp định thương mại khu vực)</strong>
+                        Ký kết giữa các quốc gia, thủ tục sửa đổi và ra quyết định ít rườm rà hơn so với diễn đàn đa phương[cite: 43].
+                    </li>
+                    <li class="p-3 border rounded bg-stone-50">
+                        <strong class="text-slate-800 text-base block mb-1">PTAs (Hiệp định thương mại ưu đãi)</strong>
+                        Thỏa thuận ưu đãi đơn phương (phi đa phương), được phép tồn tại như một ngoại lệ hợp pháp của nguyên tắc không phân biệt đối xử WTO[cite: 43].
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg flex items-center gap-2">📚 Các Nguồn Của Luật Thương Mại Quốc Tế</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-stone-800 text-stone-100">
+                                <th class="p-3 font-bold border-r border-stone-600 w-1/3 rounded-tl-lg">Nguồn luật</th>
+                                <th class="p-3 font-bold rounded-tr-lg">Đặc điểm cốt lõi [cite: 42]</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-200">
+                            <tr>
+                                <td class="p-3 bg-stone-50 font-semibold text-teal-700">Điều ước quốc tế (Treaties)</td>
+                                <td class="p-3">Nguồn quan trọng nhất (VD: Hệ thống hiệp định WTO).</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 bg-stone-50 font-semibold text-teal-700">Tập quán quốc tế (Customary Law)</td>
+                                <td class="p-3">Hình thành từ thực tiễn áp dụng chung và được thừa nhận là luật.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 bg-stone-50 font-semibold text-teal-700">Nguyên tắc chung (General Principles)</td>
+                                <td class="p-3">Các nguyên tắc pháp luật chung được các quốc gia văn minh thừa nhận.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 bg-stone-50 font-semibold text-teal-700">Án lệ & Học thuyết</td>
+                                <td class="p-3">Nguồn bổ trợ (VD: Các báo cáo của Ban Hội thẩm/Cơ quan Phúc thẩm WTO).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ch2" class="tab-content hidden">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 2: Các Nguyên Tắc Không Phân Biệt Đối Xử (Non-discrimination)</h2>
+        
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 mb-8 theory-card">
+            <h3 class="font-bold text-teal-800 text-xl mb-4 border-b border-stone-100 pb-2">1. Nguyên tắc Đối xử Tối huệ quốc (MFN)</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                    <div class="bg-teal-50 p-4 rounded-xl border border-teal-100 mb-4">
+                        <strong class="text-teal-900 block mb-1">Khái niệm:</strong>
+                        <p class="text-sm text-stone-700">Là sự đối xử ưu đãi nhất mà một quốc gia dành cho các đối tác thương mại của mình. Bất kỳ ưu đãi thương mại nào dành cho một nước thứ ba cũng phải được áp dụng cho các nước thành viên khác một cách vô điều kiện[cite: 46].</p>
+                        <strong class="text-teal-900 block mt-3 mb-1">Mục tiêu:</strong>
+                        <p class="text-sm text-stone-700">Xóa bỏ phân biệt đối xử giữa các quốc gia, giúp các nước nhỏ nhận được lợi thế tương đương như các nước lớn[cite: 46].</p>
+                    </div>
+                    
+                    <h4 class="font-bold text-slate-800 mb-2 text-sm">Cơ sở pháp lý:</h4>
+                    <table class="w-full text-left text-sm border-collapse bg-white border border-stone-200 mb-4">
+                        <thead><tr class="bg-stone-100"><th class="p-2 border-r border-b">Lĩnh vực</th><th class="p-2 border-b">Cơ sở pháp lý [cite: 49]</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-2 border-r border-b">Thương mại Hàng hóa</td><td class="p-2 border-b font-mono text-teal-700">Điều I GATT 1994</td></tr>
+                            <tr><td class="p-2 border-r border-b">Thương mại Dịch vụ</td><td class="p-2 border-b font-mono text-teal-700">Điều II GATS</td></tr>
+                            <tr><td class="p-2 border-r">Sở hữu trí tuệ</td><td class="p-2 font-mono text-teal-700">Điều 4 TRIPS</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="bg-amber-50 p-5 rounded-xl border border-amber-200">
+                    <h4 class="font-bold text-amber-900 flex items-center gap-2 mb-3">⚠️ Các ngoại lệ hợp pháp của MFN</h4>
+                    <p class="text-sm text-amber-800 mb-3 italic">Cho phép vi phạm MFN hợp pháp trong các trường hợp:</p>
+                    <ul class="space-y-3 text-sm text-stone-800">
+                        <li class="flex gap-2 items-start"><span class="text-amber-500">▶</span> <div><strong>Hiệp định thương mại khu vực (RTAs/FTAs):</strong> Điều XXIV GATT (hàng hóa) và Điều V GATS (dịch vụ)[cite: 43].</div></li>
+                        <li class="flex gap-2 items-start"><span class="text-amber-500">▶</span> <div><strong>Hệ thống ưu đãi phổ cập (GSP) / Điều khoản trao quyền:</strong> Các nước phát triển được phép dành ưu đãi thuế quan đơn phương cho các nước đang và kém phát triển[cite: 44].</div></li>
+                        <li class="flex gap-2 items-start"><span class="text-amber-500">▶</span> <div><strong>Các biện pháp phòng vệ thương mại:</strong> Thuế chống bán phá giá, Thuế đối kháng (chỉ áp dụng với quốc gia vi phạm)[cite: 45].</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+            <h3 class="font-bold text-blue-800 text-xl mb-4 border-b border-stone-100 pb-2">2. Nguyên tắc Đối xử Quốc gia (NT)</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 mb-4">
+                        <strong class="text-blue-900 block mb-1">Khái niệm:</strong>
+                        <p class="text-sm text-stone-700">Là nguyên tắc loại bỏ sự phân biệt đối xử trong thương mại giữa hàng hóa/dịch vụ/doanh nghiệp trong nước và nước ngoài (hàng nhập khẩu)[cite: 46].</p>
+                        <p class="text-sm text-stone-700 font-bold mt-2 text-rose-600">Không được đối xử kém thuận lợi hơn (no less favourable) đối với sản phẩm nhập khẩu so với sản phẩm nội địa tương tự[cite: 47].</p>
+                    </div>
+
+                    <h4 class="font-bold text-slate-800 mb-2 text-sm">Cơ sở pháp lý & Phạm vi:</h4>
+                    <table class="w-full text-left text-sm border-collapse bg-white border border-stone-200">
+                        <thead class="bg-stone-100"><tr><th class="p-2 border-r border-b">Lĩnh vực</th><th class="p-2 border-r border-b">Điều khoản</th><th class="p-2 border-b">Phạm vi [cite: 49]</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-2 border-r border-b">Hàng hóa</td><td class="p-2 border-r border-b font-mono text-blue-700">Điều III GATT 1994 [cite: 50]</td><td class="p-2 border-b text-xs">Thuế, phí nội địa, luật lệ ảnh hưởng phân phối[cite: 51].</td></tr>
+                            <tr><td class="p-2 border-r border-b">Dịch vụ</td><td class="p-2 border-r border-b font-mono text-blue-700">Điều XVII GATS [cite: 52]</td><td class="p-2 border-b text-xs">Chỉ áp dụng các ngành trong "Biểu cam kết cụ thể"[cite: 53].</td></tr>
+                            <tr><td class="p-2 border-r">SHTT</td><td class="p-2 border-r font-mono text-blue-700">Điều 3 TRIPS [cite: 54]</td><td class="p-2 text-xs">Tiêu chuẩn bảo hộ quyền SHTT[cite: 55].</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                        <h4 class="font-bold text-slate-800 mb-2 text-sm">Phạm vi NT trong TM Hàng hóa (Điều III GATT)</h4>
+                        <ul class="text-sm space-y-2 text-stone-700">
+                            <li><strong class="text-blue-700">Điều III.2 (Thuế nội địa):</strong> Điều chỉnh Thuế và khoản thu nội địa. Áp dụng khắt khe với "sản phẩm tương tự" và "cạnh tranh trực tiếp"[cite: 57, 58].</li>
+                            <li><strong class="text-blue-700">Điều III.4 (Quy định nội địa):</strong> Điều chỉnh Luật, quy định ảnh hưởng phân phối. Không được đối xử kém thuận lợi hơn[cite: 59, 60].</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                        <h4 class="font-bold text-amber-900 mb-2 text-sm">⚠️ Các ngoại lệ của NT</h4>
+                        <div class="text-sm text-stone-800">
+                            <strong>GATT 1994:</strong>
+                            <ul class="list-disc pl-5 mb-2 mt-1">
+                                <li>Mua sắm chính phủ (Điều III.8.a)[cite: 61].</li>
+                                <li>Trợ cấp riêng cho nhà SX nội địa (Điều III.8.b)[cite: 62].</li>
+                                <li>Hạn ngạch chiếu phim (Điều III.10)[cite: 63].</li>
+                            </ul>
+                            <strong>GATS:</strong>
+                            <ul class="list-disc pl-5 mt-1">
+                                <li>Đảm bảo thực hiện nghĩa vụ thuế dịch vụ (Điều XIV.d)[cite: 64].</li>
+                                <li>Mua sắm chính phủ (Điều XIII)[cite: 65].</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ch3" class="tab-content hidden">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6 flex items-center gap-2">Chương 3: Thương Mại Hàng Hóa & Các Biện Pháp Biên Giới <span class="bg-stone-200 text-stone-600 text-xs px-2 py-1 rounded-full ml-2">Premium 🔒</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card flex flex-col">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">📊 Phân Loại Thuế Quan</h3>
+                <div class="overflow-x-auto mb-4 flex-grow">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead><tr class="bg-stone-100"><th class="p-3 border-b">Loại thuế</th><th class="p-3 border-b">Đặc điểm và Cách tính [cite: 66]</th></tr></thead>
+                        <tbody class="divide-y divide-stone-200">
+                            <tr><td class="p-3 font-semibold text-teal-700">Theo giá trị (Ad valorem)</td><td class="p-3 text-stone-600">Tính theo tỷ lệ % trên giá trị hàng hóa nhập khẩu[cite: 67].</td></tr>
+                            <tr><td class="p-3 font-semibold text-teal-700">Tuyệt đối (Specific)</td><td class="p-3 text-stone-600">Tính bằng một số tiền cố định trên một đơn vị (VD: 5 USD/kg)[cite: 68].</td></tr>
+                            <tr><td class="p-3 font-semibold text-teal-700">Hỗn hợp (Compound)</td><td class="p-3 text-stone-600">Kết hợp áp dụng cả thuế theo giá trị và thuế tuyệt đối[cite: 69].</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-stone-800 p-6 rounded-2xl shadow-sm border border-stone-700 theory-card text-stone-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-white mb-3 text-lg flex items-center justify-between">
+                        <span>🧮 Công Cụ Tính Thuế Nhập Khẩu Cơ Bản</span>
+                    </h3>
+                    <div class="bg-stone-900 p-3 rounded-lg mb-4 text-center text-teal-300 font-mono text-sm border border-stone-600">
+                        $P_{final}=P_{origin}+(P_{origin}\times T_{rate})$
+                    </div>
+                    <p class="text-xs text-stone-400 mb-4">$P_{origin}$: Giá gốc [cite: 71] | $T_{rate}$: Thuế suất [cite: 71]</p>
+                    
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-xs text-stone-300 mb-1">Giá trị gốc ($P_{origin}$ - VND):</label>
+                            <input type="number" id="calc-origin" class="w-full bg-stone-700 border border-stone-600 text-white rounded p-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500" placeholder="VD: 1000000" value="1000000">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-stone-300 mb-1">Mức thuế suất ($T_{rate}$ - %):</label>
+                            <input type="number" id="calc-rate" class="w-full bg-stone-700 border border-stone-600 text-white rounded p-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500" placeholder="VD: 15" value="15">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button onclick="window.calculateTariff()" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-2 rounded shadow transition-colors text-sm">Tính Giá Trị Cuối ($P_{final}$)</button>
+                    <div id="calc-result" class="mt-3 bg-stone-700 p-3 rounded text-sm text-center min-h-[3rem] border border-stone-600 hidden"></div>
+                </div>
+                            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-slate-800 mb-3 text-lg text-rose-700">🚫 Hạn chế định lượng (Quantitative Restriction)</h3>
+                    <p class="text-sm text-stone-700 mb-3 bg-rose-50 p-3 rounded border border-rose-100">
+                        <strong>Khái niệm:</strong> Các biện pháp cấm hoặc hạn chế xuất/nhập khẩu thông qua hạn ngạch, giấy phép, hoặc biện pháp phi thuế quan khác[cite: 72].<br><br>
+                        <strong>Nguyên tắc:</strong> WTO cấm áp dụng hạn chế định lượng (Điều XI.1 GATT)[cite: 73].
+                    </p>
+                    <div class="mt-4">
+                        <strong class="text-sm text-slate-800 block mb-2">Quy trình áp dụng (Khi được phép - Điều XIII GATT):</strong>
+                        <div class="step-container mb-2"><div class="step-number">1</div><strong class="text-teal-800 text-sm">Không phân biệt đối xử</strong><p class="text-xs text-stone-600">Áp dụng tương tự với tất cả các nước (Điều XIII.1)[cite: 79, 80].</p></div>
+                        <div class="step-container mb-2"><div class="step-number">2</div><strong class="text-teal-800 text-sm">Phân bổ khối lượng</strong><p class="text-xs text-stone-600">Tỷ trọng sát với thực tế nhất (Điều XIII.2-4)[cite: 81, 82].</p></div>
+                        <div class="step-container mb-0 border-l-0"><div class="step-number">3</div><strong class="text-teal-800 text-sm">Thỏa thuận thị phần</strong><p class="text-xs text-stone-600">Dựa trên Base period nếu không thỏa thuận được[cite: 83].</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-amber-50 p-6 rounded-2xl shadow-sm border border-amber-200 theory-card">
+                    <h3 class="font-bold text-amber-900 mb-3 text-lg">Ngoại lệ cho phép áp dụng QR</h3>
+                    <ul class="text-sm space-y-2 text-amber-800 list-disc pl-5">
+                        <li>Ngăn ngừa/khắc phục thiếu hụt thực phẩm, sản phẩm thiết yếu (Điều XI.2.a)[cite: 75].</li>
+                        <li>Áp dụng tiêu chuẩn phân loại hàng hóa quốc tế (Điều XI.2.b)[cite: 76].</li>
+                        <li>Hạn chế nhập khẩu nông nghiệp, thủy sản trong trường hợp cụ thể (Điều XI.2.c)[cite: 77].</li>
+                        <li>Bảo vệ tài chính đối ngoại và cán cân thanh toán (Điều XII GATT)[cite: 78].</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-slate-800 mb-3 text-lg">Thủ tục Cấp phép nhập khẩu</h3>
+                    <table class="w-full text-left text-sm border-collapse bg-stone-50 border border-stone-200">
+                        <tbody class="divide-y divide-stone-200">
+                            <tr><th class="p-3 w-1/3 text-teal-800 border-r">Tự động (Automatic)</th><td class="p-3 text-stone-600">Phê duyệt mọi trường hợp, chủ yếu để kiểm soát thống kê[cite: 85, 86].</td></tr>
+                            <tr><th class="p-3 w-1/3 text-rose-800 border-r">Không tự động (Non-auto)</th><td class="p-3 text-stone-600">Áp dụng cho hạn ngạch. Không được tạo thêm gánh nặng hạn chế thương mại[cite: 87, 88].</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ch4" class="tab-content hidden">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6 flex items-center gap-2">Chương 4: Cơ Chế Giải Quyết Tranh Chấp Trong WTO <span class="bg-stone-200 text-stone-600 text-xs px-2 py-1 rounded-full ml-2">Premium 🔒</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl shadow-sm border border-stone-700 text-white theory-card flex flex-col justify-center">
+                <h3 class="font-bold text-teal-300 mb-3 text-lg border-b border-stone-600 pb-2">⚖️ Đặc Điểm Cốt Lõi</h3>
+                <p class="text-sm text-stone-300 mb-3"><strong>Cơ sở pháp lý:</strong> DSU và Điều XXII, XXIII GATT 1994[cite: 89].</p>
+                <div class="bg-slate-700/50 p-3 rounded-lg border border-slate-600 text-sm text-stone-200">
+                    <ul class="list-disc pl-4 space-y-1">
+                        <li>Ưu tiên đàm phán tự nguyện[cite: 91].</li>
+                        <li>Tính ràng buộc cao nhờ cơ chế "Đồng thuận nghịch" (Reverse-consensus)[cite: 91].</li>
+                        <li>Tuân thủ mốc thời gian nghiêm ngặt[cite: 108].</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">⏳ Timeline Giải Quyết Tranh Chấp Chính Thức</h3>
+                <div class="pl-2">
+                    <div class="timeline-item">
+                        <strong class="text-teal-800 block text-base">Giai đoạn 1: Tham vấn (Consultation)</strong>
+                        <span class="text-sm text-stone-600">Tối đa 60 ngày. Các bên tự đàm phán, trung gian, hòa giải[cite: 93].</span>
+                    </div>
+                    <div class="timeline-item">
+                        <strong class="text-teal-800 block text-base">Giai đoạn 2: Ban Hội thẩm (Panel)</strong>
+                        <span class="text-sm text-stone-600">Từ 6-9 tháng. DSB lập BHT &rarr; BHT xem xét hồ sơ &rarr; Thông qua báo cáo sơ thẩm[cite: 94, 95].</span>
+                    </div>
+                    <div class="timeline-item">
+                        <strong class="text-teal-800 block text-base">Giai đoạn 3: Cơ quan Phúc thẩm (Appellate Body)</strong>
+                        <span class="text-sm text-stone-600">Từ 60-90 ngày. Rà soát tính pháp lý[cite: 96].</span>
+                    </div>
+                    <div class="timeline-item">
+                        <strong class="text-teal-800 block text-base">Giai đoạn 4: Thông qua (Adoption)</strong>
+                        <span class="text-sm text-stone-600">DSB thông qua báo cáo dựa trên cơ chế đồng thuận nghịch[cite: 97].</span>
+                    </div>
+                </div>
+                            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+            <h3 class="font-bold text-slate-800 mb-4 text-lg text-center">🔄 Quy Trình Trả Đũa Và Bồi Thường</h3>
+            <p class="text-sm text-stone-500 mb-6 text-center italic">Áp dụng khi bên thua kiện không thực thi phán quyết trong "Khoảng thời gian hợp lý".</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 text-6xl text-stone-100 font-black group-hover:scale-110 transition-transform">1</div>
+                    <strong class="text-teal-700 block mb-2 relative z-10">Yêu cầu Bồi thường</strong>
+                    <p class="text-xs text-stone-600 relative z-10">Tự nguyện, dựa trên nhượng bộ thuế quan. Không trừng phạt, chỉ tạm thời (Điều XXII)[cite: 99, 100].</p>
+                </div>
+                
+                <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 text-6xl text-amber-100 font-black group-hover:scale-110 transition-transform">2</div>
+                    <strong class="text-amber-700 block mb-2 relative z-10">Yêu cầu Trả đũa</strong>
+                    <p class="text-xs text-amber-800 relative z-10">Nếu không thỏa thuận được bồi thường sau 20 ngày từ khi hết hạn thời gian hợp lý (Điều XXII.3)[cite: 101, 102].</p>
+                </div>
+
+                <div class="bg-rose-50 p-4 rounded-xl border border-rose-200 relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 text-6xl text-rose-100 font-black group-hover:scale-110 transition-transform">3</div>
+                    <strong class="text-rose-700 block mb-2 relative z-10">Xin phép DSB</strong>
+                    <p class="text-xs text-rose-800 relative z-10">Bên thắng kiện xin phép đình chỉ nhượng bộ. Tuyệt đối cấm trả đũa đơn phương[cite: 103, 104].</p>
+                </div>
+
+                <div class="bg-purple-50 p-4 rounded-xl border border-purple-200 relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 text-6xl text-purple-100 font-black group-hover:scale-110 transition-transform">4</div>
+                    <strong class="text-purple-700 block mb-2 relative z-10">Trả đũa chéo (Cross)</strong>
+                    <p class="text-xs text-purple-800 relative z-10">DSB cho phép trả đũa cùng lĩnh vực hoặc "vắt chéo" sang lĩnh vực/hiệp định khác[cite: 104, 105].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script>
+// ==========================================
+// CORE UI & TABS
+// ==========================================
+let activeTabId = 'ch1';
+
+window.attemptSwitchTab = (t) => { 
+    forceSwitchTab(t); 
+};
+
+function forceSwitchTab(t) { 
+    activeTabId = t; 
+    
+    document.querySelectorAll('.tab-content').forEach(s => { 
+        s.classList.add('hidden'); 
+        s.classList.remove('animate-fade-in'); 
+    }); 
+    
+    const targetTab = document.getElementById(t);
+    if (targetTab) {
+        targetTab.classList.remove('hidden'); 
+        targetTab.classList.add('animate-fade-in');
+        
+        const offset = 150; 
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetTab.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+    
+    document.querySelectorAll('.nav-btn').forEach(b => { 
+        b.classList.remove('tab-active','text-teal-600', 'bg-teal-50'); 
+        b.classList.add('text-stone-500'); 
+        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
+            b.classList.add('tab-active','text-teal-600'); 
+            b.classList.remove('text-stone-500'); 
+        }
+    }); 
+    
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav) mobileNav.value = t;
+}
+
+// ==========================================
+// CALCULATOR CƠ BẢN (CHƯƠNG 3)
+// ==========================================
+window.calculateTariff = function() {
+    const originInput = document.getElementById('calc-origin').value;
+    const rateInput = document.getElementById('calc-rate').value;
+    const resultBox = document.getElementById('calc-result');
+    
+    if(!originInput || !rateInput) {
+        resultBox.innerHTML = '<span class="text-rose-400">Vui lòng nhập đủ thông tin!</span>';
+        resultBox.classList.remove('hidden');
+        return;
+    }
+
+    const origin = parseFloat(originInput);
+    const rate = parseFloat(rateInput);
+    
+    if(origin < 0 || rate < 0) {
+        resultBox.innerHTML = '<span class="text-rose-400">Số liệu không hợp lệ!</span>';
+        resultBox.classList.remove('hidden');
+        return;
+    }
+
+    const tax = origin * (rate / 100);
+    const final = origin + tax;
+
+    resultBox.innerHTML = `
+        <div class="text-stone-300">Tiền thuế = ${origin.toLocaleString('vi-VN')} × ${rate}% = <span class="font-mono text-amber-300">${tax.toLocaleString('vi-VN')}</span></div>
+        <div class="mt-2 text-base text-teal-300"><strong>Giá trị sau thuế ($P_{final}$) = ${final.toLocaleString('vi-VN')} VND</strong></div>
+    `;
+    resultBox.classList.remove('hidden');
+    
+    // Re-render math rendering for the newly injected dynamic string if MathJax is ready
+    if(window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([resultBox]).catch((err) => console.log(err));
+    }
+};
+</script>
+</body>
+</html>

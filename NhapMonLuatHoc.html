@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta name="google-site-verification" content="wXFetqPPe7KsMk4BUPnmxSaSTpmeoqbbTU3hY5aZHSM" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+<title>Ôn thi Nhập Môn Luật Học - Trắc nghiệm, tài liệu, đề thi</title>
+<meta name="description" content="Website ôn thi Nhập Môn Luật Học, sơ đồ tư duy, tài liệu giúp sinh viên ôn tập hiệu quả">
+
+<!-- SEO CƠ BẢN (Từ khóa chuẩn môn Luật) -->
+<meta name="keywords" content="nhập môn luật học, pháp luật đại cương, quy phạm pháp luật, vi phạm pháp luật, trách nhiệm pháp lý, nhà nước và pháp luật, trắc nghiệm luật học, ôn thi UEL, edu connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta name="robots" content="index, follow"> 
+
+<!-- SEO MẠNG XÃ HỘI (Open Graph) -->
+<meta property="og:title" content="Bí Kíp Phá Đảo Nhập Môn Luật Học - Edu Connect">
+<meta property="og:description" content="Hệ thống hóa kiến thức pháp luật bằng sơ đồ tư duy trực quan. Luyện đề trắc nghiệm bám sát cấu trúc đề thi UEL, tự tin qua môn dễ dàng!">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png"> 
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/NhapMonLuatHoc">
+<meta property="og:type" content="article">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- TỐI ƯU: Thêm thuộc tính defer để không chặn tải trang -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 700; }
+.glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.solution-step { border-left: 3px solid #0d9488; padding-left: 1.25rem; margin-bottom: 1rem; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.modal-overlay { background-color: rgba(28, 25, 23, 0.75); backdrop-filter: blur(4px); }
+.google-btn { background-color: #ffffff; color: #3c4043; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); transition: background-color 0.2s, box-shadow 0.2s; }
+.google-btn:hover { background-color: #f8f9fa; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); }
+
+@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.live-pulse { animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* Timeline Custom Styles */
+.timeline-dot { position: relative; }
+.timeline-dot::before { content: ''; position: absolute; left: -29px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background-color: #0d9488; border: 2px solid #fff; box-shadow: 0 0 0 2px #0d9488; }
+</style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<!-- INITIAL WELCOME MODAL -->
+<div id="welcome-modal" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+<div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="welcome-modal-content">
+<div class="text-center mb-6">
+<div class="text-5xl mb-4">⚖️</div>
+<h2 class="text-2xl font-extrabold text-slate-900 mb-2">Sổ Tay Luật Học</h2>
+<p class="text-stone-600 text-sm">Đăng nhập để mở khóa toàn bộ bí kíp, bảng phân tích lỗi và hệ thống pháp luật chuyên sâu.</p>
+</div>
+<div class="space-y-4">
+<button onclick="loginGoogleReal()" class="google-btn w-full py-3 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3">
+<span class="text-lg font-black text-blue-600">G</span> 
+<span>Đăng nhập bằng Google</span>
+</button>
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-stone-200"></div>
+<span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
+<div class="flex-grow border-t border-stone-200"></div>
+</div>
+<button onclick="window.location.href='index.html'" 
+        style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
+        onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
+        onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
+    🏠 Quay về Trang chủ
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center min-h-[4rem] py-2 flex-wrap md:flex-nowrap gap-y-2">
+<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand & Tên Môn Học -->
+        
+
+        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+            <div class="flex flex-col justify-center min-w-0">
+                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
+                
+                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
+                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">⚖️ Nhập Môn Luật Học</p>
+                </div>
+            </div>
+        </a>
+
+
+
+<!-- CÁC CHƯƠNG ĐÃ TÁCH RỜI (Gói trọn bằng flex-wrap để tự động rớt dòng nếu thiếu chỗ) -->
+<div class="hidden md:flex flex-wrap flex-1 justify-center gap-1.5 items-center px-4" id="nav-menu">
+<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2.5 py-1.5 text-sm font-medium transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.1: Nhà Nước</button>
+<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.2: IGOs</button>
+<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.3: PL Chung</button>
+<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.4: QPPL</button>
+<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100 flex items-center gap-1">Ch.5: QH Pháp Luật <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100 flex items-center gap-1">Ch.6: Vi Phạm <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch7')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100 flex items-center gap-1">Ch.7: HTPL VN <span class="premium-lock text-xs"></span></button>
+</div>
+
+<div class="flex items-center shrink-0">
+<!-- BỘ ĐẾM SỐ ONLINE -->
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+            <span id="online-count" class="mr-1 sm:mr-1">...</span> 
+            <span class="hidden sm:inline">online</span>
+        </div>
+
+<!-- User Profile / Login Area -->
+<div class="border-l border-stone-300 pl-4">
+<button id="nav-login-btn" onclick="showWelcomeModal()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+<div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+<img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+<select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+<option value="ch1">Chương 1: Những Vấn Đề Cơ Bản Về Nhà Nước</option>
+<option value="ch2">Chương 2: Tổ Chức Liên Chính Phủ (IGOs)</option>
+<option value="ch3">Chương 3: Những Vấn Đề Chung Về Pháp Luật</option>
+<option value="ch4">Chương 4: Quy Phạm Pháp Luật</option>
+<option value="ch5">Chương 5: Quan Hệ Pháp Luật</option>
+<option value="ch6">Chương 6: Vi Phạm PL & TNPL</option>
+<option value="ch7">Chương 7: Hệ Thống PL VN</option>
+</select>
+
+        <div class="absolute right-8 top-1/2 transform -translate-y-1/2 flex items-center">
+            <button id="mobile-sidebar-btn" class="p-1.5 text-teal-700 hover:bg-teal-100 rounded transition-colors focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+</div>
+</div>
+</nav>
+
+<!-- Main Content Container -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+
+<div class="mb-12 text-center">
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Bí Kíp "Phá Đảo" Nhập Môn Luật Học</h1>
+<p class="text-lg text-stone-600 max-w-2xl mx-auto mb-8">Hệ thống hóa toàn bộ lý thuyết, bản chất nhà nước, hệ thống pháp luật và các loại hình vi phạm.</p>
+
+<!-- Hướng dẫn sử dụng nhanh -->
+<div class="inline-block bg-white border-2 border-teal-100 rounded-2xl p-5 md:p-6 text-left max-w-3xl shadow-sm hover:shadow-md transition-shadow">
+<h3 class="font-bold text-teal-800 text-lg mb-3 flex items-center"><span class="text-2xl mr-2">💡</span> Hướng Dẫn Ôn Tập Hiệu Quả</h3>
+<ul class="text-sm md:text-base text-stone-700 space-y-3">
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Flashcard Khái niệm:</strong> Các định nghĩa cốt lõi được đóng khung rõ ràng, hãy ghi nhớ các từ khóa in đậm.</span>
+</li>
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Timeline Lịch sử & Bậc văn bản:</strong> Xem các luồng sự kiện và trật tự hệ thống luật từ trên xuống dưới một cách trực quan.</span>
+</li>
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Bảng so sánh:</strong> Đặc biệt lưu ý phần các loại lỗi (Cố ý vs Vô ý) và bản chất nhà nước để tránh mất điểm trắc nghiệm.</span>
+</li>
+</ul>
+</div>
+</div>
+
+<!-- ================= SECTION: CHƯƠNG 1 ================= -->
+<section id="ch1" class="tab-content block">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1: Những Vấn Đề Cơ Bản Về Nhà Nước</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Nắm vững cội nguồn hình thành nhà nước theo các trường phái khác nhau, hiểu rõ tại sao nhà nước lại cần thu thuế và ban hành pháp luật để duy trì quyền lực công cộng. Các ví dụ minh họa sẽ giúp bạn vượt qua dễ dàng các câu hỏi tình huống trắc nghiệm.</p>
+</div>
+
+<!-- Nguồn gốc & Hình thành -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
+    <!-- Các học thuyết -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2 flex items-center gap-2">🌍 Các Học Thuyết Về Nguồn Gốc Nhà Nước</h3>
+        
+        <div class="space-y-4">
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                <h4 class="font-bold text-teal-800 mb-2">1. Các học thuyết phi Marx (Non-Marxist)</h4>
+                <ul class="text-sm text-stone-700 space-y-3 list-disc pl-5">
+                    <li>
+                        <strong>Thuyết Thần quyền (Divine right theory):</strong> Kéo dài từ thế kỷ 15 - 18, nhà nước do Thượng đế tạo ra, quyền cai trị là "quyền thần thánh".. Chống đối nhà nước là chống đối Thượng đế.. 
+                        <br><em class="text-stone-500 text-xs">Ví dụ: Các Pharaoh Ai Cập cổ đại tự xưng là con của thần mặt trời Ra.</em>
+                    </li>
+                    <li>
+                        <strong>Thuyết Tiến hóa (Evolutionary theory):</strong> Nhà nước phát triển từ quyền uy của người đứng đầu gia đình, trưởng lão trong bộ tộc..
+                    </li>
+                    <li>
+                        <strong>Thuyết Bạo lực (Force theory):</strong> Nhà nước xuất hiện khi một nhóm người dùng bạo lực khuất phục những người khác (chân lý kẻ mạnh)..
+                    </li>
+                    <li class="bg-white p-2 rounded border border-stone-200 shadow-sm mt-2">
+                        <strong>Thuyết Khế ước xã hội (Social contract theory):</strong> Người dân giao quyền cho Nhà nước để giữ trật tự xã hội; đổi lại Nhà nước phải bảo vệ người dân.. Nếu vi phạm khế ước, người dân có quyền lập chính quyền mới..
+                        <div class="mt-2"></div>
+                        <em class="text-stone-500 text-xs block mt-1">Ví dụ: Hiến pháp chính là một dạng "bản hợp đồng" giữa nhà nước và công dân, trong đó quy định rõ quyền và nghĩa vụ của đôi bên.</em>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-xl border border-rose-200">
+                <h4 class="font-bold text-rose-800 mb-2">2. Học thuyết Marx-Lenin (Marxist)</h4>
+                <p class="text-sm text-stone-700">Nhà nước không sinh ra vì lợi ích chung.. Nó là <strong>sản phẩm và biểu hiện của những mâu thuẫn giai cấp không thể điều hòa</strong>.. Nhà nước là công cụ để giai cấp này áp bức giai cấp khác..</p>
+                <div class="mt-3 text-xs bg-white p-2 rounded border border-rose-100 text-rose-900">
+                    <strong>💡 Điểm cốt lõi để làm trắc nghiệm:</strong> Theo Mác, nhà nước KHÔNG tồn tại vĩnh viễn. Khi nào xã hội không còn giai cấp, nhà nước sẽ tự tiêu vong.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline 5 Hình thái -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2 flex items-center gap-2">⏳ Quá Trình Hình Thành Nhà Nước</h3>
+        <p class="text-sm text-stone-500 mb-4 italic">Tiến trình phát triển qua 5 Hình thái Kinh tế - Xã hội.</p>
+        
+        <div class="pl-6 border-l-2 border-teal-200 space-y-6">
+            <div class="timeline-dot">
+                <h4 class="font-bold text-teal-800">1. Cộng sản nguyên thủy (Primitive commune)</h4>
+                <p class="text-sm text-stone-600">Chưa có nhà nước, quản lý bằng quyền lực xã hội, tù trưởng, hội đồng thị tộc.. Chế độ sở hữu chung, làm chung hưởng chung.</p>
+            </div>
+            <div class="timeline-dot">
+                <h4 class="font-bold text-amber-600">2. Bước ngoặt: 3 Lần phân công lao động xã hội</h4>
+                <p class="text-sm text-stone-600 mt-1">Phân công lao động xã hội lần 1, 2, 3 dẫn đến xuất hiện sở hữu tư nhân, làm phân hóa giàu nghèo và sinh ra mâu thuẫn giai cấp..</p>
+                <ul class="text-xs text-stone-500 mt-2 list-disc pl-4 space-y-1">
+                    <li><strong>Lần 1:</strong> Chăn nuôi tách khỏi trồng trọt (Tạo ra của cải dư thừa).</li>
+                    <li><strong>Lần 2:</strong> Thủ công nghiệp tách khỏi nông nghiệp.</li>
+                    <li><strong>Lần 3:</strong> Thương nghiệp xuất hiện (Thương nhân ra đời, đẩy nhanh tích lũy tư bản). Đây là yếu tố then chốt phá vỡ công xã nguyên thủy.</li>
+                </ul>
+            </div>
+            <div class="timeline-dot">
+                <h4 class="font-bold text-slate-800">3. Chiếm hữu nô lệ (Slavery Possession)</h4>
+                <p class="text-sm text-stone-600">Nhà nước đầu tiên xuất hiện., nhằm bảo vệ quyền lợi của giới chủ nô và đàn áp sự phản kháng của nô lệ.</p>
+            </div>
+            <div class="timeline-dot">
+                <h4 class="font-bold text-slate-800">4. Phong kiến (Feudalism).</h4>
+                <p class="text-sm text-stone-600">Quyền lực tập trung vào địa chủ, vua chúa. Kinh tế dựa vào nông nghiệp và bóc lột nông nô.</p>
+            </div>
+            <div class="timeline-dot">
+                <h4 class="font-bold text-slate-800">5. Tư bản chủ nghĩa (Capitalism).</h4>
+                <p class="text-sm text-stone-600">Nhà nước bảo vệ lợi ích của giai cấp tư sản, vận hành theo cơ chế thị trường tự do.</p>
+            </div>
+            <div class="timeline-dot">
+                <h4 class="font-bold text-rose-700">6. Cộng sản chủ nghĩa (Communism).</h4>
+                <p class="text-sm text-stone-600">Mục tiêu cuối cùng, xóa bỏ giai cấp và hướng tới việc nhà nước tự tiêu vong.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Khái niệm, Đặc trưng, Bản chất -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <!-- Khái niệm (Flashcard) -->
+    <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl shadow-sm border border-teal-200 p-8 flex flex-col justify-center text-center">
+        <div class="text-teal-600 text-5xl mb-4">🏛️</div>
+        <h3 class="text-xl font-bold text-teal-900 mb-4 uppercase tracking-wider">Khái niệm Nhà Nước</h3>
+        <p class="text-base text-teal-800 leading-relaxed font-medium">
+            Là một tổ chức chính trị có <strong>quyền lực công cộng đặc biệt</strong>, được thành lập và tồn tại do yêu cầu <strong>giải quyết xung đột giai cấp</strong> và <strong>cung cấp dịch vụ công</strong>..
+        </p>
+    </div>
+
+    <!-- Bản chất -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:col-span-1">
+        <h3 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Bản Chất Của Nhà Nước</h3>
+        <div class="space-y-4 text-sm">
+            <div class="p-4 bg-rose-50 rounded-lg border border-rose-100">
+                <strong class="text-rose-800 text-base flex items-center gap-2 mb-2">⚔️ Bản chất Giai cấp (Class nature)</strong>
+                <p class="text-stone-700 mb-2">Là bản chất cốt lõi.. Thể hiện ý chí và lợi ích của giai cấp thống trị trên 3 lĩnh vực.:</p>
+                <ul class="list-disc pl-5 space-y-1 text-stone-600">
+                    <li><strong>Kinh tế:</strong> Nắm giữ tư liệu sản xuất. (VD: Ban hành luật bảo vệ quyền sở hữu của các tập đoàn, giới chủ).</li>
+                    <li><strong>Chính trị:</strong> Kiểm soát bộ máy cưỡng chế như quân đội, cảnh sát, nhà tù..</li>
+                    <li><strong>Tư tưởng:</strong> Áp đặt hệ tư tưởng của giai cấp. thông qua giáo dục, truyền thông.</li>
+                </ul>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                <strong class="text-blue-800 text-base flex items-center gap-2 mb-2">🤝 Bản chất Xã hội (Social nature)</strong>
+                <p class="text-stone-700">Điều hòa xung đột giai cấp, bảo vệ lợi ích chung, cung cấp dịch vụ công. (sản xuất, thủy lợi, chống ô nhiễm, bảo vệ trật tự....).</p>
+                <em class="text-stone-500 block mt-2 text-xs">VD: Xây dựng cơ sở hạ tầng giao thông, logistics, trường đại học, trạm y tế phục vụ toàn dân.</em>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5 Đặc trưng chi tiết -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 mb-8">
+    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2 text-center">5 Đặc Trưng Cốt Lõi Của Nhà Nước</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        
+        <div class="flex items-start gap-3">
+            <div class="bg-teal-100 text-teal-700 p-2 rounded-lg text-xl">🗺️</div>
+            <div>
+                <strong class="text-slate-800 block mb-1">1. Quản lý dân cư & lãnh thổ.</strong>
+                <p class="text-sm text-stone-600">Quản lý theo các đơn vị hành chính lãnh thổ (Tỉnh, Huyện, Xã) thay vì theo huyết thống hay bộ tộc như thời kỳ nguyên thủy. Gắn liền với việc cấp CCCD, hộ khẩu.</p>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+            <div class="bg-teal-100 text-teal-700 p-2 rounded-lg text-xl">👑</div>
+            <div>
+                <strong class="text-slate-800 block mb-1">2. Có Chủ quyền (Sovereignty).</strong>
+                <p class="text-sm text-stone-600">Quyền tối cao về đối nội (tự quyết định chính sách quốc gia) và độc lập về đối ngoại (không bị quốc gia khác can thiệp).</p>
+                <div class="mt-2"></div>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+            <div class="bg-teal-100 text-teal-700 p-2 rounded-lg text-xl">⚖️</div>
+            <div>
+                <strong class="text-slate-800 block mb-1">3. Có quyền lực công cộng đặc biệt.</strong>
+                <p class="text-sm text-stone-600">Được đảm bảo bằng một bộ máy cưỡng chế chuyên nghiệp tách rời khỏi quần chúng (Công an, Tòa án, Quân đội) để duy trì trật tự.</p>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-3 md:col-span-1 md:col-start-1">
+            <div class="bg-teal-100 text-teal-700 p-2 rounded-lg text-xl">📜</div>
+            <div>
+                <strong class="text-slate-800 block mb-1">4. Ban hành Pháp luật (Law).</strong>
+                <p class="text-sm text-stone-600">Nhà nước là tổ chức duy nhất có quyền đặt ra các quy tắc xử sự mang tính bắt buộc chung cho toàn xã hội để quản lý đất nước.</p>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-3 md:col-span-2">
+            <div class="bg-teal-100 text-teal-700 p-2 rounded-lg text-xl">💰</div>
+            <div>
+                <strong class="text-slate-800 block mb-1">5. Thu Thuế (Tax).</strong>
+                <p class="text-sm text-stone-600">Nhà nước không trực tiếp làm ra của cải vật chất nhưng lại phải nuôi dưỡng bộ máy quản lý khổng lồ và đầu tư công. Do đó, thu thuế là nguồn lực tài chính bắt buộc để duy trì quyền lực và các chính sách kinh tế vĩ mô.</p>
+                <div class="mt-2 text-xs bg-stone-50 p-2 rounded border border-stone-200">
+                    <em><strong>Góc nhìn Kinh tế:</strong> Các sắc thuế quan trọng như Thuế Xuất nhập khẩu (Tariffs), Thuế Thu nhập doanh nghiệp (CIT), Thuế Giá trị gia tăng (VAT) chính là công cụ tài chính mạnh mẽ nhất thể hiện đặc trưng này.</em>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 2 ================= -->
+<section id="ch2" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 2: Tổ Chức Liên Chính Phủ (IGOs)</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Nắm vững địa vị pháp lý, đặc điểm và cách thức phân loại các IGOs. Đặc biệt lưu ý nhóm các tổ chức kinh tế toàn cầu và khu vực, vì đây là những chủ thể có tác động trực tiếp đến môi trường kinh doanh quốc tế và các hiệp định thương mại tự do (FTA).</p>
+</div>
+
+<!-- Khái niệm & Đặc điểm -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Khái niệm -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 flex flex-col">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2 flex items-center gap-2">🌐 Khái Niệm IGOs</h3>
+        
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-5 rounded-r mb-4 flex-1">
+            <p class="text-base text-blue-900 leading-relaxed">
+                <strong>IGO (Intergovernmental Organization)</strong> là một chủ thể của luật quốc tế, có các thành viên chủ yếu là các <strong>quốc gia có chủ quyền</strong>. 
+            </p>
+            <p class="text-sm text-blue-800 mt-3">
+                Được thành lập dựa trên <strong>điều ước quốc tế</strong>, có cơ cấu tổ chức, mục đích chung và có <strong>quyền/nghĩa vụ quốc tế độc lập</strong> với các quốc gia thành viên.
+            </p>
+        </div>
+        <div class="text-center mt-2">
+            
+        </div>
+    </div>
+
+    <!-- Đặc điểm -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2 flex items-center gap-2">✨ 4 Đặc Điểm Cốt Lõi</h3>
+        <ul class="text-sm text-stone-700 space-y-4">
+            <li class="flex items-start gap-3">
+                <div class="bg-teal-100 text-teal-700 p-1.5 rounded-lg shrink-0 mt-0.5">🚩</div>
+                <div>
+                    <strong class="text-slate-800 block">Thành viên là quốc gia có chủ quyền.</strong>
+                    <span class="text-stone-600 block mt-1">Chỉ có chính phủ của các quốc gia độc lập mới có quyền ký kết tham gia (Ví dụ: Chính phủ Việt Nam tham gia Liên Hợp Quốc). Tách biệt hoàn toàn với các tổ chức phi chính phủ (NGOs).</span>
+                </div>
+            </li>
+            <li class="flex items-start gap-3">
+                <div class="bg-teal-100 text-teal-700 p-1.5 rounded-lg shrink-0 mt-0.5">🏢</div>
+                <div>
+                    <strong class="text-slate-800 block">Hệ thống tổ chức chặt chẽ.</strong>
+                    <span class="text-stone-600 block mt-1">Các IGO luôn có bộ máy hành chính chuyên trách như: Đại hội đồng, Hội đồng, Ban thư ký.... để điều hành các hoạt động thường xuyên.</span>
+                </div>
+            </li>
+            <li class="flex items-start gap-3">
+                <div class="bg-teal-100 text-teal-700 p-1.5 rounded-lg shrink-0 mt-0.5">⚖️</div>
+                <div>
+                    <strong class="text-slate-800 block">Tư cách pháp nhân quốc tế riêng.</strong>
+                    <span class="text-stone-600 block mt-1">IGO có thể tự nhân danh mình để kiện, bị kiện hoặc sở hữu tài sản độc lập với các quốc gia thành viên đóng góp.</span>
+                </div>
+            </li>
+            <li class="flex items-start gap-3">
+                <div class="bg-teal-100 text-teal-700 p-1.5 rounded-lg shrink-0 mt-0.5">📜</div>
+                <div>
+                    <strong class="text-slate-800 block">Quyền hạn phụ thuộc Hiệp ước.</strong>
+                    <span class="text-stone-600 block mt-1">Quyền hạn của IGO bị giới hạn bởi hiệp ước thành lập. (Không có quyền lực tuyệt đối như một "Siêu nhà nước").</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Phân loại -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 mb-8">
+    <h3 class="text-xl font-bold text-slate-800 mb-6 text-center">Ma Trận Phân Loại IGOs (Classification)</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Theo tư cách thành viên -->
+        <div class="space-y-4">
+            <h4 class="font-bold text-teal-800 text-lg border-b border-teal-200 pb-1">1. Phân loại theo tư cách thành viên.</h4>
+            
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <strong class="text-slate-800 flex items-center gap-2 mb-2"><span class="text-lg">🌎</span> Toàn cầu (Global).</strong>
+                <p class="text-sm text-stone-600 mb-2">Mở rộng cho tất cả các quốc gia trên thế giới tham gia, không giới hạn vị trí địa lý.</p>
+                <div class="text-sm font-semibold text-teal-700 bg-white p-2 rounded border border-stone-100">Ví dụ tiêu biểu: Liên Hợp Quốc (UN).</div>
+            </div>
+
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <strong class="text-slate-800 flex items-center gap-2 mb-2"><span class="text-lg">🗺️</span> Khu vực (Regional).</strong>
+                <p class="text-sm text-stone-600 mb-2">Chỉ dành cho các quốc gia nằm trong một khu vực địa lý hoặc địa chính trị nhất định.</p>
+                <div class="text-sm font-semibold text-teal-700 bg-white p-2 rounded border border-stone-100">
+                    Ví dụ tiêu biểu: Liên minh Châu Âu (EU)., ASEAN., Liên minh Châu Phi (AU).
+                </div>
+                <div class="mt-2 text-center">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Theo lĩnh vực hoạt động -->
+        <div class="space-y-4">
+            <h4 class="font-bold text-amber-800 text-lg border-b border-amber-200 pb-1">2. Phân loại theo lĩnh vực hoạt động.</h4>
+            
+            <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                <ul class="space-y-4 text-sm text-stone-700">
+                    <li class="bg-white p-3 rounded-lg shadow-sm">
+                        <strong class="text-rose-700 flex items-center gap-2 mb-1">🛡️ An ninh - Quân sự (Security).</strong>
+                        <p class="text-stone-600">Mục đích bảo vệ quân sự lẫn nhau. <br><em>Ví dụ: NATO.</em></p>
+                    </li>
+                    <li class="bg-white p-3 rounded-lg shadow-sm border-l-4 border-l-blue-500">
+                        <strong class="text-blue-700 flex items-center gap-2 mb-1">📈 Kinh tế (Economy).</strong>
+                        <p class="text-stone-600 mb-2">Thúc đẩy thương mại tự do, giảm thuế quan, thiết lập luật chơi thương mại toàn cầu.</p>
+                        <p class="font-semibold text-blue-800"><em>Ví dụ: APEC., WTO.</em></p>
+                        <div class="mt-2 text-center">
+                            
+                        </div>
+                    </li>
+                    <li class="bg-white p-3 rounded-lg shadow-sm">
+                        <strong class="text-green-700 flex items-center gap-2 mb-1">⚕️ Y tế (Health).</strong>
+                        <p class="text-stone-600">Điều phối y tế công cộng toàn cầu. <br><em>Ví dụ: WHO.</em></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Địa vị pháp lý -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+    <h3 class="text-xl font-bold text-slate-800 mb-6 text-center">Địa Vị Pháp Lý Của IGOs (Legal Status)</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Quyền lợi -->
+        <div class="border border-green-200 bg-green-50/30 rounded-xl overflow-hidden">
+            <div class="bg-green-100 text-green-800 font-bold p-3 text-center text-lg border-b border-green-200">
+                🟢 Quyền Lợi (Rights)
+            </div>
+            <ul class="p-5 space-y-4 text-sm text-stone-700">
+                <li class="flex gap-2">
+                    <span class="text-green-600 font-bold">✓</span>
+                    <div>
+                        <strong>Ký kết điều ước quốc tế:</strong> Được quyền ký kết các điều ước quốc tế trong phạm vi thẩm quyền của mình.
+                    </div>
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-green-600 font-bold">✓</span>
+                    <div>
+                        <strong>Ban hành văn kiện:</strong> Có quyền ban hành các văn kiện có tính ràng buộc pháp lý đối với các quốc gia thành viên. 
+                        <br><em class="text-stone-500 text-xs">VD: Nghị quyết của Hội đồng Bảo an LHQ.</em>
+                    </div>
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-green-600 font-bold">✓</span>
+                    <div>
+                        <strong>Giải quyết tranh chấp:</strong> Có chức năng giải quyết tranh chấp giữa các quốc gia trong phạm vi ủy quyền. 
+                        <br><em class="text-stone-500 text-xs">VD: Cơ quan Phúc thẩm (Appellate Body) của WTO giải quyết xung đột thương mại.</em>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Nghĩa vụ -->
+        <div class="border border-rose-200 bg-rose-50/30 rounded-xl overflow-hidden">
+            <div class="bg-rose-100 text-rose-800 font-bold p-3 text-center text-lg border-b border-rose-200">
+                🔴 Nghĩa Vụ (Obligations)
+            </div>
+            <ul class="p-5 space-y-4 text-sm text-stone-700">
+                <li class="flex gap-2">
+                    <span class="text-rose-600 font-bold">⚠</span>
+                    <div>
+                        <strong>Tuân thủ luật pháp quốc tế:</strong> Bắt buộc phải tuân thủ nghiêm ngặt luật pháp quốc tế và bản thân hiệp ước đã thành lập nên tổ chức đó.
+                    </div>
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-rose-600 font-bold">⚠</span>
+                    <div>
+                        <strong>Tôn trọng chủ quyền:</strong> Phải tôn trọng chủ quyền của các quốc gia (dù là thành viên hay không) và các tổ chức quốc tế khác. Không được phép can thiệp vào công việc nội bộ của một quốc gia độc lập.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 3 ================= -->
+<section id="ch3" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Những Vấn Đề Chung Về Pháp Luật</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Hiểu được sự khác biệt giữa Pháp luật tự nhiên và Thực định. Trọng tâm của chương này là nằm lòng <strong>Thang bậc văn bản quy phạm pháp luật Việt Nam</strong> và thứ tự ưu tiên áp dụng các nguồn luật (Đặc biệt là Án lệ và Tập quán pháp trong dân sự, kinh tế).</p>
+</div>
+
+<!-- Flashcard Khái niệm PL VN -->
+<div class="bg-gradient-to-br from-white to-teal-50 rounded-2xl shadow-sm border border-teal-200 p-8 mb-8 text-center relative overflow-hidden">
+    <div class="absolute -right-10 -top-10 text-9xl opacity-10">⚖️</div>
+    <h3 class="text-lg font-bold text-teal-800 mb-4 uppercase tracking-wider">Định Nghĩa Quy Phạm Pháp Luật (Việt Nam)</h3>
+    <p class="text-base text-slate-800 max-w-4xl mx-auto leading-relaxed font-medium bg-white/80 p-6 rounded-xl shadow-sm border border-white">
+        "Quy phạm pháp luật là những <strong>quy tắc xử sự chung</strong>, có <strong>hiệu lực bắt buộc chung</strong>, được <strong>áp dụng lặp đi lặp lại nhiều lần</strong> đối với cơ quan, tổ chức, cá nhân trên phạm vi cả nước hoặc đơn vị hành chính nhất định, do <strong>cơ quan nhà nước, người có thẩm quyền ban hành</strong> và được <strong>Nhà nước bảo đảm thực hiện</strong>.".
+    </p>
+    <p class="text-xs text-stone-500 mt-4 font-semibold">(Trích: Khoản 1, Điều 3 Luật Ban hành văn bản quy phạm pháp luật 2015).</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Bản chất: Tự nhiên vs Thực định -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2 flex items-center gap-2">🌱 Pháp Luật Tự Nhiên vs Thực Định</h3>
+        
+        <div class="space-y-4">
+            <div class="p-4 bg-stone-50 rounded-xl border border-stone-200 border-l-4 border-l-green-500">
+                <strong class="text-green-800 text-base block mb-2">Pháp luật Tự nhiên (Natural law).</strong>
+                <p class="text-sm text-stone-600 mb-2">Những quy tắc điều chỉnh hành vi con người xuất phát từ tự nhiên, lý trí con người hoặc ý chí của Thượng đế. Có giá trị tối cao, tuyệt đối công bằng.</p>
+                <div class="bg-white p-2 rounded border border-green-100 text-xs text-stone-700 font-medium italic">
+                    Ví dụ: Quyền được sống, quyền tự do, quyền sở hữu tài sản cá nhân là bản chất tự nhiên., không một nhà nước nào có thể tước đoạt một cách vô lý.
+                </div>
+            </div>
+            
+            <div class="p-4 bg-stone-50 rounded-xl border border-stone-200 border-l-4 border-l-blue-500">
+                <strong class="text-blue-800 text-base block mb-2">Pháp luật Thực định (Positive law).</strong>
+                <p class="text-sm text-stone-600 mb-2">Là luật do nhà lập pháp tạo ra, bằng một hành vi ý chí của cơ quan thẩm quyền con người.</p>
+                <div class="bg-white p-2 rounded border border-blue-100 text-xs text-stone-700 font-medium italic">
+                    Ví dụ: Luật Giao thông đường bộ quy định "Phải dừng lại khi đèn đỏ". Đây là do con người quy định để giữ trật tự, chứ không phải quy luật sinh ra đã có.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nguồn của pháp luật -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-stone-100 pb-2 flex items-center gap-2">📚 Nguồn Của Pháp Luật (Sources of Law)</h3>
+        <p class="text-sm text-stone-500 mb-4 italic">Là tất cả các yếu tố cơ bản được các chủ thể có thẩm quyền sử dụng để xây dựng, ban hành, giải thích và áp dụng pháp luật.</p>
+        
+        <div class="space-y-4">
+            <div class="p-3 bg-rose-50 rounded-lg border border-rose-100">
+                <strong class="text-rose-800 text-sm block mb-1">1. Nguồn Nội dung (Natural sources).</strong>
+                <p class="text-sm text-stone-700">Đường lối của Đảng, chính sách kinh tế, triết lý pháp luật. &rarr; Dùng để <strong>định hình bản chất</strong> hệ thống pháp luật.</p>
+            </div>
+            
+            <div class="p-3 bg-blue-50 rounded-lg border border-blue-100">
+                <strong class="text-blue-800 text-sm block mb-1">2. Nguồn Hình thức / Hỗn hợp (Statutory sources).</strong>
+                <p class="text-sm text-stone-700">Gồm: Nguyên tắc PL chung, văn bản QPPL, điều ước quốc tế, tập quán pháp, án lệ. &rarr; Dùng để <strong>giải thích và áp dụng</strong> vào thực tiễn.</p>
+            </div>
+        </div>
+        
+        <!-- Lưu ý áp dụng nguồn -->
+        <div class="mt-5 p-4 bg-amber-50 border border-amber-300 rounded-xl shadow-sm">
+            <strong class="text-amber-900 text-sm flex items-center gap-2 mb-3 border-b border-amber-200 pb-2">⚠️ Điều Kiện Áp Dụng Các Nguồn Đặc Biệt</strong>
+            <ul class="text-sm text-stone-800 space-y-3">
+                <li class="flex items-start gap-2">
+                    <span class="text-amber-600 mt-0.5">📌</span>
+                    <div>
+                        <strong>Án lệ (Judicial precedents):</strong> Công nhận từ 2016. Điểm khác biệt với Common Law là Việt Nam <strong>CHỈ</strong> áp dụng các án lệ được Hội đồng Thẩm phán TAND Tối cao lựa chọn và Chánh án TAND Tối cao công bố.
+                    </div>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-amber-600 mt-0.5">📌</span>
+                    <div>
+                        <strong>Tập quán pháp (Customary regulations):</strong> Về nguyên tắc không phải là nguồn luật. <strong>Chỉ áp dụng khi</strong> PL không quy định và các bên không có thỏa thuận (Điều 5 BLDS 2015)., và không trái nguyên tắc cơ bản BLDS.
+                    </div>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-amber-600 mt-0.5">📌</span>
+                    <div>
+                        <strong>Điều ước quốc tế:</strong> <strong>Phải được Việt Nam phê chuẩn</strong>. Thường được nội luật hóa để thực thi trong nước (VD: Luật Phòng chống tham nhũng 2009 nội luật hóa các quy định của UNCAC).
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Hierarchy Timeline (Thang bậc văn bản) -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-8">
+    <h3 class="text-2xl font-bold text-slate-800 mb-2 text-center">Hệ Thống Văn Bản Quy Phạm Pháp Luật Việt Nam</h3>
+    <p class="text-center text-stone-500 mb-8 italic">Việt Nam theo hệ thống Civil Law, nguồn chủ yếu là luật thành văn. Sắp xếp từ hiệu lực cao nhất xuống thấp nhất.</p>
+    
+    <div class="max-w-3xl mx-auto pl-6 md:pl-10 border-l-4 border-teal-500 space-y-8 relative">
+        <div class="absolute -left-2 top-0 w-3 h-3 rounded-full bg-teal-500"></div>
+        <div class="absolute -left-2 bottom-0 w-3 h-3 rounded-full bg-teal-500"></div>
+
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-red-100 text-red-800 text-xs font-black rounded-full mb-2 border border-red-200 shadow-sm">CẤP 1 - CAO NHẤT</span>
+            <div class="bg-red-50 p-4 rounded-xl border border-red-200">
+                <h4 class="font-bold text-red-900 text-lg">Hiến pháp (The Constitution).</h4>
+                <p class="text-sm text-red-700 mt-1">Đạo luật cơ bản của nhà nước, có hiệu lực pháp lý cao nhất. Mọi văn bản khác không được trái với Hiến pháp.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-xs font-bold rounded-full mb-2">CẤP 2</span>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <h4 class="font-bold text-slate-800 text-base">Bộ luật, Luật, Nghị quyết.</h4>
+                <p class="text-sm text-teal-700 font-semibold mt-1">Ban hành bởi: Quốc hội.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full mb-2">CẤP 3</span>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <h4 class="font-bold text-slate-800 text-base">Pháp lệnh, Nghị quyết.</h4>
+                <p class="text-sm text-teal-700 font-semibold mt-1">Ban hành bởi: Ủy ban Thường vụ Quốc hội.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-bold rounded-full mb-2">CẤP 4</span>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <h4 class="font-bold text-slate-800 text-base">Lệnh, Quyết định.</h4>
+                <p class="text-sm text-teal-700 font-semibold mt-1">Ban hành bởi: Chủ tịch nước.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full mb-2">CẤP 5</span>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <h4 class="font-bold text-slate-800 text-base">Nghị định.</h4>
+                <p class="text-sm text-teal-700 font-semibold mt-1">Ban hành bởi: Chính phủ.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-teal-100 text-teal-800 text-xs font-bold rounded-full mb-2">CẤP 6</span>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <h4 class="font-bold text-slate-800 text-base">Quyết định.</h4>
+                <p class="text-sm text-teal-700 font-semibold mt-1">Ban hành bởi: Thủ tướng Chính phủ.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-cyan-100 text-cyan-800 text-xs font-bold rounded-full mb-2">CẤP 7</span>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <h4 class="font-bold text-slate-800 text-base">Nghị quyết.</h4>
+                <p class="text-sm text-teal-700 font-semibold mt-1">Ban hành bởi: Hội đồng Thẩm phán TAND Tối cao.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full mb-2">CẤP 8</span>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors">
+                <h4 class="font-bold text-slate-800 text-base">Thông tư.</h4>
+                <p class="text-sm text-teal-700 font-semibold mt-1">Ban hành bởi: Chánh án TANDTC, Viện trưởng VKSNDTC, Bộ trưởng, Thủ trưởng cơ quan ngang bộ....</p>
+            </div>
+        </div>
+        
+        <div class="timeline-dot">
+            <span class="inline-block px-3 py-1 bg-stone-200 text-stone-800 text-xs font-bold rounded-full mb-2">CẤP 9 - ĐỊA PHƯƠNG</span>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 hover:border-teal-300 transition-colors border-l-4 border-l-stone-500">
+                <h4 class="font-bold text-slate-800 text-base">Nghị quyết, Quyết định.</h4>
+                <p class="text-sm text-stone-600 mt-1">Ban hành bởi chính quyền địa phương theo cấp bậc: Tỉnh &rarr; Huyện &rarr; Xã.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 4 ================= -->
+<section id="ch4" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 4: Quy Phạm Pháp Luật (Legal Norms)</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Quy phạm pháp luật là những "viên gạch" nhỏ nhất xây dựng nên hệ thống pháp luật. Nắm vững kỹ năng phân tích 3 thành phần: <strong>Giả định - Quy định - Chế tài</strong> là kỹ năng sống còn để làm bài tập tình huống.</p>
+</div>
+
+<!-- Khái niệm & Đặc điểm -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 flex flex-col justify-center">
+        <h3 class="text-lg font-bold text-teal-900 mb-3 border-b border-stone-100 pb-2">Khái niệm QPPL</h3>
+        <p class="text-base text-stone-700 leading-relaxed">
+            Là quy tắc xử sự chung, có hiệu lực bắt buộc, áp dụng lặp đi lặp lại nhiều lần, do cơ quan nhà nước có thẩm quyền ban hành và được Nhà nước bảo đảm thực hiện.
+        </p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+        <h3 class="text-lg font-bold text-slate-800 mb-3 border-b border-stone-100 pb-2">Đặc điểm nhận diện.</h3>
+        <ul class="text-sm text-stone-700 space-y-3 font-medium">
+            <li class="flex items-center gap-2"><span class="text-teal-500 font-bold text-lg">✓</span> Là quy tắc xử sự chung. (Không hướng tới 1 cá nhân cụ thể nào).</li>
+            <li class="flex items-center gap-2"><span class="text-teal-500 font-bold text-lg">✓</span> Được Nhà nước ban hành hoặc thừa nhận.</li>
+            <li class="flex items-center gap-2"><span class="text-teal-500 font-bold text-lg">✓</span> Được Nhà nước bảo đảm thực hiện. (Bằng sức mạnh cưỡng chế).</li>
+            <li class="flex items-center gap-2"><span class="text-teal-500 font-bold text-lg">✓</span> Xác định rõ quyền và nghĩa vụ của các thực thể.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Cơ cấu 3 bộ phận -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-8 mb-8">
+    <h3 class="text-2xl font-bold text-slate-800 mb-2 text-center">Cơ Cấu 3 Bộ Phận Của Quy Phạm Pháp Luật.</h3>
+    <p class="text-center text-stone-500 mb-8 text-sm">Đây là công thức tư duy cốt lõi: <strong>"Ai? Trong hoàn cảnh nào? -> Được làm gì/Phải làm gì? -> Hậu quả nếu làm sai?"</strong></p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Giả định -->
+        <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl hover:shadow-md transition-shadow relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-16 h-16 bg-blue-100 rounded-bl-full opacity-50"></div>
+            <div class="mb-4">
+                <span class="inline-block bg-blue-600 text-white font-black rounded-full w-8 h-8 text-center leading-8 shadow-sm">1</span>
+                <h4 class="font-bold text-blue-900 mt-2 text-xl">Giả định<br><span class="text-sm font-normal text-blue-700">(Hypothesis)</span></h4>
+            </div>
+            <p class="text-sm text-blue-800 mb-3">Nêu rõ <strong>điều kiện, hoàn cảnh</strong> áp dụng và xác định <strong>đối tượng</strong> (chủ thể nào? trong hoàn cảnh nào?).</p>
+            <p class="text-xs text-blue-600 italic bg-blue-100 p-2 rounded">Phân loại: Giả định giản đơn và giả định phức tạp.</p>
+        </div>
+
+        <!-- Quy định -->
+        <div class="bg-teal-50 border border-teal-200 p-6 rounded-xl hover:shadow-md transition-shadow relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-16 h-16 bg-teal-100 rounded-bl-full opacity-50"></div>
+            <div class="mb-4">
+                <span class="inline-block bg-teal-600 text-white font-black rounded-full w-8 h-8 text-center leading-8 shadow-sm">2</span>
+                <h4 class="font-bold text-teal-900 mt-2 text-xl">Quy định<br><span class="text-sm font-normal text-teal-700">(Disposition)</span></h4>
+            </div>
+            <p class="text-sm text-teal-800 mb-3">Nêu <strong>quy tắc xử sự</strong> (được làm gì, không được làm gì, phải làm gì). Có tính mệnh lệnh, định hình quyền và nghĩa vụ.</p>
+            <p class="text-xs text-teal-700 italic bg-teal-100 p-2 rounded">Có 2 loại: Quy định dứt khoát (Definitive) và Quy định tùy nghi/cho phép (Permissive).</p>
+        </div>
+
+        <!-- Chế tài -->
+        <div class="bg-rose-50 border border-rose-200 p-6 rounded-xl hover:shadow-md transition-shadow relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-16 h-16 bg-rose-100 rounded-bl-full opacity-50"></div>
+            <div class="mb-4">
+                <span class="inline-block bg-rose-600 text-white font-black rounded-full w-8 h-8 text-center leading-8 shadow-sm">3</span>
+                <h4 class="font-bold text-rose-900 mt-2 text-xl">Chế tài<br><span class="text-sm font-normal text-rose-700">(Sanction)</span></h4>
+            </div>
+            <p class="text-sm text-rose-800">Hậu quả pháp lý bất lợi/hình phạt áp dụng khi <strong>không tuân thủ pháp luật</strong> (khi vi phạm giả định và quy định).</p>
+        </div>
+    </div>
+    
+    <!-- VÍ DỤ MỔ XẺ QPPL (Bổ sung cực chi tiết) -->
+    <div class="mt-8 border-t border-stone-200 pt-6">
+        <h4 class="font-bold text-slate-800 mb-4 flex items-center gap-2"><span class="text-xl">🔪</span> Thực hành mổ xẻ cấu trúc luật</h4>
+        <div class="bg-stone-800 text-white p-4 rounded-t-lg font-mono text-sm">
+            "Người nào xúc phạm nghiêm trọng nhân phẩm, danh dự của người khác, thì bị phạt cảnh cáo, phạt tiền từ 10.000.000 đồng đến 30.000.000 đồng hoặc phạt cải tạo không giam giữ đến 03 năm." <br><span class="text-stone-400 mt-1 block">(Trích Điều 155, Bộ luật Hình sự)</span>
+        </div>
+        <div class="bg-stone-50 border border-stone-200 border-t-0 rounded-b-lg p-4">
+            <ul class="space-y-3 text-sm">
+                <li>
+                    <strong class="text-blue-700 bg-blue-100 px-2 py-0.5 rounded mr-2">Giả định:</strong> 
+                    <span class="text-stone-700">"Người nào xúc phạm nghiêm trọng nhân phẩm, danh dự của người khác" (Xác định <strong>Ai? Hoàn cảnh nào?</strong>)</span>
+                </li>
+                <li>
+                    <strong class="text-teal-700 bg-teal-100 px-2 py-0.5 rounded mr-2">Quy định:</strong> 
+                    <span class="text-stone-700"><em>(Bị ẩn đi)</em> Lẽ ra là "Không được xúc phạm nhân phẩm danh dự người khác". Trong luật Hình sự, phần "Quy định" (cấm làm) thường bị ẩn đi.</span>
+                </li>
+                <li>
+                    <strong class="text-rose-700 bg-rose-100 px-2 py-0.5 rounded mr-2">Chế tài:</strong> 
+                    <span class="text-stone-700">"...thì bị phạt cảnh cáo, phạt tiền... hoặc phạt cải tạo..." (Xác định <strong>Hậu quả</strong>).</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Lưu ý quan trọng -->
+    <div class="mt-6 p-4 bg-amber-50 rounded-xl text-sm text-amber-900 border border-amber-200 shadow-inner">
+        <strong class="block mb-2 text-amber-800 border-b border-amber-200 pb-1">💡 Các Quy Tắc "Bẻ Lái" Cần Lưu Ý Khi Thi.</strong>
+        <ul class="list-disc pl-5 space-y-1.5 mt-2">
+            <li>Một quy phạm pháp luật <strong>không nhất thiết phải có đủ 3 bộ phận</strong>. (như ví dụ Hình sự ở trên thường khuyết phần Quy định).</li>
+            <li>Một điều luật có thể chứa <strong>một hoặc nhiều quy phạm pháp luật</strong>, hoặc chỉ chứa một bộ phận của quy phạm pháp luật.</li>
+            <li>Trật tự sắp xếp giữa Giả định, Quy định và Chế tài có thể bị đảo lộn, <strong>không bắt buộc theo thứ tự cố định</strong>.</li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 5 (PREMIUM) ================= -->
+<section id="ch5" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 5: Quan Hệ Pháp Luật <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Quan hệ pháp luật thực chất là quan hệ xã hội được "mặc áo" pháp lý. Chìa khóa của chương này là phân biệt rõ <strong>Năng lực pháp luật</strong> và <strong>Năng lực hành vi</strong>, cũng như cách xác định <strong>Sự kiện pháp lý</strong> làm phát sinh quan hệ đó.</p>
+</div>
+
+<!-- Khái niệm & SKPL -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 flex flex-col">
+        <h3 class="text-xl font-bold text-teal-800 mb-4 border-b border-stone-100 pb-2">Khái niệm & Đặc điểm</h3>
+        <p class="text-sm text-stone-700 mb-3 leading-relaxed"><strong>Quan hệ pháp luật</strong> là một quan hệ xã hội được điều chỉnh bởi quy phạm pháp luật.</p>
+        <div class="text-sm font-bold text-rose-800 bg-rose-50 p-3 rounded-lg border border-rose-200 mb-4 flex items-center gap-2">
+            <span class="text-xl">🔑</span>
+            Điều kiện tiên quyết: Phải có Quy phạm pháp luật + Sự kiện pháp lý.
+        </div>
+        <ul class="text-sm text-stone-600 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><span class="text-teal-500 text-lg">✔</span> Phát sinh, thay đổi, chấm dứt dựa trên QPPL.</li>
+            <li class="flex items-center gap-2"><span class="text-teal-500 text-lg">✔</span> Chủ thể được xác định rõ ràng.</li>
+            <li class="flex items-center gap-2"><span class="text-teal-500 text-lg">✔</span> Thể hiện ý chí của các chủ thể.</li>
+            <li class="flex items-center gap-2"><span class="text-teal-500 text-lg">✔</span> Được Nhà nước bảo vệ.</li>
+            <li class="flex items-center gap-2"><span class="text-teal-500 text-lg">✔</span> Gắn kết bằng quyền và nghĩa vụ pháp lý chủ quan.</li>
+        </ul>
+    </div>
+    
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 border-t-4 border-t-amber-400">
+        <h3 class="text-xl font-bold text-amber-900 mb-4 border-b border-stone-100 pb-2">Sự kiện pháp lý (Legal Facts)</h3>
+        <p class="text-sm text-stone-600 mb-4">Là những hoàn cảnh/sự kiện thực tế xảy ra làm <strong>phát sinh, thay đổi hoặc chấm dứt</strong> quan hệ pháp luật. Phân loại dựa trên yếu tố "ý chí":</p>
+        <div class="space-y-4 text-sm">
+            <div class="bg-amber-50 p-3 rounded-lg border border-amber-100">
+                <strong class="text-amber-900 flex items-center gap-2 mb-1">👤 Hành vi pháp lý (Subjective legal facts)</strong>
+                <p class="text-stone-700">Phụ thuộc vào ý chí của con người (hành động hoặc không hành động).</p>
+                <em class="text-stone-500 text-xs block mt-1">VD: Hành vi ký hợp đồng mua bán xe (làm phát sinh QHPL dân sự); Hành vi vượt đèn đỏ (làm phát sinh QHPL hành chính).</em>
+            </div>
+            <div class="bg-stone-50 p-3 rounded-lg border border-stone-200">
+                <strong class="text-slate-800 flex items-center gap-2 mb-1">⚡ Sự biến pháp lý (Objective legal facts)</strong>
+                <p class="text-stone-700">Xảy ra <strong>ngoài ý chí</strong> của con người (sinh, tử, thiên tai, đạt đến độ tuổi).</p>
+                <em class="text-stone-500 text-xs block mt-1">VD: Cây đổ đè nát xe ô tô do bão (sự biến tuyệt đối làm phát sinh QH bảo hiểm); Đạt đủ 18 tuổi (sự biến tương đối làm phát sinh quyền bầu cử).</em>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3 Yếu tố cấu thành -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-8 mb-8">
+    <h3 class="text-2xl font-bold text-slate-800 mb-6 text-center">3 Yếu Tố Cấu Thành Quan Hệ Pháp Luật</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-stone-700">
+        <!-- Chủ thể -->
+        <div class="p-5 bg-teal-50/50 rounded-xl border border-teal-100 hover:shadow-md transition-all">
+            <div class="text-center mb-3 text-3xl">👥</div>
+            <h4 class="font-bold text-teal-900 text-lg mb-2 text-center">1. Chủ thể (Subject)</h4>
+            <p class="mb-3">Bao gồm: Cá nhân, Tổ chức (Pháp nhân) hoặc Nhà nước đáp ứng đủ điều kiện.</p>
+            <div class="bg-white p-3 rounded border border-teal-200">
+                <p class="font-bold text-rose-700 mb-1 border-b border-rose-100 pb-1">Bắt buộc phải có đủ 2 năng lực:</p>
+                <ul class="list-disc pl-5 mt-1 text-stone-600 space-y-1">
+                    <li><strong>Năng lực pháp luật:</strong> Khả năng có quyền/nghĩa vụ.</li>
+                    <li><strong>Năng lực hành vi:</strong> Khả năng tự mình thực hiện quyền/nghĩa vụ đó.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Nội dung -->
+        <div class="p-5 bg-blue-50/50 rounded-xl border border-blue-100 hover:shadow-md transition-all">
+            <div class="text-center mb-3 text-3xl">⚖️</div>
+            <h4 class="font-bold text-blue-900 text-lg mb-2 text-center">2. Nội dung (Content)</h4>
+            <div class="space-y-3">
+                <div class="bg-white p-3 rounded border border-blue-200">
+                    <strong class="text-blue-700 block mb-1">Quyền (Rights):</strong>
+                    <p class="text-stone-600 text-xs">Khả năng hành động theo luật, yêu cầu chủ thể khác thực hiện nghĩa vụ hoặc yêu cầu NN bảo vệ. (Gồm quyền tuyệt đối & tương đối).</p>
+                </div>
+                <div class="bg-white p-3 rounded border border-blue-200">
+                    <strong class="text-rose-700 block mb-1">Nghĩa vụ (Duties):</strong>
+                    <p class="text-stone-600 text-xs">Bắt buộc phải làm (hoặc không được làm) để đáp ứng quyền của bên kia (giao tài sản, làm việc...). Phải chịu trách nhiệm nếu vi phạm.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Khách thể -->
+        <div class="p-5 bg-amber-50/50 rounded-xl border border-amber-100 hover:shadow-md transition-all">
+            <div class="text-center mb-3 text-3xl">🎁</div>
+            <h4 class="font-bold text-amber-900 text-lg mb-2 text-center">3. Khách thể (Objects)</h4>
+            <p class="mb-3">Là <strong>lợi ích</strong> mà các bên mong muốn đạt được khi tham gia vào quan hệ pháp luật.</p>
+            <div class="bg-white p-3 rounded border border-amber-200">
+                <strong class="text-stone-800 block mb-1">Các loại khách thể phổ biến:</strong>
+                <ul class="text-xs text-stone-600 list-disc pl-4 space-y-1">
+                    <li>Vật chất (Xe cộ, tiền bạc).</li>
+                    <li>Kết quả trí tuệ (Bản quyền bài hát).</li>
+                    <li>Giá trị nhân thân (Danh dự, nhân phẩm).</li>
+                    <li>Quyền đòi nợ.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Năng lực chủ thể -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-8">
+    <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-stone-100 pb-2 text-center">Phân Tích Sâu: Năng Lực Chủ Thể</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+        <!-- Cá nhân -->
+        <div class="border border-teal-200 rounded-xl overflow-hidden shadow-sm">
+            <h4 class="font-bold text-teal-900 bg-teal-100 p-3 text-lg flex items-center justify-center gap-2">🧑 Cá Nhân (Natural Persons)</h4>
+            <div class="p-5 space-y-4 bg-white">
+                <div>
+                    <strong class="text-stone-800 block border-b pb-1 mb-2">Năng lực pháp luật:</strong>
+                    <p class="text-stone-600">Có từ khi <strong>sinh ra</strong>, chấm dứt khi <strong>chết</strong>. Mọi người sinh ra đều bình đẳng về NLPL.</p>
+                    <p class="text-xs text-rose-600 italic mt-1">*Lưu ý: Người nước ngoài/không quốc tịch bị hạn chế một số quyền (VD: quyền bầu cử).</p>
+                </div>
+                <div>
+                    <strong class="text-stone-800 block border-b pb-1 mb-2">Năng lực hành vi:</strong>
+                    <p class="text-stone-600">Xuất hiện <strong>muộn hơn</strong>, phụ thuộc vào độ tuổi, khả năng nhận thức và sức khỏe. Chấm dứt khi chết hoặc bị Tòa án tuyên bố mất năng lực nhận thức.</p>
+                    <p class="text-xs text-stone-500 italic mt-1">VD: Em bé 5 tuổi có quyền sở hữu tài sản thừa kế (NLPL) nhưng không có quyền tự bán tài sản đó (Chưa có NLHV).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pháp nhân -->
+        <div class="border border-blue-200 rounded-xl overflow-hidden shadow-sm">
+            <h4 class="font-bold text-blue-900 bg-blue-100 p-3 text-lg flex items-center justify-center gap-2">🏢 Pháp Nhân (Juridical Persons)</h4>
+            <div class="p-5 space-y-4 bg-white flex flex-col h-full">
+                <p class="text-stone-600">Bao gồm: Cơ quan nhà nước, tổ chức kinh tế (Công ty), quỹ xã hội....</p>
+                <p class="text-stone-600"><strong>Điều kiện:</strong> Phải được thành lập hợp pháp, có tổ chức chặt chẽ, có tài sản độc lập, tự nhân danh mình tham gia quan hệ pháp luật.</p>
+                
+                <div class="mt-auto bg-blue-50 p-4 rounded-lg border border-blue-200 text-blue-900 font-medium text-center">
+                    <span class="text-2xl block mb-2">⚖️</span>
+                    Ở pháp nhân, Năng lực pháp luật và Năng lực hành vi xuất hiện <strong>ĐỒNG THỜI</strong> khi được thành lập/cấp phép và chấm dứt khi chấm dứt hoạt động (giải thể/phá sản).
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 6 (PREMIUM) ================= -->
+<section id="ch6" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 6: Vi Phạm Pháp Luật & Trách Nhiệm Pháp Lý <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> "Không có lỗi thì không có vi phạm". Chương này yêu cầu bạn phải phân tích được 4 yếu tố cấu thành một vi phạm pháp luật và đặc biệt phải nắm trọn điểm phần <strong>Phân loại Lỗi</strong> (Cố ý vs Vô ý).</p>
+</div>
+
+<!-- Dấu hiệu & Cấu thành -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
+    <!-- 4 Dấu hiệu -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2">🚨 4 Dấu Hiệu Vi Phạm Pháp Luật</h3>
+        <p class="text-sm font-bold text-rose-700 bg-rose-50 p-2 rounded border border-rose-100 mb-4 inline-block">Để cấu thành vi phạm, PHẢI CÓ ĐỦ 4 dấu hiệu.:</p>
+        
+        <ul class="space-y-4 text-sm text-stone-700">
+            <li class="flex gap-3 items-start">
+                <span class="bg-teal-600 text-white font-black w-6 h-6 flex items-center justify-center rounded shrink-0">1</span> 
+                <div>
+                    <strong class="text-slate-800 text-base block mb-1">Hành vi (Conduct).</strong>
+                    Phải là hành vi thực tế (Hành động: làm việc luật cấm, hoặc Không hành động: không làm việc luật bắt buộc). Hành vi đó phải tự nguyện (không bị ép buộc/mất trí). <br><em class="text-stone-500 text-xs">Suy nghĩ đen tối trong đầu mà chưa làm thì không vi phạm.</em>
+                </div>
+            </li>
+            <li class="flex gap-3 items-start">
+                <span class="bg-teal-600 text-white font-black w-6 h-6 flex items-center justify-center rounded shrink-0">2</span> 
+                <div>
+                    <strong class="text-slate-800 text-base block mb-1">Tính trái pháp luật (Illegality).</strong>
+                    Xâm phạm, làm nguy hại các quan hệ xã hội được pháp luật bảo vệ.
+                </div>
+            </li>
+            <li class="flex gap-3 items-start">
+                <span class="bg-teal-600 text-white font-black w-6 h-6 flex items-center justify-center rounded shrink-0">3</span> 
+                <div>
+                    <strong class="text-slate-800 text-base block mb-1">Có lỗi (Fault).</strong>
+                    Chủ thể bị khiển trách về hành vi của mình (dù là cố ý hay vô ý). Không có lỗi = Không vi phạm.
+                </div>
+            </li>
+            <li class="flex gap-3 items-start">
+                <span class="bg-teal-600 text-white font-black w-6 h-6 flex items-center justify-center rounded shrink-0">4</span> 
+                <div>
+                    <strong class="text-slate-800 text-base block mb-1">Năng lực TNPL (Legal liability capacity).</strong>
+                    Chủ thể đủ điều kiện (tuổi, năng lực nhận thức) chịu trách nhiệm theo luật định tùy lĩnh vực.
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Cấu thành 4 Mặt -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2">🧩 4 Bộ Phận Cấu Thành (Components)</h3>
+        <div class="space-y-4 text-sm text-stone-700">
+            <div class="p-3 bg-blue-50 border border-blue-100 rounded-lg">
+                <strong class="text-blue-800 text-base block mb-1">1. Mặt khách quan (Objective).</strong>
+                <p>Các biểu hiện ra bên ngoài. Gồm 4 yếu tố:</p>
+                <ul class="list-disc pl-5 mt-1 text-stone-600">
+                    <li>Hành vi trái PL.</li>
+                    <li>Hậu quả thiệt hại cho xã hội.</li>
+                    <li><strong>Mối quan hệ nhân quả (Causation):</strong> Hành vi phải là nguyên nhân trực tiếp gây ra hậu quả đó.</li>
+                    <li>Thời gian, địa điểm, công cụ vi phạm.</li>
+                </ul>
+            </div>
+            
+            <div class="p-3 bg-amber-50 border border-amber-100 rounded-lg">
+                <strong class="text-amber-800 text-base block mb-1">2. Mặt chủ quan (Subjective).</strong>
+                <p>Diễn biến tâm lý bên trong. Bao gồm: Lỗi (Fault), Động cơ (Motivation), Mục đích (Target).</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-3 bg-stone-50 border border-stone-200 rounded-lg">
+                    <strong class="text-slate-800 text-base block mb-1">3. Chủ thể (Subjects).</strong>
+                    <p>Cá nhân hoặc tổ chức có đủ năng lực trách nhiệm pháp lý.</p>
+                </div>
+                
+                <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg">
+                    <strong class="text-rose-800 text-base block mb-1">4. Khách thể (Objects).</strong>
+                    <p>Các QH xã hội được PL bảo vệ bị xâm hại (VD: Tính mạng, sức khỏe, tài sản...). <em>Tính chất của khách thể phản ánh mức độ nguy hiểm của vi phạm.</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Phân loại Lỗi -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-8 mb-8">
+    <h3 class="text-2xl font-bold text-slate-800 mb-6 text-center">Ma Trận Phân Loại Lỗi (Types of Fault)</h3>
+    <p class="text-center text-stone-500 mb-6 text-sm">Đây là phần cực kỳ quan trọng trong đề thi. Hãy tập trung vào cụm từ chỉ "Lý trí" (nhận thức) và "Ý chí" (mong muốn).</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Cố ý trực tiếp -->
+        <div class="bg-rose-50 border border-rose-200 p-5 rounded-xl hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-white bg-rose-700 px-3 py-1 rounded inline-block mb-3">Lỗi Cố ý trực tiếp (Direct intentional).</h4>
+            <ul class="text-sm text-rose-900 space-y-2 list-disc pl-4">
+                <li><strong>Lý trí:</strong> Nhận thức rõ hành vi là nguy hiểm, thấy trước hậu quả tất yếu.</li>
+                <li><strong>Ý chí:</strong> <strong class="bg-rose-200 px-1">MONG MUỐN</strong> hậu quả xảy ra.</li>
+            </ul>
+            <p class="mt-3 text-xs text-rose-700 bg-white p-2 rounded border border-rose-100"><em>VD: A cầm dao đâm thẳng vào tim B để giết B. A biết sẽ chết và thực sự muốn B chết.</em></p>
+        </div>
+
+        <!-- Cố ý gián tiếp -->
+        <div class="bg-orange-50 border border-orange-200 p-5 rounded-xl hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-white bg-orange-600 px-3 py-1 rounded inline-block mb-3">Lỗi Cố ý gián tiếp (Indirect intentional).</h4>
+            <ul class="text-sm text-orange-900 space-y-2 list-disc pl-4">
+                <li><strong>Lý trí:</strong> Nhận thức được sự nguy hiểm, thấy trước hậu quả.</li>
+                <li><strong>Ý chí:</strong> KHÔNG mong muốn nhưng <strong class="bg-orange-200 px-1">CÓ Ý THỨC ĐỂ MẶC</strong> hậu quả xảy ra.</li>
+            </ul>
+            <p class="mt-3 text-xs text-orange-800 bg-white p-2 rounded border border-orange-100"><em>VD: A bẫy chuột bằng điện ngoài ruộng, biết có thể giật chết người đi ngang nhưng kệ, ai chết ráng chịu.</em></p>
+        </div>
+
+        <!-- Vô ý quá tự tin -->
+        <div class="bg-amber-50 border border-amber-200 p-5 rounded-xl hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-amber-900 bg-amber-200 px-3 py-1 rounded inline-block mb-3 border border-amber-400">Lỗi Vô ý vì quá tự tin (Self-confidence).</h4>
+            <ul class="text-sm text-amber-900 space-y-2 list-disc pl-4">
+                <li><strong>Lý trí:</strong> Thấy trước hành vi có thể gây hậu quả.</li>
+                <li><strong>Ý chí:</strong> <strong class="bg-amber-200 px-1">TIN RẰNG</strong> hậu quả sẽ không xảy ra hoặc có thể tự mình ngăn chặn được.</li>
+            </ul>
+            <p class="mt-3 text-xs text-amber-800 bg-white p-2 rounded border border-amber-100"><em>VD: X là tay lái lụa, cố phóng nhanh vượt ẩu qua ngã tư vì tự tin tài lái xe của mình sẽ không gây tai nạn, nhưng cuối cùng vẫn tông người.</em></p>
+        </div>
+
+        <!-- Vô ý cẩu thả -->
+        <div class="bg-stone-100 border border-stone-300 p-5 rounded-xl hover:shadow-md transition-shadow">
+            <h4 class="font-bold text-slate-800 bg-stone-300 px-3 py-1 rounded inline-block mb-3 border border-stone-400">Lỗi Vô ý do cẩu thả (Negligence).</h4>
+            <ul class="text-sm text-stone-800 space-y-2 list-disc pl-4">
+                <li><strong>Lý trí:</strong> <strong class="bg-stone-300 px-1">KHÔNG THẤY TRƯỚC</strong> hậu quả xã hội có thể xảy ra.</li>
+                <li><strong>Khách quan:</strong> Mặc dù <strong>LẼ RA</strong> phải thấy trước và <strong>CÓ THỂ</strong> thấy trước hậu quả đó.</li>
+            </ul>
+            <p class="mt-3 text-xs text-stone-600 bg-white p-2 rounded border border-stone-200"><em>VD: Y tá tiêm nhầm thuốc cho bệnh nhân vì không kiểm tra kỹ nhãn chai. Y tá không nghĩ bệnh nhân sẽ chết, nhưng lẽ ra với chuyên môn nghiệp vụ thì phải biết kiểm tra.</em></p>
+        </div>
+    </div>
+</div>
+
+<!-- Trách nhiệm pháp lý & Chế tài -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2">Trách Nhiệm Pháp Lý & 4 Loại Chế Tài</h3>
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 text-sm text-blue-900 rounded-r">
+        <strong>Khái niệm:</strong> Trách nhiệm pháp lý là quan hệ pháp luật đặc biệt giữa Nhà nước và chủ thể vi phạm. Nhà nước có quyền áp dụng biện pháp cưỡng chế/trừng phạt, chủ thể vi phạm có nghĩa vụ gánh chịu hậu quả bất lợi. <strong>Đặc điểm nổi bật nhất:</strong> Mang tính cưỡng chế nhà nước (State coercion).
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="p-4 border border-rose-200 rounded-lg bg-white">
+            <div class="text-2xl mb-2">⛓️</div>
+            <strong class="text-rose-800 text-sm block">1. Hình sự.</strong>
+            <p class="text-xs text-stone-500 mt-1">Nghiêm khắc nhất, chỉ do Tòa án quyết định (Tù giam, tử hình).</p>
+        </div>
+        <div class="p-4 border border-teal-200 rounded-lg bg-white">
+            <div class="text-2xl mb-2">🤝</div>
+            <strong class="text-teal-800 text-sm block">2. Dân sự.</strong>
+            <p class="text-xs text-stone-500 mt-1">Bồi thường thiệt hại vật chất/tinh thần, khôi phục tình trạng ban đầu.</p>
+        </div>
+        <div class="p-4 border border-amber-200 rounded-lg bg-white">
+            <div class="text-2xl mb-2">👮</div>
+            <strong class="text-amber-800 text-sm block">3. Hành chính.</strong>
+            <p class="text-xs text-stone-500 mt-1">Phạt tiền, tước bằng lái, tịch thu tang vật đối với vi phạm trật tự quản lý NN.</p>
+        </div>
+        <div class="p-4 border border-stone-300 rounded-lg bg-white">
+            <div class="text-2xl mb-2">🏢</div>
+            <strong class="text-stone-800 text-sm block">4. Kỷ luật.</strong>
+            <p class="text-xs text-stone-500 mt-1">Áp dụng trong nội bộ cơ quan, công ty (Khiển trách, cảnh cáo, sa thải).</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 7 (PREMIUM) ================= -->
+<section id="ch7" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 7: Hệ Thống Pháp Luật Việt Nam <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Ở chương 3 chúng ta đã học về cấu trúc "bên ngoài" (các loại văn bản luật). Chương này sẽ giải phẫu cấu trúc "bên trong" của hệ thống pháp luật, xem các quy phạm kết nối với nhau như thế nào và nguyên tắc hiệu lực hồi tố.</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Cấu trúc bên trong -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 flex flex-col">
+        <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-stone-100 pb-2">🧬 Cấu Trúc Bên Trong (Internal Structure)</h3>
+        <p class="text-sm text-stone-600 mb-4">Hệ thống pháp luật được xây dựng từ các thành tố nhỏ nhất đến các nhóm lớn hơn.:</p>
+        
+        <div class="pl-4 border-l-[3px] border-teal-300 space-y-6 flex-1">
+            <div class="relative">
+                <div class="absolute w-4 h-4 bg-teal-200 border-2 border-teal-500 rounded-full -left-[24px] top-0"></div>
+                <strong class="text-teal-700 text-base">Bước 1: Quy phạm pháp luật (Legal Norms).</strong>
+                <p class="text-sm text-stone-600 mt-1">Là "viên gạch" đơn vị nhỏ nhất, chứa các quy tắc xử sự do nhà nước ban hành.</p>
+            </div>
+            <div class="relative">
+                <div class="absolute w-4 h-4 bg-teal-500 border-2 border-teal-700 rounded-full -left-[24px] top-0"></div>
+                <strong class="text-teal-900 text-base">Bước 2: Chế định pháp luật (Law Institution).</strong>
+                <p class="text-sm text-stone-600 mt-1">Là "bức tường". Tập hợp các quy phạm pháp luật điều chỉnh một nhóm quan hệ xã hội <strong>tương đồng</strong>.</p>
+                <em class="text-xs text-stone-500 bg-stone-50 p-1 rounded inline-block mt-1">VD: Chế định thừa kế, chế định quyền sở hữu, chế định hợp đồng (thuộc Luật Dân sự).</em>
+            </div>
+            <div class="relative">
+                <div class="absolute w-4 h-4 bg-teal-800 border-2 border-slate-900 rounded-full -left-[24px] top-0"></div>
+                <strong class="text-slate-900 text-base">Bước 3: Ngành luật (Law Branches).</strong>
+                <p class="text-sm text-stone-600 mt-1">Là "ngôi nhà". Hệ thống các quy phạm pháp luật (được phân loại thành các chế định) điều chỉnh <strong>một lĩnh vực xã hội nhất định</strong>.</p>
+                <em class="text-xs text-stone-500 bg-stone-50 p-1 rounded inline-block mt-1">VD: Ngành luật Dân sự, Hình sự, Hành chính, Lao động, Thương mại....</em>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phương pháp điều chỉnh -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 flex flex-col">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2">🎯 Phương Pháp Điều Chỉnh (Regulated Methods)</h3>
+        <p class="text-sm text-stone-600 mb-4">Là cách thức nhà nước dùng pháp luật tác động lên các quan hệ xã hội. Tùy vào tính chất của từng "Ngành luật", nhà nước sẽ dùng phương pháp mềm mỏng hay cứng rắn.</p>
+        
+        <div class="space-y-4 flex-1">
+            <div class="p-4 bg-blue-50 rounded-xl border border-blue-200 hover:shadow-md transition-shadow">
+                <strong class="text-blue-800 text-lg flex items-center gap-2 mb-2">🤝 Phương pháp Bình đẳng / Thỏa thuận</strong>
+                <ul class="text-sm text-stone-700 list-disc pl-4 space-y-1">
+                    <li><strong>Bản chất:</strong> Cho phép các bên quyền tự do thỏa thuận trong khuôn khổ pháp luật để đạt mục tiêu. Không bên nào có quyền ra lệnh cho bên nào.</li>
+                    <li><strong>Áp dụng:</strong> Chủ yếu trong ngành luật <strong>Dân sự</strong>, Thương mại, Hôn nhân gia đình.</li>
+                </ul>
+            </div>
+            
+            <div class="p-4 bg-rose-50 rounded-xl border border-rose-200 hover:shadow-md transition-shadow">
+                <strong class="text-rose-800 text-lg flex items-center gap-2 mb-2">⚖️ Phương pháp Mệnh lệnh / Bắt buộc</strong>
+                <ul class="text-sm text-stone-700 list-disc pl-4 space-y-1">
+                    <li><strong>Bản chất:</strong> Tuân thủ tuyệt đối theo quyết định của cơ quan nhà nước có thẩm quyền. Một bên có quyền ra lệnh (Nhà nước) và một bên phải phục tùng.</li>
+                    <li><strong>Áp dụng:</strong> Chủ yếu trong ngành luật <strong>Hình sự, Hành chính</strong>, Hiến pháp.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hiệu lực văn bản & Hồi tố -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-8">
+    <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-stone-100 pb-2 text-center">Hiệu Lực Văn Bản Quy Phạm Pháp Luật</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-stone-50 p-4 rounded-lg border border-stone-200">
+            <strong class="text-teal-700 block mb-2">⏳ Thời điểm có hiệu lực</strong>
+            <p class="text-sm text-stone-600">Phải được quy định cụ thể trong văn bản nhưng <strong>KHÔNG SỚM HƠN 45 ngày</strong> kể từ ngày ban hành hoặc ký ban hành. (đối với văn bản trung ương).</p>
+        </div>
+        <div class="bg-stone-50 p-4 rounded-lg border border-stone-200">
+            <strong class="text-teal-700 block mb-2">📰 Đăng Công báo (Official Gazette)</strong>
+            <p class="text-sm text-stone-600"><strong>Bắt buộc</strong> phải đăng công báo, nếu không đăng sẽ <strong>vô hiệu</strong> (trừ văn bản chứa bí mật nhà nước hoặc trong tình trạng khẩn cấp).</p>
+        </div>
+        <div class="bg-stone-50 p-4 rounded-lg border border-stone-200">
+            <strong class="text-teal-700 block mb-2">🛑 Hết hiệu lực khi nào?</strong>
+            <ul class="text-sm text-stone-600 list-disc pl-4">
+                <li>Hết thời hạn ghi trong văn bản.</li>
+                <li>Bị sửa đổi/thay thế bằng văn bản mới cùng cấp.</li>
+                <li>Bị bãi bỏ/hủy bỏ bởi cơ quan có thẩm quyền.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hiệu lực Hồi tố -->
+    <div class="mt-2 p-5 bg-amber-50 border-2 border-amber-300 rounded-xl shadow-sm">
+        <strong class="text-amber-900 text-lg flex items-center gap-2 mb-3 border-b border-amber-200 pb-2">
+            <span class="text-2xl">🔙</span> Hiệu Lực Hồi Tố (Retrospective effect)
+        </strong>
+        <p class="text-sm text-stone-800 mb-3">Hiệu lực hồi tố là việc áp dụng văn bản luật <em>mới</em> đối với các hành vi đã xảy ra <em>trước khi</em> văn bản đó có hiệu lực.</p>
+        <p class="text-sm font-bold text-rose-700 bg-rose-100 p-2 rounded mb-3 inline-block">Quy tắc cấm kỵ (Để bảo vệ quyền con người):</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>KHÔNG</strong> áp dụng hiệu lực hồi tố đối với việc:</p>
+        <ul class="list-disc pl-6 text-sm text-stone-800 space-y-2 font-medium">
+            <li>Quy định <strong>áp đặt trách nhiệm pháp lý mới</strong> đối với hành vi mà vào thời điểm thực hiện, pháp luật đương thời không coi là vi phạm pháp luật.</li>
+            <li>Quy định <strong>áp đặt trách nhiệm pháp lý nặng hơn</strong> (ví dụ: luật cũ phạt 10 triệu, luật mới phạt 20 triệu thì không được hồi tố áp dụng phạt 20 triệu cho hành vi ngày xưa).</li>
+        </ul>
+        <div class="mt-3 text-xs text-green-700 italic bg-green-50 p-2 rounded border border-green-200">
+            *Ngoại lệ: Nhà nước thường CHỈ cho phép hồi tố trong trường hợp mang lại lợi ích cho người vi phạm (VD: Xóa bỏ tội danh hoặc giảm nhẹ hình phạt).
+        </div>
+    </div>
+</div>
+</section>
+</main>
+
+<!-- CORE SCRIPTS -->
+<script>
+let activeTabId = 'ch1'; // Sếp có thể đổi thành ID tab mặc định của môn Luật nếu cần
+
+
+// Chuyển Tab không cần check khóa nữa vì auth.js đã làm máy chém ở ngoài cửa rồi
+window.attemptSwitchTab = (t) => { 
+    forceSwitchTab(t); 
+};
+
+// Hàm chuyển UI Tab
+function forceSwitchTab(t) { 
+    activeTabId = t; 
+    
+    document.querySelectorAll('.tab-content').forEach(s => { 
+        s.classList.add('hidden'); 
+        s.classList.remove('animate-fade-in'); 
+    }); 
+    
+    const targetTab = document.getElementById(t);
+    if (targetTab) {
+        targetTab.classList.remove('hidden'); 
+        targetTab.classList.add('animate-fade-in');
+        
+       // 3. TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG (Đã fix lỗi sập web do gọi sai tên biến)
+        const offset = 150; 
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetTab.getBoundingClientRect().top; // <--- Đã fix target thành targetTab
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+    
+    // Đổi màu menu khi click (Tui đã giữ nguyên màu text-indigo-600 đặc trưng của môn Luật cho sếp)
+    document.querySelectorAll('.nav-btn').forEach(b => { 
+        b.classList.remove('tab-active', 'text-indigo-600', 'bg-stone-100'); 
+        b.classList.add('text-stone-500'); 
+        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
+            b.classList.add('tab-active', 'text-indigo-600', 'bg-stone-100'); 
+            b.classList.remove('text-stone-500'); 
+        }
+    }); 
+    
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav) mobileNav.value = t;
+}
+</script>
+</body>
+</html>

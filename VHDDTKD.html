@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ôn thi Văn Hóa & Đạo Đức Kinh Doanh - Trắc nghiệm, tài liệu, đề thi</title>
+<meta name="description" content="Website ôn thi Văn hóa và Đạo đức Kinh doanh, trắc nghiệm, đề thi, tài liệu giúp sinh viên ôn tập hiệu quả">
+
+<!-- SEO CƠ BẢN (Từ khóa chuẩn môn VHDDTKD) -->
+<meta name="keywords" content="văn hóa kinh doanh, đạo đức kinh doanh, trách nhiệm xã hội, CSR, văn hóa doanh nghiệp, tình huống đạo đức, case study đạo đức, ôn thi UEL, edu connect, vhddtkd">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta name="robots" content="index, follow"> 
+
+<!-- SEO MẠNG XÃ HỘI (Open Graph) -->
+<meta property="og:title" content="Bí Kíp Phá Đảo Văn Hóa & Đạo Đức Kinh Doanh - Edu Connect">
+<meta property="og:description" content="Nắm trọn điểm A với bộ tài liệu phân tích tình huống, trắc nghiệm lý thuyết và các nguyên tắc đạo đức cốt lõi trong kinh doanh dành cho sinh viên UEL.">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png"> 
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/VHDDTKD"> <!-- Nếu file sếp tên khác thì đổi chỗ này nha -->
+<meta property="og:type" content="article">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- TỐI ƯU: Thêm thuộc tính defer để không chặn tải trang -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 700; }
+.glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.solution-step { border-left: 3px solid #0d9488; padding-left: 1.25rem; margin-bottom: 1rem; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.modal-overlay { background-color: rgba(28, 25, 23, 0.75); backdrop-filter: blur(4px); }
+.google-btn { background-color: #ffffff; color: #3c4043; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); transition: background-color 0.2s, box-shadow 0.2s; }
+.google-btn:hover { background-color: #f8f9fa; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); }
+
+/* Custom CSS cho Sơ đồ minh họa */
+.onion-layer { border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; }
+.onion-outer { width: 250px; height: 250px; background-color: #ccfbf1; border: 2px solid #5eead4; }
+.onion-middle { width: 170px; height: 170px; background-color: #99f6e4; border: 2px solid #2dd4bf; }
+.onion-inner { width: 90px; height: 90px; background-color: #14b8a6; color: white; }
+
+.iceberg-container { width: 100%; max-width: 300px; margin: 0 auto; border-radius: 1rem; overflow: hidden; border: 2px solid #e7e5e4; }
+.iceberg-water { background-color: #e0f2fe; padding: 2rem 1rem; text-align: center; border-bottom: 2px dashed #0ea5e9; position: relative; }
+.iceberg-deep { background-color: #0369a1; padding: 3rem 1rem; text-align: center; color: white; }
+</style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<!-- INITIAL WELCOME MODAL -->
+<div id="welcome-modal" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+<div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="welcome-modal-content">
+<div class="text-center mb-6">
+<div class="text-5xl mb-4">🤝</div>
+<h2 class="text-2xl font-extrabold text-slate-900 mb-2">Sổ Tay VHDDTKD</h2>
+<p class="text-stone-600 text-sm">Đăng nhập để mở khóa toàn bộ bí kíp, lý thuyết động lực và các tình huống đạo đức kinh doanh.</p>
+</div>
+<div class="space-y-4">
+<button onclick="loginGoogleReal()" class="google-btn w-full py-3 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3">
+<span class="text-lg font-black text-blue-600">G</span> 
+<span>Đăng nhập bằng Google</span>
+</button>
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-stone-200"></div>
+<span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
+<div class="flex-grow border-t border-stone-200"></div>
+</div>
+<button onclick="window.location.href='index.html'" 
+        style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
+        onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
+        onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
+    🏠 Quay về Trang chủ
+</button>
+</div>
+</div>
+</div>
+
+
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand & Tên Môn Học -->
+        
+
+        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+            <div class="flex flex-col justify-center min-w-0">
+                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
+                
+                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
+                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🤝 VH & ĐĐ Kinh Doanh</p>
+                </div>
+            </div>
+        </a>
+
+<div class="hidden md:flex space-x-1 items-center" id="nav-menu">
+<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Khái niệm</button>
+<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Khác biệt</button>
+<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.3: Tổ chức <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Động lực <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: Đạo đức <span class="premium-lock text-xs"></span></button>
+</div>
+
+<div class="flex items-center shrink-0">
+<div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+    <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+    <span id="online-count" class="mr-1 sm:mr-1">...</span> 
+    <span class="hidden sm:inline">online</span>
+</div>
+
+<!-- User Profile / Login Area -->
+<div class="border-l border-stone-300 pl-4">
+<button id="nav-login-btn" onclick="showWelcomeModal()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+<div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+<img id="user-avatar" src="https://ui-avatars.com/api/?name=Sinh+Vien&background=0D8B9&color=fff" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+<select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+<option value="ch1">Chương 1: Khái niệm Văn hóa</option>
+<option value="ch2">Chương 2: Khác biệt Văn hóa</option>
+<option value="ch3">Chương 3: Văn hóa Tổ chức & Đa dạng</option>
+<option value="ch4">Chương 4: Động lực Đa văn hóa</option>
+<option value="ch5">Chương 5: Đạo đức & Trách nhiệm XH</option>
+</select>
+<!-- NÚT MENU 3 GẠCH (Dự phòng chức năng sau này) -->
+        <div class="absolute right-8 top-1/2 transform -translate-y-1/2 flex items-center">
+            <button id="mobile-sidebar-btn" class="p-1.5 text-teal-700 hover:bg-teal-100 rounded transition-colors focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+</div>
+</div>
+</nav>
+
+<!-- Main Content Container -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+
+<div class="mb-12 text-center">
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Bí Kíp "Phá Đảo" VH & ĐĐ TKD</h1>
+<p class="text-lg text-stone-600 max-w-2xl mx-auto mb-8">Tổng hợp tinh hoa lý thuyết, các mô hình văn hóa, case study thực tế và ma trận đạo đức kinh doanh quốc tế.</p>
+</div>
+
+<!--Bảng Hướng Dẫn -->
+<div class="mx-auto mb-12 bg-white border-2 border-teal-100 rounded-2xl p-5 md:p-6 text-left max-w-3xl shadow-sm hover:shadow-md transition-shadow">
+<h3 class="font-bold text-teal-800 text-lg mb-3 flex items-center"><span class="text-2xl mr-2">💡</span> Hướng Dẫn Sử Dụng Nhanh</h3>
+<ul class="text-sm md:text-base text-stone-700 space-y-3">
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Tra cứu lý thuyết:</strong> Dùng thanh Menu ở trên (hoặc menu thả xuống trên điện thoại) để chuyển nhanh. Nội dung đã được lọc sạch "sạn", hệ thống hóa toàn bộ dưới dạng Flashcard và Bảng biểu.</span>
+</li>
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Sơ đồ trực quan (Chương 1):</strong> Không cần học vẹt! Hãy xem trực tiếp <span class="bg-stone-100 text-teal-700 px-2 py-0.5 rounded border border-stone-200 font-semibold">Mô hình Củ hành</span> và Tảng băng trôi được thiết kế nổi bật để hiểu tận gốc bản chất văn hóa.</span>
+</li>
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Giải Case Study (Chương 3,4,5):</strong> Áp dụng ngay quy trình 5 bước ra quyết định để xử lý các tình huống Tiến thoái lưỡng nan (Ethical Dilemma)!</span>
+</li>
+</ul>
+</div>
+
+<!-- ================= SECTION: CHƯƠNG 1 ================= -->
+<section id="ch1" class="tab-content block">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1: Văn Hóa & Quản Trị Giao Thoa (Culture & Cross-Culture Management)</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Trọng tâm:</strong> Hiểu rõ bản chất văn hóa không phải do bẩm sinh, nắm vững 2 mô hình nhận thức (Củ hành, Tảng băng) và 4 định hướng chiến lược của MNCs.</p>
+</div>
+
+<!-- Flashcards: Khái niệm & Đặc điểm -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 mb-8">
+<h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center"><span class="text-2xl mr-2">📚</span> Bản Chất Của Văn Hóa</h3>
+<p class="mb-4 text-stone-700">Nguồn gốc từ <strong>"Cultura"</strong> (sự sùng bái/thờ cúng). Nó là những cách thức suy nghĩ và hành xử chung được truyền lại, phát triển qua áp lực xã hội.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- Đặc điểm 1 -->
+    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+        <h4 class="font-bold text-teal-700 mb-1">1. Được học hỏi (Learned)</h4>
+        <p class="text-sm text-stone-600">Không bẩm sinh, thu nhận qua học tập và kinh nghiệm.</p>
+        <div class="mt-2 text-xs bg-white p-2 rounded border border-stone-100 text-stone-500"><strong>Ví dụ:</strong> Đứa trẻ sinh ra ở VN được dạy dùng đũa, ở Mỹ được dạy dùng nĩa.</div>
+    </div>
+    <!-- Đặc điểm 2 -->
+    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+        <h4 class="font-bold text-teal-700 mb-1">2. Được chia sẻ (Shared)</h4>
+        <p class="text-sm text-stone-600">Không đặc trưng cho một cá nhân mà cho cả một nhóm/tổ chức.</p>
+    </div>
+    <!-- Đặc điểm 3 -->
+    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+        <h4 class="font-bold text-teal-700 mb-1">3. Xuyên thế hệ (Transgenerational)</h4>
+        <p class="text-sm text-stone-600">Truyền từ thế hệ này sang thế hệ khác (ông bà -> cha mẹ -> con cái).</p>
+    </div>
+    <!-- Đặc điểm 4 -->
+    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+        <h4 class="font-bold text-teal-700 mb-1">4. Tính biểu tượng (Symbolic)</h4>
+        <p class="text-sm text-stone-600">Dựa trên khả năng sử dụng các biểu tượng, đặc biệt là ngôn ngữ.</p>
+    </div>
+    <!-- Đặc điểm 5 -->
+    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+        <h4 class="font-bold text-teal-700 mb-1">5. Có khuôn mẫu (Patterned)</h4>
+        <p class="text-sm text-stone-600">Có cấu trúc tích hợp. Thay đổi một phần sẽ kéo theo phần khác.</p>
+    </div>
+    <!-- Đặc điểm 6 -->
+    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+        <h4 class="font-bold text-teal-700 mb-1">6. Thích nghi (Adaptive)</h4>
+        <p class="text-sm text-stone-600">Dựa trên khả năng thích nghi của con người với môi trường sống.</p>
+    </div>
+</div>
+</div>
+
+<!-- Sơ đồ Mô hình -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Onion Model -->
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex flex-col items-center">
+        <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">Mô Hình Củ Hành Tây (Onion Model)</h3>
+        <div class="onion-layer onion-outer shadow-sm">
+            <div class="flex flex-col items-center">
+                <span class="text-xs text-teal-800 mb-1">Thực tiễn (Practices) - Dễ thấy</span>
+                <div class="onion-layer onion-middle shadow-md">
+                    <div class="flex flex-col items-center">
+                        <span class="text-[10px] text-teal-900 mb-1 opacity-75">Nghi lễ & Anh hùng</span>
+                        <div class="onion-layer onion-inner shadow-lg">
+                            <span class="text-xs font-black">Giá trị<br>(Values)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 text-sm text-stone-600 bg-stone-50 p-3 rounded w-full border border-stone-200">
+            <ul class="list-disc pl-4 space-y-1">
+                <li><strong>Lớp ngoài (Thực tiễn):</strong> Biểu tượng (Ngôn ngữ), Anh hùng (Hình mẫu), Nghi lễ (Cách hội họp). Rất dễ bắt chước.</li>
+                <li><strong>Lõi (Giá trị):</strong> Niềm tin cốt lõi đúng/sai. Khó nhận biết và thay đổi nhất.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Iceberg Model -->
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex flex-col items-center">
+        <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">Mô Hình Tảng Băng Trôi (Iceberg Model)</h3>
+        <div class="iceberg-container">
+            <div class="iceberg-water">
+                <span class="text-lg font-black text-sky-800">BỀ NỔI (10%)</span>
+                <p class="text-xs text-sky-600 mt-1 font-semibold">Explicit / Vật chất</p>
+                <div class="absolute bottom-0 left-0 w-full text-[10px] text-sky-500 translate-y-1/2 bg-white px-2 rounded-full border border-sky-200 inline-block">Mặt Nước (Nhận thức)</div>
+            </div>
+            <div class="iceberg-deep">
+                <span class="text-xl font-black">BỀ CHÌM (90%)</span>
+                <p class="text-xs text-sky-200 mt-1 opacity-90">Implicit / Vô hình</p>
+            </div>
+        </div>
+        <div class="mt-6 text-sm text-stone-600 bg-stone-50 p-3 rounded w-full border border-stone-200">
+            <ul class="list-disc pl-4 space-y-1">
+                <li><strong class="text-sky-700">Bề nổi:</strong> Văn hóa vật chất, ngôn ngữ, kiến trúc, thực phẩm (Dễ nhìn thấy).</li>
+                <li><strong class="text-sky-900">Bề chìm:</strong> Giá trị, niềm tin, giả định cơ bản (Hướng dẫn hành vi từ sâu thẳm).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Table: Các yếu tố quyết định -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden mb-8">
+    <div class="bg-teal-600 p-4"><h3 class="text-lg font-bold text-white">Các Yếu Tố Quyết Định Văn Hóa (Determinants of Culture)</h3></div>
+    <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+            <thead class="bg-stone-100 text-stone-700">
+                <tr><th class="p-4 border-b">Yếu tố (Determinant)</th><th class="p-4 border-b">Tác động đến Kinh doanh quốc tế (IB)</th></tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200">
+                <tr class="hover:bg-stone-50">
+                    <td class="p-4 font-bold text-slate-800">Tôn giáo <br><span class="text-xs text-stone-500 font-normal">(Religion)</span></td>
+                    <td class="p-4 text-stone-700">Ảnh hưởng thái độ với công việc, tiền bạc, tiêu dùng. <br><em class="text-teal-700">Ví dụ: Chứng nhận Halal trong đạo Hồi, không bán thịt lợn ở Trung Đông.</em></td>
+                </tr>
+                <tr class="hover:bg-stone-50">
+                    <td class="p-4 font-bold text-slate-800">Triết học chính trị <br><span class="text-xs text-stone-500 font-normal">(Political philosophy)</span></td>
+                    <td class="p-4 text-stone-700">Chế độ dân chủ hay toàn trị định hình luật lệ, rủi ro đầu tư và tự do kinh doanh.</td>
+                </tr>
+                <tr class="hover:bg-stone-50">
+                    <td class="p-4 font-bold text-slate-800">Triết học kinh tế <br><span class="text-xs text-stone-500 font-normal">(Economic philosophy)</span></td>
+                    <td class="p-4 text-stone-700">Kinh tế thị trường (tự do) vs. Kinh tế chỉ huy (Nhà nước kiểm soát hoàn toàn).</td>
+                </tr>
+                <tr class="hover:bg-stone-50">
+                    <td class="p-4 font-bold text-slate-800">Ngôn ngữ <br><span class="text-xs text-stone-500 font-normal">(Language)</span></td>
+                    <td class="p-4 text-stone-700">Giao tiếp (Nói/Không lời), cấu trúc tư duy. Ngôn ngữ là chìa khóa mở cửa văn hóa.</td>
+                </tr>
+                <tr class="hover:bg-stone-50">
+                    <td class="p-4 font-bold text-slate-800">Cấu trúc xã hội <br><span class="text-xs text-stone-500 font-normal">(Social structure)</span></td>
+                    <td class="p-4 text-stone-700">Mức độ phân hóa giai cấp (Class) và khuynh hướng Cá nhân/Tập thể trong xã hội.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 4 Định hướng chiến lược -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+    <h3 class="text-xl font-bold text-slate-800 mb-6 border-b pb-2">4 Định Hướng Chiến Lược Quản Trị Đa Văn Hóa</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="border border-stone-200 p-4 rounded-xl hover:border-teal-400 transition-colors">
+            <h4 class="font-bold text-lg text-teal-800 mb-2">1. Vị chủng (Ethnocentric)</h4>
+            <p class="text-sm text-stone-600 mb-2">HQ (Công ty mẹ) là nhất. Giá trị của quốc gia nhà (Home country) dẫn dắt mọi quyết định.</p>
+            <div class="bg-stone-100 p-2 text-xs rounded text-stone-700"><strong>Ví dụ:</strong> Công ty Nhật bắt chi nhánh VN phải họp kiểu Nhật, xài tiếng Nhật.</div>
+        </div>
+        <div class="border border-stone-200 p-4 rounded-xl hover:border-teal-400 transition-colors">
+            <h4 class="font-bold text-lg text-teal-800 mb-2">2. Đa tâm (Polycentric)</h4>
+            <p class="text-sm text-stone-600 mb-2">Tùy biến địa phương. Thừa nhận khác biệt, chiến lược được "nhập gia tùy tục" theo quốc gia sở tại (Host country).</p>
+            <div class="bg-stone-100 p-2 text-xs rounded text-stone-700"><strong>Ví dụ:</strong> Unilever có sản phẩm và chiến lược Marketing riêng biệt cho từng thị trường.</div>
+        </div>
+        <div class="border border-stone-200 p-4 rounded-xl hover:border-teal-400 transition-colors">
+            <h4 class="font-bold text-lg text-teal-800 mb-2">3. Khu vực (Regiocentric)</h4>
+            <p class="text-sm text-stone-600 mb-2">Tư duy theo cụm. Kết hợp lợi ích công ty mẹ và chi nhánh dựa trên cơ sở từng khu vực địa lý.</p>
+            <div class="bg-stone-100 p-2 text-xs rounded text-stone-700"><strong>Ví dụ:</strong> Chiến lược ra mắt xe hơi riêng cho thị trường chung ASEAN.</div>
+        </div>
+        <div class="border border-stone-200 p-4 rounded-xl hover:border-teal-400 transition-colors">
+            <h4 class="font-bold text-lg text-teal-800 mb-2">4. Toàn cầu (Geocentric)</h4>
+            <p class="text-sm text-stone-600 mb-2">Không biên giới. Tiếp cận hệ thống toàn cầu thực sự, tuyển dụng người giỏi nhất bất kể quốc tịch.</p>
+            <div class="bg-stone-100 p-2 text-xs rounded text-stone-700"><strong>Ví dụ:</strong> CEO của Microsoft (Mỹ) hay Google (Mỹ) lại là người gốc Ấn Độ.</div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 2 ================= -->
+<section id="ch2" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 2: Sự Khác Biệt Văn Hóa Trong KD Quốc Tế</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Trọng tâm:</strong> Phân biệt rõ các chiều kích của Hofstede (Công việc) và Trompenaars (Giải quyết tình huống). Cực kỳ hay ra thi phần ghép nối định nghĩa.</p>
+</div>
+
+<!-- Tổng quan 3 mô hình -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden mb-8">
+    <div class="bg-slate-800 p-4"><h3 class="text-lg font-bold text-white">Tổng Quan 3 Mô Hình Văn Hóa Quốc Gia (National Culture)</h3></div>
+    <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+            <thead class="bg-stone-100 text-stone-700">
+                <tr><th class="p-3 border-b">Mô hình</th><th class="p-3 border-b">Số chiều</th><th class="p-3 border-b">Đặc trưng & Keyword</th></tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200">
+                <tr>
+                    <td class="p-3 font-bold text-teal-700">Hofstede</td><td class="p-3 font-black text-center text-lg">6</td>
+                    <td class="p-3">Dữ liệu nhân viên IBM. Phổ biến nhất. Khảo sát giá trị liên quan đến <strong>công việc</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="p-3 font-bold text-teal-700">Trompenaars</td><td class="p-3 font-black text-center text-lg">7</td>
+                    <td class="p-3">Dựa trên nhân chủng học. Khảo sát cách ứng xử trong các <strong>tình huống khó xử (Dilemmas)</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="p-3 font-bold text-teal-700">GLOBE</td><td class="p-3 font-black text-center text-lg">9</td>
+                    <td class="p-3">Mới nhất. Phân biệt rõ giữa <strong>"Thực tiễn đang có" (As is)</strong> và <strong>"Giá trị mong muốn" (Should be)</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- HOFSTEDE -->
+<div class="mb-10">
+    <h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">1. Mô hình 6 Khía Cạnh của Hofstede</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- PDI -->
+        <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-teal-800 mb-2">Khoảng cách quyền lực <br><span class="text-sm text-stone-500 font-normal">(Power Distance - PDI)</span></h4>
+            <p class="text-sm text-stone-700 mb-3">Sự chấp nhận phân bổ quyền lực không bình đẳng.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="bg-red-50 p-2 rounded text-red-800 border border-red-100"><strong>PDI Cao:</strong> Tôn trọng thứ bậc, sếp ra lệnh (VN, TQ).</div>
+                <div class="bg-green-50 p-2 rounded text-green-800 border border-green-100"><strong>PDI Thấp:</strong> Bình đẳng, tham vấn ý kiến (Bắc Âu).</div>
+            </div>
+        </div>
+        <!-- UAI -->
+        <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-teal-800 mb-2">Tránh né rủi ro <br><span class="text-sm text-stone-500 font-normal">(Uncertainty Avoidance - UAI)</span></h4>
+            <p class="text-sm text-stone-700 mb-3">Mức độ sợ hãi trước sự mơ hồ, không chắc chắn.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="bg-red-50 p-2 rounded text-red-800 border border-red-100"><strong>UAI Cao:</strong> Nhiều luật lệ, ngại đổi mới (Nhật).</div>
+                <div class="bg-green-50 p-2 rounded text-green-800 border border-green-100"><strong>UAI Thấp:</strong> Chấp nhận rủi ro, linh hoạt (Mỹ).</div>
+            </div>
+        </div>
+        <!-- IDV -->
+        <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-teal-800 mb-2">Cá nhân vs Tập thể <br><span class="text-sm text-stone-500 font-normal">(Individualism vs Collectivism - IDV)</span></h4>
+            <div class="grid grid-cols-2 gap-2 text-xs mt-3">
+                <div class="bg-blue-50 p-2 rounded text-blue-800 border border-blue-100"><strong>Cá nhân:</strong> Trọng chữ "Tôi" (I), tự do, thăng tiến cá nhân (Mỹ, Anh).</div>
+                <div class="bg-orange-50 p-2 rounded text-orange-800 border border-orange-100"><strong>Tập thể:</strong> Trọng "Chúng ta" (We), trung thành, giữ thể diện (Face) (Châu Á).</div>
+            </div>
+        </div>
+        <!-- MAS -->
+        <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-teal-800 mb-2">Nam tính vs Nữ tính <br><span class="text-sm text-stone-500 font-normal">(Masculinity vs Femininity - MAS)</span></h4>
+            <div class="grid grid-cols-2 gap-2 text-xs mt-3">
+                <div class="bg-blue-50 p-2 rounded text-blue-800 border border-blue-100"><strong>Nam tính:</strong> Cạnh tranh, thành công, vật chất, quyết đoán.</div>
+                <div class="bg-orange-50 p-2 rounded text-orange-800 border border-orange-100"><strong>Nữ tính:</strong> Chất lượng cuộc sống, quan tâm người yếu thế, đồng thuận.</div>
+            </div>
+        </div>
+        <!-- LTO -->
+        <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-teal-800 mb-2">Định hướng thời gian <br><span class="text-sm text-stone-500 font-normal">(Long/Short-term Orientation)</span></h4>
+            <div class="grid grid-cols-2 gap-2 text-xs mt-3">
+                <div class="bg-purple-50 p-2 rounded text-purple-800 border border-purple-100"><strong>Dài hạn:</strong> Nhìn xa trông rộng, tiết kiệm, kiên trì đầu tư.</div>
+                <div class="bg-pink-50 p-2 rounded text-pink-800 border border-pink-100"><strong>Ngắn hạn:</strong> Tôn trọng truyền thống, muốn kết quả tức thì.</div>
+            </div>
+        </div>
+        <!-- IND -->
+        <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-teal-800 mb-2">Thỏa mãn vs Kiềm chế <br><span class="text-sm text-stone-500 font-normal">(Indulgence vs Restraint)</span></h4>
+            <div class="grid grid-cols-2 gap-2 text-xs mt-3">
+                <div class="bg-purple-50 p-2 rounded text-purple-800 border border-purple-100"><strong>Thỏa mãn:</strong> Tận hưởng cuộc sống, vui vẻ, xả hơi.</div>
+                <div class="bg-pink-50 p-2 rounded text-pink-800 border border-pink-100"><strong>Kiềm chế:</strong> Kiểm soát ham muốn bằng chuẩn mực xã hội khắt khe.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TROMPENAARS -->
+<div class="mb-8">
+    <h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">2. Mô hình 7 Khía Cạnh của Trompenaars</h3>
+    <p class="text-stone-600 mb-4 text-sm font-semibold">Tập trung vào 3 nhóm mối quan hệ: Con người (5) - Thời gian (1) - Môi trường (1).</p>
+    
+    <div class="space-y-4">
+        <!-- Cặp 1 -->
+        <div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col sm:flex-row gap-4 justify-between items-center shadow-sm">
+            <div class="flex-1 text-center sm:text-left">
+                <h4 class="font-bold text-teal-700">Phổ quát (Universalism)</h4>
+                <p class="text-xs text-stone-600 mt-1">Áp dụng luật lệ chung cho <strong>mọi trường hợp</strong> bất chấp quan hệ. (Luật là luật).</p>
+            </div>
+            <div class="bg-stone-100 px-3 py-1 rounded-full text-xs font-bold text-stone-500 shrink-0">VS</div>
+            <div class="flex-1 text-center sm:text-right">
+                <h4 class="font-bold text-rose-700">Đặc thù (Particularism)</h4>
+                <p class="text-xs text-stone-600 mt-1">Linh hoạt bẻ cong luật lệ theo <strong>mối quan hệ cá nhân/người quen</strong>.</p>
+            </div>
+        </div>
+
+        <!-- Cặp 2 -->
+        <div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col sm:flex-row gap-4 justify-between items-center shadow-sm">
+            <div class="flex-1 text-center sm:text-left">
+                <h4 class="font-bold text-teal-700">Trung lập (Neutral)</h4>
+                <p class="text-xs text-stone-600 mt-1">Giấu kín, kìm nén cảm xúc trong công việc. Chuyên nghiệp, lạnh lùng.</p>
+            </div>
+            <div class="bg-stone-100 px-3 py-1 rounded-full text-xs font-bold text-stone-500 shrink-0">VS</div>
+            <div class="flex-1 text-center sm:text-right">
+                <h4 class="font-bold text-rose-700">Cảm xúc (Emotional)</h4>
+                <p class="text-xs text-stone-600 mt-1">Tự do thể hiện cảm xúc, dùng nhiều ngôn ngữ cơ thể, giọng nói lớn.</p>
+            </div>
+        </div>
+
+        <!-- Cặp 3 -->
+        <div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col sm:flex-row gap-4 justify-between items-center shadow-sm">
+            <div class="flex-1 text-center sm:text-left">
+                <h4 class="font-bold text-teal-700">Cụ thể (Specific)</h4>
+                <p class="text-xs text-stone-600 mt-1">Tách biệt rõ ràng <strong>công việc và đời tư</strong>. (Sếp ở công ty không phải sếp ngoài đời).</p>
+            </div>
+            <div class="bg-stone-100 px-3 py-1 rounded-full text-xs font-bold text-stone-500 shrink-0">VS</div>
+            <div class="flex-1 text-center sm:text-right">
+                <h4 class="font-bold text-rose-700">Khuếch tán (Diffuse)</h4>
+                <p class="text-xs text-stone-600 mt-1">Hòa trộn, xâm nhập. <strong>Đời tư và công việc dính liền</strong>. Phải làm bạn trước mới làm ăn.</p>
+            </div>
+        </div>
+
+        <!-- Cặp 4 -->
+        <div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col sm:flex-row gap-4 justify-between items-center shadow-sm">
+            <div class="flex-1 text-center sm:text-left">
+                <h4 class="font-bold text-teal-700">Đạt được (Achievement)</h4>
+                <p class="text-xs text-stone-600 mt-1">Địa vị, sự tôn trọng có được do <strong>năng lực, thành tích làm việc</strong> hiện tại.</p>
+            </div>
+            <div class="bg-stone-100 px-3 py-1 rounded-full text-xs font-bold text-stone-500 shrink-0">VS</div>
+            <div class="flex-1 text-center sm:text-right">
+                <h4 class="font-bold text-rose-700">Quy gán (Ascription)</h4>
+                <p class="text-xs text-stone-600 mt-1">Địa vị do <strong>gán ghép</strong> bởi tuổi tác, xuất thân gia đình, bằng cấp, giới tính.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+             <div class="bg-stone-50 border border-stone-200 p-4 rounded-xl">
+                 <h4 class="font-bold text-slate-800 mb-2">⏰ Thời gian (Time)</h4>
+                 <p class="text-sm"><strong>Tuần tự (Sequential):</strong> Làm từng việc một theo đúng lịch trình (VD: Mỹ, Đức).</p>
+                 <p class="text-sm mt-2 border-t pt-2"><strong>Đồng bộ (Synchronous):</strong> Làm nhiều việc cùng lúc, lịch trình linh hoạt (VD: Mỹ Latin, Châu Á).</p>
+             </div>
+             <div class="bg-stone-50 border border-stone-200 p-4 rounded-xl">
+                 <h4 class="font-bold text-slate-800 mb-2">🌿 Môi trường (Environment)</h4>
+                 <p class="text-sm"><strong>Định hướng trong (Inner):</strong> Tin rằng con người kiểm soát và thống trị thiên nhiên/số phận.</p>
+                 <p class="text-sm mt-2 border-t pt-2"><strong>Định hướng ngoài (Outer):</strong> Tin rằng con người phải hòa hợp, thuận theo thiên nhiên/hoàn cảnh.</p>
+             </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 3 (PREMIUM) ================= -->
+<section id="ch3" class="tab-content hidden">
+<div class="mb-8 flex items-center justify-between bg-teal-50 p-4 rounded-lg">
+    <div>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Văn Hóa Tổ Chức & Sự Đa Dạng</h2>
+        <p class="text-stone-600">Sự giao thoa giữa Văn hóa Quốc gia và Văn hóa Tổ chức (Organizational Culture).</p>
+    </div>
+    <span class="px-3 py-1 bg-rose-100 text-rose-800 rounded-full text-xs font-black shadow-sm shrink-0"></span>
+</div>
+
+<!-- Tương tác văn hóa -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 mb-8 border-l-4 border-l-orange-400">
+    <h3 class="font-bold text-lg text-slate-800 mb-2">❗ Điểm mù (Blind spot) thường gặp khi thi:</h3>
+    <p class="text-stone-700">Nhiều người nghĩ làm cùng công ty thì văn hóa quốc gia sẽ phai nhạt. <strong>SAI!</strong> Trong các MNCs, sự khác biệt về văn hóa quốc gia của nhân viên có thể <strong>GIA TĂNG (trở nên rõ rệt hơn)</strong> ngay cả khi họ làm việc trong cùng một văn hóa tổ chức.</p>
+</div>
+
+<!-- 4 Loại hình VH Tổ chức -->
+<h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">4 Loại Hình Văn Hóa Tổ Chức (Trompenaars)</h3>
+<p class="text-sm text-stone-600 mb-4">Xác định bởi 2 trục: <strong class="text-teal-700">Quyền lực</strong> (Bình đẳng <-> Cấp bậc) và <strong class="text-teal-700">Trọng tâm</strong> (Con người <-> Nhiệm vụ).</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+    <!-- Family -->
+    <div class="bg-white border-2 border-stone-200 rounded-xl p-5 hover:border-blue-400 transition-all shadow-sm relative overflow-hidden">
+        <div class="absolute -right-4 -top-4 text-6xl opacity-10">👨‍👩‍👧</div>
+        <div class="flex justify-between items-start mb-2">
+            <h4 class="font-black text-xl text-blue-800">GIA ĐÌNH (Family)</h4>
+            <span class="text-xs font-bold bg-blue-100 text-blue-800 px-2 py-1 rounded">Cấp bậc + Con người</span>
+        </div>
+        <ul class="text-sm text-stone-700 space-y-1 mt-3 list-disc pl-4">
+            <li>Sếp đóng vai trò như "Người cha".</li>
+            <li>Nhân viên gắn bó trung thành lâu dài.</li>
+            <li>Quyền lực dựa trên tuổi tác/vị trí.</li>
+            <li><em class="text-stone-500">Phổ biến: Nhật Bản, Trung Quốc, Thổ Nhĩ Kỳ.</em></li>
+        </ul>
+    </div>
+
+    <!-- Eiffel -->
+    <div class="bg-white border-2 border-stone-200 rounded-xl p-5 hover:border-slate-400 transition-all shadow-sm relative overflow-hidden">
+        <div class="absolute -right-4 -top-4 text-6xl opacity-10">🗼</div>
+        <div class="flex justify-between items-start mb-2">
+            <h4 class="font-black text-xl text-slate-700">THÁP EIFFEL (Eiffel Tower)</h4>
+            <span class="text-xs font-bold bg-slate-100 text-slate-800 px-2 py-1 rounded">Cấp bậc + Nhiệm vụ</span>
+        </div>
+        <ul class="text-sm text-stone-700 space-y-1 mt-3 list-disc pl-4">
+            <li>Cấu trúc rạch ròi, mô tả công việc (JD) rất cụ thể.</li>
+            <li>Quản lý bằng quy trình chặt chẽ.</li>
+            <li>Thay người không ảnh hưởng đến bộ máy (như cấu trúc tháp sắt).</li>
+            <li><em class="text-stone-500">Phổ biến: Đức.</em></li>
+        </ul>
+    </div>
+
+    <!-- Guided Missile -->
+    <div class="bg-white border-2 border-stone-200 rounded-xl p-5 hover:border-red-400 transition-all shadow-sm relative overflow-hidden">
+        <div class="absolute -right-4 -top-4 text-6xl opacity-10">🚀</div>
+        <div class="flex justify-between items-start mb-2">
+            <h4 class="font-black text-xl text-red-700">TÊN LỬA (Guided Missile)</h4>
+            <span class="text-xs font-bold bg-red-100 text-red-800 px-2 py-1 rounded">Bình đẳng + Nhiệm vụ</span>
+        </div>
+        <ul class="text-sm text-stone-700 space-y-1 mt-3 list-disc pl-4">
+            <li>Hướng đến mục tiêu/dự án cụ thể (như tên lửa tìm mục tiêu).</li>
+            <li>Làm việc nhóm đa chức năng (cross-functional).</li>
+            <li>Trả thưởng theo hiệu suất. Tiếng nói chuyên gia được tôn trọng hơn sếp.</li>
+            <li><em class="text-stone-500">Phổ biến: Mỹ, Anh.</em></li>
+        </ul>
+    </div>
+
+    <!-- Incubator -->
+    <div class="bg-white border-2 border-stone-200 rounded-xl p-5 hover:border-amber-400 transition-all shadow-sm relative overflow-hidden">
+        <div class="absolute -right-4 -top-4 text-6xl opacity-10">🥚</div>
+        <div class="flex justify-between items-start mb-2">
+            <h4 class="font-black text-xl text-amber-700">LÒ ẤP TRỨNG (Incubator)</h4>
+            <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2 py-1 rounded">Bình đẳng + Con người</span>
+        </div>
+        <ul class="text-sm text-stone-700 space-y-1 mt-3 list-disc pl-4">
+            <li>Tổ chức là nơi nuôi dưỡng ý tưởng cá nhân.</li>
+            <li>Môi trường sáng tạo cực cao, ít quy tắc.</li>
+            <li>Sếp đóng vai trò hỗ trợ, tạo điều kiện.</li>
+            <li><em class="text-stone-500">Phổ biến: Thung lũng Silicon (Các công ty Startup).</em></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Đa dạng & Timeline -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+        <h3 class="font-bold text-lg text-slate-800 mb-4 border-b pb-2">Ưu & Nhược Điểm Của Đa Dạng (Diversity)</h3>
+        <div class="space-y-4">
+            <div class="bg-red-50 p-3 rounded-lg border border-red-100">
+                <h4 class="font-bold text-red-800 text-sm mb-1">🔴 Thách thức (Problems)</h4>
+                <ul class="text-xs text-red-900 list-disc pl-4 space-y-1">
+                    <li><strong>Nhận thức (Perceptual):</strong> Định kiến (Stereotypes), đánh giá sai năng lực do khác biệt bề ngoài.</li>
+                    <li><strong>Giao tiếp (Communication):</strong> Rào cản ngôn ngữ, hiểu lầm ý.</li>
+                    <li><strong>Thái độ (Attitudinal):</strong> Thiếu gắn kết, khó đồng lòng.</li>
+                </ul>
+            </div>
+            <div class="bg-green-50 p-3 rounded-lg border border-green-100">
+                <h4 class="font-bold text-green-800 text-sm mb-1">🟢 Lợi ích (Advantages)</h4>
+                <ul class="text-xs text-green-900 list-disc pl-4 space-y-1">
+                    <li>Đa dạng góc nhìn (Multiple perspectives) giúp ra quyết định toàn diện.</li>
+                    <li>Tăng cường Đổi mới sáng tạo (Innovativeness).</li>
+                    <li>Ngăn chặn <strong>"Tư duy nhóm" (Groupthink)</strong> - hiện tượng cả nhóm đồng thuận mù quáng vì quá giống nhau.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline 3 Giai đoạn -->
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+        <h3 class="font-bold text-lg text-slate-800 mb-4 border-b pb-2">3 Giai Đoạn Quản Lý Nhóm Đa Dạng</h3>
+        <div class="relative border-l-2 border-teal-200 ml-3 space-y-6">
+            <div class="pl-6 relative">
+                <div class="absolute w-4 h-4 bg-teal-500 rounded-full -left-[9px] top-1 ring-4 ring-white"></div>
+                <h4 class="font-bold text-teal-800 text-base">1. Giai đoạn Gia nhập (Entry Stage)</h4>
+                <p class="text-xs text-stone-600 mt-1">Khó khăn lớn nhất là xây dựng lòng tin (trust). Cần tập trung giao tiếp phá băng.</p>
+            </div>
+            <div class="pl-6 relative">
+                <div class="absolute w-4 h-4 bg-teal-500 rounded-full -left-[9px] top-1 ring-4 ring-white"></div>
+                <h4 class="font-bold text-teal-800 text-base">2. Giai đoạn Làm việc (Work Stage)</h4>
+                <p class="text-xs text-stone-600 mt-1">Giai đoạn <strong>hiệu quả nhất</strong>. Đa dạng phát huy tác dụng: nhiều ý tưởng, góc nhìn mới mẻ bùng nổ.</p>
+            </div>
+            <div class="pl-6 relative">
+                <div class="absolute w-4 h-4 bg-teal-500 rounded-full -left-[9px] top-1 ring-4 ring-white"></div>
+                <h4 class="font-bold text-teal-800 text-base">3. Giai đoạn Hành động (Action Stage)</h4>
+                <p class="text-xs text-stone-600 mt-1">Khó khăn trở lại: Cần đạt sự <strong>đồng thuận cao (consensus)</strong> để chốt phương án. Dễ sinh cãi vã.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 6 Bước quản lý nhóm (Step UI) -->
+<div class="mt-8 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+    <h3 class="font-bold text-lg text-slate-800 mb-6 text-center">6 Bước Quản Lý Nhóm Đa Văn Hóa Hiệu Quả</h3>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="text-center p-3 bg-stone-50 rounded border border-stone-200"><div class="text-xl font-black text-teal-600 mb-1">B1</div><p class="text-xs font-bold text-stone-700">Tuyển theo NĂNG LỰC NHIỆM VỤ</p><p class="text-[10px] text-stone-500">Không chọn bừa để "đủ quota"</p></div>
+        <div class="text-center p-3 bg-stone-50 rounded border border-stone-200"><div class="text-xl font-black text-teal-600 mb-1">B2</div><p class="text-xs font-bold text-stone-700">Chuẩn bị TÂM LÝ</p><p class="text-[10px] text-stone-500">Sẵn sàng đối mặt khác biệt</p></div>
+        <div class="text-center p-3 bg-stone-50 rounded border border-stone-200"><div class="text-xl font-black text-teal-600 mb-1">B3</div><p class="text-xs font-bold text-stone-700">Định hình MỤC TIÊU CHUNG</p><p class="text-[10px] text-stone-500">Một hướng đi thống nhất</p></div>
+        <div class="text-center p-3 bg-stone-50 rounded border border-stone-200"><div class="text-xl font-black text-teal-600 mb-1">B4</div><p class="text-xs font-bold text-stone-700">Quyền lực BÌNH ĐẲNG</p><p class="text-[10px] text-stone-500">Ai cũng được góp ý</p></div>
+        <div class="text-center p-3 bg-stone-50 rounded border border-stone-200"><div class="text-xl font-black text-teal-600 mb-1">B5</div><p class="text-xs font-bold text-stone-700">Tôn trọng TUYỆT ĐỐI</p><p class="text-[10px] text-stone-500">Mutual respect</p></div>
+        <div class="text-center p-3 bg-stone-50 rounded border border-stone-200"><div class="text-xl font-black text-teal-600 mb-1">B6</div><p class="text-xs font-bold text-stone-700">Phản hồi TÍCH CỰC</p><p class="text-[10px] text-stone-500">Định kỳ đánh giá khen ngợi</p></div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 4 (PREMIUM) ================= -->
+<section id="ch4" class="tab-content hidden">
+<div class="mb-8 flex items-center justify-between bg-teal-50 p-4 rounded-lg">
+    <div>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 4: Động Lực (Motivation Across Cultures)</h2>
+        <p class="text-stone-600">Hiểu rõ 2 nhóm thuyết: Thuyết Nội dung (What) và Thuyết Quá trình (How).</p>
+    </div>
+    <span class="px-3 py-1 bg-rose-100 text-rose-800 rounded-full text-xs font-black shadow-sm shrink-0"></span>
+</div>
+
+<!-- Khái niệm -->
+<div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm mb-8 text-center">
+    <p class="text-sm text-stone-600 mb-2">Công thức tạo động lực cốt lõi:</p>
+    <div class="text-lg md:text-xl font-black text-teal-800 bg-teal-50 py-3 rounded-lg border border-teal-100 inline-block px-6">
+        Nhu cầu chưa thỏa mãn ➔ Sự thôi thúc (Drive) ➔ Đạt được mục tiêu
+    </div>
+    <div class="flex justify-center gap-6 mt-4 text-sm">
+        <div class="bg-stone-100 px-4 py-2 rounded text-stone-700"><strong>Thưởng bên ngoài (Extrinsic):</strong> Lương, tiền, chức vụ.</div>
+        <div class="bg-stone-100 px-4 py-2 rounded text-stone-700"><strong>Thưởng bên trong (Intrinsic):</strong> Tự hào, đam mê, hoàn thành.</div>
+    </div>
+</div>
+
+<!-- Content Theories -->
+<h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">1. Các Thuyết Nội Dung (Content Theories) - Trả lời câu hỏi "CÁI GÌ?"</h3>
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden mb-10">
+    <table class="w-full text-left text-sm">
+        <thead class="bg-slate-100 text-slate-800">
+            <tr><th class="p-4 border-b w-1/4">Tác giả & Thuyết</th><th class="p-4 border-b w-1/3">Nội dung cốt lõi</th><th class="p-4 border-b">Ứng dụng Đa văn hóa</th></tr>
+        </thead>
+        <tbody class="divide-y divide-stone-200">
+            <tr>
+                <td class="p-4 font-bold text-teal-800">Maslow<br><span class="text-xs text-stone-500 font-normal">Tháp nhu cầu 5 bậc</span></td>
+                <td class="p-4 text-stone-700">Sinh lý &rarr; An toàn &rarr; Xã hội &rarr; Tôn trọng &rarr; Tự thể hiện (Đỉnh).</td>
+                <td class="p-4 text-stone-700 bg-teal-50/30">Ở Châu Á (Tính tập thể), nhu cầu <strong>Xã hội (Thuộc về nhóm)</strong> thường cao nhất, không phải Tự thể hiện (Cá nhân) như Mỹ.</td>
+            </tr>
+            <tr>
+                <td class="p-4 font-bold text-teal-800">Herzberg<br><span class="text-xs text-stone-500 font-normal">Thuyết 2 yếu tố</span></td>
+                <td class="p-4 text-stone-700"><strong>Động viên (Motivators):</strong> Thành tựu, công việc.<br><strong>Duy trì (Hygiene):</strong> Lương, sếp, môi trường.</td>
+                <td class="p-4 text-stone-700 bg-teal-50/30">Đúng trên toàn cầu! <strong>Lương (Hygiene) chỉ giúp bớt chửi sếp</strong>, không làm nhân viên chăm chỉ hơn. Phải dùng yếu tố Động viên.</td>
+            </tr>
+            <tr>
+                <td class="p-4 font-bold text-teal-800">McClelland<br><span class="text-xs text-stone-500 font-normal">Nhu cầu thành tựu</span></td>
+                <td class="p-4 text-stone-700">1. Thành tựu (Nỗ lực cá nhân)<br>2. Quyền lực (Kiểm soát)<br>3. Giao tiếp/Hòa đồng.</td>
+                <td class="p-4 text-stone-700 bg-teal-50/30">Các nước Masculinity cao/UAI thấp (Mỹ) có <strong>Nhu cầu Thành tựu rất cao</strong>. Châu Á thiên về <strong>Giao tiếp</strong>.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Process Theories -->
+<h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">2. Các Thuyết Quá Trình (Process Theories) - Trả lời câu hỏi "THẾ NÀO?"</h3>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    <!-- Equity -->
+    <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm flex flex-col">
+        <h4 class="font-bold text-lg text-teal-800 mb-2">Thuyết Công Bằng (Equity)</h4>
+        <p class="text-xs text-stone-600 mb-3">So sánh tỷ lệ: <strong class="text-red-600 text-sm">(Lương/Nỗ lực) của mình</strong> với <strong class="text-blue-600 text-sm">Của người khác</strong>.</p>
+        <div class="mt-auto bg-stone-50 p-3 rounded border border-stone-200 text-xs text-stone-700">
+            <strong>Ứng dụng Quốc tế:</strong> Ở Châu Á, sự "công bằng" đôi khi được tính dựa trên <em>tuổi tác, thâm niên, nhu cầu gia đình</em> thay vì năng lực lõi như ở Mỹ.
+        </div>
+    </div>
+    
+    <!-- Goal-Setting -->
+    <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm flex flex-col">
+        <h4 class="font-bold text-lg text-teal-800 mb-2">Thiết lập mục tiêu (Goal-Setting)</h4>
+        <p class="text-xs text-stone-600 mb-3">Mục tiêu cụ thể, khó vừa phải và có phản hồi (Feedback) sẽ tăng hiệu suất.</p>
+        <div class="mt-auto bg-stone-50 p-3 rounded border border-stone-200 text-xs text-stone-700">
+            <strong>Ứng dụng Quốc tế:</strong> Phù hợp ở Mỹ. Tại các nước PDI (Khoảng cách quyền lực) cao, nhân viên không thích tham gia đặt mục tiêu mà chờ sếp ra lệnh.
+        </div>
+    </div>
+
+    <!-- Expectancy -->
+    <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm flex flex-col">
+        <h4 class="font-bold text-lg text-teal-800 mb-2">Thuyết Kỳ Vọng (Expectancy)</h4>
+        <p class="text-[11px] font-black text-stone-800 mb-3 bg-stone-100 p-2 rounded text-center">Động lực = (Nỗ lực &rarr; KQ) &times; (KQ &rarr; Thưởng) &times; Giá trị Thưởng</p>
+        <div class="mt-auto bg-stone-50 p-3 rounded border border-stone-200 text-xs text-stone-700">
+            <strong>Ứng dụng Quốc tế:</strong> Khó áp dụng ở nền văn hóa tin vào số phận/định mệnh. Nhân viên phải tin mình <em>kiểm soát được kết quả</em> thì mới có kỳ vọng nỗ lực.
+        </div>
+    </div>
+</div>
+
+<!-- Work Centrality & Rewards -->
+<div class="bg-stone-800 text-white p-6 rounded-2xl shadow-sm border border-stone-700">
+    <h3 class="font-bold text-lg text-teal-400 mb-4 border-b border-stone-600 pb-2">Ứng dụng: Tầm quan trọng công việc & Phần thưởng</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+        <div>
+            <h4 class="font-bold text-white mb-2 flex items-center"><span class="mr-2">💼</span> Tầm quan trọng (Work Centrality)</h4>
+            <p class="text-stone-300">Mức độ ưu tiên công việc trong đời. <br>
+            - <strong class="text-red-400">Nhật Bản:</strong> Rất cao (Sinh ra hiện tượng <em>Karoshi</em> - làm việc đến chết).<br>
+            - <strong class="text-blue-300">Mỹ/Anh:</strong> Ưu tiên cân bằng công việc - giải trí cá nhân.</p>
+        </div>
+        <div>
+            <h4 class="font-bold text-white mb-2 flex items-center"><span class="mr-2">🎁</span> Phần thưởng (Rewards)</h4>
+            <p class="text-stone-300">
+            - <strong class="text-teal-300">Mỹ (Cá nhân):</strong> Thích trả lương/thưởng theo năng lực (Merit pay).<br>
+            - <strong class="text-orange-300">Châu Á (Tập thể):</strong> Từ chối thưởng cá nhân chênh lệch vì sợ phá vỡ sự hòa hợp nhóm (Group harmony). Chuộng thưởng nhóm/thâm niên.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 5 (PREMIUM) ================= -->
+<section id="ch5" class="tab-content hidden">
+<div class="mb-8 flex items-center justify-between bg-teal-50 p-4 rounded-lg">
+    <div>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 5: Đạo Đức & Trách Nhiệm Xã Hội (Ethics & CSR)</h2>
+        <p class="text-stone-600">Phân tích rễ rễ của hành vi sai trái, các triết lý đạo đức ngụy biện và quy trình 5 bước ra quyết định.</p>
+    </div>
+    <span class="px-3 py-1 bg-rose-100 text-rose-800 rounded-full text-xs font-black shadow-sm shrink-0"></span>
+</div>
+
+<!-- Khái niệm cốt lõi & 5 Vấn đề -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    <div class="lg:col-span-1 space-y-4">
+        <div class="bg-white p-4 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-teal-800 mb-1">Đạo đức kinh doanh</h4>
+            <p class="text-xs text-stone-600">Nguyên tắc đúng/sai hướng dẫn hành vi kinh doanh.</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-rose-700 mb-1">Tiến thoái lưỡng nan (Ethical Dilemma)</h4>
+            <p class="text-xs text-stone-600">Tình huống mà <strong class="text-rose-600">KHÔNG CÓ</strong> lựa chọn nào là hoàn toàn đúng về đạo đức.</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-green-700 mb-1">CSR & Bền vững</h4>
+            <p class="text-xs text-stone-600">Phải xem xét hậu quả xã hội, không làm tổn hại môi trường (Vượt ra khỏi nghĩa vụ pháp lý).</p>
+        </div>
+    </div>
+
+    <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+        <h3 class="font-bold text-lg text-slate-800 mb-4 border-b pb-2">5 Vấn Đề Đạo Đức Nổi Cộm Trong IB</h3>
+        <ul class="space-y-3 text-sm text-stone-700">
+            <li class="flex items-start"><span class="text-teal-600 mr-2 mt-0.5">👷</span> <span><strong>Thực tiễn việc làm (Employment):</strong> Bóc lột lao động ở xưởng gia công (Sweatshops) nước nghèo.</span></li>
+            <li class="flex items-start"><span class="text-teal-600 mr-2 mt-0.5">⚖️</span> <span><strong>Nhân quyền (Human rights):</strong> Đầu tư vào quốc gia thiếu tự do lập hội, độc tài.</span></li>
+            <li class="flex items-start"><span class="text-teal-600 mr-2 mt-0.5">🏭</span> <span><strong>Ô nhiễm (Pollution):</strong> Lợi dụng luật lỏng lẻo. Gây ra <em>Tragedy of the commons</em> (Bi kịch tài sản chung).</span></li>
+            <li class="flex items-start"><span class="text-teal-600 mr-2 mt-0.5">💰</span> <span><strong>Tham nhũng (Corruption):</strong> Đưa/nhận hối lộ. Đạo luật FCPA (Mỹ) cấm doanh nghiệp Mỹ hối lộ DÙ hối lộ là bình thường ở nước đó.</span></li>
+            <li class="flex items-start"><span class="text-teal-600 mr-2 mt-0.5">🤝</span> <span><strong>Nghĩa vụ đạo đức:</strong> MNCs có nghĩa vụ đóng góp lại cho cộng đồng nơi họ bóc lột tài nguyên.</span></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 6 Nguyên nhân phi đạo đức -->
+<h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">6 Nguyên Nhân Gây Ra Hành Vi Phi Đạo Đức (Roots)</h3>
+<div class="flex flex-wrap gap-3 mb-10">
+    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">1. Đạo đức cá nhân suy thoái</span>
+    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">2. Quy trình chỉ nhìn vào tiền</span>
+    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">3. Văn hóa tổ chức thờ tiền</span>
+    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">4. Target (Kỳ vọng) phi thực tế</span>
+    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">5. Sếp làm gương xấu</span>
+    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">6. Văn hóa xã hội dung túng</span>
+</div>
+
+<!-- Triết lý tiếp cận -->
+<h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">Các Triết Lý Tiếp Cận (Philosophical Approaches)</h3>
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden mb-8">
+    <table class="w-full text-left text-sm">
+        <thead class="bg-slate-100 text-slate-800">
+            <tr><th class="p-3 border-b">Triết lý</th><th class="p-3 border-b">Quan điểm cốt lõi</th><th class="p-3 border-b text-center">Đánh giá</th></tr>
+        </thead>
+        <tbody class="divide-y divide-stone-200">
+            <!-- Straw men (Ngụy biện) -->
+            <tr>
+                <td class="p-3 font-bold text-red-700">Nguyên tắc Friedman</td>
+                <td class="p-3 text-stone-700">Việc của cty là kiếm tiền cho cổ đông. Không lo việc xã hội.</td>
+                <td class="p-3 text-center text-red-600 font-bold bg-red-50/50">Bị Bác Bỏ ❌</td>
+            </tr>
+            <tr>
+                <td class="p-3 font-bold text-red-700">Tương đối văn hóa</td>
+                <td class="p-3 text-stone-700">Nhập gia tùy tục. Nước sở tại làm sao, mình làm vậy (kể cả dùng nô lệ).</td>
+                <td class="p-3 text-center text-red-600 font-bold bg-red-50/50">Bị Bác Bỏ ❌</td>
+            </tr>
+            <tr>
+                <td class="p-3 font-bold text-red-700">Đạo đức tự mãn</td>
+                <td class="p-3 text-stone-700">Tiêu chuẩn của Công ty mẹ (Nước nhà) phải áp dụng ở mọi nơi.</td>
+                <td class="p-3 text-center text-red-600 font-bold bg-red-50/50">Bị Bác Bỏ ❌</td>
+            </tr>
+            <tr>
+                <td class="p-3 font-bold text-red-700">Vô đạo đức ngây thơ</td>
+                <td class="p-3 text-stone-700">Bắt chước cái sai. "Nó hối lộ được thì mình cũng được".</td>
+                <td class="p-3 text-center text-red-600 font-bold bg-red-50/50">Bị Bác Bỏ ❌</td>
+            </tr>
+            <!-- Valid Approaches -->
+            <tr>
+                <td class="p-3 font-bold text-green-700">Thuyết vị lợi (Utilitarian)</td>
+                <td class="p-3 text-stone-700">Tối đa hóa lợi ích, giảm thiểu thiệt hại (Làm tốt cho số đông nhất).</td>
+                <td class="p-3 text-center text-green-600 font-bold bg-green-50/50">Yếu (Bỏ qua thiểu số)</td>
+            </tr>
+            <tr>
+                <td class="p-3 font-bold text-green-700">Thuyết Kant (Kantian)</td>
+                <td class="p-3 text-stone-700">Con người có nhân phẩm, là mục đích, không phải công cụ kiếm tiền.</td>
+                <td class="p-3 text-center text-green-600 font-bold bg-green-50/50">Chưa đủ bao quát</td>
+            </tr>
+            <tr>
+                <td class="p-3 font-bold text-green-700">Thuyết quyền (Rights)</td>
+                <td class="p-3 text-stone-700">Mọi người có Quyền cơ bản (Human rights) vượt biên giới quốc gia.</td>
+                <td class="p-3 text-center text-teal-600 font-black bg-teal-50/50">Kim chỉ nam ✅</td>
+            </tr>
+            <tr>
+                <td class="p-3 font-bold text-green-700">Thuyết công bằng (Justice)</td>
+                <td class="p-3 text-stone-700">Phân phối công bằng lợi ích. ("Vô minh" - Veil of ignorance của Rawls).</td>
+                <td class="p-3 text-center text-teal-600 font-black bg-teal-50/50">Chuẩn mực ✅</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 5 Bước -->
+<div class="mt-8 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+    <h3 class="font-bold text-lg text-slate-800 mb-6 border-b pb-2">Quy Trình 5 Bước Ra Quyết Định Đạo Đức</h3>
+    <div class="space-y-4 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-stone-300 before:to-transparent">
+        
+        <!-- Step 1 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-teal-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 font-black z-10">1</div>
+            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-stone-50 p-4 rounded-xl border border-stone-200 shadow-sm">
+                <div class="font-bold text-teal-800 text-sm mb-1">Xác định Stakeholders</div>
+                <div class="text-xs text-stone-600">Ai (nhân viên, môi trường, cộng đồng) sẽ bị ảnh hưởng bởi quyết định này?</div>
+            </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-teal-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 font-black z-10">2</div>
+            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-stone-50 p-4 rounded-xl border border-stone-200 shadow-sm">
+                <div class="font-bold text-teal-800 text-sm mb-1">Đánh giá Quyền cơ bản</div>
+                <div class="text-xs text-stone-600">Quyết định có vi phạm các quyền cơ bản (Fundamental rights) của bất kỳ ai không?</div>
+            </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-teal-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 font-black z-10">3</div>
+            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-stone-50 p-4 rounded-xl border border-stone-200 shadow-sm border-l-4 border-l-amber-500">
+                <div class="font-bold text-amber-800 text-sm mb-1">Thiết lập Ý định (Moral intent)</div>
+                <div class="text-xs text-stone-600">Đặt lo ngại đạo đức lên trên lợi ích kinh tế (Tiền) trong tình huống tiến thoái lưỡng nan.</div>
+            </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-teal-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 font-black z-10">4</div>
+            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-stone-50 p-4 rounded-xl border border-stone-200 shadow-sm">
+                <div class="font-bold text-teal-800 text-sm mb-1">Thực thi hành vi</div>
+                <div class="text-xs text-stone-600">Hành động một cách có đạo đức (Engage in ethical behavior).</div>
+            </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-teal-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 font-black z-10">5</div>
+            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-stone-50 p-4 rounded-xl border border-stone-200 shadow-sm">
+                <div class="font-bold text-teal-800 text-sm mb-1">Kiểm toán (Audit decisions)</div>
+                <div class="text-xs text-stone-600">Định kỳ kiểm tra xem quy trình và kết quả đã tuân thủ đạo đức chưa để điều chỉnh.</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+</main>
+
+<script>
+let activeTabId = 'ch1';
+
+
+
+// Chuyển Tab không cần check khóa nữa vì auth.js đã lo
+window.attemptSwitchTab = (t) => { 
+    forceSwitchTab(t); 
+};
+
+// Hàm chuyển UI Tab
+function forceSwitchTab(t) { 
+    activeTabId = t; 
+    
+    document.querySelectorAll('.tab-content').forEach(s => { 
+        s.classList.add('hidden'); 
+        s.classList.remove('animate-fade-in'); 
+    }); 
+    
+    const targetTab = document.getElementById(t);
+    if (targetTab) {
+        targetTab.classList.remove('hidden'); 
+        targetTab.classList.add('animate-fade-in');
+        
+       // 3. TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG (Đã fix lỗi sập web)
+        const offset = 150; 
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetTab.getBoundingClientRect().top; // <--- Fix lỗi target
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+
+    // Cập nhật trạng thái nút trên Navbar
+    document.querySelectorAll('.nav-btn').forEach(b => {
+        b.classList.remove('tab-active', 'text-teal-600');
+        b.classList.add('text-stone-500');
+        if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) {
+            b.classList.add('tab-active', 'text-teal-600');
+            b.classList.remove('text-stone-500');
+        }
+    });
+    
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav) mobileNav.value = t;
+}
+</script>
+</body>
+</html>

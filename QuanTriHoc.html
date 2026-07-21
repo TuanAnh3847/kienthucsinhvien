@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta name="google-site-verification" content="wXFetqPPe7KsMk4BUPnmxSaSTpmeoqbbTU3hY5aZHSM" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+<title>Ôn thi Quản Trị Học - Trắc nghiệm, tài liệu, đề thi</title>
+<meta name="description" content="Website ôn thi Quản Trị Học, tổng hợp lý thuyết, công cụ SWOT, Grid lãnh đạo giúp sinh viên ôn tập hiệu quả">
+
+<!-- SEO CƠ BẢN (Từ khóa chuẩn môn Quản Trị Học) -->
+<meta name="keywords" content="quản trị học, chức năng quản trị, lập kế hoạch, tổ chức, lãnh đạo, kiểm soát, ma trận SWOT, phong cách lãnh đạo, tình huống quản trị, ôn thi UEL, edu connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta name="robots" content="index, follow"> 
+
+<!-- SEO MẠNG XÃ HỘI (Open Graph) -->
+<meta property="og:title" content="Bí Kíp Phá Đảo Quản Trị Học - Edu Connect">
+<meta property="og:description" content="Đập tan nỗi lo bài tập tình huống với kho lý thuyết trọng tâm và bộ câu hỏi trắc nghiệm Quản trị học chuẩn form hệ E UEL.">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png"> 
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/QuanTriHoc">
+<meta property="og:type" content="article">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+
+<!-- MathJax for rendering LaTeX syntax ($...$) -->
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.tab-active { border-bottom: 3px solid #0d9488; color: #0d9488; font-weight: 700; background-color: #f0fdfa; border-radius: 0.5rem 0.5rem 0 0; }
+.glass-panel { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.modal-overlay { background-color: rgba(28, 25, 23, 0.75); backdrop-filter: blur(4px); }
+.google-btn { background-color: #ffffff; color: #3c4043; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); transition: background-color 0.2s, box-shadow 0.2s; }
+.google-btn:hover { background-color: #f8f9fa; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); }
+
+@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.live-pulse { animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* Custom UI */
+.theory-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.theory-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+.step-container { position: relative; padding-left: 2rem; border-left: 2px dashed #99f6e4; margin-bottom: 1.5rem; }
+.step-number { position: absolute; left: -1rem; top: 0; width: 2rem; height: 2rem; background: #0d9488; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.875rem; border: 4px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.image-placeholder { background: repeating-linear-gradient(45deg, #f5f5f4, #f5f5f4 10px, #e7e5e4 10px, #e7e5e4 20px); display: flex; align-items: center; justify-content: center; border: 2px dashed #a8a29e; color: #57534e; font-weight: bold; border-radius: 0.75rem; text-align: center; padding: 1.5rem; font-size: 0.875rem; }
+.mnemonic-badge { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 0.25rem; font-weight: 900; letter-spacing: 1px; }
+</style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<!-- INITIAL WELCOME MODAL -->
+<div id="welcome-modal" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+<div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="welcome-modal-content">
+<div class="text-center mb-6">
+<div class="text-5xl mb-4">🏢</div>
+<h2 class="text-2xl font-extrabold text-slate-900 mb-2">Sổ Tay Quản Trị Học</h2>
+<p class="text-stone-600 text-sm">Đăng nhập để mở khóa các "Thần chú" giải trắc nghiệm, Case Study doanh nghiệp và các Mô hình phân tích thực chiến.</p>
+</div>
+<div class="space-y-4">
+<button onclick="loginGoogleReal()" class="google-btn w-full py-3 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3">
+<span class="text-lg font-black text-blue-600">G</span> 
+<span>Đăng nhập bằng Google</span>
+</button>
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-stone-200"></div>
+<span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
+<div class="flex-grow border-t border-stone-200"></div>
+</div>
+<button onclick="window.location.href='index.html'" 
+        style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
+        onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
+        onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
+    🏠 Quay về Trang chủ
+</button>
+</div>
+</div>
+</div>
+
+
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex justify-between items-center min-h-[4rem] py-2">
+
+        
+
+        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+            <div class="flex flex-col justify-center min-w-0">
+                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
+                
+                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
+                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🏢 Quản Trị Học</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="hidden md:flex flex-wrap justify-center gap-1 items-end h-full px-2" id="nav-menu">
+            <button onclick="attemptSwitchTab('ch1_2')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1-2: Đại Cương</button>
+            <button onclick="attemptSwitchTab('ch3_4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3-4: Đạo Đức & Môi Trường</button>
+            <button onclick="attemptSwitchTab('ch5_6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5-6: Quyết Định & Chiến Lược <span class="premium-lock text-xs"></span></button>
+            <button onclick="attemptSwitchTab('ch7_8')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.7-8: Tổ Chức & Kiểm Soát <span class="premium-lock text-xs"></span></button>
+            <button onclick="attemptSwitchTab('ch9_13')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.9-13: Lãnh Đạo & Giao Tiếp <span class="premium-lock text-xs"></span></button>
+        </div>
+
+        <div class="flex items-center shrink-0">
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+            <span id="online-count" class="mr-1 sm:mr-1">...</span> 
+            <span class="hidden sm:inline">online</span>
+        </div>
+
+            <div class="border-l border-stone-300 pl-4">
+                <button id="nav-login-btn" onclick="showWelcomeModal()" class="whitespace-nowrap hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+                <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+                    <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+                    <span id="user-name" class="whitespace-nowrap text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
+                </div>
+            </div>
+        </div>
+
+    </div> <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+        <select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+            <option value="ch1_2">Chương 1-2: Quản Trị & Cá Nhân</option>
+            <option value="ch3_4">Chương 3-4: Đạo Đức & Môi Trường</option>
+            <option value="ch5_6">Chương 5-6: Quyết Định & Chiến Lược</option>
+            <option value="ch7_8">Chương 7-8: Tổ Chức & Kiểm Soát</option>
+            <option value="ch9_13">Chương 9-13: Lãnh Đạo & Giao Tiếp</option>
+        </select>
+
+        <div class="absolute right-8 top-1/2 transform -translate-y-1/2 flex items-center">
+            <button id="mobile-sidebar-btn" class="p-1.5 text-teal-700 hover:bg-teal-100 rounded transition-colors focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</div>
+</nav>
+
+<!-- Main Content Container -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+
+<div class="mb-12 text-center">
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Bí Kíp "Phá Đảo" Quản Trị Học</h1>
+<p class="text-lg text-stone-600 max-w-2xl mx-auto mb-8">Nắm trọn các "Thần chú" giải đề, phân biệt các ma trận kinh điển và không bao giờ bị lừa bởi các case study khó nhằn.</p>
+</div>
+
+<!-- Hướng dẫn sử dụng nhanh -->
+<div class="flex justify-center mb-12">
+    <div class="bg-white border-2 border-teal-100 rounded-2xl p-5 md:p-6 text-left max-w-3xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-24 h-24 bg-teal-50 rounded-bl-full -z-0 opacity-50"></div>
+        
+        <h3 class="font-bold text-teal-800 text-lg mb-4 flex items-center relative z-10">
+            <span class="text-2xl mr-2">💡</span> Hướng Dẫn Ôn Tập "Phá Đảo" Quản Trị Học
+        </h3>
+        
+        <ul class="text-sm md:text-base text-stone-700 space-y-4 relative z-10">
+            <li class="flex items-start">
+                <span class="flex items-center justify-center bg-teal-100 text-teal-700 font-bold rounded-full w-6 h-6 mr-3 shrink-0 mt-0.5">1</span> 
+                <div>
+                    <strong>Học hiểu bản chất, KHÔNG học vẹt:</strong> Đề thi rất hay bẫy bằng tình huống thực tế. Hãy chú ý kỹ các <span class="bg-teal-50 text-teal-700 font-bold px-1 rounded">"Thần chú"</span> (P-O-L-C, O-C-E-A-N, U-J-P-M) để nhớ nhanh cốt lõi.
+                </div>
+            </li>
+            <li class="flex items-start">
+                <span class="flex items-center justify-center bg-teal-100 text-teal-700 font-bold rounded-full w-6 h-6 mr-3 shrink-0 mt-0.5">2</span> 
+                <div>
+                    <strong>Thực hành công cụ giả lập:</strong> Đừng chỉ đọc lý thuyết! Hãy thử gõ vào <span class="text-slate-800 font-bold">Ma trận SWOT</span> hoặc kéo thanh trượt <span class="text-slate-800 font-bold">Lưới Lãnh Đạo</span>. Việc tự tay phân tích sẽ giúp bạn làm bài tự luận (Case Study) cực kỳ mượt mà.
+                </div>
+            </li>
+            <li class="flex items-start">
+                <span class="flex items-center justify-center bg-teal-100 text-teal-700 font-bold rounded-full w-6 h-6 mr-3 shrink-0 mt-0.5">3</span> 
+                <div>
+                    <strong>Phân biệt rõ các "Cặp khái niệm tử thần":</strong> Hãy để mắt tới các bảng so sánh trong web (Efficiency vs Effectiveness, Programmed vs Nonprogrammed). Đây là mỏ điểm trắc nghiệm cực lớn!
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- ================= SECTION: CHƯƠNG 1 & 2 ================= -->
+<section id="ch1_2" class="tab-content block">
+    <div class="mb-10">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 1: Quy Trình Quản Trị Ngày Nay</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-teal-700 mb-3 text-lg flex items-center gap-2">💡 Management (Quản trị là gì?)</h3>
+                    <p class="text-stone-700 leading-relaxed bg-teal-50 p-4 rounded-lg border border-teal-100 font-semibold text-center mb-4">
+                        Management = Use Resources &rarr; Achieve Goals
+                    </p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full text-left text-sm border-collapse">
+                            <thead>
+                                <tr class="bg-stone-800 text-stone-100">
+                                    <th class="p-3 font-bold border-r border-stone-600 w-1/2">Hiệu suất (Efficiency)</th>
+                                    <th class="p-3 font-bold w-1/2">Hiệu quả (Effectiveness)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-stone-200">
+                                <tr>
+                                    <td class="p-3 bg-blue-50 text-blue-900">Doing things right (Làm việc đúng cách)</td>
+                                    <td class="p-3 bg-green-50 text-green-900">Doing the right things (Làm đúng việc)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">Tiết kiệm nguồn lực. Tối thiểu hóa chi phí (Minimize input).</td>
+                                    <td class="p-3">Chọn đúng mục tiêu. Tối đa hóa kết quả (Achieve goals).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bg-amber-100 p-3 rounded-lg border border-amber-200 text-sm text-amber-900 font-bold flex gap-2 items-center">
+                        <span class="text-xl">🧠</span> 
+                        <div>
+                            Mẹo nhớ: EFFICIENT = Ít tiền hơn | EFFECTIVE = Đúng hướng hơn. Công ty tốt cần CẢ HAI.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-slate-800 mb-4 text-lg">Thần chú 4 Chức năng: <span class="bg-teal-600 text-white px-2 py-1 rounded">P-O-L-C</span></h3>
+                    <div class="ml-2">
+                        <div class="step-container"><div class="step-number">P</div><strong class="text-teal-800 block">Planning (Hoạch định)</strong><span class="text-sm text-stone-600">Đặt mục tiêu, Chọn chiến lược, Phân bổ nguồn lực.</span></div>
+                        <div class="step-container"><div class="step-number">O</div><strong class="text-teal-800 block">Organizing (Tổ chức)</strong><span class="text-sm text-stone-600">Sắp xếp nguồn lực, Chia phòng ban, Quyền hạn.</span></div>
+                        <div class="step-container"><div class="step-number">L</div><strong class="text-teal-800 block">Leading (Lãnh đạo)</strong><span class="text-sm text-stone-600">Truyền cảm hứng, Dùng influence & communication.</span></div>
+                        <div class="step-container border-l-0 mb-0"><div class="step-number">C</div><strong class="text-teal-800 block">Controlling (Kiểm soát)</strong><span class="text-sm text-stone-600">Đảm bảo đúng kế hoạch, Sửa sai nếu cần.</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Cấp Bậc & Kỹ Năng Quản Trị</h3>
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="w-full md:w-2/3">
+                        <table class="w-full text-left text-sm border-collapse mb-4">
+                            <thead>
+                                <tr class="bg-stone-100 text-stone-800">
+                                    <th class="p-3 border-b border-stone-300 font-bold">Level</th>
+                                    <th class="p-3 border-b border-stone-300 font-bold">Làm gì?</th>
+                                    <th class="p-3 border-b border-stone-300 font-bold text-teal-700">Kỹ năng quan trọng nhất</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-stone-200">
+                                <tr><td class="p-3 font-bold">Top</td><td class="p-3 text-stone-600">Quyết định chiến lược, Nghĩ lớn.</td><td class="p-3 text-teal-700 font-semibold bg-teal-50">Nhận thức (Conceptual)</td></tr>
+                                <tr><td class="p-3 font-bold">Middle</td><td class="p-3 text-stone-600">Quản lý First-line.</td><td class="p-3 text-blue-700 font-semibold bg-blue-50">Nhân sự (Human) - Cần ở mọi cấp</td></tr>
+                                <tr><td class="p-3 font-bold">First-line</td><td class="p-3 text-stone-600">Quản lý trực tiếp nhân viên.</td><td class="p-3 text-amber-700 font-semibold bg-amber-50">Chuyên môn (Technical)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="w-full md:w-1/3 h-40 image-placeholder">
+                        📷                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-10 border-t border-stone-200 pt-8">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 2: Manager as a Person (Tính cách, Cảm xúc)</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Thần chú tính cách: <span class="bg-blue-600 text-white px-2 py-1 rounded">O-C-E-A-N</span></h3>
+                <div class="w-full h-32 image-placeholder mb-4">
+                    📷                 </div>
+                <div class="space-y-3 text-sm">
+                    <div class="p-2 border rounded bg-stone-50"><strong class="text-blue-800">O - Openness:</strong> Sáng tạo, dám thử cái mới.</div>
+                    <div class="p-2 border rounded bg-stone-50"><strong class="text-blue-800">C - Conscientiousness:</strong> Kỷ luật, trách nhiệm, cẩn thận.</div>
+                    <div class="p-2 border rounded bg-stone-50"><strong class="text-blue-800">E - Extraversion:</strong> Hướng ngoại, hòa đồng.</div>
+                    <div class="p-2 border rounded bg-stone-50"><strong class="text-blue-800">A - Agreeableness:</strong> Dễ chịu, tốt bụng, hợp tác.</div>
+                    <div class="p-2 border rounded bg-stone-50"><strong class="text-blue-800">N - Negative affectivity:</strong> Hay tiêu cực, căng thẳng, soi mói.</div>
+                </div>
+                <div class="mt-3 p-3 bg-teal-50 text-teal-900 text-sm font-bold rounded">
+                    👉 Đề dễ hỏi: Đặc điểm nào tốt cho Manager? Cao ở Openness + Conscientiousness + Extraversion.
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-slate-800 mb-4 text-lg">Các phẩm chất cốt lõi khác</h3>
+                    <ul class="space-y-4 text-sm text-stone-700">
+                        <li class="p-3 border rounded bg-stone-50">
+                            <strong class="text-amber-700 text-base block mb-1">Locus of Control (CỰC DỄ HỎI)</strong>
+                            <div class="flex gap-4">
+                                <div class="w-1/2"><strong>Internal (Chủ động):</strong> Tin vào bản thân, không đổ lỗi. (Tốt cho quản lý)</div>
+                                <div class="w-1/2"><strong>External (Thụ động):</strong> Tin vào may mắn, đổ lỗi hoàn cảnh.</div>
+                            </div>
+                        </li>
+                        <li class="flex justify-between items-center p-3 border rounded">
+                            <strong>Self-esteem:</strong> <span class="text-right">Tự tin vào năng lực bản thân. Cao &rarr; Làm tốt hơn.</span>
+                        </li>
+                        <li class="flex justify-between items-center p-3 border rounded">
+                            <strong>Need for Achievement:</strong> <span class="text-right">Thích thử thách, đặt mục tiêu cao.</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-amber-50 text-amber-900 text-sm border-l-4 border-amber-500">
+                        <strong>Lưu ý:</strong> Một <em>Entrepreneur (Nhà khởi nghiệp)</em> thường hội tụ đủ: High Openness + Internal Locus + High Self-esteem + High Need for Achievement.
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-slate-800 mb-3 text-lg">Values, Attitudes & Mood</h3>
+                    <ul class="space-y-2 text-sm text-stone-600 list-disc pl-5">
+                        <li><strong>Terminal Value:</strong> Mục tiêu cuối cùng (VD: Hạnh phúc, thành đạt).</li>
+                        <li><strong>Instrumental Value:</strong> Cách hành xử để đạt mục tiêu (VD: Trung thực, chăm chỉ).</li>
+                        <li><strong>OCB (Org Citizenship Behavior):</strong> Làm vượt nghĩa vụ, giúp đồng nghiệp không đòi hỏi thêm lương. Rất có lợi cho cty.</li>
+                        <li><strong>Mood vs Emotion:</strong> Mood (Tâm trạng) kéo dài lâu hơn, nhẹ hơn. Emotion (Cảm xúc) ngắn nhưng mạnh mẽ hơn.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 3 & 4 ================= -->
+<section id="ch3_4" class="tab-content hidden">
+    <div class="mb-10">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 3: Ethics & Diversity (Đạo Đức & Đa Dạng)</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Các bên liên quan (Stakeholders)</h3>
+                <div class="w-full h-32 image-placeholder mb-4">
+                    📷                 </div>
+                <p class="text-sm text-stone-600 mb-3">Là những người có lợi ích liên quan đến công ty bao gồm: Stockholders, Managers, Employees, Suppliers, Community và Customers.</p>
+                <div class="bg-rose-50 p-3 rounded-lg border border-rose-200 text-rose-800 text-sm">
+                    <strong>🎯 Câu tự luận ăn điểm: "Tại sao Customers quan trọng nhất?"</strong> <br>
+                    &rarr; Vì nếu không có khách hàng mua sản phẩm, công ty không có dòng tiền, dẫn đến phá sản. Họ quyết định sự sống còn.
+                </div>
+                <div class="mt-4 text-sm text-stone-700">
+                    <strong>Ethical Dilemma (Tình thế tiến thoái lưỡng nan):</strong> Quyết định có lợi cho nhóm này nhưng hại nhóm khác. (VD: Sa thải nhân viên để tăng lợi nhuận cho cổ đông).
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Thần chú 4 Quy tắc Đạo đức: <span class="bg-amber-500 text-white px-2 py-1 rounded">U-J-P-M</span></h3>
+                <ul class="space-y-4 text-sm text-stone-700">
+                    <li class="pb-2 border-b"><strong class="text-amber-600 text-base">U - Utilitarian (Vị lợi):</strong> Lợi cho nhiều người nhất.</li>
+                    <li class="pb-2 border-b"><strong class="text-amber-600 text-base">J - Justice (Công lý):</strong> Công bằng, bình đẳng.</li>
+                    <li class="pb-2 border-b"><strong class="text-amber-600 text-base">P - Practical (Thực tiễn):</strong> Không xấu hổ nếu công khai quyết định lên báo chí.</li>
+                    <li class="pb-2 border-b"><strong class="text-amber-600 text-base">M - Moral Rights (Quyền ĐĐ):</strong> Bảo vệ quyền con người cơ bản.</li>
+                </ul>
+                <div class="mt-4 bg-stone-100 p-3 rounded text-sm">
+                    <strong>Diversity (Sự đa dạng):</strong> Quản lý đa dạng giới tính, chủng tộc. <br>
+                    <strong>Glass ceiling:</strong> "Trần kính" - Rào cản vô hình ngăn cản phụ nữ và người thiểu số leo lên các vị trí Top Management.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-10 border-t border-stone-200 pt-8">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 4: Global Environment (Môi Trường Toàn Cầu)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-slate-800 mb-4 text-lg">Task vs General Environment (CỰC DỄ RA)</h3>
+                    <div class="flex gap-4">
+                        <div class="w-1/2 p-3 bg-stone-50 border rounded-lg">
+                            <strong class="text-teal-700 block mb-2">Vòng trong: Task (Tác nghiệp)</strong>
+                            <ul class="text-sm space-y-1 text-stone-600 list-disc pl-4">
+                                <li>Suppliers (Nhà cung cấp)</li>
+                                <li>Customers</li>
+                                <li>Competitors</li>
+                                <li>Distributors</li>
+                            </ul>
+                            <div class="mt-2 text-xs font-bold text-rose-600">&rarr; Daily, direct impact (Trực tiếp, hàng ngày)</div>
+                        </div>
+                        <div class="w-1/2 p-3 bg-stone-50 border rounded-lg">
+                            <strong class="text-blue-700 block mb-2">Vòng ngoài: General (Vĩ mô)</strong>
+                            <ul class="text-sm space-y-1 text-stone-600 list-disc pl-4">
+                                <li>Economic (Kinh tế)</li>
+                                <li>Technological</li>
+                                <li>Sociocultural</li>
+                                <li>Demographic, Political</li>
+                            </ul>
+                            <div class="mt-2 text-xs font-bold text-rose-600">&rarr; Long-term, indirect (Công ty không kiểm soát được)</div>
+                        </div>
+                    </div>
+                    <div class="mt-4 w-full h-32 image-placeholder">
+                        📷                     </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-gradient-to-r from-stone-800 to-slate-800 text-stone-100 p-6 rounded-2xl shadow-sm theory-card">
+                    <h3 class="font-bold text-white mb-3">Rào Cản Gia Nhập (Barriers to Entry)</h3>
+                    <p class="text-sm text-stone-300 mb-3">Làm cho công ty mới khó tham gia vào ngành:</p>
+                    <ul class="text-sm space-y-2 text-teal-300 font-semibold list-disc pl-5">
+                        <li><strong>Economies of scale:</strong> Lợi thế kinh tế theo quy mô (sx nhiều thì rẻ).</li>
+                        <li><strong>Brand loyalty:</strong> Lòng trung thành thương hiệu.</li>
+                        <li><strong>Government regulation:</strong> Quy định chính phủ.</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-slate-800 mb-3 text-lg">National Culture (Văn hóa quốc gia)</h3>
+                    <p class="text-sm text-stone-600 mb-2"><strong>Norms (Quy tắc xã hội)</strong> chia làm 2 loại:</p>
+                    <ul class="text-sm space-y-2 text-stone-700">
+                        <li><strong class="text-slate-800">Mores:</strong> Quan trọng, vi phạm bị lên án gay gắt.</li>
+                        <li><strong class="text-slate-800">Folkways:</strong> Thói quen thường ngày, không nghiêm trọng.</li>
+                    </ul>
+                    <div class="mt-4 p-2 bg-blue-50 text-blue-800 text-center font-bold rounded">
+                        Chiến lược Toàn cầu hóa: "Think global – Do local"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 5 & 6 ================= -->
+<section id="ch5_6" class="tab-content hidden">
+    <div class="mb-10">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 5: Decision Making (Cực kỳ quan trọng)</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Các Phân Loại Quyết Định</h3>
+                <div class="space-y-4">
+                    <table class="w-full text-left text-sm border-collapse bg-stone-50">
+                        <tbody class="divide-y divide-stone-200">
+                            <tr>
+                                <th class="p-2 w-1/3 text-teal-800">Programmed</th>
+                                <td class="p-2">Routine, có rule, lặp lại. (VD: Chấm công).</td>
+                            </tr>
+                            <tr>
+                                <th class="p-2 text-rose-800">Nonprogrammed</th>
+                                <td class="p-2">Unusual, mới, không có rule. (VD: Ra mắt SP mới).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="w-full text-left text-sm border-collapse bg-stone-50">
+                        <tbody class="divide-y divide-stone-200">
+                            <tr>
+                                <th class="p-2 w-1/3 text-teal-800">Classical Model</th>
+                                <td class="p-2">Giả định có đủ thông tin &rarr; Quyết định tối ưu.</td>
+                            </tr>
+                            <tr>
+                                <th class="p-2 text-rose-800">Administrative</th>
+                                <td class="p-2">Thực tế thiếu thông tin &rarr; Quyết định "đủ tốt" (Satisficing). Không có QĐ hoàn hảo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="w-full h-24 image-placeholder">
+                        📷                     </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                    <h3 class="font-bold text-slate-800 mb-4 text-lg">Risk vs Uncertainty & Group Decision</h3>
+                    <ul class="text-sm space-y-3 text-stone-700">
+                        <li class="flex gap-2"><strong class="w-24 shrink-0 text-blue-700">Risk:</strong> Biết xác suất xảy ra.</li>
+                        <li class="flex gap-2"><strong class="w-24 shrink-0 text-rose-700">Uncertainty:</strong> Hoàn toàn không biết xác suất.</li>
+                        <li class="border-t pt-3 flex gap-2"><strong class="w-24 shrink-0 text-slate-800">Groupthink:</strong> Nhược điểm của họp nhóm. Cả nể nghe leader, không ai dám phản biện.</li>
+                        <li class="flex gap-2"><strong class="w-24 shrink-0 text-slate-800">Devil's Adv.:</strong> Đóng vai "Ác quỷ" cố tình phản biện để kiểm tra lỗ hổng của quyết định.</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-stone-800 text-stone-100 p-6 rounded-2xl shadow-sm theory-card">
+                    <h3 class="font-bold mb-3">Sáng tạo & Khởi nghiệp</h3>
+                    <ul class="text-sm space-y-2">
+                        <li><span class="text-amber-400 font-bold">Creativity:</span> Nghĩ ra ý tưởng mới.</li>
+                        <li><span class="text-green-400 font-bold">Innovation:</span> Áp dụng ý tưởng đó vào thực tế.</li>
+                        <li class="mt-2 border-t border-stone-600 pt-2"><span class="text-blue-400 font-bold">Entrepreneur:</span> Tự mở công ty riêng.</li>
+                        <li><span class="text-blue-400 font-bold">Intrapreneur:</span> Làm thuê nhưng sáng tạo SP mới trong công ty.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chương 6: Chiến lược -->
+    <div class="mb-10 border-t border-stone-200 pt-8">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 6: Planning & Strategy (Hoạch định & Chiến lược)</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-3 text-lg">Mission Statement & Chuỗi liên kết</h3>
+                <p class="text-sm text-stone-600 mb-3">Bản tuyên bố sứ mệnh phải trả lời được 4 câu: Why exist? What products? Who customers? How different?</p>
+                <div class="bg-teal-50 p-4 rounded-xl border border-teal-200 text-center font-bold text-teal-900 mb-4">
+                    Mission (Why) &rarr; Goals &rarr; Strategy (How) &rarr; Action Plans (What)
+                </div>
+                <h4 class="font-bold text-slate-800 mb-2">Phân loại Kế hoạch:</h4>
+                <ul class="text-sm space-y-2 text-stone-700">
+                    <li><strong>Standing Plans (Thường trực):</strong> Dùng nhiều lần (Policies, Rules, SOP).</li>
+                    <li><strong>Single-Use Plans (Đơn dụng):</strong> Dùng 1 lần (Program, Project).</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">3 Levels of Strategy (SIÊU QUAN TRỌNG)</h3>
+                <div class="overflow-x-auto mb-4">
+                    <table class="w-full text-left text-sm border-collapse bg-stone-50">
+                        <thead><tr class="border-b-2 border-stone-200"><th>Level</th><th>Câu hỏi cốt lõi</th></tr></thead>
+                        <tbody class="divide-y divide-stone-200">
+                            <tr><td class="p-2 font-bold text-teal-700">Corporate</td><td class="p-2">Ngành nào nên tham gia? (Mở rộng hay thu hẹp quy mô).</td></tr>
+                            <tr><td class="p-2 font-bold text-blue-700">Business</td><td class="p-2">Cạnh tranh thế nào? (Giá rẻ hay Khác biệt hóa).</td></tr>
+                            <tr><td class="p-2 font-bold text-amber-700">Functional</td><td class="p-2">Phòng ban hỗ trợ ra sao? (Marketing, R&D).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="w-full h-24 image-placeholder">
+                    📷                 </div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE SWOT -->
+        <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-8">
+            <h3 class="text-xl font-bold text-slate-800 mb-2 flex items-center justify-between">
+                <span>🛠️ Công cụ: Phân tích SWOT (Tự Luận)</span>
+                <span class="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded-full font-bold">Interactive</span>
+            </h3>
+            <div class="flex gap-4 text-sm font-bold mb-4 justify-center">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded">Internal: Strength, Weakness</span>
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded">External: Opportunity, Threat</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-200">
+                    <div class="flex items-center mb-2"><span class="text-xl font-black text-blue-700 mr-2">S</span><h4 class="font-bold text-blue-900">Điểm mạnh</h4></div>
+                    <textarea id="swot-s" class="w-full h-16 p-2 text-sm border border-blue-200 rounded outline-none focus:ring-1 focus:ring-blue-500" placeholder="VD: Vốn mạnh..."></textarea>
+                </div>
+                <div class="bg-red-50/50 p-4 rounded-xl border border-red-200">
+                    <div class="flex items-center mb-2"><span class="text-xl font-black text-red-700 mr-2">W</span><h4 class="font-bold text-red-900">Điểm yếu</h4></div>
+                    <textarea id="swot-w" class="w-full h-16 p-2 text-sm border border-red-200 rounded outline-none focus:ring-1 focus:ring-red-500" placeholder="VD: Thiếu kinh nghiệm..."></textarea>
+                </div>
+                <div class="bg-green-50/50 p-4 rounded-xl border border-green-200">
+                    <div class="flex items-center mb-2"><span class="text-xl font-black text-green-700 mr-2">O</span><h4 class="font-bold text-green-900">Cơ hội</h4></div>
+                    <textarea id="swot-o" class="w-full h-16 p-2 text-sm border border-green-200 rounded outline-none focus:ring-1 focus:ring-green-500" placeholder="VD: Nhu cầu thị trường tăng..."></textarea>
+                </div>
+                <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200">
+                    <div class="flex items-center mb-2"><span class="text-xl font-black text-amber-700 mr-2">T</span><h4 class="font-bold text-amber-900">Thách thức</h4></div>
+                    <textarea id="swot-t" class="w-full h-16 p-2 text-sm border border-amber-200 rounded outline-none focus:ring-1 focus:ring-amber-500" placeholder="VD: Đối thủ mạnh..."></textarea>
+                </div>
+            </div>
+            <div class="mt-4"><button onclick="generateSWOTStrategies()" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 rounded-lg shadow-sm">Phân Tích Chiến Lược Kết Hợp</button></div>
+            <div id="swot-results" class="mt-6 hidden animate-fade-in border-t border-stone-200 pt-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="border-l-4 border-blue-500 bg-stone-50 p-4 rounded"><strong class="text-blue-800 text-sm block">S-O (Tấn công)</strong><div id="res-so" class="text-sm mt-1 font-semibold text-slate-700"></div></div>
+                    <div class="border-l-4 border-amber-500 bg-stone-50 p-4 rounded"><strong class="text-amber-800 text-sm block">S-T (Phòng thủ)</strong><div id="res-st" class="text-sm mt-1 font-semibold text-slate-700"></div></div>
+                    <div class="border-l-4 border-green-500 bg-stone-50 p-4 rounded"><strong class="text-green-800 text-sm block">W-O (Cải thiện)</strong><div id="res-wo" class="text-sm mt-1 font-semibold text-slate-700"></div></div>
+                    <div class="border-l-4 border-red-500 bg-stone-50 p-4 rounded"><strong class="text-red-800 text-sm block">W-T (Tồn tại)</strong><div id="res-wt" class="text-sm mt-1 font-semibold text-slate-700"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 7 & 8 ================= -->
+<section id="ch7_8" class="tab-content hidden">
+    <div class="mb-10">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 7 & 8: Thiết Kế Tổ Chức & Kiểm Soát</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Thiết Kế Công Việc (Job Design)</h3>
+                <ul class="text-sm space-y-4 text-stone-700">
+                    <li><strong class="text-teal-700 block mb-1">Mở rộng công việc (Job Enlargement):</strong> Tăng số lượng nhiệm vụ cùng cấp (chiều ngang) cho bớt chán. <br><em>VD: Thợ chụp ảnh kiêm luôn chỉnh Photoshop cơ bản.</em></li>
+                    <li><strong class="text-blue-700 block mb-1">Làm giàu công việc (Job Enrichment):</strong> Tăng quyền tự quyết và trách nhiệm (chiều dọc). <br><em>VD: Quản lý quỹ được toàn quyền quyết định mua bán cổ phiếu MSR, VJC.</em></li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Các Mô Hình Cơ Cấu Kinh Điển</h3>
+                <div class="w-full h-32 image-placeholder mb-4">
+                    📷                 </div>
+                <div class="space-y-3 text-sm text-stone-700">
+                    <p><strong class="text-slate-800">1. Chức năng (Functional):</strong> Gom cùng chuyên môn (Khoa Kinh tế). Rễ bị đứt gãy giao tiếp (Silo effect).</p>
+                    <p><strong class="text-slate-800">2. Bộ phận (Divisional):</strong> Phình to chia theo Sản phẩm, Địa lý, hoặc <em>Khách hàng</em> (cá nhân vs doanh nghiệp).</p>
+                    <p><strong class="text-slate-800">3. Ma trận (Matrix):</strong> 1 nhân viên có 2 sếp (Sếp chức năng & Sếp dự án). Linh hoạt nhưng dễ xung đột quyền lực.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card mb-8">
+            <h3 class="font-bold text-slate-800 mb-4 text-lg text-center">3 Loại Hình Kiểm Soát Theo Thời Gian (🌟 Trọng Tâm)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                    <strong class="text-amber-800 text-base block mb-2">1. Lường trước (Feedforward)</strong>
+                    <p class="text-stone-600 mb-2">Diễn ra TRƯỚC (Before) khi sự việc bắt đầu.</p>
+                    <em class="text-amber-900 block bg-amber-100 p-2 rounded">VD: Đặt lệnh cắt lỗ tự động (stop-loss) trước giờ mở cửa. Kiểm tra nguyên liệu đầu vào.</em>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
+                    <strong class="text-blue-800 text-base block mb-2">2. Đồng thời (Concurrent)</strong>
+                    <p class="text-stone-600 mb-2">Diễn ra TRONG QUÁ TRÌNH (During) thực hiện.</p>
+                    <em class="text-blue-900 block bg-blue-100 p-2 rounded">VD: Vừa lái xe vừa nhìn gương chiếu hậu để nắn vô lăng. Giám sát băng chuyền lúc sản xuất.</em>
+                </div>
+                <div class="bg-green-50 p-4 rounded-xl border border-green-200">
+                    <strong class="text-green-800 text-base block mb-2">3. Phản hồi (Feedback)</strong>
+                    <p class="text-stone-600 mb-2">Diễn ra SAU KHI (After) đã kết thúc.</p>
+                    <em class="text-green-900 block bg-green-100 p-2 rounded">VD: Cuối tháng tổng kết xem danh mục đầu tư lỗ lãi %. Đánh giá sản phẩm bị lỗi để rút kinh nghiệm.</em>
+                </div>
+            </div>
+            <div class="mt-6 w-full h-32 image-placeholder">
+                📷             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 9 - 13 ================= -->
+<section id="ch9_13" class="tab-content hidden">
+    <div class="mb-10">
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 9-13: Động Lực, Lãnh Đạo & Giao Tiếp</h2>
+        
+        <!-- Thuyết Động Lực -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-3 text-lg">Thuyết Kỳ Vọng (Expectancy Theory)</h3>
+                <div class="w-full h-32 image-placeholder mb-4">
+                    📷                 </div>
+                <p class="text-sm text-stone-600 mb-3">Phải hội đủ 3 yếu tố (Thiếu 1 là động lực = 0):</p>
+                <ul class="text-sm space-y-2 text-stone-700 bg-stone-50 p-3 rounded border">
+                    <li><strong class="text-teal-700">Expectancy (Kỳ vọng):</strong> Tin rằng nỗ lực &rarr; Làm được. <em>Tình huống: "NV không tin làm được".</em></li>
+                    <li><strong class="text-teal-700">Instrumentality (Tính công cụ):</strong> Tin rằng làm tốt &rarr; Có thưởng. <em>Tình huống: "NV không tin công ty sẽ thưởng".</em></li>
+                    <li><strong class="text-teal-700">Valence (Hóa trị):</strong> Phần thưởng đó hấp dẫn. <em>Tình huống: "Thưởng bèo quá, chê!".</em></li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-3 text-lg">Thuyết Công Bằng (Equity) & Maslow</h3>
+                <p class="text-sm text-stone-700 mb-4 border-l-4 border-amber-500 pl-3"><strong>Equity:</strong> Bản chất là So Sánh. NV so sánh (Input/Outcome) của mình với người khác. Thấy bất công (Underpayment) là mất động lực dù lương cao.</p>
+                <div class="w-full h-32 image-placeholder mb-4">
+                    📷                 </div>
+                <div class="text-sm bg-stone-800 text-stone-200 p-3 rounded">
+                    <strong>Quy tắc Maslow:</strong> Đi từ đáy lên. Phải thỏa mãn Sinh lý (Tiền) &rarr; An toàn &rarr; Xã hội &rarr; Tôn trọng &rarr; Tự thể hiện (Phát huy tối đa).
+                </div>
+            </div>
+        </div>
+
+        <!-- Quyền lực & Lãnh đạo -->
+        <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-8">
+            <h3 class="font-bold text-slate-800 mb-4 text-xl">5 Nguồn Quyền Lực & Lãnh Đạo Chuyển Đổi</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <ul class="text-sm space-y-2 text-stone-700 list-decimal pl-5">
+                        <li><strong>Hợp pháp (Legitimate):</strong> Do chức danh (Giám đốc giao việc).</li>
+                        <li><strong>Khen thưởng (Reward):</strong> Cho cái họ muốn (Tăng lương).</li>
+                        <li><strong>Cưỡng chế (Coercive):</strong> Khả năng trừng phạt (Sa thải). <em>Lạm dụng &rarr; giảm động lực.</em></li>
+                        <li><strong>Chuyên môn (Expert):</strong> Giỏi phân tích cổ phiếu &rarr; mọi người tin theo.</li>
+                        <li><strong>Tham chiếu (Referent):</strong> Sức hút cá nhân, được yêu mến, ngưỡng mộ.</li>
+                    </ul>
+                </div>
+                <div class="bg-stone-50 p-4 rounded border">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <tbody class="divide-y divide-stone-200">
+                            <tr><th class="p-2 w-1/2 text-rose-800">Transactional (Giao dịch)</th><td class="p-2">Thưởng - Phạt, Ngắn hạn, Ổn định. Lính rệu rã chỉ cày vì lương.</td></tr>
+                            <tr><th class="p-2 text-teal-800">Transformational (Chuyển đổi)</th><td class="p-2">Truyền cảm hứng, Dài hạn, Thay đổi (Kích thích trí tuệ, Charismatic).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lưới Lãnh Đạo Interactive -->
+        <div class="bg-stone-100 rounded-2xl shadow-inner border border-stone-200 p-6 md:p-8 mb-8">
+            <h3 class="text-xl font-bold text-slate-800 mb-2">👑 Công cụ giả lập: Lưới Lãnh Đạo (Blake & Mouton)</h3>
+            <p class="text-sm text-stone-600 mb-6">Thử kéo thanh trượt để xác định phong cách quản lý của Sếp!</p>
+
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+                <div class="w-full lg:w-1/3 bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
+                    <label class="block text-sm font-semibold text-stone-700 mb-1">Quan tâm Công việc (KPI): <span id="val-task" class="text-teal-600 font-bold">5</span></label>
+                    <input type="range" id="slider-task" min="1" max="9" value="5" oninput="updateLeadershipStyle()" class="w-full mb-4 accent-teal-600">
+                    
+                    <label class="block text-sm font-semibold text-stone-700 mb-1">Quan tâm Con người: <span id="val-people" class="text-blue-600 font-bold">5</span></label>
+                    <input type="range" id="slider-people" min="1" max="9" value="5" oninput="updateLeadershipStyle()" class="w-full mb-6 accent-blue-600">
+                    
+                    <div class="text-center p-3 rounded-lg border-2 bg-stone-50 border-purple-400" id="style-result-box">
+                        <div class="text-xs text-stone-500 uppercase tracking-wide font-bold">Kết quả Tọa độ</div>
+                        <div class="text-xl font-black text-slate-800 my-1" id="style-name">Ôn hòa (5,5)</div>
+                        <p class="text-xs text-stone-600" id="style-desc">Cân bằng yêu cầu công việc & tinh thần.</p>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-2/3">
+                    <div class="relative w-full max-w-[350px] mx-auto aspect-square border-l-4 border-b-4 border-stone-400 bg-white shadow-sm rounded-tr-lg">
+                        <div class="absolute inset-0 grid grid-cols-3 grid-rows-3 opacity-10"><div class="border-r border-b border-black"></div><div class="border-r border-b border-black"></div><div class="border-b border-black"></div><div class="border-r border-b border-black"></div><div class="border-r border-b border-black"></div><div class="border-b border-black"></div><div class="border-r border-black"></div><div class="border-r border-black"></div><div></div></div>
+                        <div class="absolute -left-12 top-1/2 -translate-y-1/2 -rotate-90 text-sm font-bold text-stone-500">Con người (1-9)</div>
+                        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-sm font-bold text-stone-500">Công việc (1-9)</div>
+                        <div class="absolute top-0 left-0 w-full h-full">
+                            <div class="absolute bottom-2 left-2 w-14 h-14 bg-stone-100 border border-stone-300 rounded-full flex items-center justify-center text-center text-[9px] font-bold shadow-sm">Thờ ơ</div>
+                            <div class="absolute bottom-2 right-2 w-14 h-14 bg-amber-100 border border-amber-300 rounded-full flex items-center justify-center text-center text-[9px] font-bold shadow-sm text-amber-900">Độc đoán</div>
+                            <div class="absolute top-2 left-2 w-14 h-14 bg-blue-100 border border-blue-300 rounded-full flex items-center justify-center text-center text-[9px] font-bold shadow-sm text-blue-900">CLB</div>
+                            <div class="absolute top-2 right-2 w-14 h-14 bg-teal-100 border border-teal-300 rounded-full flex items-center justify-center text-center text-[9px] font-bold shadow-sm text-teal-900">Đồng đội</div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-purple-100 border border-purple-300 rounded-full flex items-center justify-center text-center text-[9px] font-bold shadow-sm text-purple-900">Ôn hòa</div>
+                            <div id="grid-point" class="absolute w-4 h-4 bg-red-500 rounded-full shadow-lg border-2 border-white transform -translate-x-1/2 translate-y-1/2 transition-all duration-300 z-10" style="bottom: 50%; left: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Giao tiếp & E-commerce -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Quá trình Giao tiếp (Ch.13)</h3>
+                <div class="text-sm font-bold text-teal-800 bg-teal-50 p-3 rounded mb-3 flex flex-wrap gap-1 justify-center border border-teal-100">
+                    Sender &rarr; Encode &rarr; Message/Medium &rarr; Decode &rarr; Receiver &rarr; Feedback
+                </div>
+                <p class="text-sm text-stone-600 mb-4 text-center">Nhiễu (Noise) làm giảm hiệu quả ở mọi khâu.</p>
+                <div class="w-full h-32 image-placeholder mb-4">
+                    📷                 </div>
+                <div class="bg-stone-50 p-3 rounded border text-sm text-stone-700">
+                    <strong>Information Richness (Từ Cao tới Thấp):</strong> <br>
+                    1. Face-to-Face (Trực tiếp - Cao nhất) <br>
+                    2. Spoken Electronically (Điện thoại, Zoom) <br>
+                    3. Personally Addressed Written (Email gửi đích danh) <br>
+                    4. Impersonal Written (Thông báo chung - Thấp nhất)
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-stone-800 to-slate-800 p-6 rounded-2xl shadow-sm theory-card text-white flex flex-col justify-center">
+                <h3 class="font-bold mb-4 text-lg border-b border-stone-600 pb-2">IT & E-Commerce</h3>
+                <ul class="text-sm space-y-4 text-stone-300">
+                    <li><strong class="text-blue-300 text-base">B2B:</strong> DN với DN (VD: Nhà máy mua linh kiện). Giao dịch nội bộ ngành.</li>
+                    <li><strong class="text-teal-300 text-base">B2B Marketplace:</strong> Sàn kết nối người mua/bán sỉ. (VD: Alibaba.com).</li>
+                    <li><strong class="text-amber-300 text-base">B2C:</strong> DN bán trực tiếp cho khách cá nhân. (VD: Shopee, Amazon).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- SCRIPT: UI & INTERACTIVE TOOLS -->
+<script>
+// 1. SWOT Strategy Generator (Giữ nguyên đồ xịn của sếp)
+function generateSWOTStrategies() {
+    const s = document.getElementById('swot-s').value.trim();
+    const w = document.getElementById('swot-w').value.trim();
+    const o = document.getElementById('swot-o').value.trim();
+    const t = document.getElementById('swot-t').value.trim();
+
+    const resBox = document.getElementById('swot-results');
+    resBox.classList.remove('hidden');
+
+    if(!s && !w && !o && !t) {
+        document.getElementById('res-so').innerHTML = '<span class="text-stone-400 italic">Nhập Dữ liệu S và O</span>';
+        document.getElementById('res-st').innerHTML = '<span class="text-stone-400 italic">Nhập Dữ liệu S và T</span>';
+        document.getElementById('res-wo').innerHTML = '<span class="text-stone-400 italic">Nhập Dữ liệu W và O</span>';
+        document.getElementById('res-wt').innerHTML = '<span class="text-stone-400 italic">Nhập Dữ liệu W và T</span>';
+        return;
+    }
+
+    document.getElementById('res-so').innerHTML = (s && o) ? `Phát huy: "${s}" để thâu tóm: "${o}"` : '<span class="text-stone-400 italic">-</span>';
+    document.getElementById('res-st').innerHTML = (s && t) ? `Lấy lợi thế: "${s}" làm khiên đỡ: "${t}"` : '<span class="text-stone-400 italic">-</span>';
+    document.getElementById('res-wo').innerHTML = (w && o) ? `Nâng cấp: "${w}" để không mất: "${o}"` : '<span class="text-stone-400 italic">-</span>';
+    document.getElementById('res-wt').innerHTML = (w && t) ? `Cấp bách: Sửa "${w}" để sống sót qua "${t}"` : '<span class="text-stone-400 italic">-</span>';
+}
+
+// 2. Leadership Grid Simulator (Giữ nguyên đồ xịn của sếp)
+function updateLeadershipStyle() {
+    const task = parseInt(document.getElementById('slider-task').value);
+    const people = parseInt(document.getElementById('slider-people').value);
+    
+    document.getElementById('val-task').innerText = task;
+    document.getElementById('val-people').innerText = people;
+    
+    const dot = document.getElementById('grid-point');
+    const leftPercent = ((task - 1) / 8) * 100;
+    const bottomPercent = ((people - 1) / 8) * 100;
+    dot.style.left = `${leftPercent}%`;
+    dot.style.bottom = `${bottomPercent}%`;
+    
+    let styleName = "", styleDesc = "", borderColor = "";
+    if (task <= 4 && people <= 4) {
+        styleName = `Thờ ơ (${task},${people})`; styleDesc = "Mặc kệ tất cả. Quản lý siêu tệ."; borderColor = "border-stone-400";
+    } else if (task >= 6 && people <= 4) {
+        styleName = `Độc đoán (${task},${people})`; styleDesc = "Bóc lột. Năng suất là trên hết."; borderColor = "border-amber-400";
+    } else if (task <= 4 && people >= 6) {
+        styleName = `CLB Ngoại ô (${task},${people})`; styleDesc = "Vui vẻ là chính. Né ép KPI."; borderColor = "border-blue-400";
+    } else if (task >= 6 && people >= 6) {
+        styleName = `Đồng đội (${task},${people})`; styleDesc = "Hoàn hảo. Team vững mạnh."; borderColor = "border-teal-400";
+    } else {
+        styleName = `Ôn hòa (${task},${people})`; styleDesc = "Dĩ hòa vi quý, tầm trung."; borderColor = "border-purple-400";
+    }
+    
+    document.getElementById('style-name').innerText = styleName;
+    document.getElementById('style-desc').innerText = styleDesc;
+    document.getElementById('style-result-box').className = `text-center p-3 rounded-lg border-2 bg-stone-50 ${borderColor}`;
+}
+
+window.addEventListener('load', () => { updateLeadershipStyle(); });
+
+// ==========================================
+// 🚀 CORE UI & TABS (ĐÃ DỌN SẠCH & FIX LỖI) 🚀
+// ==========================================
+let activeTabId = 'ch1_2'; // (Nhớ đổi tên biến này theo từng môn nhé: Kế toán là ch1, Quan trị là ch1_2...)
+
+// Chuyển Tab không cần check khóa nữa vì auth.js đã lo giữ cửa
+window.attemptSwitchTab = (t) => { 
+    forceSwitchTab(t); 
+};
+
+function forceSwitchTab(t) { 
+    activeTabId = t; 
+    
+    document.querySelectorAll('.tab-content').forEach(s => { 
+        s.classList.add('hidden'); 
+        s.classList.remove('animate-fade-in'); 
+    }); 
+    
+    const targetTab = document.getElementById(t);
+    if (targetTab) {
+        targetTab.classList.remove('hidden'); 
+        targetTab.classList.add('animate-fade-in');
+        
+       // TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG
+        const offset = 150; 
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetTab.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+    
+    // Đổi màu menu khi click
+    document.querySelectorAll('.nav-btn').forEach(b => { 
+        b.classList.remove('tab-active','text-teal-600', 'bg-teal-50'); 
+        b.classList.add('text-stone-500'); 
+        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
+            b.classList.add('tab-active','text-teal-600'); 
+            b.classList.remove('text-stone-500'); 
+        }
+    }); 
+    
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav) mobileNav.value = t;
+}
+</script>
+</body>
+</html>

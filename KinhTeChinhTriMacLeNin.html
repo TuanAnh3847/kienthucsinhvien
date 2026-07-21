@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta name="google-site-verification" content="wXFetqPPe7KsMk4BUPnmxSaSTpmeoqbbTU3hY5aZHSM" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+<title>Ôn thi Kinh tế Chính trị Mác - Lênin UEL - Trắc nghiệm, tài liệu</title>
+<meta name="description" content="Website ôn thi Kinh tế Chính trị Mác - Lênin UEL, hệ thống kiến thức, máy tính giá trị thặng dư, tài liệu giúp sinh viên ôn tập hiệu quả">
+
+<!-- SEO CƠ BẢN (Từ khóa chuẩn môn Kinh tế chính trị) -->
+<meta name="keywords" content="kinh tế chính trị, mác lênin, giá trị thặng dư, quy luật giá trị, tư bản, kinh tế thị trường định hướng XHCN, hàng hóa tiền tệ, ôn thi UEL, edu connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta name="robots" content="index, follow"> 
+
+<!-- SEO MẠNG XÃ HỘI (Open Graph) -->
+<meta property="og:title" content="Bí Kíp Phá Đảo Kinh Tế Chính Trị Mác - Lênin - Edu Connect">
+<meta property="og:description" content="Nắm trọn bản chất hàng hóa, tiền tệ, học thuyết giá trị thặng dư và các quy luật kinh tế thị trường. Cày cuốc hôm nay, qua môn ngày mai!">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png"> 
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/KinhTeChinhTriMacLeNin"> <!-- Link trỏ đúng về trang KTCT -->
+<meta property="og:type" content="article">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- TỐI ƯU: Thêm thuộc tính defer để không chặn tải trang -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script src="auth.js"></script>
+
+<style>
+.chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; background-color: #ffffff; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+@media (min-width: 768px) { .chart-container { height: 380px; } }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 700; }
+.glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.solution-step { border-left: 3px solid #0d9488; padding-left: 1.25rem; margin-bottom: 1rem; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.modal-overlay { background-color: rgba(28, 25, 23, 0.75); backdrop-filter: blur(4px); }
+.google-btn { background-color: #ffffff; color: #3c4043; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); transition: background-color 0.2s, box-shadow 0.2s; }
+.google-btn:hover { background-color: #f8f9fa; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); }
+
+@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.live-pulse { animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* Custom Styles for Interactive Components */
+.flashcard-inner { transition: transform 0.6s; transform-style: preserve-3d; }
+.flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+.flashcard-front, .flashcard-back { backface-visibility: hidden; }
+.flashcard-back { transform: rotateY(180deg); }
+.timeline-dot { width: 16px; height: 16px; background-color: #0d9488; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #0d9488; position: absolute; left: -8px; top: 6px; }
+</style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<!-- INITIAL WELCOME MODAL -->
+<div id="welcome-modal" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+<div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="welcome-modal-content">
+<div class="text-center mb-6">
+<div class="text-5xl mb-4">🎓</div>
+<h2 class="text-2xl font-extrabold text-slate-900 mb-2">Sổ Tay Kinh Tế Chính Trị</h2>
+<p class="text-stone-600 text-sm">Đăng nhập để mở khóa các công cụ tính toán Giá trị thặng dư, sơ đồ tư duy Độc quyền và bài tập nâng cao.</p>
+</div>
+<div class="space-y-4">
+<button onclick="loginGoogleReal()" class="google-btn w-full py-3 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3">
+<span class="text-lg font-black text-blue-600">G</span> 
+<span>Đăng nhập bằng Google</span>
+</button>
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-stone-200"></div>
+<span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
+<div class="flex-grow border-t border-stone-200"></div>
+</div>
+<button onclick="window.location.href='index.html'" 
+        style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
+        onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
+        onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
+    🏠 Quay về Trang chủ
+</button>
+</div>
+</div>
+</div>
+
+
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+            <div class="flex flex-col justify-center min-w-0">
+                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
+                
+                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
+                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🏭 Kinh Tế Chính Trị Mác - Lênin</p>
+                </div>
+            </div>
+        </a>
+
+<div class="hidden md:flex space-x-1 items-center" id="nav-menu">
+<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Mở đầu</button>
+<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Hàng hóa</button>
+<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3: Giá trị thặng dư</button>
+<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Độc quyền <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: KTTT ĐHXHCN <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.6: CNH, HĐH <span class="premium-lock text-xs"></span></button>
+</div>
+
+<div class="flex items-center shrink-0">
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+            <span id="online-count" class="mr-1 sm:mr-1">...</span> 
+            <span class="hidden sm:inline">online</span>
+        </div>
+
+<div class="border-l border-stone-300 pl-4">
+<button id="nav-login-btn" onclick="showWelcomeModal()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+<div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+<!-- Cập nhật Avatar fallback giống VHDDTKD -->
+<img id="user-avatar" src="https://ui-avatars.com/api/?name=Sinh+Vien&background=0D8B9&color=fff" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+<select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+<option value="ch1">Chương 1: Mở đầu</option>
+<option value="ch2">Chương 2: Hàng hóa</option>
+<option value="ch3">Chương 3: Giá trị thặng dư</option>
+<option value="ch4" class="premium-opt">Chương 4: Độc quyền </option>
+<option value="ch5" class="premium-opt">Chương 5: KTTT ĐHXHCN </option>
+<option value="ch6" class="premium-opt">Chương 6: CNH, HĐH </option>
+</select>
+        <div class="absolute right-8 top-1/2 transform -translate-y-1/2 flex items-center">
+            <button id="mobile-sidebar-btn" class="p-1.5 text-teal-700 hover:bg-teal-100 rounded transition-colors focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+</div>
+</div>
+</nav>
+
+<!-- Main Content Container -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+
+<div class="mb-12 text-center">
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Kinh Tế Chính Trị Mác - Lênin</h1>
+<p class="text-lg text-stone-600 max-w-2xl mx-auto mb-8">Nắm trọn học thuyết giá trị, giá trị thặng dư và bản chất của chủ nghĩa tư bản thông qua các sơ đồ tư duy và máy tính trực quan.</p>
+
+<div class="inline-block bg-white border-2 border-teal-100 rounded-2xl p-5 md:p-6 text-left max-w-3xl shadow-sm hover:shadow-md transition-shadow">
+<h3 class="font-bold text-teal-800 text-lg mb-3 flex items-center"><span class="text-2xl mr-2">💡</span> Hướng Dẫn Ôn Tập Nhanh</h3>
+<ul class="text-sm md:text-base text-stone-700 space-y-3">
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Nắm chắc khái niệm:</strong> Lật các Thẻ ghi nhớ (Flashcard) để học thuộc ngay khái niệm cốt lõi.</span>
+</li>
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Công cụ Tính toán (Chương 2, 3):</strong> Nhập số liệu vào Máy tính Lượng giá trị ($W$) và Tỷ suất thặng dư ($m'$). Trình duyệt sẽ giải thích step-by-step.</span>
+</li>
+<li class="flex items-start">
+<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
+<span><strong>Sơ đồ so sánh (Timeline/Table):</strong> Giúp trị tận gốc các câu hỏi trắc nghiệm đánh lừa về định nghĩa, tính chất 2 mặt của lao động.</span>
+</li>
+</ul>
+</div>
+</div>
+
+<!-- ================= SECTION: CHƯƠNG 1 ================= -->
+<section id="ch1" class="tab-content block">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1: Đối tượng, Phương pháp và Chức năng</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Hiểu rõ lịch sử hình thành, phương pháp trừu tượng hóa khoa học và phân biệt 4 chức năng cốt lõi của Kinh tế chính trị.</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Timeline: Lịch sử -->
+    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-stone-200">
+        <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-stone-100 pb-2">⏳ Sự Hình Thành & Phát Triển</h3>
+        <div class="relative border-l-2 border-teal-200 ml-3 space-y-8 pb-4">
+            <div class="relative pl-6">
+                <div class="timeline-dot"></div>
+                <h4 class="font-bold text-teal-800 text-base">Cổ đại - Cuối Thế kỷ 18</h4>
+                <p class="text-stone-600 text-sm mt-1">Xuất hiện tư tưởng sơ khai: Chủ nghĩa trọng thương (lưu thông), Chủ nghĩa trọng nông (nông nghiệp), và KTCT tư sản cổ điển Anh (chuyển hướng sang sản xuất).</p>
+            </div>
+            <div class="relative pl-6">
+                <div class="timeline-dot"></div>
+                <h4 class="font-bold text-teal-800 text-base">Giữa Thế kỷ 19</h4>
+                <p class="text-stone-600 text-sm mt-1">C. Mác và Ph. Ăngghen sáng lập. Kế thừa tư sản cổ điển Anh, phát hiện <strong class="text-teal-700">tính chất hai mặt của lao động</strong> và <strong class="text-teal-700">học thuyết giá trị thặng dư</strong>.</p>
+            </div>
+            <div class="relative pl-6">
+                <div class="timeline-dot"></div>
+                <h4 class="font-bold text-teal-800 text-base">Cuối Thế kỷ 19 - Đầu 20</h4>
+                <p class="text-stone-600 text-sm mt-1">V.I. Lênin bảo vệ và phát triển lý luận trong giai đoạn CNTB độc quyền/đế quốc chủ nghĩa.</p>
+            </div>
+            <div class="relative pl-6">
+                <div class="timeline-dot"></div>
+                <h4 class="font-bold text-teal-800 text-base">Sau khi Lênin mất - Nay</h4>
+                <p class="text-stone-600 text-sm mt-1">Các Đảng Cộng sản tiếp tục bổ sung dựa trên thực tiễn xây dựng Chủ nghĩa Xã hội.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard & Note -->
+    <div class="flex flex-col gap-6">
+        <!-- Đối tượng & Mục đích -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors">
+            <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">🎯 Đối tượng & Mục đích Nghiên cứu</h3>
+            <ul class="text-base text-stone-700 space-y-3">
+                <li class="bg-stone-50 p-3 rounded border border-stone-100">
+                    <strong class="text-teal-700 block mb-1">Đối tượng nghiên cứu:</strong> 
+                    Là các <strong class="text-rose-600">quan hệ xã hội của sản xuất và trao đổi</strong> (QHSX), đặt trong liên hệ với lực lượng sản xuất và kiến trúc thượng tầng.<br>
+                    <em class="text-sm text-stone-500">(VD: Không nghiên cứu kỹ thuật ráp máy bay, mà nghiên cứu việc ông chủ trả lương kỹ sư ra sao).</em>
+                </li>
+                <li class="bg-stone-50 p-3 rounded border border-stone-100">
+                    <strong class="text-teal-700 block mb-1">Mục đích:</strong> 
+                    Tìm ra những quy luật kinh tế chi phối sự vận động, phát triển để vận dụng giải quyết thực tiễn.
+                </li>
+            </ul>
+        </div>
+
+        <!-- PP Trừu tượng hóa -->
+        <div class="bg-amber-50 p-6 rounded-2xl shadow-sm border border-amber-200 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-200 text-amber-800 text-xs font-bold px-3 py-1 rounded-bl-lg">Phương Pháp Đặc Thù</div>
+            <h3 class="text-lg font-bold text-amber-900 mb-2">Trừu Tượng Hóa Khoa Học</h3>
+            <p class="text-sm text-amber-800 mb-3">Là gạt bỏ các yếu tố ngẫu nhiên, tạm thời trên bề mặt hiện tượng để giữ lại hiện tượng bền vững, điển hình, bộc lộ bản chất.</p>
+            <div class="bg-white p-3 rounded border border-amber-100 text-sm text-stone-700">
+                <strong>Ví dụ Mác:</strong> Khi trao đổi 1 con gà = 10kg thóc. 
+                <br>❌ Gạt bỏ: Gà lông gì, lúa nếp hay tẻ, người đổi đang vui hay buồn.
+                <br>✅ Giữ lại cốt lõi: Cả hai đều là <strong>hao phí sức lao động</strong>. Từ đó phát hiện ra "Giá trị".
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bảng chức năng -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden mb-8">
+    <div class="bg-slate-800 text-white p-4 font-bold text-lg text-center uppercase tracking-wide">4 Chức Năng Cơ Bản Của KTCT</div>
+    <div class="overflow-x-auto">
+        <table class="w-full text-left text-base border-collapse">
+            <thead>
+                <tr class="bg-stone-100 text-stone-800">
+                    <th class="p-4 border-b border-stone-300 font-bold w-1/4">Chức năng</th>
+                    <th class="p-4 border-b border-stone-300 border-l font-bold w-1/3">Nội dung cốt lõi</th>
+                    <th class="p-4 border-b border-stone-300 border-l font-bold">Ví dụ thực tiễn</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200">
+                <tr class="hover:bg-stone-50 transition-colors">
+                    <td class="p-4 font-bold text-teal-700">1. Nhận thức</td>
+                    <td class="p-4 border-l border-stone-200">Cung cấp tri thức lý luận về quy luật kinh tế.</td>
+                    <td class="p-4 border-l border-stone-200 text-stone-600">Biết vì sao giá thịt lợn dịp Tết tăng (Quy luật Cung-Cầu).</td>
+                </tr>
+                <tr class="hover:bg-stone-50 transition-colors">
+                    <td class="p-4 font-bold text-teal-700">2. Thực tiễn</td>
+                    <td class="p-4 border-l border-stone-200">Cải tạo thực tiễn, áp dụng vào chính sách.</td>
+                    <td class="p-4 border-l border-stone-200 text-stone-600">Nhà nước đề ra chính sách giảm thuế kích cầu.</td>
+                </tr>
+                <tr class="hover:bg-stone-50 transition-colors">
+                    <td class="p-4 font-bold text-teal-700">3. Tư tưởng</td>
+                    <td class="p-4 border-l border-stone-200">Xây dựng nền tảng tư tưởng, niềm tin khoa học.</td>
+                    <td class="p-4 border-l border-stone-200 text-stone-600">Củng cố niềm tin con đường XHCN là tất yếu.</td>
+                </tr>
+                <tr class="hover:bg-stone-50 transition-colors">
+                    <td class="p-4 font-bold text-teal-700">4. Phương pháp luận</td>
+                    <td class="p-4 border-l border-stone-200">Nền tảng cho các khoa học kinh tế chuyên ngành.</td>
+                    <td class="p-4 border-l border-stone-200 text-stone-600">Là gốc để phân nhánh ra môn Quản trị, Kế toán...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 2 ================= -->
+<section id="ch2" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 2: Hàng hóa, Thị trường và Các chủ thể</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Giải mã nguồn gốc tạo ra hàng hóa, thuộc tính kép, quy luật lưu thông tiền tệ và cơ chế vận hành của thị trường.</p>
+</div>
+
+<!-- Info Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <!-- Điều kiện ra đời -->
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">🏭 2 Điều Kiện Sản Xuất Hàng Hóa</h3>
+        <div class="bg-rose-50 border border-rose-200 p-3 rounded text-sm text-rose-800 mb-4 font-semibold">
+            BẮT BUỘC PHẢI CÓ ĐỒNG THỜI CẢ 2 ĐIỀU KIỆN!
+        </div>
+        <ul class="text-base text-stone-700 space-y-4">
+            <li>
+                <strong class="text-teal-700">1. Phân công lao động xã hội:</strong> Sự chuyên môn hóa (người trồng lúa, người dệt vải) làm họ phụ thuộc lẫn nhau, buộc phải trao đổi.
+            </li>
+            <li>
+                <strong class="text-teal-700">2. Sự tách biệt tương đối về kinh tế:</strong> Do sở hữu tư nhân/khác nhau về TLSX. Tài sản của ai người nấy giữ, muốn có phải "mua - bán" chứ không chia đều.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Hàng hóa & Thuộc tính -->
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors">
+        <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">📦 Hàng Hóa & 2 Thuộc Tính</h3>
+        <p class="text-sm text-stone-600 mb-3 border-b pb-2">Hàng hóa là sản phẩm lao động thỏa mãn nhu cầu qua trao đổi. <em>Không bán = Không phải hàng hóa.</em></p>
+        <ul class="text-base text-stone-700 space-y-3">
+            <li class="bg-stone-50 p-2 rounded">
+                <strong class="text-blue-700">Giá trị sử dụng:</strong> Công dụng (Xe để đi). Do thuộc tính tự nhiên quyết định, là phạm trù vĩnh viễn.
+            </li>
+            <li class="bg-stone-50 p-2 rounded">
+                <strong class="text-rose-700">Giá trị:</strong> Lao động xã hội kết tinh. Biểu hiện quan hệ xã hội, là phạm trù lịch sử (chỉ có trong KT hàng hóa).
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Bảng LĐ Cụ thể - Trừu tượng & Nhân tố -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+        <h3 class="bg-slate-800 text-white p-3 font-bold text-center">Tính Chất Hai Mặt Của Lao Động</h3>
+        <table class="w-full text-sm text-left">
+            <thead>
+                <tr class="bg-stone-100"><th class="p-3 border-b">Lao động cụ thể</th><th class="p-3 border-b border-l">Lao động trừu tượng</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-3 border-b">Hình thức nghề nghiệp cụ thể (Cầm cưa, cầm kim).</td>
+                    <td class="p-3 border-b border-l">Sự tiêu hao sức lực (cơ bắp, trí óc) nói chung.</td>
+                </tr>
+                <tr>
+                    <td class="p-3 border-b text-blue-700 font-bold">Tạo ra Giá trị sử dụng</td>
+                    <td class="p-3 border-b border-l text-rose-700 font-bold">Tạo ra Giá trị</td>
+                </tr>
+                <tr>
+                    <td class="p-3 border-b">Tính chất tư nhân, Vĩnh viễn</td>
+                    <td class="p-3 border-b border-l">Tính chất xã hội, Lịch sử</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+        <h3 class="bg-teal-800 text-white p-3 font-bold text-center">Nhân Tố Ảnh Hưởng Lượng Giá Trị</h3>
+        <table class="w-full text-sm text-left">
+            <thead>
+                <tr class="bg-stone-100"><th class="p-3 border-b w-1/3">Nhân tố</th><th class="p-3 border-b border-l">Tác động đến Giá trị 1 SP</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-3 border-b font-bold">Năng suất LĐ</td>
+                    <td class="p-3 border-b border-l text-rose-600 font-bold">TỶ LỆ NGHỊCH (NS tăng $\to$ Giá trị giảm)</td>
+                </tr>
+                <tr>
+                    <td class="p-3 border-b font-bold">Cường độ LĐ</td>
+                    <td class="p-3 border-b border-l text-stone-600 font-bold">KHÔNG ĐỔI (Chỉ làm mệt hơn & ra nhiều SP hơn)</td>
+                </tr>
+                <tr>
+                    <td class="p-3 font-bold">Mức độ phức tạp</td>
+                    <td class="p-3 border-l text-teal-700 font-bold">TỶ LỆ THUẬN ($L_{pt} = n \times L_{gd}$)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Tools & Calculators -->
+<div class="mt-8 border-t-2 border-dashed border-teal-200 pt-8">
+    <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">🧮</span> Máy Tính & Định Luật Trọng Tâm</h3>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Calc W = c + v + m -->
+        <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+            <h4 class="text-xl font-bold text-slate-800 mb-2">Cấu Thành Lượng Giá Trị (W)</h4>
+            <div class="text-lg font-black text-center text-teal-800 bg-teal-50 py-3 rounded-lg border border-teal-200 mb-4">W = c + v + m</div>
+            <div class="space-y-3 mb-4 text-sm text-stone-600">
+                <p><strong>c:</strong> Giá trị tư liệu SX (máy móc, nguyên liệu hao mòn)</p>
+                <p><strong>v:</strong> Giá trị sức lao động (tiền lương)</p>
+                <p><strong>m:</strong> Giá trị thặng dư</p>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mb-4">
+                <div><label class="block text-xs font-bold mb-1">c ($)</label><input type="number" id="calc-w-c" class="w-full border rounded px-2 py-1" value="1000"></div>
+                <div><label class="block text-xs font-bold mb-1">v ($)</label><input type="number" id="calc-w-v" class="w-full border rounded px-2 py-1" value="200"></div>
+                <div><label class="block text-xs font-bold mb-1">m ($)</label><input type="number" id="calc-w-m" class="w-full border rounded px-2 py-1" value="200"></div>
+            </div>
+            <button onclick="KTCT.calcW()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded transition-colors">Tính Toán</button>
+            <div id="res-w" class="mt-4 p-3 bg-stone-100 rounded text-center font-bold text-lg hidden"></div>
+        </div>
+
+        <!-- Lưu thông tiền tệ -->
+        <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+            <h4 class="text-xl font-bold text-slate-800 mb-2">Quy Luật Lưu Thông Tiền Tệ</h4>
+            <div class="text-lg font-black text-center text-rose-800 bg-rose-50 py-3 rounded-lg border border-rose-200 mb-4">M = (P &times; Q) / V</div>
+            <div class="space-y-3 mb-4 text-sm text-stone-600">
+                <p><strong>P &times; Q:</strong> Tổng giá cả hàng hóa lưu thông</p>
+                <p><strong>V:</strong> Tốc độ lưu thông tiền tệ</p>
+                <p><em>*Nếu in tiền > M, gây Lạm phát.</em></p>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mb-4">
+                <div><label class="block text-xs font-bold mb-1">P ($/sp)</label><input type="number" id="calc-m-p" class="w-full border rounded px-2 py-1" value="50"></div>
+                <div><label class="block text-xs font-bold mb-1">Q (sp)</label><input type="number" id="calc-m-q" class="w-full border rounded px-2 py-1" value="1000"></div>
+                <div><label class="block text-xs font-bold mb-1">V (vòng)</label><input type="number" id="calc-m-v" class="w-full border rounded px-2 py-1" value="5"></div>
+            </div>
+            <button onclick="KTCT.calcM()" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 rounded transition-colors">Tính M Cần Thiết</button>
+            <div id="res-m" class="mt-4 p-3 bg-stone-100 rounded text-center font-bold text-lg hidden"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Tiền Tệ Timeline & 5 Chức năng -->
+<div class="mt-8 bg-slate-800 text-white p-6 rounded-2xl shadow-sm">
+    <h3 class="text-xl font-bold mb-6 text-center text-teal-300">Tiền Tệ: Nguồn Gốc & 5 Chức Năng</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h4 class="font-bold text-teal-400 border-b border-slate-600 pb-2 mb-4">4 Hình thái phát triển</h4>
+            <ul class="space-y-4 text-sm">
+                <li><strong class="text-amber-400">1. Giản đơn (ngẫu nhiên):</strong> Trực tiếp vật lấy vật (1 cừu = 2 rìu).</li>
+                <li><strong class="text-amber-400">2. Toàn bộ (mở rộng):</strong> 1 vật đổi nhiều vật, vẫn đổi trực tiếp.</li>
+                <li><strong class="text-amber-400">3. Chung:</strong> Vật ngang giá chung xuất hiện (Vỏ sò, muối).</li>
+                <li><strong class="text-amber-400">4. Tiền tệ:</strong> Cố định ở kim loại quý (Vàng, bạc).</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold text-teal-400 border-b border-slate-600 pb-2 mb-4">5 Chức năng (C. Mác)</h4>
+            <ul class="space-y-2 text-sm">
+                <li>🎯 <strong>Thước đo giá trị:</strong> Đo lường (chỉ cần tiền tưởng tượng).</li>
+                <li>🔄 <strong>PT Lưu thông:</strong> Môi giới Mua - Bán (cần tiền mặt).</li>
+                <li>💰 <strong>PT Cất trữ:</strong> Rút khỏi lưu thông (cần vàng/đủ giá trị).</li>
+                <li>💳 <strong>PT Thanh toán:</strong> Trả nợ, nộp thuế (tạo rủi ro tín dụng).</li>
+                <li>🌍 <strong>Tiền tệ thế giới:</strong> Vượt biên giới (vàng, ngoại tệ).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 3 ================= -->
+<section id="ch3" class="tab-content hidden">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Giá Trị Thặng Dư</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Trái tim của Kinh tế chính trị Mác - Lênin. Giải phẫu quá trình nhà tư bản bóc lột công nhân thông qua Hàng hóa sức lao động.</p>
+</div>
+
+<!-- Công thức chung & Hàng hóa SLĐ -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+        <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Mâu Thuẫn Công Thức Chung</h3>
+        <p class="text-sm text-stone-600 mb-3"><strong>Lưu thông HH giản đơn:</strong> $H - T - H$ (Mục đích: Giá trị sử dụng).</p>
+        <p class="text-sm text-rose-700 font-bold mb-3"><strong>Lưu thông Tư bản:</strong> $T - H - T'$ (Mục đích: Giá trị thặng dư $m$). $T' = T + m$.</p>
+        <div class="bg-stone-50 p-3 rounded border text-sm">
+            <strong>Mâu thuẫn:</strong> Mua bán trên thị trường KHÔNG tạo ra giá trị mới, nhưng Tư bản lại không thể sinh lời nếu nằm ngoài thị trường. <br>
+            $\rightarrow$ <em>Chìa khóa giải quyết chính là Hàng hóa sức lao động.</em>
+        </div>
+    </div>
+
+    <div class="bg-teal-800 text-white p-6 rounded-xl shadow-sm border border-teal-900">
+        <h3 class="text-lg font-bold text-teal-300 mb-3 border-b border-teal-700 pb-2">Hàng Hóa Sức Lao Động</h3>
+        <p class="text-sm mb-2">2 Điều kiện biến thành hàng hóa: Tự do thân thể & Không có Tư liệu SX.</p>
+        <ul class="text-sm space-y-3 mt-4">
+            <li><strong>Giá trị:</strong> Bằng lượng tiền lương chi trả để duy trì sự sống, gia đình, đào tạo.</li>
+            <li class="bg-teal-700 p-2 rounded"><strong>Giá trị sử dụng (ĐẶC BIỆT):</strong> Khi sử dụng, nó tạo ra lượng giá trị MỚI lớn hơn giá trị bản thân nó. <em>Phần lớn hơn đó là Giá trị thặng dư (m).</em></li>
+        </ul>
+    </div>
+</div>
+
+<!-- c và v + Calculator m' -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+        <h3 class="bg-slate-800 text-white p-3 font-bold text-center">Tư Bản Bất Biến (c) vs Khả Biến (v)</h3>
+        <table class="w-full text-sm text-left">
+            <tbody class="divide-y">
+                <tr>
+                    <td class="p-4 bg-stone-50 font-bold w-1/3">Tư bản Bất biến ($c$)</td>
+                    <td class="p-4">Máy móc, nguyên liệu. Giá trị <strong>BẢO TỒN</strong> và chuyển nguyên vẹn vào SP. <em>KHÔNG tạo ra $m$.</em></td>
+                </tr>
+                <tr>
+                    <td class="p-4 bg-teal-50 text-teal-800 font-bold">Tư bản Khả biến ($v$)</td>
+                    <td class="p-4 bg-white">Tiền lương công nhân. Qua lao động trừu tượng, giá trị của nó <strong>TĂNG LÊN</strong>. <em>Là NGUỒN GỐC DUY NHẤT sinh ra $m$.</em></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="p-4 border-t border-stone-200 bg-amber-50 text-sm">
+            <strong>2 Phương pháp SX Thặng dư:</strong><br>
+            - <em>Tuyệt đối:</em> Kéo dài giờ làm, giữ nguyên lương/năng suất.<br>
+            - <em>Tương đối:</em> Giữ nguyên giờ làm, tăng năng suất XH để rút ngắn thời gian LĐ tất yếu.
+        </div>
+    </div>
+
+    <!-- Máy tính bóc lột -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 border-l-4 border-rose-500">
+        <h4 class="text-xl font-bold text-slate-800 mb-2">Đo lường mức độ bóc lột</h4>
+        <div class="flex justify-around mb-4 text-center">
+            <div class="bg-rose-50 p-2 rounded-lg border border-rose-200 w-5/12">
+                <span class="block text-xs font-bold text-rose-800">Tỷ suất (Trình độ)</span>
+                <span class="text-lg font-black text-rose-700">m' = m / v</span>
+            </div>
+            <div class="bg-rose-50 p-2 rounded-lg border border-rose-200 w-5/12">
+                <span class="block text-xs font-bold text-rose-800">Khối lượng (Quy mô)</span>
+                <span class="text-lg font-black text-rose-700">M = m' &times; V</span>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3 mb-4">
+            <div><label class="block text-xs font-bold mb-1">Giá trị thặng dư ($m$)</label><input type="number" id="calc-m-val" class="w-full border rounded px-2 py-1" value="400"></div>
+            <div><label class="block text-xs font-bold mb-1">Lương 1 người ($v$)</label><input type="number" id="calc-v-val" class="w-full border rounded px-2 py-1" value="200"></div>
+            <div class="col-span-2"><label class="block text-xs font-bold mb-1">Tổng quỹ lương ($V$) của công ty</label><input type="number" id="calc-V-total" class="w-full border rounded px-2 py-1" value="100000"></div>
+        </div>
+        <button onclick="KTCT.calcSurplus()" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 rounded transition-colors">Đánh Giá Bóc Lột</button>
+        <div id="res-surplus" class="mt-4 p-4 bg-stone-50 border border-stone-200 rounded text-sm hidden"></div>
+    </div>
+</div>
+
+<!-- Tích lũy tư bản -->
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+    <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Tích Lũy Tư Bản & Hệ Quả</h3>
+    <p class="text-sm text-stone-600 mb-4">Thực chất là <em>tư bản hóa giá trị thặng dư</em> (lấy $m$ mua thêm $c$ và $v$ để mở rộng).</p>
+    <div class="flex flex-col md:flex-row gap-4 text-sm">
+        <div class="bg-stone-50 border border-stone-200 p-4 rounded-lg flex-1">
+            <strong class="text-teal-700 block mb-1">Hệ quả 1: Cấu tạo hữu cơ (c/v) tăng</strong>
+            Phần vốn mua máy móc ($c$) ngày càng lớn hơn trả lương ($v$). Gây ra nạn thất nghiệp do máy móc thay người.
+        </div>
+        <div class="bg-stone-50 border border-stone-200 p-4 rounded-lg flex-1">
+            <strong class="text-teal-700 block mb-1">Hệ quả 2: Tích tụ & Tập trung TB</strong>
+            Doanh nghiệp nhỏ phá sản/sáp nhập. Tài sản xã hội tập trung vào số ít tài phiệt $\rightarrow$ Tạo tiền đề cho ĐỘC QUYỀN.
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 4 (PREMIUM) ================= -->
+<section id="ch4" class="tab-content hidden">
+<div class="mb-8 flex items-center justify-between">
+    <div>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">
+            Chương 4: Cạnh Tranh & Độc Quyền
+            <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span>
+        </h2>
+        <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Cạnh tranh đẻ ra độc quyền, nhưng độc quyền không thủ tiêu cạnh tranh mà làm nó khốc liệt hơn.</p>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    <div class="lg:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+        <h3 class="font-bold text-lg text-slate-800 mb-4 border-b pb-2">Sự Hình Thành Độc Quyền</h3>
+        <p class="text-sm text-stone-700 mb-4"><strong>Khái niệm:</strong> Liên minh các DN lớn thao túng sản xuất/tiêu thụ, định ra giá cả độc quyền để thu lợi cao.</p>
+        <p class="text-sm text-stone-700 mb-4"><strong>Nguyên nhân:</strong> Do Tích tụ, tập trung sản xuất và yêu cầu vốn khổng lồ của kỹ thuật mới.</p>
+        <div class="bg-rose-50 p-3 rounded border border-rose-200 text-sm">
+            <strong>⚠️ Độc quyền Nhà nước:</strong> Kết hợp sức mạnh độc quyền tư nhân + sức mạnh nhà nước tư sản (Dùng ngân sách/thuế để cứu trợ các tập đoàn khi khủng hoảng).
+        </div>
+    </div>
+
+    <div class="lg:col-span-2 bg-slate-800 text-white p-6 rounded-2xl shadow-sm">
+        <h3 class="font-bold text-lg text-teal-300 mb-6 border-b border-slate-700 pb-2">Tiến Hóa Các Hình Thức Tổ Chức (Từ thấp $\rightarrow$ cao)</h3>
+        <div class="flex flex-col space-y-4 text-sm">
+            <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">1. Cartel</div><div class="flex-1">Thỏa thuận giá/sản lượng lỏng lẻo. Vẫn độc lập SX & Thương nghiệp.</div></div>
+            <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">2. Syndicate</div><div class="flex-1">Độc lập SX, <strong>mất độc lập thương nghiệp</strong> (chung 1 ban quản trị mua/bán).</div></div>
+            <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">3. Trust</div><div class="flex-1"><strong>Liên minh thống nhất.</strong> Mất độc lập hoàn toàn. Tham gia với tư cách cổ đông.</div></div>
+            <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">4. Consortium</div><div class="flex-1 text-teal-200">Tập đoàn khổng lồ đa ngành, liên kết dọc/ngang với ngân hàng mẹ làm trung tâm.</div></div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+    <h3 class="bg-slate-800 text-white p-4 font-bold text-center">5 Đặc Điểm Kinh Tế Của Độc Quyền (V.I. Lênin)</h3>
+    <table class="w-full text-sm text-left">
+        <tbody class="divide-y divide-stone-200">
+            <tr class="hover:bg-stone-50">
+                <td class="p-4 font-bold text-teal-700 w-1/4">1. Tập trung SX</td>
+                <td class="p-4">Thao túng thị trường bằng <strong>Giá cả độc quyền</strong> (bán cao, mua rẻ).</td>
+                <td class="p-4 text-stone-500 italic">VD: OPEC thao túng giá dầu.</td>
+            </tr>
+            <tr class="hover:bg-stone-50">
+                <td class="p-4 font-bold text-teal-700">2. Tư bản tài chính</td>
+                <td class="p-4">Dung hợp giữa Ngân hàng độc quyền + Công nghiệp độc quyền.</td>
+                <td class="p-4 text-stone-500 italic">VD: Tài phiệt sở hữu cả Bank lẫn Media.</td>
+            </tr>
+            <tr class="hover:bg-stone-50">
+                <td class="p-4 font-bold text-teal-700">3. Xuất khẩu tư bản</td>
+                <td class="p-4">Xuất khẩu giá trị ra nước ngoài để bóc lột (nhân công rẻ, đất rẻ).</td>
+                <td class="p-4 text-stone-500 italic">VD: Hãng Mỹ sang VN lập nhà máy.</td>
+            </tr>
+            <tr class="hover:bg-stone-50">
+                <td class="p-4 font-bold text-teal-700">4. Phân chia thị trường</td>
+                <td class="p-4">Các MNCs/TNCs thỏa thuận chia chác thị trường toàn cầu.</td>
+                <td class="p-4 text-stone-500 italic">Thỏa thuận ngầm thị phần năng lượng.</td>
+            </tr>
+            <tr class="hover:bg-stone-50">
+                <td class="p-4 font-bold text-rose-700">5. Phân chia lãnh thổ</td>
+                <td class="p-4">Cường quốc dùng quân sự chia lại thuộc địa (Nguyên nhân Thế chiến).</td>
+                <td class="p-4 text-stone-500 italic">Thế chiến I & II.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 5 (PREMIUM) ================= -->
+<section id="ch5" class="tab-content hidden">
+<div class="mb-8">
+    <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">
+        Chương 5: KTTT Định Hướng XHCN
+        <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span>
+    </h2>
+    <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Mô hình kinh tế đặc thù của Việt Nam: Vận hành theo quy luật thị trường nhưng do Đảng lãnh đạo, Nhà nước quản lý vì mục tiêu Dân giàu nước mạnh.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <!-- Đặc trưng -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+        <h3 class="bg-teal-800 text-white p-3 font-bold text-center">Đặc Trưng Cơ Bản (KTTT ĐHXHCN)</h3>
+        <ul class="text-sm divide-y divide-stone-100">
+            <li class="p-4"><strong class="text-slate-800">1. Mục tiêu:</strong> Phát triển LLSX, xây CSVC-KT cho CNXH. Không đặt lợi nhuận cá nhân trên hết.</li>
+            <li class="p-4"><strong class="text-slate-800">2. Sở hữu:</strong> Đa hình thức. <span class="text-rose-600 font-bold">KT Nhà nước chủ đạo</span>, KT Tư nhân là động lực.</li>
+            <li class="p-4"><strong class="text-slate-800">3. Quản lý:</strong> Nhà nước quản lý qua pháp luật, công cụ kinh tế (VD: Quỹ bình ổn xăng dầu).</li>
+            <li class="p-4"><strong class="text-slate-800">4. Phân phối:</strong> Công bằng, chủ yếu theo LĐ và Hiệu quả; chú trọng An sinh xã hội.</li>
+        </ul>
+    </div>
+
+    <!-- Quan hệ lợi ích -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
+        <h3 class="font-bold text-lg text-slate-800 mb-4 border-b pb-2">Giải Quyết Xung Đột Lợi Ích</h3>
+        <p class="text-sm text-stone-600 mb-4">Chuỗi lợi ích: <em>Cá nhân $\rightarrow$ Tập thể $\rightarrow$ Xã hội</em>. NN giải quyết mâu thuẫn bằng 4 bước:</p>
+        <ol class="list-decimal pl-5 text-sm space-y-2 font-semibold text-stone-800">
+            <li>Bảo vệ lợi ích hợp pháp, khuyến khích làm giàu.</li>
+            <li>Điều hòa lợi ích bằng luật (VD: Luật LĐ tránh ép lương).</li>
+            <li>Phân phối lại qua Thuế (Xây bệnh viện, trường học).</li>
+            <li>Chế tài xử lý tham nhũng, trốn thuế nghiêm minh.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="bg-slate-800 text-white p-6 rounded-2xl shadow-sm">
+    <h3 class="font-bold text-lg text-teal-300 mb-4">4 Trụ Cột Hoàn Thiện Thể Chế</h3>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm text-stone-300">
+        <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">1. Sở hữu & TP Kinh tế</strong>Bảo vệ tài sản, cạnh tranh bình đẳng, cơ cấu DNNN.</div>
+        <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">2. Đồng bộ thị trường</strong>Phát triển TTCK, BĐS, Công nghệ, Sức lao động.</div>
+        <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">3. Tiến bộ, Công bằng</strong>Tuyệt đối không hi sinh môi trường đổi lấy tăng trưởng.</div>
+        <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">4. Hội nhập Quốc tế</strong>Chủ động thực thi các Hiệp định FTA.</div>
+    </div>
+</div>
+</section>
+
+<!-- ================= SECTION: CHƯƠNG 6 (PREMIUM) ================= -->
+<section id="ch6" class="tab-content hidden">
+<div class="mb-8">
+    <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">
+        Chương 6: CNH, HĐH & Hội Nhập
+        <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span>
+    </h2>
+    <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Cách mạng công nghiệp 4.0 và con đường hội nhập đầy cơ hội xen lẫn cạm bẫy của kinh tế Việt Nam.</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- CNH, HĐH 4.0 -->
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+        <h3 class="text-xl font-bold text-slate-800 mb-4">CMCN 4.0 & Nội Dung Cốt Lõi Ở VN</h3>
+        <p class="text-sm text-stone-600 mb-4">Chuyển đổi từ thủ công sang công nghệ hiện đại. VN đang ưu tiên "Công nghiệp hóa sinh thái" & "Kinh tế tri thức".</p>
+        <div class="space-y-4 border-l-2 border-teal-200 ml-2 pl-4 text-sm">
+            <div>
+                <strong class="text-teal-700">1. Nền tảng số:</strong> Xây dựng Chính phủ điện tử, Kinh tế số. Ứng dụng AI, IoT.
+            </div>
+            <div>
+                <strong class="text-teal-700">2. Cơ cấu kinh tế:</strong> Giảm Nông nghiệp, tăng Công nghiệp/Dịch vụ. Nông nghiệp $\rightarrow$ Công nghệ cao.
+            </div>
+            <div>
+                <strong class="text-teal-700">3. Nguồn nhân lực:</strong> Yếu tố then chốt. Đổi mới giáo dục để vận hành hệ thống 4.0.
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Các mô hình -->
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+        <h3 class="text-xl font-bold text-slate-800 mb-4">Các Mô Hình CNH Trên Thế Giới</h3>
+        <ul class="space-y-4 text-sm text-stone-700">
+            <li class="bg-stone-50 p-3 rounded">
+                <strong class="text-slate-900 block mb-1">Cổ điển (Anh - Cuối TK 18)</strong> 
+                Bắt đầu từ CN nhẹ (dệt may) lấy vốn, rồi sang CN nặng. Mất 60-80 năm.
+            </li>
+            <li class="bg-stone-50 p-3 rounded">
+                <strong class="text-slate-900 block mb-1">Kiểu Liên Xô (Những năm 1930)</strong> 
+                Ưu tiên CN nặng (luyện kim, chế tạo) ngay từ đầu. Nhanh có CSVC nhưng thiếu hàng tiêu dùng trầm trọng.
+            </li>
+            <li class="bg-stone-50 p-3 rounded border border-teal-200">
+                <strong class="text-teal-800 block mb-1">NICs (Hàn Quốc, Đài Loan - Cuối TK 20)</strong> 
+                Hướng về xuất khẩu, mở cửa thu hút FDI, đi tắt đón đầu công nghệ. <em>VN đang học hỏi mô hình này.</em>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+    <h3 class="bg-slate-800 text-white p-4 font-bold text-center">Hội Nhập KTQT: Cơ Hội vs Thách Thức</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="p-6 bg-green-50 border-r border-stone-200">
+            <h4 class="font-bold text-green-800 text-lg mb-4 flex items-center gap-2">🟢 Tích Cực (Cơ Hội)</h4>
+            <ul class="list-disc pl-5 text-sm text-stone-700 space-y-2">
+                <li>Mở rộng thị trường xuất khẩu.</li>
+                <li>Thu hút dòng vốn FDI và quản lý tiên tiến.</li>
+                <li>Tạo việc làm, tăng thu nhập, hàng hóa rẻ hơn.</li>
+                <li>Nâng cao vị thế quốc tế của VN.</li>
+            </ul>
+        </div>
+        <div class="p-6 bg-rose-50">
+            <h4 class="font-bold text-rose-800 text-lg mb-4 flex items-center gap-2">🔴 Tiêu Cực (Bẫy Rủi Ro)</h4>
+            <ul class="list-disc pl-5 text-sm text-stone-700 space-y-2">
+                <li>DN nội địa yếu kém dễ bị thâu tóm, phá sản ngay sân nhà.</li>
+                <li>Nguy cơ thành "Bãi rác công nghệ" nếu quản lý lỏng.</li>
+                <li>Phụ thuộc thế giới (Thế giới khủng hoảng, VN lao đao).</li>
+                <li>Xói mòn văn hóa, bị áp đặt luật chơi bất lợi.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+</main>
+
+<!-- CORE SCRIPTS -->
+<script>
+(() => {
+    // Tích hợp namespace để tránh ô nhiễm global scope
+    window.KTCT = {
+        calcW: function() {
+            const c = parseFloat(document.getElementById('calc-w-c').value);
+            const v = parseFloat(document.getElementById('calc-w-v').value);
+            const m = parseFloat(document.getElementById('calc-w-m').value);
+            const resBox = document.getElementById('res-w');
+            if (isNaN(c) || isNaN(v) || isNaN(m)) return;
+            const W = c + v + m;
+            resBox.innerHTML = `Lượng giá trị $W$ = ${c} + ${v} + ${m} = <span class="text-teal-700 text-2xl font-black">${W}$</span>`;
+            resBox.classList.remove('hidden');
+        },
+        calcM: function() {
+            const p = parseFloat(document.getElementById('calc-m-p').value);
+            const q = parseFloat(document.getElementById('calc-m-q').value);
+            const v = parseFloat(document.getElementById('calc-m-v').value);
+            const resBox = document.getElementById('res-m');
+            if (isNaN(p) || isNaN(q) || isNaN(v) || v <= 0) return;
+            const M = (p * q) / v;
+            resBox.innerHTML = `Tiền cần thiết $M$ = (${p} &times; ${q}) / ${v} = <span class="text-rose-700 text-2xl font-black">${M.toFixed(2)}$</span>`;
+            resBox.classList.remove('hidden');
+        },
+        calcSurplus: function() {
+            const m = parseFloat(document.getElementById('calc-m-val').value);
+            const v = parseFloat(document.getElementById('calc-v-val').value);
+            const V = parseFloat(document.getElementById('calc-V-total').value);
+            const resBox = document.getElementById('res-surplus');
+            if (isNaN(m) || isNaN(v) || isNaN(V) || v <= 0) return;
+            
+            const m_rate = (m / v) * 100;
+            const M_total = (m_rate / 100) * V;
+            
+            resBox.innerHTML = `
+                <div class="mb-2"><strong class="text-rose-800">1. Tỷ suất GTTD (m'):</strong> ${m} / ${v} = <strong class="text-xl">${m_rate}%</strong> <br>
+                <em class="text-stone-500 text-xs">$\rightarrow$ Mức độ bóc lột: Công nhân làm 100 đồng cho mình thì làm ${m_rate} đồng không công cho tư bản.</em></div>
+                <div class="border-t border-stone-200 pt-2"><strong class="text-rose-800">2. Khối lượng GTTD (M):</strong> ${m_rate}% &times; ${V} = <strong class="text-xl text-rose-700">${M_total}$</strong> <br>
+                <em class="text-stone-500 text-xs">$\rightarrow$ Tổng số tiền tư bản đút túi vào cuối chu kỳ.</em></div>
+            `;
+            resBox.classList.remove('hidden');
+        }
+    };
+})();
+
+// TAB SWITCHING & AUTH LOGIC (Đã giữ lại logic auth riêng của file này)
+let activeTabId = 'ch1'; 
+let pendingTabId = null;
+
+function showWelcomeModal() {
+    const m = document.getElementById('welcome-modal');
+    m.classList.remove('hidden'); 
+    setTimeout(() => { m.classList.remove('opacity-0'); document.getElementById('welcome-modal-content').classList.remove('scale-95'); }, 10);
+}
+
+window.loginGoogleReal = () => auth.signInWithPopup(provider).catch(e => alert(e.message));
+window.loginFromUnlock = () => auth.signInWithPopup(provider).catch(e => alert(e.message));
+window.continueAsGuest = () => { userRole = 'guest'; localStorage.setItem('onthi_role', 'guest'); document.getElementById('welcome-modal').classList.add('hidden'); updateUserUI(); forceSwitchTab('ch1'); };
+window.logoutReal = () => { if(confirm("Đăng xuất khỏi hệ thống?")) { auth.signOut().then(() => { userRole = null; localStorage.removeItem('onthi_role'); window.location.reload(); }); } };
+window.closeUnlockModal = () => { document.getElementById('unlock-modal').classList.add('opacity-0'); setTimeout(() => document.getElementById('unlock-modal').classList.add('hidden'), 300); pendingTabId = null; };
+
+function updateUserUI() {
+    const loginBtn = document.getElementById('nav-login-btn'); const userProfile = document.getElementById('nav-user-profile');
+    const locks = document.querySelectorAll('.premium-lock'); const badges = document.querySelectorAll('.premium-badge');
+    if (userRole === 'premium') { 
+        loginBtn.classList.add('hidden'); userProfile.classList.remove('hidden'); userProfile.classList.add('flex'); 
+        locks.forEach(i => i.classList.add('hidden')); badges.forEach(b => b.classList.remove('hidden')); 
+    } else { loginBtn.classList.remove('hidden'); userProfile.classList.add('hidden'); }
+}
+
+window.attemptSwitchTab = (t) => { forceSwitchTab(t); };
+
+// Hàm chuyển UI Tab (Đã cập nhật fix lỗi scroll từ VHDDTKD)
+function forceSwitchTab(t) { 
+    activeTabId = t; 
+    document.querySelectorAll('.tab-content').forEach(s => { 
+        s.classList.add('hidden'); 
+        s.classList.remove('animate-fade-in'); 
+    }); 
+    
+    const targetTab = document.getElementById(t);
+    if (targetTab) {
+        targetTab.classList.remove('hidden'); 
+        targetTab.classList.add('animate-fade-in');
+        
+        // 3. TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG (Đã fix lỗi sập web)
+        const offset = 150; 
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetTab.getBoundingClientRect().top; // <--- Fix lỗi target
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+
+    // Cập nhật trạng thái nút trên Navbar
+    document.querySelectorAll('.nav-btn').forEach(b => { 
+        b.classList.remove('tab-active','text-teal-600'); 
+        b.classList.add('text-stone-500'); 
+        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
+            b.classList.add('tab-active','text-teal-600'); 
+            b.classList.remove('text-stone-500'); 
+        }
+    }); 
+    
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav) mobileNav.value = t;
+}
+
+window.onload = () => {
+    KTCT.calcW();
+    KTCT.calcM();
+    KTCT.calcSurplus();
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- Trang chủ -->
+   <url>
+      <loc>https://kienthucsinhvien.id.vn/</loc>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <!-- Các trang môn học -->
+   <url>
+      <loc>https://kienthucsinhvien.id.vn/KinhTeQuocTe</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://kienthucsinhvien.id.vn/NguyenLyKeToan</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://kienthucsinhvien.id.vn/NhapMonLuatHoc</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://kienthucsinhvien.id.vn/QuanTriHoc</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://kienthucsinhvien.id.vn/VHDDTKD</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://kienthucsinhvien.id.vn/KinhTeChinhTriMacLeNin</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+</urlset>

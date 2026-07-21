@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Edu Connect</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #f8fafc;
+            color: #1e2937;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #1e2937;
+        }
+        
+        .logout-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .logout-btn:hover {
+            background: #dc2626;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* TUI CHỈ THÊM ĐÚNG ĐOẠN CSS NÀY CHO MOBILE NÈ SẾP */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        table {
+            width: 100%;
+            min-width: 1000px; /* Ép bảng rộng ra để không bị bóp méo chữ trên điện thoại */
+            border-collapse: collapse;
+        }
+        /* KẾT THÚC ĐOẠN CSS MỚI */
+        
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: #475569;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:hover {
+            background: #f8fafc;
+        }
+        
+        .delete-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .delete-btn:hover {
+            background: #dc2626;
+            transform: translateY(-1px);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+            font-style: italic;
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+        }
+        
+        .timestamp {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* --- CSS CHO MODAL LỊCH SỬ --- */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); display: none;
+            justify-content: center; align-items: center; z-index: 1000;
+        }
+        .modal-content {
+            background: white; border-radius: 12px; width: 90%; max-width: 500px;
+            max-height: 80vh; display: flex; flex-direction: column;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .modal-header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 20px; border-bottom: 1px solid #e2e8f0; 
+        }
+        .modal-body { padding: 20px; overflow-y: auto; }
+        .close-btn { 
+            background: none; border: none; font-size: 1.5rem; 
+            cursor: pointer; color: #64748b; font-weight: bold;
+        }
+        .close-btn:hover { color: #ef4444; }
+        .history-list { list-style: none; padding: 0; margin: 0; }
+        .history-list li { 
+            padding: 12px; border-bottom: 1px solid #f1f5f9; 
+            display: flex; align-items: center; gap: 10px; color: #334155;
+        }
+        .history-list li::before { content: "🕒"; }
+        .view-btn {
+            background: #3b82f6; color: white; border: none;
+            padding: 8px 16px; border-radius: 6px; cursor: pointer;
+            font-size: 0.9rem; margin-right: 8px; transition: all 0.2s;
+        }
+        .view-btn:hover { background: #2563eb; transform: translateY(-1px); }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>🔧 Admin Panel - Edu Connect</h1>
+                <p style="color: #64748b; margin-top: 4px;">Quản lý người dùng</p>
+            </div>
+            <button class="logout-btn" onclick="logout()">Đăng xuất</button>
+        </header>
+
+        <div class="card" style="margin-bottom: 2rem; padding: 1.5rem 2rem;">
+            <h2 style="margin-bottom: 1rem; font-size: 1.25rem; color: #1e2937;">🎛️ Điều Khiển Số Người Học</h2>
+            <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+                
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                    <input type="checkbox" id="autoModeToggle" onchange="updateOnlineConfig()" style="width: 1.2rem; height: 1.2rem;">
+                    Bật tự động (Nhảy số theo khung giờ)
+                </label>
+
+                <div id="manualSettings" style="display: flex; gap: 1rem; align-items: center; padding-left: 1rem; border-left: 2px solid #e2e8f0;">
+                    <span style="font-weight: 500;">Chế độ ép số:</span>
+                    <label>Min: <input type="number" id="manualMin" value="40" onchange="updateOnlineConfig()" style="width: 70px; padding: 4px 8px; border: 1px solid #cbd5e1; border-radius: 4px;"></label>
+                    <label>Max: <input type="number" id="manualMax" value="50" onchange="updateOnlineConfig()" style="width: 70px; padding: 4px 8px; border: 1px solid #cbd5e1; border-radius: 4px;"></label>
+                </div>
+                <span id="saveStatus" style="color: #10b981; font-size: 0.9rem; font-weight: 600; opacity: 0; transition: opacity 0.3s;">Đã lưu!</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="table-responsive">
+                <table id="userTable">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Tên</th>
+                            <th>Trạng thái</th> 
+                            <th>Đăng nhập cuối</th>
+                            <th>Thiết bị</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userBody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js?v=999"></script>
+
+    <div id="historyModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" style="font-size: 1.25rem;">Lịch sử đăng nhập</h2>
+                <button class="close-btn" onclick="closeHistoryModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul id="historyList" class="history-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.viewLoginHistory = function(uid, email) {
+            document.getElementById('modalTitle').innerText = `Lịch sử: ${email}`;
+            const historyList = document.getElementById('historyList');
+            historyList.innerHTML = '<li>Đang tải dữ liệu...</li>';
+            document.getElementById('historyModal').style.display = 'flex';
+
+            firebase.database().ref(`users/${uid}/login_history`).once('value', (snapshot) => {
+                historyList.innerHTML = ''; 
+                
+                if (!snapshot.exists()) {
+                    historyList.innerHTML = '<li style="color:#64748b;">Chưa có lịch sử đăng nhập nào được ghi nhận.</li>';
+                    return;
+                }
+
+                const historyData = snapshot.val();
+                const times = Object.values(historyData).reverse(); 
+                
+                times.forEach(time => {
+                    const li = document.createElement('li');
+                    li.innerText = time;
+                    historyList.appendChild(li);
+                });
+            });
+        };
+
+        window.closeHistoryModal = function() {
+            document.getElementById('historyModal').style.display = 'none';
+        };
+    </script>
+
+</body>
+</html>
