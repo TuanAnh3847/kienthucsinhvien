@@ -1,8 +1,64 @@
 rules_version = '2';
+
 service cloud.firestore {
-match /databases/{database}/documents {
-match /{document=**} {
-allow read, write: if request.time < timestamp.date(2027, 12, 31);
-}
-}
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && request.auth.token.email == 'tuannguyen3847@gmail.com';
+    }
+
+    function isValidAttemptCreate() {
+      return request.resource.data.keys().hasAll([
+          'userId',
+          'email',
+          'setId',
+          'title',
+          'score',
+          'total',
+          'submittedAt'
+        ])
+        && request.resource.data.keys().hasOnly([
+          'userId',
+          'email',
+          'setId',
+          'title',
+          'score',
+          'total',
+          'submittedAt'
+        ])
+        && request.resource.data.userId is string
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.email is string
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.setId is string
+        && request.resource.data.title is string
+        && request.resource.data.score is int
+        && request.resource.data.total is int
+        && request.resource.data.score >= 0
+        && request.resource.data.total > 0
+        && request.resource.data.score <= request.resource.data.total
+        && request.resource.data.submittedAt is timestamp
+        && request.resource.data.submittedAt == request.time;
+    }
+
+    match /accountingExerciseSets/{setId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /accountingAttempts/{attemptId} {
+      allow create: if isSignedIn() && isValidAttemptCreate();
+      allow read: if isAdmin()
+        || (isSignedIn() && resource.data.userId == request.auth.uid);
+      allow update, delete: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
 }
