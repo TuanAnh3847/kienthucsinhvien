@@ -231,7 +231,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2 id="modalTitle" style="font-size: 1.25rem;">Lịch sử đăng nhập</h2>
-                <button class="close-btn" onclick="closeHistoryModal()">&times;</button>
+                <button id="closeHistoryModalBtn" class="close-btn" type="button">&times;</button>
             </div>
             <div class="modal-body">
                 <ul id="historyList" class="history-list">
@@ -239,37 +239,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        window.viewLoginHistory = function(uid, email) {
-            document.getElementById('modalTitle').innerText = `Lịch sử: ${email}`;
-            const historyList = document.getElementById('historyList');
-            historyList.innerHTML = '<li>Đang tải dữ liệu...</li>';
-            document.getElementById('historyModal').style.display = 'flex';
-
-            firebase.database().ref(`users/${uid}/login_history`).once('value', (snapshot) => {
-                historyList.innerHTML = ''; 
-                
-                if (!snapshot.exists()) {
-                    historyList.innerHTML = '<li style="color:#64748b;">Chưa có lịch sử đăng nhập nào được ghi nhận.</li>';
-                    return;
-                }
-
-                const historyData = snapshot.val();
-                const times = Object.values(historyData).reverse(); 
-                
-                times.forEach(time => {
-                    const li = document.createElement('li');
-                    li.innerText = time;
-                    historyList.appendChild(li);
-                });
-            });
-        };
-
-        window.closeHistoryModal = function() {
-            document.getElementById('historyModal').style.display = 'none';
-        };
-    </script>
 
 </body>
 </html>

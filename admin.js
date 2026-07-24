@@ -71,27 +71,139 @@ function parseVietDate(dateStr) {
     }
 }
 
+function clearElement(element) {
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+}
+
+function displayText(value, fallback) {
+    if (value === null || value === undefined || value === "") {
+        return fallback;
+    }
+
+    return String(value);
+}
+
+function appendTableMessage(tableBody, message, className, color) {
+    clearElement(tableBody);
+
+    const row = document.createElement("tr");
+    const cell = document.createElement("td");
+    cell.colSpan = 6;
+    cell.className = className;
+    cell.textContent = message;
+
+    if (color) {
+        cell.style.color = color;
+    }
+
+    row.appendChild(cell);
+    tableBody.appendChild(row);
+}
+
+function createTextCell(value, fallback, className) {
+    const cell = document.createElement("td");
+    cell.textContent = displayText(value, fallback);
+
+    if (className) {
+        cell.className = className;
+    }
+
+    return cell;
+}
+
+function createStatusCell(status) {
+    const cell = document.createElement("td");
+    const badge = document.createElement("span");
+    const isOnline = status === "online";
+
+    badge.style.background = isOnline ? "#ecfdf5" : "#f1f5f9";
+    badge.style.color = isOnline ? "#10b981" : "#64748b";
+    badge.style.padding = "4px 10px";
+    badge.style.borderRadius = "20px";
+    badge.style.fontWeight = "600";
+    badge.style.fontSize = "0.85rem";
+    badge.textContent = isOnline ? "🟢 Đang hoạt động" : "⚪ Offline";
+
+    cell.appendChild(badge);
+    return cell;
+}
+
+function renderUserRow(data) {
+    const uid = displayText(data.uid, "N/A");
+    const email = displayText(data.email, "N/A");
+    const row = document.createElement("tr");
+
+    const emailCell = document.createElement("td");
+    const emailText = document.createElement("strong");
+    const uidText = document.createElement("div");
+    const uidValue = document.createElement("span");
+    emailText.textContent = email;
+    uidText.className = "timestamp";
+    uidText.textContent = "UID: ";
+    uidValue.textContent = uid;
+    uidText.appendChild(uidValue);
+    emailCell.appendChild(emailText);
+    emailCell.appendChild(uidText);
+    row.appendChild(emailCell);
+
+    row.appendChild(createTextCell(data.name, "Chưa cập nhật"));
+    row.appendChild(createStatusCell(data.status));
+
+    let lastLogin = "Chưa có";
+    if (data.last_login_time) {
+        if (typeof data.last_login_time === "string") {
+            lastLogin = data.last_login_time;
+        } else {
+            lastLogin = new Date(data.last_login_time).toLocaleString("vi-VN");
+        }
+    }
+    row.appendChild(createTextCell(lastLogin, "Chưa có", "timestamp"));
+    row.appendChild(createTextCell(data.device_type, "Unknown"));
+
+    const actionCell = document.createElement("td");
+    const deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.className = "delete-btn";
+    deleteButton.textContent = "Xóa";
+    deleteButton.addEventListener("click", () => deleteUser(uid, email));
+
+    const historyButton = document.createElement("button");
+    historyButton.type = "button";
+    historyButton.className = "view-btn";
+    historyButton.textContent = "Xem Lịch Sử";
+    historyButton.addEventListener("click", () => window.viewLoginHistory(uid, email));
+
+    actionCell.appendChild(deleteButton);
+    actionCell.appendChild(historyButton);
+    row.appendChild(actionCell);
+
+    return row;
+}
+
 // ==================== LOAD DANH SÁCH USER ====================
 function loadUsers() {
     const userBody = document.getElementById("userBody");
-    userBody.innerHTML = `<tr><td colspan="6" class="loading">Đang tải dữ liệu từ Realtime Database...</td></tr>`;
+    appendTableMessage(userBody, "Đang tải dữ liệu từ Realtime Database...", "loading");
 
     const usersRef = database.ref("users");
 
     usersRef.on("value", (snapshot) => {
-        userBody.innerHTML = ""; // Xóa loading
+        clearElement(userBody);
 
         if (!snapshot.exists()) {
-            userBody.innerHTML = `<tr><td colspan="6" class="no-data">Chưa có người dùng nào.</td></tr>`;
+            appendTableMessage(userBody, "Chưa có người dùng nào.", "no-data");
             return;
         }
 
         // BƯỚC 1: Rút toàn bộ dữ liệu vào một mảng
-        let userArray = [];
+        const userArray = [];
         snapshot.forEach((childSnapshot) => {
             userArray.push({
-                uid: childSnapshot.key,
-                ...childSnapshot.val()
+                ...(childSnapshot.val() || {}),
+                // Luôn dùng key thật của RTDB, không tin trường uid trong dữ liệu user.
+                uid: childSnapshot.key
             });
         });
 
@@ -99,62 +211,35 @@ function loadUsers() {
         userArray.sort((a, b) => {
             let timeA = 0;
             let timeB = 0;
-            
+
             // Xử lý thời gian user A
             if (a.last_login_time) {
-                if (typeof a.last_login_time === 'string') timeA = parseVietDate(a.last_login_time);
+                if (typeof a.last_login_time === "string") timeA = parseVietDate(a.last_login_time);
                 else timeA = new Date(a.last_login_time).getTime();
             }
-            
+
             // Xử lý thời gian user B
             if (b.last_login_time) {
-                if (typeof b.last_login_time === 'string') timeB = parseVietDate(b.last_login_time);
+                if (typeof b.last_login_time === "string") timeB = parseVietDate(b.last_login_time);
                 else timeB = new Date(b.last_login_time).getTime();
             }
-            
+
             // Sắp xếp giảm dần (mới nhất nổi lên trên)
             return timeB - timeA;
         });
 
-        // BƯỚC 3: Render mảng đã sắp xếp ra bảng (giữ nguyên logic render của sếp)
+        // BƯỚC 3: Render mảng đã sắp xếp bằng DOM API an toàn.
         userArray.forEach((data) => {
-            const uid = data.uid;
-
-            // Tạo dòng bảng
-            const row = document.createElement("tr");
-
-           // Xử lý thời gian an toàn (Chấp cả Data mới dạng chữ và Data cũ dạng số)
-            let lastLogin = "Chưa có";
-            if (data.last_login_time) {
-                if (typeof data.last_login_time === 'string') {
-                    lastLogin = data.last_login_time; // auth.js lưu chữ đẹp rồi thì xài luôn
-                } else {
-                    lastLogin = new Date(data.last_login_time).toLocaleString("vi-VN"); // Backup cho data cũ
-                }
-            }
-
-            // Xử lý huy hiệu Online / Offline
-            let statusBadge = data.status === 'online' 
-                ? '<span style="background: #ecfdf5; color: #10b981; padding: 4px 10px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">🟢 Đang hoạt động</span>' 
-                : '<span style="background: #f1f5f9; color: #64748b; padding: 4px 10px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">⚪ Offline</span>';
-
-            row.innerHTML = `
-                <td><strong>${data.email || "N/A"}</strong></td>
-                <td>${data.name || "Chưa cập nhật"}</td>
-                <td>${statusBadge}</td>
-                <td class="timestamp">${lastLogin}</td>
-                <td>${data.device_type || "Unknown"}</td>
-                <td>
-                    <button class="delete-btn" onclick="deleteUser('${uid}', '${data.email || ''}')">Xóa</button>
-                    <button class="view-btn" onclick="viewLoginHistory('${uid}', '${data.email || ''}')">Xem Lịch Sử</button>
-                </td>
-            `;
-
-            userBody.appendChild(row);
+            userBody.appendChild(renderUserRow(data));
         });
     }, (error) => {
         console.error("Lỗi khi đọc dữ liệu users:", error);
-        userBody.innerHTML = `<tr><td colspan="6" style="color:red; text-align:center;">Lỗi kết nối database. Vui lòng kiểm tra quyền Firebase Rules.</td></tr>`;
+        appendTableMessage(
+            userBody,
+            "Lỗi kết nối database. Vui lòng kiểm tra quyền Firebase Rules.",
+            "no-data",
+            "red"
+        );
     });
 }
 
@@ -191,6 +276,8 @@ function logout() {
 // ==================== KHỞI ĐỘNG ====================
 window.onload = function() {
     checkAuth();
+    const closeHistoryButton = document.getElementById("closeHistoryModalBtn");
+    closeHistoryButton.addEventListener("click", closeHistoryModal);
 };
 
 // ==================== QUẢN LÝ BỘ ĐẾM ONLINE ====================
@@ -226,32 +313,42 @@ window.updateOnlineConfig = function() {
 
 // ==================== XEM LỊCH SỬ ĐĂNG NHẬP ====================
 window.viewLoginHistory = function(uid, email) {
-    document.getElementById('modalTitle').innerText = `Lịch sử: ${email}`;
-    const historyList = document.getElementById('historyList');
-    historyList.innerHTML = '<li>Đang tải dữ liệu...</li>';
-    document.getElementById('historyModal').style.display = 'flex';
+    const modalTitle = document.getElementById("modalTitle");
+    const historyList = document.getElementById("historyList");
+    const loadingItem = document.createElement("li");
+    const emailText = document.createElement("span");
+    modalTitle.textContent = "Lịch sử: ";
+    emailText.textContent = displayText(email, "N/A");
+    modalTitle.appendChild(emailText);
+    clearElement(historyList);
+    loadingItem.textContent = "Đang tải dữ liệu...";
+    historyList.appendChild(loadingItem);
+    document.getElementById("historyModal").style.display = "flex";
 
     // Rút hồ sơ lịch sử từ Firebase
-    database.ref(`users/${uid}/login_history`).once('value', (snapshot) => {
-        historyList.innerHTML = ''; 
-        
+    database.ref(`users/${uid}/login_history`).once("value", (snapshot) => {
+        clearElement(historyList);
+
         if (!snapshot.exists()) {
-            historyList.innerHTML = '<li style="color:#64748b;">Chưa có lịch sử đăng nhập nào được ghi nhận.</li>';
+            const emptyItem = document.createElement("li");
+            emptyItem.style.color = "#64748b";
+            emptyItem.textContent = "Chưa có lịch sử đăng nhập nào được ghi nhận.";
+            historyList.appendChild(emptyItem);
             return;
         }
 
         const historyData = snapshot.val();
         // Lấy các mốc thời gian, đảo ngược mảng để hiện cái mới nhất lên đầu
-        const times = Object.values(historyData).reverse(); 
-        
-        times.forEach(time => {
-            const li = document.createElement('li');
-            li.innerText = time;
+        const times = Object.values(historyData).reverse();
+
+        times.forEach((time) => {
+            const li = document.createElement("li");
+            li.textContent = displayText(time, "");
             historyList.appendChild(li);
         });
     });
 };
 
-window.closeHistoryModal = function() {
-    document.getElementById('historyModal').style.display = 'none';
-};
+function closeHistoryModal() {
+    document.getElementById("historyModal").style.display = "none";
+}
