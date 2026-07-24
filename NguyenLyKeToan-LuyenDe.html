@@ -57,7 +57,6 @@
         <button onclick="switchMainTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
         <button onclick="switchMainTab('quiz')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Trắc nghiệm</button>
         <button onclick="switchMainTab('exam')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Luyện đề</button>
-        <button onclick="switchMainTab('cloud')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Firestore</button>
       </div>
       <div class="flex items-center shrink-0">
         <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
@@ -75,7 +74,7 @@
     </div>
     <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
       <select id="mobile-nav" onchange="switchMainTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
-        <option value="overview">Tổng quan</option><option value="chapter">Luyện theo chương</option><option value="quiz">Luyện trắc nghiệm</option><option value="exam">Luyện đề</option><option value="cloud">Firestore</option>
+        <option value="overview">Tổng quan</option><option value="chapter">Luyện theo chương</option><option value="quiz">Luyện trắc nghiệm</option><option value="exam">Luyện đề</option>
       </select>
     </div>
   </div>
@@ -156,9 +155,6 @@ accountingAttempts / {attemptId}
   submittedAt: serverTimestamp()</code></pre>
       </div>
       <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
-        <h3 class="font-black text-slate-900 text-lg mb-3">🚀 Công cụ dữ liệu</h3>
-        <p class="text-sm text-stone-600 mb-4">Nút này dùng để đẩy bộ đề local hiện tại lên Firestore. Chỉ bấm khi ông đã cấu hình Firebase/Auth/Rules xong.</p>
-        <button onclick="seedLocalDataToFirestore()" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl shadow-sm transition-transform active:scale-[.98]">Đẩy dữ liệu mẫu lên Firestore</button>
         <div id="cloud-status" class="mt-4 text-sm bg-stone-50 border border-stone-200 rounded-xl p-4 text-stone-700">Trạng thái: đang dùng dữ liệu local hoặc chờ kết nối Firestore.</div>
       </div>
     </div>
@@ -392,23 +388,6 @@ async function saveAttempt(score,total) {
       submittedAt: firebase.firestore.FieldValue.serverTimestamp()
     });
   } catch (err) { console.warn('Save attempt failed:', err.message); }
-}
-
-async function seedLocalDataToFirestore() {
-  const status = document.getElementById('cloud-status');
-  try {
-    if (!(window.firebase && firebase.apps && firebase.apps.length && firebase.firestore)) throw new Error('Firebase/Firestore chưa sẵn sàng. Kiểm tra script và auth.js.');
-    const db = firebase.firestore();
-    const batch = db.batch();
-    LOCAL_SETS.forEach(set => {
-      const ref = db.collection('accountingExerciseSets').doc(set.id);
-      batch.set(ref, set, { merge: true });
-    });
-    await batch.commit();
-    if (status) status.innerHTML = `✅ Đã seed ${LOCAL_SETS.length} bộ bài lên Firestore collection <strong>accountingExerciseSets</strong>. Refresh trang để đọc lại từ cloud.`;
-  } catch (err) {
-    if (status) status.innerHTML = '❌ Seed thất bại: ' + escapeHtml(err.message);
-  }
 }
 
 function initAuthUi() {
