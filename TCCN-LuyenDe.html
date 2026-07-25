@@ -71,8 +71,8 @@
           <span id="online-count" class="mr-1">...</span><span class="hidden sm:inline">online</span>
         </div>
         <div class="border-l border-stone-300 pl-3 sm:pl-4">
-          <button id="nav-login-btn" onclick="safeLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-          <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="safeLogout()" title="Đăng xuất">
+          <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+          <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
             <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
             <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh viên</span>
           </div>
@@ -3040,18 +3040,6 @@ let lastTab = 'overview';
 const STORAGE_WRONG = 'edu_tccn_wrong_ids_v1';
 const STORAGE_ATTEMPTS = 'edu_tccn_attempts_v1';
 
-function safeLogin() {
-  if (typeof window.showWelcomeModal === 'function') return window.showWelcomeModal();
-  if (typeof window.loginGoogleReal === 'function') return window.loginGoogleReal();
-  if (window.firebase && firebase.auth) {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).catch(err => alert('Không đăng nhập được: ' + err.message));
-  } else alert('Firebase Auth chưa sẵn sàng. Kiểm tra auth.js nhé.');
-}
-function safeLogout() {
-  if (typeof window.logoutReal === 'function') return window.logoutReal();
-  if (window.firebase && firebase.auth) firebase.auth().signOut();
-}
 function initAuthUi() {
   try {
     if (!(window.firebase && firebase.auth)) { document.getElementById('nav-login-btn')?.classList.remove('hidden'); return; }

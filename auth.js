@@ -114,12 +114,14 @@ function updateNavbar(user) {
 
 function showWelcomeModal() {
     const modal = document.getElementById("welcome-modal");
-    if (!modal) return;
+    if (!modal) return false;
 
     modal.classList.remove("hidden");
     setTimeout(() => {
         modal.classList.remove("opacity-0");
+        document.getElementById("welcome-modal-content")?.classList.remove("scale-95");
     }, 10);
+    return true;
 }
 
 function hideWelcomeModal() {
@@ -139,16 +141,58 @@ function hideWelcomeModal() {
 // ===============================
 // 🔑 AUTH ACTIONS
 // ===============================
+let loginInFlight = null;
+
+function handleGoogleSignInError(error) {
+    if (error?.code === "auth/popup-closed-by-user"
+        || error?.code === "auth/cancelled-popup-request") {
+        console.info("Google Sign-In đã được người dùng đóng.");
+        return null;
+    }
+
+    console.error("Google Sign-In failed:", error);
+    alert("Lỗi đăng nhập: " + (error?.message || "Không xác định"));
+    return null;
+}
+
 window.loginGoogleReal = () => {
-    auth.signInWithRedirect(provider).catch(e => alert(e.message));
+    if (loginInFlight) return loginInFlight;
+
+    try {
+        loginInFlight = Promise.resolve(auth.signInWithPopup(provider))
+            .catch(handleGoogleSignInError)
+            .finally(() => {
+                loginInFlight = null;
+            });
+    } catch (error) {
+        handleGoogleSignInError(error);
+        return Promise.resolve(null);
+    }
+
+    return loginInFlight;
 };
 
-window.logoutReal = () => {
-    if (confirm("Đăng xuất?")) {
-        auth.signOut().then(() => {
-            localStorage.removeItem("onthi_role");
-            location.reload();
-        });
+window.requestLogin = () => {
+    if (document.getElementById("welcome-modal")) {
+        showWelcomeModal();
+        return null;
+    }
+
+    return window.loginGoogleReal();
+};
+
+window.logoutReal = async () => {
+    if (!confirm("Bạn có chắc chắn muốn đăng xuất khỏi hệ thống?")) return false;
+
+    try {
+        await auth.signOut();
+        localStorage.removeItem("onthi_role");
+        window.location.href = "index.html";
+        return true;
+    } catch (error) {
+        console.error("Sign-out failed:", error);
+        alert("Không thể đăng xuất: " + (error?.message || "Không xác định"));
+        return false;
     }
 };
 
@@ -220,10 +264,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const currentPath = window.location.pathname.toLowerCase();
             const isHomePage = currentPath.endsWith('index.html') || currentPath === '/' || currentPath === '';
             
-            if (!isHomePage && !currentPath.includes('admin.html')) {
-                if (typeof showWelcomeModal === 'function') {
-                    showWelcomeModal();
-                }
+            if (!isHomePage && !currentPath.includes('admin.html') && welcomeModal) {
+                showWelcomeModal();
             }
         }
     });
@@ -318,40 +360,4 @@ function checkIdleTime() {
 
 // Cứ mỗi 1 phút (60000 mili-giây), bảo vệ đi tuần tra 1 lần
 setInterval(checkIdleTime, 60000);
-
-// ==========================================
-// 🌍 CÁC HÀM GLOBAL (DÙNG CHUNG CHO MỌI TRANG)
-// ==========================================
-
-// 1. Hàm bật bảng Welcome (Đăng nhập)
-window.showWelcomeModal = () => {
-    const m = document.getElementById('welcome-modal');
-    if (m) {
-        m.classList.remove('hidden');
-        setTimeout(() => { 
-            m.classList.remove('opacity-0'); 
-            const content = document.getElementById('welcome-modal-content');
-            if(content) content.classList.remove('scale-95'); 
-        }, 10);
-    }
-};
-
-// 2. Hàm xử lý nút Đăng nhập Google
-window.loginGoogleReal = () => { 
-    if (typeof auth !== 'undefined') {
-        auth.signInWithPopup(provider).catch(e => alert("Lỗi đăng nhập: " + e.message));
-    }
-};
-
-// 3. Hàm xử lý nút Đăng xuất (Bấm vào Avatar)
-window.logoutReal = () => { 
-    if(confirm("Bạn có chắc chắn muốn đăng xuất khỏi hệ thống?")) { 
-        if (typeof auth !== 'undefined') {
-            auth.signOut().then(() => { 
-                localStorage.removeItem('onthi_role'); // Xóa thẻ tạm
-                window.location.href = "index.html"; // Đăng xuất xong đá văng về Sảnh chờ
-            });
-        }
-    } 
-};
 
