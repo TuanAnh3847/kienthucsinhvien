@@ -125,7 +125,7 @@
         </div>
 
 <div class="border-l border-stone-300 pl-4">
-<button id="nav-login-btn" onclick="showWelcomeModal()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+<button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
 <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
 <!-- Cập nhật Avatar fallback giống VHDDTKD -->
 <img id="user-avatar" src="https://ui-avatars.com/api/?name=Sinh+Vien&background=0D8B9&color=fff" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
@@ -773,30 +773,8 @@
     };
 })();
 
-// TAB SWITCHING & AUTH LOGIC (Đã giữ lại logic auth riêng của file này)
+// TAB SWITCHING
 let activeTabId = 'ch1'; 
-let pendingTabId = null;
-
-function showWelcomeModal() {
-    const m = document.getElementById('welcome-modal');
-    m.classList.remove('hidden'); 
-    setTimeout(() => { m.classList.remove('opacity-0'); document.getElementById('welcome-modal-content').classList.remove('scale-95'); }, 10);
-}
-
-window.loginGoogleReal = () => auth.signInWithPopup(provider).catch(e => alert(e.message));
-window.loginFromUnlock = () => auth.signInWithPopup(provider).catch(e => alert(e.message));
-window.continueAsGuest = () => { userRole = 'guest'; localStorage.setItem('onthi_role', 'guest'); document.getElementById('welcome-modal').classList.add('hidden'); updateUserUI(); forceSwitchTab('ch1'); };
-window.logoutReal = () => { if(confirm("Đăng xuất khỏi hệ thống?")) { auth.signOut().then(() => { userRole = null; localStorage.removeItem('onthi_role'); window.location.reload(); }); } };
-window.closeUnlockModal = () => { document.getElementById('unlock-modal').classList.add('opacity-0'); setTimeout(() => document.getElementById('unlock-modal').classList.add('hidden'), 300); pendingTabId = null; };
-
-function updateUserUI() {
-    const loginBtn = document.getElementById('nav-login-btn'); const userProfile = document.getElementById('nav-user-profile');
-    const locks = document.querySelectorAll('.premium-lock'); const badges = document.querySelectorAll('.premium-badge');
-    if (userRole === 'premium') { 
-        loginBtn.classList.add('hidden'); userProfile.classList.remove('hidden'); userProfile.classList.add('flex'); 
-        locks.forEach(i => i.classList.add('hidden')); badges.forEach(b => b.classList.remove('hidden')); 
-    } else { loginBtn.classList.remove('hidden'); userProfile.classList.add('hidden'); }
-}
 
 window.attemptSwitchTab = (t) => { forceSwitchTab(t); };
 
