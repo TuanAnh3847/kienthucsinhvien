@@ -53,6 +53,36 @@
 /* Đã sửa tên animation thành pulse-dot */
 @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 .live-pulse { animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+
+/* COURSE CONTENT COMPONENTS - giữ nguyên bảng màu thương hiệu */
+.tab-content { scroll-margin-top: 8rem; }
+.knowledge-card { background: #fff; border: 1px solid #e7e5e4; border-radius: 1rem; padding: 1.25rem; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04); }
+.knowledge-card:hover { border-color: #99f6e4; box-shadow: 0 8px 20px rgba(15, 118, 110, 0.08); }
+.formula-box { overflow-x: auto; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 0.875rem; padding: 1rem; color: #134e4a; font-variant-numeric: tabular-nums; }
+.formula-line { min-width: max-content; font-weight: 800; letter-spacing: 0.01em; }
+.scroll-table { width: 100%; overflow-x: auto; border: 1px solid #e7e5e4; border-radius: 0.875rem; background: #fff; }
+.scroll-table table { min-width: 680px; width: 100%; border-collapse: collapse; }
+.scroll-table th, .scroll-table td { padding: 0.75rem; border-bottom: 1px solid #e7e5e4; vertical-align: top; }
+.scroll-table th { background: #f5f5f4; color: #334155; text-align: left; font-weight: 800; }
+.scroll-table tr:last-child td { border-bottom: 0; }
+.study-details { background: #fff; border: 1px solid #e7e5e4; border-radius: 0.875rem; overflow: hidden; }
+.study-details summary { cursor: pointer; list-style: none; padding: 1rem 1.125rem; font-weight: 800; color: #0f766e; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; }
+.study-details summary::-webkit-details-marker { display: none; }
+.study-details summary::after { content: '+'; font-size: 1.25rem; line-height: 1; color: #0d9488; }
+.study-details[open] summary::after { content: '−'; }
+.study-details[open] summary { border-bottom: 1px solid #e7e5e4; background: #f0fdfa; }
+.study-details .detail-body { padding: 1rem 1.125rem; color: #57534e; }
+.term-chip { display: inline-flex; align-items: center; border: 1px solid #ccfbf1; background: #f0fdfa; color: #115e59; border-radius: 999px; padding: 0.2rem 0.65rem; font-size: 0.8rem; font-weight: 800; }
+.exam-note { border-left: 4px solid #f59e0b; background: #fffbeb; color: #78350f; border-radius: 0.75rem; padding: 1rem; }
+.chapter-map a { display: block; border: 1px solid #e7e5e4; background: #fff; border-radius: 0.875rem; padding: 1rem; transition: 0.2s; }
+.chapter-map a:hover { border-color: #5eead4; transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15,118,110,.08); }
+@media (max-width: 640px) {
+  .knowledge-card { padding: 1rem; }
+  .chart-container { height: 300px; padding: 0.5rem; }
+  .scroll-table th, .scroll-table td { padding: 0.625rem; font-size: 0.875rem; }
+}
+
 </style>
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
@@ -104,11 +134,13 @@
             </div>
         </a>
 
-<div class="hidden md:flex space-x-1 items-center" id="nav-menu">
-<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Cổ Điển</button>
-<button onclick="attemptSwitchTab('ch34')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3&4: Chính Sách</button>
-<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: Hội Nhập <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.6: Nguồn Lực <span class="premium-lock text-xs"></span></button>
+<div class="hidden xl:flex space-x-0.5 items-center" id="nav-menu">
+<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2 py-2 text-xs font-medium transition-colors hover:text-teal-600">Ch.1: Cổ điển</button>
+<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Hiện đại</button>
+<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3: Thuế quan</button>
+<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.4: Phi thuế quan</button>
+<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.5: Nguồn lực</button>
+<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.6: Hội nhập</button>
 </div>
 
 <div class="flex items-center shrink-0">
@@ -131,11 +163,13 @@
 
 <!-- Mobile Menu -->
 <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
-<select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
-<option value="ch1">Chương 1: Cổ Điển</option>
-<option value="ch34">Chương 3&4: Chính Sách</option>
-<option value="ch5">Chương 5: Hội Nhập</option>
-<option value="ch6">Chương 6: Nguồn Lực</option>
+<select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 pl-3 pr-11 focus:ring-teal-500 focus:outline-none appearance-none">
+<option value="ch1">Chương 1: Lý thuyết cổ điển</option>
+<option value="ch2">Chương 2: Lý thuyết hiện đại</option>
+<option value="ch3">Chương 3: Thuế quan</option>
+<option value="ch4">Chương 4: Công cụ phi thuế quan</option>
+<option value="ch5">Chương 5: Di chuyển nguồn lực</option>
+<option value="ch6">Chương 6: Hội nhập kinh tế</option>
 </select>
 
 <!-- NÚT MENU 3 GẠCH (Dự phòng chức năng sau này) -->
@@ -153,648 +187,243 @@
 <!-- Main Content Container -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
 
-<div class="mb-12 text-center">
-<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Bí Kíp "Phá Đảo" Kinh Tế Quốc Tế</h1>
-<p class="text-lg text-stone-600 max-w-2xl mx-auto mb-8">Tổng hợp kiến thức trọng tâm, mẹo giải toán và mô phỏng thực tế môn Kinh Tế Quốc Tế.</p>
-
-<!-- Hướng dẫn sử dụng nhanh -->
-<div class="inline-block bg-white border-2 border-teal-100 rounded-2xl p-5 md:p-6 text-left max-w-3xl shadow-sm hover:shadow-md transition-shadow">
-<h3 class="font-bold text-teal-800 text-lg mb-3 flex items-center"><span class="text-2xl mr-2">💡</span> Hướng Dẫn Sử Dụng Nhanh</h3>
-<ul class="text-sm md:text-base text-stone-700 space-y-3">
-<li class="flex items-start">
-<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
-<span><strong>Tra cứu lý thuyết:</strong> Dùng thanh Menu ở trên (hoặc menu thả xuống trên điện thoại) để chuyển nhanh. Nội dung đã được lọc sạch "sạn", chỉ giữ lại tinh hoa đi thi.</span>
-</li>
-<li class="flex items-start">
-<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
-<span><strong>Máy tính ERP (Chương 3&4):</strong> Công cụ nhẩm nhanh Tỷ lệ bảo hộ thực tế để check lại kết quả bài tập, né bẫy ERP âm.</span>
-</li>
-<li class="flex items-start">
-<span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
-<span><strong>Đồ thị tương tác (Chương 6):</strong> Hãy thử kéo <span class="bg-stone-100 text-teal-700 px-2 py-0.5 rounded border border-stone-200 font-semibold cursor-pointer">thanh trượt</span>. Các con số trong phần "Bài tập tự luận mẫu" sẽ <strong>tự động tính toán theo thời gian thực</strong>!</span>
-</li>
-</ul>
+<div class="mb-10 text-center">
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Sổ Tay Kinh Tế Quốc Tế</h1>
+<p class="text-base md:text-lg text-stone-600 max-w-3xl mx-auto mb-7">Hệ thống hóa đầy đủ 6 chương theo syllabus: lý thuyết thương mại, chính sách thương mại, di chuyển nguồn lực và hội nhập kinh tế quốc tế.</p>
+<div class="chapter-map grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-left">
+<a href="#ch1" onclick="attemptSwitchTab('ch1'); return false;"><span class="term-chip">Chương 1</span><strong class="block mt-2 text-slate-800">Cổ điển</strong><span class="text-xs text-stone-500">Smith, Ricardo, OC</span></a>
+<a href="#ch2" onclick="attemptSwitchTab('ch2'); return false;"><span class="term-chip">Chương 2</span><strong class="block mt-2 text-slate-800">Hiện đại</strong><span class="text-xs text-stone-500">IOC, H-O, H-O-S</span></a>
+<a href="#ch3" onclick="attemptSwitchTab('ch3'); return false;"><span class="term-chip">Chương 3</span><strong class="block mt-2 text-slate-800">Thuế quan</strong><span class="text-xs text-stone-500">CS, PS, DWL, ERP</span></a>
+<a href="#ch4" onclick="attemptSwitchTab('ch4'); return false;"><span class="term-chip">Chương 4</span><strong class="block mt-2 text-slate-800">Phi thuế quan</strong><span class="text-xs text-stone-500">Quota, VER, subsidy</span></a>
+<a href="#ch5" onclick="attemptSwitchTab('ch5'); return false;"><span class="term-chip">Chương 5</span><strong class="block mt-2 text-slate-800">Nguồn lực</strong><span class="text-xs text-stone-500">Vốn và lao động</span></a>
+<a href="#ch6" onclick="attemptSwitchTab('ch6'); return false;"><span class="term-chip">Chương 6</span><strong class="block mt-2 text-slate-800">Hội nhập</strong><span class="text-xs text-stone-500">FTA, CU, TC/TD</span></a>
 </div>
 </div>
 
-<!-- ================= SECTION: CHƯƠNG 1 ================= -->
+<!-- ================= CHAPTER 1 ================= -->
 <section id="ch1" class="tab-content block">
 <div class="mb-8">
-<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1: Các Lý Thuyết Thương Mại Cổ Điển</h2>
-<p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Đi sâu vào bản chất, điểm yếu và điểm mạnh của từng học thuyết. Đây là nền tảng để tránh các bẫy trắc nghiệm lý thuyết về "Trò chơi tổng bằng không" hay "Chi phí cơ hội".</p>
+<h2 class="text-2xl md:text-3xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1: Các lý thuyết thương mại cổ điển</h2>
+<p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mạch kiến thức:</strong> Trọng thương → Lợi thế tuyệt đối → Lợi thế so sánh → Lý thuyết chi phí cơ hội và PPF với chi phí không đổi.</p>
 </div>
 
-<!-- Theory Cards -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-<!-- Trọng thương -->
-<div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors">
-<div class="text-3xl mb-3 flex items-center gap-3">⚖️ <span class="text-xl font-bold text-slate-800">Chủ Nghĩa Trọng Thương (Mercantilism)</span></div>
-<ul class="text-base text-stone-700 space-y-2 list-disc pl-5">
-<li><strong>Cốt lõi:</strong> Sự giàu có của một quốc gia được đo lường duy nhất bằng <strong>lượng kim loại quý (vàng, bạc)</strong> tích lũy được.</li>
-<li><strong>Chính sách:</strong> Khuyến khích tối đa xuất khẩu (thu vàng) và hạn chế tối đa nhập khẩu (tránh chảy máu vàng).</li>
-<li><strong>Bản chất:</strong> Coi thương mại là <strong>Trò chơi có tổng bằng không (Zero-sum game)</strong> - Lợi ích của nước này là thiệt hại của nước khác.</li>
-<li><strong>Hạn chế:</strong> Tích vàng gây lạm phát, mất sức cạnh tranh và bị trả đũa thương mại.</li>
-</ul>
-</div>
-
-<!-- Tuyệt đối -->
-<div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors">
-<div class="text-3xl mb-3 flex items-center gap-3">🥇 <span class="text-xl font-bold text-slate-800">Lợi Thế Tuyệt Đối (Adam Smith)</span></div>
-<ul class="text-base text-stone-700 space-y-2 list-disc pl-5">
-<li><strong>Cốt lõi:</strong> Quốc gia nên chuyên môn hóa và xuất khẩu mặt hàng mà mình có <strong>chi phí sản xuất tuyệt đối thấp hơn</strong>.</li>
-<li><strong>Bản chất:</strong> Khẳng định TMQT là <strong>Trò chơi có tổng dương (Positive-sum game)</strong> - Cả 2 cùng có lợi. Ủng hộ mậu dịch tự do.</li>
-<li><strong>Hạn chế:</strong> Nếu một quốc gia kém cỏi về mọi mặt (không có lợi thế tuyệt đối nào), quốc gia đó sẽ bị loại khỏi cuộc chơi thương mại.</li>
-</ul>
-</div>
-
-<!-- So sánh -->
-<div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 md:col-span-2 hover:border-teal-300 transition-colors">
-<div class="text-3xl mb-4 flex items-center gap-3">📈 <span class="text-xl font-bold text-slate-800">Lợi Thế So Sánh (David Ricardo)</span></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<ul class="text-base text-stone-700 space-y-2 list-disc pl-5">
-<li><strong>Khắc phục Adam Smith:</strong> Khẳng định ngay cả khi một nước bị bất lợi tuyệt đối ở <em>mọi mặt hàng</em>, thương mại vẫn mang lại lợi ích.</li>
-<li><strong>Nguyên tắc:</strong> Quốc gia sẽ chuyên môn hóa mặt hàng mà họ có <strong>bất lợi tuyệt đối nhỏ hơn</strong> (chính là lợi thế so sánh).</li>
-</ul>
-<ul class="text-base text-stone-700 space-y-2 list-disc pl-5">
-<li><strong>Cơ sở xác định:</strong> Dựa hoàn toàn vào <strong>Chi phí cơ hội (Opportunity Cost)</strong>. Ai có chi phí cơ hội thấp hơn thì xuất khẩu.</li>
-<li><strong>Hạn chế:</strong> Chỉ xét 1 yếu tố là Lao động (Thuyết giá trị lao động); Bỏ qua chi phí vận chuyển.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<!-- TỰ LUẬN CHƯƠNG 1 -->
-<div class="mt-12 border-t-2 border-dashed border-teal-200 pt-8">
-<h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Tập Tự Luận Mẫu (Chương 1)</h3>
-
-<!-- VD 1 -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 mb-6">
-<h4 class="font-bold text-lg text-slate-800 mb-3">Ví dụ 1: Xác định lợi thế so sánh (Bẫy Hao phí lao động)</h4>
-<p class="text-base text-stone-600 mb-4 bg-stone-50 p-3 rounded"><strong>Đề bài:</strong> Cho bảng dữ liệu về số giờ lao động (hao phí) cần thiết để sản xuất 1 đơn vị sản phẩm. Xác định lợi thế so sánh và khung tỷ lệ trao đổi cho Lúa mì (W).</p>
-
-<div class="flex flex-col md:flex-row gap-6 text-base">
-<div class="w-full md:w-1/3">
-<table class="w-full text-center border-collapse border border-stone-300">
-<tr class="bg-stone-100"><th class="border border-stone-300 p-2">Quốc gia</th><th class="border border-stone-300 p-2">Lúa mì (W)</th><th class="border border-stone-300 p-2">Vải (C)</th></tr>
-<tr><td class="border border-stone-300 p-2 font-bold">Mỹ (US)</td><td class="border border-stone-300 p-2 text-red-600 font-bold">3 giờ</td><td class="border border-stone-300 p-2">2 giờ</td></tr>
-<tr><td class="border border-stone-300 p-2 font-bold">Anh (UK)</td><td class="border border-stone-300 p-2">4 giờ</td><td class="border border-stone-300 p-2 text-green-600 font-bold">1 giờ</td></tr>
-</table>
-<div class="text-sm text-red-600 mt-2">*Chú ý: Đây là bảng hao phí, số càng NHỎ càng tốt.</div>
-</div>
-<div class="w-full md:w-2/3">
-<div class="solution-step">
-<strong>Bước 1: Tính Chi phí cơ hội (OC)</strong> - Lấy Hao phí cái này chia cho Hao phí cái kia.<br>
-<span class="text-stone-600">US: OC<sub>W</sub> = 3/2 = 1.5 C &nbsp;&nbsp;|&nbsp;&nbsp; OC<sub>C</sub> = 2/3 = 0.67 W</span><br>
-<span class="text-stone-600">UK: OC<sub>W</sub> = 4/1 = 4 C &nbsp;&nbsp;|&nbsp;&nbsp; OC<sub>C</sub> = 1/4 = 0.25 W</span>
-</div>
-<div class="solution-step">
-<strong>Bước 2: Kết luận lợi thế</strong><br>
-<span class="text-stone-600">Mỹ có OC<sub>W</sub> nhỏ hơn (1.5 &lt; 4) &rarr; <strong>Mỹ có lợi thế Lúa mì</strong>.<br>Anh có OC<sub>C</sub> nhỏ hơn (0.25 &lt; 0.67) &rarr; <strong>Anh có lợi thế Vải</strong>.</span>
-</div>
-<div class="solution-step">
-<strong>Bước 3: Khung tỷ lệ trao đổi (TOT) cho Lúa mì</strong><br>
-<span class="text-teal-700 font-bold bg-teal-50 px-2 py-1 rounded">1.5 C &lt; TOT<sub>W</sub> &lt; 4 C</span>
-</div>
-</div>
-</div>
-</div>
-
-<!-- VD 2 -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
-<h4 class="font-bold text-lg text-slate-800 mb-3">Ví dụ 2: Lợi ích từ thương mại (Gains from trade)</h4>
-<p class="text-base text-stone-600 mb-4"><strong>Đề bài:</strong> Khi chưa có TM, Mỹ sản xuất và tiêu dùng (90W, 60C). Sau khi chuyên môn hóa hoàn toàn Lúa mì (sản xuất 180W), Mỹ xuất khẩu 70W để đổi lấy 70C từ Anh. Tính lợi ích TM của Mỹ.</p>
-<div class="bg-stone-50 p-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 justify-between border border-stone-200">
-<div class="text-center w-full">
-<div class="font-bold text-stone-700 text-base">1. Sản xuất mới</div>
-<div class="text-2xl font-black text-slate-800">180 W<br>0 C</div>
-</div>
-<div class="text-2xl text-teal-500 font-bold">&rarr;</div>
-<div class="text-center w-full bg-teal-50 border border-teal-200 rounded p-2">
-<div class="font-bold text-teal-800 text-base">2. Trao đổi</div>
-<div class="text-base text-teal-700">- 70 W (Xuất)<br>+ 70 C (Nhập)</div>
-</div>
-<div class="text-2xl text-teal-500 font-bold">&rarr;</div>
-<div class="text-center w-full">
-<div class="font-bold text-stone-700 text-base">3. Tiêu dùng mới</div>
-<div class="text-2xl font-black text-slate-800">110 W<br>70 C</div>
-</div>
-</div>
-<div class="mt-4 solution-step border-amber-500 text-base">
-<strong>Kết luận:</strong> So với ban đầu (90W, 60C), tiêu dùng mới (110W, 70C) cho thấy Mỹ có lợi thêm <strong>+20 Lúa mì</strong> và <strong>+10 Vải</strong>.
-</div>
-</div>
-</div>
-</section>
-
-<!-- ================= SECTION: CHƯƠNG 3 & 4 ================= -->
-<section id="ch34" class="tab-content hidden">
-<div class="mb-8">
-<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3 & 4: Công Cụ Chính Sách Thương Mại</h2>
-<p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Khu vực này giải quyết các tính toán về Tổn thất vô cờ (DWL), Thặng dư (CS, PS) và bẫy Tỷ lệ bảo hộ thực tế (ERP).</p>
-</div>
-
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-<!-- ERP Calculator -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
-<h3 class="text-xl font-bold text-slate-800 mb-1">Máy Tính ERP</h3>
-<div class="mb-5 p-4 bg-teal-50/80 border border-teal-200 rounded-xl text-center shadow-inner mt-4">
-<span class="text-sm text-teal-700 block mb-1 font-bold uppercase tracking-widest">Công Thức Tính</span>
-<div class="text-xl font-extrabold text-teal-900 flex items-center justify-center gap-3">
-<span>ERP =</span>
-<span class="flex flex-col items-center">
-<span class="border-b-2 border-teal-900 pb-1 px-2">t - a<sub>i</sub> &times; t<sub>i</sub></span>
-<span class="pt-1 px-2">1 - a<sub>i</sub></span>
-</span>
-</div>
-<div class="mt-4 text-left text-sm text-teal-900 bg-white/70 p-3 rounded-lg border border-teal-100 inline-block shadow-sm">
-<strong class="block mb-1 border-b border-teal-200 pb-1">📌 Chú thích đại lượng:</strong>
-<ul class="space-y-1">
-<li>• <strong>t</strong>: Thuế suất danh nghĩa đánh vào <em>thành phẩm</em>.</li>
-<li>• <strong>t<sub>i</sub></strong>: Thuế suất danh nghĩa đánh vào <em>nguyên liệu</em>.</li>
-<li>• <strong>a<sub>i</sub></strong>: Tỷ trọng chi phí nguyên liệu trong thành phẩm.</li>
-<li class="pt-1 border-t border-teal-200/50 mt-1">• <strong>V' & V</strong>: Giá trị gia tăng (Value-Added) sau và trước thuế. Công thức gốc: <strong>ERP = (V' - V) / V</strong></li>
-</ul>
-</div>
-</div>
-<div class="space-y-4 text-base">
-<div>
-<label class="block font-semibold text-stone-700 mb-1">Thuế thành phẩm (t) - %</label>
-<input type="number" id="erp-t" value="20" class="w-full px-4 py-2 bg-stone-50 border border-stone-300 rounded-lg focus:ring-teal-500 outline-none">
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div>
-<label class="block font-semibold text-stone-700 mb-1">Thuế N.Liệu (t<sub>i</sub>) - %</label>
-<input type="number" id="erp-ti" value="10" class="w-full px-4 py-2 bg-stone-50 border border-stone-300 rounded-lg outline-none">
-</div>
-<div>
-<label class="block font-semibold text-stone-700 mb-1">Tỷ trọng (a<sub>i</sub>) &lt; 1</label>
-<input type="number" step="0.1" id="erp-ai" value="0.4" class="w-full px-4 py-2 bg-stone-50 border border-stone-300 rounded-lg outline-none">
-</div>
-</div>
-<button onclick="calculateERP()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-lg text-lg transition-colors">Tính Toán ERP</button>
-</div>
-<div id="erp-result-box" class="mt-4 p-4 bg-teal-50 rounded-lg border border-teal-100 hidden">
-<div id="erp-value" class="text-3xl font-extrabold text-teal-700">0%</div>
-<div id="erp-interpretation" class="text-base mt-1"></div>
-</div>
-</div>
-
-<!-- Theory summary -->
-<div class="flex flex-col gap-4">
-<div class="bg-white rounded-xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
-<h4 class="font-bold text-slate-800 text-lg mb-3 border-b border-stone-100 pb-2 flex items-center">🛡️ Thuế Quan (Tariffs)</h4>
-<ul class="text-base text-stone-700 space-y-2 list-disc pl-5">
-<li><strong>Thuế theo giá trị (Ad Valorem):</strong> Tính bằng %. Ưu điểm: Duy trì được mức độ bảo hộ khi có lạm phát.</li>
-<li><strong>Thuế tuyệt đối (Specific):</strong> Thu cố định (10$/tấn). Nhược điểm: Mất dần tác dụng bảo hộ khi lạm phát.</li>
-<li><strong>Thuế hỗn hợp (Compound/Mixed tax):</strong> Kết hợp thuế theo giá trị và thuế tuyệt đối (VD: 10% + 5$/tấn) để tối ưu bảo hộ.</li>
-<li><strong>Tác động Cục bộ (Nước nhỏ):</strong> 
-<br>- Nhập khẩu: giá trong nước TĂNG &rarr; <span class="bg-stone-100 px-1 rounded font-bold">P<sub>d</sub> = P<sub>w</sub> + t</span>
-<br>- Xuất khẩu: giá trong nước GIẢM &rarr; <span class="bg-stone-100 px-1 rounded font-bold">P<sub>d</sub> = P<sub>w</sub> - t</span>
-</li>
-</ul>
-</div>
-
-<div class="bg-amber-50 rounded-xl p-5 border border-amber-100 hover:shadow-md transition-shadow">
-<h4 class="font-bold text-amber-900 text-lg mb-3 border-b border-amber-200 pb-2 flex items-center">🆚 Hạn Ngạch (Quota) vs Hạn Chế XK (VER)</h4>
-<ul class="text-base text-amber-800 space-y-2 list-disc pl-5">
-<li><strong>Hạn ngạch:</strong> Độc quyền và cứng nhắc hơn thuế. Tạo ra <strong>Lợi tô (Quota Rent)</strong> thay vì nguồn thu ngân sách CP. Cầu tăng thì giá tăng vọt.
-<br>Công thức tìm giá mới: <span class="bg-amber-100 px-1 rounded font-bold">Q<sub>D</sub> - Q<sub>S</sub> = Q<sub>quota</sub></span>
-</li>
-<li><strong>VER (Tự nguyện hạn chế XK):</strong> Nước xuất khẩu sẽ chủ động tăng giá và chiếm trọn "Lợi tô". Gây tổn thất cho nước NK nặng nề hơn Quota.</li>
-</ul>
-</div>
-
-<div class="bg-rose-50 rounded-xl p-5 border border-rose-100 hover:shadow-md transition-shadow">
-<h4 class="font-bold text-rose-900 text-lg mb-3 border-b border-rose-200 pb-2 flex items-center">💸 Trợ Cấp XK & Bán Phá Giá (Dumping)</h4>
-<ul class="text-base text-rose-800 space-y-2 list-disc pl-5">
-<li><strong>Trợ cấp XK:</strong> Luôn làm giảm tổng phúc lợi quốc gia (vì tốn ngân sách + DWL). Giá trong nước TĂNG: <span class="bg-rose-100 px-1 rounded font-bold">P<sub>d</sub> = P<sub>w</sub> + s</span></li>
-<li><strong>Bán phá giá (Dumping):</strong>
-<br>- Sporadic: Thỉnh thoảng xả hàng.
-<br>- Predatory: Hủy diệt đối thủ (Nguy hiểm nhất).
-<br>- Persistent: Liên tục phân biệt giá để tối đa hóa lợi nhuận.
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<!-- TỰ LUẬN CHƯƠNG 3, 4 -->
-<div class="mt-12 border-t-2 border-dashed border-teal-200 pt-8">
-<h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Tự Luận: Phân tích Đồ thị Cung Cầu Thuế Quan</h3>
-
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 mb-6 flex flex-col lg:flex-row gap-8 items-start text-base">
-<div class="w-full lg:w-1/2">
-<p class="text-stone-600 mb-4 bg-stone-50 p-3 rounded font-semibold text-lg border-l-4 border-stone-400">Đề bài: Cầu Qd = 140 - 2P. Cung Qs = 2P - 40. Pw = 20$. CP áp thuế t = 10$. Tính sự thay đổi CS, PS, Ngân sách và DWL.</p>
-
-<div class="solution-step">
-<strong>1. Giá & Sản lượng mới:</strong> <br> 
-Giá nội địa Pd = 20 + 10 = 30$. <br> 
-Nhập khẩu lúc này: Qd(30) - Qs(30) = 80 - 20 = 60 đơn vị.
-</div>
-
-<div class="solution-step border-amber-500 bg-amber-50 p-4 rounded-lg shadow-sm">
-<strong class="text-amber-900 text-lg block mb-2 border-b border-amber-200 pb-1">2. Tính các vùng diện tích (a, b, c, d):</strong>
-<ul class="space-y-2 text-sm text-stone-800">
-<li>• <strong>Thặng dư SX (&Delta;PS) TĂNG:</strong> Vùng <strong class="text-blue-700 font-black">+a</strong> = (0+20)/2 &times; 10 = <strong>+100$</strong></li>
-<li>• <strong>Ngân sách CP TĂNG:</strong> Vùng <strong class="text-green-700 font-black">+c</strong> = (80-20) &times; 10 = <strong>+600$</strong></li>
-<li>• <strong>Thặng dư TD (&Delta;CS) GIẢM:</strong> Vùng <strong class="text-red-700 font-black">-(a + b + c + d)</strong> = -(100+80)/2 &times; 10 = <strong>-900$</strong></li>
-<li class="pt-2 border-t border-amber-200 mt-2">
-&rarr; <strong>Tổn thất vô cờ (DWL):</strong> Vùng <strong class="text-rose-700 font-black">-(b + d)</strong> = 100 + 600 - 900 = <strong class="text-xl">-200$</strong>
-</li>
-</ul>
-</div>
-</div>
-<div class="w-full lg:w-1/2">
-<div class="chart-container"><canvas id="sdChart"></canvas></div>
-<div class="mt-4 bg-stone-50 p-4 rounded-xl border border-stone-200 text-sm text-stone-700 shadow-sm">
-<strong class="text-slate-800 block mb-2 border-b border-stone-200 pb-1">📌 Chú thích Đồ thị Cung Cầu:</strong>
-<ul class="space-y-1.5">
-<li>• <strong>Trục dọc (P):</strong> Giá cả (Price). <strong>Trục ngang (Q):</strong> Sản lượng (Quantity).</li>
-<li>• <strong class="text-blue-700">Vùng a:</strong> Phần lợi ích nhà sản xuất trong nước cướp được từ người tiêu dùng nhờ giá tăng.</li>
-<li>• <strong class="text-green-700">Vùng c:</strong> Thuế thu được của Chính phủ (Thuế $\times$ Lượng Nhập khẩu).</li>
-<li>• <strong class="text-rose-700">Vùng b:</strong> Tổn thất do sản xuất kém hiệu quả (chi phí SX trong nước cao hơn thế giới).</li>
-<li>• <strong class="text-rose-700">Vùng d:</strong> Tổn thất do người tiêu dùng phải nhịn mua vì giá cao. (<strong>DWL = b + d</strong>).</li>
-</ul>
-</div>
-</div>
-</div>
-
-<!-- VD 2: Hạn ngạch -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 text-base">
-<h4 class="font-bold text-lg text-slate-800 mb-3">Ví dụ 2: Hạn ngạch (Quota)</h4>
-<p class="text-base text-stone-600 mb-4 bg-stone-50 p-3 rounded"><strong>Đề bài:</strong> Giữ nguyên Cung Cầu trên (P<sub>W</sub>=20). Thay vì đánh thuế, CP áp Hạn ngạch nhập khẩu Q<sub>quota</sub> = 60. Tìm giá thị trường mới và Lợi tô hạn ngạch.</p>
-<div class="solution-step">
-<strong>Bước 1: Phương trình Hạn ngạch</strong><br>
-<span class="text-teal-700 font-bold bg-teal-50 px-2 py-1 rounded">Q<sub>D</sub> - Q<sub>S</sub> = Q<sub>quota</sub></span>
-</div>
-<div class="solution-step">
-<strong>Bước 2: Giải tìm P mới</strong><br>
-(140 - 2P) - (2P - 40) = 60 &rarr; 180 - 4P = 60 &rarr; <strong>P = 30$</strong>
-</div>
-<div class="solution-step border-green-500">
-<strong>Bước 3: Tính Lợi tô hạn ngạch (Quota Rent)</strong><br>
-Chênh lệch giá &times; Lượng nhập = (30 - 20) &times; 60 = <strong>600$</strong> (Bằng đúng vùng c ở đồ thị trên).
-</div>
-</div>
-
-<!-- VD 3: ERP (V' - V) / V -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 text-base hover:shadow-md transition-shadow mt-6 lg:col-span-2">
-<h4 class="font-bold text-lg text-slate-800 mb-3 flex items-center justify-between">
-<span>Ví dụ 3: Tính ERP bằng Giá trị gia tăng (Công thức gốc)</span>
-<span class="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded-full">Hay thi</span>
-</h4>
-<p class="text-base text-stone-600 mb-4 bg-stone-50 p-3 rounded border-l-4 border-teal-400"><strong>Đề bài:</strong> Lắp ráp 1 chiếc xe đạp cần linh kiện nhập khẩu giá 80$. Giá xe đạp bán trên thị trường thế giới là 100$. Chính phủ áp thuế nhập xe nguyên chiếc là 20%, nhưng miễn thuế (0%) cho linh kiện nhập khẩu. Tính Tỷ lệ bảo hộ thực tế (ERP).</p>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="space-y-4">
-<div class="solution-step">
-<strong>1. Giá trị gia tăng TRƯỚC thuế (V)</strong><br>
-V = Giá thành phẩm (TG) - Giá linh kiện (TG)<br>
-V = 100$ - 80$ = <strong class="text-teal-700">20$</strong>
-</div>
-<div class="solution-step">
-<strong>2. Giá trị gia tăng SAU thuế (V')</strong><br>
-Giá xe đạp mới = 100$ + (100$ &times; 20%) = 120$<br>
-Giá linh kiện mới = 80$ + 0% = 80$<br>
-V' = 120$ - 80$ = <strong class="text-teal-700">40$</strong>
-</div>
-</div>
-<div class="space-y-4 flex flex-col justify-center">
-<div class="solution-step border-orange-500 bg-orange-50 p-4 rounded-lg">
-<strong>3. Áp dụng công thức gốc:</strong><br>
-ERP = (V' - V) / V <br>
-ERP = (40 - 20) / 20 = 1 = <strong class="text-orange-700 text-2xl">100%</strong>
-<p class="text-sm text-stone-600 mt-2 border-t border-orange-200 pt-2"><em>*Mặc dù thuế danh nghĩa chỉ 20%, nhưng lợi nhuận thực tế cho ngành lắp ráp trong nước lại tăng gấp đôi (100%). Đây gọi là hiện tượng "Thang thuế quan"!</em></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ================= SECTION: CHƯƠNG 5 ================= -->
-<section id="ch5" class="tab-content hidden">
-<div class="mb-8">
-<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 5: Liên Kết KTQT <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
-<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-base"><strong>Mục tiêu:</strong> Ghi nhớ đặc điểm cốt lõi của 5 nấc thang hội nhập. Phân biệt rõ Tác động tĩnh (TC vs TD) và Tác động động để trị các câu hỏi dạng True/False.</p>
-</div>
-
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-<!-- 5 Cấp độ Hội nhập -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
-<h3 class="text-lg font-bold text-center text-slate-800 mb-6">5 Cấp Độ Hội Nhập (Từ Thấp Đến Cao)</h3>
-<div class="flex flex-col space-y-4">
-<div class="flex items-start group"><div class="w-10 h-10 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center font-bold z-10 border-2 border-white group-hover:bg-teal-500 group-hover:text-white shrink-0 mt-1 transition-colors">1</div><div class="ml-3"><h4 class="font-bold text-slate-800 text-lg">Thỏa thuận TM ưu đãi (PTA)</h4><p class="text-base text-stone-600 leading-relaxed">Chỉ giảm một phần thuế quan cho nhau (chưa bằng 0).</p></div></div>
-<div class="flex items-start group"><div class="w-10 h-10 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center font-bold z-10 border-2 border-white group-hover:bg-teal-500 group-hover:text-white shrink-0 mt-1 transition-colors">2</div><div class="ml-3"><h4 class="font-bold text-slate-800 text-lg">Khu vực TM tự do (FTA)</h4><p class="text-base text-stone-600 leading-relaxed">Xóa bỏ hoàn toàn thuế nội khối. <strong class="text-teal-700">Tự do định mức thuế riêng</strong>. <strong>Bắt buộc có Quy tắc xuất xứ (ROO)</strong>.</p></div></div>
-<div class="flex items-start group"><div class="w-10 h-10 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center font-bold z-10 border-2 border-white group-hover:bg-teal-500 group-hover:text-white shrink-0 mt-1 transition-colors">3</div><div class="ml-3"><h4 class="font-bold text-slate-800 text-lg">Liên minh thuế quan (Customs Union)</h4><p class="text-base text-stone-600 leading-relaxed">Gồm FTA + <strong class="text-teal-700">Biểu thuế ngoại quan chung (CET)</strong>. KHÔNG cần ROO nữa.</p></div></div>
-<div class="flex items-start group"><div class="w-10 h-10 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center font-bold z-10 border-2 border-white group-hover:bg-teal-500 group-hover:text-white shrink-0 mt-1 transition-colors">4</div><div class="ml-3"><h4 class="font-bold text-slate-800 text-lg">Thị trường chung (Common Market)</h4><p class="text-base text-stone-600 leading-relaxed">Gồm CU + Cho phép <strong class="text-teal-700">tự do di chuyển nguồn lực</strong> (Lao động, Vốn).</p></div></div>
-<div class="flex items-start group"><div class="w-10 h-10 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center font-bold z-10 border-2 border-white group-hover:bg-teal-500 group-hover:text-white shrink-0 mt-1 transition-colors">5</div><div class="ml-3"><h4 class="font-bold text-slate-800 text-lg">Liên minh kinh tế (Economic Union)</h4><p class="text-base text-stone-600 leading-relaxed">Đỉnh cao: Thị trường chung + <strong class="text-teal-700">Đồng nhất chính sách kinh tế/tiền tệ</strong>.</p></div></div>
-</div>
-</div>
-
-<!-- Tác động Tĩnh & Động -->
-<div class="flex flex-col gap-6">
-<div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
-<h4 class="font-bold text-slate-800 text-lg mb-3 border-b border-stone-100 pb-2">📊 Tác Động Tĩnh (Static Effects)</h4>
-<div class="space-y-4">
-<div class="bg-green-50 p-3 rounded border border-green-100">
-<strong class="text-green-800 text-base">🟢 Tạo lập thương mại (Trade Creation)</strong>
-<p class="text-sm text-green-900 mt-1 leading-relaxed">Quốc gia ngừng tự sản xuất mặt hàng giá cao, chuyển sang nhập từ nước thành viên có giá sản xuất thực sự rẻ hơn. &rarr; <strong>TĂNG phúc lợi.</strong></p>
-</div>
-<div class="bg-red-50 p-3 rounded border border-red-100">
-<strong class="text-red-800 text-base">🔴 Chuyển hướng thương mại (Trade Diversion)</strong>
-<p class="text-sm text-red-900 mt-1 leading-relaxed">Ngừng nhập từ nước ngoài khối rẻ nhất, chuyển sang nhập từ nước trong khối đắt hơn (do bị méo mó bởi ưu đãi thuế). &rarr; <strong>GIẢM phúc lợi.</strong></p>
-</div>
-</div>
-<div class="mt-4 text-base text-stone-700 bg-stone-100 p-3 rounded-lg border-l-4 border-stone-400">
-<strong>[Bẫy lý thuyết]:</strong> CU thành công khi mức thuế cũ cao, quy mô khối lớn, và các nền kinh tế <strong>GIỐNG NHAU (Cạnh tranh nhau)</strong> để đào thải ngành yếu kém.
-</div>
-</div>
-
-<div class="bg-teal-50 p-5 rounded-xl border border-teal-100 shadow-sm hover:shadow-md transition-shadow">
-<h4 class="font-bold text-teal-900 text-lg mb-3 border-b border-teal-200 pb-2">🚀 Tác Động Động (Dynamic Effects)</h4>
-<ul class="text-base text-teal-800 space-y-2 list-disc pl-5">
-<li><strong>Tính kinh tế theo quy mô:</strong> Mở rộng thị trường, sản xuất số lượng lớn giảm chi phí trung bình.</li>
-<li><strong>Kích thích cạnh tranh nội khối:</strong> Phá vỡ độc quyền nội địa.</li>
-<li><strong>Thu hút Đầu tư (FDI):</strong> Dòng vốn chảy vào để tận dụng thị trường chung rộng lớn (Vượt tường thuế quan).</li>
-</ul>
-</div>
-</div>
-</div>
-
-<!-- TỰ LUẬN CHƯƠNG 5 -->
-<div class="mt-8 pt-4 border-t-2 border-dashed border-teal-200">
-<h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Tập Tự Luận Mẫu (Chương 5)</h3>
-
-<!-- VD 1: Trade Creation -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 mb-6">
-<h4 class="font-bold text-lg text-slate-800 mb-3">Ví dụ 1: Hiện tượng Tạo lập Thương mại (TC)</h4>
-<p class="text-base text-stone-600 mb-4 bg-stone-50 p-3 rounded">Giá SP X tại nước A là 16$, tại B là 12$, tại C là 10$. Nước A ban đầu áp thuế 100%. Sau đó lập CU với B (thuế = 0%).</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-base">
-<div class="border border-stone-200 rounded-lg p-4 bg-stone-50">
-<div class="font-bold text-stone-700 mb-2 border-b pb-1">Giai đoạn 1: Khi có thuế 100%</div>
-<ul class="space-y-2">
-<li>Giá A tự làm = <strong>16$</strong></li>
-<li>Giá mua từ B = 12 + 100% = 24$</li>
-<li>Giá mua từ C = 10 + 100% = 20$</li>
-</ul>
-<div class="mt-3 text-teal-700 font-bold">&rarr; Nước A tự sản xuất vì rẻ nhất.</div>
-</div>
-<div class="border border-teal-200 rounded-lg p-4 bg-teal-50">
-<div class="font-bold text-teal-800 mb-2 border-b border-teal-200 pb-1">Giai đoạn 2: Lập CU với B</div>
-<ul class="space-y-2">
-<li>Giá A tự làm = 16$</li>
-<li>Giá mua từ B = <strong>12$</strong> (Miễn thuế)</li>
-<li>Giá mua từ C = 20$ (Vẫn chịu thuế)</li>
-</ul>
-<div class="mt-3 text-teal-700 font-bold">&rarr; Nước A bỏ tự sx, nhập từ B.</div>
-</div>
-</div>
-<div class="mt-4 bg-green-100 text-green-800 p-3 rounded text-base font-bold text-center">Kết luận: Tạo lập thương mại (Trade Creation) vì chuyển từ nguồn sx đắt (A=16) sang rẻ (B=12). Phúc lợi TĂNG.</div>
-</div>
-
-<!-- VD 2: Trade Diversion -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
-<h4 class="font-bold text-lg text-slate-800 mb-3">Ví dụ 2: Hiện tượng Chuyển hướng Thương mại (TD)</h4>
-<p class="text-base text-stone-600 mb-4 bg-stone-50 p-3 rounded">Tương tự trên, nhưng ban đầu A chỉ áp thuế 50%. Sau đó lập CU với B.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-base">
-<div class="border border-stone-200 rounded-lg p-4 bg-stone-50">
-<div class="font-bold text-stone-700 mb-2 border-b pb-1">Giai đoạn 1: Khi có thuế 50%</div>
-<ul class="space-y-2">
-<li>Giá mua từ B = 12 + 50% = 18$</li>
-<li>Giá mua từ C = 10 + 50% = <strong>15$</strong></li>
-</ul>
-<div class="mt-3 text-teal-700 font-bold">&rarr; Nước A nhập từ C.</div>
-</div>
-<div class="border border-teal-200 rounded-lg p-4 bg-teal-50">
-<div class="font-bold text-teal-800 mb-2 border-b border-teal-200 pb-1">Giai đoạn 2: Lập CU với B</div>
-<ul class="space-y-2">
-<li>Giá mua từ B = <strong>12$</strong> (Miễn thuế)</li>
-<li>Giá mua từ C = 15$</li>
-</ul>
-<div class="mt-3 text-teal-700 font-bold">&rarr; Nước A bỏ C, nhập từ B.</div>
-</div>
-</div>
-<div class="mt-4 bg-red-100 text-red-800 p-3 rounded text-base font-bold text-center">Kết luận: Chuyển hướng thương mại vì chuyển nhập từ nguồn rẻ nhất thế giới (C=10) sang nguồn kém hiệu quả hơn (B=12). Phúc lợi GIẢM.</div>
-</div>
-</div>
-</section>
-
-<!-- ================= SECTION: CHƯƠNG 6 ================= -->
-<section id="ch6" class="tab-content hidden">
-<div class="mb-8">
-<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 6: Di Chuyển Nguồn Lực <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
-<p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-base"><strong>Mục tiêu:</strong> Phân tích sâu động cơ di chuyển Vốn quốc tế và phân phối lại thu nhập của dòng lao động di cư. Mô hình tương tác sẽ chứng minh tại sao Chủ tư bản luôn chào đón lao động nhập cư.</p>
-</div>
-
-<!-- Theory Vốn & LĐ -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-<!-- VỐN -->
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors">
-<h3 class="text-lg font-bold text-slate-800 mb-3 border-b border-stone-100 pb-2 flex items-center gap-2">💰 Sự Di Chuyển Vốn Quốc Tế</h3>
-<ul class="text-base text-stone-700 space-y-3 leading-relaxed">
-<li><strong>Động lực cốt lõi:</strong> Chênh lệch tỷ suất lợi nhuận. Vốn chảy từ nơi dồi dào (lãi thấp) sang khan hiếm vốn (lãi cao). Cả 2 đều có lợi.</li>
-<li><strong>Đầu tư Trực tiếp (FDI):</strong> Mua/xây dựng tài sản và <strong>NẮM quyền kiểm soát</strong> doanh nghiệp. (Gồm: Market-seeking, Resource-seeking, Efficiency-seeking).</li>
-<li><strong>Đầu tư Gián tiếp (FPI):</strong> Mua cổ phiếu/trái phiếu hưởng cổ tức, <strong>KHÔNG nắm quyền kiểm soát</strong> (Dòng vốn nóng dễ tháo chạy).</li>
-<li><strong>MNCs:</strong> Đóng vai trò nòng cốt thực hiện FDI, chuyển giao công nghệ.</li>
+<article class="knowledge-card">
+<div class="flex items-center gap-3 mb-3"><span class="text-3xl">⚖️</span><h3 class="text-xl font-extrabold text-slate-800">Chủ nghĩa trọng thương</h3></div>
+<div class="flex flex-wrap gap-2 mb-4"><span class="term-chip">Mercantilism</span><span class="term-chip">1500–1800</span><span class="term-chip">Zero-sum</span></div>
+<ul class="list-disc pl-5 space-y-2 text-stone-700">
+<li><strong>Bối cảnh:</strong> khám phá địa lý, hình thành quốc gia dân tộc, thị trường lao động và tiêu dùng mở rộng.</li>
+<li><strong>Thước đo giàu có:</strong> lượng vàng bạc tích lũy và thặng dư thương mại.</li>
+<li><strong>Quan điểm:</strong> thương mại là trò chơi tổng bằng không; quốc gia này được lợi khi quốc gia khác chịu thiệt.</li>
+<li><strong>Chính sách:</strong> thúc đẩy xuất khẩu, hạn chế nhập khẩu, trợ cấp xuất khẩu, thuế nhập khẩu cao và kiểm soát nguyên liệu.</li>
+<li><strong>Đại diện:</strong> Thomas Mun, James Steuart, Jean-Baptiste Colbert.</li>
 </ul>
+<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+<div class="bg-green-50 border border-green-100 rounded-lg p-3"><strong class="text-green-800">Đóng góp</strong><p class="mt-1 text-green-900">Lý thuyết tiên phong, nhận ra vai trò của ngoại thương và chính sách nhà nước.</p></div>
+<div class="bg-red-50 border border-red-100 rounded-lg p-3"><strong class="text-red-800">Hạn chế</strong><p class="mt-1 text-red-900">Đồng nhất giàu có với vàng bạc, tuyệt đối hóa xuất siêu và hiểu sai lợi ích hai chiều của thương mại.</p></div>
 </div>
+</article>
 
-<!-- LAO ĐỘNG -->
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors flex flex-col">
-<h3 class="text-lg font-bold text-slate-800 mb-3 border-b border-stone-100 pb-2 flex items-center gap-2">🚶 Sự Di Chuyển Lao Động</h3>
-<div class="bg-slate-800 text-white rounded-t-lg p-2 text-center font-bold text-base tracking-wide uppercase">Ma Trận Cốt Lõi: Ai Được - Ai Mất?</div>
-<div class="overflow-x-auto flex-1 bg-stone-50 rounded-b-lg border border-stone-200 border-t-0">
-<table class="w-full text-left text-base border-collapse">
-<thead>
-<tr class="bg-stone-200 text-stone-800">
-<th class="p-3 border-b border-stone-300 font-bold">Chỉ tiêu</th>
-<th class="p-3 border-b border-stone-300 border-l font-bold text-center">Nước Xuất LĐ (Gửi đi)</th>
-<th class="p-3 border-b border-stone-300 border-l font-bold text-center">Nước Nhập LĐ (Nhận về)</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-stone-200">
-<tr>
-<td class="p-3 font-semibold text-slate-800">Tiền Lương (w)</td>
-<td class="p-3 border-l border-stone-200 bg-green-50 text-green-700 font-bold text-center">TĂNG 📈</td>
-<td class="p-3 border-l border-stone-200 bg-red-50 text-red-700 font-bold text-center">GIẢM 📉</td>
-</tr>
-<tr>
-<td class="p-3 font-semibold text-slate-800">LĐ Bản Địa</td>
-<td class="p-3 border-l border-stone-200 text-center">CÓ LỢI</td>
-<td class="p-3 border-l border-stone-200 text-center">BỊ THIỆT</td>
-</tr>
-<tr>
-<td class="p-3 font-semibold text-slate-800">Chủ Tư Bản (Vốn)</td>
-<td class="p-3 border-l border-stone-200 text-red-600 font-bold text-center">BỊ THIỆT (Lãi giảm)</td>
-<td class="p-3 border-l border-stone-200 text-green-600 font-bold text-center">CÓ LỢI (Lãi tăng)</td>
-</tr>
-<tr>
-<td class="p-3 font-semibold text-slate-800">GDP Lãnh thổ</td>
-<td class="p-3 border-l border-stone-200 text-red-600 font-bold text-center">GIẢM</td>
-<td class="p-3 border-l border-stone-200 text-green-600 font-bold text-center">TĂNG</td>
-</tr>
-<tr>
-<td class="p-3 font-semibold text-slate-800">GNP Quốc dân</td>
-<td class="p-3 border-l border-stone-200 text-green-600 font-bold text-center">+ (Kiều hối)</td>
-<td class="p-3 border-l border-stone-200 text-green-600 font-bold text-center">+ (Lãi ròng)</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<!-- Single Country Interactive Chart Analysis -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-8">
-<div class="flex flex-col lg:flex-row gap-8 items-start">
-<div class="w-full lg:w-1/3 flex flex-col justify-center text-base">
-<h3 class="text-xl font-bold text-slate-800 mb-2">1. Tại sao Capital Income Tăng?</h3>
-<p class="text-stone-600 mb-6">Mô phỏng 1 quốc gia (MPL = 20 - L). Kéo thanh trượt để "nhập khẩu" thêm lao động.</p>
-<div class="mb-6">
-<label class="flex justify-between font-bold text-slate-700 mb-2">
-<span>Lượng LĐ hiện tại (L):</span>
-<span id="labor-val" class="text-teal-600 text-lg">10</span>
-</label>
-<input type="range" id="labor-slider" min="5" max="18" value="10" step="1" oninput="updateLaborChart()" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-teal-600">
-</div>
-<div class="space-y-3 bg-stone-50 p-4 rounded-xl border border-stone-200">
-<div class="flex justify-between items-center"><span class="text-stone-600">Lương (w):</span><span id="stat-wage" class="font-bold">$10</span></div>
-<div class="flex justify-between items-center"><span class="text-stone-600">Tổng Lương LĐ:</span><span id="stat-labor-inc" class="font-bold text-blue-700">$100</span></div>
-<div class="flex justify-between items-center"><span class="text-stone-600">Lãi Tư Bản (Capital Inc):</span><span id="stat-cap-inc" class="font-bold text-orange-700 text-lg transition-all">$50</span></div>
-</div>
-</div>
-<div class="w-full lg:w-2/3">
-<div class="chart-container"><canvas id="laborChart"></canvas></div>
-<div class="mt-4 bg-stone-50 p-4 rounded-xl border border-stone-200 text-sm text-stone-700 shadow-sm">
-<strong class="text-slate-800 block mb-2 border-b border-stone-200 pb-1">📌 Chú thích Đồ thị 1 Quốc gia:</strong>
-<ul class="space-y-1.5">
-<li>• <strong>Trục dọc (Y):</strong> Tiền lương (w) hoặc Năng suất biên (MPL). <strong>Trục ngang (X):</strong> Số lượng lao động (L).</li>
-<li>• <strong>Tổng diện tích (Dưới đường Cầu/MPL):</strong> Tổng sản lượng nội địa (GDP).</li>
-<li class="flex items-center"><span class="inline-block w-4 h-4 bg-blue-700/20 border border-blue-700 mr-2 shrink-0"></span><strong>Tổng Lương LĐ (VÙNG B):</strong> Hình chữ nhật phía dưới ($w \times L$).</li>
-<li class="flex items-start"><span class="inline-block w-4 h-4 bg-orange-700/20 border border-orange-700 mt-0.5 mr-2 shrink-0"></span><span><strong>Lãi Tư bản (VÙNG A):</strong> Hình tam giác phía trên. <em>Kéo L tăng &rarr; w giảm &rarr; Vùng A phình to! Đó là lý do giới tư bản thích nhập cư.</em></span></li>
+<article class="knowledge-card">
+<div class="flex items-center gap-3 mb-3"><span class="text-3xl">🥇</span><h3 class="text-xl font-extrabold text-slate-800">Lợi thế tuyệt đối – Adam Smith</h3></div>
+<p class="text-stone-700 mb-3">Một quốc gia có lợi thế tuyệt đối ở hàng hóa mà quốc gia đó sản xuất <strong>hiệu quả hơn</strong>: năng suất lao động cao hơn hoặc hao phí lao động trên một đơn vị thấp hơn.</p>
+<div class="formula-box mb-4"><div class="formula-line">Năng suất = Sản lượng / Lao động &nbsp;;&nbsp; Hao phí lao động = 1 / Năng suất</div></div>
+<ul class="list-disc pl-5 space-y-2 text-stone-700">
+<li>Chuyên môn hóa vào hàng hóa có lợi thế tuyệt đối, rồi trao đổi phần sản lượng dư.</li>
+<li>Thương mại tự do là trò chơi tổng dương; tổng sản lượng và khả năng tiêu dùng có thể tăng.</li>
+<li><strong>Không phải:</strong> quốc gia không có lợi thế tuyệt đối “bị loại”. Đúng hơn, mô hình Smith không giải thích được trường hợp đó.</li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-
-<!-- DUAL Country Interactive Chart Analysis (Bath-tub Diagram) -->
-<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-8">
-<div class="flex flex-col lg:flex-row gap-8 items-start text-base">
-<div class="w-full lg:w-1/3 flex flex-col justify-center">
-<h3 class="text-xl font-bold text-slate-800 mb-2">2. Mô Phỏng 2 Quốc Gia (Bath-tub)</h3>
-<p class="text-stone-600 mb-4">Góc nhìn toàn cầu: 35 Lao động sẽ chảy về nơi có lương cao hơn cho đến khi cân bằng.</p>
-<div class="mb-6">
-<label class="flex justify-between font-bold text-slate-700 mb-2">
-<span>LĐ Nước 1: <span id="dual-l1-val" class="text-teal-600 text-lg">20</span></span>
-<span>LĐ Nước 2: <span id="dual-l2-val" class="text-rose-600 text-lg">15</span></span>
-</label>
-<input type="range" id="dual-labor-slider" min="5" max="30" value="20" step="1" oninput="updateDualLaborChart()" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-teal-600">
-</div>
-<div class="space-y-3 bg-stone-50 p-4 rounded-xl border border-stone-200">
-<div class="flex justify-between items-center"><span class="text-stone-600">Lương Nước 1 (w<sub>1</sub>):</span><span id="dual-w1" class="font-bold text-teal-700 text-lg">$10</span></div>
-<div class="flex justify-between items-center"><span class="text-stone-600">Lương Nước 2 (w<sub>2</sub>):</span><span id="dual-w2" class="font-bold text-rose-700 text-lg">$14</span></div>
-<div id="dual-status" class="mt-4 p-2 bg-amber-100 rounded text-center font-bold text-amber-800 transition-colors">Nước 1 chảy sang Nước 2</div>
-</div>
-</div>
-<div class="w-full lg:w-2/3">
-<div class="chart-container"><canvas id="dualLaborChart"></canvas></div>
-<div class="mt-4 bg-stone-50 p-4 rounded-xl border border-stone-200 text-sm text-stone-700 shadow-sm">
-<strong class="text-slate-800 block mb-2 border-b border-stone-200 pb-1">📌 Chú thích Mô hình Bath-tub:</strong>
-<ul class="space-y-1.5">
-<li>• <strong>Trục dọc 2 bên (Y):</strong> Tiền lương (w).</li>
-<li>• <strong>Trục ngang (X):</strong> Tổng lao động thế giới (35). <em>Đọc từ Trái $\rightarrow$ Phải là LĐ Nước 1, từ Phải $\rightarrow$ Trái là LĐ Nước 2.</em></li>
-<li class="flex items-start"><span class="inline-block w-4 h-0 border-t-2 border-dashed border-stone-500 mt-2 mr-2 shrink-0"></span><span><strong>Vách ngăn đứt nét:</strong> Ranh giới phân bổ LĐ hiện tại. Điểm 2 đường MPL cắt nhau chính là điểm Lương Cân Bằng (w*).</span></li>
-</ul>
-</div>
-</div>
-</div>
+<div class="scroll-table mt-4"><table><thead><tr><th>Năng suất</th><th>Nhật Bản</th><th>Việt Nam</th><th>Kết luận</th></tr></thead><tbody><tr><td>Thép (tấn/giờ)</td><td>6</td><td>1</td><td>Nhật Bản có AA về thép</td></tr><tr><td>Vải (yard/giờ)</td><td>2</td><td>4</td><td>Việt Nam có AA về vải</td></tr></tbody></table></div>
+</article>
 </div>
 
-<!-- Bài giải Tự Luận Chương 6 (LIVE UPDATE) -->
-<div class="mt-8 pt-4 border-t-2 border-dashed border-teal-200">
-<h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">📝</span> Bài Giải Tự Luận "Live" (Theo Đồ Thị Bath-tub)</h3>
+<article class="knowledge-card mb-8">
+<div class="flex items-center gap-3 mb-4"><span class="text-3xl">📊</span><h3 class="text-xl font-extrabold text-slate-800">Lợi thế so sánh – David Ricardo</h3></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div>
+<p class="text-stone-700 mb-3">Một quốc gia có lợi thế so sánh ở hàng hóa có <strong>chi phí tương đối thấp hơn</strong> hoặc <strong>năng suất tương đối cao hơn</strong>. Vì vậy, thương mại vẫn có lợi ngay cả khi một quốc gia bất lợi tuyệt đối ở cả hai hàng hóa.</p>
+<div class="formula-box"><div class="formula-line">Nếu a₁/a₂ &gt; b₁/b₂ → Nước 1 có CA ở A; Nước 2 có CA ở B</div></div>
+<ul class="list-disc pl-5 mt-4 space-y-2 text-stone-700"><li>Xuất khẩu hàng hóa có lợi thế so sánh; nhập khẩu hàng hóa có bất lợi so sánh.</li><li>Tỷ lệ trao đổi quốc tế phải nằm giữa tỷ lệ trao đổi nội địa của hai nước để cả hai cùng chấp nhận.</li><li>Ricardo dựa trên <strong>lý thuyết giá trị lao động</strong>; lý thuyết chi phí cơ hội là bước phát triển tiếp theo, không nên đồng nhất hai phần.</li></ul>
+</div>
+<div>
+<div class="scroll-table"><table><thead><tr><th>Năng suất</th><th>Việt Nam</th><th>Hoa Kỳ</th></tr></thead><tbody><tr><td>Ô tô A (chiếc/giờ)</td><td>4</td><td>2</td></tr><tr><td>Cà phê C (tấn/giờ)</td><td>5</td><td>1</td></tr></tbody></table></div>
+<div class="mt-4 text-sm bg-stone-50 border border-stone-200 rounded-lg p-4"><p><strong>So sánh năng suất tương đối:</strong> VN: 5C/4A; Mỹ: 1C/2A.</p><p class="mt-2"><strong>Kết luận:</strong> Việt Nam có CA về cà phê; Hoa Kỳ có CA về ô tô. Khung trao đổi theo slide: <strong>2C &lt; 4A &lt; 5C</strong>.</p></div>
+</div>
+</div>
+</article>
 
-<div class="bg-white p-6 rounded-xl border border-stone-200 transition-all shadow-sm">
-<h4 class="font-bold text-lg mb-4 flex justify-between items-center border-b pb-2">
-<span>Phân tích Di chuyển Lao động & Lợi ích</span>
-<span class="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded-full live-pulse border border-teal-200">Live Update 🔴</span>
-</h4>
-<p class="text-base text-stone-600 mb-6 bg-stone-50 p-3 rounded"><strong>Đề bài:</strong> Cầu LĐ Q_(L1) = -w + 30$; Q_(L2) = -w + 29$. Lương ban đầu thay đổi theo thanh trượt đồ thị ở trên.</p>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<article class="knowledge-card">
+<h3 class="text-xl font-extrabold text-slate-800 mb-3">Chi phí cơ hội và lợi thế so sánh</h3>
+<p class="text-stone-700">Chi phí cơ hội của A là lượng B phải từ bỏ để giải phóng đủ nguồn lực sản xuất thêm một đơn vị A.</p>
+<div class="formula-box my-4"><div class="formula-line">OC(A) = Năng suất(B) / Năng suất(A) = Hao phí(A) / Hao phí(B)</div></div>
+<p class="text-stone-700"><strong>Quy tắc:</strong> nước có OC thấp hơn ở hàng hóa nào thì có lợi thế so sánh ở hàng hóa đó.</p>
+<div class="exam-note mt-4"><strong>Bẫy dữ liệu:</strong> bảng năng suất thì số lớn tốt hơn; bảng hao phí lao động thì số nhỏ tốt hơn. Khi tính OC từ bảng hao phí, lấy hao phí hàng đang xét chia hao phí hàng còn lại.</div>
+</article>
+<article class="knowledge-card">
+<h3 class="text-xl font-extrabold text-slate-800 mb-3">PPF với chi phí cơ hội không đổi</h3>
+<ul class="list-disc pl-5 space-y-2 text-stone-700"><li>PPF biểu diễn các phối hợp sản lượng tối đa khi nguồn lực được sử dụng đầy đủ và hiệu quả.</li><li>Chi phí cơ hội không đổi → PPF là đường thẳng, độ dốc không đổi.</li><li>Độ dốc tuyệt đối của PPF là MRT và bằng chi phí cơ hội của hàng hóa trên trục ngang.</li><li>Với chi phí không đổi, mô hình dẫn đến chuyên môn hóa hoàn toàn nếu giá thế giới nằm giữa hai giá tương đối nội địa.</li></ul>
+</article>
+</div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-base">
-<div class="space-y-4">
-<div class="solution-step">
-<strong>1. Tổng LĐ ban đầu (đang chọn):</strong><br> 
-Nước 1: L_1 = -10 + 30 =$ <span id="ex-l1-calc" class="font-bold text-teal-700">20</span>.<br>
-Nước 2: L_2 = -14 + 29 =$ <span id="ex-l2-calc" class="font-bold text-rose-700">15</span>.<br>
-&rarr; Tổng số LĐ hai nước = 35.
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-5 md:p-7 mb-8">
+<h3 class="text-2xl font-extrabold text-teal-800 mb-5">Bài mẫu tổng hợp: OC, TOT và gains from trade</h3>
+<p class="text-stone-600 mb-4">Hao phí lao động để sản xuất 1 đơn vị:</p>
+<div class="scroll-table mb-5"><table><thead><tr><th>Quốc gia</th><th>Lúa mì W</th><th>Vải C</th><th>OC(W)</th><th>OC(C)</th></tr></thead><tbody><tr><td>Hoa Kỳ</td><td>3 giờ</td><td>2 giờ</td><td>3/2 = 1,5C</td><td>2/3W</td></tr><tr><td>Anh</td><td>4 giờ</td><td>1 giờ</td><td>4C</td><td>1/4W</td></tr></tbody></table></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="solution-step"><strong>Bước 1 – CA</strong><p>Mỹ có OC(W) thấp hơn → xuất W. Anh có OC(C) thấp hơn → xuất C.</p></div>
+<div class="solution-step"><strong>Bước 2 – Khung TOT</strong><p class="font-bold text-teal-700">1,5C &lt; 1W &lt; 4C</p></div>
+<div class="solution-step"><strong>Bước 3 – Điều kiện lợi ích</strong><p>TOT càng gần OC của nước đối tác thì nước đang xét nhận phần lợi ích thương mại càng lớn.</p></div>
 </div>
-<div class="solution-step">
-<strong>2. Trạng thái Di chuyển:</strong><br> 
-<span id="ex-flow-text">Dòng chảy lao động đang xảy ra.</span><br>
-<em>Lý do: Lao động luôn chảy về nơi có w cao hơn để tìm kiếm thu nhập.</em>
+<div class="mt-6 bg-stone-50 border border-stone-200 rounded-xl p-4"><strong>Ví dụ đúng theo PPF trong slide:</strong> Mỹ chuyên môn hóa sản xuất 180 máy M, đổi 70M lấy 70C, tiêu dùng mới (110M, 70C) so với trước thương mại (90M, 60C) → lợi ích <strong>+20M và +10C</strong>. Không đổi tên máy thành lúa mì vì sẽ làm sai mạch dữ liệu.</div>
 </div>
-<div class="solution-step border-green-500">
-<strong>3. Lượng di chuyển (về w* = 12$):</strong><br> 
-<span id="ex-move-calc">Đã di chuyển: 2 người.</span>
+
+<div class="space-y-3 mb-10">
+<details class="study-details"><summary>Giả định chung của mô hình cổ điển</summary><div class="detail-body"><ul class="list-disc pl-5 space-y-2"><li>Hai quốc gia, hai hàng hóa.</li><li>Không có chi phí vận chuyển và rào cản thương mại.</li><li>Cạnh tranh hoàn hảo.</li><li>Lao động là yếu tố sản xuất duy nhất, đồng nhất và có tổng cung cố định.</li><li>Trong mô hình chi phí không đổi, năng suất không đổi khi mở rộng sản lượng.</li></ul></div></details>
+<details class="study-details"><summary>Đánh giá nhanh 4 lý thuyết</summary><div class="detail-body"><div class="scroll-table"><table><thead><tr><th>Lý thuyết</th><th>Điểm mạnh</th><th>Hạn chế</th></tr></thead><tbody><tr><td>Trọng thương</td><td>Nhấn mạnh ngoại thương và vai trò chính sách</td><td>Zero-sum, đồng nhất giàu có với vàng bạc</td></tr><tr><td>Absolute Advantage</td><td>Giải thích chuyên môn hóa và gains from trade</td><td>Không giải thích nước bất lợi tuyệt đối ở mọi hàng hóa</td></tr><tr><td>Comparative Advantage</td><td>Chứng minh mọi nước đều có thể tham gia và hưởng lợi</td><td>Lý thuyết giá trị lao động, giả định đơn giản</td></tr><tr><td>Opportunity Cost</td><td>Khắc phục giới hạn “chỉ có lao động”</td><td>Chi phí không đổi thiếu thực tế; chưa giải thích nguồn gốc CA</td></tr></tbody></table></div></div></details>
 </div>
+</section>
+
+<!-- ================= CHAPTER 2 ================= -->
+<section id="ch2" class="tab-content hidden">
+<div class="mb-8"><h2 class="text-2xl md:text-3xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 2: Lý thuyết chuẩn và hiện đại về thương mại quốc tế</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mạch kiến thức:</strong> Chi phí cơ hội tăng dần → PPF, CIC, MRT, MRS → khác biệt thị hiếu → Heckscher–Ohlin → cân bằng giá yếu tố H–O–S.</p></div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">1. Chi phí cơ hội tăng dần (IOC)</h3><p class="text-stone-700 mb-3">Khi sản xuất thêm từng đơn vị X, quốc gia phải từ bỏ ngày càng nhiều Y vì các yếu tố sản xuất không đồng nhất và không thích hợp như nhau cho mọi ngành.</p><ul class="list-disc pl-5 space-y-2 text-stone-700"><li>Nguồn lực hữu hạn, khác nhau về chất lượng.</li><li>Các hàng hóa sử dụng yếu tố với cường độ khác nhau.</li><li>Chuyển nguồn lực ngày càng kém phù hợp sang ngành mở rộng làm OC tăng.</li></ul><div class="formula-box mt-4"><div class="formula-line">PPF lõm về gốc tọa độ; |MRTₓ| = OC(X) tăng khi di chuyển sang phải</div></div></article>
+<article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">2. CIC và MRS</h3><ul class="list-disc pl-5 space-y-2 text-stone-700"><li><strong>Community Indifference Curve:</strong> các phối hợp X–Y đem lại cùng mức thỏa mãn cho quốc gia.</li><li>CIC dốc xuống, lồi về gốc, không cắt nhau; CIC cao hơn thể hiện phúc lợi cao hơn.</li><li><strong>MRS của X cho Y:</strong> lượng Y sẵn sàng từ bỏ để có thêm một X mà vẫn giữ nguyên mức thỏa mãn.</li></ul><div class="formula-box mt-4"><div class="formula-line">|MRSₓᵧ| = |ΔY/ΔX| = MUₓ/MUᵧ</div></div></article>
 </div>
-<div class="space-y-4">
-<div class="solution-step border-orange-500 bg-orange-50/50 p-5 rounded-xl border border-orange-200 shadow-inner">
-<strong class="text-lg text-orange-900 block mb-2 border-b border-orange-200 pb-1">4. Tác động tới <span id="ex-v2-country" class="font-black">Nước Nhận</span>:</strong>
-<p class="text-sm text-stone-500 mb-3"><em>(Tính bằng diện tích hình thang tạo bởi lượng LĐ di chuyển nằm dưới đường MPL)</em></p>
-<ul class="space-y-3 text-stone-800">
-<li class="flex items-center justify-between">
-<span>&bull; &Delta;GDP (Sản lượng mới):</span> 
-<strong class="text-green-700 text-lg"><span id="ex-v2-gdp">26</span>$</strong>
-</li>
-<li class="flex items-center justify-between text-stone-600">
-<span>&bull; Trừ đi Lương trả thợ (Kiều hối):</span> 
-<span>-<span id="ex-v2-remit">24</span>$</span>
-</li>
-<li class="flex items-center justify-between pt-2 border-t border-orange-300">
-<span class="font-bold">&bull; &Delta;GNP (Lãi ròng của Chủ):</span> 
-<span class="text-orange-700 text-2xl font-black">+<span id="ex-v2-gnp">2</span>$</span>
-</li>
-</ul>
+
+<article class="knowledge-card mb-8"><h3 class="text-xl font-extrabold text-slate-800 mb-4">Cân bằng trong tự cung tự cấp và khi có thương mại</h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div class="bg-stone-50 border border-stone-200 rounded-xl p-4"><strong class="text-slate-800">Autarky</strong><p class="mt-2 text-stone-600">Điểm cân bằng là tiếp điểm PPF–CIC: MRT = MRS = giá tương đối nội địa.</p></div><div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong class="text-teal-800">Cơ sở thương mại</strong><p class="mt-2 text-teal-900">Nếu P<sub>A</sub> ≠ P<sub>B</sub>, nước có P<sub>X</sub>/P<sub>Y</sub> thấp hơn có CA ở X.</p></div><div class="bg-green-50 border border-green-100 rounded-xl p-4"><strong class="text-green-800">Với thương mại</strong><p class="mt-2 text-green-900">Mỗi nước chuyên môn hóa một phần; sản xuất tại MRT = P<sub>w</sub>, tiêu dùng tại MRS = P<sub>w</sub>, tiếp cận CIC cao hơn.</p></div></div><div class="exam-note mt-5"><strong>Khác Chương 1:</strong> IOC làm PPF cong nên chuyên môn hóa thường <strong>không hoàn toàn</strong>. Sản xuất mở rộng đến khi chi phí biên nội địa bằng giá tương đối thế giới.</div></article>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Nguồn gốc gains from trade</h3><div class="space-y-3"><div class="solution-step"><strong>Gains from exchange</strong><p>Giữ nguyên điểm sản xuất autarky nhưng trao đổi theo giá thế giới để chuyển lên CIC cao hơn.</p></div><div class="solution-step"><strong>Gains from specialization</strong><p>Điều chỉnh cơ cấu sản xuất theo lợi thế so sánh cho đến MRT = P<sub>w</sub>, tạo thêm khả năng tiêu dùng.</p></div></div><p class="mt-3 text-stone-600">Tổng gains from trade = gains from exchange + gains from specialization.</p></article>
+<article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Thương mại do khác biệt thị hiếu</h3><p class="text-stone-700">Hai nước có thể có PPF giống hệt nhau nhưng CIC khác nhau. Khác biệt thị hiếu tạo ra giá tương đối autarky khác nhau, từ đó tạo cơ sở thương mại.</p><ul class="list-disc pl-5 mt-3 space-y-2 text-stone-700"><li>Nước thích Y hơn có cầu Y tương đối cao → giá Y tương đối cao.</li><li>Khi mở cửa, mỗi nước xuất hàng hóa có giá tương đối autarky thấp hơn.</li><li>Cả hai chuyển lên CIC cao hơn dù công nghệ và nguồn lực giống nhau.</li></ul></article>
 </div>
-</div>
-</div>
-</div>
-</div>
+
+<article class="knowledge-card mb-8"><div class="flex items-center gap-3 mb-4"><span class="text-3xl">🏭</span><h3 class="text-xl font-extrabold text-slate-800">Mô hình Heckscher–Ohlin (H–O)</h3></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-6"><div><h4 class="font-bold text-slate-800 mb-2">Khái niệm then chốt</h4><ul class="list-disc pl-5 space-y-2 text-stone-700"><li><strong>Factor intensity:</strong> đặc điểm của hàng hóa. X thâm dụng lao động nếu L<sub>X</sub>/K<sub>X</sub> &gt; L<sub>Y</sub>/K<sub>Y</sub>.</li><li><strong>Factor abundance:</strong> đặc điểm của quốc gia, đo bằng lượng vật chất L/K hoặc giá tương đối w/r.</li><li>Nước dồi dào lao động thường có w/r thấp hơn; nước dồi dào vốn thường có r/w thấp hơn.</li></ul><div class="formula-box mt-4"><div class="formula-line">Quốc gia xuất khẩu hàng hóa thâm dụng yếu tố dồi dào và nhập khẩu hàng hóa thâm dụng yếu tố khan hiếm.</div></div></div><div><h4 class="font-bold text-slate-800 mb-2">Giả định chính</h4><ul class="list-disc pl-5 space-y-2 text-stone-700"><li>Không chi phí vận chuyển/rào cản; cạnh tranh hoàn hảo.</li><li>Hai hàng hóa có cường độ yếu tố khác nhau; không đảo ngược cường độ yếu tố.</li><li>Công nghệ giống nhau giữa các nước; hàm sản xuất CRS.</li><li>Thị hiếu giống nhau; yếu tố di động trong nước nhưng không di động quốc tế trong mô hình cơ bản.</li></ul></div></div></article>
+
+<div class="scroll-table mb-8"><table><thead><tr><th>Bước nhận dạng H–O</th><th>Câu hỏi</th><th>Quy tắc</th></tr></thead><tbody><tr><td>1. Hàng hóa nào thâm dụng yếu tố nào?</td><td>So L/K hoặc K/L giữa hai hàng hóa</td><td>Tỷ lệ cao hơn quyết định yếu tố thâm dụng</td></tr><tr><td>2. Nước nào dồi dào yếu tố nào?</td><td>So L/K hoặc w/r giữa hai nước</td><td>L/K cao hoặc w/r thấp → dồi dào lao động</td></tr><tr><td>3. Mô hình thương mại?</td><td>Ghép yếu tố dồi dào với hàng hóa thâm dụng yếu tố đó</td><td>Dồi dào L → xuất hàng thâm dụng L</td></tr></tbody></table></div>
+
+<article class="knowledge-card mb-8"><div class="flex items-center gap-3 mb-4"><span class="text-3xl">⚙️</span><h3 class="text-xl font-extrabold text-slate-800">Heckscher–Ohlin–Samuelson: Cân bằng giá yếu tố</h3></div><p class="text-stone-700 mb-4">Dưới các giả định chặt chẽ, thương mại hàng hóa làm giá tương đối và tuyệt đối của các yếu tố đồng nhất có xu hướng cân bằng giữa các quốc gia, dù lao động và vốn không trực tiếp di chuyển qua biên giới.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong class="text-teal-800">Nước dồi dào lao động</strong><p class="mt-2 text-teal-900">Mở rộng hàng thâm dụng lao động → cầu lao động tăng tương đối → tiền lương tăng so với lợi tức vốn.</p></div><div class="bg-blue-50 border border-blue-100 rounded-xl p-4"><strong class="text-blue-800">Nước dồi dào vốn</strong><p class="mt-2 text-blue-900">Mở rộng hàng thâm dụng vốn → cầu vốn tăng tương đối → lợi tức vốn tăng so với tiền lương.</p></div></div><div class="exam-note mt-4"><strong>Ứng dụng phân phối:</strong> giá hàng hóa tăng tương đối làm thu nhập thực của yếu tố được sử dụng thâm dụng trong hàng hóa đó tăng, còn yếu tố kia giảm. Thương mại làm tăng tổng phúc lợi nhưng có thể tạo người được và người mất trong từng quốc gia.</div></article>
+
+<div class="space-y-3 mb-10"><details class="study-details"><summary>Ví dụ nhận dạng nhanh H–O</summary><div class="detail-body"><p>Ô tô dùng L=4, K=8; cà phê dùng L=6, K=2. Vì K/L của ô tô = 2 lớn hơn K/L của cà phê = 1/3, ô tô thâm dụng vốn; cà phê thâm dụng lao động. Nước dồi dào vốn xuất ô tô, nước dồi dào lao động xuất cà phê.</p></div></details><details class="study-details"><summary>Checklist trả lời câu tự luận Chương 2</summary><div class="detail-body"><ol class="list-decimal pl-5 space-y-2"><li>Nêu giả định và khái niệm đang dùng.</li><li>Xác định giá tương đối autarky hoặc yếu tố dồi dào/thâm dụng.</li><li>Kết luận lợi thế so sánh và pattern of trade.</li><li>Mô tả điều chỉnh sản xuất–tiêu dùng sau thương mại.</li><li>Kết luận gains from trade và tác động phân phối nếu có.</li></ol></div></details></div>
+</section>
+
+<!-- ================= CHAPTER 3 ================= -->
+<section id="ch3" class="tab-content hidden">
+<div class="mb-8"><h2 class="text-2xl md:text-3xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Chính sách thương mại – Thuế quan</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Mục tiêu:</strong> Nhận dạng các loại thuế; phân tích CS, PS, ngân sách và DWL của thuế nhập khẩu/xuất khẩu; tính tỷ lệ bảo hộ thực tế ERP.</p></div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-8"><article class="knowledge-card"><h3 class="font-extrabold text-slate-800 text-lg mb-2">Ad valorem</h3><p class="text-stone-600">Thuế theo tỷ lệ phần trăm giá trị hàng hóa.</p><div class="formula-box mt-3"><div class="formula-line">Thuế = t × Giá trị</div></div></article><article class="knowledge-card"><h3 class="font-extrabold text-slate-800 text-lg mb-2">Specific tariff</h3><p class="text-stone-600">Một khoản cố định trên mỗi đơn vị vật chất.</p><div class="formula-box mt-3"><div class="formula-line">Thuế = số tiền/đơn vị × Q</div></div></article><article class="knowledge-card"><h3 class="font-extrabold text-slate-800 text-lg mb-2">Compound tariff</h3><p class="text-stone-600">Kết hợp thuế theo giá trị và thuế tuyệt đối.</p><div class="formula-box mt-3"><div class="formula-line">Thuế = tP + k</div></div></article></div>
+
+<article class="knowledge-card mb-8"><div class="grid grid-cols-1 lg:grid-cols-2 gap-6"><div><h3 class="text-xl font-extrabold text-slate-800 mb-3">Khái niệm và chức năng</h3><p class="text-stone-700 mb-3">Tariff là thuế đánh lên hàng hóa khi vượt qua biên giới quốc gia; gồm thuế nhập khẩu và thuế xuất khẩu. Đây là <strong>thuế gián thu</strong> vì người nộp thuế có thể chuyển gánh nặng vào giá bán.</p><ul class="list-disc pl-5 space-y-2 text-stone-700"><li>Bảo hộ ngành trong nước.</li><li>Tạo nguồn thu ngân sách.</li><li>Điều tiết xuất nhập khẩu và tiêu dùng.</li><li>Điều chỉnh cán cân thanh toán và thực hiện chính sách thương mại phân biệt.</li></ul></div><div><h3 class="text-xl font-extrabold text-slate-800 mb-3">Thặng dư</h3><ul class="space-y-3 text-stone-700"><li><strong>Consumer surplus:</strong> phần chênh giữa mức sẵn lòng trả và giá thực trả; diện tích dưới đường cầu, trên giá.</li><li><strong>Producer surplus:</strong> phần chênh giữa giá thực nhận và mức tối thiểu người sản xuất chấp nhận; diện tích trên đường cung, dưới giá.</li></ul></div></div></article>
+
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-8"><h3 class="text-2xl font-extrabold text-teal-800 mb-4">Thuế nhập khẩu ở nước nhỏ</h3><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"><div><div class="scroll-table"><table><thead><tr><th>Biến</th><th>Tác động</th><th>Phúc lợi</th></tr></thead><tbody><tr><td>Giá trong nước</td><td>Tăng từ P<sub>w</sub> lên P<sub>w</sub>+t</td><td>—</td></tr><tr><td>Tiêu dùng</td><td>Giảm</td><td>ΔCS = −(a+b+c+d)</td></tr><tr><td>Sản xuất nội địa</td><td>Tăng</td><td>ΔPS = +a</td></tr><tr><td>Nhập khẩu</td><td>Giảm</td><td>Thu ngân sách = +c</td></tr><tr><td>Phúc lợi quốc gia</td><td>Giảm</td><td>DWL = −(b+d)</td></tr></tbody></table></div><div class="exam-note mt-4"><strong>b:</strong> tổn thất sản xuất do chuyển nguồn lực sang ngành nhập khẩu kém hiệu quả. <strong>d:</strong> tổn thất tiêu dùng do giá bị đẩy cao làm giảm các giao dịch có lợi.</div></div><div><div class="chart-container"><canvas id="sdChart"></canvas></div><p class="text-xs text-stone-500 mt-2 text-center">Ví dụ: QD=140−2P, QS=2P−40, Pw=20, thuế đơn vị 10.</p></div></div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-6 text-center"><div class="bg-stone-50 rounded-lg p-3"><span class="text-xs text-stone-500">P sau thuế</span><strong class="block text-xl">30</strong></div><div class="bg-stone-50 rounded-lg p-3"><span class="text-xs text-stone-500">QS</span><strong class="block text-xl">20</strong></div><div class="bg-stone-50 rounded-lg p-3"><span class="text-xs text-stone-500">QD</span><strong class="block text-xl">80</strong></div><div class="bg-stone-50 rounded-lg p-3"><span class="text-xs text-stone-500">Nhập khẩu</span><strong class="block text-xl">60</strong></div><div class="bg-amber-50 rounded-lg p-3 col-span-2 md:col-span-1"><span class="text-xs text-amber-700">DWL</span><strong class="block text-xl text-amber-800">200</strong></div></div></div>
+
+<article class="knowledge-card mb-8"><h3 class="text-xl font-extrabold text-slate-800 mb-4">Thuế xuất khẩu ở nước nhỏ</h3><div class="scroll-table"><table><thead><tr><th>Biến</th><th>Tác động khi áp thuế xuất khẩu</th><th>Phúc lợi</th></tr></thead><tbody><tr><td>Giá trong nước</td><td>Giảm từ P<sub>w</sub> xuống P<sub>w</sub>−t</td><td>—</td></tr><tr><td>Người tiêu dùng</td><td>Mua giá thấp hơn, tiêu dùng tăng</td><td>ΔCS = +a</td></tr><tr><td>Người sản xuất</td><td>Giá nhận thấp hơn, sản xuất giảm</td><td>ΔPS = −(a+b+c+d)</td></tr><tr><td>Chính phủ</td><td>Thu thuế trên lượng xuất khẩu</td><td>+c</td></tr><tr><td>Phúc lợi quốc gia</td><td>Giảm</td><td>DWL = −(b+d)</td></tr></tbody></table></div><p class="text-stone-600 mt-4">Ví dụ slide: S=20P−20, D=−10P+70, Pw=5, thuế xuất khẩu 1 → giá nội địa 4, QD tăng 20→30, QS giảm 80→60, xuất khẩu giảm 60→30.</p></article>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8"><div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6"><h3 class="text-xl font-bold text-slate-800 mb-1">Máy tính ERP – một đầu vào nhập khẩu</h3><div class="formula-box my-4"><div class="formula-line">ERP = (t − aᵢtᵢ) / (1 − aᵢ) = (V′−V)/V</div></div><div class="space-y-4"><div><label class="block font-semibold text-stone-700 mb-1" for="erp-t">Thuế thành phẩm t (%)</label><input type="number" id="erp-t" value="20" class="w-full px-4 py-2 bg-stone-50 border border-stone-300 rounded-lg outline-none"></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block font-semibold text-stone-700 mb-1" for="erp-ti">Thuế đầu vào tᵢ (%)</label><input type="number" id="erp-ti" value="10" class="w-full px-4 py-2 bg-stone-50 border border-stone-300 rounded-lg outline-none"></div><div><label class="block font-semibold text-stone-700 mb-1" for="erp-ai">Tỷ trọng đầu vào aᵢ</label><input type="number" id="erp-ai" min="0" max="0.99" step="0.01" value="0.5" class="w-full px-4 py-2 bg-stone-50 border border-stone-300 rounded-lg outline-none"></div></div><button onclick="calculateERP()" class="w-full py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-lg transition-colors">Tính ERP</button></div><div id="erp-result-box" class="hidden mt-4 p-4 rounded-lg"><div id="erp-value" class="text-3xl font-extrabold"></div><p id="erp-interpretation" class="font-semibold mt-1"></p></div></div><div class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Cách đọc ERP</h3><ul class="space-y-3 text-stone-700"><li><strong>aᵢ=0:</strong> ERP=t.</li><li><strong>t=tᵢ:</strong> ERP=t.</li><li><strong>t&gt;tᵢ:</strong> ERP&gt;t – bảo hộ giá trị gia tăng cao hơn thuế danh nghĩa.</li><li><strong>0≤ERP&lt;t:</strong> ngành vẫn được bảo hộ nhưng thấp hơn mức danh nghĩa.</li><li><strong>ERP&lt;0:</strong> cấu trúc thuế làm giá trị gia tăng trong nước giảm.</li></ul><div class="exam-note mt-4"><strong>Không gọi ERP là lợi nhuận.</strong> ERP đo phần trăm thay đổi của <em>giá trị gia tăng trong nước</em>. Với nhiều đầu vào: tử số là t − Σaᵢtᵢ.</div></div></div>
+
+<div class="space-y-3 mb-10"><details class="study-details"><summary>Ví dụ ERP trong slide</summary><div class="detail-body"><p>Xe máy có giá thế giới 600, đầu vào nhập khẩu 400 → V=200. Thuế thành phẩm 20%, thuế đầu vào 15% → giá thành phẩm 720, đầu vào 460 → V′=260. ERP=(260−200)/200=30%.</p></div></details><details class="study-details"><summary>Khung giải bài thuế quan</summary><div class="detail-body"><ol class="list-decimal pl-5 space-y-2"><li>Tìm cân bằng autarky nếu đề hỏi.</li><li>Thay Pw để tính QS, QD và thương mại tự do.</li><li>Xác định giá nội địa sau chính sách.</li><li>Tính QS mới, QD mới, lượng nhập/xuất.</li><li>Tính ΔCS, ΔPS, ngân sách và DWL bằng diện tích hoặc tích phân/tam giác.</li></ol></div></details></div>
+</section>
+
+<!-- ================= CHAPTER 4 ================= -->
+<section id="ch4" class="tab-content hidden">
+<div class="mb-8"><h2 class="text-2xl md:text-3xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 4: Công cụ phi thuế quan và bảo hộ mới</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Nội dung:</strong> Import/export quota, VER, trợ cấp xuất khẩu, dumping và các công cụ kỹ thuật – hành chính của “new protectionism”.</p></div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8"><div class="knowledge-card"><strong class="text-slate-800">1. Thuế quan là công cụ thô</strong><p class="text-sm text-stone-600 mt-2">Chỉ thay đổi giá, không trực tiếp xử lý chất lượng, an toàn, môi trường hay an ninh.</p></div><div class="knowledge-card"><strong class="text-slate-800">2. Chuỗi giá trị nhiều công đoạn</strong><p class="text-sm text-stone-600 mt-2">NTM có thể định hướng vị trí và tiêu chuẩn của cả chuỗi, không chỉ một lần qua biên giới.</p></div><div class="knowledge-card"><strong class="text-slate-800">3. Chính sách công nghiệp</strong><p class="text-sm text-stone-600 mt-2">Nội địa hóa, nâng cấp công nghệ, khả năng chống chịu cần công cụ ngoài thuế.</p></div><div class="knowledge-card"><strong class="text-slate-800">4. Thuế bị ràng buộc và cắt giảm</strong><p class="text-sm text-stone-600 mt-2">Chính phủ chuyển sang tiêu chuẩn, giấy phép, quota và quy tắc xuất xứ.</p></div><div class="knowledge-card"><strong class="text-slate-800">5. Thông tin và niềm tin</strong><p class="text-sm text-stone-600 mt-2">Kiểm nghiệm, chứng nhận và truy xuất giúp bảo đảm tuân thủ.</p></div><div class="knowledge-card"><strong class="text-slate-800">6. Quản lý phân phối</strong><p class="text-sm text-stone-600 mt-2">SPS/TBT, safeguard và mua sắm công có thể nhắm mục tiêu cụ thể hơn.</p></div></div>
+
+<article class="knowledge-card mb-8"><h3 class="text-xl font-extrabold text-slate-800 mb-4">Import quota: định nghĩa, giá và phúc lợi</h3><p class="text-stone-700 mb-4">Quota là giới hạn do chính phủ đặt ra đối với số lượng hoặc giá trị hàng được nhập/xuất trong một thời kỳ. Với quota nhập khẩu ràng buộc, giá nội địa tăng đến mức khoảng cách QD−QS đúng bằng quota.</p><div class="scroll-table"><table><thead><tr><th>Thành phần</th><th>Tác động</th></tr></thead><tbody><tr><td>Consumer surplus</td><td>−(a+b+c+d)</td></tr><tr><td>Producer surplus</td><td>+a</td></tr><tr><td>Quota rent</td><td>c = (P<sub>d</sub>−P<sub>w</sub>) × quota</td></tr><tr><td>DWL</td><td>−(b+d), cộng thêm c nếu rent chảy ra nước ngoài</td></tr></tbody></table></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5"><div class="bg-blue-50 border border-blue-100 rounded-xl p-4"><strong class="text-blue-800">Cấp phép miễn phí</strong><p class="mt-2 text-sm text-blue-900">Doanh nghiệp được cấp phép giữ quota rent.</p></div><div class="bg-green-50 border border-green-100 rounded-xl p-4"><strong class="text-green-800">Đấu giá giấy phép</strong><p class="mt-2 text-sm text-green-900">Chính phủ thu quota rent, tương tự doanh thu thuế.</p></div><div class="bg-red-50 border border-red-100 rounded-xl p-4"><strong class="text-red-800">Foreign capture</strong><p class="mt-2 text-sm text-red-900">Doanh nghiệp nước ngoài giữ rent → phần chuyển giao ra nước ngoài.</p></div></div></article>
+
+<div class="scroll-table mb-8"><table><thead><tr><th>Tiêu chí</th><th>Thuế nhập khẩu</th><th>Hạn ngạch nhập khẩu</th></tr></thead><tbody><tr><td>Lượng nhập khẩu</td><td>Không cố định; phụ thuộc cung cầu</td><td>Được ấn định chắc chắn</td></tr><tr><td>Nguồn thu/rent</td><td>Chính phủ thu thuế</td><td>Phụ thuộc cách cấp giấy phép</td></tr><tr><td>Khi cầu tăng</td><td>Giá có thể không đổi ở nước nhỏ, nhập khẩu tăng</td><td>Giá nội địa tăng mạnh vì lượng nhập bị khóa</td></tr><tr><td>Nguy cơ độc quyền</td><td>Thấp hơn</td><td>Cao hơn nếu giấy phép miễn phí và phân bổ hạn chế</td></tr></tbody></table></div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8"><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Export quota và VER</h3><ul class="list-disc pl-5 space-y-2 text-stone-700"><li><strong>Export quota:</strong> giới hạn lượng xuất khẩu; có thể tạo tác động tương tự thuế xuất khẩu nếu mức hạn chế tương đương.</li><li><strong>VER:</strong> nước nhập khẩu gây sức ép để nước xuất khẩu “tự nguyện” hạn chế xuất khẩu dưới đe dọa áp biện pháp rộng hơn.</li><li>VER có tác động như quota nhập khẩu nhưng quota rent thường thuộc nhà xuất khẩu nước ngoài.</li></ul><div class="exam-note mt-4"><strong>Case ô tô Mỹ–Nhật 1981:</strong> giá xe tăng, hãng Nhật chuyển sang xe cao cấp và đầu tư nhà máy tại Mỹ để né hạn chế.</div></article><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Cách doanh nghiệp né VER</h3><ul class="list-disc pl-5 space-y-2 text-stone-700"><li>Quality upgrading: dùng quota cho sản phẩm giá trị cao.</li><li>Sản xuất tại nước nhập khẩu bằng FDI.</li><li>Chuyển công đoạn sang nước thứ ba.</li><li>VER thường tập trung vào nhà cung cấp lớn, làm méo cấu trúc thị trường.</li></ul></article></div>
+
+<article class="knowledge-card mb-8"><h3 class="text-xl font-extrabold text-slate-800 mb-4">Trợ cấp xuất khẩu</h3><div class="grid grid-cols-1 lg:grid-cols-2 gap-6"><div><h4 class="font-bold text-slate-800 mb-2">Hình thức</h4><ul class="list-disc pl-5 space-y-2 text-stone-700"><li>Tiền mặt trên mỗi đơn vị xuất khẩu.</li><li>Miễn/giảm thuế thu nhập xuất khẩu.</li><li>Tín dụng lãi suất thấp, bảo hiểm tín dụng ưu đãi.</li><li>Tài trợ người mua nước ngoài.</li></ul></div><div><h4 class="font-bold text-slate-800 mb-2">Phúc lợi nước nhỏ</h4><ul class="space-y-2 text-stone-700"><li>ΔPS = +(a+b+c)</li><li>ΔCS = −(a+b)</li><li>Chi ngân sách = −(b+c+d)</li><li><strong>DWL = −(b+d)</strong></li></ul></div></div><p class="mt-4 text-stone-600">Ví dụ slide: S=20P−20, D=−10P+70, Pw=4, trợ cấp 1 → giá nội địa/giá nhận của nhà sản xuất 5, QD=20, QS=80, xuất khẩu=60.</p></article>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8"><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Dumping</h3><p class="text-stone-700">Doanh nghiệp bán hàng xuất khẩu thấp hơn chi phí sản xuất hoặc thấp hơn giá tại thị trường nội địa trong điều kiện so sánh tương đương.</p><ul class="list-disc pl-5 mt-3 space-y-2 text-stone-700"><li><strong>Normal value:</strong> giá tại thị trường nội địa hoặc nước thứ ba tương đương.</li><li><strong>Dumping margin:</strong> normal value − export price.</li><li>Thuế chống bán phá giá cần chứng minh dumping, thiệt hại vật chất và quan hệ nhân quả.</li></ul></article><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Ba loại dumping</h3><ul class="space-y-3 text-stone-700"><li><strong>Sporadic:</strong> bán lượng dư tạm thời ra nước ngoài để giải phóng tồn kho.</li><li><strong>Predatory:</strong> bán dưới giá để đẩy đối thủ khỏi thị trường rồi tăng giá; đáng lo nhưng khó chứng minh.</li><li><strong>Persistent:</strong> phân biệt giá lâu dài do độ co giãn cầu và mức cạnh tranh khác nhau.</li></ul></article></div>
+
+<div class="scroll-table mb-8"><table><thead><tr><th>Nhóm NTM khác</th><th>Ví dụ</th><th>Mục tiêu hợp pháp / nguy cơ bảo hộ</th></tr></thead><tbody><tr><td>SPS</td><td>Kiểm dịch, dư lượng, chứng nhận vùng trồng</td><td>Bảo vệ sức khỏe; có thể trở thành rào cản nếu quá mức cần thiết</td></tr><tr><td>TBT</td><td>Tiêu chuẩn chất lượng, an toàn, nhãn mác, bao bì</td><td>Thông tin và an toàn; tăng chi phí tuân thủ</td></tr><tr><td>Thuế/phí nội địa</td><td>VAT, thuế TTĐB, phí môi trường, hải quan</td><td>Không được phân biệt đối xử với hàng nhập</td></tr><tr><td>Mua sắm công</td><td>Ưu tiên nhà cung cấp nội địa</td><td>Hỗ trợ công nghiệp trong nước nhưng làm giảm cạnh tranh</td></tr><tr><td>Localization</td><td>Tỷ lệ nội địa hóa, lưu trữ dữ liệu, sản xuất trong nước</td><td>Phát triển năng lực nội địa; có thể bóp méo thương mại/đầu tư</td></tr></tbody></table></div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10"><div class="bg-white border border-stone-200 rounded-2xl p-5"><h3 class="font-extrabold text-slate-800 mb-2">Ví dụ SPS – trái cây Việt Nam</h3><p class="text-stone-600">Thuế 5% hay 50% không tiêu diệt sâu bệnh. SPS yêu cầu mã số vùng trồng, giám sát dịch hại, xử lý lạnh/khử trùng, chứng thư kiểm dịch và kiểm tra tại biên giới.</p></div><div class="bg-white border border-stone-200 rounded-2xl p-5"><h3 class="font-extrabold text-slate-800 mb-2">Ví dụ kiểm soát công nghệ chip</h3><p class="text-stone-600">Mục tiêu an ninh công nghệ cần giấy phép xuất khẩu, kiểm soát end-use/end-user, danh sách thực thể và quy tắc áp dụng ngoài lãnh thổ; thuế đơn thuần không kiểm soát được người dùng cuối.</p></div></div>
+</section>
+
+<!-- ================= CHAPTER 5 ================= -->
+<section id="ch5" class="tab-content hidden">
+<div class="mb-8"><h2 class="text-2xl md:text-3xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 5: Di chuyển quốc tế của các nguồn lực</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Syllabus:</strong> Di chuyển vốn quốc tế và di chuyển lao động quốc tế. Phân biệt tác động hiệu quả toàn cầu với tác động phân phối giữa lao động và chủ sở hữu vốn.</p></div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8"><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Di chuyển vốn quốc tế</h3><ul class="list-disc pl-5 space-y-2 text-stone-700"><li>Vốn có xu hướng chảy từ nơi có suất sinh lợi biên thấp sang nơi có suất sinh lợi biên cao.</li><li><strong>FDI:</strong> nhà đầu tư có quyền kiểm soát đáng kể đối với doanh nghiệp/tài sản ở nước ngoài; gắn với công nghệ, quản trị và chuỗi cung ứng.</li><li><strong>Portfolio investment:</strong> mua tài sản tài chính nhưng không kiểm soát hoạt động; thanh khoản cao và dễ đảo chiều hơn.</li><li>Di chuyển vốn làm tăng sản lượng thế giới khi vốn được tái phân bổ tới nơi có năng suất biên cao hơn.</li></ul><div class="exam-note mt-4"><strong>Phân phối:</strong> tổng lợi ích không đồng nghĩa mọi nhóm đều cùng được lợi. Thu nhập vốn và lao động ở hai nước thay đổi theo độ khan hiếm mới.</div></article><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Di chuyển lao động quốc tế</h3><div class="scroll-table"><table><thead><tr><th>Nhóm</th><th>Nước gửi lao động</th><th>Nước nhận lao động</th></tr></thead><tbody><tr><td>Tiền lương</td><td>Có xu hướng tăng</td><td>Có xu hướng giảm</td></tr><tr><td>Lao động ở lại/bản địa</td><td>Có lợi</td><td>Có thể chịu cạnh tranh</td></tr><tr><td>Chủ sở hữu vốn</td><td>Có thể giảm lợi tức</td><td>Có thể tăng lợi tức</td></tr><tr><td>GDP lãnh thổ</td><td>Có thể giảm</td><td>Tăng nhờ lao động bổ sung</td></tr><tr><td>Thu nhập quốc dân</td><td>Được hỗ trợ bởi thu nhập/kiều hối từ nước ngoài</td><td>Phải trừ phần thu nhập trả cho lao động nước ngoài</td></tr></tbody></table></div></article></div>
+
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-8"><div class="flex flex-col lg:flex-row gap-8 items-start"><div class="w-full lg:w-1/3"><h3 class="text-xl font-bold text-slate-800 mb-2">Mô hình một quốc gia: MPL = 20 − L</h3><p class="text-stone-600 mb-6">Kéo thanh trượt để quan sát lao động tăng làm tiền lương biên giảm và thay đổi phân phối giữa tổng lương và thu nhập vốn.</p><label class="flex justify-between font-bold text-slate-700 mb-2"><span>Lượng lao động L</span><span id="labor-val" class="text-teal-600 text-lg">10</span></label><input type="range" id="labor-slider" min="5" max="18" value="10" step="1" oninput="updateLaborChart()" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-teal-600"><div class="space-y-3 bg-stone-50 p-4 rounded-xl border border-stone-200 mt-5"><div class="flex justify-between"><span>Lương w</span><strong id="stat-wage">$10</strong></div><div class="flex justify-between"><span>Tổng lương wL</span><strong id="stat-labor-inc" class="text-blue-700">$100</strong></div><div class="flex justify-between"><span>Thu nhập vốn</span><strong id="stat-cap-inc" class="text-orange-700">$50</strong></div></div></div><div class="w-full lg:w-2/3"><div class="chart-container"><canvas id="laborChart"></canvas></div><p class="text-sm text-stone-600 mt-4">Diện tích dưới MPL là tổng sản lượng. Hình chữ nhật w×L là thu nhập lao động; phần còn lại dưới MPL là thu nhập của các yếu tố cố định/vốn trong mô hình đơn giản.</p></div></div></div>
+
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-8"><div class="flex flex-col lg:flex-row gap-8 items-start"><div class="w-full lg:w-1/3"><h3 class="text-xl font-bold text-slate-800 mb-2">Mô hình hai quốc gia (Bath-tub)</h3><p class="text-stone-600 mb-5">Tổng lao động thế giới là 35. Lao động dịch chuyển về nơi có lương cao cho đến khi w₁=w₂.</p><label class="flex justify-between font-bold text-slate-700 mb-2"><span>L₁: <span id="dual-l1-val" class="text-teal-600">20</span></span><span>L₂: <span id="dual-l2-val" class="text-rose-600">15</span></span></label><input type="range" id="dual-labor-slider" min="5" max="30" value="20" step="1" oninput="updateDualLaborChart()" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-teal-600"><div class="space-y-3 bg-stone-50 p-4 rounded-xl border border-stone-200 mt-5"><div class="flex justify-between"><span>w₁</span><strong id="dual-w1" class="text-teal-700">$10</strong></div><div class="flex justify-between"><span>w₂</span><strong id="dual-w2" class="text-rose-700">$14</strong></div><div id="dual-status" class="p-2 bg-amber-100 rounded text-center font-bold text-amber-800">Nước 1 chảy sang Nước 2</div></div></div><div class="w-full lg:w-2/3"><div class="chart-container"><canvas id="dualLaborChart"></canvas></div><p class="text-sm text-stone-600 mt-4">Điểm cân bằng của dữ liệu mô phỏng là L₁*=18, L₂*=17 và w*=12. Phần diện tích tăng thêm là mức tăng sản lượng thế giới nhờ tái phân bổ lao động.</p></div></div></div>
+
+<div class="bg-white p-6 rounded-xl border border-stone-200 mb-10"><h3 class="text-xl font-extrabold text-teal-800 mb-4">Bài giải live theo dữ liệu mô phỏng</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="space-y-4"><div class="solution-step"><strong>Phân bổ đang chọn</strong><p>L₁=<span id="ex-l1-calc" class="font-bold text-teal-700">20</span>; L₂=<span id="ex-l2-calc" class="font-bold text-rose-700">15</span>; tổng L=35.</p></div><div class="solution-step"><strong>Hướng di chuyển</strong><p id="ex-flow-text">Lao động chạy về nơi có lương cao hơn.</p></div><div class="solution-step border-green-500"><strong>Lượng điều chỉnh tới cân bằng</strong><p id="ex-move-calc">2 lao động di chuyển.</p></div></div><div class="bg-orange-50 border border-orange-200 rounded-xl p-5"><strong class="text-orange-900">Tác động tại <span id="ex-v2-country">Nước nhận</span></strong><p class="text-xs text-stone-500 mt-1 mb-3">Các chỉ tiêu dưới đây dựa trên giả định tuyến tính của mô hình và giả định toàn bộ tiền lương lao động di cư được chuyển về nước gửi.</p><div class="space-y-3"><div class="flex justify-between"><span>ΔGDP</span><strong class="text-green-700"><span id="ex-v2-gdp">26</span>$</strong></div><div class="flex justify-between"><span>Thu nhập trả lao động</span><span>−<span id="ex-v2-remit">24</span>$</span></div><div class="flex justify-between border-t border-orange-300 pt-2"><span>Phần còn lại cho yếu tố trong nước</span><strong class="text-orange-700">+<span id="ex-v2-gnp">2</span>$</strong></div></div></div></div></div>
+</section>
+
+<!-- ================= CHAPTER 6 ================= -->
+<section id="ch6" class="tab-content hidden">
+<div class="mb-8"><h2 class="text-2xl md:text-3xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 6: Hội nhập kinh tế quốc tế</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Nội dung:</strong> Các hình thức hội nhập, lý thuyết liên minh thuế quan, trade creation/trade diversion và các tác động tĩnh – động.</p></div>
+
+<div class="scroll-table mb-8"><table><thead><tr><th>Cấp độ</th><th>Tự do thương mại nội khối</th><th>Chính sách với bên ngoài</th><th>Di chuyển yếu tố / phối hợp chính sách</th></tr></thead><tbody><tr><td>PTA</td><td>Giảm thuế có chọn lọc</td><td>Mỗi nước tự quyết</td><td>Không</td></tr><tr><td>FTA</td><td>Xóa bỏ phần lớn rào cản nội khối</td><td>Mỗi nước giữ thuế riêng</td><td>Cần ROO để ngăn chuyển tải thương mại</td></tr><tr><td>Customs Union</td><td>Như FTA</td><td>Biểu thuế ngoại quan chung (CET)</td><td>ROO nội khối giảm vai trò phân biệt ưu đãi, nhưng quy tắc xuất xứ vẫn có thể tồn tại cho mục đích khác</td></tr><tr><td>Common Market</td><td>Như CU</td><td>CET</td><td>Tự do hơn đối với lao động và vốn</td></tr><tr><td>Economic Union</td><td>Như thị trường chung</td><td>Chung/hài hòa sâu</td><td>Phối hợp mạnh chính sách kinh tế; không phải mọi liên minh đều bắt buộc dùng chung tiền tệ</td></tr></tbody></table></div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8"><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Trade Creation</h3><p class="text-stone-700">Sau khi thành lập CU, nước thành viên thay thế sản xuất nội địa chi phí cao bằng nhập khẩu từ thành viên có chi phí thấp hơn.</p><div class="bg-green-50 border border-green-100 rounded-lg p-3 mt-4 text-green-900"><strong>Tác động:</strong> giảm chi phí thực, tăng hiệu quả và thường tăng phúc lợi.</div></article><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Trade Diversion</h3><p class="text-stone-700">Ưu đãi nội khối làm nhập khẩu chuyển từ nhà cung cấp ngoài khối hiệu quả nhất sang thành viên có chi phí cao hơn.</p><div class="bg-red-50 border border-red-100 rounded-lg p-3 mt-4 text-red-900"><strong>Tác động:</strong> giảm hiệu quả; phúc lợi có thể giảm vì mất nguồn thu thuế và tăng chi phí thực.</div></article></div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8"><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Tác động tĩnh</h3><ul class="list-disc pl-5 space-y-2 text-stone-700"><li>Trade creation và trade diversion.</li><li>Thay đổi thặng dư người tiêu dùng, nhà sản xuất và nguồn thu thuế.</li><li>Kết quả ròng phụ thuộc độ co giãn, mức thuế trước CU, chênh lệch chi phí và tỷ trọng thương mại.</li></ul></article><article class="knowledge-card"><h3 class="text-xl font-extrabold text-slate-800 mb-3">Tác động động</h3><ul class="list-disc pl-5 space-y-2 text-stone-700"><li>Quy mô thị trường lớn hơn và economies of scale.</li><li>Cạnh tranh nội khối mạnh hơn, giảm độc quyền và thúc đẩy năng suất.</li><li>Thu hút FDI, chuyển giao công nghệ, cải thiện sức mạnh đàm phán.</li><li>Rủi ro phân bố lợi ích không đều và chi phí điều chỉnh ngành.</li></ul></article></div>
+
+<div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 mb-8"><h3 class="text-xl font-extrabold text-teal-800 mb-4">Hai ví dụ nhận dạng</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-5"><div class="bg-green-50 border border-green-100 rounded-xl p-4"><strong class="text-green-800">Trade Creation</strong><p class="mt-2 text-green-900">A tự sản xuất giá 16. B giá 12, C giá 10; thuế ban đầu 100% làm A tự sản xuất. Lập CU với B → A nhập B giá 12 thay sản xuất 16: tạo lập thương mại.</p></div><div class="bg-red-50 border border-red-100 rounded-xl p-4"><strong class="text-red-800">Trade Diversion</strong><p class="mt-2 text-red-900">Thuế ban đầu 50% làm A nhập C với giá sau thuế 15. Lập CU với B → nhập B giá 12 dù chi phí thực B=12 cao hơn C=10: chuyển hướng thương mại.</p></div></div></div>
+
+<div class="space-y-3 mb-10"><details class="study-details"><summary>Khi nào CU có khả năng tạo lợi ích lớn?</summary><div class="detail-body"><ul class="list-disc pl-5 space-y-2"><li>Thuế trước hội nhập cao và trade creation tiềm năng lớn.</li><li>Các thành viên có cơ cấu sản xuất cạnh tranh, tạo nhiều khả năng thay thế nguồn chi phí cao.</li><li>Khối lớn, nhiều thành viên, chi phí vận chuyển nội khối thấp.</li><li>Chênh lệch chi phí giữa thành viên hiệu quả và nguồn ngoài khối nhỏ, hạn chế trade diversion.</li></ul></div></details><details class="study-details"><summary>Khung trả lời câu Customs Union</summary><div class="detail-body"><ol class="list-decimal pl-5 space-y-2"><li>So sánh chi phí thực của sản xuất nội địa, thành viên và ngoài khối.</li><li>Tính giá có thuế trước hội nhập.</li><li>Xác định nguồn cung trước và sau CU.</li><li>Kết luận TC hay TD dựa trên sự thay đổi nguồn cung và chi phí thực.</li><li>Phân tích phúc lợi, gồm tiêu dùng, sản xuất, thuế và tác động động.</li></ol></div></details></div>
 </section>
 </main>
 
 <!-- CORE SCRIPTS: CHARTS, CALCULATOR & TABS -->
 <script>
 // 1. Calculator ERP
-function calculateERP() { 
-    const tVal = document.getElementById('erp-t').value;
-    const tiVal = document.getElementById('erp-ti').value;
-    const aiVal = document.getElementById('erp-ai').value;
+function calculateERP() {
+    const tEl = document.getElementById('erp-t');
+    const tiEl = document.getElementById('erp-ti');
+    const aiEl = document.getElementById('erp-ai');
+    if (!tEl || !tiEl || !aiEl) return;
+    if (tEl.value === '' || tiEl.value === '' || aiEl.value === '') return;
 
-    // Check trường hợp chưa nhập đủ
-    if(!tVal || !tiVal || !aiVal) return; 
+    const t = Number(tEl.value) / 100;
+    const ti = Number(tiEl.value) / 100;
+    const ai = Number(aiEl.value);
+    if (![t, ti, ai].every(Number.isFinite)) return;
+    if (ai < 0 || ai >= 1) {
+        alert('Tỷ trọng đầu vào aᵢ phải thỏa 0 ≤ aᵢ < 1.');
+        return;
+    }
 
-    const t = parseFloat(tVal)/100;
-    const ti = parseFloat(tiVal)/100;
-    const ai = parseFloat(aiVal); 
+    const erp = ((t - ai * ti) / (1 - ai)) * 100;
+    const nominal = t * 100;
+    const resultBox = document.getElementById('erp-result-box');
+    const valueEl = document.getElementById('erp-value');
+    const noteEl = document.getElementById('erp-interpretation');
+    if (!resultBox || !valueEl || !noteEl) return;
 
-    // Check trường hợp nhập tào lao (chữ, ký tự đặc biệt)
-    if (isNaN(t) || isNaN(ti) || isNaN(ai)) return;
-    if (ai >= 1) { alert("Tỷ trọng ai phải < 1"); return; }
-
-    const ep = ((t-(ai*ti))/(1-ai)*100).toFixed(2); 
-    document.getElementById('erp-value').innerText = ep + "%"; 
-    document.getElementById('erp-interpretation').innerText = ep > (t*100) ? "Bảo hộ thực sự." : (ep < 0 ? "Bẫy ERP Âm - Bị trừng phạt" : "Bảo hộ kém.");
-    document.getElementById('erp-result-box').classList.remove('hidden'); 
-    
-    const rb = document.getElementById('erp-result-box'), vd = document.getElementById('erp-value');
-    if(ep > (t*100)) { rb.className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200"; vd.className="text-3xl font-extrabold text-green-700"; }
-    else if(ep < 0) { rb.className="mt-4 p-4 bg-red-50 rounded-lg border border-red-200"; vd.className="text-3xl font-extrabold text-red-700"; }
-    else { rb.className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200"; vd.className="text-3xl font-extrabold text-amber-700"; }
+    valueEl.textContent = erp.toFixed(2) + '%';
+    let note = '';
+    let boxClass = 'mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200';
+    let valueClass = 'text-3xl font-extrabold text-amber-700';
+    if (erp < 0) {
+        note = 'ERP âm: cấu trúc thuế làm giảm giá trị gia tăng trong nước.';
+        boxClass = 'mt-4 p-4 bg-red-50 rounded-lg border border-red-200';
+        valueClass = 'text-3xl font-extrabold text-red-700';
+    } else if (erp > nominal + 1e-9) {
+        note = 'Bảo hộ thực tế cao hơn mức thuế danh nghĩa.';
+        boxClass = 'mt-4 p-4 bg-green-50 rounded-lg border border-green-200';
+        valueClass = 'text-3xl font-extrabold text-green-700';
+    } else if (Math.abs(erp - nominal) <= 1e-9) {
+        note = 'Mức bảo hộ thực tế bằng mức bảo hộ danh nghĩa.';
+    } else {
+        note = 'Ngành vẫn được bảo hộ, nhưng thấp hơn mức thuế danh nghĩa.';
+    }
+    resultBox.className = boxClass;
+    valueEl.className = valueClass;
+    noteEl.textContent = note;
+    resultBox.classList.remove('hidden');
 }
 
 // 2. Charts Initialization
@@ -899,7 +528,7 @@ const sdLabelPlugin = {
 };
 
 function initSDChart() { 
-    const ctx = document.getElementById('sdChart').getContext('2d'); 
+    const canvas = document.getElementById('sdChart'); if (!canvas || typeof Chart === 'undefined') return; const ctx = canvas.getContext('2d'); 
     sdChart = new Chart(ctx, { 
         type: 'line', 
         data: { 
@@ -937,7 +566,7 @@ ctx.restore();
 };
 
 function initLaborChart() { 
-const ctx = document.getElementById('laborChart').getContext('2d'); 
+const canvas = document.getElementById('laborChart'); if (!canvas || typeof Chart === 'undefined') return; const ctx = canvas.getContext('2d'); 
 laborChart = new Chart(ctx, { 
 type: 'line', 
 data: { datasets: [ 
@@ -959,7 +588,7 @@ laborChart.data.datasets[1].data = [{x: 0, y: w}, {x: L, y: w}, {x: L, y: 0}]; l
 }
 
 function initDualLaborChart() { 
-const ctx = document.getElementById('dualLaborChart').getContext('2d'); 
+const canvas = document.getElementById('dualLaborChart'); if (!canvas || typeof Chart === 'undefined') return; const ctx = canvas.getContext('2d'); 
 dualLaborChart = new Chart(ctx, { type: 'line', data: { datasets: [ {label:'Cầu Nước 1 (MPL1)',data:[{x:0,y:30},{x:30,y:0}],borderColor:'#0d9488',borderWidth:3,fill:false,pointRadius:0,tension:0}, {label:'Cầu Nước 2 (MPL2)',data:[{x:6,y:0},{x:35,y:29}],borderColor:'#e11d48',borderWidth:3,fill:false,pointRadius:0,tension:0}, {label:'Vách ngăn',data:[],borderColor:'#6b7280',borderDash:[5,5],borderWidth:2,pointRadius:0,fill:false} ] }, options: {responsive:true,maintainAspectRatio:false,animation:{duration:300},plugins:{legend:{position:'top',labels:{boxWidth:12}},tooltip:{enabled:false}},scales:{x:{type:'linear',min:0,max:35,title:{display:true,text:'← LĐ Nước 1 (L1)   |   LĐ Nước 2 (L2) →',font:{weight:'bold'}}},y:{min:0,max:30,title:{display:true,text:'Tiền Lương (w)',font:{weight:'bold'}}}}} }); 
 updateDualLaborChart(); 
 }
@@ -1078,7 +707,7 @@ window.loginGoogleReal = () => auth.signInWithPopup(provider).catch(e => alert(e
 window.loginFromUnlock = () => auth.signInWithPopup(provider).catch(e => alert(e.message));
 window.continueAsGuest = () => { userRole = 'guest'; localStorage.setItem('onthi_role', 'guest'); document.getElementById('welcome-modal').classList.add('hidden'); updateUserUI(); forceSwitchTab('ch1'); };
 window.logoutReal = () => { if(confirm("Đăng xuất khỏi hệ thống?")) { auth.signOut().then(() => { userRole = null; localStorage.removeItem('onthi_role'); window.location.reload(); }); } };
-window.closeUnlockModal = () => { document.getElementById('unlock-modal').classList.add('opacity-0'); setTimeout(() => document.getElementById('unlock-modal').classList.add('hidden'), 300); pendingTabId = null; };
+window.closeUnlockModal = () => { const modal = document.getElementById('unlock-modal'); if (!modal) return; modal.classList.add('opacity-0'); setTimeout(() => modal.classList.add('hidden'), 300); pendingTabId = null; };
 
 function updateUserUI() {
 const loginBtn = document.getElementById('nav-login-btn'); const userProfile = document.getElementById('nav-user-profile');
@@ -1131,18 +760,17 @@ function forceSwitchTab(t) {
     const mobileNav = document.getElementById('mobile-nav');
     if (mobileNav) mobileNav.value = t;
     
-    if(t === 'ch6') { 
+    if(t === 'ch5') { 
         if(typeof laborChart !== 'undefined' && laborChart) laborChart.resize(); 
         if(typeof dualLaborChart !== 'undefined' && dualLaborChart) dualLaborChart.resize(); 
     } 
-    if(t === 'ch34' && typeof sdChart !== 'undefined' && sdChart) {
+    if(t === 'ch3' && typeof sdChart !== 'undefined' && sdChart) {
         sdChart.resize(); 
     }
 }
 
-window.onload = () => { initLaborChart(); initSDChart(); initDualLaborChart(); calculateERP(); };
+window.addEventListener('load', () => { initLaborChart(); initSDChart(); initDualLaborChart(); calculateERP(); const menuBtn = document.getElementById('mobile-sidebar-btn'); const nav = document.getElementById('mobile-nav'); if (menuBtn && nav) menuBtn.addEventListener('click', () => nav.focus()); });
 </script>
 </body>
 </html>
-
 
