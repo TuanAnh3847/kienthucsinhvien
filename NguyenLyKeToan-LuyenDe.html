@@ -129,34 +129,10 @@
 
   <section id="cloud" class="tab-content hidden">
     <div class="mb-8"><h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Kết nối Firestore Cloud</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Trang này đã chuẩn bị sẵn logic đọc dữ liệu từ Firestore. Nếu Firestore chưa có dữ liệu hoặc rules chưa mở, hệ thống tự chạy bằng dữ liệu local để không bị trắng trang.</p></div>
-    <div class="grid lg:grid-cols-2 gap-6">
-      <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
-        <h3 class="font-black text-slate-900 text-lg mb-3">📁 Collection đề xuất</h3>
-        <pre class="bg-stone-900 text-teal-100 text-xs p-4 rounded-xl overflow-x-auto"><code>accountingExerciseSets / {setId}
-  title: string
-  category: "chapter" | "quiz" | "exam"
-  mode: "mcq" | "problem"
-  chapter: string
-  difficulty: string
-  duration: number
-  description: string
-  questions: array       // for MCQ
-  caseHtml: string       // for long problem
-  requirements: array
-  solutionHtml: string
-  order: number
-
-accountingAttempts / {attemptId}
-  userId: string
-  email: string
-  setId: string
-  score: number
-  total: number
-  submittedAt: serverTimestamp()</code></pre>
-      </div>
-      <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
-        <div id="cloud-status" class="mt-4 text-sm bg-stone-50 border border-stone-200 rounded-xl p-4 text-stone-700">Trạng thái: đang dùng dữ liệu local hoặc chờ kết nối Firestore.</div>
-      </div>
+    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
+      <h3 class="font-black text-slate-900 text-lg mb-2">☁️ Trạng thái dữ liệu</h3>
+      <p class="text-sm text-stone-600">Bộ đề tích hợp luôn sẵn sàng. Khi có kết nối, hệ thống sẽ tự kiểm tra và cập nhật nội dung mới nhất từ cloud.</p>
+      <div id="cloud-status" class="mt-4 text-sm bg-stone-50 border border-stone-200 rounded-xl p-4 text-stone-700">Nội dung local đã sẵn sàng.</div>
     </div>
   </section>
 
@@ -330,42 +306,52 @@ function sanitizeRichHtml(html) {
   return cleanFragment;
 }
 
-function setCloudStatus(status, message, emphasizedText = '') {
+function setCloudStatus(status, message) {
   if (!status) return;
   clearElement(status);
   status.appendChild(document.createTextNode(message));
-  if (emphasizedText) {
-    const strong = document.createElement('strong');
-    strong.textContent = emphasizedText;
-    status.appendChild(strong);
-    status.appendChild(document.createTextNode('.'));
-  }
 }
 
 async function loadExerciseSets() {
+  const status = document.getElementById('cloud-status');
+  setCloudStatus(status, 'Nội dung local đã sẵn sàng. Đang kiểm tra bản cập nhật từ cloud.');
+
+  try {
+    if (!(window.firebase && firebase.apps && firebase.apps.length && firebase.firestore)) {
+      setCloudStatus(status, 'Nội dung local đã sẵn sàng. Cloud hiện chưa khả dụng.');
+      return;
+    }
+
+    const snap = await firebase.firestore().collection('accountingExerciseSets').orderBy('order').get();
+    const cloudSets = snap.docs
+      .map(doc => normalizeExerciseSet({ ...doc.data(), id: doc.id }, doc.id))
+      .filter(isUsableExerciseSet)
+      .sort((a,b) => a.order - b.order);
+
+    if (cloudSets.length) {
+      exerciseSets = cloudSets;
+      renderAll();
+      setCloudStatus(status, '✅ Đã cập nhật bộ đề mới nhất từ cloud.');
+    } else {
+      setCloudStatus(status, 'ℹ️ Chưa có bản cập nhật cloud hợp lệ. Bạn vẫn có thể dùng đầy đủ dữ liệu local.');
+    }
+  } catch (err) {
+    console.warn('Cloud exercise loading failed:', err);
+    setCloudStatus(status, '⚠️ Không thể kết nối cloud lúc này. Bạn vẫn có thể tiếp tục với dữ liệu local.');
+  }
+}
+
+function isUsableExerciseSet(set) {
+  if (!set || !set.id || !['chapter', 'quiz', 'exam'].includes(set.category)) return false;
+  if (set.mode === 'problem') return set.requirements.length > 0;
+  return set.questions.length > 0
+    && set.questions.every(question => question.options.length > 0 && Number.isInteger(question.answer));
+}
+
+function renderLocalExerciseSets() {
   exerciseSets = LOCAL_SETS
     .map((set, index) => normalizeExerciseSet(set, `local-set-${index + 1}`))
     .sort((a,b) => a.order - b.order);
-  const status = document.getElementById('cloud-status');
-  try {
-    if (window.firebase && firebase.apps && firebase.apps.length && firebase.firestore) {
-      const snap = await firebase.firestore().collection('accountingExerciseSets').orderBy('order').get();
-      if (!snap.empty) {
-        exerciseSets = snap.docs
-          .map(doc => normalizeExerciseSet({ ...doc.data(), id: doc.id }, doc.id))
-          .sort((a,b) => a.order - b.order);
-        setCloudStatus(status, '✅ Đã đọc dữ liệu từ Firestore collection ', 'accountingExerciseSets');
-      } else {
-        setCloudStatus(status, 'ℹ️ Firestore đã kết nối nhưng collection đang rỗng, trang đang dùng dữ liệu local.');
-      }
-    }
-  } catch (err) {
-    setCloudStatus(
-      status,
-      '⚠️ Chưa đọc được Firestore nên đang dùng dữ liệu local. Lý do: '
-        + safeText(err && err.message, 'Không xác định')
-    );
-  }
   renderAll();
 }
 
@@ -631,7 +617,8 @@ async function submitQuiz() {
   result.appendChild(createElement('div', 'text-lg font-black mb-2', `${percent}% correct`));
   result.appendChild(createElement('p', 'text-sm text-stone-700', message));
   box.appendChild(result);
-  await saveAttempt(score, total);
+  const saveOutcome = await saveAttempt(score, total);
+  appendAttemptSaveFeedback(result, saveOutcome);
 }
 
 function renderProblemSet(set) {
@@ -690,10 +677,12 @@ function renderProblemSet(set) {
 function toggleSolution() { document.getElementById('problem-solution')?.classList.toggle('hidden'); }
 
 async function saveAttempt(score,total) {
+  if (!(window.firebase && firebase.auth)) return 'guest';
+  const user = firebase.auth().currentUser;
+  if (!user) return 'guest';
+  if (!(firebase.apps && firebase.apps.length && firebase.firestore)) return 'failed';
+
   try {
-    if (!(window.firebase && firebase.apps && firebase.apps.length && firebase.firestore && firebase.auth)) return;
-    const user = firebase.auth().currentUser;
-    if (!user) return;
     await firebase.firestore().collection('accountingAttempts').add({
       userId: user.uid,
       email: user.email || '',
@@ -703,22 +692,30 @@ async function saveAttempt(score,total) {
       total,
       submittedAt: firebase.firestore.FieldValue.serverTimestamp()
     });
-  } catch (err) { console.warn('Save attempt failed:', err.message); }
+    return 'saved';
+  } catch (err) {
+    console.warn('Save attempt failed:', err);
+    return 'failed';
+  }
 }
 
-function initAuthUi() {
-  try {
-    if (!(window.firebase && firebase.auth)) { document.getElementById('nav-login-btn')?.classList.remove('hidden'); return; }
-    firebase.auth().onAuthStateChanged(user => {
-      const loginBtn = document.getElementById('nav-login-btn');
-      const profile = document.getElementById('nav-user-profile');
-      if (user) {
-        loginBtn?.classList.add('hidden'); profile?.classList.remove('hidden');
-        const avatar = document.getElementById('user-avatar'); if (avatar) avatar.src = user.photoURL || '/android-chrome-192x192.png';
-        const name = document.getElementById('user-name'); if (name) name.textContent = user.displayName || 'Sinh viên';
-      } else { loginBtn?.classList.remove('hidden'); profile?.classList.add('hidden'); }
-    });
-  } catch(e) { document.getElementById('nav-login-btn')?.classList.remove('hidden'); }
+function appendAttemptSaveFeedback(container, outcome) {
+  if (!container || outcome === 'guest') return;
+  const saved = outcome === 'saved';
+  const feedback = createElement(
+    'p',
+    `mt-4 rounded-xl border p-3 text-sm font-bold ${
+      saved
+        ? 'border-green-200 bg-green-100 text-green-800'
+        : 'border-amber-200 bg-amber-100 text-amber-900'
+    }`,
+    saved
+      ? 'Kết quả đã được lưu'
+      : 'Không thể lưu kết quả, điểm của bạn vẫn hiển thị trên thiết bị này'
+  );
+  feedback.setAttribute('role', 'status');
+  feedback.setAttribute('aria-live', 'polite');
+  container.appendChild(feedback);
 }
 
 function fakeOnlineCount() {
@@ -730,8 +727,8 @@ function fakeOnlineCount() {
 
 document.addEventListener('DOMContentLoaded', () => {
   fakeOnlineCount();
-  setTimeout(initAuthUi, 700);
-  setTimeout(loadExerciseSets, 900);
+  renderLocalExerciseSets();
+  loadExerciseSets();
 });
 </script>
 </body>
