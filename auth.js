@@ -58,11 +58,13 @@ function saveUserInfo(user) {
         last_login_time: now 
     };
 
-    // 1. Cập nhật thông tin cơ bản & Thời gian đăng nhập cuối
+    // Cập nhật profile và thời gian hoạt động khi khôi phục hoặc thay đổi session.
     db.ref("users/" + user.uid).update(data).catch(console.error);
+}
 
-    // 2. Ghi chú vào sổ Lịch sử đăng nhập
-    db.ref("users/" + user.uid + "/login_history").push(now).catch(console.error);
+function recordLoginHistory(user) {
+    const now = new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" });
+    return db.ref("users/" + user.uid + "/login_history").push(now);
 }
 
 
@@ -160,6 +162,17 @@ window.loginGoogleReal = () => {
 
     try {
         loginInFlight = Promise.resolve(auth.signInWithPopup(provider))
+            .then(async (credential) => {
+                if (!credential?.user) return credential;
+
+                try {
+                    await recordLoginHistory(credential.user);
+                } catch (error) {
+                    console.error("Không thể ghi lịch sử đăng nhập:", error);
+                }
+
+                return credential;
+            })
             .catch(handleGoogleSignInError)
             .finally(() => {
                 loginInFlight = null;
