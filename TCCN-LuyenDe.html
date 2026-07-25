@@ -3132,7 +3132,35 @@ function clearMistakes(){ if(confirm('Xóa toàn bộ danh sách câu sai trên 
 
 function startChapter(chapter) { const qs = QUESTION_BANK.filter(q => q.chapter === chapter); startSession({title: chapter, questions: qs, mode:'study', showInstant:true, countdown:false, minutes:0, source:'chapter'}); }
 function startQuick20() { startSession({title:'Test nhanh 20 câu', questions: shuffle(QUESTION_BANK).slice(0,20), mode:'study', showInstant:true, countdown:false, minutes:0, source:'quick'}); }
-function startWeak20() { const wrongQs = QUESTION_BANK.filter(q => getWrongIds().includes(q.id)); const fill = QUESTION_BANK.filter(q => !getWrongIds().includes(q.id)); const qs = shuffle([...shuffle(wrongQs).slice(0,14), ...shuffle(fill).slice(0,6)]).slice(0,20); startSession({title:'20 câu ưu tiên câu sai', questions: qs.length?qs:shuffle(QUESTION_BANK).slice(0,20), mode:'study', showInstant:true, countdown:false, minutes:0, source:'weak'}); }
+function normalizeWrongIds(questionBank, wrongIds) {
+  const validQuestionIds = new Set(questionBank.map(question => question.id));
+  return [...new Set(Array.isArray(wrongIds) ? wrongIds : [])].filter(id => validQuestionIds.has(id));
+}
+function buildWeak20Questions(questionBank, wrongIds) {
+  const questionsById = new Map();
+  questionBank.forEach(question => {
+    if (question && question.id != null && !questionsById.has(question.id)) questionsById.set(question.id, question);
+  });
+  const uniqueQuestions = [...questionsById.values()];
+  const validWrongIds = normalizeWrongIds(uniqueQuestions, wrongIds);
+  const preferredQuestions = shuffle(validWrongIds).slice(0, 14).map(id => questionsById.get(id));
+  const targetSize = Math.min(20, uniqueQuestions.length);
+  const wrongIdSet = new Set(validWrongIds);
+  const fillQuestions = shuffle(uniqueQuestions.filter(question => !wrongIdSet.has(question.id)))
+    .slice(0, targetSize - preferredQuestions.length);
+  const selectedQuestions = [...preferredQuestions, ...fillQuestions];
+  const selectedIds = new Set(selectedQuestions.map(question => question.id));
+  const fallbackQuestions = shuffle(uniqueQuestions.filter(question => !selectedIds.has(question.id)))
+    .slice(0, targetSize - selectedQuestions.length);
+  return shuffle([...selectedQuestions, ...fallbackQuestions]);
+}
+function startWeak20() {
+  const storedWrongIds = getWrongIds();
+  const validWrongIds = normalizeWrongIds(QUESTION_BANK, storedWrongIds);
+  if (JSON.stringify(storedWrongIds) !== JSON.stringify(validWrongIds)) setWrongIds(validWrongIds);
+  const qs = buildWeak20Questions(QUESTION_BANK, validWrongIds);
+  startSession({title:'20 câu ưu tiên câu sai', questions: qs, mode:'study', showInstant:true, countdown:false, minutes:0, source:'weak'});
+}
 function startMistakes() { const qs = QUESTION_BANK.filter(q => getWrongIds().includes(q.id)); if(qs.length) startSession({title:'Ôn lại câu sai', questions: qs, mode:'study', showInstant:true, countdown:false, minutes:0, source:'mistakes'}); }
 function startExam(index) { const c=window.__examCards[index]; startSession({title:c.title, questions:c.type==='random'?shuffle(QUESTION_BANK).slice(0,50):c.questions, mode:'exam', showInstant:false, countdown:true, minutes:c.minutes, source:'exam'}); }
 
