@@ -750,6 +750,19 @@
 <!-- SCRIPT: UI & INTERACTIVE TOOLS -->
 <script>
 // 1. SWOT Strategy Generator (Giữ nguyên đồ xịn của sếp)
+function renderSWOTResult(elementId, text, isPlaceholder = false) {
+    const result = document.getElementById(elementId);
+    const content = document.createElement('span');
+
+    if (isPlaceholder) {
+        content.className = 'text-stone-400 italic';
+    }
+
+    content.textContent = text;
+    result.replaceChildren();
+    result.appendChild(content);
+}
+
 function generateSWOTStrategies() {
     const s = document.getElementById('swot-s').value.trim();
     const w = document.getElementById('swot-w').value.trim();
@@ -760,17 +773,17 @@ function generateSWOTStrategies() {
     resBox.classList.remove('hidden');
 
     if(!s && !w && !o && !t) {
-        document.getElementById('res-so').innerHTML = '<span class="text-stone-400 italic">Nhập Dữ liệu S và O</span>';
-        document.getElementById('res-st').innerHTML = '<span class="text-stone-400 italic">Nhập Dữ liệu S và T</span>';
-        document.getElementById('res-wo').innerHTML = '<span class="text-stone-400 italic">Nhập Dữ liệu W và O</span>';
-        document.getElementById('res-wt').innerHTML = '<span class="text-stone-400 italic">Nhập Dữ liệu W và T</span>';
+        renderSWOTResult('res-so', 'Nhập Dữ liệu S và O', true);
+        renderSWOTResult('res-st', 'Nhập Dữ liệu S và T', true);
+        renderSWOTResult('res-wo', 'Nhập Dữ liệu W và O', true);
+        renderSWOTResult('res-wt', 'Nhập Dữ liệu W và T', true);
         return;
     }
 
-    document.getElementById('res-so').innerHTML = (s && o) ? `Phát huy: "${s}" để thâu tóm: "${o}"` : '<span class="text-stone-400 italic">-</span>';
-    document.getElementById('res-st').innerHTML = (s && t) ? `Lấy lợi thế: "${s}" làm khiên đỡ: "${t}"` : '<span class="text-stone-400 italic">-</span>';
-    document.getElementById('res-wo').innerHTML = (w && o) ? `Nâng cấp: "${w}" để không mất: "${o}"` : '<span class="text-stone-400 italic">-</span>';
-    document.getElementById('res-wt').innerHTML = (w && t) ? `Cấp bách: Sửa "${w}" để sống sót qua "${t}"` : '<span class="text-stone-400 italic">-</span>';
+    renderSWOTResult('res-so', (s && o) ? `Phát huy: "${s}" để thâu tóm: "${o}"` : '-', !(s && o));
+    renderSWOTResult('res-st', (s && t) ? `Lấy lợi thế: "${s}" làm khiên đỡ: "${t}"` : '-', !(s && t));
+    renderSWOTResult('res-wo', (w && o) ? `Nâng cấp: "${w}" để không mất: "${o}"` : '-', !(w && o));
+    renderSWOTResult('res-wt', (w && t) ? `Cấp bách: Sửa "${w}" để sống sót qua "${t}"` : '-', !(w && t));
 }
 
 // 2. Leadership Grid Simulator (Giữ nguyên đồ xịn của sếp)
