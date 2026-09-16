@@ -56,6 +56,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 .timeline-dot { position: relative; }
 .timeline-dot::before { content: ''; position: absolute; left: -29px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background-color: #0d9488; border: 2px solid #fff; box-shadow: 0 0 0 2px #0d9488; }
 </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -77,7 +78,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 <span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
 <div class="flex-grow border-t border-stone-200"></div>
 </div>
-<button onclick="window.location.href='index.html'" 
+<button onclick="window.location.href='/'"
         style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
         onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
         onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
@@ -86,22 +87,11 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 </div>
-<script>
-document.addEventListener('keydown', (event) => {
-    const modal = document.getElementById('welcome-modal');
-    if (event.key === 'Escape' && modal && !modal.classList.contains('hidden') && typeof hideWelcomeModal === 'function') {
-        event.preventDefault();
-        hideWelcomeModal();
-    }
-});
-</script>
-
-
 <!-- Navbar -->
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center min-h-[4rem] py-2 flex-wrap md:flex-nowrap gap-y-2">
-<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand & Tên Môn Học -->
+<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand &amp; Tên Môn Học -->
         
 
         <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
@@ -118,7 +108,29 @@ document.addEventListener('keydown', (event) => {
 
 
 <!-- CÁC CHƯƠNG ĐÃ TÁCH RỜI (Gói trọn bằng flex-wrap để tự động rớt dòng nếu thiếu chỗ) -->
-<div class="hidden md:flex flex-wrap flex-1 justify-center gap-1.5 items-center px-4" id="nav-menu">
+
+
+<div class="flex items-center shrink-0">
+<!-- BỘ ĐẾM SỐ ONLINE -->
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+            <span id="online-count" class="mr-1 sm:mr-1">...</span>
+            <span class="hidden sm:inline">online</span>
+        </div>
+
+<!-- User Profile / Login Area -->
+<div class="border-l border-stone-300 pl-4">
+<button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+<div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+<img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="chapter-nav" id="nav-menu">
 <button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2.5 py-1.5 text-sm font-medium transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.1: Nhà Nước</button>
 <button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.2: IGOs</button>
 <button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.3: PL Chung</button>
@@ -127,35 +139,14 @@ document.addEventListener('keydown', (event) => {
 <button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100 flex items-center gap-1">Ch.6: Vi Phạm <span class="premium-lock text-xs"></span></button>
 <button onclick="attemptSwitchTab('ch7')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100 flex items-center gap-1">Ch.7: HTPL VN <span class="premium-lock text-xs"></span></button>
 </div>
-
-<div class="flex items-center shrink-0">
-<!-- BỘ ĐẾM SỐ ONLINE -->
-        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
-            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
-            <span id="online-count" class="mr-1 sm:mr-1">...</span> 
-            <span class="hidden sm:inline">online</span>
-        </div>
-
-<!-- User Profile / Login Area -->
-<div class="border-l border-stone-300 pl-4">
-<button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-<div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-<img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
-<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Mobile Menu -->
-<div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+<div class="chapter-select-row relative">
 <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
 <option value="ch1">Chương 1: Những Vấn Đề Cơ Bản Về Nhà Nước</option>
 <option value="ch2">Chương 2: Tổ Chức Liên Chính Phủ (IGOs)</option>
 <option value="ch3">Chương 3: Những Vấn Đề Chung Về Pháp Luật</option>
 <option value="ch4">Chương 4: Quy Phạm Pháp Luật</option>
 <option value="ch5">Chương 5: Quan Hệ Pháp Luật</option>
-<option value="ch6">Chương 6: Vi Phạm PL & TNPL</option>
+<option value="ch6">Chương 6: Vi Phạm PL &amp; TNPL</option>
 <option value="ch7">Chương 7: Hệ Thống PL VN</option>
 </select>
 
@@ -180,7 +171,7 @@ document.addEventListener('keydown', (event) => {
 </li>
 <li class="flex items-start">
 <span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
-<span><strong>Timeline Lịch sử & Bậc văn bản:</strong> Xem các luồng sự kiện và trật tự hệ thống luật từ trên xuống dưới một cách trực quan.</span>
+<span><strong>Timeline Lịch sử &amp; Bậc văn bản:</strong> Xem các luồng sự kiện và trật tự hệ thống luật từ trên xuống dưới một cách trực quan.</span>
 </li>
 <li class="flex items-start">
 <span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
@@ -197,7 +188,7 @@ document.addEventListener('keydown', (event) => {
 <p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Nắm vững cội nguồn hình thành nhà nước theo các trường phái khác nhau, hiểu rõ tại sao nhà nước lại cần thu thuế và ban hành pháp luật để duy trì quyền lực công cộng. Các ví dụ minh họa sẽ giúp bạn vượt qua dễ dàng các câu hỏi tình huống trắc nghiệm.</p>
 </div>
 
-<!-- Nguồn gốc & Hình thành -->
+<!-- Nguồn gốc &amp; Hình thành -->
 <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
     <!-- Các học thuyết -->
     <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 hover:shadow-md transition-shadow">
@@ -314,7 +305,7 @@ document.addEventListener('keydown', (event) => {
         <div class="flex items-start gap-3">
             <div class="bg-teal-100 text-teal-700 p-2 rounded-lg text-xl">🗺️</div>
             <div>
-                <strong class="text-slate-800 block mb-1">1. Quản lý dân cư & lãnh thổ.</strong>
+                <strong class="text-slate-800 block mb-1">1. Quản lý dân cư &amp; lãnh thổ.</strong>
                 <p class="text-sm text-stone-600">Quản lý theo các đơn vị hành chính lãnh thổ (Tỉnh, Huyện, Xã) thay vì theo huyết thống hay bộ tộc như thời kỳ nguyên thủy. Gắn liền với việc cấp CCCD, hộ khẩu.</p>
             </div>
         </div>
@@ -366,7 +357,7 @@ document.addEventListener('keydown', (event) => {
 <p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Nắm vững địa vị pháp lý, đặc điểm và cách thức phân loại các IGOs. Đặc biệt lưu ý nhóm các tổ chức kinh tế toàn cầu và khu vực, vì đây là những chủ thể có tác động trực tiếp đến môi trường kinh doanh quốc tế và các hiệp định thương mại tự do (FTA).</p>
 </div>
 
-<!-- Khái niệm & Đặc điểm -->
+<!-- Khái niệm &amp; Đặc điểm -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
     <!-- Khái niệm -->
     <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 flex flex-col">
@@ -710,7 +701,7 @@ document.addEventListener('keydown', (event) => {
 <p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Quy phạm pháp luật là những "viên gạch" nhỏ nhất xây dựng nên hệ thống pháp luật. Nắm vững kỹ năng phân tích 3 thành phần: <strong>Giả định - Quy định - Chế tài</strong> là kỹ năng sống còn để làm bài tập tình huống.</p>
 </div>
 
-<!-- Khái niệm & Đặc điểm -->
+<!-- Khái niệm &amp; Đặc điểm -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
     <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 flex flex-col justify-center">
         <h3 class="text-lg font-bold text-teal-900 mb-3 border-b border-stone-100 pb-2">Khái niệm QPPL</h3>
@@ -812,10 +803,10 @@ document.addEventListener('keydown', (event) => {
 <p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> Quan hệ pháp luật thực chất là quan hệ xã hội được "mặc áo" pháp lý. Chìa khóa của chương này là phân biệt rõ <strong>Năng lực pháp luật</strong> và <strong>Năng lực hành vi</strong>, cũng như cách xác định <strong>Sự kiện pháp lý</strong> làm phát sinh quan hệ đó.</p>
 </div>
 
-<!-- Khái niệm & SKPL -->
+<!-- Khái niệm &amp; SKPL -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
     <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 flex flex-col">
-        <h3 class="text-xl font-bold text-teal-800 mb-4 border-b border-stone-100 pb-2">Khái niệm & Đặc điểm</h3>
+        <h3 class="text-xl font-bold text-teal-800 mb-4 border-b border-stone-100 pb-2">Khái niệm &amp; Đặc điểm</h3>
         <p class="text-sm text-stone-700 mb-3 leading-relaxed"><strong>Quan hệ pháp luật</strong> là một quan hệ xã hội được điều chỉnh bởi quy phạm pháp luật.</p>
         <div class="text-sm font-bold text-rose-800 bg-rose-50 p-3 rounded-lg border border-rose-200 mb-4 flex items-center gap-2">
             <span class="text-xl">🔑</span>
@@ -872,7 +863,7 @@ document.addEventListener('keydown', (event) => {
             <div class="space-y-3">
                 <div class="bg-white p-3 rounded border border-blue-200">
                     <strong class="text-blue-700 block mb-1">Quyền (Rights):</strong>
-                    <p class="text-stone-600 text-xs">Khả năng hành động theo luật, yêu cầu chủ thể khác thực hiện nghĩa vụ hoặc yêu cầu NN bảo vệ. (Gồm quyền tuyệt đối & tương đối).</p>
+                    <p class="text-stone-600 text-xs">Khả năng hành động theo luật, yêu cầu chủ thể khác thực hiện nghĩa vụ hoặc yêu cầu NN bảo vệ. (Gồm quyền tuyệt đối &amp; tương đối).</p>
                 </div>
                 <div class="bg-white p-3 rounded border border-blue-200">
                     <strong class="text-rose-700 block mb-1">Nghĩa vụ (Duties):</strong>
@@ -939,11 +930,11 @@ document.addEventListener('keydown', (event) => {
 <!-- ================= SECTION: CHƯƠNG 6 (PREMIUM) ================= -->
 <section id="ch6" class="tab-content hidden">
 <div class="mb-8">
-<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 6: Vi Phạm Pháp Luật & Trách Nhiệm Pháp Lý <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">Chương 6: Vi Phạm Pháp Luật &amp; Trách Nhiệm Pháp Lý <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span></h2>
 <p class="text-stone-600 bg-teal-50 p-4 rounded-lg text-sm"><strong>Mục tiêu trọng tâm:</strong> "Không có lỗi thì không có vi phạm". Chương này yêu cầu bạn phải phân tích được 4 yếu tố cấu thành một vi phạm pháp luật và đặc biệt phải nắm trọn điểm phần <strong>Phân loại Lỗi</strong> (Cố ý vs Vô ý).</p>
 </div>
 
-<!-- Dấu hiệu & Cấu thành -->
+<!-- Dấu hiệu &amp; Cấu thành -->
 <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
     <!-- 4 Dấu hiệu -->
     <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
@@ -1065,9 +1056,9 @@ document.addEventListener('keydown', (event) => {
     </div>
 </div>
 
-<!-- Trách nhiệm pháp lý & Chế tài -->
+<!-- Trách nhiệm pháp lý &amp; Chế tài -->
 <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
-    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2">Trách Nhiệm Pháp Lý & 4 Loại Chế Tài</h3>
+    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-stone-100 pb-2">Trách Nhiệm Pháp Lý &amp; 4 Loại Chế Tài</h3>
     <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 text-sm text-blue-900 rounded-r">
         <strong>Khái niệm:</strong> Trách nhiệm pháp lý là quan hệ pháp luật đặc biệt giữa Nhà nước và chủ thể vi phạm. Nhà nước có quyền áp dụng biện pháp cưỡng chế/trừng phạt, chủ thể vi phạm có nghĩa vụ gánh chịu hậu quả bất lợi. <strong>Đặc điểm nổi bật nhất:</strong> Mang tính cưỡng chế nhà nước (State coercion).
     </div>
@@ -1156,7 +1147,7 @@ document.addEventListener('keydown', (event) => {
     </div>
 </div>
 
-<!-- Hiệu lực văn bản & Hồi tố -->
+<!-- Hiệu lực văn bản &amp; Hồi tố -->
 <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-8">
     <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-stone-100 pb-2 text-center">Hiệu Lực Văn Bản Quy Phạm Pháp Luật</h3>
     

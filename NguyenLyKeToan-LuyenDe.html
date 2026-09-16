@@ -37,12 +37,13 @@
 .option-wrong { border-color: #f43f5e !important; background: #ffe4e6 !important; color: #9f1239; }
 .pill { border: 1px solid #ccfbf1; background: #f0fdfa; color: #0f766e; }
 </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
+    <div class="site-header-row flex justify-between items-center h-16">
       <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
         <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
         <div class="flex flex-col justify-center min-w-0">
@@ -52,12 +53,7 @@
           </div>
         </div>
       </a>
-      <div class="hidden md:flex space-x-1 items-center" id="nav-menu">
-        <button onclick="switchMainTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
-        <button onclick="switchMainTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
-        <button onclick="switchMainTab('quiz')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Trắc nghiệm</button>
-        <button onclick="switchMainTab('exam')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Luyện đề</button>
-      </div>
+
       <div class="flex items-center shrink-0">
         <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
           <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
@@ -65,15 +61,21 @@
         </div>
         <div class="border-l border-stone-300 pl-3 sm:pl-4">
           <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-          <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-            <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+          <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+            <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
             <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh viên</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
-      <select id="mobile-nav" onchange="switchMainTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+    <div class="chapter-nav" id="nav-menu">
+        <button onclick="switchMainTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
+        <button onclick="switchMainTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
+        <button onclick="switchMainTab('quiz')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Trắc nghiệm</button>
+        <button onclick="switchMainTab('exam')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Luyện đề</button>
+      </div>
+<div class="chapter-select-row relative">
+      <select id="mobile-nav" aria-label="Chọn chương" onchange="switchMainTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
         <option value="overview">Tổng quan</option><option value="chapter">Luyện theo chương</option><option value="quiz">Luyện trắc nghiệm</option><option value="exam">Luyện đề</option>
       </select>
     </div>
@@ -99,7 +101,7 @@
           <p class="text-xs uppercase tracking-widest text-teal-300 font-black mb-4">Tình trạng nội dung</p>
           <div class="grid grid-cols-2 gap-3" id="overview-stats"></div>
           <div class="mt-5 rounded-xl bg-white/10 p-4 border border-white/10">
-            <p class="text-sm text-stone-200"><strong>Flow:</strong> Chọn mục → Làm câu hỏi/dè → Nộp bài → Xem đáp án & giải thích → Lưu điểm lên Firestore nếu đã kết nối.</p>
+            <p class="text-sm text-stone-200"><strong>Flow:</strong> Chọn mục → Làm câu hỏi/dè → Nộp bài → Xem đáp án &amp; giải thích → Lưu điểm lên Firestore nếu đã kết nối.</p>
           </div>
         </div>
       </div>
@@ -718,15 +720,8 @@ function appendAttemptSaveFeedback(container, outcome) {
   container.appendChild(feedback);
 }
 
-function fakeOnlineCount() {
-  const el = document.getElementById('online-count');
-  if (!el) return;
-  const base = 18 + Math.floor(Math.random()*9);
-  el.textContent = base;
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-  fakeOnlineCount();
   renderLocalExerciseSets();
   loadExerciseSets();
 });

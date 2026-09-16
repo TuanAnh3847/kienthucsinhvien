@@ -85,6 +85,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 }
 
 </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -106,7 +107,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 <span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
 <div class="flex-grow border-t border-stone-200"></div>
 </div>
-<button onclick="window.location.href='index.html'" 
+<button onclick="window.location.href='/'"
         style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
         onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
         onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
@@ -115,23 +116,11 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 </div>
-<script>
-document.addEventListener('keydown', (event) => {
-    const modal = document.getElementById('welcome-modal');
-    if (event.key === 'Escape' && modal && !modal.classList.contains('hidden') && typeof hideWelcomeModal === 'function') {
-        event.preventDefault();
-        hideWelcomeModal();
-    }
-});
-</script>
-
-
-
 <!-- Navbar -->
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-16">
-<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand & Tên Môn Học -->
+<div class="site-header-row flex justify-between items-center h-16">
+<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand &amp; Tên Môn Học -->
 
         <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
             <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
@@ -144,27 +133,20 @@ document.addEventListener('keydown', (event) => {
             </div>
         </a>
 
-<div class="hidden xl:flex space-x-0.5 items-center" id="nav-menu">
-<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2 py-2 text-xs font-medium transition-colors hover:text-teal-600">Ch.1: Cổ điển</button>
-<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Hiện đại</button>
-<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3: Thuế quan</button>
-<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.4: Phi thuế quan</button>
-<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.5: Nguồn lực</button>
-<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.6: Hội nhập</button>
-</div>
+
 
 <div class="flex items-center shrink-0">
         <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
             <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
-            <span id="online-count" class="mr-1 sm:mr-1">...</span> 
+            <span id="online-count" class="mr-1 sm:mr-1">...</span>
             <span class="hidden sm:inline">online</span>
         </div>
 
 <!-- User Profile / Login Area -->
 <div class="border-l border-stone-300 pl-4">
 <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-<div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-<img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+<div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+<img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
 <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
 </div>
 </div>
@@ -172,7 +154,15 @@ document.addEventListener('keydown', (event) => {
 </div>
 
 <!-- Mobile Menu -->
-<div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+<div class="chapter-nav" id="nav-menu">
+<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2 py-2 text-xs font-medium transition-colors hover:text-teal-600">Ch.1: Cổ điển</button>
+<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Hiện đại</button>
+<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3: Thuế quan</button>
+<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.4: Phi thuế quan</button>
+<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.5: Nguồn lực</button>
+<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2 py-2 text-xs font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.6: Hội nhập</button>
+</div>
+<div class="chapter-select-row relative">
 <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
 <option value="ch1">Chương 1: Lý thuyết cổ điển</option>
 <option value="ch2">Chương 2: Lý thuyết hiện đại</option>
@@ -379,7 +369,7 @@ document.addEventListener('keydown', (event) => {
 </section>
 </main>
 
-<!-- CORE SCRIPTS: CHARTS, CALCULATOR & TABS -->
+<!-- CORE SCRIPTS: CHARTS, CALCULATOR &amp; TABS -->
 <script>
 // 1. Calculator ERP
 function calculateERP() {
@@ -645,7 +635,7 @@ document.getElementById('ex-v2-gdp').innerText = 0; document.getElementById('ex-
 }
 </script>
 
-<!-- 🚀 FIREBASE, AUTH, TRACKER & SMART COUNTER 🚀 -->
+<!-- 🚀 FIREBASE, AUTH, TRACKER &amp; SMART COUNTER 🚀 -->
 <script>
 
 let activeTabId = 'ch1';

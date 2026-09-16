@@ -1,0 +1,29 @@
+/* Shared platform layout; course content and tools keep their own styling. */
+.site-header-row { gap: .75rem; }
+.site-header-row > :first-child { min-width: 0; }
+.site-header-row > :last-child { flex-shrink: 0; }
+.chapter-nav { display: none; }
+.chapter-select-row { display: flex; padding: .5rem 0; border-top: 1px solid #f5f5f4; }
+#mobile-nav { min-width: 0; }
+#nav-login-btn { white-space: nowrap; }
+#user-name { max-width: 12rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#user-avatar { flex-shrink: 0; }
+#nav-user-profile:focus-visible { outline: 2px solid #0d9488; outline-offset: 4px; }
+body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
+#welcome-modal-content { max-height: calc(100dvh - 2rem); overflow-y: auto; overscroll-behavior: contain; }
+@media (min-width: 1280px) {
+  .chapter-nav { display: flex; align-items: center; justify-content: center; gap: .25rem; overflow-x: auto; border-top: 1px solid #f5f5f4; }
+  .chapter-nav .nav-btn { flex-shrink: 0; white-space: nowrap; }
+  .chapter-select-row { display: none; }
+}
+@media (max-width: 639px) {
+  .site-header-row { gap: .375rem; }
+  .site-header-row > :first-child { gap: .25rem; }
+  .site-header-row h1 { font-size: 1rem; }
+  .site-header-row > :first-child img { width: 2rem; height: 2rem; flex-shrink: 0; }
+  .site-header-row > :last-child { gap: .375rem; }
+  .site-header-row .border-l { padding-left: .5rem; }
+  #nav-login-btn { padding: .375rem .5rem; }
+  #nav-login-btn svg { flex-shrink: 0; }
+  #welcome-modal-content { padding: 1.5rem; }
+}

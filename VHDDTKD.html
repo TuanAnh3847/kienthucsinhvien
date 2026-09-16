@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Văn Hóa & Đạo Đức Trong Kinh Doanh Quốc Tế - Lý thuyết, Case Study, Essay</title>
+<title>Văn Hóa &amp; Đạo Đức Trong Kinh Doanh Quốc Tế - Lý thuyết, Case Study, Essay</title>
 <meta name="description" content="Hệ thống ôn tập Văn hóa và Đạo đức trong Kinh doanh Quốc tế bám sát syllabus: lý thuyết, mô hình chẩn đoán case, managerial implications và khung viết essay.">
 
 <!-- SEO CƠ BẢN (Từ khóa chuẩn môn VHDDTKD) -->
@@ -12,8 +12,8 @@
 <meta name="robots" content="index, follow"> 
 
 <!-- SEO MẠNG XÃ HỘI (Open Graph) -->
-<meta property="og:title" content="Bí Kíp Phá Đảo Văn Hóa & Đạo Đức Kinh Doanh - Edu Connect">
-<meta property="og:description" content="Học mô hình văn hóa, phân tích case study và viết essay có cấu trúc cho môn Culture & Ethics in International Business.">
+<meta property="og:title" content="Bí Kíp Phá Đảo Văn Hóa &amp; Đạo Đức Kinh Doanh - Edu Connect">
+<meta property="og:description" content="Học mô hình văn hóa, phân tích case study và viết essay có cấu trúc cho môn Culture &amp; Ethics in International Business.">
 <meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png"> 
 <meta property="og:url" content="https://kienthucsinhvien.id.vn/VHDDTKD"> <!-- Nếu file sếp tên khác thì đổi chỗ này nha -->
 <meta property="og:type" content="article">
@@ -77,6 +77,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 }
 
 </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -85,7 +86,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-auto max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain transform scale-95 transition-transform duration-300" id="welcome-modal-content">
 <div class="text-center mb-6">
 <div class="text-5xl mb-4">🤝</div>
-<h2 class="text-2xl font-extrabold text-slate-900 mb-2">Sổ Tay Culture & Ethics</h2>
+<h2 class="text-2xl font-extrabold text-slate-900 mb-2">Sổ Tay Culture &amp; Ethics</h2>
 <p class="text-stone-600 text-sm">Đăng nhập để mở khóa toàn bộ bí kíp, lý thuyết động lực và các tình huống đạo đức kinh doanh.</p>
 </div>
 <div class="space-y-4">
@@ -98,7 +99,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 <span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
 <div class="flex-grow border-t border-stone-200"></div>
 </div>
-<button onclick="window.location.href='index.html'" 
+<button onclick="window.location.href='/'"
         style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
         onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
         onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
@@ -107,23 +108,11 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 </div>
-<script>
-document.addEventListener('keydown', (event) => {
-    const modal = document.getElementById('welcome-modal');
-    if (event.key === 'Escape' && modal && !modal.classList.contains('hidden') && typeof hideWelcomeModal === 'function') {
-        event.preventDefault();
-        hideWelcomeModal();
-    }
-});
-</script>
-
-
-
 <!-- Navbar -->
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-16">
-<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand & Tên Môn Học -->
+<div class="site-header-row flex justify-between items-center h-16">
+<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand &amp; Tên Môn Học -->
         
 
         <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
@@ -132,32 +121,25 @@ document.addEventListener('keydown', (event) => {
                 <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
                 
                 <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
-                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🤝 Culture & Ethics IB</p>
+                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🤝 Culture &amp; Ethics IB</p>
                 </div>
             </div>
         </a>
 
-<div class="hidden xl:flex space-x-0.5 items-center" id="nav-menu">
-<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2 py-2 text-xs 2xl:text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Khái niệm</button>
-<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Khác biệt</button>
-<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.3: Tổ chức <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Động lực <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: Đạo đức <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Essay & Case <span class="premium-lock text-xs"></span></button>
-</div>
+
 
 <div class="flex items-center shrink-0">
 <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
     <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
-    <span id="online-count" class="mr-1 sm:mr-1">...</span> 
+    <span id="online-count" class="mr-1 sm:mr-1">...</span>
     <span class="hidden sm:inline">online</span>
 </div>
 
 <!-- User Profile / Login Area -->
 <div class="border-l border-stone-300 pl-4">
 <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-<div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-<img id="user-avatar" src="https://ui-avatars.com/api/?name=Sinh+Vien&background=0D8B9&color=fff" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+<div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+<img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
 <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
 </div>
 </div>
@@ -165,14 +147,22 @@ document.addEventListener('keydown', (event) => {
 </div>
 
 <!-- Mobile Menu -->
-<div class="flex items-center xl:hidden py-2 border-t border-stone-100 relative">
+<div class="chapter-nav" id="nav-menu">
+<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2 py-2 text-xs 2xl:text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Khái niệm</button>
+<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Khác biệt</button>
+<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.3: Tổ chức <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Động lực <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: Đạo đức <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Essay &amp; Case <span class="premium-lock text-xs"></span></button>
+</div>
+<div class="chapter-select-row relative">
 <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
 <option value="ch1">Chương 1: Khái niệm Văn hóa</option>
 <option value="ch2">Chương 2: Khác biệt Văn hóa</option>
-<option value="ch3">Chương 3: Văn hóa Tổ chức & Đa dạng</option>
+<option value="ch3">Chương 3: Văn hóa Tổ chức &amp; Đa dạng</option>
 <option value="ch4">Chương 4: Động lực Đa văn hóa</option>
-<option value="ch5">Chương 5: Đạo đức & Trách nhiệm XH</option>
-<option value="ch6">Chương 6: Khung Essay & Case Study</option>
+<option value="ch5">Chương 5: Đạo đức &amp; Trách nhiệm XH</option>
+<option value="ch6">Chương 6: Khung Essay &amp; Case Study</option>
 </select>
 </div>
 </div>
@@ -182,7 +172,7 @@ document.addEventListener('keydown', (event) => {
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
 
 <div class="mb-12 text-center">
-<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Bí Kíp Culture & Ethics in International Business</h1>
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Bí Kíp Culture &amp; Ethics in International Business</h1>
 <p class="text-lg text-stone-600 max-w-2xl mx-auto mb-8">Hệ thống hóa lý thuyết, dấu hiệu nhận diện mô hình, case study luyện tập và khung viết essay theo đúng logic chấm điểm.</p>
 </div>
 
@@ -212,11 +202,11 @@ document.addEventListener('keydown', (event) => {
 <!-- ================= SECTION: CHƯƠNG 1 ================= -->
 <section id="ch1" class="tab-content block">
 <div class="mb-8">
-<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1: Văn Hóa & Quản Trị Giao Thoa (Culture & Cross-Culture Management)</h2>
+<h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1: Văn Hóa &amp; Quản Trị Giao Thoa (Culture &amp; Cross-Culture Management)</h2>
 <p class="text-stone-600 bg-teal-50 p-4 rounded-lg"><strong>Trọng tâm:</strong> Hiểu rõ bản chất văn hóa không phải do bẩm sinh, nắm vững 2 mô hình nhận thức (Củ hành, Tảng băng) và 4 định hướng chiến lược của MNCs.</p>
 </div>
 
-<!-- Flashcards: Khái niệm & Đặc điểm -->
+<!-- Flashcards: Khái niệm &amp; Đặc điểm -->
 <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 mb-8">
 <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center"><span class="text-2xl mr-2">📚</span> Bản Chất Của Văn Hóa</h3>
 <p class="mb-4 text-stone-700">Nguồn gốc từ <strong>"Cultura"</strong> (sự sùng bái/thờ cúng). Nó là những cách thức suy nghĩ và hành xử chung được truyền lại, phát triển qua áp lực xã hội.</p>
@@ -260,7 +250,7 @@ document.addEventListener('keydown', (event) => {
 <!-- Giá trị, chuẩn mực và cấp độ phân tích -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
   <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-    <h3 class="text-lg font-bold text-slate-800 mb-4">Values, Norms, Folkways & Mores</h3>
+    <h3 class="text-lg font-bold text-slate-800 mb-4">Values, Norms, Folkways &amp; Mores</h3>
     <div class="space-y-3 text-sm text-stone-700">
       <div class="p-3 rounded-lg bg-teal-50 border border-teal-100"><strong class="text-teal-800">Values – Giá trị:</strong> ý niệm trừu tượng về điều tốt, đúng và đáng mong muốn; là nền tảng để xã hội xây dựng chuẩn mực.</div>
       <div class="p-3 rounded-lg bg-sky-50 border border-sky-100"><strong class="text-sky-800">Norms – Chuẩn mực:</strong> quy tắc và hướng dẫn xã hội quy định hành vi phù hợp trong từng tình huống.</div>
@@ -293,7 +283,7 @@ document.addEventListener('keydown', (event) => {
                 <span class="text-xs text-teal-800 mb-1">Thực tiễn (Practices) - Dễ thấy</span>
                 <div class="onion-layer onion-middle shadow-md">
                     <div class="flex flex-col items-center">
-                        <span class="text-[10px] text-teal-900 mb-1 opacity-75">Nghi lễ & Anh hùng</span>
+                        <span class="text-[10px] text-teal-900 mb-1 opacity-75">Nghi lễ &amp; Anh hùng</span>
                         <div class="onion-layer onion-inner shadow-lg">
                             <span class="text-xs font-black">Giá trị<br>(Values)</span>
                         </div>
@@ -373,11 +363,11 @@ document.addEventListener('keydown', (event) => {
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
     <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong class="text-teal-700">Language</strong><p class="mt-1 text-stone-600">Gồm giao tiếp bằng lời và phi ngôn ngữ: nét mặt, khoảng cách cá nhân, cử chỉ và im lặng.</p></div>
     <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong class="text-teal-700">Social structure</strong><p class="mt-1 text-stone-600">Cá nhân hay nhóm là đơn vị trung tâm; mức phân tầng xã hội, mobility và class consciousness.</p></div>
-    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong class="text-teal-700">Religion & ethics</strong><p class="mt-1 text-stone-600">Ảnh hưởng thái độ với công việc, tiết kiệm, tiêu dùng, giới, lãi suất, thực phẩm và lịch làm việc.</p></div>
+    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong class="text-teal-700">Religion &amp; ethics</strong><p class="mt-1 text-stone-600">Ảnh hưởng thái độ với công việc, tiết kiệm, tiêu dùng, giới, lãi suất, thực phẩm và lịch làm việc.</p></div>
     <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong class="text-teal-700">Political philosophy</strong><p class="mt-1 text-stone-600">Quyền cá nhân, mức can thiệp của nhà nước, tự do kinh doanh và rủi ro thể chế.</p></div>
     <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong class="text-teal-700">Economic philosophy</strong><p class="mt-1 text-stone-600">Cách nền kinh tế phân bổ nguồn lực, xác lập quyền sở hữu và điều tiết thị trường.</p></div>
     <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong class="text-teal-700">Education</strong><p class="mt-1 text-stone-600">Tạo kỹ năng, ngôn ngữ chung, socialization và năng lực tiếp nhận công nghệ.</p></div>
-    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 sm:col-span-2"><strong class="text-teal-700">Manners & customs</strong><p class="mt-1 text-stone-600">Cách chào hỏi, ăn mặc, tặng quà, trao danh thiếp, dùng thời gian và nghi thức kinh doanh. Một hành vi bình thường tại nơi này có thể gây xúc phạm ở nơi khác.</p></div>
+    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 sm:col-span-2"><strong class="text-teal-700">Manners &amp; customs</strong><p class="mt-1 text-stone-600">Cách chào hỏi, ăn mặc, tặng quà, trao danh thiếp, dùng thời gian và nghi thức kinh doanh. Một hành vi bình thường tại nơi này có thể gây xúc phạm ở nơi khác.</p></div>
   </div>
 </div>
 
@@ -449,7 +439,7 @@ document.addEventListener('keydown', (event) => {
   <div class="exam-sentence mt-4"><strong>Essay sentence:</strong> “The cultural difference is managerially significant because it shapes how decisions, rewards and control systems are interpreted, rather than merely creating a difference in personal preference.”</div>
 </div>
 
-<!-- ESSAY-FIRST: CHALLENGES & RESPONSES -->
+<!-- ESSAY-FIRST: CHALLENGES &amp; RESPONSES -->
 <div class="mb-10 grid grid-cols-1 xl:grid-cols-3 gap-6">
   <div class="xl:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-stone-200 overflow-x-auto">
     <h3 class="text-2xl font-black text-slate-800 mb-2">Cross-cultural Challenges → Managerial Responses</h3>
@@ -517,7 +507,7 @@ document.addEventListener('keydown', (event) => {
     <div class="overflow-x-auto">
         <table class="w-full text-left text-sm">
             <thead class="bg-stone-100 text-stone-700">
-                <tr><th class="p-3 border-b">Mô hình</th><th class="p-3 border-b">Số chiều</th><th class="p-3 border-b">Đặc trưng & Keyword</th></tr>
+                <tr><th class="p-3 border-b">Mô hình</th><th class="p-3 border-b">Số chiều</th><th class="p-3 border-b">Đặc trưng &amp; Keyword</th></tr>
             </thead>
             <tbody class="divide-y divide-stone-200">
                 <tr>
@@ -693,7 +683,7 @@ document.addEventListener('keydown', (event) => {
 
 <!-- HALL -->
 <div class="mb-10">
-  <h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">3. Hall: Context, Time & Space</h3>
+  <h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">3. Hall: Context, Time &amp; Space</h3>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
     <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
       <h4 class="font-bold text-teal-800 mb-2">High-context vs Low-context</h4>
@@ -728,7 +718,7 @@ document.addEventListener('keydown', (event) => {
   </div>
 </div>
 
-<!-- Hofstede caution & managerial matrix -->
+<!-- Hofstede caution &amp; managerial matrix -->
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
   <div class="lg:col-span-1 bg-amber-50 p-5 rounded-2xl border border-amber-200">
     <h3 class="font-bold text-amber-900 mb-2">Giới hạn của Hofstede</h3>
@@ -755,10 +745,10 @@ document.addEventListener('keydown', (event) => {
 </div>
 
 
-<!-- ESSAY-FIRST: CROSS-CULTURAL SIMILARITIES & CLUSTERS -->
+<!-- ESSAY-FIRST: CROSS-CULTURAL SIMILARITIES &amp; CLUSTERS -->
 <div class="mt-10 mb-10">
   <p class="text-xs font-black tracking-widest uppercase text-teal-600">Syllabus 2.2</p>
-  <h3 class="text-2xl font-black text-slate-800 mb-2">Cross-cultural Differences, Similarities & Country Clusters</h3>
+  <h3 class="text-2xl font-black text-slate-800 mb-2">Cross-cultural Differences, Similarities &amp; Country Clusters</h3>
   <p class="text-sm text-stone-600 mb-5">Các nghiên cứu nhóm quốc gia theo work values giúp hình thành giả thuyết ban đầu, nhưng không thay thế việc đọc evidence của từng case.</p>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
     <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
@@ -770,7 +760,7 @@ document.addEventListener('keydown', (event) => {
         <div class="p-3 rounded-xl bg-stone-50 border border-stone-200"><strong class="text-teal-700">Latin European</strong><p class="text-stone-600 mt-1">France, Belgium</p></div>
         <div class="p-3 rounded-xl bg-stone-50 border border-stone-200 sm:col-span-2"><strong class="text-teal-700">Germanic</strong><p class="text-stone-600 mt-1">Germany, Austria, Switzerland</p></div>
       </div>
-      <p class="text-xs text-stone-500 mt-4">Ronen & Kraut dùng work values; Ronen & Shenkar xem work goals, need fulfillment/job satisfaction, managerial variables và interpersonal orientation. GLOBE còn nhóm theo ngôn ngữ, địa lý, tôn giáo và lịch sử.</p>
+      <p class="text-xs text-stone-500 mt-4">Ronen &amp; Kraut dùng work values; Ronen &amp; Shenkar xem work goals, need fulfillment/job satisfaction, managerial variables và interpersonal orientation. GLOBE còn nhóm theo ngôn ngữ, địa lý, tôn giáo và lịch sử.</p>
     </div>
     <div class="bg-slate-800 text-white p-6 rounded-2xl shadow-sm">
       <h4 class="font-bold text-teal-300 mb-3">Cách dùng cluster trong essay</h4>
@@ -787,7 +777,7 @@ document.addEventListener('keydown', (event) => {
 
 <div class="mb-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
   <div class="bg-amber-50 border border-amber-200 p-6 rounded-2xl">
-    <h3 class="text-xl font-bold text-amber-950 mb-3">Hai bẫy nhận thức: Parochialism & Simplification</h3>
+    <h3 class="text-xl font-bold text-amber-950 mb-3">Hai bẫy nhận thức: Parochialism &amp; Simplification</h3>
     <div class="space-y-3 text-sm text-amber-950">
       <p><strong>Parochialism:</strong> nhìn thế giới chỉ qua lăng kính và kinh nghiệm của mình.</p>
       <p><strong>Simplification:</strong> áp cùng một cách giải thích cho nhiều nhóm văn hóa khác nhau, bỏ qua variation và context.</p>
@@ -810,11 +800,11 @@ document.addEventListener('keydown', (event) => {
     <table class="w-full min-w-[1120px] text-sm">
       <thead class="bg-slate-800 text-white"><tr><th class="p-3 text-left">IHRM area</th><th class="p-3 text-left">Japan</th><th class="p-3 text-left">Germany</th><th class="p-3 text-left">Mexico</th><th class="p-3 text-left">China</th></tr></thead>
       <tbody class="divide-y divide-stone-200 align-top">
-        <tr><td class="p-3 font-bold text-teal-700">Recruitment & selection</td><td class="p-3">Quy trình dài; thể hiện cam kết “here to stay”; xây quan hệ tin cậy với ứng viên.</td><td class="p-3">Tận dụng skilled labor và hệ thống apprenticeship được hỗ trợ.</td><td class="p-3">Dùng expatriates có chọn lọc; phát triển Mexican nationals, kể cả qua đào tạo tại nước ngoài.</td><td class="p-3">Chính sách công và thể chế có thể thay đổi; dùng quy trình tuyển chọn ngày càng chuyên nghiệp.</td></tr>
+        <tr><td class="p-3 font-bold text-teal-700">Recruitment &amp; selection</td><td class="p-3">Quy trình dài; thể hiện cam kết “here to stay”; xây quan hệ tin cậy với ứng viên.</td><td class="p-3">Tận dụng skilled labor và hệ thống apprenticeship được hỗ trợ.</td><td class="p-3">Dùng expatriates có chọn lọc; phát triển Mexican nationals, kể cả qua đào tạo tại nước ngoài.</td><td class="p-3">Chính sách công và thể chế có thể thay đổi; dùng quy trình tuyển chọn ngày càng chuyên nghiệp.</td></tr>
         <tr><td class="p-3 font-bold text-teal-700">Training</td><td class="p-3">Đầu tư lớn; general training, cross-training và coi học tập là trách nhiệm chung.</td><td class="p-3">Tổ chức/khai thác apprenticeship; chú ý quy định liên quan đào tạo.</td><td class="p-3">Có thể cần bilingual trainers và điều chỉnh phương pháp truyền đạt.</td><td class="p-3">Quan sát kỹ chương trình hiện có; team training có thể phù hợp trong nhiều bối cảnh.</td></tr>
         <tr><td class="p-3 font-bold text-teal-700">Compensation</td><td class="p-3">Recognition và praise có thể quan trọng; thận trọng khi chỉ dùng pay-for-performance cá nhân.</td><td class="p-3">Tính đến labor cost cao và hệ thống phúc lợi/quan hệ lao động.</td><td class="p-3">Đánh giá toàn bộ labor cost, không chỉ base salary.</td><td class="p-3">Technical training có thể là reward; chú ý egalitarian values và thông điệp “more work–more pay”.</td></tr>
         <tr><td class="p-3 font-bold text-teal-700">Labor relations</td><td class="p-3">Xem công đoàn như partner; dành thời gian cho thương lượng.</td><td class="p-3">Chuẩn bị cho wage/work-week expectations; works councils và unionized labor có vai trò quan trọng.</td><td class="p-3">Theo dõi luật lao động và xu hướng unionization.</td><td class="p-3">Nguồn lao động lớn nhưng quy định có thể ngày càng chặt; không dựa vào giả định cũ.</td></tr>
-        <tr><td class="p-3 font-bold text-teal-700">Job design & participation</td><td class="p-3">Participation, group goal-setting, autonomous teams, coworker input và team decision.</td><td class="p-3">Works councils có thể hỗ trợ worker participation.</td><td class="p-3">Tiếp cận participation thận trọng; xem power distance và trust.</td><td class="p-3">Tìm hiểu động cơ nhân viên trước khi áp dụng participation; tránh sao chép máy móc.</td></tr>
+        <tr><td class="p-3 font-bold text-teal-700">Job design &amp; participation</td><td class="p-3">Participation, group goal-setting, autonomous teams, coworker input và team decision.</td><td class="p-3">Works councils có thể hỗ trợ worker participation.</td><td class="p-3">Tiếp cận participation thận trọng; xem power distance và trust.</td><td class="p-3">Tìm hiểu động cơ nhân viên trước khi áp dụng participation; tránh sao chép máy móc.</td></tr>
       </tbody>
     </table>
   </div>
@@ -831,7 +821,7 @@ document.addEventListener('keydown', (event) => {
 <section id="ch3" class="tab-content hidden">
 <div class="mb-8 flex items-center justify-between bg-teal-50 p-4 rounded-lg">
     <div>
-        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Văn Hóa Tổ Chức & Sự Đa Dạng</h2>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Văn Hóa Tổ Chức &amp; Sự Đa Dạng</h2>
         <p class="text-stone-600">Sự giao thoa giữa Văn hóa Quốc gia và Văn hóa Tổ chức (Organizational Culture).</p>
     </div>
     <span class="px-3 py-1 bg-rose-100 text-rose-800 rounded-full text-xs font-black shadow-sm shrink-0"></span>
@@ -863,10 +853,10 @@ document.addEventListener('keydown', (event) => {
 <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 mb-8">
   <h3 class="text-lg font-bold text-slate-800 mb-4">Cách văn hóa tổ chức hình thành và được củng cố</h3>
   <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-sm">
-    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong>Founder & leadership</strong><p class="mt-1 text-stone-600">Nhà sáng lập chọn ưu tiên, kể câu chuyện và làm gương.</p></div>
-    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong>Selection & socialization</strong><p class="mt-1 text-stone-600">Tuyển người phù hợp và dạy “cách làm việc ở đây”.</p></div>
+    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong>Founder &amp; leadership</strong><p class="mt-1 text-stone-600">Nhà sáng lập chọn ưu tiên, kể câu chuyện và làm gương.</p></div>
+    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong>Selection &amp; socialization</strong><p class="mt-1 text-stone-600">Tuyển người phù hợp và dạy “cách làm việc ở đây”.</p></div>
     <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong>HR practices</strong><p class="mt-1 text-stone-600">Đánh giá, thăng chức, sa thải và thưởng quyết định giá trị nào thực sự quan trọng.</p></div>
-    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong>Stories & rituals</strong><p class="mt-1 text-stone-600">Biểu tượng, nghi lễ và câu chuyện biến giá trị thành ký ức tập thể.</p></div>
+    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200"><strong>Stories &amp; rituals</strong><p class="mt-1 text-stone-600">Biểu tượng, nghi lễ và câu chuyện biến giá trị thành ký ức tập thể.</p></div>
   </div>
 </div>
 
@@ -906,7 +896,7 @@ document.addEventListener('keydown', (event) => {
     </ul>
   </div>
   <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-    <h3 class="font-bold text-slate-800 mb-3">4 bước tích hợp văn hóa khi M&A</h3>
+    <h3 class="font-bold text-slate-800 mb-3">4 bước tích hợp văn hóa khi M&amp;A</h3>
     <ol class="text-sm text-stone-700 space-y-2 list-decimal pl-5">
       <li>Thống nhất mục đích, mục tiêu và trọng tâm của thương vụ.</li>
       <li>Xác định cấu trúc tổ chức và vai trò quản trị quan trọng.</li>
@@ -918,7 +908,7 @@ document.addEventListener('keydown', (event) => {
 
 <!-- 4 Loại hình VH Tổ chức -->
 <h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">4 Loại Hình Văn Hóa Tổ Chức (Trompenaars)</h3>
-<p class="text-sm text-stone-600 mb-4">Xác định bởi 2 trục: <strong class="text-teal-700">Quyền lực</strong> (Bình đẳng <-> Cấp bậc) và <strong class="text-teal-700">Trọng tâm</strong> (Con người <-> Nhiệm vụ).</p>
+<p class="text-sm text-stone-600 mb-4">Xác định bởi 2 trục: <strong class="text-teal-700">Quyền lực</strong> (Bình đẳng &lt;-&gt; Cấp bậc) và <strong class="text-teal-700">Trọng tâm</strong> (Con người &lt;-&gt; Nhiệm vụ).</p>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
     <!-- Family -->
@@ -982,10 +972,10 @@ document.addEventListener('keydown', (event) => {
     </div>
 </div>
 
-<!-- Đa dạng & Timeline -->
+<!-- Đa dạng &amp; Timeline -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-        <h3 class="font-bold text-lg text-slate-800 mb-4 border-b pb-2">Ưu & Nhược Điểm Của Đa Dạng (Diversity)</h3>
+        <h3 class="font-bold text-lg text-slate-800 mb-4 border-b pb-2">Ưu &amp; Nhược Điểm Của Đa Dạng (Diversity)</h3>
         <div class="space-y-4">
             <div class="bg-red-50 p-3 rounded-lg border border-red-100">
                 <h4 class="font-bold text-red-800 text-sm mb-1">🔴 Thách thức (Problems)</h4>
@@ -1049,7 +1039,7 @@ document.addEventListener('keydown', (event) => {
     <div class="p-4 rounded-xl bg-white/10"><strong>Slogan đẹp nhưng hành vi trái ngược</strong><p class="text-stone-300 mt-1">→ Schein: espoused values vs enacted values/basic assumptions.</p></div>
     <div class="p-4 rounded-xl bg-white/10"><strong>Quy trình chặt, vai trò cố định</strong><p class="text-stone-300 mt-1">→ Eiffel Tower hoặc DOCSA tight control.</p></div>
     <div class="p-4 rounded-xl bg-white/10"><strong>Nhóm quốc tế sáng tạo nhưng xung đột</strong><p class="text-stone-300 mt-1">→ Diversity benefits/problems + six guidelines.</p></div>
-    <div class="p-4 rounded-xl bg-white/10"><strong>M&A thất bại vì “cách làm việc”</strong><p class="text-stone-300 mt-1">→ Schein + DOCSA + four integration steps.</p></div>
+    <div class="p-4 rounded-xl bg-white/10"><strong>M&amp;A thất bại vì “cách làm việc”</strong><p class="text-stone-300 mt-1">→ Schein + DOCSA + four integration steps.</p></div>
   </div>
 </div>
 
@@ -1092,7 +1082,7 @@ document.addEventListener('keydown', (event) => {
 </div>
 
 <div class="mb-10 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-  <h3 class="text-2xl font-black text-slate-800 mb-2">Types of Multiculturalism & Conditions for Effectiveness</h3>
+  <h3 class="text-2xl font-black text-slate-800 mb-2">Types of Multiculturalism &amp; Conditions for Effectiveness</h3>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
     <div class="p-5 rounded-xl bg-teal-50 border border-teal-100"><h4 class="font-bold text-teal-800">Domestic multiculturalism</h4><p class="text-sm text-stone-700 mt-2">Lực lượng lao động đa dạng hoạt động trong home country của MNC. Case thường xoay quanh inclusion, bias, promotion, communication và equal opportunity.</p></div>
     <div class="p-5 rounded-xl bg-sky-50 border border-sky-100"><h4 class="font-bold text-sky-800">Group multiculturalism</h4><p class="text-sm text-stone-700 mt-2">Một team gồm thành viên từ nhiều nền văn hóa làm việc chung. Case thường xoay quanh cohesion, stereotype, trust, task conflict và process loss.</p></div>
@@ -1140,7 +1130,7 @@ document.addEventListener('keydown', (event) => {
 <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden mb-10">
     <table class="w-full text-left text-sm">
         <thead class="bg-slate-100 text-slate-800">
-            <tr><th class="p-4 border-b w-1/4">Tác giả & Thuyết</th><th class="p-4 border-b w-1/3">Nội dung cốt lõi</th><th class="p-4 border-b">Ứng dụng Đa văn hóa</th></tr>
+            <tr><th class="p-4 border-b w-1/4">Tác giả &amp; Thuyết</th><th class="p-4 border-b w-1/3">Nội dung cốt lõi</th><th class="p-4 border-b">Ứng dụng Đa văn hóa</th></tr>
         </thead>
         <tbody class="divide-y divide-stone-200">
             <tr>
@@ -1193,9 +1183,9 @@ document.addEventListener('keydown', (event) => {
     </div>
 </div>
 
-<!-- Work Centrality & Rewards -->
+<!-- Work Centrality &amp; Rewards -->
 <div class="bg-stone-800 text-white p-6 rounded-2xl shadow-sm border border-stone-700">
-    <h3 class="font-bold text-lg text-teal-400 mb-4 border-b border-stone-600 pb-2">Ứng dụng: Tầm quan trọng công việc & Phần thưởng</h3>
+    <h3 class="font-bold text-lg text-teal-400 mb-4 border-b border-stone-600 pb-2">Ứng dụng: Tầm quan trọng công việc &amp; Phần thưởng</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
         <div>
             <h4 class="font-bold text-white mb-2 flex items-center"><span class="mr-2">💼</span> Tầm quan trọng (Work Centrality)</h4>
@@ -1247,7 +1237,7 @@ document.addEventListener('keydown', (event) => {
 </div>
 
 <div class="mt-8 bg-teal-50 p-6 rounded-2xl border border-teal-200">
-  <h3 class="text-xl font-bold text-teal-900 mb-3">Job Design & Quality of Work Life</h3>
+  <h3 class="text-xl font-bold text-teal-900 mb-3">Job Design &amp; Quality of Work Life</h3>
   <p class="text-sm text-teal-950">Job design gồm nội dung công việc, phương pháp thực hiện và quan hệ của công việc với các vị trí khác. QWL không giống nhau trên toàn cầu: mức tự chủ, nhịp độ, cấu trúc, quan hệ nhóm và an toàn có thể được đánh giá khác nhau. Vì vậy, đừng sao chép một chương trình job enrichment sang mọi chi nhánh mà không kiểm tra kỳ vọng địa phương.</p>
 </div>
 
@@ -1268,7 +1258,7 @@ document.addEventListener('keydown', (event) => {
         <tr><td class="p-3 font-bold text-teal-700">Equity</td><td class="p-3">Có nhiều hỗ trợ ở Western settings nhưng international support mixed; reference other và định nghĩa fairness có thể khác.</td><td class="p-3">Hỏi nhân viên so với ai, coi input/output nào là hợp lệ và fairness là equality, equity hay need.</td></tr>
         <tr><td class="p-3 font-bold text-teal-700">Goal-setting</td><td class="p-3">Specific, challenging goals hữu ích nhưng participation và direct feedback có thể được diễn giải khác dưới high power distance hoặc face concerns.</td><td class="p-3">Giữ goal clarity, nhưng điều chỉnh cách tham gia, phản hồi và công khai kết quả.</td></tr>
         <tr><td class="p-3 font-bold text-teal-700">Expectancy</td><td class="p-3">Logic effort–performance–reward hữu ích, nhưng giả định personal control và giá trị phần thưởng không giống nhau ở mọi nơi.</td><td class="p-3">Kiểm tra cả ba mắt xích và hỏi reward có valence với cá nhân/nhóm hay không.</td></tr>
-        <tr><td class="p-3 font-bold text-teal-700">Job design, work centrality & rewards</td><td class="p-3">Autonomy, team design, security, seniority, individual merit và work-life priorities có trọng số khác nhau theo quốc gia và nhóm nghề.</td><td class="p-3">Đề xuất một bundle thay vì một incentive đơn lẻ; đo phản ứng và điều chỉnh.</td></tr>
+        <tr><td class="p-3 font-bold text-teal-700">Job design, work centrality &amp; rewards</td><td class="p-3">Autonomy, team design, security, seniority, individual merit và work-life priorities có trọng số khác nhau theo quốc gia và nhóm nghề.</td><td class="p-3">Đề xuất một bundle thay vì một incentive đơn lẻ; đo phản ứng và điều chỉnh.</td></tr>
       </tbody>
     </table>
   </div>
@@ -1286,7 +1276,7 @@ document.addEventListener('keydown', (event) => {
   </div>
   <div class="bg-teal-50 p-6 rounded-2xl border border-teal-200">
     <h3 class="text-xl font-bold text-teal-900 mb-3">Công thức recommendation về động lực</h3>
-    <p class="text-sm text-teal-950 mb-3"><strong>Diagnose need/process → check culture & job level → design reward/job → communicate legitimacy → measure behavior and satisfaction.</strong></p>
+    <p class="text-sm text-teal-950 mb-3"><strong>Diagnose need/process → check culture &amp; job level → design reward/job → communicate legitimacy → measure behavior and satisfaction.</strong></p>
     <ul class="text-sm text-teal-950 space-y-2 list-disc pl-5">
       <li>Không dùng tiền để giải quyết vấn đề autonomy, meaning hoặc recognition.</li>
       <li>Không áp team reward nếu không có cơ chế chống social loafing.</li>
@@ -1302,13 +1292,13 @@ document.addEventListener('keydown', (event) => {
 <section id="ch5" class="tab-content hidden">
 <div class="mb-8 flex items-center justify-between bg-teal-50 p-4 rounded-lg">
     <div>
-        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 5: Đạo Đức & Trách Nhiệm Xã Hội (Ethics & CSR)</h2>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 5: Đạo Đức &amp; Trách Nhiệm Xã Hội (Ethics &amp; CSR)</h2>
         <p class="text-stone-600">Nhận diện ethical dilemma, phân tích nguyên nhân hành vi phi đạo đức, áp dụng các trường phái đạo đức và xây quyết định có thể bảo vệ bằng lập luận.</p>
     </div>
     <span class="px-3 py-1 bg-rose-100 text-rose-800 rounded-full text-xs font-black shadow-sm shrink-0"></span>
 </div>
 
-<!-- Khái niệm cốt lõi & 5 Vấn đề -->
+<!-- Khái niệm cốt lõi &amp; 5 Vấn đề -->
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
     <div class="lg:col-span-1 space-y-4">
         <div class="bg-white p-4 rounded-xl border border-stone-200 shadow-sm">
@@ -1320,7 +1310,7 @@ document.addEventListener('keydown', (event) => {
             <p class="text-xs text-stone-600">Tình huống mà <strong class="text-rose-600">KHÔNG CÓ</strong> lựa chọn nào là hoàn toàn đúng về đạo đức.</p>
         </div>
         <div class="bg-white p-4 rounded-xl border border-stone-200 shadow-sm">
-            <h4 class="font-bold text-green-700 mb-1">CSR & Bền vững</h4>
+            <h4 class="font-bold text-green-700 mb-1">CSR &amp; Bền vững</h4>
             <p class="text-xs text-stone-600">Phải xem xét hậu quả xã hội, không làm tổn hại môi trường (Vượt ra khỏi nghĩa vụ pháp lý).</p>
         </div>
     </div>
@@ -1340,12 +1330,12 @@ document.addEventListener('keydown', (event) => {
 <!-- 6 Nguyên nhân phi đạo đức -->
 <h3 class="text-2xl font-black text-slate-800 mb-4 border-b-2 border-stone-200 pb-2">6 Nguyên Nhân Gây Ra Hành Vi Phi Đạo Đức (Roots)</h3>
 <div class="flex flex-wrap gap-3 mb-10">
-    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">1. Personal ethics & expatriate pressure</span>
+    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">1. Personal ethics &amp; expatriate pressure</span>
     <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">2. Decision-making bỏ qua ethical dimension</span>
     <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">3. Organizational culture khuyến khích sai lệch</span>
     <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">4. Unrealistic performance expectations</span>
     <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">5. Leadership nêu gương xấu</span>
-    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">6. Societal culture & chuẩn mực môi trường</span>
+    <span class="bg-red-50 text-red-800 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold">6. Societal culture &amp; chuẩn mực môi trường</span>
 </div>
 
 <!-- Triết lý tiếp cận -->
@@ -1462,7 +1452,7 @@ document.addEventListener('keydown', (event) => {
     </div>
   </div>
   <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-    <h3 class="text-xl font-bold text-slate-800 mb-4">CSR & Sustainability</h3>
+    <h3 class="text-xl font-bold text-slate-800 mb-4">CSR &amp; Sustainability</h3>
     <p class="text-sm text-stone-700 mb-4"><strong>CSR</strong> yêu cầu quản lý xem xét hậu quả xã hội của quyết định kinh tế. <strong>Sustainable strategy</strong> tạo lợi nhuận mà không làm tổn hại môi trường, đồng thời có trách nhiệm với stakeholders.</p>
     <div class="grid grid-cols-3 gap-2 text-center text-xs">
       <div class="p-3 rounded-lg bg-green-50 border border-green-200"><strong class="text-green-800">People</strong><br>quyền, sức khỏe, cộng đồng</div>
@@ -1475,7 +1465,7 @@ document.addEventListener('keydown', (event) => {
 <div class="mt-8 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
   <h3 class="text-xl font-bold text-slate-800 mb-4">7 hệ thống giúp tổ chức ra quyết định có đạo đức</h3>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-    <div class="p-3 rounded-xl bg-stone-50 border border-stone-200"><strong>1. Hire & promote ethically</strong><p class="text-stone-600 mt-1">Tuyển và thăng chức người có nền tảng đạo đức vững.</p></div>
+    <div class="p-3 rounded-xl bg-stone-50 border border-stone-200"><strong>1. Hire &amp; promote ethically</strong><p class="text-stone-600 mt-1">Tuyển và thăng chức người có nền tảng đạo đức vững.</p></div>
     <div class="p-3 rounded-xl bg-stone-50 border border-stone-200"><strong>2. Ethical culture</strong><p class="text-stone-600 mt-1">Code of ethics, reward đúng hành vi và xử lý vi phạm.</p></div>
     <div class="p-3 rounded-xl bg-stone-50 border border-stone-200"><strong>3. Decision process</strong><p class="text-stone-600 mt-1">Bắt buộc đánh giá stakeholders, quyền và công bằng.</p></div>
     <div class="p-3 rounded-xl bg-stone-50 border border-stone-200"><strong>4. Ethics officer</strong><p class="text-stone-600 mt-1">Đào tạo, giám sát code và hỗ trợ tình huống khó.</p></div>
@@ -1503,7 +1493,7 @@ document.addEventListener('keydown', (event) => {
   <div class="mb-8 bg-gradient-to-r from-slate-900 to-teal-900 text-white p-6 rounded-2xl shadow-lg">
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
       <div>
-        <p class="text-teal-300 text-xs font-black tracking-widest uppercase">Final Essay & Case Study Lab</p>
+        <p class="text-teal-300 text-xs font-black tracking-widest uppercase">Final Essay &amp; Case Study Lab</p>
         <h2 class="text-2xl md:text-3xl font-black mt-1">Khung trả lời tự luận: Phân tích, không kể chuyện</h2>
         <p class="text-stone-200 mt-2 max-w-3xl">Mục tiêu là chứng minh: bạn hiểu vấn đề, chọn đúng theory, áp dụng theory vào evidence, cân nhắc phương án và đưa ra recommendation có thể triển khai.</p>
       </div>
@@ -1522,7 +1512,7 @@ document.addEventListener('keydown', (event) => {
       <div><div class="flex justify-between"><strong>Phân tích vấn đề</strong><span>30%</span></div><div class="rubric-meter mt-2"><span style="width:30%"></span></div><p class="text-xs text-stone-500 mt-1">Giải thích quan hệ nguyên nhân–hậu quả, không dừng ở mô tả.</p></div>
       <div><div class="flex justify-between"><strong>Áp dụng theory</strong><span>20%</span></div><div class="rubric-meter mt-2"><span style="width:20%"></span></div><p class="text-xs text-stone-500 mt-1">Định nghĩa ngắn rồi nối từng concept với evidence.</p></div>
       <div><div class="flex justify-between"><strong>Recommendations</strong><span>20%</span></div><div class="rubric-meter mt-2"><span style="width:20%"></span></div><p class="text-xs text-stone-500 mt-1">Cụ thể, khả thi, xử lý đúng root cause.</p></div>
-      <div><div class="flex justify-between"><strong>Evidence & data</strong><span>10%</span></div><div class="rubric-meter mt-2"><span style="width:10%"></span></div><p class="text-xs text-stone-500 mt-1">Facts từ case, dữ liệu hoặc ví dụ hợp lý.</p></div>
+      <div><div class="flex justify-between"><strong>Evidence &amp; data</strong><span>10%</span></div><div class="rubric-meter mt-2"><span style="width:10%"></span></div><p class="text-xs text-stone-500 mt-1">Facts từ case, dữ liệu hoặc ví dụ hợp lý.</p></div>
       <div><div class="flex justify-between"><strong>Organization</strong><span>10%</span></div><div class="rubric-meter mt-2"><span style="width:10%"></span></div><p class="text-xs text-stone-500 mt-1">Luận điểm rõ, đoạn văn có topic sentence và transition.</p></div>
     </div>
   </div>
@@ -1574,9 +1564,9 @@ document.addEventListener('keydown', (event) => {
         <thead class="bg-stone-100"><tr><th class="p-3 text-left">Case</th><th class="p-3 text-left">Primary lens</th><th class="p-3 text-left">Supporting lens</th><th class="p-3 text-left">Câu hỏi cần trả lời</th></tr></thead>
         <tbody class="divide-y divide-stone-200">
           <tr><td class="p-3 font-bold">Coats Indonesia</td><td class="p-3">Hofstede / Hall</td><td class="p-3">Leadership adaptation</td><td class="p-3">Phong cách lãnh đạo nào không phù hợp với kỳ vọng địa phương và nên điều chỉnh ra sao?</td></tr>
-          <tr><td class="p-3 font-bold">H&H Group</td><td class="p-3">National × Organizational culture</td><td class="p-3">EPRG / Schein</td><td class="p-3">Làm sao giữ bản sắc nhưng xây một culture đủ toàn cầu?</td></tr>
-          <tr><td class="p-3 font-bold">Diversity in a Global Organization</td><td class="p-3">Diversity benefits/problems</td><td class="p-3">Inclusion & team conditions</td><td class="p-3">Đa dạng nào tạo giá trị và điều kiện nào biến diversity thành performance?</td></tr>
-          <tr><td class="p-3 font-bold">The “Chatty” Accusation</td><td class="p-3">Hall / Trompenaars</td><td class="p-3">Bias & communication</td><td class="p-3">Đâu là khác biệt communication style, đâu là stereotype và policy nên thay đổi thế nào?</td></tr>
+          <tr><td class="p-3 font-bold">H&amp;H Group</td><td class="p-3">National × Organizational culture</td><td class="p-3">EPRG / Schein</td><td class="p-3">Làm sao giữ bản sắc nhưng xây một culture đủ toàn cầu?</td></tr>
+          <tr><td class="p-3 font-bold">Diversity in a Global Organization</td><td class="p-3">Diversity benefits/problems</td><td class="p-3">Inclusion &amp; team conditions</td><td class="p-3">Đa dạng nào tạo giá trị và điều kiện nào biến diversity thành performance?</td></tr>
+          <tr><td class="p-3 font-bold">The “Chatty” Accusation</td><td class="p-3">Hall / Trompenaars</td><td class="p-3">Bias &amp; communication</td><td class="p-3">Đâu là khác biệt communication style, đâu là stereotype và policy nên thay đổi thế nào?</td></tr>
           <tr><td class="p-3 font-bold">The Pink Towels</td><td class="p-3">Cultural interpretation</td><td class="p-3">Hofstede / Trompenaars</td><td class="p-3">Các bên đang gán ý nghĩa khác nhau cho cùng một hành vi hoặc biểu tượng như thế nào?</td></tr>
           <tr><td class="p-3 font-bold">Ethics case</td><td class="p-3">Rights / Justice / Utilitarian</td><td class="p-3">Five-step process</td><td class="p-3">Stakeholders, quyền, hậu quả, moral intent và implementation là gì?</td></tr>
         </tbody>
@@ -1653,7 +1643,7 @@ document.addEventListener('keydown', (event) => {
       <tr><td class="p-3">Email trực tiếp gây xúc phạm hoặc “yes” không đồng nghĩa đồng ý</td><td class="p-3 font-bold text-teal-700">Hall context</td><td class="p-3">Tone, im lặng, relationship history, non-verbal clues và cách từ chối.</td><td class="p-3">Channel richer, relationship building, open questions và confirmation.</td></tr>
       <tr><td class="p-3">Một bên bám hợp đồng, bên kia muốn ngoại lệ vì quan hệ</td><td class="p-3 font-bold text-teal-700">Universalism–Particularism</td><td class="p-3">Cách các bên viện dẫn rules, trust, personal obligations và renegotiation.</td><td class="p-3">Giữ core rule nhưng thiết kế exception process minh bạch.</td></tr>
       <tr><td class="p-3">Slogan “speak up” nhưng người phản biện bị phạt</td><td class="p-3 font-bold text-teal-700">Schein</td><td class="p-3">Artifact, espoused value, actual reward/punishment và basic assumption.</td><td class="p-3">Đổi leadership behavior, HR systems và symbols cùng lúc.</td></tr>
-      <tr><td class="p-3">M&A hoặc team đa văn hóa có xung đột cách làm việc</td><td class="p-3 font-bold text-teal-700">DOCSA + Diversity</td><td class="p-3">Control, participation, task/relationship, conflict stage và subgroup power.</td><td class="p-3">Cultural due diligence, shared goals, equal voice và integration milestones.</td></tr>
+      <tr><td class="p-3">M&amp;A hoặc team đa văn hóa có xung đột cách làm việc</td><td class="p-3 font-bold text-teal-700">DOCSA + Diversity</td><td class="p-3">Control, participation, task/relationship, conflict stage và subgroup power.</td><td class="p-3">Cultural due diligence, shared goals, equal voice và integration milestones.</td></tr>
       <tr><td class="p-3">Lương ổn nhưng thiếu meaning/recognition</td><td class="p-3 font-bold text-teal-700">Herzberg</td><td class="p-3">Hygiene hiện có, motivators thiếu và nội dung công việc.</td><td class="p-3">Job enrichment, autonomy, feedback, recognition; không chỉ tăng pay.</td></tr>
       <tr><td class="p-3">Nhân viên thấy bất công hoặc không tin effort dẫn đến reward</td><td class="p-3 font-bold text-teal-700">Equity / Expectancy</td><td class="p-3">Reference other, input-output, expectancy, instrumentality và valence.</td><td class="p-3">Minh bạch tiêu chí, nâng năng lực và làm rõ performance–reward link.</td></tr>
       <tr><td class="p-3">Hành vi hợp pháp nhưng làm hại lao động, môi trường hoặc cộng đồng</td><td class="p-3 font-bold text-teal-700">Ethics + Stakeholders</td><td class="p-3">Ai hưởng lợi/chịu hại, rights, alternatives, long-term consequences.</td><td class="p-3">Minimum standards, audit, remedy, governance và stakeholder dialogue.</td></tr>
@@ -1693,7 +1683,7 @@ document.addEventListener('keydown', (event) => {
         <li><strong>Issue diagnosis:</strong> symptom, root cause và stakeholders.</li>
         <li><strong>Framework 1:</strong> định nghĩa ngắn + application sâu.</li>
         <li><strong>Framework 2:</strong> bổ sung điều framework 1 chưa giải thích.</li>
-        <li><strong>Options & recommendation:</strong> so sánh rồi chọn giải pháp theo giai đoạn.</li>
+        <li><strong>Options &amp; recommendation:</strong> so sánh rồi chọn giải pháp theo giai đoạn.</li>
         <li><strong>Conclusion:</strong> managerial implication và risk cần theo dõi.</li>
       </ol>
       <button type="button" onclick="copyEssayTemplate()" class="no-print mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-xl transition-colors">📋 Sao chép template tiếng Anh</button>
@@ -1702,8 +1692,8 @@ document.addEventListener('keydown', (event) => {
     <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
       <h3 class="text-xl font-bold text-slate-800 mb-4">Phân bổ 75 phút thi essay</h3>
       <div class="space-y-4 text-sm">
-        <div><div class="flex justify-between"><strong>8 phút</strong><span>Đọc & gạch evidence</span></div><div class="rubric-meter mt-1"><span style="width:11%"></span></div></div>
-        <div><div class="flex justify-between"><strong>7 phút</strong><span>Lập issue tree & chọn theory</span></div><div class="rubric-meter mt-1"><span style="width:9%"></span></div></div>
+        <div><div class="flex justify-between"><strong>8 phút</strong><span>Đọc &amp; gạch evidence</span></div><div class="rubric-meter mt-1"><span style="width:11%"></span></div></div>
+        <div><div class="flex justify-between"><strong>7 phút</strong><span>Lập issue tree &amp; chọn theory</span></div><div class="rubric-meter mt-1"><span style="width:9%"></span></div></div>
         <div><div class="flex justify-between"><strong>50 phút</strong><span>Viết theo 6 đoạn</span></div><div class="rubric-meter mt-1"><span style="width:67%"></span></div></div>
         <div><div class="flex justify-between"><strong>10 phút</strong><span>Kiểm tra logic, evidence, language</span></div><div class="rubric-meter mt-1"><span style="width:13%"></span></div></div>
       </div>

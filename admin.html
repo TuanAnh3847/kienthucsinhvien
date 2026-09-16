@@ -156,6 +156,15 @@
             display: flex; justify-content: space-between; align-items: center; 
             padding: 15px 20px; border-bottom: 1px solid #e2e8f0; 
         }
+        #modalTitle { min-width: 0; overflow-wrap: anywhere; }
+        .close-btn { flex-shrink: 0; }
+        body:has(#historyModal[style*="flex"]) { overflow: hidden; }
+        #manualSettings { flex-wrap: wrap; }
+        @media (max-width: 639px) {
+            header { flex-wrap: wrap; gap: 1rem; padding: 1rem; }
+            .card[style] { padding: 1rem !important; }
+            #manualSettings { padding-left: 0 !important; border-left: 0 !important; }
+        }
         .modal-body { padding: 20px; overflow-y: auto; }
         .close-btn { 
             background: none; border: none; font-size: 1.5rem; 
@@ -227,11 +236,11 @@
 
     <script src="admin.js?v=999"></script>
 
-    <div id="historyModal" class="modal-overlay">
+    <div id="historyModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 id="modalTitle" style="font-size: 1.25rem;">Lịch sử đăng nhập</h2>
-                <button id="closeHistoryModalBtn" class="close-btn" type="button">&times;</button>
+                <button id="closeHistoryModalBtn" class="close-btn" type="button" aria-label="Đóng lịch sử">&times;</button>
             </div>
             <div class="modal-body">
                 <ul id="historyList" class="history-list">
