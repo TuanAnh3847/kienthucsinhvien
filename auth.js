@@ -101,43 +101,70 @@ function updateNavbar(user) {
     if (user) {
         loginBtn?.classList.add("hidden");
         profile?.classList.remove("hidden");
+        profile?.classList.add("flex");
 
         // Đã sửa lại lỗi ngữ pháp ở 4 dòng dưới đây:
         const avatarEl = document.getElementById("user-avatar");
         const nameEl = document.getElementById("user-name");
         
-        if (avatarEl) avatarEl.setAttribute("src", user.photoURL);
-        if (nameEl) nameEl.innerText = user.displayName;
+        if (avatarEl) avatarEl.setAttribute("src", user.photoURL || "/android-chrome-192x192.png");
+        if (nameEl) nameEl.innerText = user.displayName || "Sinh Viên";
     } else {
         loginBtn?.classList.remove("hidden");
         profile?.classList.add("hidden");
+        profile?.classList.remove("flex");
     }
 }
 
+function isHomePage() {
+    return ['/', '/index', '/index.html', ''].includes(window.location.pathname.toLowerCase().replace(/\/$/, '') || '/');
+}
+
+let welcomeTrigger = null;
 function showWelcomeModal() {
     const modal = document.getElementById("welcome-modal");
     if (!modal) return false;
 
+    if (modal.classList.contains('hidden')) welcomeTrigger = document.activeElement;
     modal.classList.remove("hidden");
     setTimeout(() => {
         modal.classList.remove("opacity-0");
         document.getElementById("welcome-modal-content")?.classList.remove("scale-95");
+        if (!modal.classList.contains('hidden')) modal.querySelector('button')?.focus();
     }, 10);
     return true;
 }
 
 function hideWelcomeModal() {
-    const currentPath = window.location.pathname.toLowerCase();
-    const isHomePage = currentPath.endsWith('index.html') || currentPath === '/';
-
     // Nếu ở trang môn học MÀ chưa đăng nhập -> Chặn không cho tắt, đá về trang chủ
-    if (!isHomePage && !firebase.auth().currentUser) {
-        window.location.href = "index.html";
+    if (!isHomePage() && !auth.currentUser) {
+        window.location.href = "/";
         return;
     }
 
     document.getElementById("welcome-modal")?.classList.add("hidden");
+    if (welcomeTrigger?.isConnected && welcomeTrigger !== document.body) welcomeTrigger.focus();
+    else document.getElementById(auth.currentUser ? 'nav-user-profile' : 'nav-login-btn')?.focus();
 }
+
+document.addEventListener('keydown', event => {
+    const modal = document.getElementById('welcome-modal');
+    if (!modal || modal.classList.contains('hidden')) return;
+    if (event.key === 'Escape') {
+        event.preventDefault();
+        hideWelcomeModal();
+    } else if (event.key === 'Tab') {
+        const controls = [...modal.querySelectorAll('button, a[href], input, select, [tabindex="0"]')]
+            .filter(el => !el.disabled && el.getClientRects().length);
+        const first = controls[0], last = controls[controls.length - 1];
+        if (!first) return;
+        if (event.shiftKey && (document.activeElement === first || !modal.contains(document.activeElement))) {
+            event.preventDefault(); last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || !modal.contains(document.activeElement))) {
+            event.preventDefault(); first.focus();
+        }
+    }
+});
 
 
 // ===============================
@@ -164,6 +191,7 @@ window.loginGoogleReal = () => {
         loginInFlight = Promise.resolve(auth.signInWithPopup(provider))
             .then(async (credential) => {
                 if (!credential?.user) return credential;
+                localStorage.setItem('last_active_time', Date.now());
 
                 try {
                     await recordLoginHistory(credential.user);
@@ -198,11 +226,14 @@ window.logoutReal = async () => {
     if (!confirm("Bạn có chắc chắn muốn đăng xuất khỏi hệ thống?")) return false;
 
     try {
+        await releasePresence();
         await auth.signOut();
         localStorage.removeItem("onthi_role");
-        window.location.href = "index.html";
+        localStorage.removeItem('last_active_time');
+        window.location.href = "/";
         return true;
     } catch (error) {
+        if (auth.currentUser) startPresence(auth.currentUser);
         console.error("Sign-out failed:", error);
         alert("Không thể đăng xuất: " + (error?.message || "Không xác định"));
         return false;
@@ -210,16 +241,13 @@ window.logoutReal = async () => {
 };
 
 window.continueAsGuest = () => {
-    const currentPath = window.location.pathname.toLowerCase();
-    const isHomePage = currentPath.endsWith('index.html') || currentPath === '/';
-
-    if (isHomePage) {
+    if (isHomePage()) {
         // Ở trang chủ thì cho làm khách thoải mái
         localStorage.setItem("onthi_role", "guest");
         hideWelcomeModal();
     } else {
         // Lỡ có ở môn học mà cố bấm vô nút Khách -> Đá về sảnh
-        window.location.href = "index.html";
+        window.location.href = "/";
     }
 };
 
@@ -228,61 +256,83 @@ window.continueAsGuest = () => {
 // ==========================================
 // 🚀 MAIN FLOW: QUẢN LÝ ĐĂNG NHẬP & RADAR (BẢN CHUẨN 100%)
 // ==========================================
-document.addEventListener("DOMContentLoaded", () => {
-    auth.onAuthStateChanged((user) => {
-        const loginBtn = document.getElementById('nav-login-btn');
-        const userProfile = document.getElementById('nav-user-profile');
-        const userName = document.getElementById('user-name');
-        const userAvatar = document.getElementById('user-avatar');
-        const welcomeModal = document.getElementById('welcome-modal');
+let presence = null;
 
-        if (user) {
-            // ✅ TRẠNG THÁI: ĐÃ ĐĂNG NHẬP
-            if (loginBtn) loginBtn.classList.add('hidden');
-            if (userProfile) {
-                userProfile.classList.remove('hidden');
-                userProfile.classList.add('flex');
+async function stopPresence(markOffline = false) {
+    const previous = presence;
+    presence = null;
+    if (!previous) return;
+    previous.connectedRef.off('value', previous.listener);
+    try {
+        // Keep the disconnect fallback if the explicit offline write fails.
+        if (markOffline) await previous.userRef.update({ status: 'offline' });
+        await previous.userRef.onDisconnect().cancel();
+    } catch (error) {
+        console.warn('Không thể cập nhật trạng thái offline:', error);
+    }
+}
+
+function releasePresence() {
+    // Realtime Database queues writes while offline; logout must still finish.
+    return Promise.race([stopPresence(true), new Promise(resolve => setTimeout(resolve, 1500))]);
+}
+
+function startPresence(user) {
+    if (presence?.uid === user.uid) return;
+    const current = {
+        uid: user.uid,
+        userRef: db.ref('users/' + user.uid),
+        connectedRef: db.ref('.info/connected')
+    };
+    presence = current;
+    current.listener = async snap => {
+        if (snap.val() !== true || presence !== current || auth.currentUser?.uid !== user.uid) return;
+        try {
+            await current.userRef.onDisconnect().update({ status: 'offline' });
+            if (presence === current && auth.currentUser?.uid === user.uid) {
+                await current.userRef.update({ status: 'online' });
             }
-            if (userName) userName.innerText = user.displayName || 'Sinh Viên';
-            if (userAvatar) userAvatar.src = user.photoURL || '';
-            if (welcomeModal) welcomeModal.classList.add('hidden');
+        } catch (error) {
+            console.warn('Không thể cập nhật trạng thái online:', error);
+        }
+    };
+    current.connectedRef.on('value', current.listener, error => console.warn('Kết nối trạng thái:', error));
+}
 
-            // Cấp quyền cho LocalStorage để đồng bộ hệ thống cũ
-            localStorage.setItem("onthi_role", "member");
-
-            // Chạy Radar theo dõi thiết bị
-            if (typeof saveUserInfo === 'function') {
-                saveUserInfo(user);
-            }
-
-            // 🔴 HỆ THỐNG RADAR ONLINE/OFFLINE (GIỮ NGUYÊN CỦA SẾP)
-            const userRef = db.ref("users/" + user.uid);
-            db.ref(".info/connected").on("value", (snap) => {
-                if (snap.val() === true) {
-                    userRef.onDisconnect().update({ status: "offline" }).then(() => {
-                        userRef.update({ status: "online" });
-                    });
-                }
-            });
-
-        } else {
-            // 🛑 TRẠNG THÁI: CHƯA ĐĂNG NHẬP
-            if (loginBtn) loginBtn.classList.remove('hidden');
-            if (userProfile) {
-                userProfile.classList.add('hidden');
-                userProfile.classList.remove('flex');
-            }
-
-            // Kiểm tra xem có đang ở trang môn học không để "khóa cửa"
-            const currentPath = window.location.pathname.toLowerCase();
-            const isHomePage = currentPath.endsWith('index.html') || currentPath === '/' || currentPath === '';
-            
-            if (!isHomePage && !currentPath.includes('admin.html') && welcomeModal) {
-                showWelcomeModal();
-            }
+function initializeAuthUI() {
+    document.getElementById('nav-user-profile')?.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            window.logoutReal();
         }
     });
-});
+    auth.onAuthStateChanged(user => {
+        if (presence && presence.uid !== user?.uid) void stopPresence();
+        updateNavbar(user);
+        if (user) {
+            const lastActive = Number(localStorage.getItem('last_active_time'));
+            if (lastActive > 0 && Date.now() - lastActive > IDLE_TIMEOUT_MS) {
+                void checkIdleTime();
+                return;
+            }
+            if (!Number.isFinite(lastActive) || lastActive <= 0) resetIdleTimer();
+            localStorage.setItem('onthi_role', 'member');
+            const modal = document.getElementById('welcome-modal');
+            if (modal && !modal.classList.contains('hidden')) hideWelcomeModal();
+            saveUserInfo(user);
+            startPresence(user);
+        } else {
+            if (localStorage.getItem('onthi_role') === 'member') localStorage.removeItem('onthi_role');
+            localStorage.removeItem('last_active_time');
+            if (!isHomePage() && document.getElementById('welcome-modal')) showWelcomeModal();
+        }
+    }, error => {
+        console.warn('Không thể khôi phục phiên đăng nhập:', error);
+        updateNavbar(null);
+    });
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initializeAuthUI, { once: true });
+else queueMicrotask(initializeAuthUI);
 
 // ==========================================
 // 🎛️ BỘ ĐẾM ONLINE (ĐƯỢC ĐIỀU KHIỂN TỪ ADMIN)
@@ -299,9 +349,18 @@ function startMockOnlineCounter() {
 
     // Lắng nghe lệnh từ Admin thông qua biến 'db' đã có sẵn ở đầu file
     db.ref("settings/online_counter").on("value", (snapshot) => {
-        if (snapshot.exists()) config = snapshot.val();
+        if (snapshot.exists()) {
+            const value = snapshot.val() || {};
+            const min = Number(value.min), max = Number(value.max);
+            config = {
+                isAutoMode: value.isAutoMode !== false,
+                min: Number.isFinite(min) && min >= 0 ? Math.floor(min) : 40,
+                max: Number.isFinite(max) && max >= 0 ? Math.floor(max) : 50
+            };
+            config.max = Math.max(config.min, config.max);
+        }
         updateDisplay(); // Cập nhật số lên màn hình ngay lập tức khi Admin gạt công tắc
-    });
+    }, error => console.warn('Không thể tải cấu hình bộ đếm:', error));
 
     function updateDisplay() {
         let count = 0;
@@ -324,6 +383,7 @@ function startMockOnlineCounter() {
         if (mobileOnlineEl) mobileOnlineEl.innerText = count;
     }
 
+    updateDisplay();
     // Tự động múa số sau mỗi 5 - 10 giây (random) để tạo cảm giác chân thật
     if (onlineInterval) clearInterval(onlineInterval);
     onlineInterval = setInterval(updateDisplay, Math.floor(Math.random() * 5000) + 5000);
@@ -331,6 +391,7 @@ function startMockOnlineCounter() {
 
 // Kích hoạt khi web tải xong
 window.addEventListener('load', startMockOnlineCounter);
+if (document.readyState === 'complete') queueMicrotask(startMockOnlineCounter);
 
 // ===============================
 // ⏱️ HỆ THỐNG AUTO LOGOUT KHI TREO MÁY CỦA ADMIN
@@ -343,32 +404,41 @@ const IDLE_TIMEOUT_MS = IDLE_TIMEOUT_HOURS * 60 * 60 * 1000;
 // Hàm này chạy mỗi khi người dùng có thao tác (chứng tỏ họ còn sống)
 function resetIdleTimer() {
     // Chỉ ghi nhận nếu đang có người đăng nhập
-    if (firebase.auth().currentUser) {
+    if (auth.currentUser && !idleLogoutInFlight) {
         localStorage.setItem('last_active_time', Date.now());
     }
 }
 
 // Thằng bảo vệ đi tuần tra xem có ai treo máy lố giờ không
-function checkIdleTime() {
+let idleLogoutInFlight = false;
+async function checkIdleTime() {
     const lastActive = localStorage.getItem('last_active_time');
-    if (lastActive && firebase.auth().currentUser) {
+    if (lastActive && auth.currentUser && !idleLogoutInFlight) {
         const timeIdle = Date.now() - parseInt(lastActive);
         
         if (timeIdle > IDLE_TIMEOUT_MS) {
             // Treo máy quá 24h -> Kích hoạt lệnh Đăng xuất
-            firebase.auth().signOut().then(() => {
+            idleLogoutInFlight = true;
+            try {
+                await releasePresence();
+                await auth.signOut();
                 localStorage.removeItem('last_active_time');
                 localStorage.removeItem('onthi_role');
                 alert(`Phiên đăng nhập đã hết hạn sau ${IDLE_TIMEOUT_HOURS} giờ không hoạt động để bảo mật. Sinh viên vui lòng đăng nhập lại nhé!`);
                 window.location.reload();
-            });
+            } catch (error) {
+                console.warn('Không thể đăng xuất phiên hết hạn:', error);
+                if (auth.currentUser) startPresence(auth.currentUser);
+            } finally {
+                idleLogoutInFlight = false;
+            }
         }
     }
 }
 
 // Lắp camera theo dõi các hành động: Di chuột, gõ phím, cuộn trang, click chuột, và chạm màn hình (mobile)
 ['mousemove', 'keydown', 'scroll', 'click', 'touchstart'].forEach(evt => {
-    window.addEventListener(evt, resetIdleTimer);
+    window.addEventListener(evt, resetIdleTimer, { passive: true });
 });
 
 // Cứ mỗi 1 phút (60000 mili-giây), bảo vệ đi tuần tra 1 lần

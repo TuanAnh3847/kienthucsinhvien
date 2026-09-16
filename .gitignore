@@ -85,3 +85,8 @@ application_default_credentials.json
 
 # dataconnect generated files
 .dataconnect
+
+# Local audit dependencies and generated browser evidence
+tests/.python/
+tests/*-results.json
+tests/screenshots/

@@ -43,12 +43,13 @@
 .progress-bar { transition: width .25s ease; }
 .question-card { scroll-margin-top: 96px; }
 </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 bg-pattern text-slate-800 font-sans antialiased leading-relaxed">
 
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
+    <div class="site-header-row flex justify-between items-center h-16">
       <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
         <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
         <div class="flex flex-col justify-center min-w-0">
@@ -58,13 +59,7 @@
           </div>
         </div>
       </a>
-      <div class="hidden md:flex space-x-1 items-center" id="nav-menu">
-        <button onclick="switchTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
-        <button onclick="switchTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
-        <button onclick="switchTab('quick')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Test 20 câu</button>
-        <button onclick="switchTab('exam')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Luyện thi</button>
-        <button onclick="switchTab('mistakes')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Câu sai</button>
-      </div>
+
       <div class="flex items-center shrink-0">
         <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
           <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
@@ -72,15 +67,22 @@
         </div>
         <div class="border-l border-stone-300 pl-3 sm:pl-4">
           <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-          <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-            <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+          <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+            <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
             <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh viên</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
-      <select id="mobile-nav" onchange="switchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+    <div class="chapter-nav" id="nav-menu">
+        <button onclick="switchTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
+        <button onclick="switchTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
+        <button onclick="switchTab('quick')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Test 20 câu</button>
+        <button onclick="switchTab('exam')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Luyện thi</button>
+        <button onclick="switchTab('mistakes')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Câu sai</button>
+      </div>
+<div class="chapter-select-row relative">
+      <select id="mobile-nav" aria-label="Chọn chương" onchange="switchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
         <option value="overview">Tổng quan</option><option value="chapter">Luyện theo chương</option><option value="quick">Test 20 câu</option><option value="exam">Luyện thi</option><option value="mistakes">Câu sai</option>
       </select>
     </div>
@@ -3040,23 +3042,6 @@ let lastTab = 'overview';
 const STORAGE_WRONG = 'edu_tccn_wrong_ids_v1';
 const STORAGE_ATTEMPTS = 'edu_tccn_attempts_v1';
 
-function initAuthUi() {
-  try {
-    if (!(window.firebase && firebase.auth)) { document.getElementById('nav-login-btn')?.classList.remove('hidden'); return; }
-    firebase.auth().onAuthStateChanged(user => {
-      const loginBtn = document.getElementById('nav-login-btn');
-      const profile = document.getElementById('nav-user-profile');
-      if (user) {
-        loginBtn?.classList.add('hidden'); profile?.classList.remove('hidden');
-        const avatar = document.getElementById('user-avatar'); if (avatar) avatar.src = user.photoURL || '/android-chrome-192x192.png';
-        const name = document.getElementById('user-name'); if (name) name.textContent = user.displayName || 'Sinh viên';
-      } else { loginBtn?.classList.remove('hidden'); profile?.classList.add('hidden'); }
-    });
-  } catch(e) { document.getElementById('nav-login-btn')?.classList.remove('hidden'); }
-}
-function fallbackOnlineCount() {
-  setTimeout(() => { const el = document.getElementById('online-count'); if (el && (!el.textContent || el.textContent === '...')) el.textContent = 12 + Math.floor(Math.random()*18); }, 1100);
-}
 function escapeHtml(str) { return String(str).replace(/[&<>'"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[s])); }
 function shuffle(arr) { const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function mmss(sec) { sec=Math.max(0, Math.floor(sec)); const m=String(Math.floor(sec/60)).padStart(2,'0'); const s=String(sec%60).padStart(2,'0'); return `${m}:${s}`; }
@@ -3285,7 +3270,7 @@ function scrollToFirstWrong(){
 }
 
 function init(){
-  renderOverview(); renderChapterGrid(); renderExamGrid(); renderMistakes(); fallbackOnlineCount(); setTimeout(initAuthUi, 700);
+  renderOverview(); renderChapterGrid(); renderExamGrid(); renderMistakes();
 }
 document.addEventListener('DOMContentLoaded', init);
 </script>

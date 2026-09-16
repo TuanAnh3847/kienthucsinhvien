@@ -62,6 +62,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 .image-placeholder { background: repeating-linear-gradient(45deg, #f5f5f4, #f5f5f4 10px, #e7e5e4 10px, #e7e5e4 20px); display: flex; align-items: center; justify-content: center; border: 2px dashed #a8a29e; color: #57534e; font-weight: bold; border-radius: 0.75rem; text-align: center; padding: 1.5rem; font-size: 0.875rem; }
 .mnemonic-badge { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 0.25rem; font-weight: 900; letter-spacing: 1px; }
 </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -83,7 +84,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 <span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
 <div class="flex-grow border-t border-stone-200"></div>
 </div>
-<button onclick="window.location.href='index.html'" 
+<button onclick="window.location.href='/'"
         style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
         onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
         onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
@@ -92,18 +93,6 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 </div>
-<script>
-document.addEventListener('keydown', (event) => {
-    const modal = document.getElementById('welcome-modal');
-    if (event.key === 'Escape' && modal && !modal.classList.contains('hidden') && typeof hideWelcomeModal === 'function') {
-        event.preventDefault();
-        hideWelcomeModal();
-    }
-});
-</script>
-
-
-
 <!-- Navbar -->
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -123,13 +112,7 @@ document.addEventListener('keydown', (event) => {
             </div>
         </a>
 
-        <div class="hidden md:flex flex-wrap justify-center gap-1 items-end h-full px-2" id="nav-menu">
-            <button onclick="attemptSwitchTab('ch1_2')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1-2: Đại Cương</button>
-            <button onclick="attemptSwitchTab('ch3_4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3-4: Đạo Đức & Môi Trường</button>
-            <button onclick="attemptSwitchTab('ch5_6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5-6: Quyết Định & Chiến Lược <span class="premium-lock text-xs"></span></button>
-            <button onclick="attemptSwitchTab('ch7_8')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.7-8: Tổ Chức & Kiểm Soát <span class="premium-lock text-xs"></span></button>
-            <button onclick="attemptSwitchTab('ch9_13')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.9-13: Lãnh Đạo & Giao Tiếp <span class="premium-lock text-xs"></span></button>
-        </div>
+
 
         <div class="flex items-center shrink-0">
         <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
@@ -140,20 +123,27 @@ document.addEventListener('keydown', (event) => {
 
             <div class="border-l border-stone-300 pl-4">
                 <button id="nav-login-btn" onclick="requestLogin()" class="whitespace-nowrap hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-                <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-                    <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+                <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+                    <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
                     <span id="user-name" class="whitespace-nowrap text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
                 </div>
             </div>
         </div>
 
-    </div> <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+    </div> <div class="chapter-nav" id="nav-menu">
+            <button onclick="attemptSwitchTab('ch1_2')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1-2: Đại Cương</button>
+            <button onclick="attemptSwitchTab('ch3_4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3-4: Đạo Đức &amp; Môi Trường</button>
+            <button onclick="attemptSwitchTab('ch5_6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5-6: Quyết Định &amp; Chiến Lược <span class="premium-lock text-xs"></span></button>
+            <button onclick="attemptSwitchTab('ch7_8')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.7-8: Tổ Chức &amp; Kiểm Soát <span class="premium-lock text-xs"></span></button>
+            <button onclick="attemptSwitchTab('ch9_13')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.9-13: Lãnh Đạo &amp; Giao Tiếp <span class="premium-lock text-xs"></span></button>
+        </div>
+<div class="chapter-select-row relative">
         <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
-            <option value="ch1_2">Chương 1-2: Quản Trị & Cá Nhân</option>
-            <option value="ch3_4">Chương 3-4: Đạo Đức & Môi Trường</option>
-            <option value="ch5_6">Chương 5-6: Quyết Định & Chiến Lược</option>
-            <option value="ch7_8">Chương 7-8: Tổ Chức & Kiểm Soát</option>
-            <option value="ch9_13">Chương 9-13: Lãnh Đạo & Giao Tiếp</option>
+            <option value="ch1_2">Chương 1-2: Quản Trị &amp; Cá Nhân</option>
+            <option value="ch3_4">Chương 3-4: Đạo Đức &amp; Môi Trường</option>
+            <option value="ch5_6">Chương 5-6: Quyết Định &amp; Chiến Lược</option>
+            <option value="ch7_8">Chương 7-8: Tổ Chức &amp; Kiểm Soát</option>
+            <option value="ch9_13">Chương 9-13: Lãnh Đạo &amp; Giao Tiếp</option>
         </select>
 
     </div>
@@ -202,7 +192,7 @@ document.addEventListener('keydown', (event) => {
     </div>
 </div>
 
-<!-- ================= SECTION: CHƯƠNG 1 & 2 ================= -->
+<!-- ================= SECTION: CHƯƠNG 1 &amp; 2 ================= -->
 <section id="ch1_2" class="tab-content block">
     <div class="mb-10">
         <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 1: Quy Trình Quản Trị Ngày Nay</h2>
@@ -249,14 +239,14 @@ document.addEventListener('keydown', (event) => {
                     <div class="ml-2">
                         <div class="step-container"><div class="step-number">P</div><strong class="text-teal-800 block">Planning (Hoạch định)</strong><span class="text-sm text-stone-600">Đặt mục tiêu, Chọn chiến lược, Phân bổ nguồn lực.</span></div>
                         <div class="step-container"><div class="step-number">O</div><strong class="text-teal-800 block">Organizing (Tổ chức)</strong><span class="text-sm text-stone-600">Sắp xếp nguồn lực, Chia phòng ban, Quyền hạn.</span></div>
-                        <div class="step-container"><div class="step-number">L</div><strong class="text-teal-800 block">Leading (Lãnh đạo)</strong><span class="text-sm text-stone-600">Truyền cảm hứng, Dùng influence & communication.</span></div>
+                        <div class="step-container"><div class="step-number">L</div><strong class="text-teal-800 block">Leading (Lãnh đạo)</strong><span class="text-sm text-stone-600">Truyền cảm hứng, Dùng influence &amp; communication.</span></div>
                         <div class="step-container border-l-0 mb-0"><div class="step-number">C</div><strong class="text-teal-800 block">Controlling (Kiểm soát)</strong><span class="text-sm text-stone-600">Đảm bảo đúng kế hoạch, Sửa sai nếu cần.</span></div>
                     </div>
                 </div>
             </div>
             
             <div class="md:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
-                <h3 class="font-bold text-slate-800 mb-4 text-lg">Cấp Bậc & Kỹ Năng Quản Trị</h3>
+                <h3 class="font-bold text-slate-800 mb-4 text-lg">Cấp Bậc &amp; Kỹ Năng Quản Trị</h3>
                 <div class="flex flex-col md:flex-row gap-6 items-center">
                     <div class="w-full md:w-2/3">
                         <table class="w-full text-left text-sm border-collapse mb-4">
@@ -325,7 +315,7 @@ document.addEventListener('keydown', (event) => {
                 </div>
                 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
-                    <h3 class="font-bold text-slate-800 mb-3 text-lg">Values, Attitudes & Mood</h3>
+                    <h3 class="font-bold text-slate-800 mb-3 text-lg">Values, Attitudes &amp; Mood</h3>
                     <ul class="space-y-2 text-sm text-stone-600 list-disc pl-5">
                         <li><strong>Terminal Value:</strong> Mục tiêu cuối cùng (VD: Hạnh phúc, thành đạt).</li>
                         <li><strong>Instrumental Value:</strong> Cách hành xử để đạt mục tiêu (VD: Trung thực, chăm chỉ).</li>
@@ -338,10 +328,10 @@ document.addEventListener('keydown', (event) => {
     </div>
 </section>
 
-<!-- ================= SECTION: CHƯƠNG 3 & 4 ================= -->
+<!-- ================= SECTION: CHƯƠNG 3 &amp; 4 ================= -->
 <section id="ch3_4" class="tab-content hidden">
     <div class="mb-10">
-        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 3: Ethics & Diversity (Đạo Đức & Đa Dạng)</h2>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 3: Ethics &amp; Diversity (Đạo Đức &amp; Đa Dạng)</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
@@ -434,7 +424,7 @@ document.addEventListener('keydown', (event) => {
     </div>
 </section>
 
-<!-- ================= SECTION: CHƯƠNG 5 & 6 ================= -->
+<!-- ================= SECTION: CHƯƠNG 5 &amp; 6 ================= -->
 <section id="ch5_6" class="tab-content hidden">
     <div class="mb-10">
         <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 5: Decision Making (Cực kỳ quan trọng)</h2>
@@ -476,7 +466,7 @@ document.addEventListener('keydown', (event) => {
 
             <div class="space-y-6">
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
-                    <h3 class="font-bold text-slate-800 mb-4 text-lg">Risk vs Uncertainty & Group Decision</h3>
+                    <h3 class="font-bold text-slate-800 mb-4 text-lg">Risk vs Uncertainty &amp; Group Decision</h3>
                     <ul class="text-sm space-y-3 text-stone-700">
                         <li class="flex gap-2"><strong class="w-24 shrink-0 text-blue-700">Risk:</strong> Biết xác suất xảy ra.</li>
                         <li class="flex gap-2"><strong class="w-24 shrink-0 text-rose-700">Uncertainty:</strong> Hoàn toàn không biết xác suất.</li>
@@ -486,7 +476,7 @@ document.addEventListener('keydown', (event) => {
                 </div>
                 
                 <div class="bg-stone-800 text-stone-100 p-6 rounded-2xl shadow-sm theory-card">
-                    <h3 class="font-bold mb-3">Sáng tạo & Khởi nghiệp</h3>
+                    <h3 class="font-bold mb-3">Sáng tạo &amp; Khởi nghiệp</h3>
                     <ul class="text-sm space-y-2">
                         <li><span class="text-amber-400 font-bold">Creativity:</span> Nghĩ ra ý tưởng mới.</li>
                         <li><span class="text-green-400 font-bold">Innovation:</span> Áp dụng ý tưởng đó vào thực tế.</li>
@@ -500,11 +490,11 @@ document.addEventListener('keydown', (event) => {
 
     <!-- Chương 6: Chiến lược -->
     <div class="mb-10 border-t border-stone-200 pt-8">
-        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 6: Planning & Strategy (Hoạch định & Chiến lược)</h2>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 6: Planning &amp; Strategy (Hoạch định &amp; Chiến lược)</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
-                <h3 class="font-bold text-slate-800 mb-3 text-lg">Mission Statement & Chuỗi liên kết</h3>
+                <h3 class="font-bold text-slate-800 mb-3 text-lg">Mission Statement &amp; Chuỗi liên kết</h3>
                 <p class="text-sm text-stone-600 mb-3">Bản tuyên bố sứ mệnh phải trả lời được 4 câu: Why exist? What products? Who customers? How different?</p>
                 <div class="bg-teal-50 p-4 rounded-xl border border-teal-200 text-center font-bold text-teal-900 mb-4">
                     Mission (Why) &rarr; Goals &rarr; Strategy (How) &rarr; Action Plans (What)
@@ -524,7 +514,7 @@ document.addEventListener('keydown', (event) => {
                         <tbody class="divide-y divide-stone-200">
                             <tr><td class="p-2 font-bold text-teal-700">Corporate</td><td class="p-2">Ngành nào nên tham gia? (Mở rộng hay thu hẹp quy mô).</td></tr>
                             <tr><td class="p-2 font-bold text-blue-700">Business</td><td class="p-2">Cạnh tranh thế nào? (Giá rẻ hay Khác biệt hóa).</td></tr>
-                            <tr><td class="p-2 font-bold text-amber-700">Functional</td><td class="p-2">Phòng ban hỗ trợ ra sao? (Marketing, R&D).</td></tr>
+                            <tr><td class="p-2 font-bold text-amber-700">Functional</td><td class="p-2">Phòng ban hỗ trợ ra sao? (Marketing, R&amp;D).</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -575,10 +565,10 @@ document.addEventListener('keydown', (event) => {
     </div>
 </section>
 
-<!-- ================= SECTION: CHƯƠNG 7 & 8 ================= -->
+<!-- ================= SECTION: CHƯƠNG 7 &amp; 8 ================= -->
 <section id="ch7_8" class="tab-content hidden">
     <div class="mb-10">
-        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 7 & 8: Thiết Kế Tổ Chức & Kiểm Soát</h2>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 7 &amp; 8: Thiết Kế Tổ Chức &amp; Kiểm Soát</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
@@ -596,7 +586,7 @@ document.addEventListener('keydown', (event) => {
                 <div class="space-y-3 text-sm text-stone-700">
                     <p><strong class="text-slate-800">1. Chức năng (Functional):</strong> Gom cùng chuyên môn (Khoa Kinh tế). Rễ bị đứt gãy giao tiếp (Silo effect).</p>
                     <p><strong class="text-slate-800">2. Bộ phận (Divisional):</strong> Phình to chia theo Sản phẩm, Địa lý, hoặc <em>Khách hàng</em> (cá nhân vs doanh nghiệp).</p>
-                    <p><strong class="text-slate-800">3. Ma trận (Matrix):</strong> 1 nhân viên có 2 sếp (Sếp chức năng & Sếp dự án). Linh hoạt nhưng dễ xung đột quyền lực.</p>
+                    <p><strong class="text-slate-800">3. Ma trận (Matrix):</strong> 1 nhân viên có 2 sếp (Sếp chức năng &amp; Sếp dự án). Linh hoạt nhưng dễ xung đột quyền lực.</p>
                 </div>
             </div>
         </div>
@@ -629,7 +619,7 @@ document.addEventListener('keydown', (event) => {
 <!-- ================= SECTION: CHƯƠNG 9 - 13 ================= -->
 <section id="ch9_13" class="tab-content hidden">
     <div class="mb-10">
-        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 9-13: Động Lực, Lãnh Đạo & Giao Tiếp</h2>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6">Chương 9-13: Động Lực, Lãnh Đạo &amp; Giao Tiếp</h2>
         
         <!-- Thuyết Động Lực -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -646,7 +636,7 @@ document.addEventListener('keydown', (event) => {
             </div>
 
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
-                <h3 class="font-bold text-slate-800 mb-3 text-lg">Thuyết Công Bằng (Equity) & Maslow</h3>
+                <h3 class="font-bold text-slate-800 mb-3 text-lg">Thuyết Công Bằng (Equity) &amp; Maslow</h3>
                 <p class="text-sm text-stone-700 mb-4 border-l-4 border-amber-500 pl-3"><strong>Equity:</strong> Bản chất là So Sánh. NV so sánh (Input/Outcome) của mình với người khác. Thấy bất công (Underpayment) là mất động lực dù lương cao.</p>
                 <div class="w-full h-32 image-placeholder mb-4">
                     📷                 </div>
@@ -656,9 +646,9 @@ document.addEventListener('keydown', (event) => {
             </div>
         </div>
 
-        <!-- Quyền lực & Lãnh đạo -->
+        <!-- Quyền lực &amp; Lãnh đạo -->
         <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-8">
-            <h3 class="font-bold text-slate-800 mb-4 text-xl">5 Nguồn Quyền Lực & Lãnh Đạo Chuyển Đổi</h3>
+            <h3 class="font-bold text-slate-800 mb-4 text-xl">5 Nguồn Quyền Lực &amp; Lãnh Đạo Chuyển Đổi</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <ul class="text-sm space-y-2 text-stone-700 list-decimal pl-5">
@@ -682,7 +672,7 @@ document.addEventListener('keydown', (event) => {
 
         <!-- Lưới Lãnh Đạo Interactive -->
         <div class="bg-stone-100 rounded-2xl shadow-inner border border-stone-200 p-6 md:p-8 mb-8">
-            <h3 class="text-xl font-bold text-slate-800 mb-2">👑 Công cụ giả lập: Lưới Lãnh Đạo (Blake & Mouton)</h3>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">👑 Công cụ giả lập: Lưới Lãnh Đạo (Blake &amp; Mouton)</h3>
             <p class="text-sm text-stone-600 mb-6">Thử kéo thanh trượt để xác định phong cách quản lý của Sếp!</p>
 
             <div class="flex flex-col lg:flex-row gap-8 items-start">
@@ -696,7 +686,7 @@ document.addEventListener('keydown', (event) => {
                     <div class="text-center p-3 rounded-lg border-2 bg-stone-50 border-purple-400" id="style-result-box">
                         <div class="text-xs text-stone-500 uppercase tracking-wide font-bold">Kết quả Tọa độ</div>
                         <div class="text-xl font-black text-slate-800 my-1" id="style-name">Ôn hòa (5,5)</div>
-                        <p class="text-xs text-stone-600" id="style-desc">Cân bằng yêu cầu công việc & tinh thần.</p>
+                        <p class="text-xs text-stone-600" id="style-desc">Cân bằng yêu cầu công việc &amp; tinh thần.</p>
                     </div>
                 </div>
                 
@@ -718,7 +708,7 @@ document.addEventListener('keydown', (event) => {
             </div>
         </div>
 
-        <!-- Giao tiếp & E-commerce -->
+        <!-- Giao tiếp &amp; E-commerce -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card">
                 <h3 class="font-bold text-slate-800 mb-4 text-lg">Quá trình Giao tiếp (Ch.13)</h3>
@@ -738,7 +728,7 @@ document.addEventListener('keydown', (event) => {
             </div>
             
             <div class="bg-gradient-to-r from-stone-800 to-slate-800 p-6 rounded-2xl shadow-sm theory-card text-white flex flex-col justify-center">
-                <h3 class="font-bold mb-4 text-lg border-b border-stone-600 pb-2">IT & E-Commerce</h3>
+                <h3 class="font-bold mb-4 text-lg border-b border-stone-600 pb-2">IT &amp; E-Commerce</h3>
                 <ul class="text-sm space-y-4 text-stone-300">
                     <li><strong class="text-blue-300 text-base">B2B:</strong> DN với DN (VD: Nhà máy mua linh kiện). Giao dịch nội bộ ngành.</li>
                     <li><strong class="text-teal-300 text-base">B2B Marketplace:</strong> Sàn kết nối người mua/bán sỉ. (VD: Alibaba.com).</li>
@@ -750,7 +740,7 @@ document.addEventListener('keydown', (event) => {
 </section>
 </main>
 
-<!-- SCRIPT: UI & INTERACTIVE TOOLS -->
+<!-- SCRIPT: UI &amp; INTERACTIVE TOOLS -->
 <script>
 // 1. SWOT Strategy Generator (Giữ nguyên đồ xịn của sếp)
 function renderSWOTResult(elementId, text, isPlaceholder = false) {

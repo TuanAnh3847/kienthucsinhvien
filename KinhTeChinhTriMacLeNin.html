@@ -28,11 +28,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- TỐI ƯU: Thêm thuộc tính defer để không chặn tải trang -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
-<script src="auth.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
 
 <style>
 .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; background-color: #ffffff; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
@@ -61,6 +61,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 .flashcard-back { transform: rotateY(180deg); }
 .timeline-dot { width: 16px; height: 16px; background-color: #0d9488; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #0d9488; position: absolute; left: -8px; top: 6px; }
 </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -82,7 +83,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 <span class="flex-shrink-0 mx-4 text-stone-400 text-xs font-semibold">HOẶC</span>
 <div class="flex-grow border-t border-stone-200"></div>
 </div>
-<button onclick="window.location.href='index.html'" 
+<button onclick="window.location.href='/'"
         style="width: 100%; padding: 12px; margin-top: 10px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;"
         onmouseover="this.style.background='#e2e8f0'; this.style.color='#1e293b';" 
         onmouseout="this.style.background='#f1f5f9'; this.style.color='#475569';">
@@ -91,22 +92,10 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 </div>
-<script>
-document.addEventListener('keydown', (event) => {
-    const modal = document.getElementById('welcome-modal');
-    if (event.key === 'Escape' && modal && !modal.classList.contains('hidden') && typeof hideWelcomeModal === 'function') {
-        event.preventDefault();
-        hideWelcomeModal();
-    }
-});
-</script>
-
-
-
 <!-- Navbar -->
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-16">
+<div class="site-header-row flex justify-between items-center h-16">
         <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
             <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
             <div class="flex flex-col justify-center min-w-0">
@@ -118,27 +107,20 @@ document.addEventListener('keydown', (event) => {
             </div>
         </a>
 
-<div class="hidden md:flex space-x-1 items-center" id="nav-menu">
-<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Mở đầu</button>
-<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Hàng hóa</button>
-<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3: Giá trị thặng dư</button>
-<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Độc quyền <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: KTTT ĐHXHCN <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.6: CNH, HĐH <span class="premium-lock text-xs"></span></button>
-</div>
+
 
 <div class="flex items-center shrink-0">
         <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
             <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
-            <span id="online-count" class="mr-1 sm:mr-1">...</span> 
+            <span id="online-count" class="mr-1 sm:mr-1">...</span>
             <span class="hidden sm:inline">online</span>
         </div>
 
 <div class="border-l border-stone-300 pl-4">
 <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-<div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+<div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
 <!-- Cập nhật Avatar fallback giống VHDDTKD -->
-<img id="user-avatar" src="https://ui-avatars.com/api/?name=Sinh+Vien&background=0D8B9&color=fff" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+<img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
 <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
 </div>
 </div>
@@ -146,7 +128,15 @@ document.addEventListener('keydown', (event) => {
 </div>
 
 <!-- Mobile Menu -->
-<div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+<div class="chapter-nav" id="nav-menu">
+<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Mở đầu</button>
+<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Hàng hóa</button>
+<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3: Giá trị thặng dư</button>
+<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Độc quyền <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: KTTT ĐHXHCN <span class="premium-lock text-xs"></span></button>
+<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.6: CNH, HĐH <span class="premium-lock text-xs"></span></button>
+</div>
+<div class="chapter-select-row relative">
 <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
 <option value="ch1">Chương 1: Mở đầu</option>
 <option value="ch2">Chương 2: Hàng hóa</option>
@@ -195,7 +185,7 @@ document.addEventListener('keydown', (event) => {
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
     <!-- Timeline: Lịch sử -->
     <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-stone-200">
-        <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-stone-100 pb-2">⏳ Sự Hình Thành & Phát Triển</h3>
+        <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-stone-100 pb-2">⏳ Sự Hình Thành &amp; Phát Triển</h3>
         <div class="relative border-l-2 border-teal-200 ml-3 space-y-8 pb-4">
             <div class="relative pl-6">
                 <div class="timeline-dot"></div>
@@ -220,11 +210,11 @@ document.addEventListener('keydown', (event) => {
         </div>
     </div>
 
-    <!-- Flashcard & Note -->
+    <!-- Flashcard &amp; Note -->
     <div class="flex flex-col gap-6">
-        <!-- Đối tượng & Mục đích -->
+        <!-- Đối tượng &amp; Mục đích -->
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors">
-            <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">🎯 Đối tượng & Mục đích Nghiên cứu</h3>
+            <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">🎯 Đối tượng &amp; Mục đích Nghiên cứu</h3>
             <ul class="text-base text-stone-700 space-y-3">
                 <li class="bg-stone-50 p-3 rounded border border-stone-100">
                     <strong class="text-teal-700 block mb-1">Đối tượng nghiên cứu:</strong> 
@@ -316,9 +306,9 @@ document.addEventListener('keydown', (event) => {
         </ul>
     </div>
 
-    <!-- Hàng hóa & Thuộc tính -->
+    <!-- Hàng hóa &amp; Thuộc tính -->
     <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 hover:border-teal-300 transition-colors">
-        <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">📦 Hàng Hóa & 2 Thuộc Tính</h3>
+        <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">📦 Hàng Hóa &amp; 2 Thuộc Tính</h3>
         <p class="text-sm text-stone-600 mb-3 border-b pb-2">Hàng hóa là sản phẩm lao động thỏa mãn nhu cầu qua trao đổi. <em>Không bán = Không phải hàng hóa.</em></p>
         <ul class="text-base text-stone-700 space-y-3">
             <li class="bg-stone-50 p-2 rounded">
@@ -331,7 +321,7 @@ document.addEventListener('keydown', (event) => {
     </div>
 </div>
 
-<!-- Bảng LĐ Cụ thể - Trừu tượng & Nhân tố -->
+<!-- Bảng LĐ Cụ thể - Trừu tượng &amp; Nhân tố -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
     <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
         <h3 class="bg-slate-800 text-white p-3 font-bold text-center">Tính Chất Hai Mặt Của Lao Động</h3>
@@ -369,7 +359,7 @@ document.addEventListener('keydown', (event) => {
                 </tr>
                 <tr>
                     <td class="p-3 border-b font-bold">Cường độ LĐ</td>
-                    <td class="p-3 border-b border-l text-stone-600 font-bold">KHÔNG ĐỔI (Chỉ làm mệt hơn & ra nhiều SP hơn)</td>
+                    <td class="p-3 border-b border-l text-stone-600 font-bold">KHÔNG ĐỔI (Chỉ làm mệt hơn &amp; ra nhiều SP hơn)</td>
                 </tr>
                 <tr>
                     <td class="p-3 font-bold">Mức độ phức tạp</td>
@@ -380,9 +370,9 @@ document.addEventListener('keydown', (event) => {
     </div>
 </div>
 
-<!-- Tools & Calculators -->
+<!-- Tools &amp; Calculators -->
 <div class="mt-8 border-t-2 border-dashed border-teal-200 pt-8">
-    <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">🧮</span> Máy Tính & Định Luật Trọng Tâm</h3>
+    <h3 class="text-2xl font-extrabold text-teal-800 mb-6 flex items-center"><span class="mr-2">🧮</span> Máy Tính &amp; Định Luật Trọng Tâm</h3>
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <!-- Calc W = c + v + m -->
@@ -423,9 +413,9 @@ document.addEventListener('keydown', (event) => {
     </div>
 </div>
 
-<!-- Tiền Tệ Timeline & 5 Chức năng -->
+<!-- Tiền Tệ Timeline &amp; 5 Chức năng -->
 <div class="mt-8 bg-slate-800 text-white p-6 rounded-2xl shadow-sm">
-    <h3 class="text-xl font-bold mb-6 text-center text-teal-300">Tiền Tệ: Nguồn Gốc & 5 Chức Năng</h3>
+    <h3 class="text-xl font-bold mb-6 text-center text-teal-300">Tiền Tệ: Nguồn Gốc &amp; 5 Chức Năng</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
             <h4 class="font-bold text-teal-400 border-b border-slate-600 pb-2 mb-4">4 Hình thái phát triển</h4>
@@ -457,7 +447,7 @@ document.addEventListener('keydown', (event) => {
 <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Trái tim của Kinh tế chính trị Mác - Lênin. Giải phẫu quá trình nhà tư bản bóc lột công nhân thông qua Hàng hóa sức lao động.</p>
 </div>
 
-<!-- Công thức chung & Hàng hóa SLĐ -->
+<!-- Công thức chung &amp; Hàng hóa SLĐ -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
     <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
         <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Mâu Thuẫn Công Thức Chung</h3>
@@ -471,7 +461,7 @@ document.addEventListener('keydown', (event) => {
 
     <div class="bg-teal-800 text-white p-6 rounded-xl shadow-sm border border-teal-900">
         <h3 class="text-lg font-bold text-teal-300 mb-3 border-b border-teal-700 pb-2">Hàng Hóa Sức Lao Động</h3>
-        <p class="text-sm mb-2">2 Điều kiện biến thành hàng hóa: Tự do thân thể & Không có Tư liệu SX.</p>
+        <p class="text-sm mb-2">2 Điều kiện biến thành hàng hóa: Tự do thân thể &amp; Không có Tư liệu SX.</p>
         <ul class="text-sm space-y-3 mt-4">
             <li><strong>Giá trị:</strong> Bằng lượng tiền lương chi trả để duy trì sự sống, gia đình, đào tạo.</li>
             <li class="bg-teal-700 p-2 rounded"><strong>Giá trị sử dụng (ĐẶC BIỆT):</strong> Khi sử dụng, nó tạo ra lượng giá trị MỚI lớn hơn giá trị bản thân nó. <em>Phần lớn hơn đó là Giá trị thặng dư (m).</em></li>
@@ -528,7 +518,7 @@ document.addEventListener('keydown', (event) => {
 
 <!-- Tích lũy tư bản -->
 <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
-    <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Tích Lũy Tư Bản & Hệ Quả</h3>
+    <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Tích Lũy Tư Bản &amp; Hệ Quả</h3>
     <p class="text-sm text-stone-600 mb-4">Thực chất là <em>tư bản hóa giá trị thặng dư</em> (lấy $m$ mua thêm $c$ và $v$ để mở rộng).</p>
     <div class="flex flex-col md:flex-row gap-4 text-sm">
         <div class="bg-stone-50 border border-stone-200 p-4 rounded-lg flex-1">
@@ -536,7 +526,7 @@ document.addEventListener('keydown', (event) => {
             Phần vốn mua máy móc ($c$) ngày càng lớn hơn trả lương ($v$). Gây ra nạn thất nghiệp do máy móc thay người.
         </div>
         <div class="bg-stone-50 border border-stone-200 p-4 rounded-lg flex-1">
-            <strong class="text-teal-700 block mb-1">Hệ quả 2: Tích tụ & Tập trung TB</strong>
+            <strong class="text-teal-700 block mb-1">Hệ quả 2: Tích tụ &amp; Tập trung TB</strong>
             Doanh nghiệp nhỏ phá sản/sáp nhập. Tài sản xã hội tập trung vào số ít tài phiệt $\rightarrow$ Tạo tiền đề cho ĐỘC QUYỀN.
         </div>
     </div>
@@ -548,7 +538,7 @@ document.addEventListener('keydown', (event) => {
 <div class="mb-8 flex items-center justify-between">
     <div>
         <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">
-            Chương 4: Cạnh Tranh & Độc Quyền
+            Chương 4: Cạnh Tranh &amp; Độc Quyền
             <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span>
         </h2>
         <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Cạnh tranh đẻ ra độc quyền, nhưng độc quyền không thủ tiêu cạnh tranh mà làm nó khốc liệt hơn.</p>
@@ -568,7 +558,7 @@ document.addEventListener('keydown', (event) => {
     <div class="lg:col-span-2 bg-slate-800 text-white p-6 rounded-2xl shadow-sm">
         <h3 class="font-bold text-lg text-teal-300 mb-6 border-b border-slate-700 pb-2">Tiến Hóa Các Hình Thức Tổ Chức (Từ thấp $\rightarrow$ cao)</h3>
         <div class="flex flex-col space-y-4 text-sm">
-            <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">1. Cartel</div><div class="flex-1">Thỏa thuận giá/sản lượng lỏng lẻo. Vẫn độc lập SX & Thương nghiệp.</div></div>
+            <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">1. Cartel</div><div class="flex-1">Thỏa thuận giá/sản lượng lỏng lẻo. Vẫn độc lập SX &amp; Thương nghiệp.</div></div>
             <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">2. Syndicate</div><div class="flex-1">Độc lập SX, <strong>mất độc lập thương nghiệp</strong> (chung 1 ban quản trị mua/bán).</div></div>
             <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">3. Trust</div><div class="flex-1"><strong>Liên minh thống nhất.</strong> Mất độc lập hoàn toàn. Tham gia với tư cách cổ đông.</div></div>
             <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">4. Consortium</div><div class="flex-1 text-teal-200">Tập đoàn khổng lồ đa ngành, liên kết dọc/ngang với ngân hàng mẹ làm trung tâm.</div></div>
@@ -603,7 +593,7 @@ document.addEventListener('keydown', (event) => {
             <tr class="hover:bg-stone-50">
                 <td class="p-4 font-bold text-rose-700">5. Phân chia lãnh thổ</td>
                 <td class="p-4">Cường quốc dùng quân sự chia lại thuộc địa (Nguyên nhân Thế chiến).</td>
-                <td class="p-4 text-stone-500 italic">Thế chiến I & II.</td>
+                <td class="p-4 text-stone-500 italic">Thế chiến I &amp; II.</td>
             </tr>
         </tbody>
     </table>
@@ -648,7 +638,7 @@ document.addEventListener('keydown', (event) => {
 <div class="bg-slate-800 text-white p-6 rounded-2xl shadow-sm">
     <h3 class="font-bold text-lg text-teal-300 mb-4">4 Trụ Cột Hoàn Thiện Thể Chế</h3>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm text-stone-300">
-        <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">1. Sở hữu & TP Kinh tế</strong>Bảo vệ tài sản, cạnh tranh bình đẳng, cơ cấu DNNN.</div>
+        <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">1. Sở hữu &amp; TP Kinh tế</strong>Bảo vệ tài sản, cạnh tranh bình đẳng, cơ cấu DNNN.</div>
         <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">2. Đồng bộ thị trường</strong>Phát triển TTCK, BĐS, Công nghệ, Sức lao động.</div>
         <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">3. Tiến bộ, Công bằng</strong>Tuyệt đối không hi sinh môi trường đổi lấy tăng trưởng.</div>
         <div class="bg-slate-700 p-3 rounded border border-slate-600"><strong class="text-white block mb-1">4. Hội nhập Quốc tế</strong>Chủ động thực thi các Hiệp định FTA.</div>
@@ -660,7 +650,7 @@ document.addEventListener('keydown', (event) => {
 <section id="ch6" class="tab-content hidden">
 <div class="mb-8">
     <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2 flex items-center">
-        Chương 6: CNH, HĐH & Hội Nhập
+        Chương 6: CNH, HĐH &amp; Hội Nhập
         <span class="ml-3 px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-xs font-bold premium-badge hidden">PREMIUM</span>
     </h2>
     <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Cách mạng công nghiệp 4.0 và con đường hội nhập đầy cơ hội xen lẫn cạm bẫy của kinh tế Việt Nam.</p>
@@ -669,8 +659,8 @@ document.addEventListener('keydown', (event) => {
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
     <!-- CNH, HĐH 4.0 -->
     <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-        <h3 class="text-xl font-bold text-slate-800 mb-4">CMCN 4.0 & Nội Dung Cốt Lõi Ở VN</h3>
-        <p class="text-sm text-stone-600 mb-4">Chuyển đổi từ thủ công sang công nghệ hiện đại. VN đang ưu tiên "Công nghiệp hóa sinh thái" & "Kinh tế tri thức".</p>
+        <h3 class="text-xl font-bold text-slate-800 mb-4">CMCN 4.0 &amp; Nội Dung Cốt Lõi Ở VN</h3>
+        <p class="text-sm text-stone-600 mb-4">Chuyển đổi từ thủ công sang công nghệ hiện đại. VN đang ưu tiên "Công nghiệp hóa sinh thái" &amp; "Kinh tế tri thức".</p>
         <div class="space-y-4 border-l-2 border-teal-200 ml-2 pl-4 text-sm">
             <div>
                 <strong class="text-teal-700">1. Nền tảng số:</strong> Xây dựng Chính phủ điện tử, Kinh tế số. Ứng dụng AI, IoT.

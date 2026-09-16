@@ -42,6 +42,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 .timeline-item:last-child { border-left-color: transparent; }
 .flashcard-inner { perspective: 1000px; }
 </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -57,22 +58,12 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
                 <span class="text-lg font-black text-blue-600">G</span> 
                 <span>Đăng nhập bằng Google</span>
             </button>
-            <button onclick="window.location.href='index.html'" class="w-full p-3 mt-2 bg-slate-100 text-slate-600 border border-slate-300 rounded-lg font-semibold hover:bg-slate-200 transition-colors flex items-center justify-center gap-2">
+            <button onclick="window.location.href='/'" class="w-full p-3 mt-2 bg-slate-100 text-slate-600 border border-slate-300 rounded-lg font-semibold hover:bg-slate-200 transition-colors flex items-center justify-center gap-2">
                 🏠 Quay về Trang chủ
             </button>
         </div>
     </div>
 </div>
-<script>
-document.addEventListener('keydown', (event) => {
-    const modal = document.getElementById('welcome-modal');
-    if (event.key === 'Escape' && modal && !modal.classList.contains('hidden') && typeof hideWelcomeModal === 'function') {
-        event.preventDefault();
-        hideWelcomeModal();
-    }
-});
-</script>
-
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center min-h-[4rem] py-2">
@@ -86,25 +77,26 @@ document.addEventListener('keydown', (event) => {
                 </div>
             </a>
 
-            <div class="hidden md:flex flex-wrap justify-center gap-1 items-end h-full px-2" id="nav-menu">
+
+
+            <div class="flex items-center shrink-0">
+                <div class="border-l border-stone-300 pl-4">
+                    <button id="nav-login-btn" onclick="requestLogin()" class="whitespace-nowrap hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+                    <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+                        <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+                        <span id="user-name" class="whitespace-nowrap text-sm font-bold text-slate-800 hidden sm:block">Sinh Viên</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter-nav" id="nav-menu">
                 <button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Tổng Quan</button>
                 <button onclick="attemptSwitchTab('ch2')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Không Phân Biệt Đối Xử</button>
                 <button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.3: TM Hàng Hóa <span class="premium-lock text-xs">🔒</span></button>
                 <button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Giải Quyết Tranh Chấp <span class="premium-lock text-xs">🔒</span></button>
             </div>
-
-            <div class="flex items-center shrink-0">
-                <div class="border-l border-stone-300 pl-4">
-                    <button id="nav-login-btn" onclick="requestLogin()" class="whitespace-nowrap hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-                    <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-                        <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
-                        <span id="user-name" class="whitespace-nowrap text-sm font-bold text-slate-800 hidden sm:block">Sinh Viên</span>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-        <div class="flex items-center md:hidden py-2 border-t border-stone-100 relative">
+<div class="chapter-select-row relative">
             <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
                 <option value="ch1">Chương 1: Tổng Quan Về Luật TMQT</option>
                 <option value="ch2">Chương 2: Các Nguyên Tắc Không Phân Biệt Đối Xử</option>
@@ -179,7 +171,7 @@ document.addEventListener('keydown', (event) => {
                                 <td class="p-3">Các nguyên tắc pháp luật chung được các quốc gia văn minh thừa nhận.</td>
                             </tr>
                             <tr>
-                                <td class="p-3 bg-stone-50 font-semibold text-teal-700">Án lệ & Học thuyết</td>
+                                <td class="p-3 bg-stone-50 font-semibold text-teal-700">Án lệ &amp; Học thuyết</td>
                                 <td class="p-3">Nguồn bổ trợ (VD: Các báo cáo của Ban Hội thẩm/Cơ quan Phúc thẩm WTO).</td>
                             </tr>
                         </tbody>
@@ -236,7 +228,7 @@ document.addEventListener('keydown', (event) => {
                         <p class="text-sm text-stone-700 font-bold mt-2 text-rose-600">Không được đối xử kém thuận lợi hơn (no less favourable) đối với sản phẩm nhập khẩu so với sản phẩm nội địa tương tự[cite: 47].</p>
                     </div>
 
-                    <h4 class="font-bold text-slate-800 mb-2 text-sm">Cơ sở pháp lý & Phạm vi:</h4>
+                    <h4 class="font-bold text-slate-800 mb-2 text-sm">Cơ sở pháp lý &amp; Phạm vi:</h4>
                     <table class="w-full text-left text-sm border-collapse bg-white border border-stone-200">
                         <thead class="bg-stone-100"><tr><th class="p-2 border-r border-b">Lĩnh vực</th><th class="p-2 border-r border-b">Điều khoản</th><th class="p-2 border-b">Phạm vi [cite: 49]</th></tr></thead>
                         <tbody>
@@ -278,7 +270,7 @@ document.addEventListener('keydown', (event) => {
     </section>
 
     <section id="ch3" class="tab-content hidden">
-        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6 flex items-center gap-2">Chương 3: Thương Mại Hàng Hóa & Các Biện Pháp Biên Giới <span class="bg-stone-200 text-stone-600 text-xs px-2 py-1 rounded-full ml-2">Premium 🔒</span></h2>
+        <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-6 flex items-center gap-2">Chương 3: Thương Mại Hàng Hóa &amp; Các Biện Pháp Biên Giới <span class="bg-stone-200 text-stone-600 text-xs px-2 py-1 rounded-full ml-2">Premium 🔒</span></h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 theory-card flex flex-col">

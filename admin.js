@@ -278,6 +278,11 @@ window.onload = function() {
     checkAuth();
     const closeHistoryButton = document.getElementById("closeHistoryModalBtn");
     closeHistoryButton.addEventListener("click", closeHistoryModal);
+    document.addEventListener('keydown', event => {
+        if (document.getElementById('historyModal').style.display !== 'flex') return;
+        if (event.key === 'Escape') { event.preventDefault(); closeHistoryModal(); }
+        if (event.key === 'Tab') { event.preventDefault(); closeHistoryButton.focus(); }
+    });
 };
 
 // ==================== QUẢN LÝ BỘ ĐẾM ONLINE ====================
@@ -294,7 +299,19 @@ function initOnlineConfig() {
         // Làm mờ khu vực nhập tay nếu đang bật auto
         document.getElementById("manualSettings").style.opacity = data.isAutoMode ? "0.4" : "1";
         document.getElementById("manualSettings").style.pointerEvents = data.isAutoMode ? "none" : "auto";
-    });
+        document.getElementById('manualMin').disabled = Boolean(data.isAutoMode);
+        document.getElementById('manualMax').disabled = Boolean(data.isAutoMode);
+    }, error => showConfigStatus('Không thể tải cấu hình.', true));
+}
+
+let configStatusTimer;
+function showConfigStatus(message, failed = false) {
+    const status = document.getElementById('saveStatus');
+    status.textContent = message;
+    status.style.color = failed ? '#dc2626' : '#10b981';
+    status.style.opacity = '1';
+    clearTimeout(configStatusTimer);
+    if (!failed) configStatusTimer = setTimeout(() => status.style.opacity = '0', 2000);
 }
 
 // Gửi lệnh lên Firebase mỗi khi Admin gạt công tắc hoặc sửa số
@@ -303,16 +320,23 @@ window.updateOnlineConfig = function() {
     const min = parseInt(document.getElementById("manualMin").value) || 0;
     const max = parseInt(document.getElementById("manualMax").value) || 0;
 
+    if (min < 0 || max < min) {
+        showConfigStatus('Cần 0 ≤ Min ≤ Max.', true);
+        return;
+    }
+
     database.ref("settings/online_counter").set({ isAutoMode, min, max })
         .then(() => {
-            const status = document.getElementById("saveStatus");
-            status.style.opacity = "1";
-            setTimeout(() => status.style.opacity = "0", 2000);
-        });
+            showConfigStatus('Đã lưu!');
+        }).catch(() => showConfigStatus('Không thể lưu. Vui lòng thử lại.', true));
 }
 
 // ==================== XEM LỊCH SỬ ĐĂNG NHẬP ====================
+let historyTrigger = null;
+let historyRequest = 0;
 window.viewLoginHistory = function(uid, email) {
+    const request = ++historyRequest;
+    historyTrigger = document.activeElement;
     const modalTitle = document.getElementById("modalTitle");
     const historyList = document.getElementById("historyList");
     const loadingItem = document.createElement("li");
@@ -324,9 +348,11 @@ window.viewLoginHistory = function(uid, email) {
     loadingItem.textContent = "Đang tải dữ liệu...";
     historyList.appendChild(loadingItem);
     document.getElementById("historyModal").style.display = "flex";
+    document.getElementById('closeHistoryModalBtn').focus();
 
     // Rút hồ sơ lịch sử từ Firebase
-    database.ref(`users/${uid}/login_history`).once("value", (snapshot) => {
+    database.ref(`users/${uid}/login_history`).once("value").then((snapshot) => {
+        if (request !== historyRequest) return;
         clearElement(historyList);
 
         if (!snapshot.exists()) {
@@ -346,9 +372,17 @@ window.viewLoginHistory = function(uid, email) {
             li.textContent = displayText(time, "");
             historyList.appendChild(li);
         });
+    }).catch(() => {
+        if (request !== historyRequest) return;
+        clearElement(historyList);
+        const item = document.createElement('li');
+        item.textContent = 'Không thể tải lịch sử. Vui lòng thử lại.';
+        historyList.appendChild(item);
     });
 };
 
 function closeHistoryModal() {
+    historyRequest++;
     document.getElementById("historyModal").style.display = "none";
+    if (historyTrigger?.isConnected) historyTrigger.focus();
 }

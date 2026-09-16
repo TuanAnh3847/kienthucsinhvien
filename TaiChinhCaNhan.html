@@ -54,13 +54,14 @@
         .mini-label { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; font-weight: 900; }
         .answer-chip { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; padding: .35rem .7rem; font-size: .75rem; font-weight: 900; }
     </style>
+    <link rel="stylesheet" href="/shared.css">
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed soft-grid">
 
 <!-- Navbar -->
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
+        <div class="site-header-row flex justify-between items-center h-16">
             <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
                 <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
                 <div class="flex flex-col justify-center min-w-0">
@@ -71,15 +72,7 @@
                 </div>
             </a>
 
-            <div class="hidden lg:flex space-x-1 items-center" id="nav-menu">
-                <button onclick="attemptSwitchTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Tổng quan</button>
-                <button onclick="attemptSwitchTab('ch12')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.1-2</button>
-                <button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3</button>
-                <button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.4</button>
-                <button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.5</button>
-                <button onclick="attemptSwitchTab('ch6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.6</button>
-                <button onclick="attemptSwitchTab('lastminute')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Cứu điểm</button>
-            </div>
+
 
             <div class="flex items-center shrink-0">
                 <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
@@ -89,22 +82,31 @@
                 </div>
                 <div class="border-l border-stone-300 pl-3 sm:pl-4">
                     <button id="nav-login-btn" onclick="loginGoogleReal()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-                    <div id="nav-user-profile" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-                        <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+                    <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+                        <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
                         <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex items-center lg:hidden py-2 border-t border-stone-100 relative">
-            <select id="mobile-nav" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+        <div class="chapter-nav" id="nav-menu">
+                <button onclick="attemptSwitchTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Tổng quan</button>
+                <button onclick="attemptSwitchTab('ch12')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.1-2</button>
+                <button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3</button>
+                <button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.4</button>
+                <button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.5</button>
+                <button onclick="attemptSwitchTab('ch6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.6</button>
+                <button onclick="attemptSwitchTab('lastminute')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Cứu điểm</button>
+            </div>
+<div class="chapter-select-row relative">
+            <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
                 <option value="overview">Tổng quan môn học</option>
-                <option value="ch12">Chương 1-2: Nền tảng & nghề nghiệp</option>
+                <option value="ch12">Chương 1-2: Nền tảng &amp; nghề nghiệp</option>
                 <option value="ch3">Chương 3: Sản phẩm tài chính</option>
-                <option value="ch4">Chương 4: Báo cáo & ngân sách</option>
+                <option value="ch4">Chương 4: Báo cáo &amp; ngân sách</option>
                 <option value="ch5">Chương 5: Bảo vệ tài chính</option>
-                <option value="ch6">Chương 6: Vay & thẻ tín dụng</option>
+                <option value="ch6">Chương 6: Vay &amp; thẻ tín dụng</option>
                 <option value="lastminute">Cứu điểm trước thi</option>
             </select>
         </div>
@@ -122,7 +124,7 @@
         <p class="text-base md:text-lg text-stone-600 max-w-3xl mx-auto mb-6">Bản học nhanh được thiết kế theo kiểu dễ ôn: <strong>keyword → bảng so sánh → công thức → bẫy đề</strong>. Mục tiêu là đọc tới đâu nhớ được tới đó, làm trắc nghiệm tiếng Anh không bị ngợp.</p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
             <button onclick="attemptSwitchTab('ch4')" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-3 rounded-xl font-black shadow-md shadow-teal-600/20">Ôn phần công thức trước</button>
-            <a href="/trac-nghiem-tccn.html" class="bg-white hover:bg-stone-50 border border-stone-200 text-slate-800 px-5 py-3 rounded-xl font-black shadow-sm">Sang file bài tập →</a>
+            <a href="/TCCN-LuyenDe" class="bg-white hover:bg-stone-50 border border-stone-200 text-slate-800 px-5 py-3 rounded-xl font-black shadow-sm">Sang file bài tập →</a>
         </div>
     </section>
 
@@ -184,7 +186,7 @@
     <!-- ================= CHAPTER 1-2 ================= -->
     <section id="ch12" class="tab-content hidden">
         <div class="mb-8">
-            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1-2: Nền tảng tài chính cá nhân & nghề nghiệp</h2>
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 1-2: Nền tảng tài chính cá nhân &amp; nghề nghiệp</h2>
             <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg"><strong>Mục tiêu:</strong> Nắm tư duy tài chính: lập kế hoạch, hiểu hành vi tiêu dùng, đặt mục tiêu SMART, rồi gắn tài chính với nghề nghiệp và thu nhập dài hạn.</p>
         </div>
 
@@ -260,7 +262,7 @@
         </div>
 
         <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
-            <h3 class="text-xl font-black text-slate-900 mb-4">💼 Chapter 2: Career planning & income</h3>
+            <h3 class="text-xl font-black text-slate-900 mb-4">💼 Chapter 2: Career planning &amp; income</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
                 <div class="bg-blue-50 border border-blue-100 rounded-xl p-4"><strong>Job</strong><p class="text-sm mt-1">Một vị trí làm việc được trả lương.</p></div>
                 <div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong>Career</strong><p class="text-sm mt-1">Lộ trình nghề nghiệp gồm nhiều job liên quan, phát triển theo thời gian.</p></div>
@@ -272,7 +274,7 @@
                     <ul class="list-disc pl-5 space-y-1 text-stone-700">
                         <li><strong>Values:</strong> integrity, adaptability, responsibility, willingness to learn.</li>
                         <li><strong>Professional interests:</strong> môn học, project, sở thích, làm với người hay hậu trường.</li>
-                        <li><strong>Benefits & costs:</strong> salary, growth, job satisfaction vs travel, work hours, location.</li>
+                        <li><strong>Benefits &amp; costs:</strong> salary, growth, job satisfaction vs travel, work hours, location.</li>
                     </ul>
                 </div>
                 <div class="bg-slate-900 text-white rounded-xl p-4">
@@ -286,7 +288,7 @@
     <!-- ================= CHAPTER 3 ================= -->
     <section id="ch3" class="tab-content hidden">
         <div class="mb-8">
-            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Financial instruments & banking services</h2>
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 3: Financial instruments &amp; banking services</h2>
             <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg"><strong>Mục tiêu:</strong> Biết sản phẩm nào dùng cho mục tiêu nào: saving để an toàn, credit để chi tiêu/vay, insurance để bảo vệ, fund/stocks/bonds để đầu tư.</p>
         </div>
 
@@ -307,7 +309,7 @@
             </div>
 
             <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
-                <h3 class="text-xl font-black text-slate-900 mb-4">💳 Consumer loans & credit cards</h3>
+                <h3 class="text-xl font-black text-slate-900 mb-4">💳 Consumer loans &amp; credit cards</h3>
                 <ul class="space-y-3 text-stone-700">
                     <li><strong>Consumer loan:</strong> vay cho chi tiêu cá nhân/gia đình; có thể secured hoặc unsecured.</li>
                     <li><strong>Mortgage:</strong> mua nhà, thường có tài sản đảm bảo nên lãi thấp hơn loan không đảm bảo.</li>
@@ -343,7 +345,7 @@
                         <tr><td class="p-3 font-bold">Bond</td><td class="p-3">Debt instrument, trả interest và principal.</td><td class="p-3">Government bonds thường là nhóm thấp rủi ro hơn.</td></tr>
                         <tr><td class="p-3 font-bold">Mutual fund</td><td class="p-3">Quỹ được quản lý chuyên nghiệp.</td><td class="p-3">Ưu điểm: professional management, không phải guaranteed return.</td></tr>
                         <tr><td class="p-3 font-bold">ETF</td><td class="p-3">Quỹ giao dịch trên sàn, đa dạng hóa.</td><td class="p-3">Ưu điểm: portfolio diversification at lower cost.</td></tr>
-                        <tr><td class="p-3 font-bold">Real estate rental</td><td class="p-3">Tạo rent + kỳ vọng tăng giá.</td><td class="p-3">Yếu tố quan trọng: location & appreciation potential.</td></tr>
+                        <tr><td class="p-3 font-bold">Real estate rental</td><td class="p-3">Tạo rent + kỳ vọng tăng giá.</td><td class="p-3">Yếu tố quan trọng: location &amp; appreciation potential.</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -353,7 +355,7 @@
     <!-- ================= CHAPTER 4 ================= -->
     <section id="ch4" class="tab-content hidden">
         <div class="mb-8">
-            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 4: Personal financial statements & budgeting</h2>
+            <h2 class="text-2xl font-black text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Chương 4: Personal financial statements &amp; budgeting</h2>
             <p class="text-stone-600 bg-teal-50 border border-teal-100 p-4 rounded-lg"><strong>Đây là chương trọng tâm nhất.</strong> Học thuộc công thức, hiểu ratio nào đo cái gì, và biết chọn budgeting method theo tình huống.</p>
         </div>
 
@@ -422,14 +424,14 @@
         </div>
 
         <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
-            <h3 class="text-xl font-black text-slate-900 mb-4">🧠 Needs vs Wants & overspending control</h3>
+            <h3 class="text-xl font-black text-slate-900 mb-4">🧠 Needs vs Wants &amp; overspending control</h3>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong>Needs</strong><p class="text-sm mt-1">Basic food, shelter, clothing, healthcare, basic transportation.</p></div>
                 <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><strong>Wants</strong><p class="text-sm mt-1">Dining out, vacations, luxury items, hobbies, entertainment.</p></div>
                 <div class="bg-slate-900 text-white rounded-xl p-4"><strong>Bẫy</strong><p class="text-sm mt-1 text-slate-200">Needs/wants không tuyệt đối. Nhưng trong 50/30/20, 50% là essential needs.</p></div>
             </div>
             <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-stone-700">
-                <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Track spending & credit transactions.</div>
+                <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Track spending &amp; credit transactions.</div>
                 <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Wait 1-2 months before expensive purchases.</div>
                 <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Shop purposefully: “Do I really need it?”</div>
                 <div class="p-3 rounded-lg bg-stone-50 border border-stone-200">Use envelope system for strongest control.</div>
@@ -468,10 +470,10 @@
                 <h3 class="text-xl font-black text-slate-900 mb-4">🛡️ Risk-management process</h3>
                 <ol class="space-y-2 text-sm text-stone-700">
                     <li class="solution-step"><strong>1. Identify exposures</strong> - nhận diện rủi ro.</li>
-                    <li class="solution-step"><strong>2. Estimate risk & losses</strong> - ước lượng xác suất/thiệt hại.</li>
+                    <li class="solution-step"><strong>2. Estimate risk &amp; losses</strong> - ước lượng xác suất/thiệt hại.</li>
                     <li class="solution-step"><strong>3. Choose how to handle</strong> - chọn cách xử lý.</li>
                     <li class="solution-step"><strong>4. Implement program</strong> - thực hiện kế hoạch.</li>
-                    <li class="solution-step"><strong>5. Evaluate & adjust</strong> - đánh giá và điều chỉnh.</li>
+                    <li class="solution-step"><strong>5. Evaluate &amp; adjust</strong> - đánh giá và điều chỉnh.</li>
                 </ol>
             </div>
         </div>
@@ -532,7 +534,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
             <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 study-card">
-                <h3 class="text-xl font-black text-slate-900 mb-4">🏛️ Credit institutions & lending methods</h3>
+                <h3 class="text-xl font-black text-slate-900 mb-4">🏛️ Credit institutions &amp; lending methods</h3>
                 <div class="space-y-3 text-sm text-stone-700">
                     <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Bank:</strong> commercial banks, policy banks, cooperative banks.</div>
                     <div class="p-3 rounded-lg bg-stone-50 border border-stone-200"><strong>Non-bank credit institution:</strong> finance companies, financial leasing companies.</div>
@@ -557,7 +559,7 @@
         </div>
 
         <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
-            <h3 class="text-xl font-black text-slate-900 mb-4">💰 Loan concepts & repayment</h3>
+            <h3 class="text-xl font-black text-slate-900 mb-4">💰 Loan concepts &amp; repayment</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <div class="bg-teal-50 border border-teal-100 rounded-xl p-4"><strong>Short-term loan</strong><p class="text-sm mt-1">Thường tối đa 12 months.</p></div>
                 <div class="bg-blue-50 border border-blue-100 rounded-xl p-4"><strong>Medium-term loan</strong><p class="text-sm mt-1">Thời hạn trung bình.</p></div>
@@ -598,7 +600,7 @@
         </div>
 
         <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 mb-8">
-            <h3 class="text-xl font-black text-slate-900 mb-4">🗓️ Grace period & credit card fees</h3>
+            <h3 class="text-xl font-black text-slate-900 mb-4">🗓️ Grace period &amp; credit card fees</h3>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div>
                     <p class="text-stone-700 mb-4"><strong>Grace period</strong> là thời gian miễn lãi cho purchase nếu trả full đúng hạn. LMS hay dùng khoảng <strong>45-55 days</strong>. Nhưng cash advance thường bị tính lãi ngay từ ngày rút.</p>
@@ -675,7 +677,7 @@
             <h3 class="text-xl font-black mb-4">🧪 10 câu tự check siêu nhanh</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-200">
                 <div><span class="answer-chip bg-teal-500/20 text-teal-200">1</span> Net worth = assets - liabilities.</div>
-                <div><span class="answer-chip bg-teal-500/20 text-teal-200">2</span> Income statement reflects income & expenses over a period.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">2</span> Income statement reflects income &amp; expenses over a period.</div>
                 <div><span class="answer-chip bg-teal-500/20 text-teal-200">3</span> Inflation reduces the real value of savings.</div>
                 <div><span class="answer-chip bg-teal-500/20 text-teal-200">4</span> Passive income = income without continuous active work.</div>
                 <div><span class="answer-chip bg-teal-500/20 text-teal-200">5</span> Online savings may offer higher interest than traditional savings.</div>
@@ -683,14 +685,14 @@
                 <div><span class="answer-chip bg-teal-500/20 text-teal-200">7</span> ETF advantage: diversification at lower cost.</div>
                 <div><span class="answer-chip bg-teal-500/20 text-teal-200">8</span> Foreign currency savings: exchange rate fluctuation matters.</div>
                 <div><span class="answer-chip bg-teal-500/20 text-teal-200">9</span> Unsecured loan interest is strongly affected by credit score.</div>
-                <div><span class="answer-chip bg-teal-500/20 text-teal-200">10</span> First job foundation: learning & skill development.</div>
+                <div><span class="answer-chip bg-teal-500/20 text-teal-200">10</span> First job foundation: learning &amp; skill development.</div>
             </div>
         </div>
 
         <div class="text-center bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
             <h3 class="text-xl font-black text-slate-900 mb-2">Xong lý thuyết rồi thì qua bài tập</h3>
             <p class="text-stone-600 mb-4">File bài tập sẽ làm theo kiểu chọn đáp án xong hiện giải thích ngay, giống cách ôn ông muốn.</p>
-            <a href="/trac-nghiem-tccn.html" class="inline-flex bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-black shadow-md shadow-teal-600/20">Qua trang bài tập →</a>
+            <a href="/TCCN-LuyenDe" class="inline-flex bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-black shadow-md shadow-teal-600/20">Qua trang bài tập →</a>
         </div>
     </section>
 
