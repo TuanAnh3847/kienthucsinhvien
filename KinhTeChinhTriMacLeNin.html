@@ -32,7 +32,25 @@
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
-<script defer src="auth.js"></script>
+<script>
+window.EDU_PAGE_CONFIG = {
+    subject: "Kinh Tế Chính Trị Mác - Lênin",
+    shortName: "Kinh Tế Chính Trị Mác - Lênin",
+    icon: "🏭",
+    route: "/KinhTeChinhTriMacLeNin",
+    defaultTab: "ch1",
+    chapters: [
+        { id: "ch1", shortLabel: "Ch.1: Mở đầu", mobileLabel: "Chương 1: Đối tượng, Phương pháp và Chức năng" },
+        { id: "ch2", shortLabel: "Ch.2: Hàng hóa", mobileLabel: "Chương 2: Hàng hóa, Thị trường và Các chủ thể" },
+        { id: "ch3", shortLabel: "Ch.3: Giá trị thặng dư", mobileLabel: "Chương 3: Giá Trị Thặng Dư" },
+        { id: "ch4", shortLabel: "Ch.4: Độc quyền", mobileLabel: "Chương 4: Cạnh Tranh & Độc Quyền" },
+        { id: "ch5", shortLabel: "Ch.5: KTTT ĐHXHCN", mobileLabel: "Chương 5: KTTT Định Hướng XHCN" },
+        { id: "ch6", shortLabel: "Ch.6: CNH, HĐH", mobileLabel: "Chương 6: CNH, HĐH & Hội Nhập" }
+    ]
+};
+</script>
+<script defer src="/edu-header.js"></script>
+<script defer src="/auth.js"></script>
 
 <style>
 .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; background-color: #ffffff; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
@@ -93,61 +111,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 <!-- Navbar -->
-<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="site-header-row flex justify-between items-center h-16">
-        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
-            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
-            <div class="flex flex-col justify-center min-w-0">
-                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
-                
-                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
-                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🏭 Kinh Tế Chính Trị Mác - Lênin</p>
-                </div>
-            </div>
-        </a>
-
-
-
-<div class="flex items-center shrink-0">
-        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
-            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
-            <span id="online-count" class="mr-1 sm:mr-1">...</span>
-            <span class="hidden sm:inline">online</span>
-        </div>
-
-<div class="border-l border-stone-300 pl-4">
-<button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-<div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-<!-- Cập nhật Avatar fallback giống VHDDTKD -->
-<img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
-<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Mobile Menu -->
-<div class="chapter-nav" id="nav-menu">
-<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Mở đầu</button>
-<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Hàng hóa</button>
-<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3: Giá trị thặng dư</button>
-<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Độc quyền <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: KTTT ĐHXHCN <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.6: CNH, HĐH <span class="premium-lock text-xs"></span></button>
-</div>
-<div class="chapter-select-row relative">
-<select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
-<option value="ch1">Chương 1: Mở đầu</option>
-<option value="ch2">Chương 2: Hàng hóa</option>
-<option value="ch3">Chương 3: Giá trị thặng dư</option>
-<option value="ch4" class="premium-opt">Chương 4: Độc quyền </option>
-<option value="ch5" class="premium-opt">Chương 5: KTTT ĐHXHCN </option>
-<option value="ch6" class="premium-opt">Chương 6: CNH, HĐH </option>
-</select>
-</div>
-</div>
-</nav>
+<div id="edu-header"></div>
 
 <!-- Main Content Container -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
@@ -765,51 +729,6 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
         }
     };
 })();
-
-// TAB SWITCHING
-let activeTabId = 'ch1'; 
-
-window.attemptSwitchTab = (t) => { forceSwitchTab(t); };
-
-// Hàm chuyển UI Tab (Đã cập nhật fix lỗi scroll từ VHDDTKD)
-function forceSwitchTab(t) { 
-    activeTabId = t; 
-    document.querySelectorAll('.tab-content').forEach(s => { 
-        s.classList.add('hidden'); 
-        s.classList.remove('animate-fade-in'); 
-    }); 
-    
-    const targetTab = document.getElementById(t);
-    if (targetTab) {
-        targetTab.classList.remove('hidden'); 
-        targetTab.classList.add('animate-fade-in');
-        
-        // 3. TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG (Đã fix lỗi sập web)
-        const offset = 150; 
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = targetTab.getBoundingClientRect().top; // <--- Fix lỗi target
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
-
-    // Cập nhật trạng thái nút trên Navbar
-    document.querySelectorAll('.nav-btn').forEach(b => { 
-        b.classList.remove('tab-active','text-teal-600'); 
-        b.classList.add('text-stone-500'); 
-        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
-            b.classList.add('tab-active','text-teal-600'); 
-            b.classList.remove('text-stone-500'); 
-        }
-    }); 
-    
-    const mobileNav = document.getElementById('mobile-nav');
-    if (mobileNav) mobileNav.value = t;
-}
 
 window.onload = () => {
     KTCT.calcW();

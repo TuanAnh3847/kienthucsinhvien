@@ -2,6 +2,10 @@
 .site-header-row { gap: .75rem; }
 .site-header-row > :first-child { min-width: 0; }
 .site-header-row > :last-child { flex-shrink: 0; }
+.edu-header-brand-copy { max-width: min(17rem, 34vw); }
+.edu-header-subject { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.edu-header-subject-icon { font-size: .75rem; }
+.edu-header-controls { min-width: 0; }
 .chapter-nav { display: none; }
 .chapter-select-row { display: flex; padding: .5rem 0; border-top: 1px solid #f5f5f4; }
 #mobile-nav { min-width: 0; }
@@ -21,6 +25,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
   .site-header-row > :first-child { gap: .25rem; }
   .site-header-row h1 { font-size: 1rem; }
   .site-header-row > :first-child img { width: 2rem; height: 2rem; flex-shrink: 0; }
+  .edu-header-brand-copy { max-width: min(9.5rem, 42vw); }
   .site-header-row > :last-child { gap: .375rem; }
   .site-header-row .border-l { padding-left: .5rem; }
   #nav-login-btn { padding: .375rem .5rem; }

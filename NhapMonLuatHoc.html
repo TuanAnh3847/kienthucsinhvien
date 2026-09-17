@@ -32,7 +32,26 @@
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
-<script defer src="auth.js"></script>
+<script>
+window.EDU_PAGE_CONFIG = {
+    subject: "Nhập Môn Luật Học",
+    shortName: "Nhập Môn Luật Học",
+    icon: "⚖️",
+    route: "/NhapMonLuatHoc",
+    defaultTab: "ch1",
+    chapters: [
+        { id: "ch1", shortLabel: "Ch.1: Nhà Nước", mobileLabel: "Chương 1: Những Vấn Đề Cơ Bản Về Nhà Nước" },
+        { id: "ch2", shortLabel: "Ch.2: IGOs", mobileLabel: "Chương 2: Tổ Chức Liên Chính Phủ (IGOs)" },
+        { id: "ch3", shortLabel: "Ch.3: PL Chung", mobileLabel: "Chương 3: Những Vấn Đề Chung Về Pháp Luật" },
+        { id: "ch4", shortLabel: "Ch.4: QPPL", mobileLabel: "Chương 4: Quy Phạm Pháp Luật" },
+        { id: "ch5", shortLabel: "Ch.5: QH Pháp Luật", mobileLabel: "Chương 5: Quan Hệ Pháp Luật" },
+        { id: "ch6", shortLabel: "Ch.6: Vi Phạm", mobileLabel: "Chương 6: Vi Phạm PL & TNPL" },
+        { id: "ch7", shortLabel: "Ch.7: HTPL VN", mobileLabel: "Chương 7: Hệ Thống PL VN" }
+    ]
+};
+</script>
+<script defer src="/edu-header.js"></script>
+<script defer src="/auth.js"></script>
 
 <style>
 ::-webkit-scrollbar { width: 8px; }
@@ -88,71 +107,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 <!-- Navbar -->
-<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center min-h-[4rem] py-2 flex-wrap md:flex-nowrap gap-y-2">
-<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand &amp; Tên Môn Học -->
-        
-
-        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
-            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
-            <div class="flex flex-col justify-center min-w-0">
-                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
-                
-                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
-                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">⚖️ Nhập Môn Luật Học</p>
-                </div>
-            </div>
-        </a>
-
-
-
-<!-- CÁC CHƯƠNG ĐÃ TÁCH RỜI (Gói trọn bằng flex-wrap để tự động rớt dòng nếu thiếu chỗ) -->
-
-
-<div class="flex items-center shrink-0">
-<!-- BỘ ĐẾM SỐ ONLINE -->
-        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
-            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
-            <span id="online-count" class="mr-1 sm:mr-1">...</span>
-            <span class="hidden sm:inline">online</span>
-        </div>
-
-<!-- User Profile / Login Area -->
-<div class="border-l border-stone-300 pl-4">
-<button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-<div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-<img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
-<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Mobile Menu -->
-<div class="chapter-nav" id="nav-menu">
-<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2.5 py-1.5 text-sm font-medium transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.1: Nhà Nước</button>
-<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.2: IGOs</button>
-<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.3: PL Chung</button>
-<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100">Ch.4: QPPL</button>
-<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100 flex items-center gap-1">Ch.5: QH Pháp Luật <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100 flex items-center gap-1">Ch.6: Vi Phạm <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch7')" class="nav-btn px-2.5 py-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 rounded-md hover:bg-stone-100 flex items-center gap-1">Ch.7: HTPL VN <span class="premium-lock text-xs"></span></button>
-</div>
-<div class="chapter-select-row relative">
-<select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
-<option value="ch1">Chương 1: Những Vấn Đề Cơ Bản Về Nhà Nước</option>
-<option value="ch2">Chương 2: Tổ Chức Liên Chính Phủ (IGOs)</option>
-<option value="ch3">Chương 3: Những Vấn Đề Chung Về Pháp Luật</option>
-<option value="ch4">Chương 4: Quy Phạm Pháp Luật</option>
-<option value="ch5">Chương 5: Quan Hệ Pháp Luật</option>
-<option value="ch6">Chương 6: Vi Phạm PL &amp; TNPL</option>
-<option value="ch7">Chương 7: Hệ Thống PL VN</option>
-</select>
-
-</div>
-</div>
-</nav>
+<div id="edu-header"></div>
 
 <!-- Main Content Container -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
@@ -1190,56 +1145,5 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </section>
 </main>
 
-<!-- CORE SCRIPTS -->
-<script>
-let activeTabId = 'ch1'; // Sếp có thể đổi thành ID tab mặc định của môn Luật nếu cần
-
-
-// Chuyển Tab không cần check khóa nữa vì auth.js đã làm máy chém ở ngoài cửa rồi
-window.attemptSwitchTab = (t) => { 
-    forceSwitchTab(t); 
-};
-
-// Hàm chuyển UI Tab
-function forceSwitchTab(t) { 
-    activeTabId = t; 
-    
-    document.querySelectorAll('.tab-content').forEach(s => { 
-        s.classList.add('hidden'); 
-        s.classList.remove('animate-fade-in'); 
-    }); 
-    
-    const targetTab = document.getElementById(t);
-    if (targetTab) {
-        targetTab.classList.remove('hidden'); 
-        targetTab.classList.add('animate-fade-in');
-        
-       // 3. TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG (Đã fix lỗi sập web do gọi sai tên biến)
-        const offset = 150; 
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = targetTab.getBoundingClientRect().top; // <--- Đã fix target thành targetTab
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
-    
-    // Đổi màu menu khi click (Tui đã giữ nguyên màu text-indigo-600 đặc trưng của môn Luật cho sếp)
-    document.querySelectorAll('.nav-btn').forEach(b => { 
-        b.classList.remove('tab-active', 'text-indigo-600', 'bg-stone-100'); 
-        b.classList.add('text-stone-500'); 
-        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
-            b.classList.add('tab-active', 'text-indigo-600', 'bg-stone-100'); 
-            b.classList.remove('text-stone-500'); 
-        }
-    }); 
-    
-    const mobileNav = document.getElementById('mobile-nav');
-    if (mobileNav) mobileNav.value = t;
-}
-</script>
 </body>
 </html>

@@ -21,6 +21,7 @@ python tests/html_check.py
 python tests/content_check.py main
 node --check auth.js
 node --check admin.js
+node --check edu-header.js
 node tests/audit.cjs
 node tests/regression.cjs
 git diff --check
@@ -33,8 +34,10 @@ checks public routes, IDs, inline script syntax/handlers, and each chapter at
 `regression.cjs` loads real visual libraries but intercepts Firebase SDK requests
 with `firebase-fixture.js`. It tests authenticated UI, modal keyboard behavior,
 failure paths, database listener cleanup, quizzes, calculators and admin UI
-without signing into or writing to production. It is not proof of a completed
-Google OAuth exchange or authenticated production database permissions.
+without signing into or writing to production. It also enforces the shared
+header source contract and exercises every migrated theory page at 375, 768,
+1280 and 1440 pixels. It is not proof of a completed Google OAuth exchange or
+authenticated production database permissions.
 
 The browser checks need CDN network access. Optional `TEST_FILTER` selects a
 regression scenario by name. JSON results and screenshots are generated under

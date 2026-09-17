@@ -31,7 +31,24 @@
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
-<script defer src="auth.js"></script>
+<script>
+window.EDU_PAGE_CONFIG = {
+    subject: "Quản Trị Học",
+    shortName: "Quản Trị Học",
+    icon: "🏢",
+    route: "/QuanTriHoc",
+    defaultTab: "ch1_2",
+    chapters: [
+        { id: "ch1_2", shortLabel: "Ch.1-2: Đại Cương", mobileLabel: "Chương 1-2: Quản Trị & Cá Nhân" },
+        { id: "ch3_4", shortLabel: "Ch.3-4: Đạo Đức & Môi Trường", mobileLabel: "Chương 3-4: Đạo Đức & Môi Trường" },
+        { id: "ch5_6", shortLabel: "Ch.5-6: Quyết Định & Chiến Lược", mobileLabel: "Chương 5-6: Quyết Định & Chiến Lược" },
+        { id: "ch7_8", shortLabel: "Ch.7-8: Tổ Chức & Kiểm Soát", mobileLabel: "Chương 7-8: Tổ Chức & Kiểm Soát" },
+        { id: "ch9_13", shortLabel: "Ch.9-13: Lãnh Đạo & Giao Tiếp", mobileLabel: "Chương 9-13: Lãnh Đạo & Giao Tiếp" }
+    ]
+};
+</script>
+<script defer src="/edu-header.js"></script>
+<script defer src="/auth.js"></script>
 
 <!-- MathJax for rendering LaTeX syntax ($...$) -->
 
@@ -94,62 +111,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 <!-- Navbar -->
-<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="flex justify-between items-center min-h-[4rem] py-2">
-
-        
-
-        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
-            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
-            <div class="flex flex-col justify-center min-w-0">
-                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
-                
-                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
-                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🏢 Quản Trị Học</p>
-                </div>
-            </div>
-        </a>
-
-
-
-        <div class="flex items-center shrink-0">
-        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
-            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
-            <span id="online-count" class="mr-1 sm:mr-1">...</span> 
-            <span class="hidden sm:inline">online</span>
-        </div>
-
-            <div class="border-l border-stone-300 pl-4">
-                <button id="nav-login-btn" onclick="requestLogin()" class="whitespace-nowrap hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-                <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-                    <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
-                    <span id="user-name" class="whitespace-nowrap text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
-                </div>
-            </div>
-        </div>
-
-    </div> <div class="chapter-nav" id="nav-menu">
-            <button onclick="attemptSwitchTab('ch1_2')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1-2: Đại Cương</button>
-            <button onclick="attemptSwitchTab('ch3_4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.3-4: Đạo Đức &amp; Môi Trường</button>
-            <button onclick="attemptSwitchTab('ch5_6')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5-6: Quyết Định &amp; Chiến Lược <span class="premium-lock text-xs"></span></button>
-            <button onclick="attemptSwitchTab('ch7_8')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.7-8: Tổ Chức &amp; Kiểm Soát <span class="premium-lock text-xs"></span></button>
-            <button onclick="attemptSwitchTab('ch9_13')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.9-13: Lãnh Đạo &amp; Giao Tiếp <span class="premium-lock text-xs"></span></button>
-        </div>
-<div class="chapter-select-row relative">
-        <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
-            <option value="ch1_2">Chương 1-2: Quản Trị &amp; Cá Nhân</option>
-            <option value="ch3_4">Chương 3-4: Đạo Đức &amp; Môi Trường</option>
-            <option value="ch5_6">Chương 5-6: Quyết Định &amp; Chiến Lược</option>
-            <option value="ch7_8">Chương 7-8: Tổ Chức &amp; Kiểm Soát</option>
-            <option value="ch9_13">Chương 9-13: Lãnh Đạo &amp; Giao Tiếp</option>
-        </select>
-
-    </div>
-
-</div>
-</nav>
+<div id="edu-header"></div>
 
 <!-- Main Content Container -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
@@ -813,55 +775,6 @@ function updateLeadershipStyle() {
 
 window.addEventListener('load', () => { updateLeadershipStyle(); });
 
-// ==========================================
-// 🚀 CORE UI & TABS (ĐÃ DỌN SẠCH & FIX LỖI) 🚀
-// ==========================================
-let activeTabId = 'ch1_2'; // (Nhớ đổi tên biến này theo từng môn nhé: Kế toán là ch1, Quan trị là ch1_2...)
-
-// Chuyển Tab không cần check khóa nữa vì auth.js đã lo giữ cửa
-window.attemptSwitchTab = (t) => { 
-    forceSwitchTab(t); 
-};
-
-function forceSwitchTab(t) { 
-    activeTabId = t; 
-    
-    document.querySelectorAll('.tab-content').forEach(s => { 
-        s.classList.add('hidden'); 
-        s.classList.remove('animate-fade-in'); 
-    }); 
-    
-    const targetTab = document.getElementById(t);
-    if (targetTab) {
-        targetTab.classList.remove('hidden'); 
-        targetTab.classList.add('animate-fade-in');
-        
-       // TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG
-        const offset = 150; 
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = targetTab.getBoundingClientRect().top;
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
-    
-    // Đổi màu menu khi click
-    document.querySelectorAll('.nav-btn').forEach(b => { 
-        b.classList.remove('tab-active','text-teal-600', 'bg-teal-50'); 
-        b.classList.add('text-stone-500'); 
-        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
-            b.classList.add('tab-active','text-teal-600'); 
-            b.classList.remove('text-stone-500'); 
-        }
-    }); 
-    
-    const mobileNav = document.getElementById('mobile-nav');
-    if (mobileNav) mobileNav.value = t;
-}
 </script>
 </body>
 </html>
