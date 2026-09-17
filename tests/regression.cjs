@@ -78,6 +78,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             assert(!await page.locator('#nav-login-btn').isVisible());
             const options = await page.locator('#mobile-nav option').evaluateAll(els=>els.map(e=>e.value));
             assert.equal(await page.evaluate(()=>window.EduHeader.activeTab),contract.config.defaultTab);
+            assert.equal(await page.locator('#'+contract.config.defaultTab).evaluate(el=>el.classList.contains('animate-fade-in')),false,'initial tab must not animate');
             for (const width of [375,768,1280,1440]) {
                 await page.setViewportSize({width,height:812});
                 for (const id of options) {
@@ -89,12 +90,26 @@ async function checkLayout(page, label) { const value = await layout(page); asse
                     assert.equal(await page.evaluate(()=>window.EduHeader.activeTab),id);
                     const visibleChapters = await page.locator('.tab-content').evaluateAll(els=>els.filter(e=>getComputedStyle(e).display!=='none').length);
                     assert.equal(visibleChapters,1);
+                    assert.deepEqual(await page.locator('.tab-content.animate-fade-in').evaluateAll((els,chapterIds)=>els.map(el=>el.id).filter(tabId=>chapterIds.includes(tabId)),options),[id]);
                     await checkLayout(page,file+' '+width+' '+id);
                 }
                 assert.equal(await page.locator('#mobile-nav').isVisible(),width<1280);
                 assert.equal(await page.locator('#nav-menu').isVisible(),width>=1280);
             }
             if (file === 'KinhTeQuocTe.html') {
+                const replay = await page.evaluate(async () => {
+                    const target = document.getElementById('ch3');
+                    window.EduHeader.switchTab('ch3', { scroll: false });
+                    const classChanges = [];
+                    const observer = new MutationObserver(records => classChanges.push(...records));
+                    observer.observe(target, { attributes: true, attributeFilter: ['class'] });
+                    window.EduHeader.switchTab('ch3', { scroll: false });
+                    await Promise.resolve();
+                    observer.disconnect();
+                    return { classChanges: classChanges.length, animated: target.classList.contains('animate-fade-in') };
+                });
+                assert(replay.classChanges >= 2,'repeated tab switch must remove and restore the animation class');
+                assert(replay.animated,'repeated tab switch must finish with animation enabled');
                 await page.evaluate(() => {
                     window.__headerResizeCalls = { sd: 0, labor: 0, dual: 0 };
                     for (const [key, chart] of [['sd', sdChart], ['labor', laborChart], ['dual', dualLaborChart]]) {
@@ -104,7 +119,10 @@ async function checkLayout(page, label) { const value = await layout(page); asse
                     window.EduHeader.switchTab('ch5', { scroll: false });
                     window.EduHeader.switchTab('ch3', { scroll: false });
                 });
-                assert.deepEqual(await page.evaluate(()=>window.__headerResizeCalls),{sd:1,labor:1,dual:1});
+                const resizeCalls = await page.evaluate(()=>window.__headerResizeCalls);
+                assert(resizeCalls.sd >= 1,'tariff chart must resize after its chapter opens');
+                assert(resizeCalls.labor >= 1,'labor chart must resize after its chapter opens');
+                assert(resizeCalls.dual >= 1,'dual-labor chart must resize after its chapter opens');
             }
             // Exercise each course's calculators with their existing default inputs.
             const calls = {

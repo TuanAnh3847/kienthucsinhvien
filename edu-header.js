@@ -161,10 +161,16 @@
             const section = document.getElementById(chapter.id);
             if (!section) return;
             const isActive = chapter.id === tabId;
+            section.classList.remove('animate-fade-in');
             section.classList.toggle('hidden', !isActive);
             section.classList.toggle('block', isActive);
-            if (!isActive) section.classList.remove('animate-fade-in');
         });
+        if (options.animate !== false) {
+            // Removing the class above and forcing layout lets repeated selections
+            // restart the CSS animation instead of reusing its completed state.
+            void target.offsetWidth;
+            target.classList.add('animate-fade-in');
+        }
         desktopNav.querySelectorAll('[data-edu-tab]').forEach(button => {
             const isActive = button.dataset.eduTab === tabId;
             button.classList.toggle('tab-active', isActive);
@@ -194,6 +200,6 @@
         get activeTab() { return activeTab; },
         switchTab
     });
-    switchTab(defaultTab, { scroll: false, notify: false });
+    switchTab(defaultTab, { scroll: false, notify: false, animate: false });
     window.dispatchEvent(new CustomEvent('edu:headerready', { detail: { route, defaultTab } }));
 })();
