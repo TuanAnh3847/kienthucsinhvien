@@ -14,7 +14,23 @@
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
-<script defer src="auth.js"></script>
+<script>
+window.EDU_PAGE_CONFIG = {
+    subject: "Luật Thương Mại Quốc Tế",
+    shortName: "Luật Thương Mại Quốc Tế",
+    icon: "⚖️",
+    route: "/LuatThuongMaiQT",
+    defaultTab: "ch1",
+    chapters: [
+        { id: "ch1", shortLabel: "Ch.1: Tổng Quan", mobileLabel: "Chương 1: Tổng Quan Về Luật TMQT" },
+        { id: "ch2", shortLabel: "Ch.2: Không Phân Biệt Đối Xử", mobileLabel: "Chương 2: Các Nguyên Tắc Không Phân Biệt Đối Xử" },
+        { id: "ch3", shortLabel: "Ch.3: TM Hàng Hóa 🔒", mobileLabel: "Chương 3: Thương Mại Hàng Hóa & Các Biện Pháp Biên Giới 🔒" },
+        { id: "ch4", shortLabel: "Ch.4: Giải Quyết Tranh Chấp 🔒", mobileLabel: "Chương 4: Cơ Chế Giải Quyết Tranh Chấp Trong WTO 🔒" }
+    ]
+};
+</script>
+<script defer src="/edu-header.js"></script>
+<script defer src="/auth.js"></script>
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -64,48 +80,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
         </div>
     </div>
 </div>
-<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center min-h-[4rem] py-2">
-            <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
-                <div class="h-8 w-8 sm:h-10 sm:w-10 bg-teal-700 text-white rounded-full flex items-center justify-center font-bold shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">EC</div>
-                <div class="flex flex-col justify-center min-w-0">
-                    <h1 class="font-extrabold text-base sm:text-xl text-teal-800 tracking-tight leading-none">EDU CONNECT</h1>
-                    <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden">
-                        <p class="text-[10px] sm:text-xs text-stone-500 font-bold uppercase tracking-wider mt-1 truncate">⚖️ Luật Thương Mại Quốc Tế</p>
-                    </div>
-                </div>
-            </a>
-
-
-
-            <div class="flex items-center shrink-0">
-                <div class="border-l border-stone-300 pl-4">
-                    <button id="nav-login-btn" onclick="requestLogin()" class="whitespace-nowrap hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-                    <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-                        <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
-                        <span id="user-name" class="whitespace-nowrap text-sm font-bold text-slate-800 hidden sm:block">Sinh Viên</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="chapter-nav" id="nav-menu">
-                <button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-3 py-2 text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Tổng Quan</button>
-                <button onclick="attemptSwitchTab('ch2')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Không Phân Biệt Đối Xử</button>
-                <button onclick="attemptSwitchTab('ch3')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.3: TM Hàng Hóa <span class="premium-lock text-xs">🔒</span></button>
-                <button onclick="attemptSwitchTab('ch4')" class="nav-btn px-3 py-2 text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Giải Quyết Tranh Chấp <span class="premium-lock text-xs">🔒</span></button>
-            </div>
-<div class="chapter-select-row relative">
-            <select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
-                <option value="ch1">Chương 1: Tổng Quan Về Luật TMQT</option>
-                <option value="ch2">Chương 2: Các Nguyên Tắc Không Phân Biệt Đối Xử</option>
-                <option value="ch3" class="premium-opt">Chương 3: Thương Mại Hàng Hóa 🔒</option>
-                <option value="ch4" class="premium-opt">Chương 4: Cơ Chế GQ Tranh Chấp WTO 🔒</option>
-            </select>
-        </div>
-    </div>
-</nav>
+<div id="edu-header"></div>
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
 
@@ -430,53 +405,6 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </main>
 
 <script>
-// ==========================================
-// CORE UI & TABS
-// ==========================================
-let activeTabId = 'ch1';
-
-window.attemptSwitchTab = (t) => { 
-    forceSwitchTab(t); 
-};
-
-function forceSwitchTab(t) { 
-    activeTabId = t; 
-    
-    document.querySelectorAll('.tab-content').forEach(s => { 
-        s.classList.add('hidden'); 
-        s.classList.remove('animate-fade-in'); 
-    }); 
-    
-    const targetTab = document.getElementById(t);
-    if (targetTab) {
-        targetTab.classList.remove('hidden'); 
-        targetTab.classList.add('animate-fade-in');
-        
-        const offset = 150; 
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = targetTab.getBoundingClientRect().top;
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
-    
-    document.querySelectorAll('.nav-btn').forEach(b => { 
-        b.classList.remove('tab-active','text-teal-600', 'bg-teal-50'); 
-        b.classList.add('text-stone-500'); 
-        if(b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) { 
-            b.classList.add('tab-active','text-teal-600'); 
-            b.classList.remove('text-stone-500'); 
-        }
-    }); 
-    
-    const mobileNav = document.getElementById('mobile-nav');
-    if (mobileNav) mobileNav.value = t;
-}
-
 // ==========================================
 // CALCULATOR CƠ BẢN (CHƯƠNG 3)
 // ==========================================

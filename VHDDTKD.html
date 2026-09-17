@@ -25,7 +25,25 @@
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
-<script defer src="auth.js"></script>
+<script>
+window.EDU_PAGE_CONFIG = {
+    subject: "Culture & Ethics in International Business",
+    shortName: "Culture & Ethics IB",
+    icon: "🤝",
+    route: "/VHDDTKD",
+    defaultTab: "ch1",
+    chapters: [
+        { id: "ch1", shortLabel: "Ch.1: Khái niệm", mobileLabel: "Chương 1: Khái niệm Văn hóa" },
+        { id: "ch2", shortLabel: "Ch.2: Khác biệt", mobileLabel: "Chương 2: Khác biệt Văn hóa" },
+        { id: "ch3", shortLabel: "Ch.3: Tổ chức", mobileLabel: "Chương 3: Văn hóa Tổ chức & Đa dạng" },
+        { id: "ch4", shortLabel: "Ch.4: Động lực", mobileLabel: "Chương 4: Động lực Đa văn hóa" },
+        { id: "ch5", shortLabel: "Ch.5: Đạo đức", mobileLabel: "Chương 5: Đạo đức & Trách nhiệm XH" },
+        { id: "ch6", shortLabel: "Essay & Case", mobileLabel: "Chương 6: Khung Essay & Case Study" }
+    ]
+};
+</script>
+<script defer src="/edu-header.js"></script>
+<script defer src="/auth.js"></script>
 
 <style>
 ::-webkit-scrollbar { width: 8px; }
@@ -109,64 +127,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </div>
 </div>
 <!-- Navbar -->
-<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="site-header-row flex justify-between items-center h-16">
-<!-- KHU VỰC 1 (BÊN TRÁI): Logo Brand &amp; Tên Môn Học -->
-        
-
-        <a href="/" class="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
-            <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
-            <div class="flex flex-col justify-center min-w-0">
-                <h1 class="font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none">EDU CONNECT</h1>
-                
-                <div class="max-w-[145px] sm:max-w-[210px] overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%); mask-image: linear-gradient(to right, black calc(100% - 25px), transparent 100%);">
-                    <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🤝 Culture &amp; Ethics IB</p>
-                </div>
-            </div>
-        </a>
-
-
-
-<div class="flex items-center shrink-0">
-<div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
-    <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
-    <span id="online-count" class="mr-1 sm:mr-1">...</span>
-    <span class="hidden sm:inline">online</span>
-</div>
-
-<!-- User Profile / Login Area -->
-<div class="border-l border-stone-300 pl-4">
-<button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
-<div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
-<img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
-<span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh Viên</span>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Mobile Menu -->
-<div class="chapter-nav" id="nav-menu">
-<button onclick="attemptSwitchTab('ch1')" class="nav-btn tab-active px-2 py-2 text-xs 2xl:text-sm font-medium transition-colors hover:text-teal-600">Ch.1: Khái niệm</button>
-<button onclick="attemptSwitchTab('ch2')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600">Ch.2: Khác biệt</button>
-<button onclick="attemptSwitchTab('ch3')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.3: Tổ chức <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch4')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.4: Động lực <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch5')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Ch.5: Đạo đức <span class="premium-lock text-xs"></span></button>
-<button onclick="attemptSwitchTab('ch6')" class="nav-btn px-2 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600 flex items-center gap-1">Essay &amp; Case <span class="premium-lock text-xs"></span></button>
-</div>
-<div class="chapter-select-row relative">
-<select id="mobile-nav" aria-label="Chọn chương" onchange="attemptSwitchTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none">
-<option value="ch1">Chương 1: Khái niệm Văn hóa</option>
-<option value="ch2">Chương 2: Khác biệt Văn hóa</option>
-<option value="ch3">Chương 3: Văn hóa Tổ chức &amp; Đa dạng</option>
-<option value="ch4">Chương 4: Động lực Đa văn hóa</option>
-<option value="ch5">Chương 5: Đạo đức &amp; Trách nhiệm XH</option>
-<option value="ch6">Chương 6: Khung Essay &amp; Case Study</option>
-</select>
-</div>
-</div>
-</nav>
+<div id="edu-header"></div>
 
 <!-- Main Content Container -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
@@ -1713,57 +1674,6 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </main>
 
 <script>
-let activeTabId = 'ch1';
-
-
-
-// Chuyển Tab không cần check khóa nữa vì auth.js đã lo
-window.attemptSwitchTab = (t) => { 
-    forceSwitchTab(t); 
-};
-
-// Hàm chuyển UI Tab
-function forceSwitchTab(t) { 
-    activeTabId = t; 
-    
-    document.querySelectorAll('.tab-content').forEach(s => { 
-        s.classList.add('hidden'); 
-        s.classList.remove('animate-fade-in'); 
-    }); 
-    
-    const targetTab = document.getElementById(t);
-    if (targetTab) {
-        targetTab.classList.remove('hidden'); 
-        targetTab.classList.add('animate-fade-in');
-        
-       // 3. TỰ ĐỘNG CUỘN ĐẾN ĐẦU CHƯƠNG (Đã fix lỗi sập web)
-        const offset = 150; 
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = targetTab.getBoundingClientRect().top; // <--- Fix lỗi target
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
-
-    // Cập nhật trạng thái nút trên Navbar
-    document.querySelectorAll('.nav-btn').forEach(b => {
-        b.classList.remove('tab-active', 'text-teal-600');
-        b.classList.add('text-stone-500');
-        if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(t)) {
-            b.classList.add('tab-active', 'text-teal-600');
-            b.classList.remove('text-stone-500');
-        }
-    });
-    
-    const mobileNav = document.getElementById('mobile-nav');
-    if (mobileNav) mobileNav.value = t;
-}
-
-
 window.copyEssayTemplate = async function () {
     const template = `Introduction: The case concerns ... The central issue is ... This essay applies [primary theory] and [supporting theory] to explain the problem and recommend a feasible response.\n\nIssue diagnosis: The visible symptom is ... However, the underlying cause is ... The key stakeholders are ...\n\nTheory and application 1: [Theory] refers to ... The fact that ... indicates ... This leads to ...\n\nTheory and application 2: [Theory] further explains ... Unlike the first framework, it highlights ...\n\nOptions and recommendation: One option is ... but its risk is ... A second option is ... The firm should ... through (1) ..., (2) ..., and (3) ... Success should be measured by ...\n\nConclusion: The case demonstrates that ... Global managers must balance ... with ...`;
     const status = document.getElementById('copy-status');

@@ -4,7 +4,16 @@ const path = require('node:path');
 const { chromium } = require('playwright');
 const fixture = fs.readFileSync(path.join(__dirname, 'firebase-fixture.js'), 'utf8');
 const root = path.resolve(__dirname, '..');
-const subjects = fs.readdirSync(root).filter(f => f.endsWith('.html') && fs.readFileSync(path.join(root,f),'utf8').includes('id="mobile-nav"'));
+const subjects = [
+    'KinhTeQuocTe.html',
+    'NguyenLyKeToan.html',
+    'QuanTriHoc.html',
+    'NhapMonLuatHoc.html',
+    'TaiChinhCaNhan.html',
+    'KinhTeChinhTriMacLeNin.html',
+    'LuatThuongMaiQT.html',
+    'VHDDTKD.html'
+];
 const user = {uid:'test-user', email:'student@example.test', displayName:'Sinh viên có họ và tên rất dài để kiểm tra bố cục giao diện',photoURL:null};
 const results = [];
 let browser;
@@ -31,26 +40,71 @@ async function layout(page) {
 }
 async function checkLayout(page, label) { const value = await layout(page); assert(value.scrollWidth <= value.width+1, label + ' overflow: '+JSON.stringify(value)); assert(!value.collision,label+' header collision'); }
 (async () => {
+    for (const file of subjects) {
+        const source = fs.readFileSync(path.join(root, file), 'utf8');
+        assert(source.includes('window.EDU_PAGE_CONFIG = {'), file + ' must define EDU_PAGE_CONFIG');
+        assert(source.includes('<div id="edu-header"></div>'), file + ' must provide the shared header mount');
+        assert(source.includes('<script defer src="/edu-header.js"></script>'), file + ' must load edu-header.js');
+        assert(!source.includes('id="nav-menu"'), file + ' must not retain a static desktop nav');
+        assert(!source.includes('id="mobile-nav"'), file + ' must not retain a static mobile nav');
+        assert(!/function\s+(?:attemptSwitchTab|forceSwitchTab)\s*\(/.test(source), file + ' must not retain page-owned tab switching');
+    }
     browser = await chromium.launch({channel:process.env.BROWSER_CHANNEL || 'msedge',headless:true});
     for (const file of subjects) await test(file + ': chapters, headers, tools and profile', async () => {
         const page = await open(file, {user});
         try {
+            const contract = await page.evaluate(() => ({
+                config: window.EDU_PAGE_CONFIG,
+                api: !!window.EduHeader,
+                route: document.getElementById('edu-header')?.dataset.eduRoute,
+                home: document.querySelector('.edu-header-brand')?.getAttribute('href'),
+                subject: document.querySelector('.edu-header-subject')?.title,
+                ids: ['online-count','nav-login-btn','nav-user-profile','user-avatar','user-name','nav-menu','mobile-nav'].every(id => !!document.getElementById(id)),
+                buttonIds: [...document.querySelectorAll('#nav-menu [data-edu-tab]')].map(el => el.dataset.eduTab),
+                buttonLabels: [...document.querySelectorAll('#nav-menu [data-edu-tab]')].map(el => el.textContent.trim()),
+                optionIds: [...document.querySelectorAll('#mobile-nav option')].map(el => el.value),
+                optionLabels: [...document.querySelectorAll('#mobile-nav option')].map(el => el.textContent.trim())
+            }));
+            assert(contract.api, file + ' shared API');
+            assert(contract.ids, file + ' stable auth and navigation IDs');
+            assert.equal(contract.route, contract.config.route);
+            assert.equal(contract.home, '/');
+            assert.equal(contract.subject, contract.config.subject);
+            assert.deepEqual(contract.buttonIds, contract.config.chapters.map(chapter => chapter.id));
+            assert.deepEqual(contract.optionIds, contract.config.chapters.map(chapter => chapter.id));
+            assert.deepEqual(contract.buttonLabels, contract.config.chapters.map(chapter => chapter.shortLabel));
+            assert.deepEqual(contract.optionLabels, contract.config.chapters.map(chapter => chapter.mobileLabel));
             assert(await page.locator('#nav-user-profile').isVisible());
             assert(!await page.locator('#nav-login-btn').isVisible());
             const options = await page.locator('#mobile-nav option').evaluateAll(els=>els.map(e=>e.value));
+            assert.equal(await page.evaluate(()=>window.EduHeader.activeTab),contract.config.defaultTab);
             for (const width of [375,768,1280,1440]) {
                 await page.setViewportSize({width,height:812});
                 for (const id of options) {
                     if(width<1280) await page.locator('#mobile-nav').selectOption(id);
-                    else await page.locator('#nav-menu button').filter({hasText: await page.locator('#nav-menu button').evaluateAll((els,value)=>els.find(e=>e.getAttribute('onclick').includes("'"+value+"'"))?.textContent,id)}).click();
+                    else await page.locator(`#nav-menu [data-edu-tab="${id}"]`).click();
                     assert(await page.locator('#'+id).isVisible(),file+' chapter '+id);
                     assert.equal(await page.locator('#mobile-nav').inputValue(),id);
+                    assert.equal(await page.locator(`#nav-menu [data-edu-tab="${id}"]`).getAttribute('aria-current'),'page');
+                    assert.equal(await page.evaluate(()=>window.EduHeader.activeTab),id);
                     const visibleChapters = await page.locator('.tab-content').evaluateAll(els=>els.filter(e=>getComputedStyle(e).display!=='none').length);
                     assert.equal(visibleChapters,1);
                     await checkLayout(page,file+' '+width+' '+id);
                 }
                 assert.equal(await page.locator('#mobile-nav').isVisible(),width<1280);
                 assert.equal(await page.locator('#nav-menu').isVisible(),width>=1280);
+            }
+            if (file === 'KinhTeQuocTe.html') {
+                await page.evaluate(() => {
+                    window.__headerResizeCalls = { sd: 0, labor: 0, dual: 0 };
+                    for (const [key, chart] of [['sd', sdChart], ['labor', laborChart], ['dual', dualLaborChart]]) {
+                        const original = chart.resize.bind(chart);
+                        chart.resize = (...args) => { window.__headerResizeCalls[key] += 1; return original(...args); };
+                    }
+                    window.EduHeader.switchTab('ch5', { scroll: false });
+                    window.EduHeader.switchTab('ch3', { scroll: false });
+                });
+                assert.deepEqual(await page.evaluate(()=>window.__headerResizeCalls),{sd:1,labor:1,dual:1});
             }
             // Exercise each course's calculators with their existing default inputs.
             const calls = {
