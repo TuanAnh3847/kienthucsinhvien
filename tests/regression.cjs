@@ -78,11 +78,9 @@ async function checkLayout(page, label) { const value = await layout(page); asse
                 route: document.getElementById('edu-header')?.dataset.eduRoute,
                 home: document.querySelector('.edu-header-brand')?.getAttribute('href'),
                 subject: document.querySelector('.edu-header-subject')?.title,
-                ids: ['online-count','nav-login-btn','nav-user-profile','user-avatar','user-name','nav-menu','mobile-nav'].every(id => !!document.getElementById(id)),
+                ids: ['online-count','nav-login-btn','nav-user-profile','user-avatar','user-name','nav-menu'].every(id => !!document.getElementById(id)),
                 buttonIds: [...document.querySelectorAll('#nav-menu [data-edu-tab]')].map(el => el.dataset.eduTab),
-                buttonLabels: [...document.querySelectorAll('#nav-menu [data-edu-tab]')].map(el => el.textContent.trim()),
-                optionIds: [...document.querySelectorAll('#mobile-nav option')].map(el => el.value),
-                optionLabels: [...document.querySelectorAll('#mobile-nav option')].map(el => el.textContent.trim())
+                buttonLabels: [...document.querySelectorAll('#nav-menu [data-edu-tab]')].map(el => el.textContent.trim())
             }));
             assert(contract.api, file + ' shared API');
             assert(contract.ids, file + ' stable auth and navigation IDs');
@@ -90,21 +88,17 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             assert.equal(contract.home, '/');
             assert.equal(contract.subject, contract.config.subject);
             assert.deepEqual(contract.buttonIds, contract.config.chapters.map(chapter => chapter.id));
-            assert.deepEqual(contract.optionIds, contract.config.chapters.map(chapter => chapter.id));
             assert.deepEqual(contract.buttonLabels, contract.config.chapters.map(chapter => chapter.shortLabel));
-            assert.deepEqual(contract.optionLabels, contract.config.chapters.map(chapter => chapter.mobileLabel));
             assert(await page.locator('#nav-user-profile').isVisible());
             assert(!await page.locator('#nav-login-btn').isVisible());
-            const options = await page.locator('#mobile-nav option').evaluateAll(els=>els.map(e=>e.value));
+            const options = contract.config.chapters.map(chapter => chapter.id);
             assert.equal(await page.evaluate(()=>window.EduHeader.activeTab),contract.config.defaultTab);
             assert.equal(await page.locator('#'+contract.config.defaultTab).evaluate(el=>el.classList.contains('animate-fade-in')),false,'initial tab must not animate');
             for (const width of [375,768,1280,1440]) {
                 await page.setViewportSize({width,height:812});
                 for (const id of options) {
-                    if(width<1280) await page.locator('#mobile-nav').selectOption(id);
-                    else await page.locator(`#nav-menu [data-edu-tab="${id}"]`).click();
+                    await page.locator(`#nav-menu [data-edu-tab="${id}"]`).click();
                     assert(await page.locator('#'+id).isVisible(),file+' chapter '+id);
-                    assert.equal(await page.locator('#mobile-nav').inputValue(),id);
                     assert.equal(await page.locator(`#nav-menu [data-edu-tab="${id}"]`).getAttribute('aria-current'),'page');
                     assert.equal(await page.evaluate(()=>window.EduHeader.activeTab),id);
                     const visibleChapters = await page.locator('.tab-content').evaluateAll(els=>els.filter(e=>getComputedStyle(e).display!=='none').length);
@@ -112,8 +106,8 @@ async function checkLayout(page, label) { const value = await layout(page); asse
                     assert.deepEqual(await page.locator('.tab-content.animate-fade-in').evaluateAll((els,chapterIds)=>els.map(el=>el.id).filter(tabId=>chapterIds.includes(tabId)),options),[id]);
                     await checkLayout(page,file+' '+width+' '+id);
                 }
-                assert.equal(await page.locator('#mobile-nav').isVisible(),width<1280);
-                assert.equal(await page.locator('#nav-menu').isVisible(),width>=1280);
+                assert.equal(await page.locator('#mobile-nav').count(),0,'no chapter dropdown');
+                assert(await page.locator('#nav-menu').isVisible(),'chapter strip at every width');
             }
             if (file === 'KINH_TE_QUOC_TE.html') {
                 const replay = await page.evaluate(async () => {
@@ -156,7 +150,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             assert.deepEqual(page.errors,[]);
             assert.equal(await page.evaluate(()=>__firebaseTest.authListenerCount()),1,'shared auth only');
             await page.setViewportSize({width:375,height:812});
-            await page.locator('#mobile-nav').selectOption(options[0]);
+            await page.locator(`#nav-menu [data-edu-tab="${options[0]}"]`).click();
             await page.waitForTimeout(500);
             await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
             await page.screenshot({path:path.join(__dirname,'screenshots',file.replace('.html','')+'-mobile.png')});
@@ -316,7 +310,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             try {
                 const firstInput=Object.keys(values)[0];
                 const id=await page.locator('#'+firstInput).evaluate(e=>e.closest('.tab-content').id);
-                await page.locator('#mobile-nav').selectOption(id);
+                await page.locator(`#nav-menu [data-edu-tab="${id}"]`).click();
                 for(const [input,value] of Object.entries(values)) await page.locator('#'+input).fill(value);
                 await page.evaluate(code=>window.eval(code),invoke);
                 const result = await page.locator('#'+output).innerText();

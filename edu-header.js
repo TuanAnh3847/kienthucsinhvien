@@ -66,7 +66,7 @@
         return node;
     }
 
-    const nav = element('nav', 'edu-subject-header sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm');
+    const nav = element('nav', 'edu-subject-header glass-panel border-b border-stone-200 shadow-sm');
     nav.dataset.route = route;
     const container = element('div', 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8');
     const headerRow = element('div', 'site-header-row flex justify-between items-center h-16');
@@ -78,7 +78,7 @@
     logo.src = '/android-chrome-192x192.png';
     logo.alt = 'Edu Connect';
     const brandCopy = element('div', 'edu-header-brand-copy flex flex-col justify-center min-w-0');
-    brandCopy.appendChild(element('span', 'font-extrabold text-base sm:text-xl text-blue-800 tracking-tight leading-none', 'EDU CONNECT'));
+    brandCopy.appendChild(element('span', 'edu-header-name font-extrabold tracking-tight leading-none', 'EDU CONNECT'));
     const subjectLine = element('span', 'edu-header-subject text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1');
     subjectLine.title = subject;
     subjectLine.appendChild(element('span', 'edu-header-subject-icon', icon));
@@ -127,11 +127,6 @@
     desktopNav.setAttribute('role', 'navigation');
     desktopNav.setAttribute('aria-label', `Điều hướng chương: ${subject}`);
 
-    const selectRow = element('div', 'chapter-select-row relative');
-    const mobileSelect = element('select', 'w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none');
-    mobileSelect.id = 'mobile-nav';
-    mobileSelect.setAttribute('aria-label', `Chọn chương: ${subject}`);
-
     chapters.forEach(chapter => {
         const button = element('button', 'nav-btn px-3 py-2 text-xs 2xl:text-sm font-medium text-stone-500 transition-colors hover:text-teal-600', chapter.shortLabel);
         button.type = 'button';
@@ -140,16 +135,26 @@
         button.addEventListener('click', () => switchTab(chapter.id));
         desktopNav.appendChild(button);
 
-        const option = element('option', '', chapter.mobileLabel);
-        option.value = chapter.id;
-        mobileSelect.appendChild(option);
+        button.title = chapter.mobileLabel;
     });
-    mobileSelect.addEventListener('change', event => switchTab(event.target.value));
-    selectRow.appendChild(mobileSelect);
-    container.append(headerRow, desktopNav, selectRow);
+    container.append(headerRow, desktopNav);
     nav.appendChild(container);
     mount.replaceChildren(nav);
     mount.dataset.eduRoute = route;
+
+    // The sticky mount moves up by exactly the brand-row height. This keeps
+    // document geometry stable while the chapter strip settles at the top.
+    let scrollFrame = 0;
+    function syncScrollState() {
+        scrollFrame = 0;
+        const compact = window.scrollY >= headerRow.offsetHeight;
+        mount.classList.toggle('edu-header-compact', compact);
+        headerRow.inert = compact;
+    }
+    window.addEventListener('scroll', () => {
+        if (!scrollFrame) scrollFrame = requestAnimationFrame(syncScrollState);
+    }, { passive: true });
+    syncScrollState();
 
     let activeTab = null;
     function switchTab(tabId, options = {}) {
@@ -178,14 +183,24 @@
             if (isActive) button.setAttribute('aria-current', 'page');
             else button.removeAttribute('aria-current');
         });
-        mobileSelect.value = tabId;
         activeTab = tabId;
+        const selectedButton = desktopNav.querySelector(`[data-edu-tab="${CSS.escape(tabId)}"]`);
+        if (selectedButton) {
+            const stripRect = desktopNav.getBoundingClientRect();
+            const buttonRect = selectedButton.getBoundingClientRect();
+            if (buttonRect.left < stripRect.left || buttonRect.right > stripRect.right) {
+                desktopNav.scrollTo({
+                    left: desktopNav.scrollLeft + buttonRect.left - stripRect.left - (stripRect.width - buttonRect.width) / 2,
+                    behavior: 'instant'
+                });
+            }
+        }
 
         if (options.scroll !== false) {
-            const configuredOffset = Number(config.scrollOffset);
-            const offset = Number.isFinite(configuredOffset) ? configuredOffset : 120;
+            const offset = desktopNav.getBoundingClientRect().height + 16;
             const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset);
-            window.scrollTo({ top, behavior: options.behavior || 'smooth' });
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({ top, behavior: options.behavior || (reducedMotion ? 'instant' : 'smooth') });
         }
         if (options.notify !== false) {
             if (typeof window.onEduTabChanged === 'function') window.onEduTabChanged(tabId);
