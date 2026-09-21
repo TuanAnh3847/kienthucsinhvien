@@ -16,6 +16,7 @@
       "backups/**",
       "tests/**",
       "docs/**",
+      "NIGHTLY_UI_POLISH_REPORT.md",
       "**/node_modules/**"
     ],
     "rewrites": [
