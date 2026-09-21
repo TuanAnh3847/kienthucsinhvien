@@ -66,8 +66,14 @@ It reports changed chapter prose for this editorial batch, whose purpose is to
 rewrite source/process narration. Do not interpret its expected difference as
 a behavior pass, or weaken it to hide unexpected content changes.
 
-`editorial-polish.cjs`, `editorial-followup.cjs` and `guide-polish.cjs` record the
+`editorial-polish.cjs`, `editorial-followup.cjs`, `guide-polish.cjs` and
+`final-copy-polish.cjs` record the
 one-time editorial substitutions for review. They mutate source files and are
 not part of the test suite. `scan-script-copy.cjs` is a read-only aid for reviewing
 potential source narration in script-generated copy; legitimate academic uses
 and non-rendered metadata require contextual review.
+
+`node tests/component-overflow.cjs` checks every chapter at 375 pixels for
+content extending beyond the viewport without a scrollable ancestor, and
+flashcard answers exceeding their faces. Intentional horizontal tables,
+diagrams and hidden reverse faces are distinguished from clipped content.
