@@ -118,3 +118,4 @@ The practice regression's old 50-question assumption now uses the exact eligible
 deduplicated first bank with a minimum coverage assertion. No scoring, state,
 error, route or reset assertions were removed. Browser audit additionally
 compiles all generated inline handlers, catching malformed quote boundaries.
+`theory-interactions.cjs` visits all 82 chapter/review states at 375 px, compiles generated handlers, repeats visible check/reset/calculator buttons, and checks runtime errors, overflow, broken encoding and presentation leakage. THEORY_FILTER is diagnostic only; use the full run for final results.

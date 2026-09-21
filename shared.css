@@ -139,7 +139,7 @@ body.edu-study-page .edu-compact-activity > :not(.edu-choice-row) { grid-column:
 .edu-practice-page button:disabled { cursor: default; }
 .edu-practice-page button:disabled:not(.option-card):not(.answer-btn) { opacity: .55; }
 .practice-theory-link { margin: .75rem 0; font-weight: 700; color: #0f766e; text-decoration: underline; }
-.study-practice-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 1rem; padding: .5rem 1rem; border-radius: .75rem; background: #0f766e; color: #fff; font-weight: 700; }
+.study-practice-link { display: flex; width: fit-content; align-items: center; min-height: 44px; margin: 1rem auto 0; padding: .5rem 1rem; border-radius: .75rem; background: #0f766e; color: #fff; font-weight: 700; }
 .study-practice-link:focus-visible { outline: 3px solid #0f172a; outline-offset: 3px; }
 .edu-practice-page #practice-content .sticky { bottom: .5rem; }
 .edu-practice-page #practice-content .grid > * { min-width: 0; }
