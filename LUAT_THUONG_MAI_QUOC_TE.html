@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Luật Thương mại Quốc tế / International Trade Law | Edu Connect</title>
+ <meta name="description" content="Theory hub Luật Thương mại Quốc tế: nền tảng WTO, MFN, National Treatment, trade in goods và cơ chế giải quyết tranh chấp WTO theo học liệu môn học.">
+ <meta name="keywords" content="Luật Thương mại Quốc tế, International Trade Law, WTO, MFN, National Treatment, GATT, dispute settlement, Edu Connect">
+ <meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+ <meta name="robots" content="index, follow">
+ <meta property="og:title" content='Bí Kíp "Phá Đảo" Luật Thương mại Quốc tế / International Trade Law | Edu Connect'>
+ <meta property="og:description" content="Theory hub Luật Thương mại Quốc tế với sơ đồ, bảng dữ liệu nguồn, case propositions và tương tác ôn tập.">
+ <meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png">
+ <meta property="og:url" content="https://kienthucsinhvien.id.vn/LTMQT">
+ <meta property="og:type" content="article">
+ <link rel="icon" type="image/x-icon" href="/favicon.ico">
+ <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+ <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+ <link rel="manifest" href="/site.webmanifest">
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="/shared.css">
+ <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+ <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+ <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+ <script>
+    window.EDU_PAGE_CONFIG = {
+      subject: "Luật Thương mại Quốc tế / International Trade Law",
+      shortName: "Luật TMQT",
+      icon: "⚖️",
+      route: "/LTMQT",
+      defaultTab: "ch1",
+      chapters: [
+        { id: "ch1", shortLabel: "Ch.1: Overview & WTO", mobileLabel: "Chapter 1: Overview & WTO" },
+        { id: "ch2", shortLabel: "Ch.2: MFN", mobileLabel: "Chapter 2: Most-Favoured-Nation" },
+        { id: "ch3", shortLabel: "Ch.3: NT", mobileLabel: "Chapter 3: National Treatment" },
+        { id: "ch4", shortLabel: "Ch.4: Trade in Goods", mobileLabel: "Chapter 4: Trade in Goods" },
+        { id: "ch5", shortLabel: "Ch.5: Dispute Settlement", mobileLabel: "Chapter 5: WTO Dispute Settlement" }
+      ]
+    };
+  </script>
+ <script defer src="/edu-header.js"></script>
+ <script defer src="/auth.js"></script>
+ <style>
+    ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:#f5f5f4}::-webkit-scrollbar-thumb{background:#d6d3d1;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#a8a29e}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .animate-fade-in{animation:fadeIn .45s ease-out both}.modal-overlay{background-color:rgba(28,25,23,.75);backdrop-filter:blur(4px)}
+    .google-btn{background:#fff;color:#3c4043;border:1px solid #dadce0;box-shadow:0 1px 2px rgba(60,64,67,.3);transition:.2s}.google-btn:hover{background:#f8f9fa;box-shadow:0 1px 3px rgba(60,64,67,.3)}
+    .course-intro{margin-bottom:3rem;text-align:center}.course-intro-title{font-size:clamp(2rem,4.2vw,3rem);line-height:1.08;font-weight:900;letter-spacing:-.025em;color:#0f172a}.course-intro-subtitle{max-width:46rem;margin:1rem auto 0;color:#57534e;font-size:1.05rem;line-height:1.7}.study-guide{display:inline-block;width:100%;max-width:48rem;margin-top:2rem;padding:1.25rem 1.5rem;text-align:left;background:#fff;border:2px solid #ccfbf1;border-radius:1rem;box-shadow:0 1px 2px rgba(15,23,42,.05)}.study-guide-title{display:flex;align-items:center;gap:.65rem;margin-bottom:.85rem;color:#115e59;font-size:1.05rem;font-weight:800}.study-guide-list{display:grid;gap:.75rem;color:#57534e}.study-guide-item{display:flex;align-items:flex-start;gap:.6rem;line-height:1.55}.study-guide-check{color:#14b8a6;font-weight:900;flex:0 0 auto}
+    .chapter-opening{margin-bottom:2rem}.chapter-title{border-left:4px solid #0d9488;padding-left:.75rem;color:#115e59;font-size:clamp(1.35rem,2.3vw,1.65rem);line-height:1.3;font-weight:800}.chapter-objective{margin-top:.7rem;padding:.9rem 1rem;background:#f0fdfa;border-radius:.65rem;color:#57534e;font-size:.9rem;line-height:1.65}.chapter-objective strong{color:#44403c;font-weight:800}
+    .learn-section{margin:2.75rem 0}.section-kicker{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:#0f766e}.section-title{margin-top:.3rem;font-size:clamp(1.25rem,2vw,1.6rem);font-weight:900;color:#0f172a;letter-spacing:-.02em}.section-lead{margin-top:.5rem;max-width:64rem;color:#64748b;line-height:1.65}.grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1rem}.knowledge-card{background:#fff;border:1px solid #e7e5e4;border-radius:1rem;padding:1.15rem;box-shadow:0 1px 2px rgba(15,23,42,.04)}.knowledge-card h3{color:#0f172a;font-weight:850}.card-blue{border-top:4px solid #3b82f6}.card-amber{border-top:4px solid #f59e0b}.card-rose{border-top:4px solid #f43f5e}.card-violet{border-top:4px solid #8b5cf6}.card-emerald{border-top:4px solid #10b981}.card-slate{border-top:4px solid #64748b}
+    .source-note{font-size:.75rem;color:#78716c;margin-top:.55rem}.course-state{display:inline-flex;align-items:center;gap:.35rem;padding:.2rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;font-size:.7rem;font-weight:800}.conflict-btn{display:inline-flex;align-items:center;gap:.35rem;border:1px solid #fecaca;background:#fff1f2;color:#be123c;padding:.28rem .58rem;border-radius:999px;font-size:.7rem;font-weight:900;cursor:pointer}.conflict-btn:hover{background:#ffe4e6}
+    .scroll-table{overflow-x:auto;border:1px solid #e7e5e4;border-radius:1rem;background:#fff}.data-table{width:100%;border-collapse:collapse;min-width:620px}.data-table th{background:#f8fafc;color:#334155;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:.75rem;border-bottom:1px solid #e2e8f0}.data-table td{padding:.75rem;border-bottom:1px solid #f1f5f9;color:#475569;vertical-align:top}.data-table tr:last-child td{border-bottom:0}.data-table.compact td,.data-table.compact th{padding:.55rem .65rem}
+    .pill-row{display:flex;gap:.55rem;flex-wrap:wrap}.pill{display:inline-flex;align-items:center;padding:.38rem .72rem;border-radius:999px;background:#f1f5f9;color:#475569;font-size:.8rem;font-weight:750}.law-pill{background:#eef2ff;color:#4338ca}.case-pill{background:#fff7ed;color:#9a3412}
+    .diagram{background:linear-gradient(135deg,#fff,#f8fafc);border:1px solid #e2e8f0;border-radius:1rem;padding:1.1rem}.flow-row{display:flex;align-items:center;gap:.65rem;overflow-x:auto;padding:.3rem 0}.flow-node{min-width:170px;background:#fff;border:1px solid #e2e8f0;border-radius:.85rem;padding:.85rem;text-align:center;font-weight:800;color:#334155}.flow-arrow{font-size:1.4rem;color:#94a3b8;flex:0 0 auto}.node-blue{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}.node-amber{background:#fffbeb;border-color:#fde68a;color:#b45309}.node-rose{background:#fff1f2;border-color:#fecdd3;color:#be123c}.node-emerald{background:#ecfdf5;border-color:#a7f3d0;color:#047857}.node-violet{background:#f5f3ff;border-color:#ddd6fe;color:#6d28d9}
+    .toggle-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin:.85rem 0}.toggle-btn{border:1px solid #cbd5e1;background:#fff;color:#475569;border-radius:.75rem;padding:.55rem .85rem;font-size:.82rem;font-weight:850}.toggle-btn.active{background:#0f766e;border-color:#0f766e;color:#fff}.toggle-panel.hidden-panel{display:none}
+    .timeline-shell{position:relative;padding-left:1.4rem}.timeline-shell:before{content:"";position:absolute;left:.4rem;top:.45rem;bottom:.45rem;width:2px;background:#dbeafe}.timeline-node{position:relative;width:100%;text-align:left;border:0;background:transparent;padding:.2rem 0 .95rem 1rem;cursor:pointer}.timeline-node:before{content:"";position:absolute;left:-1.05rem;top:.55rem;width:.75rem;height:.75rem;border-radius:50%;background:#2563eb;border:3px solid #dbeafe}.timeline-node .t-date{font-size:.75rem;color:#2563eb;font-weight:900}.timeline-node .t-title{font-weight:850;color:#0f172a}.timeline-detail{display:none;margin:.25rem 0 .7rem 0;padding:.7rem .8rem;border-radius:.75rem;background:#eff6ff;color:#475569}.timeline-node.open+.timeline-detail{display:block}
+    .step-viewer{border:1px solid #e2e8f0;background:#fff;border-radius:1rem;padding:1rem}.step-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}.step-btn{padding:.5rem .72rem;border-radius:.7rem;border:1px solid #cbd5e1;background:#fff;font-size:.8rem;font-weight:850}.step-btn.active{background:#4f46e5;border-color:#4f46e5;color:#fff}.step-panel{display:none}.step-panel.active{display:block}
+    details.study-details{background:#fff;border:1px solid #e7e5e4;border-radius:.85rem;padding:.1rem .9rem;margin:.6rem 0}details.study-details summary{cursor:pointer;padding:.8rem 0;font-weight:850;color:#334155}.detail-body{padding:0 0 .9rem;color:#57534e}
+    .tree details{margin:.45rem 0;border-left:2px solid #cbd5e1;padding-left:.8rem}.tree summary{cursor:pointer;font-weight:850;color:#334155}.tree ul{margin:.45rem 0 .4rem 1.05rem;list-style:disc;color:#64748b}.tree li{margin:.2rem 0}
+    .flash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.85rem}.flashcard{min-height:150px;perspective:1000px}.flip-inner{position:relative;width:100%;height:100%;min-height:150px;transition:transform .55s;transform-style:preserve-3d}.flashcard.flipped .flip-inner{transform:rotateY(180deg)}.flip-front,.flip-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:1rem;padding:1rem;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid #e2e8f0;box-shadow:0 1px 2px rgba(15,23,42,.04)}.flip-front{background:#fff;color:#0f172a;font-weight:850}.flip-back{background:#eef2ff;color:#3730a3;transform:rotateY(180deg)}
+    .quiz-card{background:#fff;border:1px solid #e7e5e4;border-radius:.9rem;padding:1rem}.answer{display:none;margin-top:.7rem;padding:.7rem;border-radius:.7rem;background:#ecfdf5;color:#065f46}.answer.open{display:block}.answer-btn{margin-top:.75rem;border:1px solid #a7f3d0;background:#ecfdf5;color:#047857;padding:.45rem .7rem;border-radius:.65rem;font-size:.78rem;font-weight:850}
+    .matching{display:grid;gap:.7rem}.match-row{display:grid;grid-template-columns:minmax(180px,1fr) minmax(220px,1.3fr);gap:.7rem;align-items:center;border:1px solid #e2e8f0;border-radius:.8rem;padding:.7rem;background:#fff}.match-row.correct{border-color:#86efac;background:#f0fdf4}.match-row.wrong{border-color:#fda4af;background:#fff1f2}.match-select{width:100%;border:1px solid #cbd5e1;border-radius:.65rem;padding:.55rem;background:#fff}.action-row{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.8rem}.action-primary,.action-secondary{padding:.55rem .85rem;border-radius:.7rem;font-weight:850;font-size:.8rem}.action-primary{background:#0f766e;color:#fff}.action-secondary{background:#f1f5f9;color:#475569;border:1px solid #cbd5e1}.feedback{margin-top:.65rem;font-size:.82rem;font-weight:800;color:#475569}
+    .sortable-list{display:grid;gap:.55rem}.sort-item{display:flex;align-items:center;gap:.6rem;padding:.7rem .8rem;background:#fff;border:1px solid #cbd5e1;border-radius:.75rem;cursor:grab}.sort-item.dragging{opacity:.55}.sort-handle{font-size:1.1rem;color:#94a3b8}.sort-actions{margin-left:auto;display:flex;gap:.3rem}.sort-move{border:1px solid #cbd5e1;border-radius:.45rem;padding:.2rem .45rem;background:#fff;color:#475569}.sort-correct{border-color:#86efac;background:#f0fdf4}.sort-wrong{border-color:#fda4af;background:#fff1f2}
+    .branch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.7rem}.branch-btn{padding:.9rem;border-radius:.9rem;border:1px solid #cbd5e1;background:#fff;text-align:left}.branch-btn.active{border-color:#8b5cf6;background:#f5f3ff}.branch-output{margin-top:.9rem;padding:1rem;border-radius:.9rem;background:#f8fafc;border:1px solid #e2e8f0;color:#475569}
+    .layer-code{display:flex;gap:.35rem;flex-wrap:wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.code-seg{padding:.55rem .65rem;border-radius:.55rem;background:#f1f5f9;color:#334155;font-weight:900}.code-seg.active{background:#1d4ed8;color:#fff}.layer-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.55rem;margin-top:.7rem}.legend-card{padding:.7rem;border-radius:.75rem;border:1px solid #e2e8f0;background:#fff}.legend-card.active{border-color:#93c5fd;background:#eff6ff}
+    .mindmap{overflow-x:auto}.mindmap-inner{min-width:720px;display:flex;align-items:stretch;gap:.7rem}.mind-root{display:flex;align-items:center;justify-content:center;min-width:170px;background:#0f766e;color:#fff;border-radius:1rem;padding:1rem;font-weight:900;text-align:center}.mind-branches{display:grid;grid-template-columns:repeat(2,minmax(230px,1fr));gap:.7rem;flex:1}.mind-branch{border:1px solid #e2e8f0;border-radius:.9rem;padding:.8rem;background:#fff}.mind-branch strong{color:#0f172a}.mind-branch ul{margin:.45rem 0 0 1rem;list-style:disc;color:#64748b}
+    .source-practice{border:1px dashed #94a3b8;border-radius:1rem;padding:1rem;background:#f8fafc}.blank-line{border-bottom:1px dashed #cbd5e1;min-height:2rem;margin:.5rem 0}.warning-box{border-left:4px solid #f59e0b;background:#fffbeb;padding:.85rem 1rem;border-radius:.6rem;color:#78350f}.confusion-box{border-left:4px solid #f43f5e;background:#fff1f2;padding:.85rem 1rem;border-radius:.6rem;color:#881337}
+    .source-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.65rem}.map-card{border:1px solid #dbeafe;background:#eff6ff;border-radius:.9rem;padding:.85rem}.map-card .map-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:900;color:#1d4ed8}.map-card .map-route{margin-top:.5rem;font-weight:850;color:#334155}
+    .hidden-data{display:none!important}
+    @media(max-width:640px){.course-intro{margin-bottom:2.25rem}.course-intro-subtitle{font-size:.98rem}.study-guide{margin-top:1.5rem;padding:1rem}.chapter-objective{font-size:.875rem}.match-row{grid-template-columns:1fr}.mindmap-inner{min-width:620px}.learn-section{margin:2.1rem 0}}
+    @media print{#edu-header,#welcome-modal,#conflict-modal,.no-print{display:none!important}.tab-content{display:block!important}.course-intro{margin-bottom:2rem}body{background:#fff!important}main{max-width:none!important;padding:0!important}.learn-section{break-inside:avoid}}
+  </style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+ <div id="welcome-modal" role="dialog" aria-modal="true" aria-label="Đăng nhập Edu Connect" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center overflow-y-auto p-4 hidden opacity-0 transition-opacity duration-300">
+ <div id="welcome-modal-content" class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-auto max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain transform scale-95 transition-transform duration-300">
+ <div class="text-center mb-6"><div class="text-5xl mb-4">⚖️</div><h2 class="text-2xl font-extrabold text-slate-900 mb-2">Luật Thương mại Quốc tế / International Trade Law</h2><p class="text-stone-600 text-sm">Đăng nhập để tiếp tục học trên Edu Connect.</p></div>
+ <div class="space-y-4"><button type="button" onclick="loginGoogleReal()" class="google-btn w-full py-3 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3"><span class="text-lg font-black text-blue-600">G</span><span>Đăng nhập bằng Google</span></button><button type="button" onclick="window.location.href='/'" class="w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-800 border border-slate-300 rounded-lg font-semibold transition-colors">🏠 Quay về Trang chủ</button></div>
+ </div>
+ </div>
+ <div id="edu-header"></div>
+ <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+ <section id="course-intro" class="course-intro">
+ <h1 class="course-intro-title">Bí Kíp "Phá Đảo" Luật Thương mại Quốc tế / International Trade Law</h1>
+ <p class="course-intro-subtitle">Hệ thống hóa nền tảng luật thương mại quốc tế từ WTO, nguyên tắc không phân biệt đối xử đến thương mại hàng hóa và cơ chế giải quyết tranh chấp theo đúng học liệu môn học.</p>
+ <div class="study-guide"><h2 class="study-guide-title"><span aria-hidden="true">💡</span><span>Hướng Dẫn Ôn Tập Hiệu Quả</span></h2><div class="study-guide-list">
+ <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Sơ đồ & cây quyết định:</strong> dùng timeline, flow, hierarchy và decision tree để nhìn nhanh cấu trúc pháp lý thay vì học thuộc đoạn văn dài.</span></div>
+ <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Bảng dữ liệu:</strong> các mức thuế, mốc thời gian và ví dụ HS được giữ nguyên để bạn luyện đọc chính xác dữ liệu bài giảng.</span></div>
+ <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Matching & kéo-thả:</strong> các bài ghép case–proposition, institution–role và sắp xếp test/procedure giúp kiểm tra thứ tự mà không biến theory page thành ngân hàng đề.</span></div>
+ </div></div>
+ </section>
+
+ <!-- CHAPTER 1 -->
+ <section id="ch1" class="tab-content block animate-fade-in">
+ <header class="chapter-opening"><h2 class="chapter-title">Chương 1: Overview of International Trade Law & Global Trade Regime</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Nắm bối cảnh toàn cầu hóa, sự phát triển lịch sử và các lý thuyết thương mại; phân biệt nguồn luật và nguyên tắc nền tảng; sau đó ghép các mảnh này vào hệ thống WTO, cấu trúc hiệp định và RTA/PTA.</div></header>
+
+ <section class="learn-section">
+ <div class="section-kicker">Foundation</div><h3 class="section-title">Từ toàn cầu hóa đến Luật Thương mại Quốc tế</h3><p class="section-lead">Khởi đầu bằng phạm vi của môn: vì sao hoạt động vượt biên giới tạo ra nhu cầu về quy tắc chung và đối tượng của “international trade” khác “international business” ra sao.</p>
+ <div class="grid-auto mt-4">
+ <article class="knowledge-card card-blue"><h3>Globalisation — mặt tích cực</h3><ul class="mt-2 list-disc pl-5 text-stone-700 space-y-1"><li>Thị trường lớn hơn.</li><li>Giá thấp hơn.</li><li>Outsourcing.</li><li>Mức sống tăng.</li></ul></article>
+ <article class="knowledge-card card-rose"><h3>Globalisation — vấn đề</h3><ul class="mt-2 list-disc pl-5 text-stone-700 space-y-1"><li>Tập trung của cải.</li><li>Khai thác lao động, tài nguyên vật chất và trí tuệ.</li><li>Đồng nhất văn hóa.</li></ul></article>
+ <article class="knowledge-card card-emerald"><h3>Economic globalisation</h3><p class="mt-2 text-stone-700">Sự hội nhập ngày càng tăng của các nền kinh tế quốc gia ở quy mô toàn cầu, hướng vào thương mại quốc tế, thương mại khoa học–công nghệ và FDI. Quá trình này gắn với tiến bộ tin học/viễn thông, tự do hóa thương mại và xu hướng giảm bảo hộ/chủ nghĩa dân tộc kinh tế.</p></article>
+ </div>
+ <div class="toggle-bar" role="tablist" aria-label="So sánh International Trade và International Business"><button class="toggle-btn active" data-toggle-group="tradebiz" data-target="trade-panel">International Trade</button><button class="toggle-btn" data-toggle-group="tradebiz" data-target="business-panel">International Business</button><button class="toggle-btn" data-toggle-group="tradebiz" data-target="law-panel">International Trade Law</button></div>
+ <div id="trade-panel" class="toggle-panel knowledge-card card-blue"><h3>International Trade</h3><p class="mt-2">Chủ yếu liên quan đến <strong>states/public entities</strong> và các quan hệ chính sách thương mại; chủ thể được slide nêu là quốc gia và các tổ chức kinh tế quốc tế.</p></div>
+ <div id="business-panel" class="toggle-panel hidden-panel knowledge-card card-violet"><h3>International Business</h3><p class="mt-2">Chủ yếu liên quan đến <strong>traders/business actors</strong> và hoạt động kinh doanh ở nước ngoài; mục tiêu được nêu là tăng doanh số/lợi nhuận.</p></div>
+ <div id="law-panel" class="toggle-panel hidden-panel knowledge-card card-emerald"><h3>International Trade Law</h3><p class="mt-2">Hệ thống quy định điều chỉnh các quan hệ xã hội phát sinh từ hoạt động thương mại diễn ra giữa các quốc gia; chủ thể là states và public entities theo cách định nghĩa của slide.</p></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">History</div><h3 class="section-title">Dòng phát triển lịch sử: từ mạng lưới cổ đại đến GATT/WTO</h3><p class="section-lead">Các hình dưới là sơ đồ học thuật tối giản. Học liệu văn bản không có hình học tuyến đường gốc, nên chỉ giữ các quan hệ và địa danh đã được ghi lại.</p>
+ <div class="source-map mt-4">
+ <div class="map-card"><div class="map-label">Mesopotamia · ~3500 BC</div><div class="map-route">Các khu vực liên hệ: Iran · Iraq · Turkey · Kuwait · Syria</div><p class="mt-2 text-sm text-slate-600">Được slide gọi là mạng lưới thương mại quốc tế đầu tiên.</p></div>
+ <div class="map-card"><div class="map-label">Mediterranean trade</div><div class="map-route">Road trade ↔ Sea trade</div><p class="mt-2 text-sm text-slate-600">Sơ đồ minh họa sự mở rộng dưới thời Alexander the Great qua các mối liên hệ chính.</p></div>
+ <div class="map-card"><div class="map-label">Silk Road · ~115 BC–1453</div><div class="map-route">Asia ↔ Europe</div><p class="mt-2 text-sm text-slate-600">“Amber road” cũng được nhắc đến; sơ đồ tập trung vào các mối liên hệ chính.</p></div>
+ </div>
+ <div class="timeline-shell mt-5" aria-label="Historical timeline">
+ <button class="timeline-node"><span class="t-date">~3500 BC</span><span class="t-title"> Mesopotamia</span></button><div class="timeline-detail">Đây được xem là mạng lưới thương mại quốc tế đầu tiên.</div>
+ <button class="timeline-node"><span class="t-date">2500 BC</span><span class="t-title"> Code of Hammurabi</span></button><div class="timeline-detail">Bộ luật được liên hệ với bảo vệ thương nhân nước ngoài và xử lý vi phạm hợp đồng.</div>
+ <button class="timeline-node"><span class="t-date">~115 BC–1453</span><span class="t-title"> Silk Road</span></button><div class="timeline-detail">Tuyến lớn nối châu Á–châu Âu; slide còn nhắc amber road.</div>
+ <button class="timeline-node"><span class="t-date">Medieval period</span><span class="t-title"> Lex mercatoria</span></button><div class="timeline-detail">Ví dụ gồm <em>lex mercatoria</em> như merchant law / merchant practice trong thời kỳ trung cổ.</div>
+ <button class="timeline-node"><span class="t-date">1492 · 1498 · 1519–1522</span><span class="t-title"> European expansion markers</span></button><div class="timeline-detail">Columbus 1492; Vasco da Gama 1498; Magellan 1519–1522; gắn với tuyến thương mại mới và khởi đầu chủ nghĩa thực dân trong mạch bài.</div>
+ <button class="timeline-node"><span class="t-date">16th–17th centuries</span><span class="t-title"> Mercantilism adopted by traders/politicians</span></button><div class="timeline-detail">Mercantilism được gắn với Nationalism School.</div>
+ <button class="timeline-node"><span class="t-date">1776</span><span class="t-title"> Adam Smith — The Wealth of Nations</span></button><div class="timeline-detail">Mạch bài nối Adam Smith, absolute advantage/specialization và Invisible Hand với trade liberalisation.</div>
+ <button class="timeline-node"><span class="t-date">18th & early 19th centuries</span><span class="t-title"> Mercantilism widely applied in Europe</span></button><div class="timeline-detail">Mốc thời kỳ được giữ đúng theo slide.</div>
+ <button class="timeline-node"><span class="t-date">1871</span><span class="t-title"> David Ricardo book/year as written in bài học</span></button><div class="timeline-detail">Mốc được ghi: <em>The Principle of Political Economy and Taxation</em> — mốc được ghi trong phần này: 1871.</div>
+ <button class="timeline-node"><span class="t-date">1884</span><span class="t-title"> Patenôte Treaty — France/Vietnam</span></button><div class="timeline-detail">Article 1: protectorate/external relations; Article 4: mở Tourane, Xuan Day và Qui Nhơn cho thương mại, có thể mở thêm theo thỏa thuận.</div>
+ <button class="timeline-node"><span class="t-date">1944 → 1947</span><span class="t-title"> Bretton Woods → IMF/IBRD → GATT</span></button><div class="timeline-detail">Bretton Woods Conference 1944; IMF/IBRD nằm trong chuỗi dẫn đến GATT 1947.</div>
+ <button class="timeline-node"><span class="t-date">1974 · 1976</span><span class="t-title"> Soft-law examples</span></button><div class="timeline-detail">UNGA Resolution 3201 (1974); OECD Declaration (1976).</div>
+ <button class="timeline-node"><span class="t-date">2005 · 2015 · 2017 · 2020</span><span class="t-title"> Vietnam legislation years listed</span></button><div class="timeline-detail">Commercial Law 2005; Civil Code 2015; Law on Foreign Trade Management 2017; Enterprise Law 2020; Investment Law 2020.</div>
+ </div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Economic lenses</div><h3 class="section-title">Công cụ quốc gia và các lý thuyết thương mại trong bài</h3>
+ <div class="grid-auto mt-4">
+ <article class="knowledge-card card-slate"><h3>National trading tools — các nhóm chính</h3><p class="mt-2 text-sm text-stone-700"><strong>Tariff-side:</strong> tariffs; quotas.</p><p class="mt-2 text-sm text-stone-700"><strong>Non-tariff-side examples:</strong> technical standards & sanitary quarantine; customs procedures; goods labelling & environmental protection; subsidies; direct tools; indirect tools.</p></article>
+ <article class="knowledge-card card-amber"><h3>Mercantilism · Nationalism School</h3><p class="mt-2 text-sm text-stone-600">Bài học nêu <strong>Jean-Baptiste Colbert</strong> trong segment này.</p><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Wealth = tích lũy vàng, bạc, capital.</li><li>Can thiệp nhà nước sâu.</li><li>Trade surplus = sức mạnh quốc gia.</li><li>Khai thác thuộc địa tối đa.</li><li>Đánh thuế hàng ngoại; trợ cấp xuất khẩu.</li><li>“Great Capitalists” và monopoly in trade.</li></ul></article>
+ <article class="knowledge-card card-violet"><h3>Economies of scale + Keynesian economics</h3><p class="mt-2 text-sm text-stone-700">Specialization làm tăng quy mô và tập trung sản xuất. Phần Keynesian trong bài bác ý tưởng free market tự động về full employment chỉ nhờ wage flexibility; nhà nước được trình bày là cần để điều hòa chu kỳ, ổn định giá và tạo việc làm.</p><div class="pill-row mt-3"><span class="pill">Consumption</span><span class="pill">Investment</span><span class="pill">Government spending</span><span class="pill">Net exports</span></div></article>
+ </div>
+ <div class="diagram mt-4"><div class="section-kicker">Mercantilist flow</div><div class="flow-row mt-2"><div class="flow-node node-amber">Colonies<br><span class="text-xs font-medium">raw materials</span></div><div class="flow-arrow">→</div><div class="flow-node node-blue">England</div><div class="flow-arrow">→</div><div class="flow-node node-emerald">Manufactured goods</div></div><p class="source-note">Sơ đồ minh họa quan hệ colonies/raw materials → England/manufactured goods.</p></div>
+ <div class="diagram mt-4"><div class="section-kicker">Invisible Hand</div><p class="mt-2 text-sm text-slate-600">Classical-school segment liên kết Adam Smith, <strong>absolute advantage / specialization</strong> và Invisible Hand với trade liberalisation.</p><div class="flow-row mt-2"><div class="flow-node node-violet">Profit-seeking producers<br><span class="text-xs font-medium">produce more</span></div><div class="flow-arrow">→</div><div class="flow-node node-blue">Competition + self-interest</div><div class="flow-arrow">→</div><div class="flow-node node-emerald">Low prices + high quality</div><div class="flow-arrow">→</div><div class="flow-node node-amber">Societal needs met</div></div><p class="mt-2 text-sm text-slate-600">Bài học đồng thời gắn mô hình lý tưởng với market system tự điều chỉnh và “government not becoming involved”.</p></div>
+
+ <div class="step-viewer mt-5" data-step-viewer="comparative"><div class="flex items-center justify-between gap-3 flex-wrap"><div><div class="section-kicker">Worked sequence</div><h4 class="font-black text-slate-900">Comparative advantage — xem lại ví dụ</h4></div><span class="course-state">Không có công thức tổng quát trong bài</span></div>
+ <div class="step-nav"><button class="step-btn active" data-step="ca1">1 · Rice/Banana cakes</button><button class="step-btn" data-step="ca2">2 · Labour/unit</button><button class="step-btn" data-step="ca3">3 · No-trade output</button><button class="step-btn" data-step="ca4">4 · Relative labour ratios</button><button class="step-btn" data-step="ca5">5 · Specialization</button></div>
+ <div id="ca1" class="step-panel active"><div class="scroll-table"><table class="data-table compact"><thead><tr><th>State</th><th>Country A</th><th>Country B</th><th>Total</th></tr></thead><tbody><tr><td>Half labour each</td><td>400 rice cakes; 1,500 banana cakes</td><td>600 rice cakes; 1,000 banana cakes</td><td>1,000 rice; 2,500 banana</td></tr><tr><td>Specialization shown</td><td>3,000 banana cakes</td><td>1,200 rice cakes</td><td>Bài học supplies before/after values</td></tr></tbody></table></div></div>
+ <div id="ca2" class="step-panel"><p class="mb-2 text-sm">Mỗi quốc gia có <strong>500 workers</strong>.</p><div class="scroll-table"><table class="data-table compact"><thead><tr><th>Product</th><th>Country A labour/unit</th><th>Country B labour/unit</th></tr></thead><tbody><tr><td>Laptop</td><td>10</td><td>50</td></tr><tr><td>Smartphone</td><td>2</td><td>5</td></tr></tbody></table></div></div>
+ <div id="ca3" class="step-panel"><p class="mb-2 text-sm">No-trade allocation: 250 workers cho mỗi ngành.</p><div class="scroll-table"><table class="data-table compact"><thead><tr><th>Product</th><th>A output</th><th>B output</th><th>Total</th></tr></thead><tbody><tr><td>Laptop</td><td>25</td><td>5</td><td>30</td></tr><tr><td>Smartphone</td><td>125</td><td>50</td><td>175</td></tr></tbody></table></div></div>
+ <div id="ca4" class="step-panel"><div class="grid-auto"><div class="knowledge-card"><h3>Country A</h3><p class="mt-2">1 laptop dùng <strong>5×</strong> labour của 1 smartphone.</p></div><div class="knowledge-card"><h3>Country B</h3><p class="mt-2">1 laptop dùng <strong>10×</strong> labour của 1 smartphone.</p></div></div><p class="mt-3 text-sm text-stone-600">Mạch bài dùng <strong>opportunity cost</strong>: mất đi lợi ích tiềm năng từ lựa chọn thay thế khi chọn một phương án.</p></div>
+ <div id="ca5" class="step-panel"><p class="mb-2 text-sm">Allocation: A = 300 workers laptops + 200 smartphones; B = 500 workers smartphones.</p><div class="scroll-table"><table class="data-table compact"><thead><tr><th>Product</th><th>A</th><th>B</th><th>Total</th></tr></thead><tbody><tr><td>Laptop</td><td>30</td><td>0</td><td>30</td></tr><tr><td>Smartphone</td><td>100</td><td>100</td><td>200</td></tr></tbody></table></div></div>
+ </div>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>Comparative advantage — ý chính</h3><p class="mt-2 text-stone-700">Quốc gia chuyên môn hóa/xuất khẩu hàng có chi phí tương đối thấp hoặc sản xuất tương đối hiệu quả hơn; nhập hàng có chi phí tương đối cao hơn. Điểm cần nhớ: trade gains vẫn có thể tồn tại dù một nước tuyệt đối hiệu quả hơn hoặc kém hiệu quả hơn ở mọi hàng hóa.</p></article><article class="knowledge-card"><h3>Growth figures trong slide</h3><div class="pill-row mt-3"><span class="pill">China 2023 · 5.2%</span><span class="pill">India 2023 · 7.6%</span><span class="pill">Vietnam 2023 · 5.0%</span><span class="pill">Vietnam 2022 · 8.1%</span></div><p class="source-note">Số liệu theo bài giảng; không phải xác minh hiện tại.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Why regulate?</div><h3 class="section-title">Lý do điều chỉnh thương mại và ký kết thỏa thuận</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-emerald"><h3>Reasons for regulation</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Giảm trade restrictions.</li><li>Tăng hiệu quả kinh doanh và thúc đẩy industrialization.</li><li>Tạo môi trường an toàn/dự đoán được cho nhà đầu tư và quốc gia.</li><li>Góp phần xử lý các vấn đề kinh tế–xã hội lớn.</li><li>Hướng tới unity của economy/policies giữa rich và poor countries.</li></ul></article><article class="knowledge-card card-amber"><h3>Why agreements / restrictions?</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Economic welfare; peace.</li><li>Re-election/re-appointment targets.</li><li>Bảo vệ domestic industry/employment; hỗ trợ new industries.</li><li>Giúp ngành trong nước có world-market foothold.</li><li>Tariff revenue; national security/self-reliance.</li><li>Bảo vệ/thúc đẩy social values & interests phi kinh tế.</li></ul></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Sources & principles</div><h3 class="section-title">Nguồn luật Thương mại Quốc tế và các nguyên tắc chung</h3>
+ <div class="grid-auto mt-4">
+ <article class="knowledge-card card-blue"><h3>National-law sources</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Domestic regulations có thể áp dụng cho international commercial transactions.</li><li>Vietnam examples: Civil Code; Commercial Law; Enterprise Law; Investment Law; Law on Foreign Trade Management; decrees/decisions/circulars/joint circulars và văn bản dưới luật.</li><li>Domestic case law — Banco Nacional de Cuba v. Manhattan Bank / Act of State example.</li><li>Commercial customs và general principles of national law làm gap fillers.</li></ul></article>
+ <article class="knowledge-card card-violet"><h3>International sources</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>International trade customs/practices.</li><li>International treaties: bilateral/multilateral, global/regional.</li><li>WTO agreements; RTAs/BTAs/PTAs.</li><li>International judicial/arbitral case law; WTO DSB reports; FTA dispute-settlement decisions.</li><li>General principles of international law, ví dụ <em>bona fide</em>.</li><li>Soft law — non-binding nhưng được mô tả là highly recommended/directional.</li></ul></article>
+ <article class="knowledge-card card-slate"><h3>Maxims / doctrines trong bài</h3><ul class="mt-2 text-sm text-stone-700 space-y-2"><li><strong>onus probandi incumbit actori</strong> — plaintiff bears burden of proof.</li><li><strong>ne bis in idem</strong> — no one tried twice for same offence.</li><li><strong>ex factis jus oritur</strong> — law arises from facts.</li><li><strong>ex injuria jus non oritur</strong> — law does not arise from unjust conduct.</li><li><strong>Calvo doctrine:</strong> jurisdiction ở state nơi investment được thực hiện.</li><li><strong>Drago doctrine:</strong> failure to repay national debt không phải lý do hợp lệ cho foreign intervention.</li><li><strong>Banco Nacional de Cuba v. Sabbatino:</strong> Act of State/doctrinal example; học liệu không cung cấp full case brief.</li></ul></article>
+ </div>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-emerald"><h3>Market access</h3><p class="mt-2 text-sm">Giảm/tiến tới xóa tariff barriers qua Schedules of Concessions; cấm quantitative restrictions theo <strong>GATT XI:1</strong>.</p></article><article class="knowledge-card card-blue"><h3>Non-discrimination</h3><p class="mt-2 text-sm"><strong>MFN:</strong> GATT I; GATS II; TRIPS IV. <strong>National Treatment:</strong> GATT III và các references GATS/TRIPS trong bài học; CPTPP non-discrimination references: Articles 9.4 & 10.3.</p></article><article class="knowledge-card card-amber"><h3>Good governance</h3><p class="mt-2 text-sm"><strong>Transparency:</strong> notice, publication, explanation & consultation. <strong>Administration:</strong> GATT X:3(a) được trình bày là yêu cầu quản lý uniform, objective và reasonable.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">WTO system</div><h3 class="section-title">GATT → WTO: hình thành, status, principles và accession</h3>
+ <div class="timeline-shell mt-4">
+ <button class="timeline-node"><span class="t-date">1 Jan 1948</span><span class="t-title"> GATT 1947 enters into force</span></button><div class="timeline-detail">Mốc hiệu lực.</div>
+ <button class="timeline-node"><span class="t-date">Annecy 1949</span><span class="t-title"> 5,000 tariff concessions · 10 new members</span></button><div class="timeline-detail">Dòng thời gian.</div>
+ <button class="timeline-node"><span class="t-date">Torquay 1950</span><span class="t-title"> 8,700 tariff concessions · 4 new members</span></button><div class="timeline-detail">Dòng thời gian.</div>
+ <button class="timeline-node"><span class="t-date">Geneva 1956</span><span class="t-title"> Tariff cuts ≈ $2.5 billion</span></button><div class="timeline-detail">Value as stated.</div>
+ <button class="timeline-node"><span class="t-date">1958</span><span class="t-title"> Haberler Report</span></button><div class="timeline-detail"><em>Trends in International Trade</em>; gồm 3 ủy ban GATT: tariffs; agriculture; developing-country trade.</div>
+ <button class="timeline-node"><span class="t-date">Dillon 1960</span><span class="t-title"> 4,400 tariff concessions</span></button><div class="timeline-detail">Dòng thời gian.</div>
+ <button class="timeline-node"><span class="t-date">Kennedy 1964</span><span class="t-title"> 50% tariff cuts in many areas</span></button><div class="timeline-detail">Số liệu tham khảo.</div>
+ <button class="timeline-node"><span class="t-date">Tokyo 1973</span><span class="t-title"> > $300 billion trade value covered</span></button><div class="timeline-detail">Reductions/bindings as stated.</div>
+ <button class="timeline-node"><span class="t-date">1986</span><span class="t-title"> Uruguay Round begins</span></button><div class="timeline-detail">Course chronology.</div>
+ <button class="timeline-node"><span class="t-date">15 Apr 1994</span><span class="t-title"> Marrakesh signing</span></button><div class="timeline-detail">Course chronology.</div>
+ <button class="timeline-node"><span class="t-date">1 Jan 1995</span><span class="t-title"> WTO established</span></button><div class="timeline-detail">Course chronology.</div>
+ <button class="timeline-node"><span class="t-date">14 May 2002 · 13 Jun 2006</span><span class="t-title"> Transparency milestones</span></button><div class="timeline-detail">WTO document-availability decision 14 May 2002; GATT document restrictions abolished 13 June 2006.</div>
+ </div>
+ <div class="grid-auto mt-4">
+ <article class="knowledge-card card-blue"><h3>Legal status & transparency</h3><p class="mt-2 text-sm text-stone-700">WTO được trình bày là international organization established under Article I of WTO Agreement, có legal personality và legal capacity/privileges/immunities cần thiết trong mỗi member; WTO không phải bộ phận hay affiliate của UN. Bài học cũng nêu một số dispute hearings đã được mở công khai theo yêu cầu của members liên quan.</p></article>
+ <article class="knowledge-card card-emerald"><h3>5 basic principles listed</h3><ol class="mt-2 list-decimal pl-5 text-sm text-stone-700 space-y-1"><li>Trade without discrimination — MFN & NT.</li><li>Freer trade through negotiation/lower barriers; developing members có thêm thời gian điều chỉnh.</li><li>Predictability through commitment & transparency.</li><li>Fair competition — open, fair, undistorted competition.</li><li>Encourage development/reform, đặc biệt developing & underdeveloped countries.</li></ol></article>
+ <article class="knowledge-card card-violet"><h3>Accession sequence</h3><ol class="mt-2 list-decimal pl-5 text-sm text-stone-700 space-y-1"><li>Formal application.</li><li>Foreign-trade-policy memorandum.</li><li>Satisfy bilateral/multilateral requirements.</li><li>Bilateral negotiations.</li><li>Package: Working Group report + goods/services opening commitments.</li><li>Approval by General Council or Ministerial Conference.</li></ol><p class="source-note">Lưu ý: concessions có thể được xem là “price” of joining.</p></article>
+ </div>
+ <div class="knowledge-card mt-4"><div class="flex items-center gap-2 flex-wrap"><h3>Membership / organization figures in the bài học</h3><span class="course-state">học liệu figures</span></div><div class="pill-row mt-3"><span class="pill">164 Members</span><span class="pill">98% world trade</span><span class="pill">23 observers</span><span class="pill">>300 RTAs</span><span class="pill">Every WTO member party to ≥1 RTA</span><span class="pill">Secretariat ≈500 staff</span><span class="pill">4 deputies</span></div><p class="mt-3 text-sm text-stone-600">Slide identifies Ngozi Okonjo-Iweala as 7th Director-General and first woman DG; names Renato Ruggiero as first Director-General. Các mô tả này được giữ như trạng thái học liệu, không phải xác minh hiện tại.</p></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Purposes · functions · structure</div><h3 class="section-title">WTO làm gì và được tổ chức như thế nào?</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-emerald"><h3>Purposes</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Raise living standards.</li><li>Ensure full employment.</li><li>Grow real income/effective demand.</li><li>Expand production/trade of goods & services.</li><li>Optimal use of world resources theo sustainable development.</li><li>Developing/LDC countries nhận fair share of trade growth.</li></ul></article><article class="knowledge-card card-blue"><h3>Functions</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Facilitate implementation/management/operation of agreements.</li><li>Negotiation forum & implementation of results.</li><li>Dispute settlement under DSU.</li><li>Trade-policy review under TPRM.</li><li>Cooperate with IMF & World Bank for policy coherence.</li></ul></article></div>
+ <div class="tree knowledge-card mt-4"><div class="flex items-center justify-between gap-3 flex-wrap"><div><div class="section-kicker">Expandable hierarchy</div><h3>WTO organization chart — theo cấu trúc tổ chức</h3></div><span class="course-state">Mô hình minh họa</span></div>
+ <details open><summary>Ministerial Conference</summary><ul><li>Highest body shown in course hierarchy; meets at least once every 2 years.</li></ul></details>
+ <details><summary>General Council</summary><ul><li>Bài học says practically at least once every 2 months.</li><li>Meets as <strong>Trade Policy Review Body</strong>.</li><li>Meets as <strong>Dispute Settlement Body</strong> → Appellate Body + Dispute Settlement Panels shown underneath.</li></ul></details>
+ <details><summary>Committees / working groups reporting at this level</summary><ul><li>Trade and Environment.</li><li>Trade and Development → Sub-Committee on Least-Developed Countries.</li><li>Regional Trade Agreements.</li><li>Balance of Payments Restrictions.</li><li>Budget, Finance and Administration.</li><li>Working Party on Accession.</li><li>Working groups: Trade, debt and finance; Trade and technology transfer.</li><li>Inactive groups shown: Relationship between Trade and Investment; Interaction between Trade and Competition.</li></ul></details>
+ <details><summary>Council for Trade in Goods</summary><ul><li>Agriculture; Anti-Dumping Practices; Customs Valuation; Import Licensing; Market Access; Rules of Origin; Safeguards; SPS; SCM; TBT; Trade Facilitation; TRIMs.</li><li>Participants on Expansion of Trade in Information Technology Products.</li><li>Working Party on State-Trading Enterprises.</li></ul></details>
+ <details><summary>Council for TRIPS</summary><ul><li>Council for Trade-Related Aspects of Intellectual Property Rights.</li></ul></details>
+ <details><summary>Council for Trade in Services</summary><ul><li>Committees: Trade in Financial Services; Specific Commitments.</li><li>Working parties: Domestic Regulation; GATS Rules.</li></ul></details>
+ <details><summary>Trade Negotiations Committee</summary><ul><li>Doha Development Agenda structure.</li><li>Special sessions and negotiating groups on Market Access and Rules.</li></ul></details>
+ <details><summary>Plurilateral bodies shown</summary><ul><li>Information Technology Agreement Committee.</li><li>Trade in Civil Aircraft Committee.</li><li>Government Procurement Committee.</li></ul></details>
+ </div>
+ <div class="scroll-table mt-4"><table class="data-table"><thead><tr><th>Decision item</th><th>Quy tắc / figure</th></tr></thead><tbody><tr><td>Consensus</td><td>Primary; no member present formally objects; abstention not counted as vote cast.</td></tr><tr><td>If no consensus — general rule</td><td>Majority vote under bài học-cited Article IX:1.</td></tr><tr><td>Interpretation</td><td>Exclusive authority of Ministerial Conference / General Council; if no consensus, 3/4 majority. Bài học says Article IX:2 had not been used to adopt an interpretation.</td></tr><tr><td>Waiver / immunity</td><td>3/4 majority if no consensus.</td></tr><tr><td>Amendments</td><td>Bài học says generally 2/3 majority plus ratification; any member or council may propose an amendment to the Ministerial Conference, and bài học notes TPRM amendments do not go to vote.</td></tr><tr><td>Accession</td><td>2/3 majority if no consensus; bài học notes accession documents in practice achieved consensus.</td></tr><tr><td>Budget</td><td>2/3 of members present and more than half total membership; bài học says in practice by consensus.</td></tr><tr><td>Reverse / negative consensus</td><td>Decision deemed adopted unless consensus exists not to adopt.</td></tr><tr><td>TRIPS amendment wording</td><td>Bài học says “The General Assembly has already decided to amend the TRIPS.” <button class="conflict-btn" data-conflict="c05">⚠ Lưu ý</button></td></tr></tbody></table></div>
+ <div class="knowledge-card mt-4"><h3>TPR frequency shown in slide</h3><div class="pill-row mt-3"><span class="pill">Largest 4 · every 2 years</span><span class="pill">Next 16 · every 4 years</span><span class="pill">Remainder · every 6 years</span><span class="pill">Longer for LDCs</span></div><p class="source-note">Số liệu tham khảo; không phải số liệu hiện hành.</p></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Agreement architecture</div><h3 class="section-title">WTO agreements — layered view</h3><p class="section-lead">WTO được trình bày là member-governed, consensus-based và theo single-undertaking / single-commitment approach. Bấm từng Annex để xem đúng nhóm hiệp định mà bài giảng liệt kê.</p>
+ <div class="toggle-bar" role="tablist"><button class="toggle-btn active" data-toggle-group="annex" data-target="annex1a">Annex 1A · Goods</button><button class="toggle-btn" data-toggle-group="annex" data-target="annex1b">Annex 1B · GATS</button><button class="toggle-btn" data-toggle-group="annex" data-target="annex1c">Annex 1C · TRIPS</button><button class="toggle-btn" data-toggle-group="annex" data-target="annex23">Annex 2 / 3</button></div>
+ <div id="annex1a" class="toggle-panel knowledge-card card-blue"><h3>Annex 1A — Trade in Goods</h3><div class="pill-row mt-3"><span class="pill">GATT 1994</span><span class="pill">GATT 1947 + framework documents</span><span class="pill">Six agreements interpreting/applying GATT provisions</span><span class="pill">Marrakesh Protocol</span><span class="pill">Agriculture</span><span class="pill">SPS Agreement</span><span class="pill">TBT Agreement</span><span class="pill">Anti-Dumping</span><span class="pill">SCM</span><span class="pill">Safeguard</span><span class="pill">Customs Valuation</span><span class="pill">Pre-shipment Inspection</span><span class="pill">Rules of Origin</span><span class="pill">Import Licensing Procedures</span><span class="pill">Trade Facilitation</span><span class="pill">TRIMs</span></div><p class="mt-3 text-sm">Ở lesson Trade in Goods khác, bài học viết “SBS, TBT”, trong khi phần kiến trúc này viết “SPS Agreement” và “TBT Agreement”. <button class="conflict-btn" data-conflict="c03">⚠ Lưu ý</button></p></div>
+ <div id="annex1b" class="toggle-panel hidden-panel knowledge-card card-violet"><h3>Annex 1B — GATS</h3><p class="mt-2">Members make commitments; bài học nói khác biệt cơ bản với goods nằm ở <strong>form of protection for service sectors</strong>.</p></div>
+ <div id="annex1c" class="toggle-panel hidden-panel knowledge-card card-amber"><h3>Annex 1C — TRIPS</h3><ol class="mt-2 list-decimal pl-5 text-sm text-stone-700"><li>Imported/exported goods protected by IPRs.</li><li>IPRs themselves as subjects of international commercial transactions: assignment, transfer, franchising, technology transfer.</li></ol></div>
+ <div id="annex23" class="toggle-panel hidden-panel knowledge-card card-emerald"><h3>Procedural agreements</h3><div class="pill-row mt-3"><span class="pill">Annex 2 · DSU</span><span class="pill">Annex 3 · TPRM</span></div></div>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>WTO & national law</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>WTO Agreement XVI:4 — ensure conformity of laws/regulations/admin procedures with annexed obligations.</li><li>Vienna Convention Article 27 — domestic law cannot justify failure to perform treaty.</li><li>GATT XXIV:12 — reasonable measures for regional/local government compliance.</li><li>Treaty-consistent interpretation where national law allows multiple interpretations.</li><li>Direct effect identified as an issue under discussion.</li></ul></article><article class="knowledge-card"><h3>RTA / PTA legal bases</h3><div class="branch-grid mt-3"><div class="branch-btn"><strong>GATT XXIV</strong><p class="text-sm mt-1">Customs unions / RTAs.</p></div><div class="branch-btn"><strong>Enabling Clause</strong><p class="text-sm mt-1">Developing/LDC RTAs for goods.</p></div><div class="branch-btn"><strong>GATS V</strong><p class="text-sm mt-1">Economic integration for services.</p></div></div><p class="mt-3 text-sm text-stone-600">RTA amendment/decision-making ít cumbersome hơn multilateral forums và RTA dispute settlement “much rarer” than WTO; bilateral non-tariff arrangements có thể xử lý SPS/TBT conformity-assessment recognition; PTAs có thể depart from multilateral non-discrimination under permitted exceptions; unilateral preferences arise from granting member's national law; non-reciprocal PTAs are included.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Tự luyện</div><h3 class="section-title">Chocolate infant-industry problem</h3>
+ <div class="source-practice"><p><strong>Dữ kiện:</strong> Country A và B đã trade <strong>5 years</strong>; cả hai là WTO members; high-quality chocolate là main export của B sang A; firms in A bắt đầu đầu tư sản xuất chocolate; A dự định tăng tariffs và áp quotas để bảo vệ ngành mới.</p><p class="mt-3 font-bold">Câu hỏi tự luyện:</p><ol class="list-decimal pl-5 mt-1 text-sm"><li>Should A do so? Why?</li><li>Advise A how to protect the newly formed chocolate industry.</li></ol><div class="pill-row mt-3"><span class="pill law-pill">tariffs</span><span class="pill law-pill">quotas</span><span class="pill law-pill">trade restrictions</span><span class="pill law-pill">infant-industry rationale</span><span class="pill law-pill">market access</span></div><div class="warning-box mt-3">Hãy vận dụng các khái niệm đã học để tự hoàn thiện kết luận pháp lý.</div></div>
+ </section>
+
+ <section class="learn-section"><div class="section-kicker">Mindmap</div><h3 class="section-title">Bản đồ Chương 1</h3><div class="mindmap mt-4"><div class="mindmap-inner"><div class="mind-root">International Trade Law</div><div class="mind-branches"><div class="mind-branch"><strong>Background</strong><ul><li>Globalisation</li><li>History</li><li>Economic theories</li></ul></div><div class="mind-branch"><strong>Sources</strong><ul><li>National</li><li>International</li></ul></div><div class="mind-branch"><strong>Principles</strong><ul><li>Market access</li><li>Non-discrimination</li><li>Good governance</li></ul></div><div class="mind-branch"><strong>WTO</strong><ul><li>Formation/status</li><li>Membership</li><li>Purposes/functions</li><li>Structure/decision-making</li><li>Agreements</li></ul></div><div class="mind-branch"><strong>WTO & national law</strong><ul><li>Conformity</li><li>Treaty-consistent interpretation</li></ul></div><div class="mind-branch"><strong>Regional / preferential</strong><ul><li>RTA</li><li>PTA</li></ul></div></div></div></div></section>
+
+ <section class="learn-section"><div class="section-kicker">Flashcards</div><h3 class="section-title">Ôn nhanh Chương 1</h3><div class="flash-grid mt-4">
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Globalisation: 2 positive + 2 negative dimensions?</span><span class="flip-back">Positive: larger market, lower price, outsourcing, increased standard of living. Negative/problem: wealth concentration, exploitation, cultural homogeneity.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">International trade vs business — main subjects?</span><span class="flip-back">Trade: countries / international economic organizations / public entities. Business: mainly traders/business actors.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Comparative advantage — core idea?</span><span class="flip-back">Specialize/export where relative cost/effectiveness is better; import where relative cost is higher; gains can exist without absolute advantage.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">4 Keynesian demand sources?</span><span class="flip-back">Consumption · investment · government spending · net exports.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">2 bài học elements of market access?</span><span class="flip-back">Tariff reduction through Schedules of Concessions; prohibition of quantitative restrictions under GATT XI:1.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Main WTO functions?</span><span class="flip-back">Administer agreements; negotiation forum; DSU; TPRM; cooperation with IMF/World Bank.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Reverse / negative consensus?</span><span class="flip-back">Decision deemed adopted unless consensus exists not to adopt.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Annexes for goods / services / TRIPS?</span><span class="flip-back">Annex 1A goods · Annex 1B GATS · Annex 1C TRIPS.</span></span></button>
+ </div></section>
+
+ <section class="learn-section"><div class="section-kicker">Knowledge check</div><h3 class="section-title">Kiểm tra nhanh</h3><div class="grid-auto mt-4">
+ <div class="quiz-card"><strong>Self-interest + competition tạo wider social benefits với limited government?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Adam Smith’s Invisible Hand.</div></div>
+ <div class="quiz-card"><strong>Thứ tự: Bretton Woods, GATT entry into force, Uruguay Round start, WTO establishment?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Bretton Woods 1944 → GATT enters into force 1 Jan 1948 → Uruguay Round 1986 → WTO 1 Jan 1995.</div></div>
+ <div class="quiz-card"><strong>National-law sources trong nhóm: Vietnam Commercial Law, WTO agreements, domestic case law, commercial customs/general principles?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Vietnam Commercial Law; domestic case law; commercial customs/general principles.</div></div>
+ <div class="quiz-card"><strong>Highest decision-making body in bài học?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Ministerial Conference.</div></div>
+ </div></section>
+ </section>
+
+ <!-- CHAPTER 2 -->
+ <section id="ch2" class="tab-content hidden animate-fade-in">
+ <header class="chapter-opening"><h2 class="chapter-title">Chương 2: Non-Discrimination — Most-Favoured-Nation Treatment (MFN)</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Hiểu MFN, bốn yếu tố kiểm tra vi phạm, cách xem “likeness”, “advantage”, immediate/unconditional treatment, de jure/de facto discrimination và hai nhóm ngoại lệ được bài giảng nhấn mạnh.</div></header>
+
+ <section class="learn-section">
+ <div class="section-kicker">MFN core</div><h3 class="section-title">MFN: ý niệm, lý do và phạm vi</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>Concept</h3><p class="mt-2 text-stone-700">MFN được trình bày là treatment ưu đãi nhất mà một nation dành cho trading partners; trade preferences tương đương với những gì third country hưởng, theo reciprocal hoặc unconditional conditions theo cách diễn đạt trong bài.</p></article><article class="knowledge-card card-emerald"><h3>Why MFN?</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Prohibit/eliminate discrimination.</li><li>Cho small nations cùng advantages mà strong nations dành cho nhau.</li><li>Reduce trade diversification và promote liberalization.</li><li>Simplify international rules & tariff transparency.</li></ul></article><article class="knowledge-card card-violet"><h3>Legal bases</h3><div class="pill-row mt-3"><span class="pill law-pill">GATT Article I</span><span class="pill law-pill">GATS Article II</span><span class="pill law-pill">TRIPS Article IV</span></div><p class="mt-3 text-sm text-stone-600">Overall scope trong bài: measures directly or indirectly affecting trade in goods, services and intellectual property.</p></article></div>
+ <details class="study-details mt-4"><summary>GATT I:1 — phạm vi áp dụng</summary><div class="detail-body"><ul class="list-disc pl-5 space-y-1"><li>Customs duties/charges và methods.</li><li>Import/export rules and formalities.</li><li>Article III.2 / III.4 matters.</li><li>Any advantage/favour/privilege/immunity granted to product from/to any country.</li><li>Immediate and unconditional extension to like products from/to all contracting parties.</li></ul></div></details>
+ <details class="study-details"><summary>GATS II.1 / TRIPS IV — proposition theo slide</summary><div class="detail-body"><p><strong>GATS II.1:</strong> immediate/unconditional treatment no less favourable for like services/service suppliers of other members relative to any other country.</p><p class="mt-2"><strong>TRIPS IV:</strong> immediate/unconditional extension to nationals of all other members of IP-protection advantages/favours/privileges/immunities granted to nationals of any other country.</p></div></details>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">4-factor checklist</div><h3 class="section-title">MFN violation checklist — đúng 4 yếu tố</h3><p class="section-lead">Bấm từng yếu tố để mở ý nghĩa. Không thêm bước thứ năm và không đổi thứ tự.</p>
+ <div class="branch-grid mt-4" id="mfn-checklist">
+ <button class="branch-btn active" data-branch-group="mfn" data-branch-output="mfn-out" data-content="Scope of regulation: measures affecting import/export directly or indirectly."><strong>1 · Scope</strong><p class="text-sm mt-1">Measure có nằm trong phạm vi MFN?</p></button>
+ <button class="branch-btn" data-branch-group="mfn" data-branch-output="mfn-out" data-content="Likeness: không có một định nghĩa WTO duy nhất; cần phân tích từng vụ việc theo các tiêu chí đã nêu."><strong>2 · Likeness</strong><p class="text-sm mt-1">Sản phẩm có “like” trong context?</p></button>
+ <button class="branch-btn" data-branch-group="mfn" data-branch-output="mfn-out" data-content="Immediate and unconditional: preference/advantage cannot be conditioned on criteria or reciprocal advantage theo điều kiện đã nêu."><strong>3 · Immediately & unconditionally</strong><p class="text-sm mt-1">Ưu đãi có được mở rộng ngay và vô điều kiện?</p></button>
+ <button class="branch-btn" data-branch-group="mfn" data-branch-output="mfn-out" data-content="Advantage: covers de jure and de facto advantage and is not limited to a narrow measure type."><strong>4 · Advantage</strong><p class="text-sm mt-1">Có advantage/favour/privilege/immunity?</p></button>
+ </div><div id="mfn-out" class="branch-output">Scope of regulation: measures affecting import/export directly or indirectly.</div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Likeness</div><h3 class="section-title">“Like products” — accordion metaphor + 4 criteria</h3>
+ <div class="knowledge-card card-amber"><h3>Case-by-case, không có một định nghĩa WTO cố định trong bài học</h3><p class="mt-2 text-stone-700">Japan–Alcoholic Beverages được slide dùng với metaphor “accordion”: likeness co/giãn theo provision, context và circumstances. Trong narrow Article III.2 discussion, slide nói vodka và các alcoholic products khác được treated as like.</p></div>
+ <div class="flash-grid mt-4">
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Criterion 1</span><span class="flip-back">Physical / chemical characteristics; agricultural products may consider genetic/farming factors.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Criterion 2</span><span class="flip-back">End-use / function.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Criterion 3</span><span class="flip-back">Consumer tastes and habits.</span></span></button>
+ <button class="flashcard" type="button"><span class="flip-inner"><span class="flip-front">Criterion 4</span><span class="flip-back">Tariff applications / classification.</span></span></button>
+ </div>
+ <div class="scroll-table mt-4"><table class="data-table compact"><thead><tr><th>Spain–Unroasted Coffee category</th><th>Duty</th></tr></thead><tbody><tr><td>Colombian mild</td><td>Free</td></tr><tr><td>Other mild</td><td>Free</td></tr><tr><td>Unwashed Arabica</td><td>7% ad val.</td></tr><tr><td>Robusta</td><td>7% ad val.</td></tr><tr><td>Other</td><td>7% ad val.</td></tr></tbody></table></div><p class="source-note">Brazilian coffee và coffee từ các nước khác được xem là like vì cùng mục đích và đặc điểm; geography/farming/planting conditions không được slide dùng làm basis để phân biệt.</p>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Advantage & discrimination</div><h3 class="section-title">Advantage · immediate/unconditional · de jure/de facto</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>Advantage</h3><p class="mt-2 text-stone-700">Covers <strong>de jure</strong> and <strong>de facto</strong> advantage; không bị giới hạn vào một measure type hẹp.</p><p class="mt-2 text-sm">Colombia–Ports of Entry: textiles/embroidery/footwear from Panama phải customs declaration trước import và pay duties first; slide reproduces panel proposition rằng Article I:1 “advantage” được dành cho countries other than Panama.</p></article><article class="knowledge-card card-violet"><h3>“Any other country”</h3><p class="mt-2 text-stone-700">Bài học dùng Canada–Autos để nói comparison không chỉ giới hạn trong cách hiểu trading partners của WTO; US–MFN Footwear được dùng cho proposition favorable treatment không thể offset bằng less-favourable treatment.</p></article><article class="knowledge-card card-emerald"><h3>Immediate & unconditional</h3><p class="mt-2 text-stone-700">Preference/advantage phải áp dụng ngay và không điều kiện; bài học nói advantage không thể phụ thuộc criteria hay reciprocal advantage. Cases referenced: Indonesia–Autos, Canada–Autos, Belgium–Allowances.</p></article><article class="knowledge-card card-rose"><h3>de jure vs de facto</h3><p class="mt-2 text-stone-700"><strong>De jure:</strong> discrimination nằm trong wording/formal rule. <strong>De facto:</strong> wording có thể neutral nhưng actual operation tạo bất lợi trong trường hợp này.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Case proposition matching</div><h3 class="section-title">Ghép case với proposition đúng trong học liệu</h3>
+ <div class="matching" data-matching="mfn-cases">
+ <div class="match-row" data-answer="likeness"><strong>Spain–Unroasted Coffee</strong><select class="match-select"><option value="">Chọn proposition…</option><option value="advantage">Advantage / ports-of-entry treatment</option><option value="likeness">MFN likeness + coffee tariff example</option><option value="immediate">Immediate/unconditional discussion</option><option value="rta">Regional-arrangement conditions</option></select></div>
+ <div class="match-row" data-answer="advantage"><strong>Colombia–Ports of Entry</strong><select class="match-select"><option value="">Chọn proposition…</option><option value="likeness">MFN likeness + coffee tariff example</option><option value="advantage">Advantage / ports-of-entry treatment</option><option value="immediate">Immediate/unconditional discussion</option><option value="rta">Regional-arrangement conditions</option></select></div>
+ <div class="match-row" data-answer="immediate"><strong>Belgium–Allowances</strong><select class="match-select"><option value="">Chọn proposition…</option><option value="rta">Regional-arrangement conditions</option><option value="immediate">Immediate/unconditional / discrimination reference</option><option value="likeness">MFN likeness + coffee tariff example</option><option value="advantage">Advantage / ports-of-entry treatment</option></select></div>
+ <div class="match-row" data-answer="rta"><strong>Turkey–Textiles and Clothing Products</strong><select class="match-select"><option value="">Chọn proposition…</option><option value="advantage">Advantage / ports-of-entry treatment</option><option value="rta">Regional-arrangement conditions</option><option value="likeness">MFN likeness + coffee tariff example</option><option value="immediate">Immediate/unconditional discussion</option></select></div>
+ </div><div class="action-row"><button class="action-primary" data-match-check="mfn-cases">Kiểm tra</button><button class="action-secondary" data-match-reset="mfn-cases">Làm lại</button></div><div class="feedback" data-match-feedback="mfn-cases"></div>
+ <details class="study-details mt-4"><summary>Case map khác trong Chương 2</summary><div class="detail-body"><div class="pill-row"><span class="pill case-pill">Japan–Alcoholic Beverages · accordion/likeness</span><span class="pill case-pill">Australia–Subsidy on Ammonium Sulphate · name only; no detailed proposition</span><span class="pill case-pill">Canada–Autos · any other country / de jure-de facto / immediate-unconditional</span><span class="pill case-pill">Indonesia–Autos · immediate/unconditional</span><span class="pill case-pill">US–MFN Footwear · no offset</span><span class="pill case-pill">Canada/Japan–Dimension Lumber · discrimination reference only</span><span class="pill case-pill">EEC–Beef Imports · discrimination reference only</span><span class="pill case-pill">Argentina–Footwear · regional-arrangement conditions</span><span class="pill case-pill">US–Carbon Pipe · regional-arrangement conditions</span></div><p class="source-note">Ở phần này, chỉ cần ghi nhớ luận điểm pháp lý chính gắn với từng vụ việc.</p></div></details>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">MFN exemptions</div><h3 class="section-title">Hai nhóm ngoại lệ được bài giảng nhấn mạnh</h3>
+ <div class="diagram"><div class="flow-row"><div class="flow-node node-blue">Apparent unequal treatment</div><div class="flow-arrow">→</div><div class="flow-node node-violet">RTA / regional arrangement</div><div class="flow-arrow">or</div><div class="flow-node node-emerald">Enabling Clause</div></div></div>
+ <div class="branch-grid mt-4"><button class="branch-btn active" data-branch-group="mfnex" data-branch-output="mfnex-out" data-content="Regional/bilateral arrangements: legal bases listed GATT XXIV, Understanding on GATT XXIV, GATS V. Course emphasizes free-trade area and customs union/common market; implementation includes notification/reporting, WTO review/monitoring, internal condition and external condition."><strong>RTA branch</strong><p class="text-sm mt-1">GATT XXIV · GATS V</p></button><button class="branch-btn" data-branch-group="mfnex" data-branch-output="mfnex-out" data-content="Enabling Clause: GSP and differential/favourable treatment for developing/under-developed countries, including tariff and non-tariff preferences."><strong>Enabling Clause branch</strong><p class="text-sm mt-1">Developing/LDC preferences</p></button></div><div id="mfnex-out" class="branch-output">Regional/bilateral arrangements: legal bases listed GATT XXIV, Understanding on GATT XXIV, GATS V. Course emphasizes free-trade area and customs union/common market; implementation includes notification/reporting, WTO review/monitoring, internal condition and external condition.</div>
+ <div class="toggle-bar mt-4" role="tablist"><button class="toggle-btn active" data-toggle-group="fta-cu" data-target="fta-panel">FTA</button><button class="toggle-btn" data-toggle-group="fta-cu" data-target="cu-panel">Customs union / common market</button><button class="toggle-btn" data-toggle-group="fta-cu" data-target="regional-nested">Nested bài học illustration</button></div>
+ <div id="fta-panel" class="toggle-panel knowledge-card card-blue"><h3>FTA</h3><p class="mt-2">Substantially eliminate internal tariffs/restrictions; members’ external barriers toward third parties không higher/more restrictive than before.</p></div>
+ <div id="cu-panel" class="toggle-panel hidden-panel knowledge-card card-violet"><h3>Customs union / common market</h3><p class="mt-2">Substantially eliminate internal tariffs/restrictions và apply essentially common external treatment; post-union external barriers không higher/more restrictive than before.</p></div>
+ <div id="regional-nested" class="toggle-panel hidden-panel knowledge-card card-emerald"><h3>Nested regional-integration illustration — schematic only</h3><div class="mt-3 space-y-2"><div class="p-3 rounded-xl border border-slate-300 bg-slate-50"><strong>WTO rules</strong><div class="m-3 p-3 rounded-xl border border-blue-300 bg-blue-50"><strong>FTA</strong><div class="m-3 p-3 rounded-xl border border-violet-300 bg-violet-50"><strong>EU Customs Union</strong><div class="mt-2 text-sm">EFTA / EEA / EU examples appear in the bài học illustration.</div></div></div></div></div><p class="source-note">Sơ đồ chỉ thể hiện mục đích và các mối liên hệ chính.</p></div>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>Course pros/cons for regional arrangements</h3><p class="mt-2 text-sm"><strong>Pros/benefits mentioned:</strong> regional connection/participation benefits.</p><p class="mt-2 text-sm"><strong>Problems mentioned:</strong> overlap of PTAs, “trade escalation”/“trade transition”, unresolved non-tariff issues.</p></article><article class="knowledge-card"><h3>Enabling Clause</h3><p class="mt-2 text-sm">GSP and differential/favourable treatment for developing/under-developed countries, including tariff/non-tariff preferences.</p></article></div>
+ </section>
+
+ <section class="learn-section"><div class="section-kicker">Mindmap</div><h3 class="section-title">Bản đồ MFN</h3><div class="mindmap mt-4"><div class="mindmap-inner"><div class="mind-root">MFN issue</div><div class="mind-branches"><div class="mind-branch"><strong>Scope</strong></div><div class="mind-branch"><strong>Likeness</strong></div><div class="mind-branch"><strong>Advantage</strong></div><div class="mind-branch"><strong>Immediate & unconditional</strong></div><div class="mind-branch"><strong>de jure / de facto</strong></div><div class="mind-branch"><strong>Exemptions</strong><ul><li>RTA</li><li>Enabling Clause</li></ul></div></div></div></div></section>
+
+ <section class="learn-section"><div class="section-kicker">Flashcards</div><h3 class="section-title">Ôn nhanh Chương 2</h3><div class="flash-grid mt-4">
+ <button class="flashcard"><span class="flip-inner"><span class="flip-front">MFN legal bases: goods / services / IP?</span><span class="flip-back">GATT I · GATS II · TRIPS IV.</span></span></button>
+ <button class="flashcard"><span class="flip-inner"><span class="flip-front">4 MFN likeness criteria?</span><span class="flip-back">Physical/chemical · end-use/function · consumer tastes/habits · tariff treatment/classification.</span></span></button>
+ <button class="flashcard"><span class="flip-inner"><span class="flip-front">4 MFN checklist elements?</span><span class="flip-back">Scope · likeness · immediately and unconditionally · advantage.</span></span></button>
+ <button class="flashcard"><span class="flip-inner"><span class="flip-front">MFN chỉ facial discrimination?</span><span class="flip-back">No. Bài học covers de jure and de facto discrimination.</span></span></button>
+ <button class="flashcard"><span class="flip-inner"><span class="flip-front">2 emphasized exemption families?</span><span class="flip-back">Regional trade arrangements + developing-country preferences under Enabling Clause.</span></span></button>
+ </div></section>
+ <section class="learn-section"><div class="section-kicker">Knowledge check</div><h3 class="section-title">Kiểm tra nhanh</h3><div class="grid-auto mt-4"><div class="quiz-card"><strong>Customs advantage chỉ dành cho một country: kiểm tra 4 yếu tố nào?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Scope → likeness → immediately/unconditionally → advantage.</div></div><div class="quiz-card"><strong>Producer nationality có nằm trong 4 likeness criteria?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Không.</div></div><div class="quiz-card"><strong>Facially neutral nhưng actual operation gây bất lợi?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">De facto discrimination.</div></div><div class="quiz-card"><strong>Hai forms regional arrangement được nhấn mạnh?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">FTA và customs union/common market.</div></div></div></section>
+ </section>
+
+ <!-- CHAPTER 3 -->
+ <section id="ch3" class="tab-content hidden animate-fade-in">
+ <header class="chapter-opening"><h2 class="chapter-title">Chương 3: Non-Discrimination — National Treatment (NT)</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Phân biệt các nhánh NT cho internal tax/charge, internal law/regulation/requirement, services và IP; nhớ riêng Article III.2 first/second sentence tests và Article III.4 thay vì trộn các bước.</div></header>
+
+ <section class="learn-section">
+ <div class="section-kicker">NT core</div><h3 class="section-title">National Treatment: concept, objectives, scope</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>Concept & objectives</h3><p class="mt-2 text-stone-700">NT là cornerstone của non-discrimination cùng MFN, nhằm loại bỏ discrimination giữa domestic và foreign/imported enterprises. Mục tiêu trong bài: market opening/liberalization; equal treatment của domestic/imported goods, services và IP protection; securing concession/market-opening commitments.</p></article><article class="knowledge-card card-violet"><h3>GATT III.1 scope</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Internal taxes/charges.</li><li>Laws/regulations/requirements affecting internal sale, offering for sale, purchase, transportation, distribution or use.</li><li>Internal quantitative regulations.</li><li>Các biện pháp này should not protect domestic production.</li></ul></article><article class="knowledge-card card-amber"><h3>Legal bases in bài học</h3><div class="pill-row mt-3"><span class="pill law-pill">GATT III</span><span class="pill law-pill">TRIPS III</span><span class="pill law-pill">GATS — conflicting bài học references</span></div><p class="mt-3"><button class="conflict-btn" data-conflict="c01">⚠ Lưu ý</button></p></article></div>
+ <p class="mt-4 text-sm text-stone-600">Bài học covers both de jure/de facto and distinguishes domestic measures from border measures. Dominant objects: III.2 taxes/charges; III.4 laws/regulations/requirements; III.5 internal quantitative regulations.</p>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Article III.2</div><h3 class="section-title">First sentence vs second sentence — tuyệt đối không trộn test</h3>
+ <div class="grid-auto mt-4">
+ <article class="knowledge-card card-blue"><div class="pill mb-3">3 elements</div><h3>III.2 — First sentence</h3><ol class="mt-2 list-decimal pl-5 text-stone-700 space-y-2"><li>Internal tax or other internal charge.</li><li>Imported and domestic products are <strong>like products</strong>.</li><li>Imported products are taxed <strong>in excess</strong> of like domestic products.</li></ol></article>
+ <article class="knowledge-card card-violet"><div class="pill mb-3">4 elements</div><h3>III.2 — Second sentence</h3><ol class="mt-2 list-decimal pl-5 text-stone-700 space-y-2"><li>Internal tax/charge.</li><li>Competition between taxed product and a <strong>directly competitive/substitutable</strong> product.</li><li>Products are <strong>not similarly taxed</strong>.</li><li>Tax is applied <strong>to afford protection</strong> to domestic production.</li></ol></article>
+ </div>
+ <p class="mt-4 text-sm text-stone-600">Indonesia–Autos được bài học dùng cho origin-based tax distinction; lesson cũng nhấn mạnh de jure/de facto và direct/indirect application.</p>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>Like products</h3><p class="mt-2 text-sm">Case-by-case. Criteria: physical characteristics/qualities; end use; consumer habits/tastes; tariff classification. Các tiêu chí có thể được thu hẹp, mở rộng, bổ sung hoặc lược bớt tùy vụ việc.</p></article><article class="knowledge-card"><h3>Directly competitive / substitutable</h3><p class="mt-2 text-sm">Được slide trình bày rộng hơn first-sentence like products; focus vào competition/substitutability.</p><p class="mt-2 text-sm"><strong>3 factors highlighted:</strong> competition; dissimilar taxation; taxation affords protection.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Decision tree</div><h3 class="section-title">Bạn đang ở nhánh NT nào?</h3>
+ <div class="branch-grid mt-4"><button class="branch-btn active" data-branch-group="nt" data-branch-output="nt-out" data-content="Internal tax / charge → Article III.2. Sau đó tách first sentence (3 elements) hoặc second sentence (4 elements)."><strong>Internal tax / charge</strong><p class="text-sm mt-1">→ III.2</p></button><button class="branch-btn" data-branch-group="nt" data-branch-output="nt-out" data-content="Internal law / regulation / requirement affecting sale, offering for sale, purchase, transportation, distribution or use → Article III.4 test: covered measure → like products → no-less-favourable treatment."><strong>Internal regulation</strong><p class="text-sm mt-1">→ III.4</p></button><button class="branch-btn" data-branch-group="nt" data-branch-output="nt-out" data-content="Services: NT applies only in sectors where a member undertook commitments; schedule limits/conditions define scope. ⚠ Lưu ý: số điều GATS có nhiều cách ghi; khi làm bài, hãy ưu tiên tài liệu môn học đang sử dụng."><strong>Services</strong><p class="text-sm mt-1">→ commitments/schedule + conflict</p></button><button class="branch-btn" data-branch-group="nt" data-branch-output="nt-out" data-content="IP: TRIPS III.1 — nationals of other members receive treatment no less favourable than own nationals concerning IP protection. Slide asks “What is protection?” without defining it."><strong>IP</strong><p class="text-sm mt-1">→ TRIPS III.1</p></button></div><div id="nt-out" class="branch-output">Internal tax / charge → Article III.2. Sau đó tách first sentence (3 elements) hoặc second sentence (4 elements).</div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Drag to order</div><h3 class="section-title">Sắp xếp đúng từng test — mobile có nút ↑ ↓</h3><p class="section-lead">Ba list độc lập. Validation chỉ chấm thứ tự được minh họa trong bài; không chấm bất kỳ article-number conflict nào.</p>
+ <div class="grid-auto mt-4">
+ <div class="knowledge-card"><h3>III.2 First sentence</h3><div class="sortable-list mt-3" data-sortable="nt-first" data-correct="tax,like,excess"><div class="sort-item" draggable="true" data-key="like"><span class="sort-handle">↕</span><span>Imported/domestic products are like</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div><div class="sort-item" draggable="true" data-key="excess"><span class="sort-handle">↕</span><span>Imported products taxed in excess</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div><div class="sort-item" draggable="true" data-key="tax"><span class="sort-handle">↕</span><span>Internal tax / other internal charge</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div></div><div class="action-row"><button class="action-primary" data-sort-check="nt-first">Kiểm tra</button><button class="action-secondary" data-sort-reset="nt-first">Làm lại</button></div><div class="feedback" data-sort-feedback="nt-first"></div></div>
+ <div class="knowledge-card"><h3>III.2 Second sentence</h3><div class="sortable-list mt-3" data-sortable="nt-second" data-correct="tax,competitive,notsimilar,protect"><div class="sort-item" draggable="true" data-key="protect"><span class="sort-handle">↕</span><span>Applied to afford protection</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div><div class="sort-item" draggable="true" data-key="competitive"><span class="sort-handle">↕</span><span>Directly competitive/substitutable relationship</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div><div class="sort-item" draggable="true" data-key="tax"><span class="sort-handle">↕</span><span>Internal tax / charge</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div><div class="sort-item" draggable="true" data-key="notsimilar"><span class="sort-handle">↕</span><span>Products are not similarly taxed</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div></div><div class="action-row"><button class="action-primary" data-sort-check="nt-second">Kiểm tra</button><button class="action-secondary" data-sort-reset="nt-second">Làm lại</button></div><div class="feedback" data-sort-feedback="nt-second"></div></div>
+ <div class="knowledge-card"><h3>Article III.4</h3><div class="sortable-list mt-3" data-sortable="nt-four" data-correct="measure,like,nlf"><div class="sort-item" draggable="true" data-key="nlf"><span class="sort-handle">↕</span><span>No-less-favourable treatment</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div><div class="sort-item" draggable="true" data-key="measure"><span class="sort-handle">↕</span><span>Covered law/regulation/requirement affecting listed internal activities</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div><div class="sort-item" draggable="true" data-key="like"><span class="sort-handle">↕</span><span>Imported/domestic products are like</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div></div><div class="action-row"><button class="action-primary" data-sort-check="nt-four">Kiểm tra</button><button class="action-secondary" data-sort-reset="nt-four">Làm lại</button></div><div class="feedback" data-sort-feedback="nt-four"></div></div>
+ </div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Trade effects & protective application</div><h3 class="section-title">Đừng tự thêm yêu cầu “phải chứng minh trade volume”</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-emerald"><h3>Trade effects</h3><p class="mt-2 text-stone-700">Article III không concern với trade volumes; complainant không cần prove một particular trade effect. Fair competition được nhấn mạnh.</p></article><article class="knowledge-card card-blue"><h3>“In excess”</h3><p class="mt-2 text-stone-700">Any amount considered excess; không cần proof of trade effect.</p></article><article class="knowledge-card card-violet"><h3>“Not similarly taxed”</h3><p class="mt-2 text-stone-700">Bài học nhắc <em>de minimis</em> và domestic-industry protection.</p></article><article class="knowledge-card card-amber"><h3>“To afford protection”</h3><p class="mt-2 text-stone-700">Assess theo <strong>structure · content · form of application · actual implementation</strong>.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Exact tax data</div><h3 class="section-title">Japan / Korea tax data explorer</h3><p class="section-lead">Chọn sản phẩm để xem mức thuế tương ứng.</p>
+ <div class="toggle-bar"><button class="toggle-btn active" data-toggle-group="taxdata" data-target="japan-tax">Japan Alcohol Tax</button><button class="toggle-btn" data-toggle-group="taxdata" data-target="korea-tax">Korea Education Tax</button></div>
+ <div id="japan-tax" class="toggle-panel">
+ <div class="mb-3"><label class="text-sm font-bold" for="japan-product">Chọn product</label><select id="japan-product" class="match-select mt-1 max-w-md"><option value="shochuA">Shochu A</option><option value="shochuB">Shochu B</option><option value="whisky">Whisky</option><option value="spirits">Spirits</option><option value="liqueurs">Liqueurs</option></select></div><div id="japan-tax-output" class="scroll-table"></div>
+ </div>
+ <div id="korea-tax" class="toggle-panel hidden-panel"><div class="scroll-table"><table class="data-table compact"><thead><tr><th>Product</th><th>As % Liquor Tax</th></tr></thead><tbody><tr><td>Diluted soju</td><td>10</td></tr><tr><td>Distilled soju</td><td>10</td></tr><tr><td>Whisky</td><td>30</td></tr><tr><td>Brandy</td><td>30</td></tr><tr><td>General distilled liquors</td><td>30</td></tr><tr><td>General distilled liquors containing whisky or brandy</td><td>30</td></tr><tr><td>Liqueurs</td><td>10</td></tr><tr><td>Other liquors — more than 25% alcohol</td><td>30</td></tr><tr><td>Other liquors — less than 25% alcohol</td><td>10</td></tr><tr><td>Other liquors — containing whisky or brandy</td><td>30</td></tr></tbody></table></div><div class="knowledge-card mt-3"><h3>Korea/soju bài học narrative</h3><p class="mt-2 text-sm">Soju được mô tả là Korea’s most famous traditional alcoholic beverage và cheapest alcoholic beverage in Korea. European Communities complaint alleged tax preference for soju over certain imported Western-style alcoholic beverages.</p></div></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Article III.4</div><h3 class="section-title">Internal laws / regulations / requirements</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>3-element structure</h3><ol class="mt-2 list-decimal pl-5 text-stone-700 space-y-1"><li>Covered law/regulation/requirement affecting internal sale, offering for sale, purchase, transportation, distribution or use.</li><li>Imported and domestic products are like.</li><li>No-less-favourable treatment.</li></ol></article><article class="knowledge-card card-amber"><h3>“Affecting” is broad</h3><p class="mt-2 text-sm text-stone-700">Các ví dụ: cigarette tax stamps; used-tire disposal condition; VAT distributor rules; foreign-journal distribution channel; seal-skin ban.</p><div class="pill mt-3">Exact example: dispose of 10 used tires before importing 1 new tire</div></article><article class="knowledge-card card-violet"><h3>No-less-favourable</h3><p class="mt-2 text-sm text-stone-700">Concerns competitive conditions. Different treatment is not automatically a violation; actual and potential effects are relevant in course presentation.</p><p class="mt-3"><button class="conflict-btn" data-conflict="c04">⚠ Lưu ý</button></p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Services · IP · exceptions</div><h3 class="section-title">NT ngoài goods</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-violet"><h3>Services</h3><p class="mt-2 text-sm">NT applies only in sectors where a member has undertaken commitments; schedule limits/conditions matter; each member’s commitment defines scope.</p><p class="mt-3"><button class="conflict-btn" data-conflict="c01">⚠ Lưu ý</button></p></article><article class="knowledge-card card-amber"><h3>TRIPS III.1</h3><p class="mt-2 text-sm">Other members’ nationals receive treatment no less favourable than own nationals concerning IP protection. Slide asks “What is protection?” nhưng không định nghĩa.</p></article><article class="knowledge-card card-emerald"><h3>Exceptions listed</h3><p class="mt-2 text-sm"><strong>GATT:</strong> MFN-equivalent exemptions; government procurement III.8(a); subsidies for domestic manufacturers III.8(b); screenings III.10.</p><p class="mt-2 text-sm"><strong>GATS:</strong> service-tax obligation provision XIV(d); government procurement XIII.</p><p class="mt-2 text-sm"><strong>TRIPS:</strong> slide refers to Paris, Berne and Rome treaties.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Tự luyện</div><h3 class="section-title">Enterprise A / VAT — organizer, không auto-kết luận</h3>
+ <div class="source-practice"><p><strong>Facts:</strong> imported seasoning powder X = <strong>15%</strong> VAT after border taxes; domestic seasoning powder = <strong>17%</strong>; Vietnamese MSG Y tax incentive = <strong>0%</strong>. Enterprise A challenges the tax list.</p><div class="grid-auto mt-4"><div><strong>Measure?</strong><div class="blank-line"></div></div><div><strong>Compared products?</strong><div class="blank-line"></div></div><div><strong>Like vs directly competitive/substitutable?</strong><div class="blank-line"></div></div><div><strong>Tax comparison?</strong><div class="blank-line"></div></div><div><strong>Protective application?</strong><div class="blank-line"></div></div><div><strong>Provisional nội dung giới hạn conclusion?</strong><div class="blank-line"></div></div></div><div class="warning-box mt-3">Lecturer file không cung cấp final factual application/conclusion. Dùng III.2 first/second sentence frameworks, nhưng không biến organizer thành “official answer”.</div></div>
+ </section>
+
+ <section class="learn-section"><div class="section-kicker">Case map</div><h3 class="section-title">Vụ việc minh họa — điểm pháp lý cần nhớ</h3><details class="study-details mt-4"><summary>Mở case map Chương 3</summary><div class="detail-body"><div class="pill-row"><span class="pill case-pill">Japan–Alcoholic Beverages · likeness / NT alcohol tax</span><span class="pill case-pill">EC–Asbestos · case-by-case likeness / III.4 product scope reference</span><span class="pill case-pill">Philippines–Distilled Spirits · NT like-product reference</span><span class="pill case-pill">Korea–Alcoholic Beverages · DCS/tax; no particular trade-volume effect required</span><span class="pill case-pill">Canada–Periodicals · internal-tax reference</span><span class="pill case-pill">China–Auto Parts · internal-tax reference</span><span class="pill case-pill">Mexico–Taxes on Soft Drinks · tax/discrimination reference</span><span class="pill case-pill">US–Tax Treatment · “in excess” reference</span><span class="pill case-pill">Argentina–Textiles · “in excess” reference</span><span class="pill case-pill">Thailand–Cigarettes (Philippines) · III.4 reference</span><span class="pill case-pill">Canada–Wheat Exports and Grain Imports · III.4 reference</span><span class="pill case-pill">US–Section 337 · less-favourable treatment discussion</span><span class="pill case-pill">Korea–Various Measures on Beef · III.4 reference</span></div><p class="source-note">Ở phần này, chỉ cần ghi nhớ luận điểm pháp lý chính gắn với từng vụ việc.</p></div></details></section>
+
+ <section class="learn-section"><div class="section-kicker">Mindmap</div><h3 class="section-title">Bản đồ National Treatment</h3><div class="mindmap mt-4"><div class="mindmap-inner"><div class="mind-root">National Treatment</div><div class="mind-branches"><div class="mind-branch"><strong>Goods · tax</strong><ul><li>III.2 first sentence</li><li>III.2 second sentence</li></ul></div><div class="mind-branch"><strong>Goods · regulation</strong><ul><li>III.4</li><li>III.5 concept</li></ul></div><div class="mind-branch"><strong>Services</strong><ul><li>Commitment/schedule limits</li><li>⚠ Lưu ý on article number</li></ul></div><div class="mind-branch"><strong>IP</strong><ul><li>TRIPS III.1</li></ul></div><div class="mind-branch"><strong>Exceptions</strong><ul><li>Bài học-listed GATT/GATS/TRIPS items</li></ul></div></div></div></div></section>
+ <section class="learn-section"><div class="section-kicker">Flashcards</div><h3 class="section-title">Ôn nhanh Chương 3</h3><div class="flash-grid mt-4"><button class="flashcard"><span class="flip-inner"><span class="flip-front">III.2 first-sentence test?</span><span class="flip-back">Internal tax/charge → like products → imported taxed in excess.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">III.2 second-sentence test?</span><span class="flip-back">Tax/charge → DCS products → not similarly taxed → afford protection.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">4 likeness criteria in NT lesson?</span><span class="flip-back">Physical qualities · end use · consumer habits/tastes · tariff classification.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">III.4 structure?</span><span class="flip-back">Covered internal measure → like products → no-less-favourable treatment.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">Must particular trade-volume effect be proven?</span><span class="flip-back">Bài học says no; fair competition is emphasized.</span></span></button></div></section>
+ <section class="learn-section"><div class="section-kicker">Knowledge check</div><h3 class="section-title">Kiểm tra nhanh</h3><div class="grid-auto mt-4"><div class="quiz-card"><strong>Higher internal tax on imported vs like domestic products?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Article III.2 first sentence.</div></div><div class="quiz-card"><strong>Products compete/substitute and taxed differently, not necessarily narrow “like”?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Article III.2 second sentence.</div></div><div class="quiz-card"><strong>Internal distribution rule changes competitive conditions?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Article III.4.</div></div><div class="quiz-card"><strong>4 factors for “afford protection” assessment?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Structure · content · form of application · actual implementation.</div></div></div></section>
+ </section>
+
+ <!-- CHAPTER 4 -->
+ <section id="ch4" class="tab-content hidden animate-fade-in">
+ <header class="chapter-opening"><h2 class="chapter-title">Chương 4: Trade in Goods</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Hệ thống hóa GATT goods rules, tariff types/concessions, ba xác định khi áp thuế, HS & GRI, customs valuation, Rules of Origin và quantitative restrictions/import licensing bằng đúng dữ liệu và method scope của học liệu.</div></header>
+
+ <section class="learn-section">
+ <div class="section-kicker">GATT goods</div><h3 class="section-title">Nền tảng trade in goods</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>GATT 1994</h3><p class="mt-2 text-stone-700">Được trình bày là GATT 1947 as amended/supplemented, được affirmed trong WTO agreements và là fundamental foundation cho trade-in-goods agreements.</p></article><article class="knowledge-card card-emerald"><h3>Basic principles listed</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700"><li>Restrict trade barriers — bài học cites II, XI, XXVIII and XVIII bis.</li><li>Eliminate discrimination — Articles I and III.</li><li>Exemptions remain.</li></ul></article><article class="knowledge-card card-amber"><h3>Annex 1A grouping in this lesson</h3><p class="mt-2 text-sm">Specific goods agreements; non-tariff-barrier agreements written <strong>“SBS, TBT”</strong>; trade remedies — ADA, SG, SCM.</p><p class="mt-3"><button class="conflict-btn" data-conflict="c03">⚠ Lưu ý</button></p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Tariff barriers</div><h3 class="section-title">4 tariff types — ghép định nghĩa</h3><p class="section-lead">Tariffs/export-import duties được bài học mô tả là financial obligations levied on import/export goods. Objectives: protectionism; regulation of economic-development policy; state revenue, mainly developing countries.</p>
+ <div class="matching mt-4" data-matching="tariff-types">
+ <div class="match-row" data-answer="ad"><strong>Ad valorem</strong><select class="match-select"><option value="">Chọn định nghĩa…</option><option value="specific">Fixed amount per unit</option><option value="combined">Percentage + specific amount</option><option value="mixed">Choose one of two methods by stated condition</option><option value="ad">Percentage of value</option></select></div>
+ <div class="match-row" data-answer="specific"><strong>Specific</strong><select class="match-select"><option value="">Chọn định nghĩa…</option><option value="ad">Percentage of value</option><option value="specific">Fixed amount per unit</option><option value="combined">Percentage + specific amount</option><option value="mixed">Choose one of two methods by stated condition</option></select></div>
+ <div class="match-row" data-answer="combined"><strong>Combined</strong><select class="match-select"><option value="">Chọn định nghĩa…</option><option value="mixed">Choose one of two methods by stated condition</option><option value="combined">Percentage + specific amount</option><option value="ad">Percentage of value</option><option value="specific">Fixed amount per unit</option></select></div>
+ <div class="match-row" data-answer="mixed"><strong>Mixed</strong><select class="match-select"><option value="">Chọn định nghĩa…</option><option value="combined">Percentage + specific amount</option><option value="ad">Percentage of value</option><option value="mixed">Choose one of two methods by stated condition</option><option value="specific">Fixed amount per unit</option></select></div>
+ </div><div class="action-row"><button class="action-primary" data-match-check="tariff-types">Kiểm tra</button><button class="action-secondary" data-match-reset="tariff-types">Làm lại</button></div><div class="feedback" data-match-feedback="tariff-types"></div>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>Ad valorem Bài tập minh họa</h3><p class="mt-2">30% tariff on <strong>$1,000</strong> laptop goods.</p></article><article class="knowledge-card"><h3>Specific examples</h3><p class="mt-2"><strong>$100</strong> per imported laptop; <strong>$50</strong> per ton of rice.</p></article><article class="knowledge-card"><h3>Combined exercise</h3><p class="mt-2">Steel <strong>$1,000/ton</strong>; <strong>15%</strong> ad valorem + <strong>$20/ton</strong>; calculate tariff on <strong>5 tons</strong>.</p></article><article class="knowledge-card"><h3>Mixed example</h3><p class="mt-2">Mobile phone tariff <strong>10%</strong> ad valorem or <strong>$25/item</strong>, depending on which is higher.</p></article></div><div class="warning-box mt-3">Các câu hỏi tính toán chưa có đáp án mẫu; hãy tập trung vào yêu cầu và phương pháp.</div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Tariff reduction & concessions</div><h3 class="section-title">Schedules of Concessions và các điểm cần nhớ</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>Tariff reduction</h3><p class="mt-2 text-sm">GATT XVIII bis paragraph 1 được dùng cho substantial reduction of general tariff levels; reciprocal/mutually advantageous negotiations; special attention to high tariffs discouraging even minimum imports; regard to WTO objectives/varying needs.</p></article><article class="knowledge-card card-emerald"><h3>Developing / under-developed flexibility</h3><p class="mt-2 text-sm">Bài học connects GATT XVIII bis paragraph 3 to greater flexibility in tariff protection and tariff revenue; also references GATT XXXVI.8 / Enabling Clause.</p><div class="pill-row mt-3"><span class="pill">Zimbabwe · 9%</span><span class="pill">Cameroon · 0.1%</span></div></article><article class="knowledge-card card-violet"><h3>Binding</h3><p class="mt-2 text-sm">Tariff concessions bind through each member’s Schedule of Tariff Concessions; schedules are integral to GATT 1994 under bài học citation Article II.7. Article II.1 summary: no-less-favourable than schedule; no ordinary customs duties above scheduled levels.</p></article></div>
+ <div class="diagram mt-4"><div class="section-kicker">Schedule hierarchy</div><div class="grid-auto mt-3"><div class="knowledge-card"><h3>Part I — MFN Rates</h3><ul class="mt-2 list-disc pl-5 text-sm"><li>Section 1A Agricultural Products — Duties</li><li>Section 1B Agricultural Products — Tariff-Rate Quotas</li><li>Section 2 Other Products (Non-Agricultural)</li></ul></div><div class="knowledge-card"><h3>Part II</h3><p class="mt-2">Preferential Rates</p></div><div class="knowledge-card"><h3>Part III</h3><p class="mt-2">Non-Tariff Concessions</p></div><div class="knowledge-card"><h3>Part IV</h3><p class="mt-2">Agricultural Subsidies / subsidy-restriction commitments</p></div></div><p class="mt-3 text-sm text-stone-600"><strong>Typical Section 2 Part I information:</strong> classification code; product description; base/bound rate; implementation time; initial negotiating rights; other duties/expenses; distinct conditions.</p></div>
+ <div class="knowledge-card mt-4"><h3>Other tariff-concession principles in the bài học</h3><p class="mt-2 text-sm">Mutual concessions; developing-country flexibility under GATT XXXVI.8 / Enabling Clause; MFN immediate/unconditional treatment with economic-union and developing-country exceptions.</p></div>
+ <details class="study-details mt-4"><summary>Renegotiation / withdrawal / amendment routes listed</summary><div class="detail-body"><p><strong>Routes:</strong> periodic renegotiation; special negotiation; re-negotiation by developed countries (cách diễn đạt trong bài); withdrawal/waiver; new negotiating round.</p><p class="mt-2"><strong>Other circumstances:</strong> withdrawal of concessions; economic union; “terms of deliverance” under Article XIX (cách diễn đạt trong bài); payment difficulties; sanction implementation.</p></div></details>
+ <div class="knowledge-card mt-4"><div class="flex items-center gap-2 flex-wrap"><h3>“Swiss formula. Coefficient = 25” — bài học trend only</h3><span class="course-state">Phần này tập trung vào cách đọc xu hướng</span></div><div class="mt-4 space-y-2">
+ <div class="flex items-center gap-3"><span class="w-16 font-black">150%</span><div class="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-slate-400" style="width:100%"></div></div><span class="text-sm">Year 0 → ↓ → Year 6</span></div>
+ <div class="flex items-center gap-3"><span class="w-16 font-black">125%</span><div class="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-slate-400" style="width:83%"></div></div><span class="text-sm">Year 0 → ↓ → Year 6</span></div>
+ <div class="flex items-center gap-3"><span class="w-16 font-black">100%</span><div class="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-slate-400" style="width:67%"></div></div><span class="text-sm">Year 0 → ↓ → Year 6</span></div>
+ <div class="flex items-center gap-3"><span class="w-16 font-black">75%</span><div class="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-slate-400" style="width:50%"></div></div><span class="text-sm">Year 0 → ↓ → Year 6</span></div>
+ <div class="flex items-center gap-3"><span class="w-16 font-black">50%</span><div class="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-slate-400" style="width:33%"></div></div><span class="text-sm">Year 0 → ↓ → Year 6</span></div>
+ <div class="flex items-center gap-3"><span class="w-16 font-black">25%</span><div class="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-slate-400" style="width:17%"></div></div><span class="text-sm">Year 0 → ↓ → Year 6</span></div>
+ <div class="flex items-center gap-3"><span class="w-16 font-black">10%</span><div class="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-slate-400" style="width:7%"></div></div><span class="text-sm">Year 0 → ↓ → Year 6</span></div>
+ </div><p class="mt-3 text-sm text-stone-600">Học liệu chỉ cho coefficient 25, starting lines 150/125/100/75/50/25/10%, x-axis Year 0–6 và trend: tất cả giảm; starting tariff cao giảm mạnh hơn và converge về mức thấp hơn. Độ dài thanh ở đây chỉ biểu diễn <em>starting line</em>, không phải intermediate Swiss-formula values.</p></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Tariff imposition</div><h3 class="section-title">3 determinations: classification · valuation · origin</h3>
+ <div class="flow-row mt-4"><div class="flow-node node-blue">1 · Tariff classification</div><div class="flow-arrow">→</div><div class="flow-node node-violet">2 · Customs valuation</div><div class="flow-arrow">→</div><div class="flow-node node-emerald">3 · Origin</div></div>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>HS system facts in bài học</h3><div class="pill-row mt-3"><span class="pill">Nearly 200 users/members</span><span class="pill">>98% world-traded goods</span><span class="pill">Updated every 6 years</span><span class="pill">Normally 8–10 characters</span><span class="pill">21 sections</span><span class="pill">99 chapters</span><span class="pill">98/99 theo dữ liệu của quốc gia</span></div><p class="mt-3 text-sm">No WTO-specific tariff-classification system; course points to International Convention on Harmonized Commodity Description and Coding System. HS is WCO-based standardized description/code supporting common goods descriptions and import/export permits.</p></article><article class="knowledge-card"><h3>HS structure</h3><p class="mt-2">Section → chapter → heading → subheading → regional/national layers.</p></article></div>
+
+ <div class="knowledge-card mt-4"><div class="flex items-center justify-between gap-3 flex-wrap"><div><div class="section-kicker">HS layer explorer</div><h3>Chỉ dùng hai code strings có trong bài học</h3></div><select id="hs-code-select" class="match-select max-w-sm"><option value="010420900010">01 | 04 | 20 | 90 | 00 | 10</option><option value="7606929900">76 | 06 | 92 | 99 | 00</option></select></div><div id="hs-code-display" class="mt-4"></div></div>
+
+ <div class="knowledge-card mt-4"><div class="section-kicker">Exact Bảng dữ liệu</div><h3>HS / rate examples</h3><div class="toggle-bar"><button class="toggle-btn active" data-toggle-group="hsdata" data-target="rice-rates">10063030 · Gạo nếp</button><button class="toggle-btn" data-toggle-group="hsdata" data-target="chicken-cut">EU–Chicken Cut</button></div>
+ <div id="rice-rates" class="toggle-panel"><div class="scroll-table"><table class="data-table compact"><thead><tr><th>Regime</th><th>Rate</th><th>Effective date</th><th>Bài học legal-basis reference shown</th></tr></thead><tbody><tr><td>Preferential import tariff</td><td>40%</td><td>01/01/2018</td><td>125/2017/NĐ-CP</td></tr><tr><td>ASEAN (ATIGA)</td><td>0%</td><td>01/01/2019</td><td>156/2017/NĐ-CP</td></tr><tr><td>ASEAN–China (ACFTA)</td><td>0%</td><td>01/01/2019</td><td>153/2017/NĐ-CP</td></tr><tr><td>ASEAN–Korea</td><td>0%</td><td>01/01/2019</td><td>157/2017/NĐ-CP</td></tr><tr><td>ASEAN–Japan (AJCEP)</td><td>13%</td><td>01/04/2018</td><td>160/2017/NĐ-CP</td></tr><tr><td>Vietnam–Japan (VJEPA)</td><td>15%</td><td>01/04/2018</td><td>155/2017/NĐ-CP</td></tr><tr><td>AANZFTA</td><td>0%</td><td>01/01/2019</td><td>158/2017/NĐ-CP</td></tr><tr><td>AIFTA</td><td>0%</td><td>01/01/2018</td><td>159/2017/NĐ-CP</td></tr><tr><td>Vietnam–Chile (VCFTA)</td><td>40%</td><td>01/01/2019</td><td>154/2017/NĐ-CP</td></tr></tbody></table></div><p class="source-note">Historical/trạng thái nội dung customs data; không phải live/current customs rate.</p></div>
+ <div id="chicken-cut" class="toggle-panel hidden-panel"><div class="grid-auto"><div class="knowledge-card"><h3>Case context in bài học</h3><p class="mt-2 text-sm">Year label: 2005 · Complainants: Brazil, Thailand · Respondent: EU · Product: salted boneless frozen chicken cut, 1–2%.</p></div><div class="knowledge-card"><h3>Classification/rate comparison</h3><p class="mt-2 text-sm"><strong>0210.90.20</strong> “Thịt các loại khác” → <strong>15.4% ad valorem</strong>.</p><p class="mt-2 text-sm"><strong>0207.41.10</strong> “Thịt gia cầm đông lạnh cắt nhỏ rút xương” → <strong>€102.4/100 kg</strong>.</p></div></div><div class="warning-box mt-3">Bài học không cung cấp separate full holding/case analysis.</div></div>
+ </div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">GRI</div><h3 class="section-title">General Rules for Interpretation — 6 rule entries trong lesson</h3>
+ <div class="branch-grid mt-4" id="gri-cards">
+ <button class="branch-btn active" data-branch-group="gri" data-branch-output="gri-out" data-content="Rule 2(a): heading reference includes incomplete/unfinished article if, as presented, it has essential character of complete/finished article. Example: car without steering wheel/pedals or presented disassembled remains in car heading as described."><strong>Rule 2(a)</strong><p class="text-sm mt-1">Incomplete / unfinished article</p></button>
+ <button class="branch-btn" data-branch-group="gri" data-branch-output="gri-out" data-content="Rule 3(a): where prima facie classifiable under multiple headings, most specific description preferred. Ví dụ: iron spoon → 8215 rather than 7323."><strong>Rule 3(a)</strong><p class="text-sm mt-1">Most specific description</p></button>
+ <button class="branch-btn" data-branch-group="gri" data-branch-output="gri-out" data-content="Rule 3(b): mixtures/composites/retail sets not resolved by 3(a) classify by material/component giving essential character. Examples: liquor-filled chocolates → 18.06; haircut kit → clipper gives essential character → 85.10."><strong>Rule 3(b)</strong><p class="text-sm mt-1">Essential character</p></button>
+ <button class="branch-btn" data-branch-group="gri" data-branch-output="gri-out" data-content="Rule 3(c): if 3(a)/(b) cannot resolve, choose heading last in numerical order among headings equally meriting consideration. Ví dụ: 50% leather / 50% fabric bag → 65.17; preserved exactly as written."><strong>Rule 3(c)</strong><p class="text-sm mt-1">Last numerical order</p></button>
+ <button class="branch-btn" data-branch-group="gri" data-branch-output="gri-out" data-content="Rule 4: classify under heading appropriate to goods to which they are most akin."><strong>Rule 4</strong><p class="text-sm mt-1">Most akin goods</p></button>
+ <button class="branch-btn" data-branch-group="gri" data-branch-output="gri-out" data-content="Rule 5: packing materials/containers presented with goods classify with goods if normally used for those goods. Tham chiếu: Annex 2 Circular 156/2011/TT-BTC."><strong>Rule 5</strong><p class="text-sm mt-1">Packing / containers</p></button>
+ </div><div id="gri-out" class="branch-output">Rule 2(a): heading reference includes incomplete/unfinished article if, as presented, it has essential character of complete/finished article. Example: car without steering wheel/pedals or presented disassembled remains in car heading as described.</div><p class="mt-3"><button class="conflict-btn" data-conflict="c06">⚠ Lưu ý</button></p>
+ <div class="scroll-table mt-4"><table class="data-table compact"><thead><tr><th>Bài học code</th><th>Description</th></tr></thead><tbody><tr><td>8509</td><td>Domestic electromechanical appliances</td></tr><tr><td>8509.10.00</td><td>Vacuum cleaners</td></tr><tr><td>8509.20.00</td><td>Floor polishers</td></tr><tr><td>8509.30.00</td><td>Kitchen waste disposers</td></tr><tr><td>8509.40.00</td><td>Food grinders/mixers; fruit/vegetable juice extractors</td></tr><tr><td>8509.80.00</td><td>Other appliances</td></tr><tr><td>8509.90</td><td>Parts</td></tr><tr><td>8509.90.10</td><td>Parts for 8509.10 / 8509.20</td></tr><tr><td>8509.90.20</td><td>Parts for 8509.30 / 8509.40 / 8509.80</td></tr><tr><td>8510</td><td>Shavers / hair clippers / hair-removing appliances</td></tr><tr><td>8510.10.00</td><td>Shavers</td></tr><tr><td>8510.20.00</td><td>Hair clippers</td></tr><tr><td>84.67</td><td>Hand tools as stated</td></tr></tbody></table></div>
+ <details class="study-details mt-4"><summary>Haircut kit — exact components used in Rule 3(b) example</summary><div class="detail-body"><div class="pill-row"><span class="pill">Clipper · 85.10</span><span class="pill">Comb · 96.15</span><span class="pill">Scissors · 82.13</span><span class="pill">Brush · 96.03</span><span class="pill">Towel · 63.02</span><span class="pill">Leather bag · 42.02</span></div><p class="mt-3">Kết quả: clipper gives essential character → <strong>85.10</strong>.</p></div></details>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Customs valuation</div><h3 class="section-title">Primary basis + 5-step fallback hierarchy</h3>
+ <div class="knowledge-card card-blue"><h3>Primary basis: transaction value</h3><p class="mt-2 text-stone-700">Price actually paid or payable for goods sold for export to importing country, read with Article 8 and usually evidenced by invoices/contracts/orders. Bài học says use actual value, not domestic-origin or arbitrary/fictitious values.</p><div class="pill-row mt-3"><span class="pill law-pill">GATT VII</span><span class="pill law-pill">Note Ad Article VII</span><span class="pill law-pill">Customs Valuation Agreement</span></div></div>
+ <div class="tree knowledge-card mt-4"><h3>If transaction value unavailable — preserve exact order</h3><details open><summary>1 · Transaction value of identical merchandise</summary><p class="detail-body">First fallback method.</p></details><details><summary>2 · Transaction value of similar merchandise</summary><p class="detail-body">Second fallback.</p></details><details><summary>3 · Deductive value</summary><p class="detail-body">Third fallback.</p></details><details><summary>4 · Computed value</summary><p class="detail-body">Fourth fallback.</p></details><details><summary>5 · Derivative method</summary><p class="detail-body">Fifth fallback exactly as bài học names it.</p></details></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Rules of Origin</div><h3 class="section-title">Origin: purposes, groups và substantial transformation</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>Purposes</h3><div class="pill-row mt-3"><span class="pill">Preferential-treatment eligibility</span><span class="pill">Trade measures/remedies</span><span class="pill">Statistics</span><span class="pill">Branding/labelling</span><span class="pill">Government procurement</span></div></article><article class="knowledge-card"><h3>Two groups</h3><div class="pill-row mt-3"><span class="pill law-pill">Preferential origin</span><span class="pill law-pill">Non-preferential origin</span></div></article></div>
+ <details class="study-details mt-4"><summary>Wholly obtained / produced examples</summary><div class="detail-body">Minerals; plants; animals/products; hunting/fishing; maritime fishing; factory-ship products; seabed resources with rights; scrap/waste; goods solely from listed wholly obtained products.</div></details>
+ <div class="branch-grid mt-4"><button class="branch-btn active" data-branch-group="roo" data-branch-output="roo-out" data-content="1 · Change of tariff classification. Sơ đồ also labels components HS 7009 China; HS 8306 India; HS 7320 Vietnam; final HS 8708 Germany."><strong>1 · Change classification</strong><p class="text-sm mt-1">Tariff-classification method</p></button><button class="branch-btn" data-branch-group="roo" data-branch-output="roo-out" data-content="2 · Specific manufacturing / processing operations. Quy trình: cotton → yarn → fabric → shirt."><strong>2 · Specific processing</strong><p class="text-sm mt-1">cotton → yarn → fabric → shirt</p></button><button class="branch-btn" data-branch-group="roo" data-branch-output="roo-out" data-content="3 · Value-added rule / threshold. A visual exists, but no exact threshold number is transcribed; no number is invented here."><strong>3 · Value-added</strong><p class="text-sm mt-1">Threshold concept only</p></button></div><div id="roo-out" class="branch-output">1 · Change of tariff classification. Sơ đồ also labels components HS 7009 China; HS 8306 India; HS 7320 Vietnam; final HS 8708 Germany.</div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Quantitative restrictions</div><h3 class="section-title">Tariff vs quantitative restriction</h3><p class="section-lead">Non-tariff barriers được bài học mô tả là border measures khác tariffs dùng để manage imported goods; việc thiết lập/áp dụng bị hạn chế và có thể phụ thuộc content/process requirements. QR analysis bao gồm de jure và de facto; actual nature/effect của measure vẫn quan trọng dù restriction không được viết trực tiếp.</p>
+ <div class="scroll-table mt-4"><table class="data-table"><thead><tr><th>Dimension</th><th>Tariff</th><th>Quantitative restriction</th></tr></thead><tbody><tr><td>Core form in bài học</td><td>Financial obligation levied on import/export goods.</td><td>Limit on quantity/value imported or exported.</td></tr><tr><td>Forms</td><td>Ad valorem; specific; combined; mixed.</td><td>Prohibition; quota; import permit; other measures.</td></tr><tr><td>Course provision</td><td>Tariff concessions / schedules under the tariff discussion.</td><td>GATT XI.1 bài học text prohibits non-charge restrictions such as quotas, licenses or other measures.</td></tr><tr><td>Examples</td><td>Percentage/fixed/per-unit examples above.</td><td>1,000 tons coal/year; $100,000,000 electric-import value/year.</td></tr></tbody></table></div><p class="source-note">Bảng so sánh tập trung vào các điểm chính đã nêu.</p>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>Quota</h3><p class="mt-2 text-sm">Permits import/export of a specified quantity in a specified period.</p></article><article class="knowledge-card card-violet"><h3>Tariff quota — exact example</h3><p class="mt-2 text-sm">First <strong>1,000 tons salt</strong> at <strong>15% ad valorem</strong>; afterward <strong>30%/ton</strong>.</p></article><article class="knowledge-card card-amber"><h3>Voluntary Export Restraint</h3><p class="mt-2 text-sm">Exporter “voluntarily” restricts exports at importing country’s requirement; Japan–Semiconductors referenced.</p></article></div>
+ <details class="study-details mt-4"><summary>Course examples / propositions under QR</summary><div class="detail-body"><ul class="list-disc pl-5 space-y-1"><li>Japan–Trade in Semi-Conductors — XI.1 applies to all non-tariff import/export restrictions; minimum export price / VER reference.</li><li>US–Shrimp — “inappropriate measure” example.</li><li>EEC–Minimum Import Prices — minimum import price.</li><li>India–Quantitative Restrictions — automatic import licences.</li><li>India–Auto Measures — trade-balance requirement.</li><li>Colombia–Ports of Entry — import-port restriction.</li><li>EEC–Oilseeds I — restriction can be inconsistent even without actual trade impact; issuance alone may be prohibited.</li></ul></div></details>
+ <details class="study-details"><summary>Exemptions / application principles / licensing</summary><div class="detail-body"><p><strong>Exemptions listed:</strong> XI.2(a) serious shortage of staple foods/products; XI.2(b) standards/classification/ranking/marketing application; XI.2(c) certain agricultural/fishery restrictions; external financial position/balance of payments with unresolved article reference <button class="conflict-btn" data-conflict="c07">⚠ Lưu ý</button>.</p><p class="mt-2"><strong>Application:</strong> non-discrimination XIII.1; distribution XIII.2–4 — absent restriction allocate to approximate trade shares; if no agreement, countries with significant interest get shares based on representative previous-period market share.</p><p class="mt-2"><strong>Custom fees/procedures:</strong> limited to sufficient expense coverage, not indirect protection; reduce number/simplify procedures. Article reference is unresolved in bài học <button class="conflict-btn" data-conflict="c08">⚠ Lưu ý</button>.</p><p class="mt-2"><strong>Import licensing:</strong> easy access/simplification/transparency; fairness/equality; automatic licensing; non-automatic licensing for quotas/tariff quotas, và không được tạo thêm hạn chế thương mại.</p></div></details>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Open Các câu hỏi tự luyện</div><h3 class="section-title">Các câu hỏi chưa có đáp án mẫu</h3>
+ <div class="grid-auto mt-4"><div class="source-practice"><strong>Developing-country concessions</strong><p class="mt-2 text-sm">Prompt: “Which reasons are for these concessions?”</p><p class="mt-2 text-sm text-stone-600">Available context: greater flexibility in tariff protection and tariff-revenue needs for developing/under-developed countries.</p></div><div class="source-practice"><strong>Are tariffs still a barrier to developing country?</strong><p class="mt-2 text-sm">Ví dụ Australian wooden furniture chưa có đáp án mẫu; hãy tự lập luận.</p></div><div class="source-practice"><strong>HS lookup recall</strong><p class="mt-2 text-sm">Prompt: “Which to remember when looking up for a product HS Code?”</p><p class="mt-2 text-sm text-stone-600">Vận dụng cấu trúc HS và các quy tắc GRI đã học.</p></div><div class="source-practice"><strong>QR vs Tariff</strong><p class="mt-2 text-sm">Hãy dùng bảng phía trên để tự so sánh; câu hỏi chưa có đáp án mẫu.</p></div></div>
+ </section>
+
+ <section class="learn-section"><div class="section-kicker">Mindmap</div><h3 class="section-title">Bản đồ Trade in Goods</h3><div class="mindmap mt-4"><div class="mindmap-inner"><div class="mind-root">Trade in Goods</div><div class="mind-branches"><div class="mind-branch"><strong>Tariff</strong><ul><li>Types</li><li>Concession/schedule</li><li>Classification</li><li>Valuation</li><li>Origin</li></ul></div><div class="mind-branch"><strong>Non-tariff</strong><ul><li>Quantitative restriction</li><li>Quota / tariff quota / VER</li><li>Import licensing</li></ul></div></div></div></div></section>
+ <section class="learn-section"><div class="section-kicker">Flashcards</div><h3 class="section-title">Ôn nhanh Chương 4</h3><div class="flash-grid mt-4"><button class="flashcard"><span class="flip-inner"><span class="flip-front">3 tariff-imposition determinations?</span><span class="flip-back">Classification · customs valuation · origin.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">Ad valorem?</span><span class="flip-back">Tariff calculated as a percentage of value.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">Primary customs-valuation basis?</span><span class="flip-back">Transaction value: price actually paid/payable for export to importing country, read with Article 8.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">2 ROO groups?</span><span class="flip-back">Preferential and non-preferential origin.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">3 substantial-transformation methods?</span><span class="flip-back">Change tariff classification · specific processing · value-added rule/threshold.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">Quantitative restriction limits what?</span><span class="flip-back">Quantity or value imported/exported; forms include prohibition, quota, import permit, other measures.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">GRI 3(b)?</span><span class="flip-back">Mixtures/composites/retail sets unresolved by 3(a): classify by component/material giving essential character.</span></span></button></div></section>
+ <section class="learn-section"><div class="section-kicker">Knowledge check</div><h3 class="section-title">Kiểm tra nhanh</h3><div class="grid-auto mt-4"><div class="quiz-card"><strong>Fixed amount per unit?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Specific tariff.</div></div><div class="quiz-card"><strong>Retail set; one component provides essential character?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">GRI 3(b).</div></div><div class="quiz-card"><strong>First fallback after transaction value unavailable?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Transaction value of identical merchandise.</div></div><div class="quiz-card"><strong>3 substantial-transformation methods?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Change classification · specific processing · value-added.</div></div><div class="quiz-card"><strong>Provision prohibiting non-charge restrictions such as quotas/licenses?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">GATT XI.1.</div></div></div></section>
+ </section>
+
+ <!-- CHAPTER 5 -->
+ <section id="ch5" class="tab-content hidden animate-fade-in">
+ <header class="chapter-opening"><h2 class="chapter-title">Chương 5: WTO Dispute Settlement Mechanism</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Nối nền tảng GATT với DSU/WTO, phân biệt ba complaint types, vai trò DSB–Panel–Appellate Body theo mô hình minh họa, và nhớ đúng 7 bước/timing của process cùng implementation, compensation và retaliation.</div></header>
+
+ <section class="learn-section">
+ <div class="section-kicker">GATT foundation</div><h3 class="section-title">Từ GATT XXII/XXIII đến WTO dispute settlement</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>Legal basis identified</h3><div class="pill-row mt-3"><span class="pill law-pill">DSU</span><span class="pill law-pill">GATT XXII</span><span class="pill law-pill">GATT XXIII</span></div><p class="mt-3 text-sm">GATT mechanism được course mô tả là foundation/spirit của WTO dispute settlement.</p></article><article class="knowledge-card card-amber"><h3>GATT 3-step structure</h3><ol class="mt-2 list-decimal pl-5 text-sm text-stone-700 space-y-1"><li>Consultation under GATT XXII — sympathetic consideration, adequate opportunity, seek satisfactory solution.</li><li>Working Party / Panel after failed consultations — ad hoc/case-by-case.</li><li>Adoption/implementation — recommendations bind in bài học description when approved; losing party may implement/withdraw/cancel measure; winning/damaged party may be permitted countermeasures.</li></ol></article><article class="knowledge-card card-violet"><h3>GATT XXIII nullification/impairment bases</h3><ol class="mt-2 list-[lower-alpha] pl-5 text-sm text-stone-700 space-y-1"><li>Failure to carry out obligations.</li><li>A measure whether or not conflicting with the agreement.</li><li>Any other situation.</li></ol></article></div>
+ <details class="study-details mt-4"><summary>Written representations → Contracting Parties route in bài học</summary><div class="detail-body">Complaining party may make written representations/proposals; if no satisfactory adjustment within a reasonable time, the matter may be referred to Contracting Parties for prompt investigation/recommendations and possible suspension authorization in serious circumstances.</div></details>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>GATT pros in bài học</h3><p class="mt-2 text-sm">Protect legitimate rights/interests; clarify rules.</p></article><article class="knowledge-card"><h3>GATT cons in bài học</h3><p class="mt-2 text-sm">Consensus operation; inconsistency; no specialized bodies with bài học’s trust/attention concern.</p></article><article class="knowledge-card"><h3>Panel history figure</h3><p class="mt-2 text-sm">Panel mechanism since <strong>1955</strong> in bài học.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">WTO aims & jurisdiction</div><h3 class="section-title">Security, predictability và phạm vi tranh chấp</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-emerald"><h3>Aims</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Security & predictability of multilateral trading system.</li><li>Proper balance of members’ rights/obligations.</li><li>Recourse to DSU/DSB authorization before suspension.</li><li>Affirm WTO law.</li><li>Clarify provisions without adding/diminishing rights/obligations.</li></ul></article><article class="knowledge-card card-blue"><h3>Objectives in course</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>Agreed/non-litigation solutions.</li><li>Consultation.</li><li>Quick settlement + time limits.</li><li>Reverse consensus.</li><li>Multilateralism; WTO-member exclusivity.</li><li>Third-party rights and amicus-curiae status noted.</li></ul></article><article class="knowledge-card card-violet"><h3>Jurisdiction</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>DSU I.1: disputes under consultation/dispute provisions of covered agreements.</li><li>Course scope: disputes “between the Members”.</li><li>Covered-agreement discussion: WTO establishment agreement; GATT 1994 + goods agreements; GATS; TRIPS; DSU.</li><li>Special/additional procedures prevail where they differ (DSU I.2).</li></ul></article></div>
+ <p class="mt-4 text-sm text-stone-600">Panel/Appellate Body reports được xem là nguồn diễn giải pháp lý quan trọng / “case law”. Respondent phải tham gia theo mô hình được trình bày; parties must be members and measure must fall under Article XXIII.1 basis.</p>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Complaint types</div><h3 class="section-title">Violation · non-violation · other situation — matching</h3>
+ <div class="matching mt-4" data-matching="complaints">
+ <div class="match-row" data-answer="violation"><strong>Violation complaint</strong><select class="match-select"><option value="">Chọn định nghĩa…</option><option value="other">Damage/impediment to agreement objective under “another situation”</option><option value="nonviolation">Benefit nullified/impaired by measure whether or not inconsistent</option><option value="violation">Infringement of covered-agreement obligation</option></select></div>
+ <div class="match-row" data-answer="nonviolation"><strong>Non-violation complaint</strong><select class="match-select"><option value="">Chọn định nghĩa…</option><option value="violation">Infringement of covered-agreement obligation</option><option value="nonviolation">Benefit nullified/impaired by measure whether or not inconsistent</option><option value="other">Damage/impediment to agreement objective under “another situation”</option></select></div>
+ <div class="match-row" data-answer="other"><strong>Other-situation complaint</strong><select class="match-select"><option value="">Chọn định nghĩa…</option><option value="nonviolation">Benefit nullified/impaired by measure whether or not inconsistent</option><option value="other">Complainant demonstrates damage or impediment to an agreement objective</option><option value="violation">Infringement of covered-agreement obligation</option></select></div>
+ </div><div class="action-row"><button class="action-primary" data-match-check="complaints">Kiểm tra</button><button class="action-secondary" data-match-reset="complaints">Làm lại</button></div><div class="feedback" data-match-feedback="complaints"></div>
+ <div class="knowledge-card mt-4"><h3>Case reference tied to “other situation”</h3><p class="mt-2 text-sm">Bài học uses <strong>EC–Banana III</strong>. Course says report adopted by consensus. Phần này tập trung vào luận điểm chính cần ghi nhớ.</p></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Institutions</div><h3 class="section-title">DSB · Panel · Appellate Body model — role matching</h3>
+ <div class="matching mt-4" data-matching="institutions">
+ <div class="match-row" data-answer="dsb"><strong>DSB</strong><select class="match-select"><option value="">Chọn role…</option><option value="panel">Ad hoc first-instance expert body; investigates/reports</option><option value="ab">Reviews legal issues/legal interpretation; may uphold/amend/reverse</option><option value="dsb">General Council acting in dispute-settlement capacity; establishes/adopts/supervises/authorizes</option></select></div>
+ <div class="match-row" data-answer="panel"><strong>Panel</strong><select class="match-select"><option value="">Chọn role…</option><option value="dsb">General Council acting in dispute-settlement capacity</option><option value="panel">Ad hoc first-instance expert body; investigates/reports</option><option value="ab">Reviews legal issues/legal interpretation; may uphold/amend/reverse</option></select></div>
+ <div class="match-row" data-answer="ab"><strong>Appellate Body model</strong><select class="match-select"><option value="">Chọn role…</option><option value="ab">Reviews legal issues/legal interpretation; may uphold/amend/reverse</option><option value="panel">Ad hoc first-instance expert body</option><option value="dsb">General Council acting in dispute-settlement capacity</option></select></div>
+ </div><div class="action-row"><button class="action-primary" data-match-check="institutions">Kiểm tra</button><button class="action-secondary" data-match-reset="institutions">Làm lại</button></div><div class="feedback" data-match-feedback="institutions"></div>
+ <div class="grid-auto mt-4"><article class="knowledge-card"><h3>DSB functions listed</h3><ul class="mt-2 list-disc pl-5 text-sm"><li>Receive consultation notifications.</li><li>Establish panels / decide panel members.</li><li>Adopt / be responsible for Panel & Appellate Body reports.</li><li>Supervise implementation.</li><li>Authorize suspension.</li><li>Use consensus / reverse consensus.</li></ul></article><article class="knowledge-card"><h3>Exact institution figures</h3><div class="pill-row mt-3"><span class="pill">Panel · 3–5 experts</span><span class="pill">AB model · 7 members</span><span class="pill">AB term · 4 years</span><span class="pill">Once renewable</span><span class="pill">3 hear each appeal</span></div><p class="mt-3 text-sm text-stone-600">Trong mô hình minh họa, báo cáo của Cơ quan Phúc thẩm được xem là cuối cùng.</p><p class="source-note">Số liệu mô hình minh họa; không phải thông tin cập nhật hiện hành.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Procedure</div><h3 class="section-title">WTO dispute-flow — 7 bước + voluntary ADR side route</h3><p class="section-lead">Consultation is mandatory. Good offices, conciliation and mediation are voluntary and available anytime at parties’ request.</p>
+ <div class="diagram mt-4"><div class="flow-row"><button class="flow-node node-blue dispute-node" data-flow-detail="1 · Consultations — 60 days. Consultation is mandatory.">1 · Consultations<br><span class="text-xs">60 days</span></button><div class="flow-arrow">→</div><button class="flow-node node-violet dispute-node" data-flow-detail="2 · DSB establishes panel.">2 · DSB establishes panel</button><div class="flow-arrow">→</div><button class="flow-node node-violet dispute-node" data-flow-detail="3 · Select panel members.">3 · Select panel members</button><div class="flow-arrow">→</div><button class="flow-node node-blue dispute-node" data-flow-detail="4 · Panel reviews file and adopts report — 6–9 months.">4 · Panel review/report<br><span class="text-xs">6–9 months</span></button><div class="flow-arrow">→</div><button class="flow-node node-amber dispute-node" data-flow-detail="5 · Report sent to parties / translated and sent to member countries.">5 · Send / translate report</button><div class="flow-arrow">→</div><button class="flow-node node-rose dispute-node" data-flow-detail="6 · Appellate Body review/adoption — 60–90 days in Mô hình minh họa.">6 · Appellate review<br><span class="text-xs">60–90 days</span></button><div class="flow-arrow">→</div><button class="flow-node node-emerald dispute-node" data-flow-detail="7 · DSB adopts Panel/Appellate Body report.">7 · DSB adoption</button></div><div id="dispute-flow-detail" class="branch-output mt-3">Bấm từng bước để xem bài học timing/detail.</div><div class="mt-4 p-3 rounded-xl border border-dashed border-violet-300 bg-violet-50"><strong>Parallel voluntary route:</strong> good offices · conciliation · mediation — available anytime at parties’ request.</div><p class="mt-3"><button class="conflict-btn" data-conflict="c02">⚠ Lưu ý</button></p></div>
+
+ <div class="knowledge-card mt-4"><h3>Implementation / arbitration / non-implementation</h3><div class="grid-auto mt-3"><div><strong>Implementation</strong><p class="text-sm mt-1">Should be immediate; otherwise within a reasonable period.</p></div><div><strong>Số liệu tham khảo</strong><p class="text-sm mt-1">DSB/agreement within <strong>45 days</strong> as stated; arbitrator decision within <strong>90 days</strong> as stated.</p></div><div><strong>Retaliation timing</strong><p class="text-sm mt-1">After failure to agree compensation after <strong>20 days</strong> following expiry of reasonable period.</p></div></div><p class="mt-3 text-sm">Trọng tài được dùng để xác định thời hạn thực hiện và mức trả đũa.</p></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Drag to order</div><h3 class="section-title">Sắp xếp 7 bước dispute timeline</h3>
+ <div class="sortable-list mt-4" data-sortable="dispute-order" data-correct="consult,establish,select,panel,send,appeal,adopt">
+ <div class="sort-item" draggable="true" data-key="panel"><span class="sort-handle">↕</span><span>Panel reviews file and adopts report — 6–9 months</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div>
+ <div class="sort-item" draggable="true" data-key="consult"><span class="sort-handle">↕</span><span>Consultations — 60 days</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div>
+ <div class="sort-item" draggable="true" data-key="appeal"><span class="sort-handle">↕</span><span>Appellate Body review/adoption — 60–90 days</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div>
+ <div class="sort-item" draggable="true" data-key="establish"><span class="sort-handle">↕</span><span>DSB establishes panel</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div>
+ <div class="sort-item" draggable="true" data-key="send"><span class="sort-handle">↕</span><span>Report sent to parties / translated and sent to member countries</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div>
+ <div class="sort-item" draggable="true" data-key="adopt"><span class="sort-handle">↕</span><span>DSB adopts Panel/AB report</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div>
+ <div class="sort-item" draggable="true" data-key="select"><span class="sort-handle">↕</span><span>Select panel members</span><span class="sort-actions"><button class="sort-move" data-dir="up">↑</button><button class="sort-move" data-dir="down">↓</button></span></div>
+ </div><div class="action-row"><button class="action-primary" data-sort-check="dispute-order">Kiểm tra</button><button class="action-secondary" data-sort-reset="dispute-order">Làm lại</button></div><div class="feedback" data-sort-feedback="dispute-order"></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Compensation & retaliation</div><h3 class="section-title">Temporary measures — không phải một thứ</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-emerald"><h3>Compensation</h3><p class="mt-2 text-stone-700">Temporary; after non-implementation it is voluntary/appropriate and may concern concessions/market access, dựa trên thiệt hại có thể dự đoán trong tương lai.</p></article><article class="knowledge-card card-rose"><h3>Retaliation</h3><p class="mt-2 text-stone-700">Follows failure to agree compensation after trong bài period; requires DSB authorization; unilateral retaliation is prohibited. Suspension/cross-retaliation may involve same or other sectors.</p></article></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">GATT vs WTO</div><h3 class="section-title">Comparison — chỉ dùng dimensions trong course</h3>
+ <div class="scroll-table mt-4"><table class="data-table"><thead><tr><th>Dimension</th><th>GATT mechanism in bài học</th><th>WTO mechanism in bài học</th></tr></thead><tbody><tr><td>Orientation</td><td>Reconciliation/reporting oriented.</td><td>Security/predictability; rule clarification; multilateral DSU framework.</td></tr><tr><td>Bodies</td><td>Working Party / ad hoc Panel; bài học notes lack of specialized bodies as a con.</td><td>DSB + Panel + Appellate Body model in course.</td></tr><tr><td>Decision operation</td><td>Consensus operation listed as a weakness.</td><td>Reverse/negative consensus highlighted.</td></tr><tr><td>Time</td><td>Bài học lists inconsistency and does not give equivalent detailed fixed flow here.</td><td>Strict deadlines / bài học timing in 7-step flow.</td></tr><tr><td>Implementation</td><td>Implement/withdraw/cancel measure; countermeasures may be permitted after approval.</td><td>Implementation supervised; compensation/authorized suspension routes described.</td></tr></tbody></table></div>
+ </section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Course ending</div><h3 class="section-title">Pros listed — “CONS?” remains unanswered</h3>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-emerald"><h3>Ưu điểm chính</h3><ul class="mt-2 list-disc pl-5 text-sm text-stone-700 space-y-1"><li>More cautious two-stage Panel/Appellate Body process.</li><li>Strict deadlines.</li><li>Automatic/reverse-consensus approval.</li><li>Final solution maintaining affected parties’ rights.</li><li>Priority to developing countries.</li></ul></article><article class="source-practice"><strong>CONS?</strong><p class="mt-2 text-sm text-stone-600">Câu hỏi về nhược điểm chưa có đáp án mẫu; hãy tự đánh giá dựa trên quy trình phía trên.</p><div class="blank-line"></div><div class="blank-line"></div></article></div>
+ <div class="source-practice mt-4"><strong>Arbitration Câu hỏi tự luyện</strong><p class="mt-2 text-sm">Câu hỏi yêu cầu phân tích thỏa thuận giải quyết tranh chấp bằng trọng tài trong khuôn khổ WTO. Hãy dựa vào phần thảo luận về trọng tài và quy trình phía trên để tự hoàn thiện câu trả lời.</p></div>
+ </section>
+
+ <section class="learn-section"><div class="section-kicker">Mindmap</div><h3 class="section-title">Bản đồ WTO dispute</h3><div class="mindmap mt-4"><div class="mindmap-inner"><div class="mind-root">WTO dispute</div><div class="mind-branches"><div class="mind-branch"><strong>Legal basis / GATT foundation</strong></div><div class="mind-branch"><strong>Aims + jurisdiction</strong></div><div class="mind-branch"><strong>Complaint types</strong></div><div class="mind-branch"><strong>Institutions</strong><ul><li>DSB</li><li>Panel</li><li>AB model</li></ul></div><div class="mind-branch"><strong>Procedure</strong><ul><li>Consultation → panel → appellate review → adoption → implementation</li><li>Parallel voluntary ADR</li></ul></div><div class="mind-branch"><strong>Non-implementation</strong><ul><li>Compensation</li><li>Retaliation</li></ul></div></div></div></div></section>
+ <section class="learn-section"><div class="section-kicker">Flashcards</div><h3 class="section-title">Ôn nhanh Chương 5</h3><div class="flash-grid mt-4"><button class="flashcard"><span class="flip-inner"><span class="flip-front">Main legal basis?</span><span class="flip-back">DSU + GATT XXII/XXIII.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">3 Article XXIII.1 bases?</span><span class="flip-back">Failure to carry out obligations · measure whether or not conflicting · another situation.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">DSB main functions?</span><span class="flip-back">Receive consultations · establish panels/decide members · adopt reports · supervise implementation · authorize suspension · consensus/reverse consensus.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">Panel composition in bài học?</span><span class="flip-back">Ad hoc first instance with 3–5 expert members not connected with disputing members.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">Appellate review scope in slide model?</span><span class="flip-back">Legal issues/legal interpretation; may uphold, amend or reverse.</span></span></button><button class="flashcard"><span class="flip-inner"><span class="flip-front">Compensation and retaliation characterized as?</span><span class="flip-back">Temporary measures.</span></span></button></div></section>
+ <section class="learn-section"><div class="section-kicker">Knowledge check</div><h3 class="section-title">Kiểm tra nhanh</h3><div class="grid-auto mt-4"><div class="quiz-card"><strong>Breach of obligation under covered agreement?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Violation complaint.</div></div><div class="quiz-card"><strong>Nullification/impairment by a measure not necessarily inconsistent?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Non-violation complaint.</div></div><div class="quiz-card"><strong>General Council acting in dispute-settlement capacity?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">DSB.</div></div><div class="quiz-card"><strong>Voluntary mechanisms available anytime?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">Good offices · conciliation · mediation.</div></div><div class="quiz-card"><strong>Can a member unilaterally retaliate under bài học?</strong><button class="answer-btn">Xem đáp án</button><div class="answer">No; DSB approval is required.</div></div></div></section>
+
+ <section class="learn-section">
+ <div class="section-kicker">Whole-course review</div><h3 class="section-title">Trung tâm ôn nhanh toàn môn</h3><p class="section-lead">Không tạo review tab riêng vì navigation bài học chỉ có 5 chapters; toolkit được đặt cuối theory flow để giữ nguyên shell.</p>
+ <div class="mindmap mt-4"><div class="mindmap-inner"><div class="mind-root">International Trade Law</div><div class="mind-branches"><div class="mind-branch"><strong>Principles</strong><ul><li>Market access</li><li>Non-discrimination → MFN / NT</li><li>Good governance</li></ul></div><div class="mind-branch"><strong>Trade in Goods</strong><ul><li>Tariff</li><li>HS</li><li>Valuation</li><li>Origin</li><li>Quantitative restrictions</li></ul></div><div class="mind-branch"><strong>WTO system</strong><ul><li>Structure</li><li>Agreements</li><li>Dispute settlement</li></ul></div><div class="mind-branch"><strong>Preferential / regional</strong><ul><li>RTA</li><li>PTA</li><li>Enabling Clause</li></ul></div></div></div></div>
+ <div class="scroll-table mt-4"><table class="data-table compact"><thead><tr><th>Comparison</th><th>What to contrast</th></tr></thead><tbody><tr><td>International Trade vs International Business</td><td>Subjects; relation type; stated business aim.</td></tr><tr><td>MFN vs NT</td><td>Trading-partner comparison vs imported/foreign-to-domestic structural comparison from course definitions.</td></tr><tr><td>MFN de jure vs de facto</td><td>Formal wording vs actual operation.</td></tr><tr><td>III.2 first vs second sentence</td><td>3 vs 4 elements; like vs directly competitive/substitutable; in excess vs not similarly taxed + protection.</td></tr><tr><td>Like vs directly competitive/substitutable</td><td>Likeness criteria vs broader competition/substitutability in NT lesson.</td></tr><tr><td>FTA vs customs union/common market</td><td>Internal elimination; external treatment differences as stated.</td></tr><tr><td>Tariff vs quantitative restriction</td><td>Financial obligation vs quantity/value restriction; forms and bài học provisions.</td></tr><tr><td>Preferential vs non-preferential origin</td><td>Two bài học ROO groups.</td></tr><tr><td>GATT vs WTO dispute settlement</td><td>Consensus; institutions; time limits; reverse consensus; implementation.</td></tr><tr><td>Violation vs non-violation vs other situation</td><td>Three complaint classifications.</td></tr><tr><td>Compensation vs retaliation</td><td>Both temporary; voluntary compensation vs authorized suspension/retaliation path.</td></tr></tbody></table></div>
+ <div class="grid-auto mt-4"><article class="knowledge-card card-blue"><h3>Legal-basis revision cards</h3><ul class="mt-2 text-sm space-y-1"><li><strong>MFN:</strong> GATT I · GATS II · TRIPS IV.</li><li><strong>NT:</strong> GATT III · GATS article =⚠ Lưu ý · TRIPS III.</li><li><strong>Market-access QR:</strong> GATT XI:1.</li><li><strong>Dispute settlement:</strong> DSU · GATT XXII/XXIII.</li><li><strong>RTAs:</strong> GATT XXIV · GATS V · Enabling Clause.</li><li><strong>Customs valuation:</strong> GATT VII · Note Ad VII · Customs Valuation Agreement.</li></ul></article><article class="knowledge-card card-violet"><h3>Rule / Test sheet</h3><ul class="mt-2 text-sm space-y-1"><li>MFN four-factor checklist.</li><li>NT III.2 first sentence.</li><li>NT III.2 second sentence.</li><li>NT III.4.</li><li>Tariff-imposition three determinations.</li><li>Customs-valuation fallback hierarchy.</li><li>ROO three methods.</li><li>QR recognition.</li><li>WTO dispute procedure.</li></ul></article><article class="knowledge-card card-rose"><h3>Confusion cards</h3><ul class="mt-2 text-sm space-y-1"><li>MFN ≠ NT; đừng collapse comparison direction.</li><li>Đừng merge III.2 first/second tests.</li><li>Like-product analysis is case-by-case in bài học.</li><li>III.4 internal regulation ≠ III.2 tax test.</li><li>Tariff quota ≠ quantitative restriction in presentation.</li><li>Panel ≠ Appellate Body roles.</li><li>Bài học article numbers/wording có thể conflict; xem badges thay vì tự sửa.</li></ul></article></div>
+ </section>
+ </section>
+ </main>
+
+ <footer class="border-t border-stone-200 bg-white py-8 mt-12"><div class="max-w-7xl mx-auto px-4 text-center"><img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 mx-auto mb-3 opacity-50 grayscale"><p class="text-sm text-stone-500 font-medium">© 2026 Edu Connect. Developed for Students.</p></div></footer>
+
+ <div id="conflict-modal" class="fixed inset-0 z-[120] hidden items-center justify-center p-4 modal-overlay" role="dialog" aria-modal="true" aria-labelledby="conflict-title">
+ <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-5"><div class="flex items-start justify-between gap-4"><div><div class="text-xs font-black tracking-widest uppercase text-rose-600">⚠ Lưu ý</div><h2 id="conflict-title" class="text-xl font-black text-slate-900 mt-1">Conflict</h2></div><button id="conflict-close" class="rounded-lg border border-slate-300 px-3 py-1.5 font-black" aria-label="Đóng">×</button></div><div id="conflict-body" class="mt-4 text-stone-700"></div></div>
+ </div>
+
+ <script>
+    // ===== BASE TAB-SCROLL BEHAVIOR FROM APPROVED SHELL =====
+    function eduScrollActiveChapterIntoView(tabId) {
+      const section = document.getElementById(tabId);
+      if (!section) return;
+      requestAnimationFrame(() => {
+        const sharedHeader = document.getElementById('edu-header');
+        const headerHeight = sharedHeader ? sharedHeader.getBoundingClientRect().height : 88;
+        const targetTop = section.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+      });
+    }
+    window.onEduTabChanged = function(tabId) { eduScrollActiveChapterIntoView(tabId); };
+
+    const conflictData = {
+      c01: {
+        title: 'GATS National Treatment — article number',
+        variants: [
+          'Article XVII GATS.',
+          'Article VI GATS.',
+          'NT wording labelled Article VI GATS.'
+        ],
+        note: '⚠ Một số tài liệu có thể ghi khác nhau về số điều. Khi làm bài, hãy ưu tiên tài liệu môn học đang sử dụng.'
+      },
+      c02: {
+        title: 'DSU consultation / panel article references',
+        variants: [
+          'Consultation = Article IV.',
+          'Consultation cites Article VI.2 DSU.',
+          'Panel Establishment = Article XX DSU; một cách ghi khác là Article VI DSU.'
+        ],
+        note: '⚠ Các cách dẫn điều khoản không thống nhất; hãy ưu tiên tài liệu môn học đang sử dụng.'
+      },
+      c03: {
+        title: '“SBS” vs “SPS”',
+        variants: [
+          'Một cách ghi là “SBS, TBT”.',
+          'Một cách ghi khác là “SPS Agreement” và “TBT Agreement”.'
+        ],
+        note: '⚠ Hãy ghi nhớ cả hai cách viết khi đối chiếu tài liệu môn học.'
+      },
+      c04: {
+        title: 'Article III.4 direction-of-treatment wording',
+        variants: [
+          'Imported products receive treatment no less favourable than like domestic products.',
+          'Một bullet tóm tắt ghi: “Domestic product under less favourable treatment.”'
+        ],
+        note: '⚠ Hai cách diễn đạt xuất hiện cạnh nhau; hãy ghi nhớ sự khác biệt.'
+      },
+      c05: {
+        title: 'TRIPS amendment body wording',
+        variants: ['“The General Assembly has already decided to amend the TRIPS.”'],
+        note: '⚠ Đây là cách diễn đạt trong bài; hãy đối chiếu tài liệu môn học khi làm bài.'
+      },
+      c06: {
+        title: 'GRI 3(c) bag heading',
+        variants: ['50% leather / 50% fabric bag → heading 65.17.'],
+        note: 'Dùng đúng dữ kiện và heading trong ví dụ này.'
+      },
+      c07: {
+        title: 'Balance-of-payments article reference',
+        variants: ['“Điều 7 GATT” được dẫn cho external financial position / balance of payments.'],
+        note: '⚠ Dẫn chiếu này cần được đối chiếu với tài liệu môn học đang sử dụng.'
+      },
+      c08: {
+        title: 'Custom fees / procedures article reference',
+        variants: ['“Article XIII GATT” được dẫn trong phần customs fee / procedure.'],
+        note: '⚠ Dẫn chiếu này cần được đối chiếu với tài liệu môn học đang sử dụng.'
+      }
+    };
+
+    const japanTaxData = {
+      shochuA: {
+        title: 'Shochu A — tax per 1 kilolitre',
+        rows: [
+          ['25–26 degrees', '¥155,700'],
+          ['26–30 degrees', '¥155,700 + ¥9,540 for each degree above 25'],
+          ['31 degrees and above', '¥203,400 + ¥26,230 for each degree above 30'],
+          ['21–25 degrees', '¥155,700 − ¥9,540 for each degree below 25 (fractions rounded up to 1 degree)'],
+          ['below 21 degrees', '¥108,000']
+        ]
+      },
+      shochuB: {
+        title: 'Shochu B',
+        rows: [
+          ['25–26 degrees', '¥102,100'],
+          ['26–31 degrees', '¥102,100 + ¥6,580 for each degree above 25'],
+          ['31 degrees and above', '¥135,000 + ¥14,910 for each degree above 30'],
+          ['21–25 degrees', '¥102,100 − ¥6,580 for each degree less than 25 (fractions rounded up to 1 degree)'],
+          ['below 21 degrees', '¥69,200']
+        ]
+      },
+      whisky: {
+        title: 'Whisky',
+        rows: [
+          ['40–41 degrees', '¥982,300'],
+          ['41 degrees and above', '¥982,300 + ¥24,560 for every degree above 40'],
+          ['38–40 degrees', '¥982,300 − ¥24,560 for each degree below 40 (fractions rounded up to 1 degree)'],
+          ['below 38 degrees', '¥908,620']
+        ]
+      },
+      spirits: {
+        title: 'Spirits — vodka, gin, rum, genever, brandy, cognac',
+        rows: [
+          ['below 38 degrees', '¥367,300'],
+          ['38 degrees and above', '¥367,300 + ¥9,930 for each degree above 37']
+        ]
+      },
+      liqueurs: {
+        title: 'Liqueurs',
+        rows: [
+          ['below 13 degrees', '¥98,600'],
+          ['13 degrees and above', '¥98,600 + ¥8,220 for each degree over 12']
+        ]
+      }
+    };
+
+    const hsExamples = {
+      '010420900010': {
+        segments: ['01','04','20','90','00','10'],
+        layers: [
+          ['Chapter', '01'],
+          ['Heading', '0104'],
+          ['Subheading', '010420'],
+          ['Regional / national layers', '90 · 00 · 10']
+        ]
+      },
+      '7606929900': {
+        segments: ['76','06','92','99','00'],
+        layers: [
+          ['Chapter', '76'],
+          ['Heading', '7606'],
+          ['Subheading', '760692'],
+          ['Regional / national layers', '99 · 00']
+        ]
+      }
+    };
+
+    function renderJapanTax(key) {
+      const out = document.getElementById('japan-tax-output');
+      const data = japanTaxData[key];
+      if (!out || !data) return;
+      const rows = data.rows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('');
+      out.innerHTML = `<table class="data-table compact"><thead><tr><th>${data.title}</th><th>Số liệu / quy tắc</th></tr></thead><tbody>${rows}</tbody></table>`;
+    }
+
+    function renderHsExample(key) {
+      const out = document.getElementById('hs-code-display');
+      const data = hsExamples[key];
+      if (!out || !data) return;
+      const segs = data.segments.map(s => `<span class="code-seg">${s}</span>`).join('');
+      const layers = data.layers.map((x,i) => `<button type="button" class="legend-card" data-layer-index="${i}"><strong>${x[0]}</strong><div class="mt-1 font-mono text-sm">${x[1]}</div></button>`).join('');
+      out.innerHTML = `<div class="layer-code">${segs}</div><div class="layer-legend">${layers}</div><p class="source-note">Các ví dụ đi từ chương → nhóm → phân nhóm → lớp khu vực/quốc gia. Chỉ các mã đã nêu được sử dụng.</p>`;
+      out.querySelectorAll('[data-layer-index]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          out.querySelectorAll('.legend-card').forEach(x => x.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+    }
+
+    function setupToggleGroups() {
+      document.querySelectorAll('[data-toggle-group]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const group = btn.dataset.toggleGroup;
+          const target = btn.dataset.target;
+          document.querySelectorAll(`[data-toggle-group="${group}"]`).forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const groupButtons = [...document.querySelectorAll(`[data-toggle-group="${group}"]`)];
+          groupButtons.forEach(b => {
+            const panel = document.getElementById(b.dataset.target);
+            if (panel) panel.classList.toggle('hidden-panel', b.dataset.target !== target);
+          });
+        });
+      });
+    }
+
+    function setupTimelines() {
+      document.querySelectorAll('.timeline-node').forEach(btn => {
+        btn.addEventListener('click', () => btn.classList.toggle('open'));
+      });
+    }
+
+    function setupStepViewers() {
+      document.querySelectorAll('[data-step-viewer]').forEach(viewer => {
+        viewer.querySelectorAll('.step-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            viewer.querySelectorAll('.step-btn').forEach(x => x.classList.remove('active'));
+            viewer.querySelectorAll('.step-panel').forEach(x => x.classList.remove('active'));
+            btn.classList.add('active');
+            const panel = document.getElementById(btn.dataset.step);
+            if (panel) panel.classList.add('active');
+          });
+        });
+      });
+    }
+
+    function setupBranches() {
+      document.querySelectorAll('[data-branch-group]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const group = btn.dataset.branchGroup;
+          document.querySelectorAll(`[data-branch-group="${group}"]`).forEach(x => x.classList.remove('active'));
+          btn.classList.add('active');
+          const out = document.getElementById(btn.dataset.branchOutput);
+          if (out) out.textContent = btn.dataset.content || '';
+        });
+      });
+    }
+
+    function setupFlashcards() {
+      document.querySelectorAll('.flashcard').forEach(card => {
+        card.addEventListener('click', () => card.classList.toggle('flipped'));
+      });
+    }
+
+    function setupAnswers() {
+      document.querySelectorAll('.answer-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const answer = btn.nextElementSibling;
+          if (!answer) return;
+          answer.classList.toggle('open');
+          btn.textContent = answer.classList.contains('open') ? 'Ẩn đáp án' : 'Xem đáp án';
+        });
+      });
+    }
+
+    function setupMatching() {
+      document.querySelectorAll('[data-match-check]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.matchCheck;
+          const box = document.querySelector(`[data-matching="${id}"]`);
+          const feedback = document.querySelector(`[data-match-feedback="${id}"]`);
+          if (!box) return;
+          let correct = 0;
+          const rows = [...box.querySelectorAll('.match-row')];
+          rows.forEach(row => {
+            const select = row.querySelector('select');
+            const ok = select && select.value === row.dataset.answer;
+            row.classList.toggle('correct', ok);
+            row.classList.toggle('wrong', !ok);
+            if (ok) correct += 1;
+          });
+          if (feedback) feedback.textContent = `${correct}/${rows.length} cặp đúng.`;
+        });
+      });
+      document.querySelectorAll('[data-match-reset]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.matchReset;
+          const box = document.querySelector(`[data-matching="${id}"]`);
+          const feedback = document.querySelector(`[data-match-feedback="${id}"]`);
+          if (!box) return;
+          box.querySelectorAll('.match-row').forEach(row => {
+            row.classList.remove('correct','wrong');
+            const select = row.querySelector('select');
+            if (select) select.value = '';
+          });
+          if (feedback) feedback.textContent = '';
+        });
+      });
+    }
+
+    function setupSortable() {
+      document.querySelectorAll('[data-sortable]').forEach(list => {
+        list.dataset.initialOrder = [...list.children].map(x => x.dataset.key).join(',');
+        let dragged = null;
+        list.querySelectorAll('.sort-item').forEach(item => {
+          item.addEventListener('dragstart', () => { dragged = item; item.classList.add('dragging'); });
+          item.addEventListener('dragend', () => { item.classList.remove('dragging'); dragged = null; });
+          item.addEventListener('dragover', e => {
+            e.preventDefault();
+            if (!dragged || dragged === item) return;
+            const rect = item.getBoundingClientRect();
+            const after = e.clientY > rect.top + rect.height / 2;
+            list.insertBefore(dragged, after ? item.nextSibling : item);
+          });
+        });
+        list.addEventListener('click', e => {
+          const btn = e.target.closest('.sort-move');
+          if (!btn) return;
+          const item = btn.closest('.sort-item');
+          if (!item) return;
+          if (btn.dataset.dir === 'up' && item.previousElementSibling) list.insertBefore(item, item.previousElementSibling);
+          if (btn.dataset.dir === 'down' && item.nextElementSibling) list.insertBefore(item.nextElementSibling, item);
+        });
+      });
+
+      document.querySelectorAll('[data-sort-check]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.sortCheck;
+          const list = document.querySelector(`[data-sortable="${id}"]`);
+          const feedback = document.querySelector(`[data-sort-feedback="${id}"]`);
+          if (!list) return;
+          const correct = (list.dataset.correct || '').split(',');
+          const items = [...list.querySelectorAll('.sort-item')];
+          let count = 0;
+          items.forEach((item, i) => {
+            const ok = item.dataset.key === correct[i];
+            item.classList.toggle('sort-correct', ok);
+            item.classList.toggle('sort-wrong', !ok);
+            if (ok) count++;
+          });
+          if (feedback) feedback.textContent = count === items.length ? `Đúng ${count}/${items.length} — thứ tự khớp nguồn.` : `${count}/${items.length} vị trí đúng.`;
+        });
+      });
+
+      document.querySelectorAll('[data-sort-reset]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.sortReset;
+          const list = document.querySelector(`[data-sortable="${id}"]`);
+          const feedback = document.querySelector(`[data-sort-feedback="${id}"]`);
+          if (!list) return;
+          const order = (list.dataset.initialOrder || '').split(',');
+          const byKey = {};
+          [...list.querySelectorAll('.sort-item')].forEach(item => { byKey[item.dataset.key] = item; item.classList.remove('sort-correct','sort-wrong'); });
+          order.forEach(key => { if (byKey[key]) list.appendChild(byKey[key]); });
+          if (feedback) feedback.textContent = '';
+        });
+      });
+    }
+
+    function setupConflictModal() {
+      const modal = document.getElementById('conflict-modal');
+      const title = document.getElementById('conflict-title');
+      const body = document.getElementById('conflict-body');
+      const close = document.getElementById('conflict-close');
+      if (!modal || !title || !body || !close) return;
+      function hide() { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+      function show(key) {
+        const data = conflictData[key];
+        if (!data) return;
+        title.textContent = data.title;
+        body.innerHTML = `<div class="space-y-2">${data.variants.map(v => `<div class="p-3 rounded-lg bg-rose-50 border border-rose-100">${v}</div>`).join('')}</div><div class="warning-box mt-4">${data.note}</div>`;
+        modal.classList.remove('hidden'); modal.classList.add('flex');
+      }
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('[data-conflict]');
+        if (btn) show(btn.dataset.conflict);
+      });
+      close.addEventListener('click', hide);
+      modal.addEventListener('click', e => { if (e.target === modal) hide(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+    }
+
+    function setupDisputeFlow() {
+      const out = document.getElementById('dispute-flow-detail');
+      document.querySelectorAll('.dispute-node').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.dispute-node').forEach(x => x.classList.remove('ring-2','ring-offset-2','ring-teal-500'));
+          btn.classList.add('ring-2','ring-offset-2','ring-teal-500');
+          if (out) out.textContent = btn.dataset.flowDetail || '';
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupToggleGroups();
+      setupTimelines();
+      setupStepViewers();
+      setupBranches();
+      setupFlashcards();
+      setupAnswers();
+      setupMatching();
+      setupSortable();
+      setupConflictModal();
+      setupDisputeFlow();
+
+      const japanSelect = document.getElementById('japan-product');
+      if (japanSelect) {
+        renderJapanTax(japanSelect.value);
+        japanSelect.addEventListener('change', () => renderJapanTax(japanSelect.value));
+      }
+
+      const hsSelect = document.getElementById('hs-code-select');
+      if (hsSelect) {
+        renderHsExample(hsSelect.value);
+        hsSelect.addEventListener('change', () => renderHsExample(hsSelect.value));
+      }
+    });
+  </script>
+</body>
+</html>

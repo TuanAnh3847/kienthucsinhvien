@@ -3,7 +3,11 @@ const path = require('node:path');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
-const files = fs.readdirSync(root).filter(f => f.endsWith('.html'));
+const hosting = JSON.parse(fs.readFileSync(path.join(root, 'firebase.json'), 'utf8')).hosting;
+const rewrites = hosting.rewrites || [];
+const rewriteSources = new Set(rewrites.map(rule => rule.source));
+const publicRouteByFile = new Map(rewrites.map(rule => [rule.destination.replace(/^\//, ''), rule.source]));
+const files = fs.readdirSync(root).filter(f => f.endsWith('.html') && (!process.env.AUDIT_FILTER || f.includes(process.env.AUDIT_FILTER)));
 const report = [];
 (async () => {
   const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 'msedge', headless: true });
@@ -17,7 +21,8 @@ const report = [];
     for (const [i, m] of [...source.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)].entries()) {
       try { new vm.Script(m[1], { filename: file + ':' + i }); } catch (e) { errors.push(e.message); }
     }
-    await page.goto('http://127.0.0.1:4173/' + (file === 'index.html' ? '' : file.replace('.html', '')), { waitUntil: 'load' });
+    const publicRoute = publicRouteByFile.get(file) || (file === 'index.html' ? '/' : '/' + file.replace('.html', ''));
+    await page.goto('http://127.0.0.1:4173' + publicRoute, { waitUntil: 'load' });
     if (file === 'admin.html') {
       await page.waitForURL(/\/(?:index(?:\.html)?)?$/);
       await page.waitForFunction(() => typeof loginGoogleReal === 'function');
@@ -37,7 +42,9 @@ const report = [];
     });
     const brokenLinks = structure.links.filter(h => {
       if (!h || /^(#|mailto:|tel:|https?:|javascript:)/.test(h)) return false;
-      const p = h.split(/[?#]/)[0].replace(/^\//,'') || 'index.html';
+      const pathname = h.split(/[?#]/)[0];
+      if (rewriteSources.has(pathname.startsWith('/') ? pathname : '/' + pathname)) return false;
+      const p = pathname.replace(/^\//,'') || 'index.html';
       return !fs.existsSync(path.join(root, p)) && !fs.existsSync(path.join(root, p + '.html'));
     });
     const widths = [];
@@ -52,7 +59,8 @@ const report = [];
         states.push(await page.evaluate(() => {
           const visible = el => !!el && el.getBoundingClientRect().width > 0 && el.getBoundingClientRect().height > 0;
           const overflow = [...document.querySelectorAll('body *')].filter(el => { const r=el.getBoundingClientRect(); return visible(el) && r.right > innerWidth+2 && !el.closest('.overflow-x-auto, .scroll-table'); }).slice(0,8).map(el => el.tagName + '#' + el.id + '.' + String(el.className).slice(0,80));
-          return { chapter: document.getElementById('mobile-nav')?.value, scrollWidth:document.documentElement.scrollWidth, desktopNav:visible(document.getElementById('nav-menu')), mobileNav:visible(document.getElementById('mobile-nav')), overflow };
+          const wideScroll = [...document.querySelectorAll('body *')].filter(el => visible(el) && el.scrollWidth > el.clientWidth + 2).slice(0,8).map(el => ({el:el.tagName + '#' + el.id + '.' + String(el.className).slice(0,60), clientWidth:el.clientWidth, scrollWidth:el.scrollWidth, overflowX:getComputedStyle(el).overflowX}));
+          return { chapter: document.getElementById('mobile-nav')?.value, scrollWidth:document.documentElement.scrollWidth, desktopNav:visible(document.getElementById('nav-menu')), mobileNav:visible(document.getElementById('mobile-nav')), overflow, wideScroll };
         }));
       }
       widths.push({width, states});

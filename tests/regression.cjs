@@ -5,15 +5,33 @@ const { chromium } = require('playwright');
 const fixture = fs.readFileSync(path.join(__dirname, 'firebase-fixture.js'), 'utf8');
 const root = path.resolve(__dirname, '..');
 const subjects = [
-    'KinhTeQuocTe.html',
-    'NguyenLyKeToan.html',
-    'QuanTriHoc.html',
-    'NhapMonLuatHoc.html',
-    'TaiChinhCaNhan.html',
+    'KE_TOAN_TAI_CHINH.html',
+    'KINH_TE_QUOC_TE.html',
     'KinhTeChinhTriMacLeNin.html',
-    'LuatThuongMaiQT.html',
-    'VHDDTKD.html'
+    'LUAT_THUONG_MAI_QUOC_TE.html',
+    'NGUYEN_LY_KE_TOAN.html',
+    'NGUYEN_LY_THI_TRUONG_TAI_CHINH.html',
+    'NhapMonLuatHoc.html',
+    'PHAT_TRIEN_BEN_VUNG.html',
+    'SANG_TAO_KHOI_NGHIEP.html',
+    'TAI_CHINH_CA_NHAN.html',
+    'TAM_LY_UNG_DUNG.html',
+    'VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html'
 ];
+const theoryRoutes = {
+    'KE_TOAN_TAI_CHINH.html':'KTTC',
+    'KINH_TE_QUOC_TE.html':'KTQT',
+    'KinhTeChinhTriMacLeNin.html':'KTCTMLN',
+    'LUAT_THUONG_MAI_QUOC_TE.html':'LTMQT',
+    'NGUYEN_LY_KE_TOAN.html':'NLKT',
+    'NGUYEN_LY_THI_TRUONG_TAI_CHINH.html':'NLTTTC',
+    'NhapMonLuatHoc.html':'NMLH',
+    'PHAT_TRIEN_BEN_VUNG.html':'PTBV',
+    'SANG_TAO_KHOI_NGHIEP.html':'STKN',
+    'TAI_CHINH_CA_NHAN.html':'TCCN',
+    'TAM_LY_UNG_DUNG.html':'TLUD',
+    'VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html':'VHDDTKD'
+};
 const user = {uid:'test-user', email:'student@example.test', displayName:'Sinh viên có họ và tên rất dài để kiểm tra bố cục giao diện',photoURL:null};
 const results = [];
 let browser;
@@ -42,17 +60,18 @@ async function checkLayout(page, label) { const value = await layout(page); asse
 (async () => {
     for (const file of subjects) {
         const source = fs.readFileSync(path.join(root, file), 'utf8');
-        assert(source.includes('window.EDU_PAGE_CONFIG = {'), file + ' must define EDU_PAGE_CONFIG');
+        assert(/window\.EDU_PAGE_CONFIG\s*=\s*\{/.test(source), file + ' must define EDU_PAGE_CONFIG');
         assert(source.includes('<div id="edu-header"></div>'), file + ' must provide the shared header mount');
-        assert(source.includes('<script defer src="/edu-header.js"></script>'), file + ' must load edu-header.js');
+        assert(/<script\s+defer(?:="")?\s+src="\/edu-header\.js"><\/script>/.test(source), file + ' must load edu-header.js');
         assert(!source.includes('id="nav-menu"'), file + ' must not retain a static desktop nav');
         assert(!source.includes('id="mobile-nav"'), file + ' must not retain a static mobile nav');
         assert(!/function\s+(?:attemptSwitchTab|forceSwitchTab)\s*\(/.test(source), file + ' must not retain page-owned tab switching');
     }
     browser = await chromium.launch({channel:process.env.BROWSER_CHANNEL || 'msedge',headless:true});
     for (const file of subjects) await test(file + ': chapters, headers, tools and profile', async () => {
-        const page = await open(file, {user});
+        const page = await open(theoryRoutes[file], {user});
         try {
+            assert.equal(new URL(page.url()).pathname, '/' + theoryRoutes[file], file + ' short public route');
             const contract = await page.evaluate(() => ({
                 config: window.EDU_PAGE_CONFIG,
                 api: !!window.EduHeader,
@@ -96,7 +115,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
                 assert.equal(await page.locator('#mobile-nav').isVisible(),width<1280);
                 assert.equal(await page.locator('#nav-menu').isVisible(),width>=1280);
             }
-            if (file === 'KinhTeQuocTe.html') {
+            if (file === 'KINH_TE_QUOC_TE.html') {
                 const replay = await page.evaluate(async () => {
                     const target = document.getElementById('ch3');
                     window.EduHeader.switchTab('ch3', { scroll: false });
@@ -110,30 +129,30 @@ async function checkLayout(page, label) { const value = await layout(page); asse
                 });
                 assert(replay.classChanges >= 2,'repeated tab switch must remove and restore the animation class');
                 assert(replay.animated,'repeated tab switch must finish with animation enabled');
-                await page.evaluate(() => {
-                    window.__headerResizeCalls = { sd: 0, labor: 0, dual: 0 };
-                    for (const [key, chart] of [['sd', sdChart], ['labor', laborChart], ['dual', dualLaborChart]]) {
-                        const original = chart.resize.bind(chart);
-                        chart.resize = (...args) => { window.__headerResizeCalls[key] += 1; return original(...args); };
-                    }
-                    window.EduHeader.switchTab('ch5', { scroll: false });
-                    window.EduHeader.switchTab('ch3', { scroll: false });
-                });
-                const resizeCalls = await page.evaluate(()=>window.__headerResizeCalls);
-                assert(resizeCalls.sd >= 1,'tariff chart must resize after its chapter opens');
-                assert(resizeCalls.labor >= 1,'labor chart must resize after its chapter opens');
-                assert(resizeCalls.dual >= 1,'dual-labor chart must resize after its chapter opens');
+                await page.evaluate(() => window.EduHeader.switchTab('ch3', { scroll: false }));
+                assert(await page.locator('#importTariffSvg').isVisible(),'tariff replay visual must remain visible after tab switches');
+                assert(await page.locator('#importTariffSvg > *').count()>0,'tariff replay visual must retain rendered SVG content');
             }
             // Exercise each course's calculators with their existing default inputs.
             const calls = {
-                'KinhTeQuocTe.html':['calculateERP()','updateLaborChart()','updateDualLaborChart()'],
+                'KE_TOAN_TAI_CHINH.html':['calcNRV()','buildPL()','calcCashFlow()'],
+                'KINH_TE_QUOC_TE.html':['importTariffReplay()','quotaReplay()','subsidyReplay()'],
                 'KinhTeChinhTriMacLeNin.html':['KTCT.calcW()','KTCT.calcM()','KTCT.calcSurplus()'],
-                'NguyenLyKeToan.html':["addEqRow('a')",'solveAdvancedEquation()','calcPnL()','calcTAcc()','calcAcq()','calcDep()','calcZ()'],
-                'QuanTriHoc.html':['generateSWOTStrategies()','updateLeadershipStyle()'],
-                'TaiChinhCaNhan.html':['calculateRatios()','calculateFV()','calculateEqualPrincipal()'],
-                'LuatThuongMaiQT.html':['calculateTariff()']
+                'NGUYEN_LY_KE_TOAN.html':['renderCoa()','renderFormulaReview()','calcProductionCost()'],
+                'NGUYEN_LY_THI_TRUONG_TAI_CHINH.html':['calcExpectedReturn()','calcSimpleInterest()'],
+                'PHAT_TRIEN_BEN_VUNG.html':['openCourseMap()','closeCourseMap()'],
+                'TAI_CHINH_CA_NHAN.html':['calcBalanceSheet()','calcFV()','calcSolvency()'],
+                'VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html':[]
             }[file] || [];
             for(const call of calls) await page.evaluate(code=>window.eval(code),call);
+            if (file === 'VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html') {
+                await page.evaluate(() => window.EduHeader.switchTab('ch1', { scroll: false }));
+                await page.locator('[data-layer="tree"]').click();
+                assert(await page.locator('#layer-stage').isVisible());
+                await page.evaluate(() => window.EduHeader.switchTab('ch2', { scroll: false }));
+                await page.locator('#hof-high').click();
+                assert(await page.locator('#hofstede-output').isVisible());
+            }
             assert.deepEqual(page.errors,[]);
             assert.equal(await page.evaluate(()=>__firebaseTest.authListenerCount()),1,'shared auth only');
             await page.setViewportSize({width:375,height:812});
@@ -144,7 +163,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
         } finally { await page.close(); }
     });
     await test('Guest modal focus, short viewport, Escape and clean routes', async () => {
-        const page = await open('KinhTeQuocTe');
+        const page = await open('KTQT');
         try {
             await page.setViewportSize({width:375,height:420});
             assert(await page.locator('#welcome-modal').isVisible());
@@ -167,7 +186,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
         } finally { await page.close(); }
     });
     await test('Login deduplication, profile fallback, listener cleanup, keyboard logout', async () => {
-        const page = await open('KinhTeQuocTe');
+        const page = await open('KTQT');
         try {
             await page.evaluate(()=>Promise.all([loginGoogleReal(),loginGoogleReal()]));
             assert.equal(await page.evaluate(()=>__firebaseTest.popupCalls),1);
@@ -183,7 +202,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
         } finally { await page.close(); }
     });
     await test('Popup cancellation and logout failure remain usable', async () => {
-        const page = await open('KinhTeQuocTe',{popupError:'auth/popup-closed-by-user'});
+        const page = await open('KTQT',{popupError:'auth/popup-closed-by-user'});
         try {
             await page.locator('#welcome-modal button').first().click();
             await page.waitForTimeout(80);
@@ -199,7 +218,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
         } finally { await page.close(); }
     });
     await test('Idle initialization, expiry, activity, and stalled presence writes', async () => {
-        const page = await open('TaiChinhCaNhan',{user});
+        const page = await open('TCCN',{user});
         try {
             assert(Number(await page.evaluate(()=>localStorage.getItem('last_active_time')))>0);
             await page.evaluate(()=>{localStorage.setItem('last_active_time',Date.now()-25*3600000); __firebaseTest.options.signOutError=true;});
@@ -216,6 +235,8 @@ async function checkLayout(page, label) { const value = await layout(page); asse
     await test('Online configuration handles malformed data', async () => {
         const page = await open('index');
         try {
+            const theoryHrefs = await page.locator('a.course-card').evaluateAll(links => links.map(link => link.getAttribute('href')));
+            assert.deepEqual(theoryHrefs.sort(), Object.values(theoryRoutes).map(route => '/' + route).sort());
             for(const value of [{isAutoMode:false,min:'oops',max:null},{isAutoMode:false,min:100,max:2},{isAutoMode:false,min:0,max:0}]) {
                 await page.evaluate(v=>__firebaseTest.emit('settings/online_counter',v),value);
                 const count=Number(await page.locator('#online-count').innerText());
@@ -253,6 +274,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
     await test('Practice: finance quick quiz, exam, timer, mistakes, and restart', async () => {
         const page = await open('TCCN-LuyenDe');
         try {
+            assert.equal(await page.getByRole('link',{name:'Xem lý thuyết'}).getAttribute('href'),'/TCCN');
             await page.locator('#mobile-nav').selectOption('quick');
             await page.locator('[onclick="startQuick20()"]').click();
             assert.equal(await page.evaluate(()=>currentSession.questions.length),20);
@@ -281,31 +303,26 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             assert.deepEqual(page.errors,[]);
         } finally {await page.close();}
     });
-    await test('Calculators, chart updates, flashcards and SWOT respond to input', async () => {
+    await test('Current subject calculators and visual replays respond to input', async () => {
         const cases = [
-            ['KinhTeQuocTe','ch5','labor-slider','12','stat-wage','8'],
-            ['NguyenLyKeToan','ch3','t-ob-dr','125','t-cb-dr',null],
-            ['QuanTriHoc','ch6','slider-task','9','val-task','9'],
-            ['TaiChinhCaNhan','ch4','calc-assets','1000','ratio-output',null]
+            {file:'KTQT',values:{importT:'1.5'},output:'importTariffResult',invoke:'importTariffReplay()'},
+            {file:'KTTC',values:{nrvQty:'9000'},output:'nrvOut',invoke:'calcNRV()'},
+            {file:'NLKT',values:{'pc-open':'100','pc-incurred':'500','pc-close':'50','pc-units':'10'},output:'pc-result',invoke:'calcProductionCost()'},
+            {file:'NLTTTC',values:{'si-p':'100','si-i':'10','si-t':'3'},output:'si-result',invoke:'calcSimpleInterest()'},
+            {file:'TCCN',values:{'fv-pv':'100','fv-i':'10','fv-n':'3'},output:'fv-result',invoke:'calcFV()'}
         ];
-        for(const [file,chapter,input,value,output,expected] of cases) {
+        for(const {file,values,output,invoke} of cases) {
             const page=await open(file,{user});
             try {
-                const id=await page.locator('#'+input).evaluate(e=>e.closest('.tab-content').id);
+                const firstInput=Object.keys(values)[0];
+                const id=await page.locator('#'+firstInput).evaluate(e=>e.closest('.tab-content').id);
                 await page.locator('#mobile-nav').selectOption(id);
-                await page.locator('#'+input).fill(value);
-                await page.locator('#'+input).dispatchEvent('input');
-                if(file==='TaiChinhCaNhan') await page.locator('[onclick="calculateRatios()"]').click();
+                for(const [input,value] of Object.entries(values)) await page.locator('#'+input).fill(value);
+                await page.evaluate(code=>window.eval(code),invoke);
                 const result = await page.locator('#'+output).innerText();
                 assert(result && !/NaN|Infinity/.test(result));
-                if(expected) assert(result.includes(expected),result);
                 await checkLayout(page,file+' tool');
-                if(file==='KinhTeQuocTe') assert.equal(await page.evaluate(()=>Chart.getChart('laborChart').data.datasets[0].data.length>0),true);
-                if(file==='TaiChinhCaNhan') {
-                    await page.locator('#mobile-nav').selectOption('overview');
-                    await page.locator('.flip-card').first().click();
-                    assert(await page.locator('.flip-card').first().evaluate(e=>e.classList.contains('flipped')));
-                }
+                if(file==='KTQT') assert(await page.locator('#importTariffSvg > *').count()>0);
                 assert.deepEqual(page.errors,[]);
             } finally {await page.close();}
         }
