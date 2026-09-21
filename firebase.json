@@ -17,6 +17,20 @@
       "tests/**",
       "docs/**",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      { "source": "/KTTC", "destination": "/KE_TOAN_TAI_CHINH.html" },
+      { "source": "/KTQT", "destination": "/KINH_TE_QUOC_TE.html" },
+      { "source": "/KTCTMLN", "destination": "/KinhTeChinhTriMacLeNin.html" },
+      { "source": "/LTMQT", "destination": "/LUAT_THUONG_MAI_QUOC_TE.html" },
+      { "source": "/NLKT", "destination": "/NGUYEN_LY_KE_TOAN.html" },
+      { "source": "/NLTTTC", "destination": "/NGUYEN_LY_THI_TRUONG_TAI_CHINH.html" },
+      { "source": "/NMLH", "destination": "/NhapMonLuatHoc.html" },
+      { "source": "/PTBV", "destination": "/PHAT_TRIEN_BEN_VUNG.html" },
+      { "source": "/STKN", "destination": "/SANG_TAO_KHOI_NGHIEP.html" },
+      { "source": "/TCCN", "destination": "/TAI_CHINH_CA_NHAN.html" },
+      { "source": "/TLUD", "destination": "/TAM_LY_UNG_DUNG.html" },
+      { "source": "/VHDDTKD", "destination": "/VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html" }
     ]
   },
   "firestore": {

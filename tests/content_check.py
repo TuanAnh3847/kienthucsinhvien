@@ -23,10 +23,21 @@ def chapters(source):
     }
 
 count = 0
+skipped = []
 for file in root.glob('*.html'):
-    old = subprocess.check_output(['git', 'show', f'{baseline}:{file.name}'], cwd=root).decode('utf-8')
+    try:
+        old = subprocess.check_output(
+            ['git', 'show', f'{baseline}:{file.name}'],
+            cwd=root,
+            stderr=subprocess.DEVNULL,
+        ).decode('utf-8')
+    except subprocess.CalledProcessError:
+        skipped.append(file.name)
+        continue
     original = chapters(old)
     current = chapters(file.read_text(encoding='utf-8'))
     assert original == current, f'Chapter text changed: {file.name}'
     count += len(original)
 print(f'Preserved chapter text: {count} sections')
+if skipped:
+    print('No baseline version; skipped:', ', '.join(sorted(skipped)))
