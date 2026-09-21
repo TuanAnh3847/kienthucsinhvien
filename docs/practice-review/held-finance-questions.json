@@ -1,0 +1,90 @@
+[
+  {
+    "reason": "Theory Chapter 4 explicitly records competing meanings of disposable income; the unqualified question has no safe unique definition.",
+    "question": {
+      "sourceExam": 1,
+      "sourceNumber": 20,
+      "clo": "CLO 1",
+      "question": "What is an individual's disposable income?",
+      "options": [
+        "Profits earned from stock market investments",
+        "Total income before taxes",
+        "The amount of money remaining after taxes and essential expenses are deducted",
+        "Money used to repay loans"
+      ],
+      "answer": 2,
+      "correctText": "The amount of money remaining after taxes and essential expenses are deducted",
+      "id": "e1_q20",
+      "chapter": "Chapter 1: Personal Finance Foundations",
+      "explanation": "Theo key của bộ LMS này, disposable income là phần còn lại sau taxes và essential expenses.",
+      "trap": "Đừng chọn total income before taxes.",
+      "keyword": "Disposable income trong đề LMS = money left after taxes & essential expenses."
+    }
+  },
+  {
+    "reason": "Theory Chapter 4 warns against a universal net-worth conclusion; the stem supplies no fee or penalty assumption.",
+    "question": {
+      "sourceExam": 1,
+      "sourceNumber": 31,
+      "clo": "CLO 2",
+      "question": "Which factor would immediately reduce net worth?",
+      "options": [
+        "Increase in savings interest rates",
+        "Receiving a year-end bonus",
+        "Receiving stock dividends",
+        "Making an early mortgage repayment"
+      ],
+      "answer": 3,
+      "correctText": "Making an early mortgage repayment",
+      "id": "e1_q31",
+      "chapter": "Chapter 6: Loans & Credit Cards",
+      "explanation": "Theo key LMS, early mortgage repayment được chọn vì có thể làm giảm tài sản thanh khoản ngay và/hoặc phát sinh penalty/fees. Khi gặp câu này, hãy bám theo đáp án LMS.",
+      "trap": "Về lý thuyết thuần túy trả gốc có thể không đổi net worth; nhưng đề này gắn với tác động tức thời/penalty.",
+      "keyword": "Early mortgage repayment trong bộ LMS → reduce net worth."
+    }
+  },
+  {
+    "reason": "The stem says their but supplies no household data or context; guessing the intended missing case is unsafe.",
+    "question": {
+      "sourceExam": 3,
+      "sourceNumber": 36,
+      "clo": "CLO 2",
+      "question": "What is their months of living expenses covered ratio?",
+      "options": [
+        "Insufficient information to determine",
+        "1.69 months",
+        "2 months",
+        "2.44 months"
+      ],
+      "answer": 0,
+      "correctText": "Insufficient information to determine",
+      "id": "e3_q36",
+      "chapter": "Chapter 4: Statements, Ratios & Budgeting",
+      "explanation": "Muốn tính months of living expenses covered phải có liquid assets và monthly living expenses. Nếu thiếu một trong hai thì không đủ thông tin.",
+      "trap": "Không suy đoán từ thông tin không được đề cho.",
+      "keyword": "Months covered = liquid assets / monthly living expenses."
+    }
+  },
+  {
+    "reason": "Claim about Vietnamese households has no supporting survey/data in current theory; explanation appeals to the LMS key.",
+    "question": {
+      "sourceExam": 3,
+      "sourceNumber": 43,
+      "clo": "CLO 3",
+      "question": "Which best explains why many Vietnamese households do not purchase life insurance?",
+      "options": [
+        "Preference for leisure spending",
+        "Reluctance to make periodic payments",
+        "Avoid thinking about death",
+        "No immediate financial benefit"
+      ],
+      "answer": 3,
+      "correctText": "No immediate financial benefit",
+      "id": "e3_q43",
+      "chapter": "Chapter 5: Protection & Insurance",
+      "explanation": "Nhiều hộ gia đình ngại mua life insurance vì không thấy lợi ích tài chính ngay lập tức, dù sản phẩm bảo vệ rủi ro dài hạn.",
+      "trap": "Các lý do khác có thể tồn tại, nhưng đáp án LMS ưu tiên immediate benefit.",
+      "keyword": "Life insurance hesitation = no immediate benefit."
+    }
+  }
+]

@@ -122,3 +122,30 @@ body.edu-study-page .edu-compact-activity > :not(.edu-choice-row) { grid-column:
 .course-card > h3 { margin-bottom: .375rem; }
 .course-card > p { margin-bottom: .5rem; }
 .course-card > .border-t { padding-top: .65rem; }
+
+/* Practice: keep questions readable and actions reachable on small phones. */
+.edu-practice-page .site-header-row h1 { color: #0f172a; }
+.edu-practice-page main { padding-top: 1.25rem; }
+.edu-practice-page #overview > :first-child { padding: clamp(1rem, 2.5vw, 2rem); margin-bottom: 1.25rem; }
+.edu-practice-page #overview h2 { font-size: clamp(1.75rem, 3.2vw, 2.65rem); line-height: 1.18; text-wrap: balance; }
+.edu-practice-page #overview p.text-lg { font-size: 1rem; line-height: 1.65; }
+.edu-practice-page #practice-panel { margin-top: 1rem; scroll-margin-top: 8rem; }
+.edu-practice-page #practice-panel > :first-child { flex-wrap: wrap; }
+.edu-practice-page #practice-badge { max-width: 100%; overflow-wrap: anywhere; }
+.edu-practice-page #question-list > div { scroll-margin-top: 8rem; }
+.edu-practice-page #question-list h3 { min-width: 0; overflow-wrap: anywhere; }
+.edu-practice-page .option-card, .edu-practice-page .answer-btn { min-height: 44px; text-align: left; line-height: 1.55; }
+.edu-practice-page button:focus-visible, .edu-practice-page a:focus-visible { outline: 3px solid #0f766e; outline-offset: 3px; }
+.edu-practice-page button:disabled { cursor: default; }
+.edu-practice-page button:disabled:not(.option-card):not(.answer-btn) { opacity: .55; }
+.practice-theory-link { margin: .75rem 0; font-weight: 700; color: #0f766e; text-decoration: underline; }
+.study-practice-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 1rem; padding: .5rem 1rem; border-radius: .75rem; background: #0f766e; color: #fff; font-weight: 700; }
+.study-practice-link:focus-visible { outline: 3px solid #0f172a; outline-offset: 3px; }
+.edu-practice-page #practice-content .sticky { bottom: .5rem; }
+.edu-practice-page #practice-content .grid > * { min-width: 0; }
+@media (max-width: 639px) {
+  .edu-practice-page #practice-content > div > div { padding: 1rem; }
+  .edu-practice-page #question-list > div { padding: .875rem; }
+  .edu-practice-page #practice-content .sticky { padding: .75rem; gap: .5rem; }
+  .edu-practice-page #mistakes-panel .flex.gap-3 { flex-wrap: wrap; }
+}

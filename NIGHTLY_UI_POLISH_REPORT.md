@@ -1,3 +1,11 @@
+# ROUND 2 — IN PROGRESS
+
+2026-09-22 checkpoint: practice repairs complete, 10/10 new behavioral scenarios and both existing practice regression scenarios pass. Fixed duplicate submissions, answer/result state, elapsed-time timer, blocked/malformed storage, keyboard focus and return navigation. Four ambiguous finance questions and the unsupported ending portion of ABC are archived in `docs/practice-review/`. Practice questions no longer repeat within an attempt. Added theory/practice links and removed class/build wording from practice/homepage. All changes are local review work; no production deployment.
+
+Remaining: full four-viewport theory audit, conservative final wording cleanup, new traceable practice sets, content guard review, final acceptance/validation and morning report.
+
+Previous round report follows for context.
+
 # OVERNIGHT UI POLISH COMPLETE
 
 Date: 2026-09-21

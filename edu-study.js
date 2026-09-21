@@ -3,6 +3,16 @@
  */
 (function enhanceStudyChoices() {
     'use strict';
+    const practiceRoutes = { '/NLKT': '/NguyenLyKeToan-LuyenDe', '/TCCN': '/TCCN-LuyenDe' };
+    const practiceRoute = practiceRoutes[window.EDU_PAGE_CONFIG?.route];
+    const intro = document.getElementById('course-intro');
+    if (practiceRoute && intro) {
+        const link = document.createElement('a');
+        link.href = practiceRoute;
+        link.className = 'study-practice-link';
+        link.textContent = 'Luyện đề và tự kiểm tra →';
+        intro.appendChild(link);
+    }
     const groups = [];
     document.querySelectorAll('main .quiz-row, main .match-row').forEach((row, index) => {
         const selects = row.querySelectorAll('select');

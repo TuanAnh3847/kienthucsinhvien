@@ -22,8 +22,8 @@ let browser;
   await page.waitForTimeout(300);
   const name=route.slice(1)||'home';
   const item={route,widths:[],leakage:[],controls:[],errors};
-  for(const width of [1440,375]) {
-   await page.setViewportSize({width,height:1000});
+  for(const width of [1440,1366,390,375]) {
+   await page.setViewportSize({width,height:({1440:900,1366:768,390:844,375:812})[width]});
    await page.evaluate(()=>{window.scrollTo({top:0,behavior:'instant'});if(window.EduHeader)EduHeader.switchTab(EduHeader.config.defaultTab,{scroll:false,animate:false});});
    await page.waitForTimeout(250);
    await page.screenshot({path:path.join(out,`${name}-${width}-top.png`)});

@@ -45,7 +45,7 @@
 </style>
     <link rel="stylesheet" href="/shared.css">
 </head>
-<body class="bg-stone-50 bg-pattern text-slate-800 font-sans antialiased leading-relaxed">
+<body class="edu-practice-page bg-stone-50 bg-pattern text-slate-800 font-sans antialiased leading-relaxed">
 
 <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +98,7 @@
         <div>
           <span class="inline-flex items-center pill px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-4">⚡ Personal Finance Practice Hub</span>
           <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">Luyện đề Tài Chính Cá Nhân</h2>
-          <p class="text-lg text-stone-600 max-w-2xl mb-6">Bộ 150 câu ôn tập từ 3 đề LMS, sắp xếp lại thành chế độ học theo chương, test nhanh và luyện thi có đồng hồ. Phần học hiện đáp án ngay; phần luyện thi phải nộp bài mới xem đáp án.</p>
+          <p class="text-lg text-stone-600 max-w-2xl mb-6">Ôn theo chương, làm bài nhanh hoặc luyện thi có đồng hồ. Chế độ học giải thích ngay sau mỗi lựa chọn; chế độ thi hiện đáp án sau khi nộp.</p>
           <div class="flex flex-wrap gap-3">
             <button onclick="switchTab('chapter')" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl shadow-sm transition-transform active:scale-[.98]">Bắt đầu theo chương</button>
             <button onclick="switchTab('exam')" class="bg-white hover:bg-stone-50 text-teal-800 font-black px-5 py-3 rounded-xl border border-teal-200 shadow-sm transition-transform active:scale-[.98]">Vào luyện thi</button>
@@ -106,10 +106,10 @@
           </div>
         </div>
         <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-xl">
-          <p class="text-xs uppercase tracking-widest text-teal-300 font-black mb-4">Tình trạng bộ câu hỏi</p>
+          <p class="text-xs uppercase tracking-widest text-teal-300 font-black mb-4">Bài luyện hiện có</p>
           <div class="grid grid-cols-2 gap-3" id="overview-stats"></div>
           <div class="mt-5 rounded-xl bg-white/10 p-4 border border-white/10">
-            <p class="text-sm text-stone-200"><strong>Flow:</strong> Học theo chương → chọn là xem giải thích ngay. Luyện thi → làm đủ bài → nộp → xem điểm, câu sai và giải thích.</p>
+            <p class="text-sm text-stone-200"><strong>Cách luyện:</strong> Học theo chương → chọn là xem giải thích ngay. Luyện thi → làm đủ bài → nộp → xem điểm, câu sai và giải thích.</p>
           </div>
         </div>
       </div>
@@ -151,10 +151,11 @@
   </section>
 
   <section id="mistakes" class="tab-content hidden">
-    <div class="mb-8"><h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Ôn lại câu sai</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Các câu làm sai được lưu trong trình duyệt của máy này. Không cần database, không tốn Firestore.</p></div>
+    <div class="mb-8"><h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Ôn lại câu sai</h2><p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Các câu làm sai được lưu trong trình duyệt của máy này. Bạn có thể ôn lại rồi xóa những câu đã nắm chắc.</p></div>
     <div id="mistakes-panel"></div>
   </section>
 
+  <p class="practice-theory-link"><a href="/TCCN">← Lý thuyết Tài chính cá nhân</a></p><p id="storage-status" role="status" class="text-sm text-amber-800"></p>
   <section id="practice-panel" class="hidden mt-10 animate-fade-in">
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
       <button onclick="closePracticePanel()" class="bg-white hover:bg-stone-50 text-stone-700 font-bold px-4 py-2 rounded-xl border border-stone-200 shadow-sm w-fit">← Quay lại</button>
@@ -170,7 +171,7 @@
 <footer class="border-t border-stone-200 bg-white mt-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-stone-500 flex flex-col md:flex-row justify-between gap-3">
     <p><strong class="text-teal-700">Edu Connect</strong> · Luyện đề Tài Chính Cá Nhân</p>
-    <p>Static-first · Không Firestore · Built for UEL English Program</p>
+    <p><a href="/TCCN" class="font-bold text-teal-700 underline">← Về lý thuyết Tài chính cá nhân</a></p>
   </div>
 </footer>
 
@@ -539,25 +540,6 @@
   },
   {
     "sourceExam": 1,
-    "sourceNumber": 20,
-    "clo": "CLO 1",
-    "question": "What is an individual's disposable income?",
-    "options": [
-      "Profits earned from stock market investments",
-      "Total income before taxes",
-      "The amount of money remaining after taxes and essential expenses are deducted",
-      "Money used to repay loans"
-    ],
-    "answer": 2,
-    "correctText": "The amount of money remaining after taxes and essential expenses are deducted",
-    "id": "e1_q20",
-    "chapter": "Chapter 1: Personal Finance Foundations",
-    "explanation": "Theo key của bộ LMS này, disposable income là phần còn lại sau taxes và essential expenses.",
-    "trap": "Đừng chọn total income before taxes.",
-    "keyword": "Disposable income trong đề LMS = money left after taxes & essential expenses."
-  },
-  {
-    "sourceExam": 1,
     "sourceNumber": 21,
     "clo": "CLO 2",
     "question": "Beginning balance in your checking account is $1,000. During the month: Two checks written: $45 and $75 (only the first cleared); Two debit card transactions: $50 and $35.20; Bank service fee: $6 ; A $100 check deposited but not yet cleared. What is your end-of-month account balance?",
@@ -590,7 +572,7 @@
     "correctText": "No. Mr. Bach's income is lower than the required monthly loan repayment.",
     "id": "e1_q22",
     "chapter": "Chapter 6: Loans & Credit Cards",
-    "explanation": "Khoản vay = 3,000 × 50% = 1,500 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 30.41 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: không đủ theo đáp án LMS.",
+    "explanation": "Khoản vay = 3,000 × 50% = 1,500 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 30.41 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: không đủ.",
     "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
     "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
   },
@@ -745,25 +727,6 @@
     "explanation": "Whole life insurance có cash value và bảo vệ dài hạn nên chi phí thường cao hơn term life insurance.",
     "trap": "Premium thường ổn định, không phải unpredictable là nhược điểm chính trong câu này.",
     "keyword": "Whole life = more expensive than term."
-  },
-  {
-    "sourceExam": 1,
-    "sourceNumber": 31,
-    "clo": "CLO 2",
-    "question": "Which factor would immediately reduce net worth?",
-    "options": [
-      "Increase in savings interest rates",
-      "Receiving a year-end bonus",
-      "Receiving stock dividends",
-      "Making an early mortgage repayment"
-    ],
-    "answer": 3,
-    "correctText": "Making an early mortgage repayment",
-    "id": "e1_q31",
-    "chapter": "Chapter 6: Loans & Credit Cards",
-    "explanation": "Theo key LMS, early mortgage repayment được chọn vì có thể làm giảm tài sản thanh khoản ngay và/hoặc phát sinh penalty/fees. Khi gặp câu này, hãy bám theo đáp án LMS.",
-    "trap": "Về lý thuyết thuần túy trả gốc có thể không đổi net worth; nhưng đề này gắn với tác động tức thời/penalty.",
-    "keyword": "Early mortgage repayment trong bộ LMS → reduce net worth."
   },
   {
     "sourceExam": 1,
@@ -1046,7 +1009,7 @@
     "correctText": "Yes. Mr. Bach's income available for debt repayment is greater than the required monthly loan repayment.",
     "id": "e1_q46",
     "chapter": "Chapter 6: Loans & Credit Cards",
-    "explanation": "Khoản vay = 2,400 × 50% = 1,200 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 24.33 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: đủ theo đáp án LMS.",
+    "explanation": "Khoản vay = 2,400 × 50% = 1,200 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 24.33 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: đủ.",
     "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
     "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
   },
@@ -1825,7 +1788,7 @@
     "correctText": "Yes. Mr. Bach's income available for debt repayment is greater than the required monthly loan repayment.",
     "id": "e2_q37",
     "chapter": "Chapter 6: Loans & Credit Cards",
-    "explanation": "Khoản vay = 2,400 × 50% = 1,200 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 24.33 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: đủ theo đáp án LMS.",
+    "explanation": "Khoản vay = 2,400 × 50% = 1,200 triệu VND. Khoản vay trả góp cố định dùng công thức PMT = P×r/[1-(1+r)^(-n)]. PMT ≈ 24.33 triệu/tháng. So với khả năng trả nợ 25 triệu/tháng: đủ.",
     "trap": "Bẫy hay gặp là dùng nhầm trả gốc đều với trả góp cố định PMT.",
     "keyword": "Mortgage/loan: xác định khoản vay → số tháng → loại trả nợ → tính payment/dư nợ."
   },
@@ -2743,25 +2706,6 @@
   },
   {
     "sourceExam": 3,
-    "sourceNumber": 36,
-    "clo": "CLO 2",
-    "question": "What is their months of living expenses covered ratio?",
-    "options": [
-      "Insufficient information to determine",
-      "1.69 months",
-      "2 months",
-      "2.44 months"
-    ],
-    "answer": 0,
-    "correctText": "Insufficient information to determine",
-    "id": "e3_q36",
-    "chapter": "Chapter 4: Statements, Ratios & Budgeting",
-    "explanation": "Muốn tính months of living expenses covered phải có liquid assets và monthly living expenses. Nếu thiếu một trong hai thì không đủ thông tin.",
-    "trap": "Không suy đoán từ thông tin không được đề cho.",
-    "keyword": "Months covered = liquid assets / monthly living expenses."
-  },
-  {
-    "sourceExam": 3,
     "sourceNumber": 37,
     "clo": "CLO 3",
     "question": "Which type of insurance provides financial support to beneficiaries in the event of death?",
@@ -2873,25 +2817,6 @@
     "explanation": "Debt-to-Asset Ratio = Total liabilities / Total assets, nên nó đo mức độ tài sản được tài trợ bằng nợ.",
     "trap": "Short-term solvency/liquidity là nhóm liquidity ratio, không phải debt-to-asset.",
     "keyword": "Debt-to-Asset = reliance on debt."
-  },
-  {
-    "sourceExam": 3,
-    "sourceNumber": 43,
-    "clo": "CLO 3",
-    "question": "Which best explains why many Vietnamese households do not purchase life insurance?",
-    "options": [
-      "Preference for leisure spending",
-      "Reluctance to make periodic payments",
-      "Avoid thinking about death",
-      "No immediate financial benefit"
-    ],
-    "answer": 3,
-    "correctText": "No immediate financial benefit",
-    "id": "e3_q43",
-    "chapter": "Chapter 5: Protection & Insurance",
-    "explanation": "Nhiều hộ gia đình ngại mua life insurance vì không thấy lợi ích tài chính ngay lập tức, dù sản phẩm bảo vệ rủi ro dài hạn.",
-    "trap": "Các lý do khác có thể tồn tại, nhưng đáp án LMS ưu tiên immediate benefit.",
-    "keyword": "Life insurance hesitation = no immediate benefit."
   },
   {
     "sourceExam": 3,
@@ -3039,18 +2964,36 @@ let timerInterval = null;
 let startTime = 0;
 let remainingSeconds = 0;
 let lastTab = 'overview';
+let sessionSubmitted = false;
+let deadline = 0;
+const memoryStorage = new Map();
+let storageUnavailable = false;
 const STORAGE_WRONG = 'edu_tccn_wrong_ids_v1';
 const STORAGE_ATTEMPTS = 'edu_tccn_attempts_v1';
 
 function escapeHtml(str) { return String(str).replace(/[&<>'"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[s])); }
 function shuffle(arr) { const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function deduplicateQuestions(questions) {
+  const seen = new Set();
+  return questions.filter(q => { const key = q.question.trim().toLowerCase(); if (seen.has(key)) return false; seen.add(key); return true; });
+}
 function mmss(sec) { sec=Math.max(0, Math.floor(sec)); const m=String(Math.floor(sec/60)).padStart(2,'0'); const s=String(sec%60).padStart(2,'0'); return `${m}:${s}`; }
-function getWrongIds() { try { return JSON.parse(localStorage.getItem(STORAGE_WRONG)||'[]'); } catch { return []; } }
-function setWrongIds(ids) { localStorage.setItem(STORAGE_WRONG, JSON.stringify([...new Set(ids)])); }
+function readList(key) {
+  if (storageUnavailable) return memoryStorage.get(key) || [];
+  try { const value = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(value) ? value : []; }
+  catch { return memoryStorage.get(key) || []; }
+}
+function writeList(key, values) {
+  memoryStorage.set(key, values);
+  try { localStorage.setItem(key, JSON.stringify(values)); }
+  catch { storageUnavailable = true; document.getElementById('storage-status').textContent = 'Trình duyệt không cho lưu kết quả. Bạn vẫn có thể luyện; dữ liệu chỉ giữ trong phiên này.'; }
+}
+function getWrongIds() { return normalizeWrongIds(QUESTION_BANK, readList(STORAGE_WRONG)); }
+function setWrongIds(ids) { writeList(STORAGE_WRONG, normalizeWrongIds(QUESTION_BANK, ids)); }
 function addWrongIds(ids) { setWrongIds([...getWrongIds(), ...ids]); }
 function removeWrongIds(ids) { const drop=new Set(ids); setWrongIds(getWrongIds().filter(id => !drop.has(id))); }
-function getAttempts() { try { return JSON.parse(localStorage.getItem(STORAGE_ATTEMPTS)||'[]'); } catch { return []; } }
-function saveAttempt(record) { const attempts=getAttempts(); attempts.unshift(record); localStorage.setItem(STORAGE_ATTEMPTS, JSON.stringify(attempts.slice(0,12))); }
+function getAttempts() { return readList(STORAGE_ATTEMPTS).filter(value => value && typeof value === 'object' && Number.isFinite(value.score)); }
+function saveAttempt(record) { const attempts=getAttempts(); attempts.unshift(record); writeList(STORAGE_ATTEMPTS, attempts.slice(0,12)); }
 
 function switchTab(tabId) {
   stopTimer();
@@ -3066,14 +3009,14 @@ function switchTab(tabId) {
   if (tabId === 'mistakes') renderMistakes();
   window.scrollTo({top:0, behavior:'smooth'});
 }
-function closePracticePanel() { stopTimer(); document.getElementById('practice-panel')?.classList.add('hidden'); document.getElementById(lastTab)?.classList.remove('hidden'); window.scrollTo({top:0, behavior:'smooth'}); }
+function closePracticePanel() { switchTab(lastTab); }
 
 function renderOverview() {
   const stats = document.getElementById('overview-stats'); if (!stats) return;
   const wrongCount = getWrongIds().length;
   stats.innerHTML = `
-    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${QUESTION_BANK.length}</div><div class="text-xs text-stone-300 font-bold">câu hỏi</div></div>
-    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">3</div><div class="text-xs text-stone-300 font-bold">đề LMS</div></div>
+    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${deduplicateQuestions(QUESTION_BANK).length}</div><div class="text-xs text-stone-300 font-bold">câu hỏi</div></div>
+    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">3</div><div class="text-xs text-stone-300 font-bold">bộ luyện thi</div></div>
     <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${CHAPTERS.length}</div><div class="text-xs text-stone-300 font-bold">nhóm kiến thức</div></div>
     <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${wrongCount}</div><div class="text-xs text-stone-300 font-bold">câu sai đã lưu</div></div>`;
 }
@@ -3085,15 +3028,15 @@ function renderChapterGrid() {
     return `<article class="mode-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col min-h-[245px]">
       <div class="flex justify-between items-start gap-3 mb-4"><div class="w-13 h-13 text-4xl">${chapterIcons[i%chapterIcons.length]}</div><span class="pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider">${qs.length} câu</span></div>
       <h3 class="font-black text-slate-900 text-lg mb-2 leading-snug">${escapeHtml(ch)}</h3>
-      <p class="text-sm text-stone-600 flex-grow">Mode học theo chương: chọn đáp án là hiện giải thích ngay, rất hợp để ôn nền.</p>
+      <p class="text-sm text-stone-600 flex-grow">Luyện theo chương: chọn đáp án là hiện giải thích ngay, rất hợp để ôn nền.</p>
       <button onclick='startChapter(${JSON.stringify(ch)})' class="mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-2.5 rounded-xl transition-colors">Luyện chương này</button>
     </article>`;
   }).join('');
 }
 function renderExamGrid() {
   const el = document.getElementById('exam-grid'); if (!el) return;
-  const cards = [1,2,3].map(n => ({type:'source', title:`Đề luyện thi ${n}`, subtitle:`50 câu từ bộ LMS số ${n}`, questions:QUESTION_BANK.filter(q=>q.sourceExam===n), minutes:60, accent:'teal'}));
-  cards.push({type:'random', title:'Final Mix 50 câu', subtitle:'Random 50 câu từ toàn bộ ngân hàng', questions:shuffle(QUESTION_BANK).slice(0,50), minutes:60, accent:'slate'});
+  const cards = [1,2,3].map(n => ({type:'source', title:`Đề luyện thi ${n}`, subtitle:`Bộ câu hỏi tổng hợp ${n}`, questions:deduplicateQuestions(QUESTION_BANK.filter(q=>q.sourceExam===n)), minutes:60, accent:'teal'}));
+  cards.push({type:'random', title:'Final Mix 50 câu', subtitle:'Random 50 câu từ toàn bộ ngân hàng', questions:shuffle(deduplicateQuestions(QUESTION_BANK)).slice(0,50), minutes:60, accent:'slate'});
   el.innerHTML = cards.map((c, idx) => `<article class="mode-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col min-h-[240px]">
     <span class="pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider w-fit">Exam mode</span>
     <h3 class="font-black text-slate-900 text-xl mt-4 mb-2 leading-snug">${c.title}</h3>
@@ -3110,13 +3053,13 @@ function renderMistakes() {
   if (!qs.length) {
     panel.innerHTML = `<div class="bg-white border border-stone-200 rounded-2xl p-8 text-center shadow-sm"><div class="text-5xl mb-3">🎉</div><h3 class="text-xl font-black text-slate-900 mb-2">Chưa có câu sai nào được lưu</h3><p class="text-stone-600 mb-5">Làm một bài test hoặc luyện thi trước, câu sai sẽ tự xuất hiện ở đây.</p><button onclick="switchTab('quick')" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl">Làm test nhanh</button></div>`;
   } else {
-    panel.innerHTML = `<div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5"><div><h3 class="font-black text-xl text-slate-900">Có ${qs.length} câu cần ôn lại</h3><p class="text-stone-600 text-sm">Mode này hiện đáp án ngay để chữa lỗi nhanh.</p></div><div class="flex gap-3"><button onclick="startMistakes()" class="bg-rose-500 hover:bg-rose-600 text-white font-black px-5 py-3 rounded-xl">Ôn câu sai</button><button onclick="clearMistakes()" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-black px-5 py-3 rounded-xl">Xóa danh sách</button></div></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">${qs.slice(0,12).map(q=>`<div class="bg-white border border-stone-200 rounded-xl p-4 shadow-sm"><span class="text-xs font-black text-teal-700">${q.chapter}</span><p class="text-sm font-bold text-slate-800 mt-2 line-clamp-3">${escapeHtml(q.question)}</p></div>`).join('')}</div>`;
+    panel.innerHTML = `<div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5"><div><h3 class="font-black text-xl text-slate-900">Có ${qs.length} câu cần ôn lại</h3><p class="text-stone-600 text-sm">Chế độ này hiện đáp án ngay để chữa lỗi nhanh.</p></div><div class="flex gap-3"><button onclick="startMistakes()" class="bg-rose-500 hover:bg-rose-600 text-white font-black px-5 py-3 rounded-xl">Ôn câu sai</button><button onclick="clearMistakes()" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-black px-5 py-3 rounded-xl">Xóa danh sách</button></div></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">${qs.slice(0,12).map(q=>`<div class="bg-white border border-stone-200 rounded-xl p-4 shadow-sm"><span class="text-xs font-black text-teal-700">${q.chapter}</span><p class="text-sm font-bold text-slate-800 mt-2 line-clamp-3">${escapeHtml(q.question)}</p></div>`).join('')}</div>`;
   }
 }
 function clearMistakes(){ if(confirm('Xóa toàn bộ danh sách câu sai trên máy này?')) { setWrongIds([]); renderMistakes(); renderOverview(); } }
 
 function startChapter(chapter) { const qs = QUESTION_BANK.filter(q => q.chapter === chapter); startSession({title: chapter, questions: qs, mode:'study', showInstant:true, countdown:false, minutes:0, source:'chapter'}); }
-function startQuick20() { startSession({title:'Test nhanh 20 câu', questions: shuffle(QUESTION_BANK).slice(0,20), mode:'study', showInstant:true, countdown:false, minutes:0, source:'quick'}); }
+function startQuick20() { startSession({title:'Test nhanh 20 câu', questions: shuffle(deduplicateQuestions(QUESTION_BANK)).slice(0,20), mode:'study', showInstant:true, countdown:false, minutes:0, source:'quick'}); }
 function normalizeWrongIds(questionBank, wrongIds) {
   const validQuestionIds = new Set(questionBank.map(question => question.id));
   return [...new Set(Array.isArray(wrongIds) ? wrongIds : [])].filter(id => validQuestionIds.has(id));
@@ -3126,7 +3069,7 @@ function buildWeak20Questions(questionBank, wrongIds) {
   questionBank.forEach(question => {
     if (question && question.id != null && !questionsById.has(question.id)) questionsById.set(question.id, question);
   });
-  const uniqueQuestions = [...questionsById.values()];
+  const uniqueQuestions = deduplicateQuestions([...questionsById.values()]);
   const validWrongIds = normalizeWrongIds(uniqueQuestions, wrongIds);
   const preferredQuestions = shuffle(validWrongIds).slice(0, 14).map(id => questionsById.get(id));
   const targetSize = Math.min(20, uniqueQuestions.length);
@@ -3147,21 +3090,31 @@ function startWeak20() {
   startSession({title:'20 câu ưu tiên câu sai', questions: qs, mode:'study', showInstant:true, countdown:false, minutes:0, source:'weak'});
 }
 function startMistakes() { const qs = QUESTION_BANK.filter(q => getWrongIds().includes(q.id)); if(qs.length) startSession({title:'Ôn lại câu sai', questions: qs, mode:'study', showInstant:true, countdown:false, minutes:0, source:'mistakes'}); }
-function startExam(index) { const c=window.__examCards[index]; startSession({title:c.title, questions:c.type==='random'?shuffle(QUESTION_BANK).slice(0,50):c.questions, mode:'exam', showInstant:false, countdown:true, minutes:c.minutes, source:'exam'}); }
+function startExam(index) { const c=window.__examCards[index]; startSession({title:c.title, questions:c.type==='random'?shuffle(deduplicateQuestions(QUESTION_BANK)).slice(0,50):c.questions, mode:'exam', showInstant:false, countdown:true, minutes:c.minutes, source:'exam'}); }
 
 function startSession(session) {
+  if (!session?.questions?.length) return;
+  session = {...session, questions:deduplicateQuestions(session.questions)};
   stopTimer();
+  sessionSubmitted = false;
   currentSession = session; selectedAnswers = {}; revealed = {};
   document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
   const panel=document.getElementById('practice-panel'); panel.classList.remove('hidden');
-  document.getElementById('practice-badge').textContent = `${session.mode === 'exam' ? 'Luyện thi' : 'Mode học'} · ${session.questions.length} câu`;
+  document.getElementById('practice-badge').textContent = `${session.mode === 'exam' ? 'Luyện thi' : 'Luyện tập'} · ${session.questions.length} câu`;
   renderPractice();
   startTime = Date.now();
   const timerPill=document.getElementById('timer-pill'); timerPill.classList.remove('hidden');
-  if (session.countdown) { remainingSeconds=session.minutes*60; updateTimerDisplay(); timerInterval=setInterval(()=>{ remainingSeconds--; updateTimerDisplay(); if(remainingSeconds<=0){ stopTimer(); submitSession(true); } },1000); }
-  else { timerInterval=setInterval(()=>{ const elapsed=Math.floor((Date.now()-startTime)/1000); timerPill.textContent = '⏱️ ' + mmss(elapsed); },1000); }
+  if (session.countdown) { remainingSeconds=session.minutes*60; deadline=startTime+remainingSeconds*1000; updateTimerDisplay(); timerInterval=setInterval(tickTimer,1000); }
+  else { timerPill.textContent = '⏱️ 00:00'; timerPill.classList.remove('bg-rose-600'); timerPill.classList.add('bg-slate-900'); timerInterval=setInterval(()=>{ const elapsed=Math.floor((Date.now()-startTime)/1000); timerPill.textContent = '⏱️ ' + mmss(elapsed); },1000); }
   panel.scrollIntoView({behavior:'smooth', block:'start'});
 }
+function tickTimer() {
+  if (!currentSession?.countdown || sessionSubmitted) return;
+  remainingSeconds = Math.max(0, Math.ceil((deadline-Date.now())/1000));
+  updateTimerDisplay();
+  if (remainingSeconds === 0) submitSession(true);
+}
+document.addEventListener('visibilitychange', () => { if (!document.hidden) tickTimer(); });
 function stopTimer(){ if(timerInterval){ clearInterval(timerInterval); timerInterval=null; } const pill=document.getElementById('timer-pill'); if(pill) pill.classList.add('hidden'); }
 function updateTimerDisplay(){ const pill=document.getElementById('timer-pill'); if(pill){ pill.textContent = '⏳ ' + mmss(remainingSeconds); pill.classList.toggle('bg-rose-600', remainingSeconds <= 300); pill.classList.toggle('bg-slate-900', remainingSeconds > 300); } }
 
@@ -3178,8 +3131,8 @@ function renderPractice(showReview=false) {
     <div class="p-5 md:p-8">
       <div id="question-list" class="space-y-5">${s.questions.map((q,i)=>questionHtml(q,i,showReview)).join('')}</div>
       <div class="sticky bottom-4 bg-white/95 backdrop-blur border border-teal-100 rounded-2xl p-4 mt-8 shadow-lg flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-        <div class="text-sm text-stone-600"><strong>${answered}</strong>/${s.questions.length} câu đã chọn · ${s.mode==='exam' ? 'Nộp bài để xem đáp án' : 'Bấm đáp án để học ngay'}</div>
-        <div class="flex flex-wrap gap-3"><button onclick="restartCurrentSession()" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-black px-4 py-2 rounded-xl">Làm lại</button>${s.mode==='exam' ? `<button onclick="submitSession(false)" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl">Nộp bài</button>` : `<button onclick="finishStudySession()" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl">Tổng kết nhanh</button>`}</div>
+        <div class="text-sm text-stone-600"><strong data-answered-count>${answered}</strong>/${s.questions.length} câu đã chọn · ${s.mode==='exam' ? 'Nộp bài để xem đáp án' : 'Bấm đáp án để học ngay'}</div>
+        <div class="flex flex-wrap gap-3"><button onclick="restartCurrentSession()" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-black px-4 py-2 rounded-xl">Làm lại</button>${s.mode==='exam' ? `<button onclick="submitSession(false)" ${sessionSubmitted?'disabled':''} class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl">Nộp bài</button>` : `<button onclick="finishStudySession()" ${sessionSubmitted?'disabled':''} class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl">Tổng kết nhanh</button>`}</div>
       </div>
       <div id="result-box" class="hidden mt-6"></div>
     </div>
@@ -3191,7 +3144,7 @@ function questionHtml(q, idx, showReview) {
   const shouldShow = showReview || (currentSession.showInstant && revealed[q.id]);
   const isCorrect = selected === q.answer;
   return `<div id="q-${q.id}" class="question-card rounded-2xl border border-stone-200 bg-stone-50/60 p-5">
-    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4"><div class="flex gap-3"><span class="w-8 h-8 rounded-full bg-teal-600 text-white font-black flex items-center justify-center shrink-0">${idx+1}</span><div><div class="flex flex-wrap gap-2 mb-2"><span class="text-[11px] font-black px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-100">${q.clo}</span><span class="text-[11px] font-black px-2 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-100">${escapeHtml(q.chapter.replace('Chapter ', 'Ch. '))}</span><span class="text-[11px] font-black px-2 py-0.5 rounded-full bg-stone-100 text-stone-600 border border-stone-200">Đề ${q.sourceExam} · Câu ${q.sourceNumber}</span></div><h3 class="font-bold text-slate-900 leading-relaxed">${escapeHtml(q.question)}</h3></div></div>${shouldShow ? `<span class="text-xs font-black px-3 py-1 rounded-full ${isCorrect?'bg-green-100 text-green-700 border border-green-200':'bg-rose-100 text-rose-700 border border-rose-200'}">${isCorrect?'Đúng':'Sai'}</span>`:''}</div>
+    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4"><div class="flex gap-3"><span class="w-8 h-8 rounded-full bg-teal-600 text-white font-black flex items-center justify-center shrink-0">${idx+1}</span><div><div class="flex flex-wrap gap-2 mb-2"><span class="text-[11px] font-black px-2 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-100">${escapeHtml(q.chapter.replace('Chapter ', 'Ch. '))}</span></div><h3 class="font-bold text-slate-900 leading-relaxed">${escapeHtml(q.question)}</h3></div></div>${shouldShow ? `<span class="text-xs font-black px-3 py-1 rounded-full ${isCorrect?'bg-green-100 text-green-700 border border-green-200':'bg-rose-100 text-rose-700 border border-rose-200'}">${selected === undefined ? 'Chưa trả lời' : isCorrect?'Đúng':'Sai'}</span>`:''}</div>
     <div class="grid md:grid-cols-2 gap-3">${q.options.map((opt,oi)=>answerHtml(q,oi,opt,shouldShow)).join('')}</div>
     ${shouldShow ? explanationHtml(q, isCorrect) : ''}
   </div>`;
@@ -3203,7 +3156,7 @@ function answerHtml(q, oi, opt, shouldShow) {
   if (shouldShow && oi === q.answer) cls += ' answer-correct';
   if (shouldShow && selected && oi !== q.answer) cls += ' answer-wrong';
   const disabled = shouldShow ? 'disabled' : '';
-  return `<button class="${cls}" onclick="selectAnswer('${q.id}',${oi})" ${disabled}><span class="font-black mr-2">${String.fromCharCode(65+oi)}.</span>${escapeHtml(opt)}</button>`;
+  return `<button class="${cls}" onclick="selectAnswer('${q.id}',${oi})" aria-pressed="${selected}" ${disabled}><span class="font-black mr-2">${String.fromCharCode(65+oi)}.</span>${escapeHtml(opt)}</button>`;
 }
 function explanationHtml(q, isCorrect) {
   return `<div class="mt-4 grid lg:grid-cols-[1fr_.8fr] gap-4">
@@ -3212,37 +3165,47 @@ function explanationHtml(q, isCorrect) {
   </div>`;
 }
 function selectAnswer(qid, idx) {
-  if (!currentSession) return;
+  if (!currentSession || sessionSubmitted) return;
   const q=currentSession.questions.find(x=>x.id===qid);
-  if (!q) return;
+  if (!q || !Number.isInteger(idx) || idx < 0 || idx >= q.options.length) return;
   if (currentSession.showInstant && revealed[qid]) return;
   selectedAnswers[qid]=idx;
   if (currentSession.showInstant) {
     revealed[qid]=true;
     if (idx !== q.answer) addWrongIds([qid]); else removeWrongIds([qid]);
   }
-  renderPractice(false);
-  const card=document.getElementById('q-'+qid); if (card) card.scrollIntoView({behavior:'smooth', block:'nearest'});
+  const card=document.getElementById('q-'+qid);
+  if (currentSession.showInstant) {
+    card.outerHTML = questionHtml(q, currentSession.questions.indexOf(q), false);
+    const updated = document.getElementById('q-'+qid);
+    updated.tabIndex = -1; updated.focus({preventScroll:true});
+  } else {
+    card.querySelectorAll('.answer-btn').forEach((button, i) => { button.classList.toggle('answer-selected', i === idx); button.setAttribute('aria-pressed', String(i === idx)); });
+  }
+  updateProgress();
 }
 function updateProgress() {
   const answered=Object.keys(selectedAnswers).length;
   const total=currentSession?.questions.length || 1;
   const pct=Math.round(answered/total*100);
   const p=document.getElementById('progress-inner'); if(p) p.style.width=pct+'%';
+  document.querySelectorAll('[data-answered-count], #answered-num').forEach(el => el.textContent = answered);
 }
 function restartCurrentSession() { if(!currentSession) return; const old={...currentSession, questions:[...currentSession.questions]}; selectedAnswers={}; revealed={}; startSession(old); }
 function finishStudySession(){
-  if(!currentSession) return;
+  if(!currentSession || sessionSubmitted) return;
+  sessionSubmitted = true; stopTimer();
   const total=currentSession.questions.length;
   const answered=Object.keys(selectedAnswers).length;
   const score=currentSession.questions.reduce((sum,q)=> sum + (selectedAnswers[q.id]===q.answer ? 1 : 0),0);
-  showResultBox(score,total,answered,false);
+  renderPractice(true); showResultBox(score,total,answered,false);
 }
 function submitSession(auto){
-  if(!currentSession) return;
+  if(!currentSession || sessionSubmitted) return;
   if(!auto && currentSession.mode==='exam' && Object.keys(selectedAnswers).length < currentSession.questions.length){
-    if(!confirm(`Ông mới làm ${Object.keys(selectedAnswers).length}/${currentSession.questions.length} câu. Vẫn nộp bài chứ?`)) return;
+    if(!confirm(`Bạn đã làm ${Object.keys(selectedAnswers).length}/${currentSession.questions.length} câu. Nộp bài với các câu còn trống?`)) return;
   }
+  sessionSubmitted = true;
   stopTimer();
   const total=currentSession.questions.length;
   const score=currentSession.questions.reduce((sum,q)=> sum + (selectedAnswers[q.id]===q.answer ? 1 : 0),0);
@@ -3258,9 +3221,9 @@ function showResultBox(score,total,answered,auto){
   const percent=Math.round(score/total*100);
   const box=document.getElementById('result-box'); if(!box) return;
   const tone=percent>=80?'green':percent>=60?'amber':'rose';
-  const title=percent>=80?'Ngon rồi bro, nền khá chắc 🔥':percent>=60?'Ổn áp, nhưng vẫn nên chữa câu sai':'Cần ôn lại trọng tâm trước khi thi nha bro';
+  const title=percent>=80?'Bạn đã nắm khá chắc nội dung bài luyện':percent>=60?'Hãy xem lại các câu chưa đúng để củng cố kiến thức':'Hãy ôn lại lý thuyết rồi thử sức lần nữa';
   box.classList.remove('hidden');
-  box.innerHTML = `<div class="rounded-2xl border-2 border-${tone}-300 bg-${tone}-50 p-6 text-center animate-fade-in"><div class="text-5xl font-black mb-2">${score}/${total}</div><div class="text-lg font-black mb-2">${percent}% correct</div><p class="text-sm text-stone-700">${auto?'Hết giờ nên hệ thống tự nộp bài. ':''}${title}. Đã làm ${answered}/${total} câu.</p><div class="flex justify-center gap-3 mt-4 flex-wrap"><button onclick="scrollToFirstWrong()" class="bg-white hover:bg-stone-50 text-stone-800 border border-stone-200 font-black px-4 py-2 rounded-xl">Xem câu sai đầu tiên</button><button onclick="switchTab('mistakes')" class="bg-slate-900 hover:bg-slate-800 text-white font-black px-4 py-2 rounded-xl">Ôn lại câu sai</button></div></div>`;
+  box.innerHTML = `<div class="rounded-2xl border-2 border-${tone}-300 bg-${tone}-50 p-6 text-center animate-fade-in"><div class="text-5xl font-black mb-2">${score}/${total}</div><div class="text-lg font-black mb-2">${percent}% correct</div><p class="text-sm text-stone-700">${auto?'Hết giờ nên hệ thống tự nộp bài. ':''}${title}. Đã làm ${answered}/${total} câu.</p><div class="flex justify-center gap-3 mt-4 flex-wrap"><button onclick="scrollToFirstWrong()" ${score===total?'disabled':''} class="bg-white hover:bg-stone-50 text-stone-800 border border-stone-200 font-black px-4 py-2 rounded-xl">Xem câu sai hoặc chưa trả lời</button><button onclick="switchTab('mistakes')" class="bg-slate-900 hover:bg-slate-800 text-white font-black px-4 py-2 rounded-xl">Ôn lại câu sai</button></div></div>`;
   box.scrollIntoView({behavior:'smooth', block:'center'});
 }
 function scrollToFirstWrong(){

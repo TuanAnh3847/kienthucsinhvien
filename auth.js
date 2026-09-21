@@ -1,3 +1,17 @@
+// Storage may be blocked in private/embedded browsers. Firebase remains authoritative.
+const authStorage = (() => {
+    const memory = new Map();
+    let unavailable = false;
+    return {
+        getItem(key) {
+            if (!unavailable) { try { const value = localStorage.getItem(key); if (value !== null) memory.set(key, value); else memory.delete(key); return value; } catch { unavailable = true; } }
+            return memory.get(key) ?? null;
+        },
+        setItem(key, value) { memory.set(key, String(value)); if (!unavailable) { try { localStorage.setItem(key, value); } catch { unavailable = true; } } },
+        removeItem(key) { memory.delete(key); if (!unavailable) { try { localStorage.removeItem(key); } catch { unavailable = true; } } }
+    };
+})();
+
 // ===============================
 // 🔐 CORE AUTH (Firebase)
 // ===============================
@@ -191,7 +205,7 @@ window.loginGoogleReal = () => {
         loginInFlight = Promise.resolve(auth.signInWithPopup(provider))
             .then(async (credential) => {
                 if (!credential?.user) return credential;
-                localStorage.setItem('last_active_time', Date.now());
+                authStorage.setItem('last_active_time', Date.now());
 
                 try {
                     await recordLoginHistory(credential.user);
@@ -228,8 +242,8 @@ window.logoutReal = async () => {
     try {
         await releasePresence();
         await auth.signOut();
-        localStorage.removeItem("onthi_role");
-        localStorage.removeItem('last_active_time');
+        authStorage.removeItem("onthi_role");
+        authStorage.removeItem('last_active_time');
         window.location.href = "/";
         return true;
     } catch (error) {
@@ -243,7 +257,7 @@ window.logoutReal = async () => {
 window.continueAsGuest = () => {
     if (isHomePage()) {
         // Ở trang chủ thì cho làm khách thoải mái
-        localStorage.setItem("onthi_role", "guest");
+        authStorage.setItem("onthi_role", "guest");
         hideWelcomeModal();
     } else {
         // Lỡ có ở môn học mà cố bấm vô nút Khách -> Đá về sảnh
@@ -310,20 +324,20 @@ function initializeAuthUI() {
         if (presence && presence.uid !== user?.uid) void stopPresence();
         updateNavbar(user);
         if (user) {
-            const lastActive = Number(localStorage.getItem('last_active_time'));
+            const lastActive = Number(authStorage.getItem('last_active_time'));
             if (lastActive > 0 && Date.now() - lastActive > IDLE_TIMEOUT_MS) {
                 void checkIdleTime();
                 return;
             }
             if (!Number.isFinite(lastActive) || lastActive <= 0) resetIdleTimer();
-            localStorage.setItem('onthi_role', 'member');
+            authStorage.setItem('onthi_role', 'member');
             const modal = document.getElementById('welcome-modal');
             if (modal && !modal.classList.contains('hidden')) hideWelcomeModal();
             saveUserInfo(user);
             startPresence(user);
         } else {
-            if (localStorage.getItem('onthi_role') === 'member') localStorage.removeItem('onthi_role');
-            localStorage.removeItem('last_active_time');
+            if (authStorage.getItem('onthi_role') === 'member') authStorage.removeItem('onthi_role');
+            authStorage.removeItem('last_active_time');
             if (!isHomePage() && document.getElementById('welcome-modal')) showWelcomeModal();
         }
     }, error => {
@@ -405,14 +419,14 @@ const IDLE_TIMEOUT_MS = IDLE_TIMEOUT_HOURS * 60 * 60 * 1000;
 function resetIdleTimer() {
     // Chỉ ghi nhận nếu đang có người đăng nhập
     if (auth.currentUser && !idleLogoutInFlight) {
-        localStorage.setItem('last_active_time', Date.now());
+        authStorage.setItem('last_active_time', Date.now());
     }
 }
 
 // Thằng bảo vệ đi tuần tra xem có ai treo máy lố giờ không
 let idleLogoutInFlight = false;
 async function checkIdleTime() {
-    const lastActive = localStorage.getItem('last_active_time');
+    const lastActive = authStorage.getItem('last_active_time');
     if (lastActive && auth.currentUser && !idleLogoutInFlight) {
         const timeIdle = Date.now() - parseInt(lastActive);
         
@@ -422,8 +436,8 @@ async function checkIdleTime() {
             try {
                 await releasePresence();
                 await auth.signOut();
-                localStorage.removeItem('last_active_time');
-                localStorage.removeItem('onthi_role');
+                authStorage.removeItem('last_active_time');
+                authStorage.removeItem('onthi_role');
                 alert(`Phiên đăng nhập đã hết hạn sau ${IDLE_TIMEOUT_HOURS} giờ không hoạt động để bảo mật. Sinh viên vui lòng đăng nhập lại nhé!`);
                 window.location.reload();
             } catch (error) {
