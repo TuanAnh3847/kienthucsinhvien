@@ -592,7 +592,10 @@ function updateAnsweredCount() {
 function resetCurrentQuiz() {
   selectedAnswers = Object.create(null);
   lastScore = null;
-  if (currentSet) renderMcqSet(currentSet);
+  if (currentSet) {
+    renderMcqSet(currentSet);
+    document.getElementById('practice-panel').scrollIntoView({behavior:'smooth', block:'start'});
+  }
 }
 
 async function submitQuiz() {
