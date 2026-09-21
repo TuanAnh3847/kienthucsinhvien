@@ -39,7 +39,7 @@
       ]
     };
   </script>
- <script defer src="/edu-header.js"></script>
+ <script defer src="/edu-header.js"></script><script defer src="/edu-study.js"></script>
  <script defer src="/auth.js"></script>
  <style>
     ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:#f5f5f4}::-webkit-scrollbar-thumb{background:#d6d3d1;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#a8a29e}
@@ -72,7 +72,7 @@
     @media print{#edu-header,#welcome-modal,#conflict-modal,.no-print{display:none!important}.tab-content{display:block!important}.course-intro{margin-bottom:2rem}body{background:#fff!important}main{max-width:none!important;padding:0!important}.learn-section{break-inside:avoid}}
   </style>
 </head>
-<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+<body class="edu-study-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
  <div id="welcome-modal" role="dialog" aria-modal="true" aria-label="Đăng nhập Edu Connect" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center overflow-y-auto p-4 hidden opacity-0 transition-opacity duration-300">
  <div id="welcome-modal-content" class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-auto max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain transform scale-95 transition-transform duration-300">
  <div class="text-center mb-6"><div class="text-5xl mb-4">⚖️</div><h2 class="text-2xl font-extrabold text-slate-900 mb-2">Luật Thương mại Quốc tế / International Trade Law</h2><p class="text-stone-600 text-sm">Đăng nhập để tiếp tục học trên Edu Connect.</p></div>
@@ -576,17 +576,7 @@
 
  <script>
     // ===== BASE TAB-SCROLL BEHAVIOR FROM APPROVED SHELL =====
-    function eduScrollActiveChapterIntoView(tabId) {
-      const section = document.getElementById(tabId);
-      if (!section) return;
-      requestAnimationFrame(() => {
-        const sharedHeader = document.getElementById('edu-header');
-        const headerHeight = sharedHeader ? sharedHeader.getBoundingClientRect().height : 88;
-        const targetTop = section.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
-      });
-    }
-    window.onEduTabChanged = function(tabId) { eduScrollActiveChapterIntoView(tabId); };
+    // Chapter scrolling is owned by the shared header.
 
     const conflictData = {
       c01: {

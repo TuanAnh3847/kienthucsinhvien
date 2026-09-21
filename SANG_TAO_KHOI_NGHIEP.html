@@ -249,7 +249,7 @@
 .source-exercise-brief{margin:0 0 1rem;padding:.9rem;border-radius:.9rem;background:rgba(255,255,255,.08);border:1px solid #475569}.source-exercise-brief b{color:#bfdbfe}.source-exercise-brief ol{padding-left:1.2rem;margin:.55rem 0;color:#e2e8f0;font-size:.8rem;line-height:1.55}.source-exercise-brief p{font-size:.78rem;color:#cbd5e1}.source-activity-card{margin:1.1rem 0;padding:1rem;border-radius:1rem;background:#eff6ff;border:1px solid #bfdbfe}.source-activity-card>span{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#1d4ed8}.source-activity-card h4{font-weight:900;color:#1e3a8a;margin:.3rem 0}.source-activity-card p,.source-activity-card li{color:#475569;font-size:.88rem;line-height:1.55}.source-activity-card ul{padding-left:1.2rem}.source-activity-card small{display:block;margin-top:.55rem;color:#78716c}.source-activity-card.warning{background:#fffbeb;border-color:#fde68a}.source-activity-card.warning>span,.source-activity-card.warning h4{color:#92400e}
 </style>
 </head>
-<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+<body class="edu-study-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 <!-- PLATFORM LOGIN MODAL -->
 <div aria-label="Đăng nhập Edu Connect" aria-modal="true" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center overflow-y-auto p-4 hidden opacity-0 transition-opacity duration-300" id="welcome-modal" role="dialog">
 <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-auto max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain transform scale-95 transition-transform duration-300" id="welcome-modal-content">
@@ -1096,32 +1096,7 @@
       shared header. The fixed Course Intro remains above the viewport.
     */
 
-    function eduScrollActiveChapterIntoView(tabId) {
-      const section = document.getElementById(tabId);
-      if (!section) return;
-
-      requestAnimationFrame(() => {
-        const sharedHeader = document.getElementById('edu-header');
-        const headerHeight = sharedHeader
-          ? sharedHeader.getBoundingClientRect().height
-          : 88;
-
-        const targetTop =
-          section.getBoundingClientRect().top +
-          window.scrollY -
-          headerHeight -
-          16;
-
-        window.scrollTo({
-          top: Math.max(0, targetTop),
-          behavior: 'smooth'
-        });
-      });
-    }
-
-    window.onEduTabChanged = function(tabId) {
-      eduScrollActiveChapterIntoView(tabId);
-    };
+    // Chapter scrolling is owned by the shared header.
   </script>
 <script>
 (function(){

@@ -60,3 +60,65 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
   #nav-login-btn svg { flex-shrink: 0; }
   #welcome-modal-content { padding: 1.5rem; }
 }
+
+/* Study rhythm: shared hierarchy, with each subject's own colors and visuals. */
+body.edu-study-page .course-intro { margin-bottom: 2rem; }
+body.edu-study-page .course-intro-title,
+body.edu-study-page main > div:first-child > h1 {
+  max-width: 62rem; margin-left: auto; margin-right: auto;
+  font-size: clamp(1.875rem, 3.35vw, 3rem); line-height: 1.15;
+  text-align: center; text-wrap: balance; overflow-wrap: break-word;
+}
+body.edu-study-page .course-intro-subtitle { margin-top: .85rem; font-size: 1rem; line-height: 1.6; }
+body.edu-study-page .study-guide { margin-top: 1.35rem; padding: 1rem 1.25rem; }
+body.edu-study-page .study-guide-title { margin-bottom: .65rem; }
+body.edu-study-page .study-guide-list { gap: .5rem; font-size: .9375rem; }
+body.edu-study-page .chapter-opening { margin-bottom: 1.5rem; }
+body.edu-study-page .chapter-title { font-size: clamp(1.4rem, 2.1vw, 1.8rem); }
+body.edu-study-page .learning-space,
+body.edu-study-page .learning-stack { gap: 1.6rem; }
+body.edu-study-page .learn-section { margin-top: 1.65rem; margin-bottom: 1.65rem; }
+body.edu-study-page .learning-space > .learn-section { margin-top: 0; margin-bottom: 0; }
+body.edu-study-page .section-head h3 { line-height: 1.35; }
+body.edu-study-page main select:not(.edu-choice-source) {
+  max-width: 100%; min-width: 0; min-height: 42px; padding: .55rem 2rem .55rem .75rem;
+  border: 1px solid #cbd5e1; border-radius: .7rem; color: #334155;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2364758b' stroke-width='1.8'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E") no-repeat right .6rem center;
+  appearance: none; font-size: .875rem; line-height: 1.4;
+}
+body.edu-study-page main :is(input:not([type=radio]):not([type=checkbox]):not([type=range]), textarea) {
+  max-width: 100%; min-width: 0; border-radius: .65rem;
+}
+body.edu-study-page main :is(select,input,textarea,button,summary):focus-visible {
+  outline: 3px solid #2dd4bf; outline-offset: 2px;
+}
+body.edu-study-page .edu-choice-source { display: none !important; }
+.edu-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.edu-choice-group { display: flex; flex-wrap: wrap; gap: .4rem; min-width: 0; border: 0; padding: 0; margin: 0; }
+.edu-choice { position: relative; display: flex; cursor: pointer; min-width: 0; }
+.edu-choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.edu-choice span {
+  display: flex; align-items: center; justify-content: center; min-height: 42px;
+  padding: .45rem .7rem; border: 1px solid #cbd5e1; border-radius: .65rem;
+  background: #fff; color: #475569; font-size: .8125rem; line-height: 1.35; font-weight: 650;
+}
+.edu-choice:hover span { border-color: #0d9488; }
+.edu-choice input:checked + span { background: #e6f5f1; border-color: #0f766e; color: #115e59; box-shadow: inset 0 0 0 1px #0f766e; }
+.edu-choice input:focus-visible + span { outline: 3px solid #2dd4bf; outline-offset: 2px; }
+.edu-choice input:disabled + span { opacity: .5; cursor: not-allowed; }
+body.edu-study-page .edu-choice-row { grid-template-columns: minmax(0,1fr); align-content: start; align-items: start; gap: .65rem; }
+body.edu-study-page .edu-choice-row:has(.quiz-num) { grid-template-columns: auto minmax(0,1fr); }
+body.edu-study-page .edu-choice-row:has(.quiz-num) .edu-choice-group { grid-column: 2; }
+body.edu-study-page .edu-compact-activity { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .75rem; }
+body.edu-study-page .edu-compact-activity > :not(.edu-choice-row) { grid-column: 1 / -1; }
+@media (max-width: 767px) {
+  body.edu-study-page .edu-compact-activity { grid-template-columns: 1fr; }
+  body.edu-study-page .study-guide { padding: 1rem; }
+}
+
+/* Homepage: same content, less empty space between icon, copy and action. */
+.course-card[class] { padding-top: 1rem; padding-bottom: 1rem; }
+.course-card > .w-14 { width: 2.75rem; height: 2.75rem; margin-bottom: .65rem; font-size: 1.75rem; }
+.course-card > h3 { margin-bottom: .375rem; }
+.course-card > p { margin-bottom: .5rem; }
+.course-card > .border-t { padding-top: .65rem; }

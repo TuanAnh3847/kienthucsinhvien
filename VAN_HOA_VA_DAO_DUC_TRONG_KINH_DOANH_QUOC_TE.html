@@ -36,7 +36,7 @@ window.EDU_PAGE_CONFIG={
  ]
 };
 </script>
-<script defer src="/edu-header.js"></script>
+<script defer src="/edu-header.js"></script><script defer src="/edu-study.js"></script>
 <script defer src="/auth.js"></script>
 <style>
 :root{--ink:#0f172a;--muted:#57534e;--line:#e7e5e4;--card:#fff;--teal:#0d9488}
@@ -64,7 +64,7 @@ window.EDU_PAGE_CONFIG={
 @media print{#edu-header,#welcome-modal,.no-print{display:none!important}.tab-content{display:block!important}.course-intro{margin-bottom:2rem}body{background:#fff!important}main{max-width:none!important;padding:0!important}.lesson-section{break-inside:avoid;box-shadow:none}}
 </style>
 </head>
-<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+<body class="edu-study-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 <div id="welcome-modal" role="dialog" aria-modal="true" aria-label="Đăng nhập Edu Connect" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center overflow-y-auto p-4 hidden opacity-0 transition-opacity duration-300"><div id="welcome-modal-content" class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-auto max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain transform scale-95 transition-transform duration-300"><div class="text-center mb-6"><div class="text-5xl mb-4">🌍⚖️</div><h2 class="text-2xl font-extrabold text-slate-900 mb-2">Văn hóa và Đạo đức trong Kinh doanh Quốc tế</h2><p class="text-stone-600 text-sm">Đăng nhập để tiếp tục học trên Edu Connect.</p></div><div class="space-y-4"><button type="button" onclick="loginGoogleReal()" class="google-btn w-full py-3 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3"><span class="text-lg font-black text-blue-600">G</span><span>Đăng nhập bằng Google</span></button><button type="button" onclick="window.location.href='/'" class="w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-800 border border-slate-300 rounded-lg font-semibold transition-colors">🏠 Quay về Trang chủ</button></div></div></div>
 <div id="edu-header"></div>
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -218,8 +218,7 @@ window.EDU_PAGE_CONFIG={
  const og=$('#og-url'); if(og) og.setAttribute('content',location.href);
 
  // Base tab scroll behavior — shared header owns visibility.
- function eduScrollActiveChapterIntoView(tabId){const section=document.getElementById(tabId);if(!section)return;requestAnimationFrame(()=>{const h=document.getElementById('edu-header');const hh=h?h.getBoundingClientRect().height:88;const top=section.getBoundingClientRect().top+window.scrollY-hh-16;window.scrollTo({top:Math.max(0,top),behavior:'smooth'})})}
- window.onEduTabChanged=function(tabId){eduScrollActiveChapterIntoView(tabId)};
+ // Chapter scrolling is owned by the shared header.
 
  // I04 Layer explorer
  const layerData={

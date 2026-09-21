@@ -48,7 +48,7 @@
     };
   </script>
 
- <script defer src="/edu-header.js"></script>
+ <script defer src="/edu-header.js"></script><script defer src="/edu-study.js"></script>
  <script defer src="/auth.js"></script>
 
  <style>
@@ -273,7 +273,7 @@
   </style>
 </head>
 
-<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+<body class="edu-study-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
  <div id="welcome-modal" role="dialog" aria-modal="true" aria-label="Đăng nhập Edu Connect"
        class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center overflow-y-auto p-4 hidden opacity-0 transition-opacity duration-300">
  <div id="welcome-modal-content"
@@ -3134,21 +3134,7 @@
 
  <script>
     // Keep the approved shell's chapter-scroll behavior.
-    function eduScrollActiveChapterIntoView(tabId) {
-      const section = document.getElementById(tabId);
-      if (!section) return;
-
-      requestAnimationFrame(() => {
-        const sharedHeader = document.getElementById('edu-header');
-        const headerHeight = sharedHeader ? sharedHeader.getBoundingClientRect().height : 88;
-        const targetTop = section.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
-      });
-    }
-
-    window.onEduTabChanged = function(tabId) {
-      eduScrollActiveChapterIntoView(tabId);
-    };
+    // Chapter scrolling is owned by the shared header.
 
     const QUIZZES = {"bias": [{"p": "Putting off a financial action until a later time.", "a": "Procrastination"}, {"p": "The present is weighted more heavily than the future; a higher discount rate means more impatience.", "a": "Discounting"}, {"p": "Choices are influenced by a nearby reference point.", "a": "Anchoring Effect"}, {"p": "The same amount of money is treated differently because of subjective labels.", "a": "Mental Accounting"}, {"p": "A decision is made mainly because other people are doing it.", "a": "Bandwagon Effect"}, {"p": "A new possession triggers a spiral of additional consumption.", "a": "Diderot Effect"}], "principles": [{"p": "Seek knowledge, use professional advice wisely, and take responsibility for your lifetime plan.", "a": "1"}, {"p": "Putting off a financial plan makes goals harder to achieve.", "a": "2"}, {"p": "Money today is worth more than money in the future; understand compound interest.", "a": "3"}, {"p": "Compare investment alternatives on an after-tax basis and understand tax effects.", "a": "4"}, {"p": "Plan for unexpected events and keep liquid funds available.", "a": "5"}, {"p": "Differentiate wants from needs and do homework before a purchase.", "a": "6"}, {"p": "Use the right insurance for major financially devastating catastrophes.", "a": "7"}, {"p": "Higher risk demands higher return; diversification reduces random risk.", "a": "8"}, {"p": "Behavioral biases, mental accounting and sunk cost can affect financial decisions.", "a": "9"}, {"p": "Take the first step; pay yourself first and save before spending.", "a": "10"}], "careerBC": [{"p": "Big salary", "a": "Benefit"}, {"p": "Personal growth and job advancements", "a": "Benefit"}, {"p": "High job satisfaction", "a": "Benefit"}, {"p": "Living far from old friends and family", "a": "Cost"}, {"p": "Working long hours", "a": "Cost"}, {"p": "Too much traveling", "a": "Cost"}, {"p": "Less-desirable geographic area / climate", "a": "Cost"}, {"p": "Sitting at a desk all day", "a": "Cost"}], "productCategory": [{"p": "Book of saving / certificate of deposit", "a": "Savings"}, {"p": "Mortgage", "a": "Consumer loans"}, {"p": "Credit card", "a": "Credit cards"}, {"p": "Agreement between a bank and an insurance company", "a": "Bancassurance"}, {"p": "Digital wallet service", "a": "Non-bank payment services"}, {"p": "Stock", "a": "Investment instruments"}], "secured": [{"p": "Loan backed by assets of the borrower", "a": "Secured"}, {"p": "Loan not backed by assets of the borrower", "a": "Unsecured"}], "instrument": [{"p": "Shares of ownership in a corporation", "a": "Stock"}, {"p": "Debt instrument promising repayment at a specific time and regular interest", "a": "Bond"}, {"p": "Shares of ownership in a specific fund managed by a mutual fund", "a": "Mutual fund certificate"}, {"p": "Collection of investments assembled to meet investment goals", "a": "Portfolio"}], "riskType": [{"p": "Stock-market investment", "a": "Speculative risk"}, {"p": "Fire", "a": "Pure risk"}, {"p": "Automobile accident", "a": "Pure risk"}, {"p": "Illness", "a": "Pure risk"}, {"p": "Theft", "a": "Pure risk"}], "insurance": [{"p": "Combines liability and property coverages homeowners/renters typically need", "a": "Homeowner’s Insurance"}, {"p": "Combines liability and property coverages most car owners/drivers need", "a": "Automobile Insurance"}, {"p": "Benefits provided to a living individual due to sickness or injury", "a": "Health Insurance"}, {"p": "Provides payment to a specified beneficiary when the insured dies", "a": "Life Insurance"}], "lending": [{"p": "Single loan; Các ví dụ include car, house, studying", "a": "Single-disbursement lending"}, {"p": "Credit limit facility; Sơ đồ shows many single loans within the facility", "a": "Line of credit"}, {"p": "Borrowing within an overdraft limit on a payment account", "a": "Current-account overdraft"}], "creditAD": [{"p": "Can help achieve goals such as purchasing a home or car", "a": "Advantage"}, {"p": "Appropriate use helps establish good credit history", "a": "Advantage"}, {"p": "Eliminates the need to carry cash", "a": "Advantage"}, {"p": "Creates a history of past purchases", "a": "Advantage"}, {"p": "Can have a high cost", "a": "Disadvantage"}, {"p": "Easier to obtain than to pay back", "a": "Disadvantage"}, {"p": "Can encourage impulse purchases you cannot afford", "a": "Disadvantage"}, {"p": "Missed minimum repayment can damage credit rating", "a": "Disadvantage"}], "fees": [{"p": "Paid annually until the card expires or you stop using it", "a": "Annual Fee"}, {"p": "Fee category listed when the card is issued", "a": "Card issuance fee"}, {"p": "Fee category listed for going beyond the credit limit", "a": "Fee for exceeding credit limit"}, {"p": "Fee category listed for an international transaction", "a": "International transaction fees"}, {"p": "Fee category listed for late payment", "a": "Late payment fee"}, {"p": "Fee category listed for cash withdrawal", "a": "Cash withdrawal fee"}, {"p": "Fee category listed for cancelling the card", "a": "Credit card cancellation fee"}, {"p": "Fee category listed for card reissuance", "a": "Credit card reissuance fee"}, {"p": "Fee category listed for statement printing", "a": "Statement printing fee"}]};
     const QUIZ_OPTIONS = {"bias": ["Procrastination", "Discounting", "Anchoring Effect", "Mental Accounting", "Bandwagon Effect", "Diderot Effect"], "principles": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], "careerBC": ["Benefit", "Cost"], "productCategory": ["Savings", "Consumer loans", "Credit cards", "Bancassurance", "Non-bank payment services", "Investment instruments"], "secured": ["Secured", "Unsecured"], "instrument": ["Stock", "Bond", "Mutual fund certificate", "Portfolio"], "riskType": ["Speculative risk", "Pure risk"], "insurance": ["Homeowner’s Insurance", "Automobile Insurance", "Health Insurance", "Life Insurance"], "lending": ["Single-disbursement lending", "Line of credit", "Current-account overdraft"], "creditAD": ["Advantage", "Disadvantage"], "fees": ["Annual Fee", "Card issuance fee", "Fee for exceeding credit limit", "International transaction fees", "Late payment fee", "Cash withdrawal fee", "Credit card cancellation fee", "Credit card reissuance fee", "Statement printing fee"]};

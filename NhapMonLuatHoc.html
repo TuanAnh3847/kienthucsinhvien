@@ -51,7 +51,7 @@ window.EDU_PAGE_CONFIG = {
     ]
 };
 </script>
-<script defer src="/edu-header.js"></script>
+<script defer src="/edu-header.js"></script><script defer src="/edu-study.js"></script>
 <script defer src="/auth.js"></script>
 
 <style>
@@ -77,7 +77,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 .timeline-dot::before { content: ''; position: absolute; left: -29px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background-color: #0d9488; border: 2px solid #fff; box-shadow: 0 0 0 2px #0d9488; }
 </style>
 </head>
-<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+<body class="edu-study-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
 <!-- INITIAL WELCOME MODAL -->
 <div id="welcome-modal" role="dialog" aria-modal="true" aria-label="Đăng nhập Edu Connect" class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center overflow-y-auto p-4 hidden opacity-0 transition-opacity duration-300">

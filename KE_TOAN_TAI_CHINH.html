@@ -48,7 +48,7 @@
     };
   </script>
 
- <script defer src="/edu-header.js"></script>
+ <script defer src="/edu-header.js"></script><script defer src="/edu-study.js"></script>
  <script defer src="/auth.js"></script>
 
  <style>
@@ -261,7 +261,7 @@
   </style>
 </head>
 
-<body class="bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+<body class="edu-study-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
  <!-- PLATFORM LOGIN MODAL -->
  <div id="welcome-modal"
@@ -432,32 +432,7 @@
       shared header. The fixed Course Intro remains above the viewport.
     */
 
-    function eduScrollActiveChapterIntoView(tabId) {
-      const section = document.getElementById(tabId);
-      if (!section) return;
-
-      requestAnimationFrame(() => {
-        const sharedHeader = document.getElementById('edu-header');
-        const headerHeight = sharedHeader
-          ? sharedHeader.getBoundingClientRect().height
-          : 88;
-
-        const targetTop =
-          section.getBoundingClientRect().top +
-          window.scrollY -
-          headerHeight -
-          16;
-
-        window.scrollTo({
-          top: Math.max(0, targetTop),
-          behavior: 'smooth'
-        });
-      });
-    }
-
-    window.onEduTabChanged = function(tabId) {
-      eduScrollActiveChapterIntoView(tabId);
-    };
+    // Chapter scrolling is owned by the shared header.
   </script>
 
 <script>

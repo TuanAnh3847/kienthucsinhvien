@@ -38,7 +38,7 @@ const report = [];
           try { if (typeof window.eval(m[1]) !== 'function') missingHandlers.push(m[1]); } catch { missingHandlers.push(m[1]); }
         }
       }
-      return { duplicateIds: [...new Set(ids.filter((id,i) => ids.indexOf(id) !== i))], missingHandlers: [...new Set(missingHandlers)], links: [...document.querySelectorAll('a[href]')].map(a => a.getAttribute('href')), chapters: [...document.querySelectorAll('#mobile-nav option')].map(o => o.value), modal: !!document.getElementById('welcome-modal'), firebase: typeof firebase !== 'undefined' && firebase.apps.length === 1 };
+      return { duplicateIds: [...new Set(ids.filter((id,i) => ids.indexOf(id) !== i))], missingHandlers: [...new Set(missingHandlers)], links: [...document.querySelectorAll('a[href]')].map(a => a.getAttribute('href')), chapters: window.EduHeader ? window.EduHeader.config.chapters.map(chapter => chapter.id) : [...document.querySelectorAll('#mobile-nav option')].map(o => o.value), modal: !!document.getElementById('welcome-modal'), firebase: typeof firebase !== 'undefined' && firebase.apps.length === 1 };
     });
     const brokenLinks = structure.links.filter(h => {
       if (!h || /^(#|mailto:|tel:|https?:|javascript:)/.test(h)) return false;
@@ -54,13 +54,16 @@ const report = [];
       await page.setViewportSize({ width, height: 900 });
       const states = [];
       for (const chapter of structure.chapters.length ? structure.chapters : ['']) {
-        if (chapter) await page.locator('#mobile-nav').evaluate((el, value) => { el.value = value; el.dispatchEvent(new Event('change', { bubbles:true })); }, chapter);
+        if (chapter) await page.evaluate(value => {
+          if (window.EduHeader) window.EduHeader.switchTab(value, {scroll:false});
+          else { const el = document.getElementById('mobile-nav'); el.value = value; el.dispatchEvent(new Event('change', {bubbles:true})); }
+        }, chapter);
         await page.waitForTimeout(60);
         states.push(await page.evaluate(() => {
           const visible = el => !!el && el.getBoundingClientRect().width > 0 && el.getBoundingClientRect().height > 0;
           const overflow = [...document.querySelectorAll('body *')].filter(el => { const r=el.getBoundingClientRect(); return visible(el) && r.right > innerWidth+2 && !el.closest('.overflow-x-auto, .scroll-table'); }).slice(0,8).map(el => el.tagName + '#' + el.id + '.' + String(el.className).slice(0,80));
           const wideScroll = [...document.querySelectorAll('body *')].filter(el => visible(el) && el.scrollWidth > el.clientWidth + 2).slice(0,8).map(el => ({el:el.tagName + '#' + el.id + '.' + String(el.className).slice(0,60), clientWidth:el.clientWidth, scrollWidth:el.scrollWidth, overflowX:getComputedStyle(el).overflowX}));
-          return { chapter: document.getElementById('mobile-nav')?.value, scrollWidth:document.documentElement.scrollWidth, desktopNav:visible(document.getElementById('nav-menu')), mobileNav:visible(document.getElementById('mobile-nav')), overflow, wideScroll };
+          return { chapter: window.EduHeader?.activeTab || document.getElementById('mobile-nav')?.value, scrollWidth:document.documentElement.scrollWidth, desktopNav:visible(document.getElementById('nav-menu')), mobileNav:visible(document.getElementById('mobile-nav')), overflow, wideScroll };
         }));
       }
       widths.push({width, states});
