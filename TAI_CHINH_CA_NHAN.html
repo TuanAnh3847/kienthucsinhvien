@@ -153,7 +153,8 @@
     .ladder-step:nth-child(4){ margin-left:15%; background:#f5f3ff; }
     .risk-axis { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:1rem; padding:1rem; background:linear-gradient(90deg,#ecfdf5,#fffbeb,#fff1f2); border-radius:1rem; border:1px solid #e2e8f0; }
     .risk-axis .center-arrow { font-weight:900; color:#64748b; font-size:1.4rem; }
-    .limited-visual { display:grid; grid-template-columns:auto 1fr; gap:.9rem; padding:1rem; border:1px dashed #f59e0b; background:#fffbeb; border-radius:1rem; }
+    .limited-visual { display:grid; grid-template-columns:auto minmax(0,1fr); gap:.9rem; padding:1rem; border:1px dashed #f59e0b; background:#fffbeb; border-radius:1rem; min-width:0; }
+    .two-col > *, .three-col > *, .four-col > *, .limited-visual > * { min-width:0; }
     .limited-icon { width:2.25rem; height:2.25rem; display:grid; place-items:center; border-radius:.75rem; background:#fef3c7; color:#92400e; font-weight:900; }
     .limited-visual h4 { font-weight:900; color:#78350f; margin-bottom:.35rem; }
     .limited-visual p { color:#57534e; font-size:.88rem; line-height:1.55; }
@@ -196,9 +197,9 @@
     .timeline-item strong { display:block; color:#1e293b; }
     .timeline-item span { color:#64748b; font-size:.82rem; }
     .study-flip { perspective:1000px; min-height:180px; width:100%; text-align:left; background:transparent; border:0; padding:0; cursor:pointer; }
-    .study-flip-inner { position:relative; display:block; width:100%; height:100%; min-height:180px; transition:transform .55s; transform-style:preserve-3d; }
+    .study-flip-inner { position:relative; display:grid; width:100%; height:100%; min-height:180px; transition:transform .55s; transform-style:preserve-3d; }
     .study-flip.flipped .study-flip-inner { transform:rotateY(180deg); }
-    .study-flip-face { position:absolute; inset:0; backface-visibility:hidden; border-radius:1rem; padding:1rem; border:1px solid #ddd6fe; background:#fff; display:flex; flex-direction:column; justify-content:space-between; gap:.75rem; }
+    .study-flip-face { position:relative; grid-area:1 / 1; backface-visibility:hidden; border-radius:1rem; padding:1rem; border:1px solid #ddd6fe; background:#fff; display:flex; flex-direction:column; justify-content:space-between; gap:.75rem; }
     .study-flip-front { background:linear-gradient(145deg,#faf5ff,#fff); color:#4c1d95; }
     .study-flip-back { transform:rotateY(180deg); background:linear-gradient(145deg,#eef2ff,#fff); color:#312e81; }
     .study-flip-face strong { font-size:.95rem; line-height:1.45; }
@@ -306,9 +307,9 @@
  <div class="study-guide">
  <h2 class="study-guide-title"><span aria-hidden="true">💡</span><span>Hướng Dẫn Ôn Tập Hiệu Quả</span></h2>
  <div class="study-guide-list">
- <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Sơ đồ & bảng so sánh:</strong> học theo mối quan hệ, quy trình, phân loại và dữ liệu gốc thay vì đọc một khối chữ dài.</span></div>
- <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Calculator & builder:</strong> tự nhập số cho Net Worth, Cash Flow, Compound Interest và hai công thức bảo hiểm đã học.</span></div>
- <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Matching, ordering & flashcard:</strong> kiểm tra nhanh khái niệm, chuỗi bước và thuật ngữ ngay trong từng chương.</span></div>
+ <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Sơ đồ và bảng so sánh:</strong> học qua mối quan hệ, quy trình, phân loại và dữ liệu minh họa.</span></div>
+ <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Tự nhập số để tính:</strong> thực hành Net Worth, Cash Flow, Compound Interest và hai công thức bảo hiểm.</span></div>
+ <div class="study-guide-item"><span class="study-guide-check">✓</span><span><strong>Ghép cặp và thẻ ghi nhớ:</strong> kiểm tra khái niệm, trình tự và thuật ngữ trong từng chương.</span></div>
  </div>
  </div>
  </section>
@@ -340,7 +341,7 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Hierarchy of Financial Needs</h4>
- <p><strong>Phần có thể giữ lại:</strong> Mô hình hierarchy of financial needs đặt cạnh Maslow hierarchy để nhấn mạnh quan hệ giữa nhu cầu cơ bản và các ưu tiên tài chính theo tầng.</p>
+ <p><strong>Ý chính:</strong> Mô hình hierarchy of financial needs đặt cạnh Maslow hierarchy để nhấn mạnh quan hệ giữa nhu cầu cơ bản và các ưu tiên tài chính theo tầng.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Sơ đồ chưa có đầy đủ các lớp và chi tiết độ tuổi để đối chiếu.</p>
  </div>
  </div>
@@ -361,7 +362,7 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Starting age / $1 million by age 68</h4>
- <p><strong>Phần có thể giữ lại:</strong> Quan hệ minh họa: bắt đầu ở các độ tuổi khác nhau và mức lãi suất khác nhau làm thay đổi khoản đóng góp cần thiết để đạt $1 million ở tuổi 68.</p>
+ <p><strong>Ý chính:</strong> Quan hệ minh họa: bắt đầu ở các độ tuổi khác nhau và mức lãi suất khác nhau làm thay đổi khoản đóng góp cần thiết để đạt $1 million ở tuổi 68.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Bảng chưa có số liệu cụ thể về tuổi và khoản đóng góp.</p>
  </div>
  </div>
@@ -404,7 +405,7 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Earlier contributions compound longer</h4>
- <p><strong>Phần có thể giữ lại:</strong> Quan hệ được bảo toàn: hai nhà đầu tư bắt đầu ở thời điểm khác nhau; người bắt đầu sớm hơn có thời gian compounding dài hơn.</p>
+ <p><strong>Ý chính:</strong> Quan hệ được bảo toàn: hai nhà đầu tư bắt đầu ở thời điểm khác nhau; người bắt đầu sớm hơn có thời gian compounding dài hơn.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Chưa có dữ liệu tuổi, khoản đóng góp và giá trị để vẽ đồ thị định lượng.</p>
  </div>
  </div>
@@ -453,7 +454,7 @@
  </section>
 
  <section class="learning-panel">
- <div class="kicker">Practice nhẹ trong Theory</div><h3 class="section-title">Interactive Learning Lab</h3>
+ <div class="kicker">Thử kiểm tra nhanh</div><h3 class="section-title">Interactive Learning Lab</h3>
  <div class="two-col">
  <div class="interactive-box">
  <h4>Lập mục tiêu SMART</h4>
@@ -662,7 +663,7 @@
  <div class="ladder-step"><span class="number-badge mb-0">3</span><span>Reflect on work style and <strong>benefits vs costs</strong></span></div>
  <div class="ladder-step"><span class="number-badge mb-0">4</span><span>Finalize a multi-period <strong>career plan</strong></span></div>
  </div>
- <div class="status-note">Bản trình bày theo phần dữ liệu còn bảo toàn: Sơ đồ is a staircase from clarifying values/interests toward finalizing a career plan, but its full micro-labels are not preserved. The sequence above uses only concepts explicitly retained in the dữ liệu hiện có; it is not claimed as an exact reproduction of.</div>
+ <div class="status-note">Sơ đồ mô tả tiến trình từ làm rõ giá trị, sở thích đến hoàn thiện kế hoạch nghề nghiệp. Một số nhãn chi tiết đang được bổ sung.</div>
 
  <div class="two-col mt-5">
  <article class="concept-card">
@@ -708,7 +709,7 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Decision Making Worksheet</h4>
- <p><strong>Phần có thể giữ lại:</strong> Work-style reflection, values, professional interests và benefits/costs là các trường thông tin phù hợp với nội dung bài có thể dùng làm bản trình bày theo phần dữ liệu còn bảo toàn.</p>
+ <p><strong>Ý chính:</strong> Work-style reflection, values, professional interests và benefits/costs là các trường thông tin phù hợp với nội dung bài có thể dùng làm bản trình bày theo phần dữ liệu còn bảo toàn.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Full rows, rating scale và exact worksheet cells của không được bảo toàn.</p>
  </div>
  </div>
@@ -761,7 +762,7 @@
  <div class="two-col">
  <div>
  <h4 class="sub-title">Vietnamese career-field salary-range visual</h4>
- <div class="concept-grid"><div class="concept-card"><h4>IT</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Marketing</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Fashion</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Construction</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Tourism</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Foreign Languages</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Hotel Management</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Electrical/Electronics</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Medicine</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Food Technology</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Real Estate</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Law</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Banking</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div><div class="concept-card"><h4>Aviation</h4><p class="muted">Salary-range values from the Sơ đồ were not preserved.</p></div></div>
+ <div class="concept-grid"><div class="concept-card"><h4>IT</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Marketing</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Fashion</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Construction</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Tourism</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Foreign Languages</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Hotel Management</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Electrical/Electronics</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Medicine</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Food Technology</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Real Estate</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Law</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Banking</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div><div class="concept-card"><h4>Aviation</h4><p class="muted">Chưa có khoảng lương để đối chiếu.</p></div></div>
  <div class="status-note">Bảng chưa có khoảng lương để đối chiếu.</div>
  </div>
  <div>
@@ -772,7 +773,7 @@
  <div class="timeline-item"><strong>Medium-term</strong><span>Exact bài học goal unavailable.</span></div>
  <div class="timeline-item"><strong>Long-term</strong><span>Exact bài học goal unavailable.</span></div>
  </div>
- <div class="status-note">Visual structure is preserved without inventing Harry Johnson's missing goal text or year boundaries.</div>
+ <div class="status-note">Ví dụ Harry Johnson chưa có đủ nội dung mục tiêu và mốc năm.</div>
  </div>
  </div>
 
@@ -786,14 +787,14 @@
  <div class="flow-node"><strong>Expenses</strong><span>bảng thực hành dimension</span></div>
  <div class="flow-node"><strong>Net value</strong><span>bảng thực hành outcome label</span></div>
  </div>
- <p class="muted mt-2">Exact worksheet rows/cells are unavailable; no new formula or numeric template is asserted.</p>
+ <p class="muted mt-2">Bảng thực hành chưa có chi tiết từng khoản và số liệu để tính.</p>
  </div>
  </div>
  <div class="limited-visual">
  <div class="limited-icon">⌕</div>
  <div>
  <h4>Employment-search objective</h4>
- <p>Course objective references effective employment-search strategies and a worksheet/career-fit discussion.</p>
+ <p>Thảo luận chiến lược tìm việc hiệu quả và mức độ phù hợp với nghề nghiệp.</p>
  <p class="muted">Phần này tập trung vào các hướng tìm việc chính; quy trình chi tiết đang được bổ sung.</p>
  </div>
  </div>
@@ -1055,7 +1056,7 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Bancassurance product table</h4>
- <p><strong>Phần có thể giữ lại:</strong> Bảng phân biệt life và non-life bancassurance products, đồng thời minh họa quan hệ bank ↔ insurer.</p>
+ <p><strong>Ý chính:</strong> Bảng phân biệt life và non-life bancassurance products, đồng thời minh họa quan hệ bank ↔ insurer.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Phần này chưa có danh sách sản phẩm life/non-life để đối chiếu.</p>
  </div>
  </div>
@@ -1469,7 +1470,7 @@
  <article class="concept-card">
  <h4>Debt / savings guidance</h4>
  <div class="flex flex-wrap gap-2 mb-2"><span class="pill">Debt ratio</span><span class="pill">Long-term debt coverage ratio</span><span class="pill">Solvency ratio</span></div>
- <p>Debt-obligation visual says it should decrease as you get older and “Less than 2.5 is a red flag,” but exact mapping of 2.5 to a specific ratio is not preserved.</p>
+ <p>Nghĩa vụ nợ nên giảm khi tuổi tăng. Nhận định “Less than 2.5 is a red flag” chưa chỉ rõ 2.5 ứng với tỷ số nào; không áp dụng ngưỡng này cho một tỷ số cụ thể.</p>
  <p class="mt-2">Under 80/20 or 50/30/20, bài học says <strong>20% of income</strong> should go toward savings.</p>
  </article>
  </div>
@@ -1621,7 +1622,7 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Ben / Arthur compounding comparison</h4>
- <p><strong>Phần có thể giữ lại:</strong> Quan hệ học thuật: visual compares two compounding paths to illustrate timing effects.</p>
+ <p><strong>Ý chính:</strong> Quan hệ học thuật: visual compares two compounding paths to illustrate timing effects.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Các bảng dữ liệu phía trên cung cấp những độ tuổi, khoản đóng góp, tỷ suất và tổng giá trị dùng trong chương.</p>
  </div>
  </div>
@@ -1637,7 +1638,7 @@
  <div class="metric"><strong>100,000,000 VND</strong><span>Loan amount</span></div>
  <div class="metric"><strong>12 months</strong><span>Term</span></div>
  <div class="metric"><strong>12%</strong><span>Stated rate on initial balance</span></div>
- <div class="metric"><strong>12,000,000 VND</strong><span>Total interest preserved</span></div>
+ <div class="metric"><strong>12,000,000 VND</strong><span>Tổng tiền lãi</span></div>
  </div>
  <p class="mt-3 text-sm text-slate-600">Lịch trả nợ chi tiết đang được bổ sung; hiện phần này chỉ hiển thị các giá trị đã cho.</p>
  <div class="skeleton-table mt-3">
@@ -2027,8 +2028,8 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Personal Property Checklist — Living Room</h4>
- <p><strong>Phần có thể giữ lại:</strong> Sơ đồ uses columns for purchase price, actual cash value and replacement cost.</p>
- <p class="muted"><strong>Giới hạn dữ liệu:</strong> Detailed item rows and numeric cells are not preserved, so no property inventory values are invented.</p>
+ <p><strong>Ý chính:</strong> Sơ đồ uses columns for purchase price, actual cash value and replacement cost.</p>
+ <p class="muted"><strong>Giới hạn dữ liệu:</strong> Chưa có chi tiết từng tài sản và giá trị để lập bảng kiểm kê định lượng.</p>
  </div>
  </div>
  </div>
@@ -2061,8 +2062,8 @@
  </div>
  <div class="concept-grid mt-4">
  <div class="concept-card"><h4>Liability insurance</h4><p>Covers the insured when held responsible for losses suffered by others.</p></div>
- <div class="concept-card"><h4>Medical Payments Insurance</h4><p>Coverage label preserved in bài học.</p></div>
- <div class="concept-card"><h4>Uninsured / Underinsured Motorist Insurance</h4><p>Coverage labels preserved in bài học.</p></div>
+ <div class="concept-card"><h4>Medical Payments Insurance</h4><p>Nhóm phạm vi bảo hiểm.</p></div>
+ <div class="concept-card"><h4>Uninsured / Underinsured Motorist Insurance</h4><p>Các nhóm phạm vi bảo hiểm.</p></div>
  <div class="concept-card"><h4>Physical Damage Insurance</h4><p>Collision and comprehensive coverage; protection against losses caused by damage.</p></div>
  </div>
 
@@ -2097,7 +2098,7 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Basic supplemental group health insurance plans table</h4>
- <p><strong>Phần có thể giữ lại:</strong> Title/category relationship is preserved.</p>
+ <p><strong>Ý chính:</strong> Đối chiếu tiêu đề với nhóm tương ứng.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Detailed rows/cells from are not extractable; no plan features or values are invented.</p>
  </div>
  </div>
@@ -2110,7 +2111,7 @@
  <div class="concept-card"><h4>Premium</h4></div>
  <div class="concept-card"><h4>Changes</h4></div>
  </div>
- <div class="status-note">Original visual uses letter markers A/B/C/D, but letter-to-prompt mapping is not reliably preserved. The page intentionally does not assign letters.</div>
+ <div class="status-note">Bốn câu hỏi chưa có đủ thông tin để ghép với ký hiệu A/B/C/D; hãy xem từng câu hỏi độc lập.</div>
 
  <details class="study-details mt-4">
  <summary>Câu hỏi — Allison Parker</summary>
@@ -2150,7 +2151,7 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Premium dollars: cash-value vs term</h4>
- <p><strong>Phần có thể giữ lại:</strong> Sơ đồ compares premium dollars for cash-value and term life insurance.</p>
+ <p><strong>Ý chính:</strong> Sơ đồ compares premium dollars for cash-value and term life insurance.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Bảng tập trung vào đặc điểm từng loại policy; premium chi tiết đang được bổ sung.</p>
  </div>
  </div>
@@ -2158,8 +2159,8 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>Nature of cash-value life insurance</h4>
- <p><strong>Phần có thể giữ lại:</strong> Bài học graph includes face value, actual insurance amount and cash value over years.</p>
- <p class="muted"><strong>Giới hạn dữ liệu:</strong> Exact graph series/values are missing, so only these relationship labels are retained.</p>
+ <p><strong>Ý chính:</strong> Bài học graph includes face value, actual insurance amount and cash value over years.</p>
+ <p class="muted"><strong>Giới hạn dữ liệu:</strong> Các nhãn biểu diễn quan hệ định tính; chưa có dãy số để đọc đồ thị định lượng.</p>
  </div>
  </div>
  </div>
@@ -2174,15 +2175,15 @@
  <div class="limited-icon">◌</div>
  <div>
  <h4>$100,000 policy annual-premiums table</h4>
- <p><strong>Phần có thể giữ lại:</strong> Bài học contains annual premiums for various life-insurance policy types.</p>
- <p class="muted"><strong>Giới hạn dữ liệu:</strong> Policy rows and exact premiums are not preserved; no values are invented.</p>
+ <p><strong>Ý chính:</strong> Bài học contains annual premiums for various life-insurance policy types.</p>
+ <p class="muted"><strong>Giới hạn dữ liệu:</strong> Chưa có chi tiết hợp đồng và mức phí để so sánh định lượng.</p>
  </div>
  </div>
  <div class="limited-visual">
  <div class="limited-icon">◌</div>
  <div>
  <h4>Life-insurance odds / numbers table</h4>
- <p><strong>Phần có thể giữ lại:</strong> Bài học contains a numeric/odds visual.</p>
+ <p><strong>Ý chính:</strong> Bài học contains a numeric/odds visual.</p>
  <p class="muted"><strong>Giới hạn dữ liệu:</strong> Số liệu chi tiết đang được bổ sung.</p>
  </div>
  </div>
@@ -2200,7 +2201,7 @@
  <div class="concept-card"><h4>Unordered consideration</h4><p>Exact label mapping unavailable.</p></div>
  <div class="concept-card"><h4>Unordered consideration</h4><p>Exact label mapping unavailable.</p></div>
  </div>
- <p class="mt-3"><strong>Exact fact preserved elsewhere in the visual:</strong> sales commissions can amount to 90 percent of the annual premium.</p>
+ <p class="mt-3"><strong>Điểm cần nhớ:</strong> sales commissions can amount to 90 percent of the annual premium.</p>
  <p class="muted mt-2">Các consideration được trình bày theo nhóm; thứ tự chi tiết chưa được xác định.</p>
  </div>
  </div>
@@ -2211,7 +2212,7 @@
  <div>
  <h4>Life-cycle graph</h4>
  <div class="flex flex-wrap gap-2 mt-2"><span class="pill">Total protection</span><span class="pill">Term insurance</span><span class="pill">Investment program</span><span class="pill">Base insurance</span></div>
- <p class="muted mt-2">Exact graph series are not preserved; labels only.</p>
+ <p class="muted mt-2">Các nhãn thể hiện quan hệ định tính, chưa có dãy số cụ thể.</p>
  </div>
  </div>
  <div class="limited-visual">
@@ -2223,7 +2224,7 @@
  <div class="flow-node"><strong>Invested</strong><span>Bảng dữ liệu relationship</span></div>
  <div class="flow-node"><strong>Estate buildup</strong><span>nhãn kết quả</span></div>
  </div>
- <p class="muted mt-2">Exact table values are not preserved.</p>
+ <p class="muted mt-2">Bảng chưa có giá trị cụ thể.</p>
  </div>
  </div>
  </div>
@@ -2267,7 +2268,7 @@
  <div class="two-col mt-4">
  <div class="interactive-box">
  <h4>Insurance-Type Matching</h4>
- <p class="hint">Match 4 high-level types to descriptions preserved in bài học.</p>
+ <p class="hint">Ghép 4 nhóm chính với mô tả tương ứng.</p>
  <div id="insurance-quiz" class="quiz-grid"></div>
  <div class="btn-row"><button type="button" class="study-btn" onclick="checkSelectQuiz('insurance')">Kiểm tra</button></div>
  <div id="insurance-result" class="result-box"></div>
@@ -2442,7 +2443,7 @@
  </article>
  <article class="concept-card">
  <h4>Microfinance institution</h4>
- <p class="muted">Category label preserved in bài học.</p>
+ <p class="muted">Nhóm khái niệm.</p>
  </article>
  </div>
  <div class="concept-card mt-4">
@@ -2477,7 +2478,7 @@
  <div class="kicker">Loan setup</div><h3 class="section-title">Borrowing principles, conditions &amp; application</h3>
  <div class="two-col">
  <article class="concept-card">
- <h4>Principles — preserved Các nhãn</h4>
+ <h4>Các nguyên tắc</h4>
  <p>Agreements · ensure proper repayment on schedule.</p>
  </article>
  <article class="concept-card">
@@ -2545,7 +2546,7 @@
  <div class="limited-icon">↘</div>
  <div>
  <h4>Impact of credit payments on savings chart</h4>
- <p>Exact chart values are not preserved. The page therefore relies on the bài học’s documented advantages/disadvantages rather than inventing series.</p>
+ <p>Chưa có số liệu đồ thị để so sánh định lượng. Hãy đối chiếu ưu điểm và hạn chế dưới đây.</p>
  </div>
  </div>
  </div>
@@ -2625,7 +2626,7 @@
  </section>
 
  <section class="learning-panel">
- <div class="kicker">Theory-only interactions</div><h3 class="section-title">Interactive Borrow &amp; Repay Lab</h3>
+ <div class="kicker">Thực hành khái niệm</div><h3 class="section-title">Interactive Borrow &amp; Repay Lab</h3>
  <div class="two-col">
  <div class="interactive-box">
  <h4>Lending-Method Matching</h4>
@@ -2858,12 +2859,12 @@
  <div class="text-2xl text-slate-300 self-center">→</div>
  <div class="review-map-node"><strong>Borrow / Repay</strong><span>Chapter 6</span></div>
  </div>
- <p class="mt-3 text-sm text-slate-500">This map is a course-navigation synthesis từ cấu trúc học phần được cung cấp, not new theory.</p>
+ <p class="mt-3 text-sm text-slate-500">Dùng sơ đồ để kết nối các chủ đề trước khi ôn từng chương.</p>
  </section>
 
  <section class="learning-panel tint-violet">
  <div class="kicker">Only authorized formulas / method status</div><h3 class="section-title">Formula Sheet</h3>
- <div class="scroll-table"><table style="min-width:900px"><thead><tr><th>Topic</th><th>Formula / status</th><th>Quy tắc áp dụng</th><th>Bài học</th></tr></thead><tbody><tr><td><strong>Net worth</strong></td><td>Assets − Liabilities</td><td>Verified Phương pháp</td><td></td></tr><tr><td><strong>Surplus / deficit</strong></td><td>Total income − Total expenses</td><td>Verified Phương pháp</td><td></td></tr><tr><td><strong>Solvency ratio</strong></td><td>Net worth / Asset</td><td>Only preserved ratio formula; bài học uses singular “Asset”</td><td></td></tr><tr><td><strong>Compound-interest FV</strong></td><td>FV = PV × (1 + i)^n</td><td>i per compounding period; n periods</td><td></td></tr><tr><td><strong>Homeowner reimbursement</strong></td><td>R = (L − D) × (I: (RV × 0.80 or 1.00))</td><td>Coverage factor restricted to bài học options</td><td></td></tr><tr><td><strong>Actual Cash Value</strong></td><td>ACV = P − (CA × (P: LE))</td><td>Bài học straight-line-like expression only as presented</td><td></td></tr><tr><td><strong>IRR</strong></td><td>Công thức tổng quát đang được bổ sung</td><td>Viewer only; Các kết quả 11.55% and 4.43%</td><td></td></tr></tbody></table></div>
+ <div class="scroll-table"><table style="min-width:900px"><thead><tr><th>Topic</th><th>Formula / status</th><th>Quy tắc áp dụng</th><th>Bài học</th></tr></thead><tbody><tr><td><strong>Net worth</strong></td><td>Assets − Liabilities</td><td>Verified Phương pháp</td><td></td></tr><tr><td><strong>Surplus / deficit</strong></td><td>Total income − Total expenses</td><td>Verified Phương pháp</td><td></td></tr><tr><td><strong>Solvency ratio</strong></td><td>Net worth / Asset</td><td>Công thức tỷ số sử dụng “Asset” ở dạng số ít</td><td></td></tr><tr><td><strong>Compound-interest FV</strong></td><td>FV = PV × (1 + i)^n</td><td>i per compounding period; n periods</td><td></td></tr><tr><td><strong>Homeowner reimbursement</strong></td><td>R = (L − D) × (I: (RV × 0.80 or 1.00))</td><td>Coverage factor restricted to bài học options</td><td></td></tr><tr><td><strong>Actual Cash Value</strong></td><td>ACV = P − (CA × (P: LE))</td><td>Bài học straight-line-like expression only as presented</td><td></td></tr><tr><td><strong>IRR</strong></td><td>Công thức tổng quát đang được bổ sung</td><td>Viewer only; Các kết quả 11.55% and 4.43%</td><td></td></tr></tbody></table></div>
  </section>
 
  <section class="learning-panel">
@@ -2876,13 +2877,13 @@
  <details class="study-details mt-3">
  <summary>Lending methods — three-way comparison</summary>
  <div class="detail-body">
- <div class="scroll-table"><table style="min-width:760px"><thead><tr><th>Method</th><th>Preserved cấu trúc minh họa</th></tr></thead><tbody><tr><td>Single-disbursement</td><td>Single loan; Các ví dụ: car, house, studying…</td></tr><tr><td>Line of credit</td><td>Credit limit; Sơ đồ shows a one-year facility, many single loans, a line of credit and loan account</td></tr><tr><td>Current-account overdraft</td><td>Overdraft limit on payment account; credit balance uses deposit rate, debit balance uses lending rate</td></tr></tbody></table></div>
+ <div class="scroll-table"><table style="min-width:760px"><thead><tr><th>Method</th><th>Cấu trúc minh họa</th></tr></thead><tbody><tr><td>Single-disbursement</td><td>Single loan; Các ví dụ: car, house, studying…</td></tr><tr><td>Line of credit</td><td>Credit limit; Sơ đồ shows a one-year facility, many single loans, a line of credit and loan account</td></tr><tr><td>Current-account overdraft</td><td>Overdraft limit on payment account; credit balance uses deposit rate, debit balance uses lending rate</td></tr></tbody></table></div>
  </div>
  </details>
  </section>
 
  <section class="learning-panel tint-amber">
- <div class="kicker">30 concise facts retained in Theory</div><h3 class="section-title">Ghi nhớ qua câu hỏi luyện tập</h3>
+ <div class="kicker">30 điểm ghi nhớ</div><h3 class="section-title">Ghi nhớ qua câu hỏi luyện tập</h3>
  <div class="callout warn">
  <div class="callout-title">Boundary</div>
  <div class="callout-body">Các điểm ghi nhớ dưới đây giúp ôn thêm kiến thức qua câu hỏi luyện tập. Sử dụng <strong>ngắn gọn đúng bài học</strong>; luyện 150 câu hỏi tại phần Luyện đề.</div>
@@ -3097,29 +3098,18 @@
  <section class="learning-panel tint-rose">
  <div class="kicker">Do not silently normalize</div><h3 class="section-title">⚠ Lưu ýs, Ambiguities &amp; Limits</h3>
  <div class="concept-grid">
- <div class="concept-card"><h4>SMART variants</h4><p>Attainable/Relevant/Timebound vs graphic Achievable/Realistic vs Chapter 5 “Time based”. Preserved separately.</p></div>
+ <div class="concept-card"><h4>SMART variants</h4><p>Phân biệt Attainable/Relevant/Timebound với Achievable/Realistic và “Time based” ở Chapter 5.</p></div>
  <div class="concept-card"><h4>Net-worth tension</h4><p>Đối chiếu công thức Chapter 4 với nhận định về trả nợ thế chấp sớm trong bài luyện tập.</p></div>
  <div class="concept-card"><h4>Disposable-income tension</h4><p>Phân biệt “after tax” với “after taxes and essential expenses”.</p></div>
  <div class="concept-card"><h4>Grace-period terminology</h4><p>Up to 45 days / Ted 20-day grace + ~47 free-credit days / bài luyện tập: 45–55 days typical.</p></div>
- <div class="concept-card"><h4>Insurance claims process</h4><p>Four actions preserved; exact Step 2/3 mapping not scored.</p></div>
- <div class="concept-card"><h4>Life-insurance buying visual</h4><p>Six positions preserved only as cardinality; exact label-number mapping unavailable.</p></div>
- <div class="concept-card"><h4>Health-plan visual</h4><p>Four prompts preserved unordered; A/B/C/D mapping unavailable.</p></div>
- <div class="concept-card"><h4>Sơ đồ chi tiết đang được bổ sung</h4><p>Missing cells/series/ranges are represented safely without invented numbers, categories or sequences.</p></div>
+ <div class="concept-card"><h4>Insurance claims process</h4><p>Bốn hành động; bài tập không chấm cách ghép cụ thể với Step 2/3.</p></div>
+ <div class="concept-card"><h4>Life-insurance buying visual</h4><p>Có sáu vị trí; chưa có đủ thông tin để ghép từng nhãn với số thứ tự.</p></div>
+ <div class="concept-card"><h4>Health-plan visual</h4><p>Bốn câu hỏi không theo thứ tự; chưa có thông tin ghép với A/B/C/D.</p></div>
+ <div class="concept-card"><h4>Sơ đồ chi tiết đang được bổ sung</h4><p>Các phần chưa có đủ số liệu được đánh dấu để bạn phân biệt với ví dụ định lượng.</p></div>
  </div>
  </section>
 
- <section class="learning-panel">
- <div class="kicker">Not implemented on this Theory page</div><h3 class="section-title">Deferred to Practice</h3>
- <div class="concept-card">
- <ul class="list-disc pl-5 space-y-2 text-slate-600">
- <li>Luyện 150 câu hỏi với lựa chọn và phần giải thích.</li>
- <li>Luyện tính toán và kiểm tra đáp án.</li>
- <li>Large derived MCQ/scenario/short-answer bank.</li>
- <li>Mock exams, timers, mistakes review and statistics.</li>
- <li>Constructed-response practice at scale.</li>
- </ul>
- </div>
- </section>
+
  </div>
  </section>
 
@@ -3474,7 +3464,7 @@
         return;
       }
       const r = nw / assets;
-      setResult('ratio-result', `Solvency ratio = <strong>${fmt(r,4)}</strong>. Source does not supply a generalized interpretation threshold for this formula in the preserved text.`, 'success');
+      setResult('ratio-result', `Solvency ratio = <strong>${fmt(r,4)}</strong>. Chưa có ngưỡng chung để diễn giải tỷ số này; cần xem xét ngữ cảnh.`, 'success');
     }
 
     function calcHomeReimbursement() {

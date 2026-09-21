@@ -8,9 +8,10 @@ const routes = JSON.parse(fs.readFileSync('firebase.json')).hosting.rewrites.map
 const out = path.join(__dirname,'screenshots','nightly');
 fs.mkdirSync(out,{recursive:true});
 const results = [];
+let browser;
 (async()=>{
- const browser = await chromium.launch({channel:'msedge',headless:true});
- for(const route of ['/',...routes]) {
+ browser = await chromium.launch({channel:'msedge',headless:true});
+ for(const route of ['/',...routes].filter(route=>!process.env.NIGHTLY_FILTER || process.env.NIGHTLY_FILTER.split(',').includes(route))) {
   const page = await browser.newPage({viewport:{width:1440,height:1000}});
   const errors=[];
   page.on('pageerror',error=>errors.push(error.message));
@@ -32,6 +33,10 @@ const results = [];
     continue;
    }
    assert.equal(await page.locator('.site-header-row').evaluate(e=>e.inert),false);
+   assert(await page.locator('#nav-menu [aria-current="page"]').evaluate(el=>{
+    const r=el.getBoundingClientRect(),strip=el.parentElement.getBoundingClientRect();
+    return r.left>=strip.left-2 && r.right<=strip.right+2;
+   }),route+' active chapter stays in view after resize');
    await page.evaluate(()=>window.scrollTo({top:650,behavior:'instant'}));
    await page.waitForTimeout(250);
    const sticky=await page.locator('#nav-menu').evaluate(e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,height:e.offsetHeight}));
@@ -45,7 +50,7 @@ const results = [];
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),route+' '+chapter+' overflow '+width);
     await page.screenshot({path:path.join(out,`${name}-${width}-${chapter}.png`)});
     if(width===1440) {
-     const suspect=await page.locator('#'+chapter).evaluate(el=>el.innerText.split('\n').map(t=>t.trim()).filter(t=>/\bslides?\b|\bsource\b|lecturer|canonical|trích xuất|học liệu|CLO\d|\bCO[12]\b|course direction|build pack|blueprint|compiler|renderer|\[cite:|S\d\s*p\.|SB-|CFX-|AMB-|LIM-|trang này|trang không|không tự|không dựng|không infer|không normalize|Theory phase|Practice phase|bài học-bounded/i.test(t)));
+     const suspect=await page.locator('#'+chapter).evaluate(el=>[...el.querySelectorAll('p,li,h2,h3,h4,summary,td,th,.source-tag,.source-note,.source-line')].map(e=>e.textContent.trim()).filter(t=>/\bslides?\b|\bsource\b|lecturer|canonical|trích xuất|học liệu|CLO\d|\bCO[12]\b|course direction|build pack|blueprint|compiler|renderer|\[cite:|S\d\s*p\.|SB-|CFX-|AMB-|LIM-|trang này|trang không|không tự|không dựng|không infer|không normalize|Theory phase|Practice phase|bài học-bounded/i.test(t)));
      item.leakage.push(...suspect.map(text=>({chapter,text})));
     }
    }
@@ -94,6 +99,30 @@ const results = [];
    }
    item.sorter='correct answers, scoring and reset PASS';
   }
+  if(route!=='/') {
+   item.components=[];
+   await page.setViewportSize({width:1440,height:1000});
+   const types={
+    table:'table', timeline:'.timeline,.timeline-shell,.timeline-container',
+    mindmap:'.mindmap,.mind-map', diagram:'.diagram,.flow,.learning-visual,svg[id]',
+    formula:'.formula-box,.big-formula,.formula-card',
+    flashcard:'.flashcard,.flip-card,.study-flip',
+    tool:'.interactive-box,.interaction,.tool-panel,.calculator',
+    disclosure:'details', callout:'.callout,.note,.warning-box'
+   };
+   for(const [type,selector] of Object.entries(types)) {
+    const target=page.locator('.tab-content').locator(selector).first();
+    if(!await target.count())continue;
+    const chapter=await target.evaluate(e=>e.closest('.tab-content').id);
+    await page.evaluate(id=>EduHeader.switchTab(id,{behavior:'instant',animate:false}),chapter);
+    if(type==='disclosure') await target.locator('summary').first().click();
+    if(type==='flashcard') await target.click();
+    await target.evaluate(el=>window.scrollTo({top:el.getBoundingClientRect().top+scrollY-85,behavior:'instant'}));
+    await page.waitForTimeout(type==='flashcard'?650:180);
+    await page.screenshot({path:path.join(out,`${name}-component-${type}.png`)});
+    item.components.push({type,chapter});
+   }
+  }
   assert.deepEqual(errors,[]);
   results.push(item);
   fs.writeFileSync('tests/nightly-results.json',JSON.stringify(results,null,2));
@@ -101,4 +130,4 @@ const results = [];
   await page.close();
  }
  await browser.close();
-})().catch(e=>{console.error(e);process.exitCode=1;});
+})().catch(async e=>{console.error(e);await browser?.close();process.exitCode=1;});

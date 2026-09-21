@@ -43,3 +43,31 @@ The browser checks need CDN network access. Optional `TEST_FILTER` selects a
 regression scenario by name. JSON results and screenshots are generated under
 `tests/`, ignored by Git, and never hosted. A filtered regression run replaces
 the previous regression JSON; finish with the full suite for a complete report.
+
+## Nightly presentation review
+
+`node tests/nightly-qa.cjs` checks all 12 theory routes plus the homepage at
+1440 and 375 pixels, captures every chapter and top/sticky states, exercises
+native radio keyboard selection, PTBV grading/reset, and representative
+component disclosures/flashcards. It uses the same isolated Firebase fixture
+as regression.cjs. Evidence is saved in `tests/screenshots/nightly/` and
+`tests/nightly-results.json`. `NIGHTLY_FILTER=/PTBV,/TCCN` selects routes; finish
+with an unfiltered run. `node tests/nightly-contact-sheets.cjs` makes local
+review sheets using the optional `sharp` package.
+
+`python tests/preservation_check.py main` compares chapter order, hero titles,
+numeric table cells, formula expressions, input constraints, option values,
+answer/dataset attributes, homepage card text and Firebase short routes with
+the baseline. It complements behavior tests; it does not prove every prose
+statement semantically identical.
+
+The original `content_check.py main` remains intentionally strict and unchanged.
+It reports changed chapter prose for this editorial batch, whose purpose is to
+rewrite source/process narration. Do not interpret its expected difference as
+a behavior pass, or weaken it to hide unexpected content changes.
+
+`editorial-polish.cjs`, `editorial-followup.cjs` and `guide-polish.cjs` record the
+one-time editorial substitutions for review. They mutate source files and are
+not part of the test suite. `scan-script-copy.cjs` is a read-only aid for reviewing
+potential source narration in script-generated copy; legitimate academic uses
+and non-rendered metadata require contextual review.

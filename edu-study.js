@@ -54,11 +54,12 @@
         sync();
     });
 
-    // Existing reset/check buttons may assign select.value without emitting change.
-    // Run after their handlers, including keyboard-activated clicks and form resets.
-    const syncAfterAction = () => queueMicrotask(() => groups.forEach(sync => sync()));
-    document.addEventListener('click', syncAfterAction);
-    document.addEventListener('reset', syncAfterAction);
+    // Page-owned reset/check handlers run on buttons before the event bubbles
+    // here. Do not synchronize label clicks before native radio activation.
+    document.addEventListener('click', event => {
+        if (event.target.closest('button')) groups.forEach(sync => sync());
+    });
+    document.addEventListener('reset', () => setTimeout(() => groups.forEach(sync => sync()), 0));
 
     document.querySelectorAll('.quiz-list, .quiz-grid, .matching, .match-list').forEach(list => {
         const rows = [...list.children].filter(row => row.matches('.quiz-row, .match-row'));

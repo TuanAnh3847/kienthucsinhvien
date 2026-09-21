@@ -155,8 +155,23 @@
         if (!scrollFrame) scrollFrame = requestAnimationFrame(syncScrollState);
     }, { passive: true });
     syncScrollState();
+    window.addEventListener('resize', () => {
+        if (activeTab) revealActiveTab();
+    });
 
     let activeTab = null;
+    function revealActiveTab() {
+        const selectedButton = desktopNav.querySelector(`[data-edu-tab="${CSS.escape(activeTab)}"]`);
+        if (!selectedButton) return;
+        const stripRect = desktopNav.getBoundingClientRect();
+        const buttonRect = selectedButton.getBoundingClientRect();
+        if (buttonRect.left < stripRect.left || buttonRect.right > stripRect.right) {
+            desktopNav.scrollTo({
+                left: desktopNav.scrollLeft + buttonRect.left - stripRect.left - (stripRect.width - buttonRect.width) / 2,
+                behavior: 'instant'
+            });
+        }
+    }
     function switchTab(tabId, options = {}) {
         if (!chapterIds.includes(tabId)) return false;
         const target = document.getElementById(tabId);
@@ -184,17 +199,7 @@
             else button.removeAttribute('aria-current');
         });
         activeTab = tabId;
-        const selectedButton = desktopNav.querySelector(`[data-edu-tab="${CSS.escape(tabId)}"]`);
-        if (selectedButton) {
-            const stripRect = desktopNav.getBoundingClientRect();
-            const buttonRect = selectedButton.getBoundingClientRect();
-            if (buttonRect.left < stripRect.left || buttonRect.right > stripRect.right) {
-                desktopNav.scrollTo({
-                    left: desktopNav.scrollLeft + buttonRect.left - stripRect.left - (stripRect.width - buttonRect.width) / 2,
-                    behavior: 'instant'
-                });
-            }
-        }
+        revealActiveTab();
 
         if (options.scroll !== false) {
             const offset = desktopNav.getBoundingClientRect().height + 16;
