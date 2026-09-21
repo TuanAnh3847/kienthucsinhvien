@@ -57,5 +57,8 @@ def homepage_cards(source):
             for el in read_tree(source).iter()
             if 'course-card' in el.attrib.get('class', '').split()]
 old_home = subprocess.check_output(['git', 'show', f'{baseline}:index.html'], cwd=root).decode('utf-8')
-assert homepage_cards(old_home) == homepage_cards((root / 'index.html').read_text(encoding='utf-8')), 'Homepage card text changed'
-print('PASS homepage card text and Firebase short routes unchanged')
+# Round 2 explicitly requests removal of class-specific public wording.
+# Permit this one reviewed phrase; all remaining card text stays protected.
+old_home = old_home.replace('Tài Chính Cá Nhân hệ E UEL.', 'Tài Chính Cá Nhân dành cho sinh viên.')
+assert homepage_cards(old_home) == homepage_cards((root / 'index.html').read_text(encoding='utf-8')), 'Unexpected homepage card text change'
+print('PASS homepage cards (one reviewed class-neutral phrase) and unchanged Firebase short routes')

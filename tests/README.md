@@ -18,12 +18,16 @@ Run checks with the configured Python and Node executables:
 
 ```powershell
 python tests/html_check.py
-python tests/content_check.py main
+python tests/content_check.py --self-test
+python tests/preservation_check.py main
+python tests/practice_trace_check.py
 node --check auth.js
 node --check admin.js
 node --check edu-header.js
 node tests/audit.cjs
 node tests/regression.cjs
+node tests/practice-behavior.cjs
+node tests/student-acceptance.cjs
 git diff --check
 ```
 
@@ -47,7 +51,7 @@ the previous regression JSON; finish with the full suite for a complete report.
 ## Nightly presentation review
 
 `node tests/nightly-qa.cjs` checks all 12 theory routes plus the homepage at
-1440 and 375 pixels, captures every chapter and top/sticky states, exercises
+1440×900, 1366×768, 390×844 and 375×812, captures every chapter and top/sticky states, exercises
 native radio keyboard selection, PTBV grading/reset, and representative
 component disclosures/flashcards. It uses the same isolated Firebase fixture
 as regression.cjs. Evidence is saved in `tests/screenshots/nightly/` and
@@ -61,10 +65,23 @@ answer/dataset attributes, homepage card text and Firebase short routes with
 the baseline. It complements behavior tests; it does not prove every prose
 statement semantically identical.
 
-The original `content_check.py main` remains intentionally strict and unchanged.
-It reports changed chapter prose for this editorial batch, whose purpose is to
-rewrite source/process narration. Do not interpret its expected difference as
-a behavior pass, or weaken it to hide unexpected content changes.
+`content_check.py` now calls the academic guard against the user-specified
+approved checkpoint `2f03f26ef2d52861f08b1a97535ff375879fb7ae`. It compares ALL
+theory chapter text, headings and inline scripts, allowing only exact reviewed
+substitutions recorded in `docs/practice-review/theory-*-*.json`. It also protects
+both existing practice banks: only four explicitly archived finance items and
+the documented narrowing of incomplete ABC content differ. Added questions are
+checked against their private review records and local theory by
+`practice_trace_check.py`, including rotated option keys. `--self-test` proves
+the guard detects formula, case-name, numeric, chapter and answer-key mutations.
+
+The original verbatim test is preserved as `verbatim_content_check.py main`.
+It still flags authorized editorial changes against pre-polish main. This
+diagnostic is not the active academic guard and is not represented as passing.
+The independent `preservation_check.py main` still protects original structure,
+formulas, numeric table data, fields and routes. Its one additional reviewed
+homepage exception removes the class-specific TCCN card phrase; no broad ignore
+rules or skipped theory routes were added.
 
 `editorial-polish.cjs`, `editorial-followup.cjs`, `guide-polish.cjs` and
 `final-copy-polish.cjs` record the
@@ -77,3 +94,27 @@ and non-rendered metadata require contextual review.
 content extending beyond the viewport without a scrollable ancestor, and
 flashcard answers exceeding their faces. Intentional horizontal tables,
 diagrams and hidden reverse faces are distinguished from clipped content.
+
+## Round 2 student and practice QA
+
+`practice-behavior.cjs` covers every MCQ bank, wrong/change/correct selection,
+repeat submissions, post-submit locks, unanswered states, retry, wall-clock
+expiry, malformed/blocked storage, unique randomized sets, duplicate question
+IDs, route links and four viewport sizes. Firebase uses isolated fixtures.
+
+`student-acceptance.cjs` starts at the homepage for both existing practice
+subjects at all four sizes; mobile contexts enable touch/device emulation. It
+switches chapters after deep scrolling, uses theory interactions, follows the
+practice link, changes answers, submits, reviews, retries and returns to theory.
+It captures final screenshots under `tests/screenshots/round2/`.
+
+`round2-discovery.cjs` and `round2-probe.cjs` are baseline investigation scripts,
+not final regression tests. The latter intentionally reproduced bugs before
+repair and is no longer compatible with disabled submit controls.
+`round2-copy.cjs`, `round2-content-review.cjs` and `add-reviewed-practice.cjs` are
+one-time authoring records that mutate files; do not rerun as validation.
+
+The practice regression's old 50-question assumption now uses the exact eligible,
+deduplicated first bank with a minimum coverage assertion. No scoring, state,
+error, route or reset assertions were removed. Browser audit additionally
+compiles all generated inline handlers, catching malformed quote boundaries.

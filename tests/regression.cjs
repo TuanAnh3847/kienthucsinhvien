@@ -156,6 +156,26 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             await page.screenshot({path:path.join(__dirname,'screenshots',file.replace('.html','')+'-mobile.png')});
         } finally { await page.close(); }
     });
+    await test('Accounting theory choices respond and classification works with keyboard', async () => {
+        const page = await open('NLKT', {user});
+        try {
+            await page.locator('#principle-choices button').first().click();
+            assert((await page.locator('#principle-feedback').innerText()).trim().length > 0);
+            await page.locator('#principle-quiz').getByRole('button',{name:'Câu khác',exact:true}).click();
+            assert.equal(await page.locator('#principle-feedback').innerText(),'');
+            const item = page.locator('#eq-bank button').first();
+            await item.focus(); await page.keyboard.press('Enter');
+            const zone = page.locator('.drop-zone').first();
+            await zone.focus(); await page.keyboard.press('Enter');
+            assert.equal(await zone.locator('.drag-item').count(),1);
+            await page.locator('#equation-classifier').getByRole('button',{name:'Làm lại',exact:true}).click();
+            assert.equal(await page.locator('.drop-zone .drag-item').count(),0);
+            await page.locator('#nav-menu [data-edu-tab="ch5"]').click();
+            await page.locator('#physical-choices button').first().click();
+            assert((await page.locator('#physical-feedback').innerText()).trim().length > 0);
+            assert.deepEqual(page.errors,[]);
+        } finally { await page.close(); }
+    });
     await test('Guest modal focus, short viewport, Escape and clean routes', async () => {
         const page = await open('KTQT');
         try {

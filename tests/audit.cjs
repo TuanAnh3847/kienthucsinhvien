@@ -33,6 +33,7 @@ const report = [];
       const missingHandlers = [];
       for (const el of document.querySelectorAll('*')) for (const a of el.attributes) {
         if (!a.name.startsWith('on')) continue;
+        try { new Function('event', a.value); } catch (error) { missingHandlers.push('Invalid '+a.name+' on '+el.tagName+'#'+el.id+': '+error.message); }
         for (const m of a.value.matchAll(/(?<![.\w])([a-zA-Z_$][\w$]*)\s*\(/g)) {
           if (['if','for','confirm','alert'].includes(m[1])) continue;
           try { if (typeof window.eval(m[1]) !== 'function') missingHandlers.push(m[1]); } catch { missingHandlers.push(m[1]); }

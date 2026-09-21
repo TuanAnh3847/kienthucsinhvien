@@ -90,3 +90,4 @@ application_default_credentials.json
 tests/.python/
 tests/*-results.json
 tests/screenshots/
+tests/__pycache__/

@@ -1,0 +1,347 @@
+{
+  "review": "Second pass: every answer below is anchored to current local theory, alternatives are mutually exclusive in the stated context, and no external academic sources were used. Correct option is first in this authoring record; publication rotates positions without changing the answer mapping.",
+  "accounting": [
+    {
+      "id": "n2_1",
+      "chapter": "ch1",
+      "heading": "Economic entity",
+      "quote": "Tách đơn vị kế toán khỏi chủ sở hữu, quản lý và đơn vị khác.",
+      "question": "An owner wants to treat personal spending as if it belonged to the business. Which assumption requires separating the two?",
+      "options": [
+        "Economic entity",
+        "Accounting period",
+        "Going concern",
+        "Monetary unit"
+      ],
+      "explanation": "Economic entity separates the accounting unit from its owner, managers and other entities."
+    },
+    {
+      "id": "n2_2",
+      "chapter": "ch2",
+      "heading": "Cash Flow Statement & Notes",
+      "quote": "Có thể giải thích phương pháp tính, chi tiết position/performance/cash flows",
+      "question": "A reader needs the calculation methods and further details behind the financial statements. Which component should they consult?",
+      "options": [
+        "Notes",
+        "Only the total assets line",
+        "Only the cash closing balance",
+        "Only the profit after tax line"
+      ],
+      "explanation": "Notes add calculation methods and details supporting financial position, performance and cash flows."
+    },
+    {
+      "id": "n2_3",
+      "chapter": "ch3",
+      "heading": "Temporary vs permanent",
+      "quote": "Temporary: income-statement và income-summary accounts, đóng cuối kỳ.",
+      "question": "At period end, which group is closed rather than carried forward as permanent balances?",
+      "options": [
+        "Income-statement and income-summary accounts",
+        "Asset accounts",
+        "Liability accounts",
+        "Owner’s equity accounts"
+      ],
+      "explanation": "Temporary income-statement and income-summary accounts close at period end; assets, liabilities and owner’s equity are permanent accounts."
+    },
+    {
+      "id": "n2_4",
+      "chapter": "ch4",
+      "heading": "Fixed assets — cost, depreciation, carrying amount",
+      "quote": "carrying amount = 510−408 = 102m",
+      "question": "In the car example, acquisition cost is 510m and accumulated depreciation after eight years is 408m. What is the carrying amount?",
+      "options": [
+        "102m",
+        "408m",
+        "510m",
+        "918m"
+      ],
+      "explanation": "Carrying amount equals acquisition cost minus accumulated depreciation: 510m − 408m = 102m."
+    },
+    {
+      "id": "n2_5",
+      "chapter": "ch4",
+      "heading": "Perpetual vs Periodic inventory",
+      "quote": "cuối kỳ kiểm kê thực tế để xác định tồn cuối rồi tính giá trị xuất.",
+      "question": "Which inventory system determines closing inventory by physical count and then derives issued cost at period end?",
+      "options": [
+        "Periodic",
+        "Perpetual tracking of each issue",
+        "Specific identification as a document type",
+        "Straight-line depreciation"
+      ],
+      "explanation": "The periodic system obtains closing inventory from physical count and calculates issued cost as opening plus receipts minus closing inventory."
+    },
+    {
+      "id": "n2_6",
+      "chapter": "ch4",
+      "heading": "Specific identification",
+      "quote": "Quản lý inventory theo từng shipment và dùng actual received unit cost của batch được xuất.",
+      "question": "An inventory issue is valued using the actual received unit cost of the particular batch issued. Which method is being used?",
+      "options": [
+        "Specific identification",
+        "FIFO regardless of the actual batch",
+        "Ending weighted average",
+        "Straight-line depreciation"
+      ],
+      "explanation": "Specific identification tracks shipments and uses the actual unit cost of the batch issued."
+    },
+    {
+      "id": "n2_7",
+      "chapter": "ch5",
+      "heading": "Valid vs legal-compliance",
+      "quote": "Legal-compliance: valid và giao dịch được pháp luật cho phép.",
+      "question": "A document is complete, accurate and valid. What additional condition is required for legal compliance in the distinction taught here?",
+      "options": [
+        "The transaction is permitted by law",
+        "The document is always handwritten",
+        "The amount is always paid in cash",
+        "The document has no monetary amount"
+      ],
+      "explanation": "Legal compliance requires both a valid document and a transaction permitted by law."
+    },
+    {
+      "id": "n2_8",
+      "chapter": "ch5",
+      "heading": "Document flow & 5 bước luân chuyển",
+      "quote": "2. Check / sign",
+      "question": "In the five-step document flow, which step immediately follows Prepare / receive / process?",
+      "options": [
+        "Check / sign",
+        "Store / preserve",
+        "Circulate & record",
+        "Close the financial statements"
+      ],
+      "explanation": "The sequence is prepare/receive/process, check/sign, complete, circulate/record, then store/preserve."
+    },
+    {
+      "id": "n2_9",
+      "chapter": "ch5",
+      "heading": "Physical count",
+      "quote": "reconciliation cho tài sản do người khác giữ, bank cash, receivables",
+      "question": "Which method is used to verify bank cash and receivables rather than physically counting tangible items?",
+      "options": [
+        "Reconciliation",
+        "Counting inventory units only",
+        "Depreciation",
+        "Closing revenue accounts"
+      ],
+      "explanation": "Reconciliation applies to bank cash, receivables and assets held by others; physical counting applies to cash and tangible assets."
+    },
+    {
+      "id": "n2_10",
+      "chapter": "ch6",
+      "heading": "Production cost → finished goods",
+      "quote": "Dr 621 / Cr 152 → cuối kỳ Dr 154 / Cr 621.",
+      "question": "At period end, which entry transfers direct material costs from account 621 into production cost account 154?",
+      "options": [
+        "Dr 154 / Cr 621",
+        "Dr 621 / Cr 154",
+        "Dr 152 / Cr 621",
+        "Dr 621 / Cr 152"
+      ],
+      "explanation": "Direct material issues first debit 621 and credit 152; the period-end transfer debits 154 and credits 621."
+    },
+    {
+      "id": "n2_11",
+      "chapter": "ch6",
+      "heading": "Production cost → finished goods",
+      "quote": "Cost of finished goods = Opening WIP + Production costs incurred − Closing WIP",
+      "question": "Which relationship gives the cost of finished goods when some work remains unfinished at period end?",
+      "options": [
+        "Opening WIP + production costs incurred − closing WIP",
+        "Opening WIP − production costs incurred + closing WIP",
+        "Production costs incurred + closing WIP only",
+        "Closing WIP − opening WIP"
+      ],
+      "explanation": "Opening work in process and costs incurred are available for production; subtract closing work in process to obtain finished-goods cost."
+    },
+    {
+      "id": "n2_12",
+      "chapter": "ch6",
+      "heading": "Payroll & deductions — 334 / 338",
+      "quote": "Credit balance = unpaid deductions",
+      "question": "What does a credit balance in account 338 represent in the payroll deductions section?",
+      "options": [
+        "Unpaid deductions",
+        "Finished goods in stock",
+        "Cash already paid to employees",
+        "Revenue from sales"
+      ],
+      "explanation": "Account 338 credits determination/accrual and debits payment/submission; its credit balance is unpaid deductions."
+    }
+  ],
+  "finance": [
+    {
+      "id": "f2_1",
+      "chapter": "ch1",
+      "heading": "Psychology & Behavioral Biases",
+      "quote": "Một sở hữu mới có thể tạo ra chuỗi tiêu dùng khiến ta mua thêm những thứ trước đây không cần.",
+      "question": "Buying one new item leads someone to buy several matching items they previously did not need. Which effect best describes this pattern?",
+      "options": [
+        "Diderot Effect",
+        "Anchoring Effect",
+        "Accounting period",
+        "Diversification"
+      ],
+      "explanation": "Diderot Effect mô tả chuỗi mua sắm phát sinh từ một món đồ mới và nhu cầu đồng bộ thêm các món khác."
+    },
+    {
+      "id": "f2_2",
+      "chapter": "ch1",
+      "heading": "Psychology & Behavioral Biases",
+      "quote": "Lựa chọn có thể bị ảnh hưởng bởi một điểm tham chiếu gần đó.",
+      "question": "A financial choice is strongly influenced by the first reference price a person sees. Which bias is most directly involved?",
+      "options": [
+        "Anchoring Effect",
+        "Diderot Effect",
+        "Bandwagon Effect",
+        "Procrastination"
+      ],
+      "explanation": "Anchoring Effect xảy ra khi một điểm tham chiếu ban đầu chi phối cách đánh giá và lựa chọn sau đó."
+    },
+    {
+      "id": "f2_3",
+      "chapter": "ch1",
+      "heading": "Psychology & Behavioral Biases",
+      "quote": "Làm một việc chủ yếu vì người khác đang làm",
+      "question": "Someone borrows mainly because their friends are also using credit, without evaluating the alternatives. Which effect best fits?",
+      "options": [
+        "Bandwagon Effect",
+        "Mental Accounting",
+        "Diderot Effect",
+        "Procrastination"
+      ],
+      "explanation": "Bandwagon Effect là hành động chủ yếu vì người khác đang làm, có thể bỏ qua đánh giá và niềm tin riêng."
+    },
+    {
+      "id": "f2_4",
+      "chapter": "ch1",
+      "heading": "Psychology & Behavioral Biases",
+      "quote": "Gán giá trị khác nhau cho cùng một lượng tiền dựa trên tiêu chí chủ quan.",
+      "question": "A person treats the same amount of money differently depending on whether it was earned or received unexpectedly. Which concept explains this?",
+      "options": [
+        "Mental Accounting",
+        "Anchoring Effect",
+        "Diderot Effect",
+        "Bandwagon Effect"
+      ],
+      "explanation": "Mental Accounting gán giá trị khác nhau cho cùng một lượng tiền theo tiêu chí chủ quan, chẳng hạn nguồn tiền đến từ đâu."
+    },
+    {
+      "id": "f2_5",
+      "chapter": "ch1",
+      "heading": "SMART",
+      "quote": "When will you meet the goal?",
+      "question": "A savings goal specifies what to save for and how much, but does not say when it should be achieved. Which SMART element is missing?",
+      "options": [
+        "Timebound",
+        "Specific",
+        "Measurable",
+        "Relevant"
+      ],
+      "explanation": "Timebound trả lời câu hỏi khi nào mục tiêu sẽ hoàn thành; số tiền và mục đích không thay thế được thời hạn."
+    },
+    {
+      "id": "f2_6",
+      "chapter": "ch2",
+      "heading": "Total rewards — hai nhóm chính",
+      "quote": "Financial rewards Non-financial rewards",
+      "question": "Which pair forms the two main groups in the total rewards model?",
+      "options": [
+        "Financial rewards and non-financial rewards",
+        "Only salary and tax",
+        "Only short-term debt and long-term debt",
+        "Only assets and liabilities"
+      ],
+      "explanation": "Total rewards gồm hai nhóm: phần thưởng tài chính và phần thưởng phi tài chính."
+    },
+    {
+      "id": "f2_7",
+      "chapter": "ch3",
+      "heading": "Bancassurance",
+      "quote": "Sells insurance through bank network",
+      "question": "An insurance company sells insurance through a bank's network under an agreement with the bank. What is this arrangement called?",
+      "options": [
+        "Bancassurance",
+        "A physical inventory count",
+        "A credit-card grace period",
+        "A zero-based budget"
+      ],
+      "explanation": "Bancassurance kết hợp ngân hàng và bảo hiểm: công ty bảo hiểm phân phối sản phẩm qua mạng lưới ngân hàng."
+    },
+    {
+      "id": "f2_8",
+      "chapter": "ch1",
+      "heading": "Ten Principles",
+      "quote": "Diversification là cách giảm random risk.",
+      "question": "Which action is identified as a way to reduce random risk?",
+      "options": [
+        "Diversification",
+        "Putting all funds into one exposure",
+        "Assuming higher return means no risk",
+        "Ignoring differences between investments"
+      ],
+      "explanation": "Diversification giúp giảm random risk; không có nghĩa là xóa bỏ mọi rủi ro hay bảo đảm lợi nhuận."
+    },
+    {
+      "id": "f2_9",
+      "chapter": "ch4",
+      "heading": "Revolving saving fund — irregular expenses",
+      "quote": "funds are allocated to create savings that can pay irregular expenses",
+      "question": "Which budgeting tool sets aside funds for irregular expenses and occasional deficits caused by income fluctuations?",
+      "options": [
+        "Revolving saving fund",
+        "Treating every irregular expense as new income",
+        "Ignoring the financial calendar",
+        "Removing all saving goals"
+      ],
+      "explanation": "Revolving saving fund dành trước nguồn tiết kiệm để chi cho khoản không đều và thiếu hụt tạm thời do thu nhập biến động."
+    },
+    {
+      "id": "f2_10",
+      "chapter": "ch4",
+      "heading": "What is a budget?",
+      "quote": "A paper or electronic document recording planned and actual income and expenditures over a period.",
+      "question": "Which document records planned and actual income and spending so that a financial plan can be put into practice?",
+      "options": [
+        "A budget",
+        "Only a list of assets at one date",
+        "Only the outstanding debt balance",
+        "Only an insurance contract"
+      ],
+      "explanation": "Budget ghi thu nhập và chi tiêu dự kiến lẫn thực tế trong một kỳ, giúp thực hiện kế hoạch chi tiêu và tiết kiệm."
+    },
+    {
+      "id": "f2_11",
+      "chapter": "ch5",
+      "heading": "Worked example — Selena Torres",
+      "quote": "Replacement value = $200,000 · deductible = $500 · insurance carried = $144,000 · required coverage = 80% · fire damage = $80,500.",
+      "question": "In Selena Torres's worked example, which value is deducted from fire damage before applying the coverage ratio?",
+      "options": [
+        "The $500 deductible",
+        "The $200,000 replacement value",
+        "The $144,000 insurance carried",
+        "The 80% required coverage itself as a dollar amount"
+      ],
+      "explanation": "Công thức bắt đầu với $80,500 − $500; sau đó nhân tỷ lệ $144,000 / ($200,000 × 0.80)."
+    },
+    {
+      "id": "f2_12",
+      "chapter": "ch5",
+      "heading": "Worked example — Selena Torres",
+      "quote": "= $80,000 × ($144,000: $160,000) = $72,000",
+      "question": "In Selena Torres's example, the adjusted loss is $80,000 and the coverage ratio is $144,000 / $160,000. What reimbursement follows?",
+      "options": [
+        "$72,000",
+        "$80,000",
+        "$144,000",
+        "$160,000"
+      ],
+      "explanation": "Tỷ lệ bảo hiểm là 0.90; $80,000 × 0.90 = $72,000 theo phép tính trong ví dụ."
+    }
+  ],
+  "sources": {
+    "accounting": "NGUYEN_LY_KE_TOAN.html",
+    "finance": "TAI_CHINH_CA_NHAN.html"
+  }
+}

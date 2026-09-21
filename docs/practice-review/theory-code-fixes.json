@@ -1,0 +1,7 @@
+{
+  "NGUYEN_LY_KE_TOAN.html": [
+    ["${JSON.stringify(c)}", "${esc(JSON.stringify(c))}"],
+    ["${JSON.stringify(x)}", "${esc(JSON.stringify(x))}"],
+    ["forEach(zone=>{zone.addEventListener('dragover'", "forEach(zone=>{zone.addEventListener('keydown',e=>{if(e.target===zone&&(e.key==='Enter'||e.key===' ')){e.preventDefault();zone.click();}});zone.addEventListener('dragover'"]
+  ]
+}

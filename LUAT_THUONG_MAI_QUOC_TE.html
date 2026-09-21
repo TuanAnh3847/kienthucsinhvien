@@ -716,7 +716,7 @@
       if (!out || !data) return;
       const segs = data.segments.map(s => `<span class="code-seg">${s}</span>`).join('');
       const layers = data.layers.map((x,i) => `<button type="button" class="legend-card" data-layer-index="${i}"><strong>${x[0]}</strong><div class="mt-1 font-mono text-sm">${x[1]}</div></button>`).join('');
-      out.innerHTML = `<div class="layer-code">${segs}</div><div class="layer-legend">${layers}</div><p class="source-note">Các ví dụ đi từ chương → nhóm → phân nhóm → lớp khu vực/quốc gia. Chỉ các mã đã nêu được sử dụng.</p>`;
+      out.innerHTML = `<div class="layer-code">${segs}</div><div class="layer-legend">${layers}</div><p class="source-note">Các ví dụ đi từ chương → nhóm → phân nhóm → lớp khu vực/quốc gia.</p>`;
       out.querySelectorAll('[data-layer-index]').forEach(btn => {
         btn.addEventListener('click', () => {
           out.querySelectorAll('.legend-card').forEach(x => x.classList.remove('active'));
