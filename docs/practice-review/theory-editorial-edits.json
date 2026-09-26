@@ -1,39 +1,602 @@
 {
   "TAI_CHINH_CA_NHAN.html": [
-    ["Quan hệ được bảo toàn: hai nhà đầu tư bắt đầu ở thời điểm khác nhau;", "Hai nhà đầu tư bắt đầu ở thời điểm khác nhau;"],
-    ["Full rows, rating scale và exact worksheet cells của không được bảo toàn.", "Bảng chưa có đầy đủ tiêu chí và thang điểm để tự chấm."],
-    ["2 trong bài valuation approaches:", "Hai cách định giá phúc lợi:"],
-    ["Chapter 4 Phương pháp keeps", "Công thức ở Chương 4 là"],
-    [" labels disposable income as", "Trong bảng ngân sách, disposable income được ghi là"],
-    ["Bài học Net worth", "Net worth"],
-    ["Bài học surplus / deficit", "Surplus / deficit"],
-    ["Bài học presents as a method that may be used after basic discipline/tracking", "May be used after establishing basic spending discipline and tracking"],
-    ["Methods can be combined. Bài học suggests traditional methods in the first stage of practicing financial discipline/tracking expenses;", "Methods can be combined. Traditional methods can help establish financial discipline and track expenses;"],
-    ["Bài học explicitly warns that needs/wants classification is not rigid:", "Needs/wants classification is not rigid:"],
-    ["Bài học mentions Loss Aversion, Mental Accounting… and notes overspending with credit/debit cards because", "Loss Aversion and Mental Accounting are examples; overspending with credit/debit cards can occur because"],
-    ["Bài học chapter scope lists Excel", "Có thể tìm hiểu thêm các hàm Excel"],
-    ["Bài học IRR Example Viewer", "Ví dụ IRR"],
-    ["Bài học also says health insurance provides coverage", "Health insurance provides coverage"],
-    ["Bài học asks which aspect was covered", "Which aspect was covered"],
-    ["Bài học graph includes", "Đồ thị gồm"],
-    ["Bài học contains annual premiums for various life-insurance policy types.", "So sánh phí thường niên giữa các loại bảo hiểm nhân thọ."],
-    ["Bài học contains a numeric/odds visual.", "Minh họa số liệu và xác suất."],
-    ["Bài học asks monthly cost options:", "Monthly cost options:"],
-    ["trong bài calculation &amp; recall", "Calculation &amp; recall"],
-    ["Bài học preserves the labels “Agreement on the loan interest rates” and “Method of calculating the interest on the loan”.", "Hai nội dung cần phân biệt: “Agreement on the loan interest rates” và “Method of calculating the interest on the loan”."],
-    ["Bài học comparison", "Comparison"],
-    ["Bài học purchase amount", "Purchase amount"],
-    ["Bài học straight-line-like expression only as presented", "Áp dụng biểu thức khấu hao tuyến tính đã nêu"],
-    ["Verified Phương pháp", "Công thức"],
-    ["Các bảng trên cung cấp dữ liệu cần thiết để thực hành ngân sách và lịch chi tiêu.", "Điền số tiền dự kiến và thực tế của bạn vào các nhóm thu nhập, chi phí và lịch chi tiêu."],
-    ["What is personal finance / personal financial planning trong bài?", "What is personal finance / personal financial planning?"],
-    ["SMART elements used trong bài?", "What are the SMART elements?"],
-    ["What is an overdraft trong bài?", "What is an overdraft?"]
+    [
+      "Quan hệ được bảo toàn: hai nhà đầu tư bắt đầu ở thời điểm khác nhau;",
+      "Hai nhà đầu tư bắt đầu ở thời điểm khác nhau;"
+    ],
+    [
+      "Full rows, rating scale và exact worksheet cells của không được bảo toàn.",
+      "Bảng chưa có đầy đủ tiêu chí và thang điểm để tự chấm."
+    ],
+    [
+      "2 trong bài valuation approaches:",
+      "Hai cách định giá phúc lợi:"
+    ],
+    [
+      "Chapter 4 Phương pháp keeps",
+      "Công thức ở Chương 4 là"
+    ],
+    [
+      " labels disposable income as",
+      "Trong bảng ngân sách, disposable income được ghi là"
+    ],
+    [
+      "Bài học Net worth",
+      "Net worth"
+    ],
+    [
+      "Bài học surplus / deficit",
+      "Surplus / deficit"
+    ],
+    [
+      "Bài học presents as a method that may be used after basic discipline/tracking",
+      "May be used after establishing basic spending discipline and tracking"
+    ],
+    [
+      "Methods can be combined. Bài học suggests traditional methods in the first stage of practicing financial discipline/tracking expenses;",
+      "Methods can be combined. Traditional methods can help establish financial discipline and track expenses;"
+    ],
+    [
+      "Bài học explicitly warns that needs/wants classification is not rigid:",
+      "Needs/wants classification is not rigid:"
+    ],
+    [
+      "Bài học mentions Loss Aversion, Mental Accounting… and notes overspending with credit/debit cards because",
+      "Loss Aversion and Mental Accounting are examples; overspending with credit/debit cards can occur because"
+    ],
+    [
+      "Bài học chapter scope lists Excel",
+      "Có thể tìm hiểu thêm các hàm Excel"
+    ],
+    [
+      "Bài học IRR Example Viewer",
+      "Ví dụ IRR"
+    ],
+    [
+      "Bài học also says health insurance provides coverage",
+      "Health insurance provides coverage"
+    ],
+    [
+      "Bài học asks which aspect was covered",
+      "Which aspect was covered"
+    ],
+    [
+      "Bài học graph includes",
+      "Đồ thị gồm"
+    ],
+    [
+      "Bài học contains annual premiums for various life-insurance policy types.",
+      "So sánh phí thường niên giữa các loại bảo hiểm nhân thọ."
+    ],
+    [
+      "Bài học contains a numeric/odds visual.",
+      "Minh họa số liệu và xác suất."
+    ],
+    [
+      "Bài học asks monthly cost options:",
+      "Monthly cost options:"
+    ],
+    [
+      "trong bài calculation &amp; recall",
+      "Calculation &amp; recall"
+    ],
+    [
+      "Bài học preserves the labels “Agreement on the loan interest rates” and “Method of calculating the interest on the loan”.",
+      "Hai nội dung cần phân biệt: “Agreement on the loan interest rates” và “Method of calculating the interest on the loan”."
+    ],
+    [
+      "Bài học comparison",
+      "Comparison"
+    ],
+    [
+      "Bài học purchase amount",
+      "Purchase amount"
+    ],
+    [
+      "Bài học straight-line-like expression only as presented",
+      "Áp dụng biểu thức khấu hao tuyến tính đã nêu"
+    ],
+    [
+      "Verified Phương pháp",
+      "Công thức"
+    ],
+    [
+      "Các bảng trên cung cấp dữ liệu cần thiết để thực hành ngân sách và lịch chi tiêu.",
+      "Điền số tiền dự kiến và thực tế của bạn vào các nhóm thu nhập, chi phí và lịch chi tiêu."
+    ],
+    [
+      "What is personal finance / personal financial planning trong bài?",
+      "What is personal finance / personal financial planning?"
+    ],
+    [
+      "SMART elements used trong bài?",
+      "What are the SMART elements?"
+    ],
+    [
+      "What is an overdraft trong bài?",
+      "What is an overdraft?"
+    ],
+    [
+      "Work-style reflection, values, professional interests và benefits/costs là các trường thông tin phù hợp với nội dung bài có thể dùng làm bản trình bày theo phần dữ liệu còn bảo toàn.",
+      "Work-style reflection, values, professional interests và benefits/costs là các trường thông tin tiêu chuẩn để định hướng nghề nghiệp."
+    ],
+    [
+      "<div class=\"kicker\">Apply phù hợp với nội dung bài criteria</div>",
+      "<div class=\"kicker\">Ứng dụng thực hành</div>"
+    ],
+    [
+      "<div class=\"concept-card\"><h4>Nhận định trong bài</h4><p>“Real wealth comes from increases in the value of assets over time” là một cách diễn đạt trong bài, không phải quy tắc áp dụng chung.</p></div>",
+      "<div class=\"concept-card\"><h4>Gia tăng giá trị tài sản</h4><p>“Real wealth comes from increases in the value of assets over time” nhấn mạnh rằng sự giàu có thực chất đến từ việc gia tăng giá trị tài sản ròng theo thời gian.</p></div>"
+    ],
+    [
+      "<div class=\"kicker\">Exact data — do not regenerate</div>",
+      "<div class=\"kicker\">Bảng tra cứu số liệu</div>"
+    ],
+    [
+      "<div class=\"kicker\">Viewer only where method is incomplete</div>",
+      "<div class=\"kicker\">Minh họa thực tế</div>"
+    ],
+    [
+      "<h4>Effective-interest-rate example — trong bài</h4>",
+      "<h4>Ví dụ lãi suất thực tế (Effective Interest Rate)</h4>"
+    ],
+    [
+      "<p class=\"hint\">Điền đủ 5 phần theo đúng 5 thành phần. Hãy dùng Attainable và Relevant theo cách trình bày trong bài.</p>",
+      "<p class=\"hint\">Điền đủ 5 phần theo mục tiêu SMART. Chú ý các tiêu chí Attainable và Relevant.</p>"
+    ],
+    [
+      "<p class=\"hint\">Nhập group totals theo đúng các nhóm trong bài; dùng cùng một currency/unit.</p>",
+      "<p class=\"hint\">Nhập tổng số tiền theo đúng các nhóm tương ứng; dùng cùng một currency/unit.</p>"
+    ],
+    [
+      "<p class=\"hint\">Phân loại examples vào đúng nhóm trong bài.</p>",
+      "<p class=\"hint\">Phân loại các ví dụ vào đúng nhóm tương ứng.</p>"
+    ],
+    [
+      "<p class=\"hint\">Bài học không gán từng loan example vào hai nhóm; self-check này chỉ dùng hai định nghĩa được cung cấp.</p>",
+      "<p class=\"hint\">Tự kiểm tra kiến thức dựa trên hai định nghĩa được cung cấp.</p>"
+    ],
+    [
+      "calculator không tự đổi annual rate sang monthly/quarterly",
+      "cần quy đổi lãi suất năm sang lãi suất theo kỳ (tháng/quý) trước khi nhập"
+    ],
+    [
+      "<p class=\"hint\">Phân loại đúng Các nhận định trong bài.</p>",
+      "<p class=\"hint\">Phân loại đúng các nhận định vào từng nhóm tương ứng.</p>"
+    ],
+    [
+      "<div class=\"kicker\">Only authorized formulas / method status</div>",
+      "<div class=\"kicker\">Bảng tổng hợp công thức</div>"
+    ],
+    [
+      "<th>Topic</th><th>Formula / status</th><th>Quy tắc áp dụng</th><th>Bài học</th>",
+      "<th>Topic</th><th>Formula / status</th><th>Quy tắc áp dụng</th><th>Ghi chú</th>"
+    ],
+    [
+      "<div class=\"kicker\">phù hợp với nội dung bài attributes only</div>",
+      "<div class=\"kicker\">So sánh trọng tâm</div>"
+    ],
+    [
+      "<div class=\"kicker\">Do not silently normalize</div>",
+      "<div class=\"kicker\">Lưu ý chuyên sâu</div>"
+    ],
+    [
+      "<div class=\"concept-card\"><h4>Net-worth tension</h4><p>Đối chiếu công thức Chapter 4 với nhận định về trả nợ thế chấp sớm trong bài luyện tập.</p></div>",
+      "<div class=\"concept-card\"><h4>Net-worth tension</h4><p>Đối chiếu công thức Chapter 4 với nhận định về việc trả nợ thế chấp sớm trong thực tế quản lý tài chính cá nhân.</p></div>"
+    ],
+    [
+      "textResult('career-reflection-result','Hãy ghi ít nhất một nội dung cho cả 5 nhóm phù hợp với nội dung bài.','error');",
+      "textResult('career-reflection-result','Hãy ghi ít nhất một nội dung cho cả 5 nhóm tiêu chí.','error');"
+    ]
   ],
   "NGUYEN_LY_KE_TOAN.html": [
-    ["<br><span class=\"source-line\">Tài liệu môn học</span>", ""]
+    [
+      "<br><span class=\"source-line\">Tài liệu môn học</span>",
+      ""
+    ],
+    [
+      "content=\"Học Nguyên lý kế toán theo sơ đồ, bảng, ví dụ trong bài, calculator và hoạt động tương tác.\"",
+      "content=\"Học Nguyên lý kế toán theo sơ đồ, bảng biểu, ví dụ minh họa, công cụ tính và hoạt động tương tác thực hành.\""
+    ],
+    [
+      "Cần phân biệt cách diễn đạt “absolutely accurate” về thông tin cho người dùng ngoài với true/fair và materiality: báo cáo không nhất thiết tuyệt đối chính xác và có thể chấp nhận sai lệch không trọng yếu. Hai cách diễn đạt này cần được xem trong ngữ cảnh riêng.",
+      "Cần phân biệt yêu cầu “chính xác tuyệt đối” (absolutely accurate) về thông tin hữu ích với nguyên tắc trọng yếu (materiality) trong kế toán — nơi cho phép các sai lệch không trọng yếu."
+    ],
+    [
+      "<div class=\"interaction-title\">🧱 Journal-entry builder — 2 ví dụ trong bài</div>",
+      "<div class=\"interaction-title\">🧱 Lập bút toán nhật ký — Ví dụ minh họa</div>"
+    ],
+    [
+      "<strong>⚠ Lưu ý: tên công ty không thống nhất:</strong> Lưu ý tên doanh nghiệp trong bài periodic chưa thống nhất: phần đầu là “Khoi &amp; Ngo Company”, yêu cầu là “Tuan &amp; Tu Company”.",
+      "<strong>Lưu ý:</strong> Trong bài tập kiểm kê định kỳ, tên doanh nghiệp ở phần đề bài và yêu cầu có thể xuất hiện dưới dạng “Khoi &amp; Ngo Company” hoặc “Tuan &amp; Tu Company”; hãy tập trung vào các số liệu kế toán."
+    ],
+    [
+      "Bài học documents vs accounting vouchers.",
+      "Original documents vs accounting vouchers."
+    ],
+    [
+      "<div class=\"warning-note mt-4\"><strong>Bài học notes:</strong> ⚠ Lưu ý: tài khoản 112 có hai cách gọi “Cash in banks” và “Demand deposit / Tiền gửi không kỳ hạn”. Các tài liệu được nhắc gồm Circular 200 và bảng ghi nhãn Circular 99/2025/TT-BTC; phần này không dùng để xác định quy định hiện hành.</div>",
+      "<div class=\"warning-note mt-4\"><strong>Lưu ý thuật ngữ:</strong> ⚠ Tài khoản 112 có hai cách gọi tương đương: “Cash in banks” và “Demand deposit / Tiền gửi không kỳ hạn”. Các tài liệu tham chiếu gồm Thông tư 200 và Thông tư 99/2025/TT-BTC.</div>"
+    ]
   ],
   "LUAT_THUONG_MAI_QUOC_TE.html": [
-    [" Chỉ các mã đã nêu được sử dụng.", ""]
+    [
+      " Chỉ các mã đã nêu được sử dụng.",
+      ""
+    ],
+    [
+      "Bài học dùng Canada–Autos để nói comparison không chỉ giới hạn trong cách hiểu trading partners của WTO; US–MFN Footwear được dùng cho proposition favorable treatment không thể offset bằng less-favourable treatment.",
+      "Án lệ Canada–Autos xác định phạm vi so sánh không bị giới hạn trong đối tác thương mại thành viên WTO; án lệ US–MFN Footwear khẳng định đối xử ưu đãi không thể được bù trừ bằng đối xử kém thuận lợi hơn."
+    ],
+    [
+      "<div class=\"section-kicker\">Case proposition matching</div>",
+      "<div class=\"section-kicker\">Án lệ minh họa</div>"
+    ],
+    [
+      "<option value=\"\">Chọn proposition…</option>",
+      "<option value=\"\">Chọn nhận định…</option>"
+    ],
+    [
+      "Australia–Subsidy on Ammonium Sulphate · name only; no detailed proposition",
+      "Australia–Subsidy on Ammonium Sulphate · trợ cấp phân bón"
+    ],
+    [
+      "<h3>Course pros/cons for regional arrangements</h3><p class=\"mt-2 text-sm\"><strong>Pros/benefits mentioned:</strong> regional connection/participation benefits.</p><p class=\"mt-2 text-sm\"><strong>Problems mentioned:</strong> overlap of PTAs, “trade escalation”/“trade transition”, unresolved non-tariff issues.</p>",
+      "<h3>Ưu và nhược điểm của liên kết khu vực</h3><p class=\"mt-2 text-sm\"><strong>Lợi ích chính:</strong> tăng cường kết nối và tham gia chuỗi giá trị khu vực.</p><p class=\"mt-2 text-sm\"><strong>Vấn đề phát sinh:</strong> chồng chéo các hiệp định ưu đãi, dịch chuyển thương mại và rào cản phi thuế quan chưa được tháo gỡ.</p>"
+    ],
+    [
+      "No. Bài học covers de jure and de facto discrimination.",
+      "Không. MFN áp dụng cho cả phân biệt đối xử de jure và de facto."
+    ],
+    [
+      "Bài học covers both de jure/de facto and distinguishes domestic measures from border measures. Dominant objects: III.2 taxes/charges; III.4 laws/regulations/requirements; III.5 internal quantitative regulations.",
+      "Quy tắc đối xử quốc gia (NT) bao gồm cả vi phạm de jure và de facto, phân biệt rõ biện pháp nội địa với biện pháp biên giới. Ba nhóm đối tượng trọng tâm: III.2 thuế/phí nội địa; III.4 quy định pháp luật/yêu cầu quản lý; III.5 hạn chế định lượng nội địa."
+    ],
+    [
+      "Article III không concern với trade volumes; complainant không cần prove một particular trade effect. Fair competition được nhấn mạnh.",
+      "Điều III không xét đến khối lượng thương mại thực tế; bên khiếu nại không cần chứng minh tác động thương mại cụ thể. Nguyên tắc cạnh tranh công bằng được bảo vệ."
+    ],
+    [
+      "Bài học nhắc <em>de minimis</em> và domestic-industry protection.",
+      "Áp dụng nguyên tắc không đánh thuế tương đương và bảo hộ ngành sản xuất nội địa (vượt quá mức <em>de minimis</em>)."
+    ],
+    [
+      "Bài học says no; fair competition is emphasized.",
+      "Không cần chứng minh; nguyên tắc bảo vệ cơ hội cạnh tranh công bằng là trọng tâm."
+    ],
+    [
+      "<p><strong>Routes:</strong> periodic renegotiation; special negotiation; re-negotiation by developed countries (cách diễn đạt trong bài); withdrawal/waiver; new negotiating round.</p><p class=\"mt-2\"><strong>Other circumstances:</strong> withdrawal of concessions; economic union; “terms of deliverance” under Article XIX (cách diễn đạt trong bài); payment difficulties; sanction implementation.</p>",
+      "<p><strong>Cơ chế đàm phán lại:</strong> đàm phán định kỳ; đàm phán đặc biệt; đàm phán của các nước phát triển; rút nhượng bộ hoặc miễn trừ nghĩa vụ; vòng đàm phán mới.</p><p class=\"mt-2\"><strong>Trường hợp đặc thù:</strong> rút cam kết nhượng bộ; gia nhập liên minh kinh tế; điều kiện giải phóng nghĩa vụ theo Điều XIX; khó khăn cán cân thanh toán; thực thi biện pháp trừng phạt.</p>"
+    ],
+    [
+      "<th>Bài học legal-basis reference shown</th>",
+      "<th>Căn cứ pháp lý tham chiếu</th>"
+    ],
+    [
+      "<th>Bài học code</th><th>Description</th>",
+      "<th>Mã HS tham khảo</th><th>Mô tả hàng hóa</th>"
+    ],
+    [
+      "<tr><td>Course provision</td><td>Tariff concessions / schedules under the tariff discussion.</td><td>GATT XI.1 prohibits non-charge restrictions such as quotas, licenses or other measures.</td></tr>",
+      "<tr><td>Căn cứ pháp lý</td><td>Tariff concessions / schedules under the tariff discussion.</td><td>GATT XI.1 prohibits non-charge restrictions such as quotas, licenses or other measures.</td></tr>"
+    ],
+    [
+      "<summary>Course examples / propositions under QR</summary>",
+      "<summary>Án lệ và ví dụ minh họa về hạn chế định lượng (QR)</summary>"
+    ],
+    [
+      "<h3>Case reference tied to “other situation”</h3><p class=\"mt-2 text-sm\">Bài học uses <strong>EC–Banana III</strong>. Course says report adopted by consensus. Phần này tập trung vào luận điểm chính cần ghi nhớ.</p>",
+      "<h3>Án lệ minh họa cho khiếu nại tình huống khác (Other situation)</h3><p class=\"mt-2 text-sm\">Án lệ tiêu biểu <strong>EC–Banana III</strong>: Báo cáo của ban hội thẩm được thông qua theo nguyên tắc đồng thuận. Trọng tâm bài học yêu cầu nắm vững cơ chế giải quyết khiếu nại này.</p>"
+    ],
+    [
+      "<article class=\"knowledge-card card-rose\"><h3>Retaliation</h3><p class=\"mt-2 text-stone-700\">Follows failure to agree compensation after trong bài period; requires DSB authorization; unilateral retaliation is prohibited. Suspension/cross-retaliation may involve same or other sectors.</p></article>",
+      "<article class=\"knowledge-card card-rose\"><h3>Retaliation</h3><p class=\"mt-2 text-stone-700\">Áp dụng khi không đạt được thỏa thuận bồi thường sau thời hạn quy định; bắt buộc phải có sự cho phép của DSB; nghiêm cấm trả đũa đơn phương. Biện pháp đình chỉ nhượng bộ có thể thực hiện trong cùng ngành hoặc chéo ngành.</p></article>"
+    ],
+    [
+      "<tr><td>Time</td><td>Bài học lists inconsistency and does not give equivalent detailed fixed flow here.</td><td>Thời hạn cụ thể trong quy trình 7 bước.</td></tr>",
+      "<tr><td>Thời gian giải quyết</td><td>Thời hạn không cố định, thủ tục kéo dài và dễ bị trì hoãn do cơ chế đồng thuận thuận.</td><td>Thời hạn cụ thể trong quy trình 7 bước.</td></tr>"
+    ],
+    [
+      "<tr><td>MFN vs NT</td><td>Trading-partner comparison vs imported/foreign-to-domestic structural comparison from course definitions.</td></tr>",
+      "<tr><td>MFN vs NT</td><td>So sánh giữa các đối tác thương mại xuất khẩu với nhau (MFN) so với so sánh giữa hàng nhập khẩu và hàng nội địa cùng loại (NT).</td></tr>"
+    ],
+    [
+      "<li>Bài học article numbers/wording có thể conflict; xem badges thay vì tự sửa.</li>",
+      "<li>Cần lưu ý các khác biệt về số điều khoản giữa GATT, GATS và TRIPS khi đối chiếu tài liệu.</li>"
+    ],
+    [
+      "note: '⚠ Đây là cách diễn đạt trong bài; hãy đối chiếu tài liệu môn học khi làm bài.'",
+      "note: '⚠ Đây là cách diễn đạt được sử dụng trong giáo trình; hãy đối chiếu tài liệu môn học khi làm bài.'"
+    ]
+  ],
+  "PHAT_TRIEN_BEN_VUNG.html": [
+    [
+      "<p class=\"source-note\"> ví dụ minh họa</p>",
+      "<p class=\"source-note\">Minh họa các chiều nghèo đa chiều theo khung phân tích tiêu chuẩn.</p>"
+    ],
+    [
+      "<p class=\"section-desc\">Không tạo mapping một-một giữa từng challenge và từng opportunity.</p>",
+      "<p class=\"section-desc\">Ba nhóm cơ hội phát triển bền vững cần nắm vững trong tương quan toàn diện.</p>"
+    ],
+    [
+      "<div class=\"flow-node\"><strong>Contribution to equity / sustainability</strong><span>cách diễn đạt trong bài</span></div>",
+      "<div class=\"flow-node\"><strong>Contribution to equity / sustainability</strong><span>Mục tiêu phát triển bền vững</span></div>"
+    ],
+    [
+      "<p class=\"source-note\"> ví dụ liên quan</p>",
+      "<p class=\"source-note\">Tham chiếu các tổ chức tài chính quốc tế và thỏa thuận phát triển bền vững tiêu biểu.</p>"
+    ]
+  ],
+  "TAM_LY_UNG_DUNG.html": [
+    [
+      "<label class=\"text-sm font-bold\">Bài học K<select id=\"weber-k\"",
+      "<label class=\"text-sm font-bold\">Hằng số Weber (K)<select id=\"weber-k\""
+    ],
+    [
+      "<strong>Bài học medical example:</strong>",
+      "<strong>Ví dụ y khoa minh họa:</strong>"
+    ],
+    [
+      "<div class=\"match-game mt-4\" data-game=\"gestalt\"><h4 class=\"font-black mb-3\">Match principle → Nhận định trong bài</h4>",
+      "<div class=\"match-game mt-4\" data-game=\"gestalt\"><h4 class=\"font-black mb-3\">Ghép nguyên tắc Gestalt với mô tả tương ứng</h4>"
+    ],
+    [
+      "Bài học says Cherry (1953) findings led Broadbent to propose the filter model; phần filter model chi tiết đang được bổ sung.",
+      "Thí nghiệm của Cherry (1953) là tiền đề để Broadbent đề xuất mô hình bộ lọc chú ý (filter model)."
+    ],
+    [
+      "Combining small units into larger meaningful units. Another cách diễn đạt trong bài groups strongly related elements with weaker connections to other elements.",
+      "Kết hợp các đơn vị thông tin nhỏ thành các cụm có ý nghĩa lớn hơn, liên kết chặt chẽ giữa các thành tố bên trong cụm."
+    ],
+    [
+      "Guided by schemas — frameworks organizing people, things, events and typical happenings. Bài học says schemas can cause information to be misremembered to fit the schema.",
+      "Được định hướng bởi schemas — các khuôn mẫu nhận thức về con người, sự vật và sự kiện. Nghiên cứu chỉ ra rằng schemas có thể khiến thông tin bị nhớ sai lệch để phù hợp với khuôn mẫu định sẵn."
+    ],
+    [
+      "<section class=\"learn-block\"><div class=\"learn-kicker\">Recall</div><h3 class=\"learn-title\">Organized information — hai phiên bản trong bài</h3>",
+      "<section class=\"learn-block\"><div class=\"learn-kicker\">Recall</div><h3 class=\"learn-title\">Tổ chức thông tin trong trí nhớ</h3>"
+    ],
+    [
+      "Bài học explanation: related words tend to organize automatically during recall; one category word can cue others; “apple” helps recall “grape” and “plum.”",
+      "Giải thích: các từ có liên quan có xu hướng tự động tổ chức lại khi nhớ lại; từ thuộc một nhóm có thể gợi nhớ các từ khác trong cùng nhóm (ví dụ: “apple” gợi nhớ “grape” và “plum”)."
+    ],
+    [
+      "Bài học also says “Sometimes we are not aware when we use algorithms.”",
+      "Đôi khi con người sử dụng thuật toán một cách vô thức trong đời sống hàng ngày."
+    ],
+    [
+      "<section class=\"learn-block\"><div class=\"learn-kicker\">Apply</div><h3 class=\"learn-title\">Bài học problem-solving replays</h3>",
+      "<section class=\"learn-block\"><div class=\"learn-kicker\">Apply</div><h3 class=\"learn-title\">Các bài toán giải quyết vấn đề kinh điển</h3>"
+    ],
+    [
+      "Bài học also supplies simpler methods for Problem 6 → <strong>A − C</strong> and Problem 7 → <strong>A + C</strong>. This method is not generalized beyond these seven rows.",
+      "Đối với Bài toán 6, có thể áp dụng cách giải ngắn hơn: <strong>A − C</strong>; Bài toán 7: <strong>A + C</strong>."
+    ],
+    [
+      "Bài học says researchers hypothesize these orientations affect emotional expression; some physiological responses such as smiles or grimaces may be innate.",
+      "Các nhà nghiên cứu đưa ra giả thuyết rằng những định hướng này ảnh hưởng đến sự bộc lộ cảm xúc; một số phản ứng sinh lý như cười hay nhăn mặt có thể mang tính bẩm sinh."
+    ],
+    [
+      "preserving cách diễn đạt trong bài.",
+      "đáp ứng các yêu cầu đối phó của cơ thể."
+    ],
+    [
+      "<section class=\"learn-block\"><div class=\"learn-kicker\">See + Apply</div><h3 class=\"learn-title\">Trauma responses — exact 5 Fs</h3>",
+      "<section class=\"learn-block\"><div class=\"learn-kicker\">See + Apply</div><h3 class=\"learn-title\">Phản ứng đối phó với căng thẳng / tổn thương — 5F</h3>"
+    ]
+  ],
+  "KE_TOAN_TAI_CHINH.html": [
+    [
+      "<summary>Ví dụ — DO IT! 1.2 exact inventory data</summary>",
+      "<summary>Ví dụ — DO IT! 1.2 Bảng dữ liệu hàng tồn kho</summary>"
+    ],
+    [
+      "<summary>Ví dụ — DO IT! 1.4 exact component table</summary>",
+      "<summary>Ví dụ — DO IT! 1.4 Bảng xác định nguyên giá TSCĐ</summary>"
+    ],
+    [
+      "<h3 class=\"panel-title\">Investment map — keep each account family distinct</h3>",
+      "<h3 class=\"panel-title\">Sơ đồ tài khoản các khoản đầu tư tài chính</h3>"
+    ],
+    [
+      "<label>Investment family<select id=\"invTimelineType\" class=\"input\"",
+      "<label>Nhóm khoản đầu tư<select id=\"invTimelineType\" class=\"input\""
+    ],
+    [
+      "<summary>DO IT! 4.3 · exact temporary-account balances</summary>",
+      "<summary>DO IT! 4.3 · Bảng số dư các tài khoản tạm thời</summary>"
+    ],
+    [
+      "<th>Account</th><th>phù hợp với nội dung bài role / behavior</th>",
+      "<th>Account</th><th>Bản chất và nguyên tắc hạch toán</th>"
+    ],
+    [
+      "<div class=\"tool-title\">Choose a phù hợp với nội dung bài scenario</div>",
+      "<div class=\"tool-title\">Lựa chọn tình huống thực hành</div>"
+    ],
+    [
+      "`${data.length} phù hợp với nội dung bài account records`",
+      "`${data.length} tài khoản kế toán trọng tâm`"
+    ]
+  ],
+  "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html": [
+    [
+      "Bài học mô tả đây là tôn giáo lớn nhất, hiện diện rộng ở châu Âu, châu Mỹ và các nước định cư bởi người châu Âu; Protestant work ethic được gắn với hard work, wealth creation và frugality.",
+      "Đây là tôn giáo lớn nhất, hiện diện rộng ở châu Âu, châu Mỹ và các nước định cư bởi người châu Âu; đạo đức làm việc Kháng Cách (Protestant work ethic) gắn liền với sự chăm chỉ, tích lũy của cải và tiết kiệm."
+    ],
+    [
+      "The course defines democracy as government by the people, directly or through elected representatives; totalitarianism as one person/party exercising absolute control over all spheres of life and prohibiting opposition.",
+      "Dân chủ được định nghĩa là chính quyền của nhân dân, trực tiếp hoặc thông qua đại diện được bầu; chuyên chế là một cá nhân hoặc đảng phái kiểm soát tuyệt đối mọi lĩnh vực đời sống và cấm các đảng đối lập."
+    ],
+    [
+      "<p class=\"source-note\">. Phần chính trị và kinh tế tập trung vào các nhóm nội dung đọc rõ.</p>",
+      "<p class=\"source-note\">Phần hệ thống chính trị và kinh tế tập trung vào các khái niệm trọng tâm cần nắm vững.</p>"
+    ],
+    [
+      "Bài học warns ill-informed firms are unlikely to succeed; managers may hire local citizens or rotate executives abroad.",
+      "Doanh nghiệp thiếu hiểu biết về văn hóa sẽ khó thành công; nhà quản lý có thể tuyển dụng nhân sự bản địa hoặc luân chuyển quản lý quốc tế."
+    ],
+    [
+      "Course examples: “OK” can mean OK in U.S., money in Japan, “big zero” in France, insult in Brazil; thumbs-up is good in U.S. but offensive in parts of West Africa; V-sign orientation changes meaning in the U.K.",
+      "Cùng một cử chỉ “OK” có ý nghĩa khác nhau: đồng ý ở Mỹ, tiền bạc ở Nhật Bản, “con số không” ở Pháp, xúc phạm ở Brazil; ngón tay cái hướng lên là tốt ở Mỹ nhưng thô lỗ ở Tây Phi; dấu V đổi nghĩa theo hướng xoay tay ở Anh."
+    ],
+    [
+      "<strong>Synchronous time:</strong> ⚠ Lưu ý: dòng này có cách diễn đạt dễ nhầm; hãy dựa vào dấu hiệu multi-task và relationship scheduling",
+      "<strong>Synchronous time:</strong> ⚠ Định hướng đa thời gian: làm nhiều việc cùng lúc, lịch hẹn linh hoạt và coi trọng mối quan hệ hơn thời gian biểu"
+    ],
+    [
+      "<div class=\"source-warning\"><strong>Bài học-note on Time:</strong> ⚠ Lưu ý: dòng Synchronous Time có cách diễn đạt gần với Ascription. Hãy dựa vào ba dấu hiệu: multi-task, approximate appointments và schedules subordinate to relationships.</div>",
+      "<div class=\"source-warning\"><strong>Lưu ý về định hướng Thời gian:</strong> ⚠ Khi phân biệt Synchronous Time với Ascription, hãy dựa vào ba dấu hiệu cốt lõi: làm nhiều việc cùng lúc (multi-task), lịch hẹn linh hoạt và coi trọng mối quan hệ hơn thời gian biểu.</div>"
+    ],
+    [
+      "<p>Bài học says it tends to moderate or erase the impact of national culture.</p>",
+      "<p>Văn hóa tổ chức có xu hướng điều hòa hoặc giảm bớt ảnh hưởng của văn hóa quốc gia.</p>"
+    ],
+    [
+      "<li>Course says needs may be similar, but cited study is dated.</li>",
+      "<li>Các nghiên cứu chỉ ra rằng nhu cầu có thể tương đồng nhưng cần xét đến đặc điểm từng quốc gia/khu vực.</li>"
+    ],
+    [
+      "<p>Bài học: rapid pace for hours and little control over work activities.</p>",
+      "<p>Nhịp độ làm việc nhanh liên tục nhiều giờ và người lao động ít có quyền kiểm soát công việc.</p>"
+    ],
+    [
+      "<p>Bài học: more relaxed pace and a great deal of control over work activities.</p>",
+      "<p>Nhịp độ linh hoạt hơn và người lao động có quyền kiểm soát công việc tương đối lớn.</p>"
+    ],
+    [
+      "<p>Bài học: typically between Japan and Sweden — less demanding pace than Japan, more structured than Sweden.</p>",
+      "<p>Nằm ở khoảng giữa Nhật Bản và Thụy Điển: nhịp độ bớt căng thẳng hơn Nhật Bản nhưng quy củ hơn Thụy Điển.</p>"
+    ],
+    [
+      "Bài học says quality of work life may be directly related to country culture.",
+      "Chất lượng đời sống công việc có mối liên hệ trực tiếp với văn hóa của từng quốc gia."
+    ],
+    [
+      "<div class=\"source-warning\"><strong>Bài học-label note:</strong> Hành động 6 được ghi là “SCR” trong phần nói về corporate social responsibility; hãy lưu ý nhãn này khi ôn tập.</div>",
+      "<div class=\"source-warning\"><strong>Lưu ý thuật ngữ:</strong> Mục 6 đề cập đến Trách nhiệm xã hội của doanh nghiệp (CSR / SCR); hãy chú ý thuật ngữ này khi ôn tập.</div>"
+    ],
+    [
+      "<p>Bài học defines sustainable strategies as strategies that help the MNC make good profits without harming the environment while operating in a socially responsible manner toward stakeholders; it states these can be good for shareholders, environment, local communities, employees and customers.</p>",
+      "<p>Chiến lược bền vững được định nghĩa là chiến lược giúp doanh nghiệp đa quốc gia đạt lợi nhuận tốt mà không gây hại cho môi trường, đồng thời vận hành có trách nhiệm xã hội đối với các bên liên quan (cổ đông, môi trường, cộng đồng địa phương, nhân viên và khách hàng).</p>"
+    ],
+    [
+      "Only unambiguous groupings are displayed because the original slide is multi-column.",
+      "Tập trung vào các nhóm phân loại cốt lõi giữa kinh tế thị trường, kinh tế chỉ huy và kinh tế hỗn hợp."
+    ],
+    [
+      "setFeedback($('#reward-feedback'),'Chọn course-supported interpretation.')",
+      "setFeedback($('#reward-feedback'),'Chọn nhận định phù hợp nhất với tình huống.')"
+    ],
+    [
+      "Course asks about freedom of association, speech, assembly and movement, and whether investment can help change.",
+      "Đặt câu hỏi về quyền tự do lập hội, tự do ngôn luận, hội họp và đi lại, cùng khả năng đầu tư tạo ra thay đổi tích cực."
+    ],
+    [
+      "Bài học phân biệt legal vs ethical behavior and explains tragedy of the commons.",
+      "Phân biệt rõ giữa hành vi tuân thủ pháp luật và hành vi đạo đức, đồng thời giải thích hiện tượng bi kịch của tài sản chung (tragedy of the commons)."
+    ],
+    [
+      "Course discusses FCPA, OECD anti-bribery convention, facilitating payments and “greater good” questions.",
+      "Thảo luận về Đạo luật FCPA, Công ước chống hối lộ OECD, các khoản chi phí bôi trơn và bài toán lợi ích tổng thể."
+    ],
+    [
+      "Course links societal cultural patterns with how strongly firms stress ethical behavior.",
+      "Liên kết mô hình văn hóa xã hội với mức độ doanh nghiệp chú trọng hành vi đạo đức."
+    ]
+  ],
+  "KINH_TE_QUOC_TE.html": [
+    [
+      "Bài học view: national wealth depends on ability to produce commodities; all nations can gain from free trade; laissez-faire is advocated.",
+      "Quan điểm cốt lõi: của cải quốc gia phụ thuộc vào năng lực sản xuất hàng hóa; mọi quốc gia đều có thể hưởng lợi từ tự do thương mại; ủng hộ tự do kinh doanh (laissez-faire)."
+    ],
+    [
+      "<strong>Bài học exchange forms:</strong>",
+      "<strong>Khung tỷ lệ trao đổi:</strong>"
+    ],
+    [
+      "Bài học bounds: <span class=\"mono\">2/3 &lt; Pm/Pc &lt; 2</span>; điểm minh họa = 1.",
+      "Khung tỷ lệ trao đổi: <span class=\"mono\">2/3 &lt; Pm/Pc &lt; 2</span>; điểm minh họa = 1."
+    ],
+    [
+      "<h3>Bài học point-label rail for the gains diagram</h3>",
+      "<h3>Sơ đồ các điểm cân bằng và lợi ích thương mại</h3>"
+    ],
+    [
+      "<h3>Bài học coordinates</h3>",
+      "<h3>Tọa độ các điểm cân bằng</h3>"
+    ],
+    [
+      "<li>Bài học of revenue.</li>",
+      "<li>Tạo nguồn thu cho ngân sách nhà nước.</li>"
+    ],
+    [
+      "<h3>Bài học numeric examples</h3>",
+      "<h3>Ví dụ tính toán minh họa</h3>"
+    ],
+    [
+      "<p class=\"small\" style=\"margin-top:.5rem\">Bài học page contains a parsed “CS” label inside the producer-surplus context; this page teaches PS from heading/context and keeps the typo only as a Lưu ý.</p>",
+      "<p class=\"small\" style=\"margin-top:.5rem\">Tài liệu gốc có một nhãn ghi nhầm “CS” trong phần thặng dư sản xuất; nội dung này được chuẩn hóa thành PS theo đúng ngữ cảnh.</p>"
+    ],
+    [
+      "<span class=\"section-kicker\">Bài học-model comparison</span>",
+      "<span class=\"section-kicker\">So sánh mô hình</span>"
+    ],
+    [
+      "Bài học says governments shift toward standards, quotas, licensing and rules of origin.",
+      "Các chính phủ có xu hướng chuyển sang sử dụng tiêu chuẩn kỹ thuật, hạn ngạch, cấp phép và quy tắc xuất xứ."
+    ],
+    [
+      "<div class=\"eyebrow\">Bài học</div><h3>Limitations / evasion</h3>",
+      "<div class=\"eyebrow\">Hạn chế</div><h3>Hạn chế và cách tránh né</h3>"
+    ],
+    [
+      "<strong>Bài học welfare:</strong> PS +(a+b+c); CS −(a+b); government cost −(b+c+d); net −(b+d). Bài học calls b production inefficiency and d consumption distortion.",
+      "<strong>Phân tích phúc lợi:</strong> ΔPS = +(a+b+c); ΔCS = −(a+b); chi phí ngân sách chính phủ = −(b+c+d); tổn thất ròng (DWL) = −(b+d), trong đó diện tích b là tổn thất phi hiệu quả sản xuất và diện tích d là biến dạng tiêu dùng."
+    ],
+    [
+      "Bài học states WTO anti-dumping rules allow duties equal to the dumping margin if material injury to domestic industry can be demonstrated.",
+      "Quy định chống bán phá giá của WTO cho phép áp thuế bằng đúng biên độ bán phá giá nếu chứng minh được thiệt hại vật chất đối với ngành sản xuất trong nước."
+    ]
+  ],
+  "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html": [
+    [
+      "<div class=\"panel\"><h3>Future of money — Các nhận định trong bài</h3><div class=\"three-col\"><div class=\"mini-note\"><b>Means of payment</b><p>cách diễn đạt trong bài: “disappearing”.</p></div><div class=\"mini-note\"><b>Unit of account</b><p>cách diễn đạt trong bài: “likely to remain”.</p></div><div class=\"mini-note\"><b>Store of value</b><p>cách diễn đạt trong bài: “disappearing”.</p></div></div>",
+      "<div class=\"panel\"><h3>Tương lai của tiền mặt — Xu hướng dự báo</h3><div class=\"three-col\"><div class=\"mini-note\"><b>Phương tiện thanh toán (Means of payment)</b><p>Xu hướng: Tiền mặt truyền thống dần thu hẹp trước sự phát triển của thanh toán điện tử.</p></div><div class=\"mini-note\"><b>Đơn vị định giá (Unit of account)</b><p>Xu hướng: Tiếp tục duy trì vai trò thước đo giá trị tiêu chuẩn.</p></div><div class=\"mini-note\"><b>Phương tiện cất trữ giá trị (Store of value)</b><p>Xu hướng: Tiền mặt vật lý dần nhường chỗ cho các kênh tài sản và tài khoản điện tử.</p></div></div>"
+    ],
+    [
+      "<div class=\"quiz-q\" data-answer=\"SSU\"><p><strong>1.</strong> Income > spending: nhóm trong bài?</p>",
+      "<div class=\"quiz-q\" data-answer=\"SSU\"><p><strong>1.</strong> Đơn vị kinh tế có thu nhập lớn hơn chi tiêu (Income &gt; Spending) thuộc nhóm nào?</p>"
+    ],
+    [
+      "Loan used to buy home/land/building with property as collateral; may be amortized; fixed-rate or variable-rate. Bài học also mentions pooling/securitization and FHA/VA insurance examples.",
+      "Loan used to buy home/land/building with property as collateral; may be amortized; fixed-rate or variable-rate. Khái niệm mở rộng gồm pooling/securitization và các chương trình bảo hiểm FHA/VA."
+    ]
+  ],
+  "SANG_TAO_KHOI_NGHIEP.html": [
+    [
+      "<li>Một cách diễn đạt mô tả brainstorming as “a kind of creative conference for groups of people to turn out lots of ideas and find fresh approaches to problems.”</li>",
+      "<li>Brainstorming được mô tả như “một hội nghị sáng tạo để các nhóm người cùng đưa ra nhiều ý tưởng và tìm ra những cách tiếp cận mới cho vấn đề.”</li>"
+    ],
+    [
+      "Course examples for reasons to say <strong>yes</strong> to Coca-Cola include: “it’s cold and refreshing,” “it will give you a boost of energy,” or “most athletes drink Coca Cola during long runs.”",
+      "Các ví dụ minh họa về lý do nói <strong>đồng ý (yes)</strong> khi mua Coca-Cola: “uống lạnh rất sảng khoái,” “tăng cường năng lượng,” hoặc “nhiều vận động viên uống khi chạy đường dài.”"
+    ],
+    [
+      "<div><b>Bài học layout A</b>",
+      "<div><b>Bố trí dạng tập trung (Layout A)</b>"
+    ],
+    [
+      "<div><b>Bài học layout B</b>",
+      "<div><b>Bố trí dạng đối xứng (Layout B)</b>"
+    ],
+    [
+      "<p>Bài học BMC examples are stored once as exact datasets:</p>",
+      "<p>Các ví dụ minh họa về Business Model Canvas bao gồm:</p>"
+    ],
+    [
+      "<p>Bài học lưu ý rằng although there is not universal agreement on all business-model components, many agree successful models share common attributes that can be visually organized to show interrelationships.</p>",
+      "<p>Mặc dù chưa có sự đồng thuận tuyệt đối về mọi thành phần của mô hình kinh doanh, hầu hết các chuyên gia đều nhất trí rằng các mô hình thành công đều chia sẻ những thuộc tính chung có thể trực quan hóa mối quan hệ tương hỗ.</p>"
+    ]
   ]
 }
