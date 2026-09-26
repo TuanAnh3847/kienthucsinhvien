@@ -14,7 +14,7 @@
 .edu-subject-header { background: rgba(255,255,255,.97); backdrop-filter: blur(12px); }
 .edu-subject-header .site-header-row { height: 4rem; transition: opacity .16s ease; }
 .edu-header-compact .site-header-row { opacity: 0; pointer-events: none; }
-.edu-header-name { color: #171b24; font-size: 1.375rem; font-weight: 850; }
+.site-header-row h1, .edu-header-name { color: #0f172a; font-size: 1.375rem; font-weight: 850; letter-spacing: -0.025em; }
 .edu-subject-header .chapter-nav {
   display: flex; align-items: center; gap: .375rem; overflow-x: auto;
   padding: .45rem 0; border-top: 1px solid #f1f5f9;
@@ -116,12 +116,34 @@ body.edu-study-page .edu-compact-activity > :not(.edu-choice-row) { grid-column:
   body.edu-study-page .study-guide { padding: 1rem; }
 }
 
-/* Homepage: same content, less empty space between icon, copy and action. */
-.course-card[class] { padding-top: 1rem; padding-bottom: 1rem; }
-.course-card > .w-14 { width: 2.75rem; height: 2.75rem; margin-bottom: .65rem; font-size: 1.75rem; }
-.course-card > h3 { margin-bottom: .375rem; }
-.course-card > p { margin-bottom: .5rem; }
-.course-card > .border-t { padding-top: .65rem; }
+/* Homepage: same content, ~20% lower visual height (185-200px equivalent) */
+.course-card[class] {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: .75rem 1.25rem !important;
+}
+.course-card > .w-14 {
+  width: 2.35rem !important;
+  height: 2.35rem !important;
+  margin-bottom: .45rem !important;
+  font-size: 1.45rem !important;
+  border-radius: .75rem !important;
+}
+.course-card > h3 {
+  font-size: 1.0625rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: .25rem !important;
+}
+.course-card > p {
+  font-size: .8125rem !important;
+  line-height: 1.38 !important;
+  margin-bottom: .35rem !important;
+}
+.course-card > .border-t {
+  margin-top: auto !important;
+  padding-top: .45rem !important;
+  font-size: .8125rem !important;
+}
 
 /* Practice: keep questions readable and actions reachable on small phones. */
 .edu-practice-page .site-header-row h1 { color: #0f172a; }
