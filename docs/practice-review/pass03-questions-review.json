@@ -1,0 +1,571 @@
+{
+  "review": "Master Task 03 Practice Expansion: NLTTTC and LTMQT question banks anchored 100% to local theory text.",
+  "nltttc": [
+    {
+      "id": "nltttc_1",
+      "chapter": "ch1",
+      "heading": "Medium of exchange",
+      "quote": "giảm double coincidence of needs",
+      "question": "Trong nền kinh tế, chức năng phương tiện trao đổi (Medium of exchange) của tiền tệ giúp loại bỏ trở ngại lớn nào của phương thức hàng đổi hàng (barter)?",
+      "options": [
+        "Loại bỏ sự đòi hỏi trùng hợp kép về nhu cầu (double coincidence of needs)",
+        "Loại bỏ hoàn toàn rủi ro lạm phát và mất giá sức mua của tiền mặt",
+        "Cố định vĩnh viễn mức lãi suất thực tế trên thị trường vốn",
+        "Đảm bảo mọi khoản vay nợ tín dụng đều được hoàn trả đúng hạn"
+      ],
+      "explanation": "Chức năng phương tiện trao đổi của tiền cho phép người mua và người bán giao dịch trực tiếp thông qua tiền tệ mà không cần tìm được đối tác có nhu cầu trao đổi tương thích trùng hợp (double coincidence of needs)."
+    },
+    {
+      "id": "nltttc_2",
+      "chapter": "ch1",
+      "heading": "Unit of account",
+      "quote": "Đo giá trị và giảm số lượng relative prices",
+      "question": "Chức năng đơn vị đo lường giá trị (Unit of account) của tiền tệ mang lại lợi ích kinh tế cơ bản nào?",
+      "options": [
+        "Đo lường giá trị hàng hóa và giảm đáng kể số lượng giá tương đối (relative prices) cần niêm yết",
+        "Tự động cân bằng giữa tổng cung và tổng cầu trong toàn bộ nền kinh tế",
+        "Bảo đảm tiền tệ không bao giờ bị hao mòn hay mất mát theo thời gian",
+        "Tạo ra thu nhập lãi suất thụ động định kỳ cho người nắm giữ"
+      ],
+      "explanation": "Tiền đóng vai trò là thước đo chung giúp định giá mọi hàng hóa, giảm từ N(N-1)/2 mức giá tương đối trong nền kinh tế hàng đổi hàng xuống còn N mức giá niêm yết bằng tiền."
+    },
+    {
+      "id": "nltttc_3",
+      "chapter": "ch1",
+      "heading": "Store of value",
+      "quote": "Store of value Lưu sức mua theo thời gian",
+      "question": "Chức năng lưu trữ giá trị (Store of value) của tiền tệ phản ánh khía cạnh nào sau đây?",
+      "options": [
+        "Khả năng lưu giữ sức mua từ thời điểm hiện tại sang tương lai",
+        "Bắt buộc chính phủ phải bảo chứng bằng một lượng vàng vật chất tương ứng",
+        "Tỷ lệ sinh lời của tiền tệ luôn vượt trội hơn cổ phiếu và bất động sản",
+        "Khả năng chuyển đổi thành ngoại tệ không giới hạn tại mọi thời điểm"
+      ],
+      "explanation": "Chức năng cất trữ giá trị cho phép chuyển giao sức mua từ hiện tại sang tương lai, dù tiền mặt chịu đánh đổi tính thanh khoản cao với việc không sinh lãi."
+    },
+    {
+      "id": "nltttc_4",
+      "chapter": "ch1",
+      "heading": "Portability",
+      "quote": "Portability Dễ chuyển giao và mang theo",
+      "question": "Đặc tính 'Portability' (tính tiện lợi khi di chuyển/mang theo) của một loại tiền tệ tốt đòi hỏi yếu tố gì?",
+      "options": [
+        "Dễ mang theo, chi phí vận chuyển và cất giữ thấp đối với giá trị lớn",
+        "Được đúc bằng các kim loại quý có trọng lượng cực nặng để tránh thất lạc",
+        "Phải được lưu thông ở dạng vật chất kích thước lớn để dễ nhận diện",
+        "Chỉ được phát hành dưới dạng tiền gửi điện tử tại các ngân hàng thương mại"
+      ],
+      "explanation": "Portability đòi hỏi tiền tệ phải có giá trị tập trung cao, gọn nhẹ, dễ mang theo và chi phí vận chuyển thấp để thuận tiện cho giao dịch thương mại."
+    },
+    {
+      "id": "nltttc_5",
+      "chapter": "ch1",
+      "heading": "M1 vs M2",
+      "quote": "M1 vs M2",
+      "question": "Trong đo lường các khối tiền tệ (monetary aggregates), tiêu chuẩn phân biệt chính giữa khối M1 và khối M2 là:",
+      "options": [
+        "M1 gồm tiền mặt và các khoản tiền gửi thanh toán có tính thanh khoản cao nhất; M2 bao gồm M1 cộng thêm các tài sản thanh khoản kém hơn như tiền gửi tiết kiệm và tiền gửi có kỳ hạn",
+        "M1 chỉ bao gồm tiền giấy và tiền xu do ngân hàng trung ương phát hành; M2 chỉ bao gồm ngoại tệ mạnh",
+        "M1 là lượng vốn đầu tư trên thị trường chứng khoán; M2 là dự trữ ngoại hối quốc gia",
+        "M1 chỉ áp dụng cho giao dịch của chính phủ; M2 áp dụng cho khu vực tư nhân"
+      ],
+      "explanation": "M1 là khối tiền có tính thanh khoản cao nhất dùng trực tiếp trong thanh toán (tiền mặt, tiền gửi không kỳ hạn/viết séc); M2 mở rộng M1 thêm các tài sản ít lỏng hơn nhưng có thể nhanh chóng chuyển thành tiền mặt (tiền gửi tiết kiệm, tiền gửi kỳ hạn nhỏ)."
+    },
+    {
+      "id": "nltttc_6",
+      "chapter": "ch2",
+      "heading": "Direct finance",
+      "quote": "Direct finance SSU Funds → DSU SSU ← Direct claim DSU",
+      "question": "Cơ chế tài trợ trực tiếp (Direct finance) trong hệ thống tài chính diễn ra theo phương thức nào?",
+      "options": [
+        "Bên thặng dư vốn (SSU) chuyển vốn trực tiếp cho bên thiếu hụt vốn (DSU) bằng cách mua các chứng khoán do DSU phát hành",
+        "Bên gửi tiền gửi vào ngân hàng thương mại rồi ngân hàng cấp tín dụng cho bên vay vốn",
+        "Chính phủ dùng ngân sách nhà nước cấp phát không hoàn lại cho các doanh nghiệp",
+        "Ngân hàng trung ương trực tiếp mua toàn bộ nợ xấu của các tổ chức tín dụng"
+      ],
+      "explanation": "Tài trợ trực tiếp là phương thức bên cần vốn (DSU) bán trực tiếp các công cụ tài chính (chứng khoán như cổ phiếu, trái phiếu) cho bên cấp vốn (SSU) trên thị trường tài chính."
+    },
+    {
+      "id": "nltttc_7",
+      "chapter": "ch2",
+      "heading": "Indirect finance",
+      "quote": "Indirect finance SSU Funds → Intermediary → Funds DSU",
+      "question": "Đặc trưng cốt lõi của tài trợ gián tiếp (Indirect finance) là:",
+      "options": [
+        "Vốn được luân chuyển từ bên thừa vốn sang bên thiếu vốn thông qua tổ chức trung gian tài chính (Financial Intermediary)",
+        "Các doanh nghiệp phát hành cổ phiếu lần đầu ra công chúng (IPO) trực tiếp tới nhà đầu tư",
+        "Người dân tự giữ tiền mặt tại nhà và trực tiếp cho người thân vay không cần giấy tờ",
+        "Nhà đầu tư nước ngoài mua trực tiếp nhà máy tại thị trường nội địa"
+      ],
+      "explanation": "Tài trợ gián tiếp có sự tham gia của trung gian tài chính (như ngân hàng, quỹ đầu tư), trung gian này huy động vốn từ SSU và tạo ra các tài sản tài chính mới để tài trợ cho DSU."
+    },
+    {
+      "id": "nltttc_8",
+      "chapter": "ch2",
+      "heading": "Money market vs Capital market",
+      "quote": "Money market hay Capital market?",
+      "question": "Tiêu chí căn bản để phân định giữa Thị trường tiền tệ (Money market) và Thị trường vốn (Capital market) là:",
+      "options": [
+        "Kỳ hạn đáo hạn của các công cụ tài chính: thị trường tiền tệ giao dịch công cụ ngắn hạn (< 1 năm), thị trường vốn giao dịch công cụ dài hạn (≥ 1 năm)",
+        "Đồng tiền sử dụng: thị trường tiền tệ dùng nội tệ, thị trường vốn chỉ dùng đô la Mỹ (USD)",
+        "Địa điểm giao dịch: thị trường tiền tệ tại quầy giao dịch, thị trường vốn tại các sàn điện tử",
+        "Quyền sở hữu: thị trường tiền tệ chỉ có ngân hàng nhà nước, thị trường vốn dành riêng cho tư nhân"
+      ],
+      "explanation": "Thị trường tiền tệ là thị trường cho các công cụ nợ ngắn hạn có tính thanh khoản cao với kỳ hạn dưới 1 năm; thị trường vốn giao dịch các công cụ nợ dài hạn và vốn chủ sở hữu với kỳ hạn từ 1 năm trở lên."
+    },
+    {
+      "id": "nltttc_9",
+      "chapter": "ch2",
+      "heading": "Primary vs Secondary market",
+      "quote": "Scenario: Một security issue mới được bán cho người mua đầu tiên.",
+      "question": "Thị trường sơ cấp (Primary market) được phân biệt với Thị trường thứ cấp (Secondary market) ở điểm mấu chốt nào?",
+      "options": [
+        "Thị trường sơ cấp phát hành chứng khoán mới và mang lại vốn mới cho tổ chức phát hành; thị trường thứ cấp mua đi bán lại các chứng khoán đã lưu hành",
+        "Thị trường sơ cấp chỉ dành cho nhà đầu tư cá nhân; thị trường thứ cấp chỉ dành cho tổ chức tài chính",
+        "Thị trường sơ cấp có quy mô giao dịch hàng ngày lớn hơn nhiều so với thị trường thứ cấp",
+        "Thị trường sơ cấp không chịu bất kỳ sự quản lý nào từ cơ quan chứng khoán nhà nước"
+      ],
+      "explanation": "Thị trường sơ cấp là nơi chứng khoán mới được bán lần đầu tiên, giúp tổ chức phát hành huy động vốn mới; thị trường thứ cấp là nơi các nhà đầu tư mua bán lại chứng khoán đã phát hành."
+    },
+    {
+      "id": "nltttc_10",
+      "chapter": "ch2",
+      "heading": "Capital market instruments",
+      "quote": "Capital market Kiểm tra Reset Bonds Consol",
+      "question": "Công cụ nào sau đây thuộc về Thị trường vốn (Capital market)?",
+      "options": [
+        "Trái phiếu doanh nghiệp dài hạn (Corporate bonds) và Cổ phiếu phổ thông (Common stock)",
+        "Tín phiếu kho bạc kỳ hạn 3 tháng (Treasury bills)",
+        "Hợp đồng mua lại kỳ hạn qua đêm (Repurchase agreements - REPO)",
+        "Chứng chỉ tiền gửi khả chuyển ngắn hạn (Negotiable CDs) kỳ hạn 6 tháng"
+      ],
+      "explanation": "Trái phiếu dài hạn và cổ phiếu là các công cụ tài chính có kỳ hạn trên 1 năm hoặc không có thời hạn đáo hạn xác định, do đó thuộc về thị trường vốn."
+    },
+    {
+      "id": "nltttc_11",
+      "chapter": "ch3",
+      "heading": "Adverse Selection",
+      "quote": "BEFORE TRANSACTION Adverse Selection Rủi ro chọn phải đối tượng rủi ro cao trước khi giao dịch diễn ra.",
+      "question": "Hiện tượng Lựa chọn đối nghịch (Adverse Selection) xuất hiện tại thời điểm nào và do nguyên nhân gì?",
+      "options": [
+        "Xuất hiện TRƯỚC khi giao dịch diễn ra (Before transaction), khi người có rủi ro cao tích cực tìm kiếm và dễ được chọn cấp tín dụng",
+        "Xuất hiện SAU khi nhận vốn đầu tư, khi bên vay sử dụng tiền vào các dự án cờ bạc nguy hiểm",
+        "Xuất hiện khi các ngân hàng thương mại cạnh tranh hạ lãi suất cho vay",
+        "Xuất hiện khi ngân hàng trung ương đột ngột tăng tỷ lệ dự trữ bắt buộc"
+      ],
+      "explanation": "Adverse Selection là vấn đề thông tin bất cân xứng phát sinh TRƯỚC giao dịch, khiến những người có nguy cơ vỡ nợ cao nhất lại là những người tích cực nhất trong việc tìm kiếm khoản vay."
+    },
+    {
+      "id": "nltttc_12",
+      "chapter": "ch3",
+      "heading": "Moral Hazard",
+      "quote": "AFTER TRANSACTION Moral Hazard Sau thỏa thuận, hành vi có thể thay đổi theo hướng làm tăng default probability.",
+      "question": "Rủi ro đạo đức (Moral Hazard) trong hoạt động tài chính phản ánh hiện tượng nào sau đây?",
+      "options": [
+        "Sau khi hợp đồng được ký kết, bên nhận vốn thay đổi hành vi theo hướng mạo hiểm hơn làm tăng khả năng vỡ nợ",
+        "Bên cho vay che giấu thông tin lãi suất thực tế trước khi khách hàng đặt bút ký hợp đồng",
+        "Nhà đầu tư cá nhân từ chối mua chứng khoán do lo sợ biến động giá thị trường",
+        "Doanh nghiệp công bố báo cáo kiểm toán minh bạch đúng quy định pháp luật"
+      ],
+      "explanation": "Moral Hazard là rủi ro phát sinh SAU khi giao dịch đã hoàn tất, khi bên nhận tài trợ có động cơ thực hiện các hoạt động rủi ro cao hơn thỏa thuận ban đầu vì họ không chịu toàn bộ hậu quả nếu thất bại."
+    },
+    {
+      "id": "nltttc_13",
+      "chapter": "ch3",
+      "heading": "Principal-Agent Problem",
+      "quote": "Principal–Agent Problem 👥 Shareholders Principals / owners Stated objective: profit. Ownership ≠ Control 🧑‍💼 Managers / officers Agents / control",
+      "question": "Xung đột Người ủy thác - Người đại lý (Principal-Agent Problem) trong các công ty cổ phần nảy sinh do:",
+      "options": [
+        "Sự tách biệt giữa quyền sở hữu (cổ đông - principal) và quyền quản lý điều hành (nhà quản lý - agent), khi người đại lý có thể theo đuổi lợi ích cá nhân",
+        "Mâu thuẫn về điều kiện giao hàng giữa người bán và người mua trên thị trường quốc tế",
+        "Tranh chấp giữa các cổ đông thiểu số và hội đồng thẩm phán tòa án nhân dân",
+        "Sự cạnh tranh không lành mạnh giữa hai công ty sản xuất sản phẩm thay thế"
+      ],
+      "explanation": "Vấn đề Principal-Agent xuất hiện do tách rời quyền sở hữu và quyền kiểm soát; nhà quản lý (agent) có thông tin nội bộ tốt hơn và có thể hành động vì quyền lực/lợi ích riêng thay vì tối đa hóa lợi nhuận cho cổ đông (principal)."
+    },
+    {
+      "id": "nltttc_14",
+      "chapter": "ch4",
+      "heading": "Theory of Asset Demand - Wealth",
+      "quote": "Wealth = all economic resources",
+      "question": "Theo Lý thuyết Cầu tài sản (Theory of Asset Demand), sự gia tăng của của cải (Wealth) tác động thế nào đến lượng cầu tài sản?",
+      "options": [
+        "Lượng cầu đối với hầu hết các tài sản sẽ tăng lên (Wealth ↑ Demand ↑)",
+        "Lượng cầu đối với tất cả các tài sản đều giảm sút nghiêm trọng",
+        "Không tạo ra bất kỳ tác động nào vì nhu cầu đầu tư luôn cố định",
+        "Chỉ làm tăng cầu đối với tiền mặt và triệt tiêu cầu đối với trái phiếu"
+      ],
+      "explanation": "Khi tổng của cải của nhà đầu tư tăng lên, họ có nhiều nguồn lực kinh tế hơn để phân bổ vào danh mục đầu tư, làm tăng lượng cầu đối với các tài sản tài chính."
+    },
+    {
+      "id": "nltttc_15",
+      "chapter": "ch4",
+      "heading": "Theory of Asset Demand - Risk",
+      "quote": "Most investors are described as risk averse",
+      "question": "Khi rủi ro tương đối của một tài sản tăng lên so với các tài sản thay thế, lượng cầu đối với tài sản đó biến động như thế nào?",
+      "options": [
+        "Lượng cầu đối với tài sản đó giảm xuống (Risk ↑ Demand ↓) do đa số nhà đầu tư có tâm lý e ngại rủi ro (risk averse)",
+        "Lượng cầu đối với tài sản đó tăng lên gấp đôi để bù đắp chi phí cơ hội",
+        "Lượng cầu luôn giữ nguyên không đổi vì giá cả thị trường đã điều chỉnh",
+        "Lượng cầu chuyển dịch hoàn toàn sang các hợp đồng phái sinh đòn bẩy cao"
+      ],
+      "explanation": "Vì đa số nhà đầu tư trên thị trường có xu hướng e ngại rủi ro (risk averse), khi một tài sản trở nên rủi ro hơn so với các lựa chọn khác, nhà đầu tư sẽ giảm nắm giữ tài sản đó."
+    },
+    {
+      "id": "nltttc_16",
+      "chapter": "ch5",
+      "heading": "Coupon bond",
+      "quote": "Coupon bond Periodic coupon until maturity, then face value.",
+      "question": "Trái phiếu trả lãi định kỳ (Coupon bond) có cơ cấu dòng tiền thanh toán như thế nào?",
+      "options": [
+        "Thanh toán lãi coupon định kỳ cho đến ngày đáo hạn, và hoàn trả mệnh giá (face value) tại ngày đáo hạn",
+        "Không trả bất kỳ khoản lãi định kỳ nào mà bán giảm giá sâu so với mệnh giá",
+        "Hoàn trả toàn bộ cả gốc lẫn lãi bằng một khoản tiền gộp duy nhất sau 6 tháng",
+        "Chỉ trả tiền lãi nếu doanh nghiệp phát hành đạt mức tăng trưởng lợi nhuận trên 20%"
+      ],
+      "explanation": "Coupon bond là công cụ nợ trả cho chủ sở hữu các khoản tiền lãi cố định (coupon) theo các kỳ hạn định trước (hàng năm hoặc bán niên) và hoàn trả mệnh giá vào ngày đáo hạn."
+    },
+    {
+      "id": "nltttc_17",
+      "chapter": "ch5",
+      "heading": "Discount bond",
+      "quote": "Discount / zero-coupon bond Sold below face; no coupon; face paid at maturity.",
+      "question": "Trái phiếu chiết khấu / Trái phiếu không trả lãi định kỳ (Discount / Zero-coupon bond) có đặc điểm là:",
+      "options": [
+        "Được bán với giá thấp hơn mệnh giá (sold below face), không trả lãi định kỳ, và hoàn trả mệnh giá khi đáo hạn",
+        "Được bán với giá cao hơn mệnh giá 50% và trả lãi bằng cổ phiếu thưởng",
+        "Chỉ phát hành cho các nhân viên nội bộ của doanh nghiệp có thâm niên",
+        "Cho phép người nắm giữ chuyển đổi thành vàng bất kỳ lúc nào"
+      ],
+      "explanation": "Zero-coupon bond không thanh toán coupon định kỳ; lợi tức của nhà đầu tư đến từ chênh lệch giữa giá mua chiết khấu ban đầu và mệnh giá nhận được khi đáo hạn."
+    },
+    {
+      "id": "nltttc_18",
+      "chapter": "ch5",
+      "heading": "Bond price and interest rate",
+      "quote": "Bond price và interest rate move inversely.",
+      "question": "Mối quan hệ định lượng giữa giá trái phiếu (Bond price) và lãi suất thị trường (Interest rate) là:",
+      "options": [
+        "Biến động ngược chiều nhau (move inversely): khi lãi suất tăng thì giá trái phiếu giảm, và ngược lại",
+        "Biến động cùng chiều tuyệt đối: khi lãi suất tăng 1% thì giá trái phiếu tăng 1%",
+        "Hoàn toàn độc lập và không có bất kỳ mối liên hệ nào với nhau",
+        "Chỉ biến động cùng chiều trong chu kỳ lạm phát phi mã"
+      ],
+      "explanation": "Vì các dòng tiền tương lai của trái phiếu cố định, khi lãi suất thị trường tăng (lãi suất chiết khấu tăng), giá trị hiện tại của các dòng tiền giảm xuống, làm giá trái phiếu giảm."
+    },
+    {
+      "id": "nltttc_19",
+      "chapter": "ch6",
+      "heading": "Law of One Price",
+      "quote": "Law of One Price Một security, commodity hoặc asset có cùng giá ở mọi nơi khi exchange rates được xét.",
+      "question": "Quy luật một giá (Law of One Price) trong thương mại tài chính quốc tế phát biểu rằng:",
+      "options": [
+        "Một loại hàng hóa hoặc tài sản giống hệt nhau sẽ có cùng mức giá ở mọi quốc gia khi được quy đổi qua tỷ giá hối đoái (bỏ qua chi phí vận chuyển và rào cản)",
+        "Chính phủ bắt buộc tất cả các mặt hàng thiết yếu phải bán đồng giá trên toàn cầu",
+        "Mọi đồng tiền trên thế giới đều có tỷ giá cố định 1:1 so với đồng USD",
+        "Giá xuất khẩu luôn phải thấp hơn giá bán buôn tại thị trường nội địa"
+      ],
+      "explanation": "Quy luật một giá khẳng định nếu hai nước cùng sản xuất một hàng hóa giống hệt nhau và không có chi phí giao dịch, giá của hàng hóa đó sẽ bằng nhau trên toàn thế giới khi tính theo cùng một đồng tiền."
+    },
+    {
+      "id": "nltttc_20",
+      "chapter": "ch6",
+      "heading": "Direct quotation",
+      "quote": "Direct quotation Domestic currency = term currency; foreign currency = commodity currency.",
+      "question": "Phương pháp niêm yết tỷ giá trực tiếp (Direct quotation) được định nghĩa là:",
+      "options": [
+        "Biểu thị giá trị của một đơn vị ngoại tệ bằng một số lượng đơn vị nội tệ nhất định (ví dụ: 1 USD = 25.000 VND)",
+        "Biểu thị giá trị của một đơn vị nội tệ bằng một số lượng đơn vị ngoại tệ nhất định",
+        "Niêm yết giá hàng hóa bằng vàng thay vì sử dụng tiền giấy lưu thông",
+        "Phương thức thỏa thuận ngầm giữa các tổ chức tài chính không công khai"
+      ],
+      "explanation": "Niêm yết trực tiếp (Direct quotation) lấy ngoại tệ làm đồng tiền cơ sở (commodity currency) và nội tệ làm đồng tiền định giá (term currency), thể hiện lượng nội tệ cần để mua 1 đơn vị ngoại tệ."
+    }
+  ],
+  "ltmqt": [
+    {
+      "id": "ltmqt_1",
+      "chapter": "ch1",
+      "heading": "Non-discrimination",
+      "quote": "Non-discrimination MFN: GATT I; GATS II; TRIPS IV",
+      "question": "Trong hệ thống các hiệp định của WTO, nguyên tắc không phân biệt đối xử (Non-discrimination) được cấu thành bởi hai trụ cột pháp lý cơ bản nào?",
+      "options": [
+        "Đãi ngộ tối huệ quốc (MFN) và Đãi ngộ quốc gia (National Treatment - NT)",
+        "Chính sách bảo hộ mậu dịch nội địa và Trợ cấp xuất khẩu",
+        "Tự do hóa luân chuyển lao động và Thống nhất đồng tiền chung",
+        "Áp dụng hạn ngạch số lượng và Độc quyền thương mại nhà nước"
+      ],
+      "explanation": "Nguyên tắc không phân biệt đối xử là nền tảng của WTO, gồm hai nguyên tắc song hành: MFN (không phân biệt đối xử giữa các bạn hàng nước ngoài) và NT (không phân biệt đối xử giữa hàng ngoại và hàng nội)."
+    },
+    {
+      "id": "ltmqt_2",
+      "chapter": "ch1",
+      "heading": "Annex 1A — Trade in Goods",
+      "quote": "Annex 1A — Trade in Goods GATT 1994 GATT 1947 + framework documents",
+      "question": "Phụ lục 1A (Annex 1A) trong cơ cấu Hiệp định thành lập WTO điều chỉnh lĩnh vực nào?",
+      "options": [
+        "Thương mại hàng hóa (Multilateral Agreements on Trade in Goods), bao gồm GATT 1994 và các hiệp định chuyên ngành",
+        "Thương mại dịch vụ tài chính, vận tải và bảo hiểm (GATS)",
+        "Các khía cạnh liên quan đến thương mại của quyền sở hữu trí tuệ (TRIPS)",
+        "Quy chế hoạt động nội bộ của Ban Thư ký WTO tại Geneva"
+      ],
+      "explanation": "Annex 1A của WTO bao gồm GATT 1994 cùng 12 hiệp định đa phương điều chỉnh thương mại hàng hóa như Nông nghiệp, SPS, TBT, Chống bán phá giá, Trợ cấp..."
+    },
+    {
+      "id": "ltmqt_3",
+      "chapter": "ch1",
+      "heading": "Annex 1B — GATS",
+      "quote": "Annex 1B — GATS Members make commitments; khác biệt cơ bản với goods",
+      "question": "Hiệp định chung về Thương mại Dịch vụ (GATS) nằm ở phụ lục nào của Hiệp định Marrakech thành lập WTO?",
+      "options": [
+        "Phụ lục 1B (Annex 1B)",
+        "Phụ lục 1A (Annex 1A)",
+        "Phụ lục 1C (Annex 1C)",
+        "Phụ lục 2 (Annex 2)"
+      ],
+      "explanation": "Cơ cấu trụ cột của WTO gồm: Annex 1A điều chỉnh Goods, Annex 1B là GATS điều chỉnh Services, và Annex 1C là TRIPS điều chỉnh Quyền sở hữu trí tuệ."
+    },
+    {
+      "id": "ltmqt_4",
+      "chapter": "ch1",
+      "heading": "Annex 1C — TRIPS",
+      "quote": "Annex 1C — TRIPS Imported/exported goods protected by IPRs.",
+      "question": "Phụ lục 1C (Annex 1C - Hiệp định TRIPS) của WTO quy định về vấn đề gì?",
+      "options": [
+        "Các khía cạnh liên quan đến thương mại của quyền sở hữu trí tuệ (Intellectual Property Rights)",
+        "Quy trình kiểm dịch động thực vật và an toàn thực phẩm nhập khẩu",
+        "Thủ tục cấp phép hạn ngạch dệt may quốc tế",
+        "Quy chế thành lập các liên minh thuế quan khu vực"
+      ],
+      "explanation": "Hiệp định TRIPS (Annex 1C) đặt ra các tiêu chuẩn bảo hộ và thực thi quyền sở hữu trí tuệ tối thiểu mang tính ràng buộc đối với tất cả thành viên WTO."
+    },
+    {
+      "id": "ltmqt_5",
+      "chapter": "ch2",
+      "heading": "GATT I:1 Scope",
+      "quote": "GATT I:1 — phạm vi áp dụng Customs duties/charges và methods. Import/export rules and formalities.",
+      "question": "Phạm vi áp dụng của nguyên tắc Đãi ngộ tối huệ quốc (MFN) theo Điều I:1 Hiệp định GATT bao gồm:",
+      "options": [
+        "Thuế quan, các khoản thu hải quan, thể thức xuất nhập khẩu và các biện pháp thuế/nội địa liên quan",
+        "Chỉ áp dụng riêng cho các dự án viện trợ không hoàn lại của Liên Hợp Quốc",
+        "Chỉ áp dụng đối với các giao dịch thương mại giữa các doanh nghiệp nhà nước",
+        "Chỉ giới hạn trong việc miễn thị thực xuất nhập cảnh cho công dân các nước thành viên"
+      ],
+      "explanation": "GATT Điều I:1 có phạm vi rất rộng, áp dụng đối với thuế hải quan, lệ phí, phương thức thanh toán, quy tắc thủ tục xuất nhập khẩu và các loại thuế/quy định nội địa áp lên hàng xuất nhập khẩu."
+    },
+    {
+      "id": "ltmqt_6",
+      "chapter": "ch2",
+      "heading": "Immediate & unconditional",
+      "quote": "Advantage · immediate/unconditional · de jure/de facto",
+      "question": "Yêu cầu 'ngay lập tức và vô điều kiện' (immediate and unconditional) trong nguyên tắc MFN (Điều I:1 GATT) có nghĩa là:",
+      "options": [
+        "Bất kỳ lợi thế nào dành cho một nước phải tự động áp dụng ngay cho sản phẩm tương tự của mọi thành viên WTO mà không đòi hỏi sự nhân nhượng đền đáp",
+        "Nước nhập khẩu phải chờ đợi 3 năm trước khi chuyển giao ưu đãi cho các đối tác khác",
+        "Các nước đang phát triển phải thanh toán một khoản bồi thường tài chính trước khi được hưởng ưu đãi",
+        "Quyền ưu đãi chỉ được kích hoạt nếu có phê chuẩn của Đại hội đồng Liên Hợp Quốc"
+      ],
+      "explanation": "Immediate & unconditional có nghĩa là khi một thành viên dành bất kỳ ưu đãi nào cho một quốc gia (kể cả không phải thành viên WTO), ưu đãi đó phải lập tức mở rộng cho mọi thành viên WTO khác mà không kèm điều kiện đánh đổi."
+    },
+    {
+      "id": "ltmqt_7",
+      "chapter": "ch2",
+      "heading": "Like products accordion",
+      "quote": "Likeness “Like products” — accordion metaphor + 4 criteria",
+      "question": "Khái niệm 'Sản phẩm tương tự' (Like products) trong án lệ WTO được ví như 'chiếc đàn xếp' (accordion) vì lý do gì?",
+      "options": [
+        "Khái niệm có độ co giãn linh hoạt tùy thuộc vào từng điều khoản, ngữ cảnh và hoàn cảnh cụ thể của vụ tranh chấp",
+        "Các sản phẩm tương tự phải luôn luôn được định nghĩa bằng một công thức toán học bất biến",
+        "Chỉ áp dụng riêng cho các loại nhạc cụ và thiết bị âm thanh nhập khẩu",
+        "Được quy định cứng nhắc và đồng nhất trong tất cả các điều khoản của GATT, GATS và TRIPS"
+      ],
+      "explanation": "Án lệ Japan - Alcoholic Beverages khẳng định 'likeness' như chiếc đàn accordion có thể co hẹp (như trong Điều III:2 câu 1) hoặc giãn rộng (như trong Điều III:2 câu 2 hoặc Điều III:4) tùy theo ngữ cảnh của điều khoản."
+    },
+    {
+      "id": "ltmqt_8",
+      "chapter": "ch2",
+      "heading": "RTA Exception GATT XXIV",
+      "quote": "Apparent unequal treatment → RTA / regional arrangement or Enabling Clause",
+      "question": "Hai nhóm ngoại lệ lớn đối với nguyên tắc Đãi ngộ tối huệ quốc (MFN) trong thương mại hàng hóa là:",
+      "options": [
+        "Thỏa thuận thương mại khu vực (RTA/FTA/Customs Union theo GATT Điều XXIV) và Điều khoản cho phép (Enabling Clause)",
+        "Chính sách độc quyền ngoại thương của nhà nước và Lệnh cấm vận thương mại đơn phương",
+        "Biện pháp tự vệ thương mại tạm thời và Quy chế miễn trừ ngoại giao",
+        "Thuế tiêu thụ đặc biệt nội địa và Giấy phép lưu hành sản phẩm"
+      ],
+      "explanation": "WTO cho phép miễn trừ MFN đối với các hiệp định liên kết khu vực (như Khu vực thương mại tự do hoặc Liên minh thuế quan theo Điều XXIV) và các chương trình ưu đãi thuế quan cho các nước đang phát triển theo Enabling Clause."
+    },
+    {
+      "id": "ltmqt_9",
+      "chapter": "ch3",
+      "heading": "National Treatment concept",
+      "quote": "National Treatment: concept, objectives, scope",
+      "question": "Mục tiêu cơ bản của nguyên tắc Đãi ngộ quốc gia (National Treatment - Điều III GATT) là gì?",
+      "options": [
+        "Ngăn chặn việc sử dụng các biện pháp thuế và quy định nội địa để bảo hộ sản xuất trong nước trước hàng nhập khẩu",
+        "Buộc các quốc gia phải bãi bỏ hoàn toàn hàng rào thuế quan tại cửa khẩu biên giới",
+        "Đảm bảo các nhà đầu tư nước ngoài được miễn mọi nghĩa vụ nộp thuế thu nhập doanh nghiệp",
+        "Quy định mức giá trần cố định cho các mặt hàng nông sản trên thị trường toàn cầu"
+      ],
+      "explanation": "Điều III:1 GATT khẳng định các loại thuế nội địa và quy định nội địa không được áp dụng đối với sản phẩm nhập khẩu hoặc nội địa nhằm mục đích bảo hộ sản xuất trong nước."
+    },
+    {
+      "id": "ltmqt_10",
+      "chapter": "ch3",
+      "heading": "GATT III.2 First sentence",
+      "quote": "III.2 — First sentence Internal tax or other internal charge. Imported and domestic products are like products .",
+      "question": "Để chứng minh vi phạm Điều III:2 câu thứ nhất (First sentence) của Hiệp định GATT, cần thỏa mãn điều kiện nào?",
+      "options": [
+        "Sản phẩm nhập khẩu và sản phẩm nội địa là sản phẩm tương tự (like products), và sản phẩm nhập khẩu bị đánh thuế nội địa cao hơn (in excess of) dù chỉ là một mức rất nhỏ",
+        "Phải chứng minh khối lượng thương mại nhập khẩu bị sụt giảm trên 50%",
+        "Doanh nghiệp trong nước bị phá sản hàng loạt sau khi hàng ngoại nhập tràn vào",
+        "Hai nước phải có cùng mức thu nhập bình quân đầu người tương đương nhau"
+      ],
+      "explanation": "Điều III:2 câu 1 đòi hỏi: (1) Thuế/khoản thu nội địa, (2) Sản phẩm tương tự (like products), và (3) Hàng nhập khẩu bị đánh thuế cao hơn ('in excess of') hàng nội địa, không cần chứng minh mục đích bảo hộ hay tác động thương mại."
+    },
+    {
+      "id": "ltmqt_11",
+      "chapter": "ch3",
+      "heading": "GATT III.2 Second sentence",
+      "quote": "III.2 — Second sentence Internal tax/charge. Competition between taxed product and a directly competitive/substitutable product.",
+      "question": "Theo Điều III:2 câu thứ hai (Second sentence) của Hiệp định GATT, các tiêu chuẩn kiểm tra pháp lý bao gồm:",
+      "options": [
+        "Sản phẩm cạnh tranh trực tiếp hoặc thay thế (DCS), sản phẩm không bị đánh thuế tương tự (not similarly taxed), và thuế được áp dụng nhằm bảo hộ sản xuất nội địa (to afford protection)",
+        "Chỉ cần chứng minh hai sản phẩm có tên gọi hoàn toàn trùng nhau theo từ điển",
+        "Sản phẩm nhập khẩu phải có chất lượng vượt trội hơn hẳn sản phẩm trong nước",
+        "Chính phủ nước xuất khẩu đã có văn bản chấp thuận mức thuế suất ưu đãi"
+      ],
+      "explanation": "Điều III:2 câu 2 áp dụng cho sản phẩm cạnh tranh trực tiếp hoặc có thể thay thế nhau (DCS); vi phạm xảy ra nếu mức thuế chênh lệch đáng kể ('not similarly taxed') và cấu trúc thuế được thiết kế nhằm bảo hộ sản xuất nội địa."
+    },
+    {
+      "id": "ltmqt_12",
+      "chapter": "ch3",
+      "heading": "GATT III.4",
+      "quote": "Article III.4 ↕ No-less-favourable treatment ↑ ↓ ↕ Covered law/regulation/requirement",
+      "question": "Điều III:4 Hiệp định GATT điều chỉnh việc đối xử đối với hàng hóa nhập khẩu trong khía cạnh nào?",
+      "options": [
+        "Các đạo luật, quy định và yêu cầu nội địa ảnh hưởng đến việc bán, phân phối, vận chuyển hoặc sử dụng hàng hóa trên thị trường nội địa (phải dành đối xử không kém thuận lợi hơn)",
+        "Mức thuế quan áp dụng tại trạm kiểm soát biên phòng hải quan cửa khẩu",
+        "Quy trình cấp thị thực nhập cảnh cho các chuyên gia kỹ thuật nước ngoài",
+        "Thủ tục đăng ký quyền bảo hộ nhãn hiệu tại Cục Sở hữu trí tuệ"
+      ],
+      "explanation": "Điều III:4 GATT cấm phân biệt đối xử thông qua các quy định phi thuế quan nội địa, yêu cầu hàng nhập khẩu phải nhận được đối xử 'không kém thuận lợi hơn' (no less favourable treatment) so với hàng nội địa tương tự."
+    },
+    {
+      "id": "ltmqt_13",
+      "chapter": "ch4",
+      "heading": "Ad valorem tariff",
+      "quote": "Ad valorem Bài tập minh họa 30% tariff on $1,000 laptop goods.",
+      "question": "Thuế quan theo giá trị (Ad valorem tariff) là phương thức đánh thuế được xác định như thế nào?",
+      "options": [
+        "Tính bằng một tỷ lệ phần trăm nhất định trên tổng giá trị hàng hóa nhập khẩu (ví dụ: thuế 30% tính trên giá trị lô hàng)",
+        "Thu một khoản tiền cố định tính trên mỗi mét khối hoặc kilogam hàng hóa",
+        "Khoản thuế cố định bắt buộc áp dụng bình quân cho tất cả các doanh nghiệp",
+        "Thuế suất tự động nhân đôi nếu hàng hóa được vận chuyển bằng đường hàng không"
+      ],
+      "explanation": "Thuế quan theo giá trị (Ad valorem) được tính theo tỷ lệ phần trăm trên trị giá của hàng hóa (ví dụ: 30% trên chiếc laptop giá 1.000 USD thì tiền thuế là 300 USD)."
+    },
+    {
+      "id": "ltmqt_14",
+      "chapter": "ch4",
+      "heading": "Specific tariff",
+      "quote": "Specific examples $100 per imported laptop; $50",
+      "question": "Thuế quan đặc định / cụ thể (Specific tariff) được áp dụng dưới hình thức nào?",
+      "options": [
+        "Một khoản tiền thuế cố định tính trên mỗi đơn vị vật lý của hàng hóa nhập khẩu (ví dụ: 100 USD/chiếc laptop)",
+        "Một tỷ lệ phần trăm khấu trừ trực tiếp từ tiền lương của thủy thủ đoàn vận chuyển",
+        "Khoản bảo lãnh ngân hàng bắt buộc nộp vào kho bạc nhà nước trước khi giao hàng",
+        "Mức thuế suất thay đổi từng ngày theo chỉ số chứng khoán quốc gia"
+      ],
+      "explanation": "Thuế đặc định (Specific tariff) là khoản tiền mặt cố định tính trên một đơn vị đo lường vật lý (chiếc, tấn, lít...) mà không phụ thuộc vào giá trị đắt hay rẻ của đơn vị hàng hóa đó."
+    },
+    {
+      "id": "ltmqt_15",
+      "chapter": "ch4",
+      "heading": "Binding tariff",
+      "quote": "Schedule of Tariff Concessions; schedules are integral to GATT 1994 under Article II.7.",
+      "question": "Khái niệm 'Ràng buộc thuế quan' (Tariff Binding) trong WTO có giá trị pháp lý ra sao?",
+      "options": [
+        "Thành viên cam kết mức thuế quan trần trong Biểu nhân nhượng và không được tự ý nâng thuế suất áp dụng vượt quá mức cam kết ràng buộc này",
+        "Bắt buộc tất cả các mặt hàng nhập khẩu đều phải chịu mức thuế quan bằng đúng 0%",
+        "Các nước phát triển có quyền đơn phương tăng thuế quan bất cứ lúc nào mà không cần lý do",
+        "Chỉ mang tính chất khuyến nghị đạo đức và không có hiệu lực thi hành đối với cơ quan hải quan"
+      ],
+      "explanation": "Ràng buộc thuế quan (bound tariff rates) là mức thuế trần tối đa ghi nhận trong Biểu cam kết nhân nhượng; quốc gia thành viên không được phép áp dụng mức thuế hải quan thực tế vượt quá mức trần này."
+    },
+    {
+      "id": "ltmqt_16",
+      "chapter": "ch4",
+      "heading": "GATT XI:1 Quantitative Restrictions",
+      "quote": "GATT XI.1 prohibits non-charge restrictions such as quotas, licenses or other measures.",
+      "question": "Nguyên tắc tại Điều XI:1 Hiệp định GATT nghiêm cấm các biện pháp hạn chế số lượng (Quantitative Restrictions) bao gồm:",
+      "options": [
+        "Cấm áp dụng các biện pháp hạn chế xuất khẩu hoặc nhập khẩu dưới hình thức hạn ngạch (quotas), giấy phép xuất nhập khẩu hoặc các biện pháp phi thuế quan tương tự",
+        "Cấm các quốc gia thu bất kỳ khoản thuế hải quan nào đối với hàng thiết yếu",
+        "Cấm các hãng tàu container vận chuyển hàng hóa vào ban đêm",
+        "Cấm doanh nghiệp tư nhân tham gia vào các hoạt động xuất nhập khẩu"
+      ],
+      "explanation": "GATT Điều XI:1 khẳng định việc bảo hộ thương mại chỉ được thực hiện thông qua thuế quan; nghiêm cấm các biện pháp hạn chế số lượng như hạn ngạch, giấy phép hoặc các rào cản phi thuế tương đương."
+    },
+    {
+      "id": "ltmqt_17",
+      "chapter": "ch5",
+      "heading": "WTO Dispute Settlement",
+      "quote": "WTO Dispute Settlement Mechanism",
+      "question": "Cơ chế Giải quyết Tranh chấp của WTO được điều chỉnh chủ yếu bởi văn kiện pháp lý nào?",
+      "options": [
+        "Thỏa thuận về các Quy tắc và Thủ tục Giải quyết Tranh chấp (DSU - Dispute Settlement Understanding)",
+        "Hiến chương Liên Hợp Quốc về Tòa án Hình sự Quốc tế",
+        "Công ước Viên 1969 về Luật Điều ước Quốc tế",
+        "Bộ quy tắc trọng tài của Phòng Thương mại Quốc tế (ICC)"
+      ],
+      "explanation": "Cơ chế giải quyết tranh chấp của WTO hoạt động dựa trên Hiệp định DSU (Phụ lục 2 của Hiệp định Marrakech), áp dụng thống nhất cho tất cả các tranh chấp trong khuôn khổ WTO."
+    },
+    {
+      "id": "ltmqt_18",
+      "chapter": "ch5",
+      "heading": "Reverse consensus",
+      "quote": "Use consensus / reverse consensus.",
+      "question": "Cơ chế 'Đồng thuận nghịch' (Reverse consensus / Negative consensus) trong thủ tục giải quyết tranh chấp của WTO mang ý nghĩa:",
+      "options": [
+        "Quyết định (như thành lập Panel, thông qua báo cáo) sẽ tự động được thông qua trừ khi tất cả các thành viên tham gia cuộc họp đều đồng thuận phản đối",
+        "Một phán quyết chỉ được thông qua nếu có đủ 100% phiếu bầu thuận từ tất cả các quốc gia",
+        "Nước bị kiện có quyền một mình phủ quyết toàn bộ tiến trình tố tụng",
+        "Ban Thư ký WTO có quyền tự ý hủy bỏ phán quyết của Ban hội thẩm"
+      ],
+      "explanation": "Quy tắc đồng thuận nghịch (negative consensus) là đột phá lớn của WTO, đảm bảo tiến trình giải quyết tranh chấp không thể bị quốc gia thua kiện đơn phương ngăn cản hoặc phong tỏa như thời kỳ GATT 1947."
+    },
+    {
+      "id": "ltmqt_19",
+      "chapter": "ch5",
+      "heading": "Temporary measures",
+      "quote": "Retaliation timing After failure to agree compensation after 20 days following expiry of reasonable period.",
+      "question": "Trong thủ tục giải quyết tranh chấp của WTO, các biện pháp bồi thường (Compensation) và đình chỉ nhượng bộ/trả đũa (Retaliation) được coi là:",
+      "options": [
+        "Các biện pháp tạm thời (Temporary measures) được áp dụng khi bên vi phạm không thực thi các khuyến nghị trong thời hạn hợp lý",
+        "Các hình phạt vĩnh viễn nhằm mục đích trừng phạt triệt để nền kinh tế của nước bị kiện",
+        "Khoản tiền thưởng tài chính trích từ quỹ dự trữ của WTO trao cho bên khởi kiện",
+        "Biện pháp bắt buộc phải áp dụng ngay trong ngày đầu tiên khởi kiện"
+      ],
+      "explanation": "Bồi thường thương mại và trả đũa (đình chỉ nhượng bộ) chỉ là các biện pháp tạm thời nhằm khôi phục cân bằng quyền lợi cho đến khi thành viên vi phạm đưa biện pháp của mình phù hợp với các hiệp định của WTO."
+    },
+    {
+      "id": "ltmqt_20",
+      "chapter": "ch5",
+      "heading": "Dispute timeline",
+      "quote": "Sắp xếp 7 bước dispute timeline",
+      "question": "Bước thủ tục bắt buộc đầu tiên trong quy trình giải quyết tranh chấp theo Hiệp định DSU của WTO là gì?",
+      "options": [
+        "Tham vấn song phương (Consultations) giữa các bên tranh chấp để tìm kiếm giải pháp thỏa đáng",
+        "Lập tức thành lập Ban hội thẩm (Panel) và triệu tập phiên xử công khai",
+        "Bên khởi kiện đơn phương tăng thuế quan lên 100% đối với hàng hóa của bên bị kiện",
+        "Yêu cầu Tòa án Công lý Quốc tế (ICJ) ban hành lệnh bắt giữ khẩn cấp"
+      ],
+      "explanation": "Tham vấn (Consultations) là bước bắt buộc đầu tiên kéo dài tối thiểu 60 ngày theo DSU, nhằm khuyến khích các bên tự nguyện đàm phán giải quyết bất đồng trước khi đưa ra hội đồng xét xử."
+    }
+  ],
+  "sources": {
+    "nltttc": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "ltmqt": "LUAT_THUONG_MAI_QUOC_TE.html"
+  }
+}

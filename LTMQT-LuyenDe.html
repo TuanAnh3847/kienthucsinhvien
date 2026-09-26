@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luyện đề Luật thương mại quốc tế - Edu Connect</title>
+<meta name="description" content="Trang luyện đề Luật thương mại quốc tế: ôn theo chương, trắc nghiệm 20 câu có đáp án và giải thích chi tiết trích từ lý thuyết.">
+<meta name="keywords" content="luật thương mại quốc tế, luyện đề LTMQT, trắc nghiệm luật thương mại quốc tế, international trade law, WTO, GATT, edu connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta property="og:title" content="Luyện đề Luật thương mại quốc tế - Edu Connect">
+<meta property="og:description" content="Trang luyện đề Luật thương mại quốc tế: ôn theo chương, trắc nghiệm 20 câu có đáp án và giải thích chi tiết trích từ lý thuyết.">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png">
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/LTMQT-LuyenDe">
+<meta property="og:type" content="article">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.glass-panel { background: rgba(255,255,255,0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 800; }
+@keyframes fadeIn { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn .45s ease-out forwards; }
+.modal-overlay { background-color: rgba(28,25,23,.75); backdrop-filter: blur(4px); }
+.exercise-card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.exercise-card:hover { transform: translateY(-3px); box-shadow: 0 18px 35px -24px rgba(13,148,136,.55); border-color: #5eead4; }
+.option-card { transition: all .15s ease; }
+.option-card:hover:not(:disabled) { border-color: #14b8a6; background: #f0fdfa; }
+.option-selected { border-color: #0d9488 !important; background: #ccfbf1 !important; color: #115e59; }
+.option-correct { border-color: #22c55e !important; background: #dcfce7 !important; color: #166534; }
+.option-wrong { border-color: #f43f5e !important; background: #ffe4e6 !important; color: #9f1239; }
+.pill { border: 1px solid #ccfbf1; background: #f0fdfa; color: #0f766e; }
+#practice-panel { scroll-margin-top: 96px; }
+</style>
+<link rel="stylesheet" href="/shared.css">
+</head>
+<body class="edu-practice-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="site-header-row flex justify-between items-center h-16">
+      <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+        <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+        <div class="flex flex-col justify-center min-w-0">
+          <h1 class="font-extrabold text-base sm:text-xl text-slate-900 tracking-tight leading-none">EDU CONNECT</h1>
+          <div class="max-w-[180px] sm:max-w-[260px] overflow-hidden" style="-webkit-mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);">
+            <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">⚖️ Luyện đề Luật Thương Mại Quốc Tế</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="flex items-center shrink-0">
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+          <span id="online-count" class="mr-1">...</span><span class="hidden sm:inline">online</span>
+        </div>
+        <div class="border-l border-stone-300 pl-3 sm:pl-4">
+          <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+          <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+            <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+            <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh viên</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-nav" id="nav-menu">
+      <button onclick="switchMainTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
+      <button onclick="switchMainTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
+      <button onclick="switchMainTab('quiz')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Trắc nghiệm</button>
+    </div>
+    <div class="chapter-select-row relative">
+      <select id="mobile-nav" aria-label="Chọn chương" onchange="switchMainTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+        <option value="overview">Tổng quan</option>
+        <option value="chapter">Luyện theo chương</option>
+        <option value="quiz">Luyện trắc nghiệm</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+  <section id="overview" class="tab-content block">
+    <div class="relative overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-sm p-6 md:p-10 mb-8">
+      <div class="absolute right-0 top-0 h-44 w-44 bg-teal-100 rounded-full blur-3xl opacity-80"></div>
+      <div class="absolute left-10 bottom-0 h-32 w-32 bg-blue-100 rounded-full blur-3xl opacity-70"></div>
+      <div class="relative z-10 grid lg:grid-cols-[1.4fr_.8fr] gap-8 items-center">
+        <div>
+          <span class="inline-flex items-center pill px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-4">🎯 Practice Pilot</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">Kho luyện đề Luật Thương Mại Quốc Tế</h2>
+          <p class="text-lg text-stone-600 max-w-2xl mb-6">Hệ thống 20 câu hỏi trắc nghiệm chuẩn mực bám sát 5 chương lý thuyết: nguồn luật & WTO, nguyên tắc MFN, nguyên tắc đãi ngộ quốc gia NT, thương mại hàng hóa và cơ chế giải quyết tranh chấp DSU.</p>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="switchMainTab('chapter')" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl shadow-sm transition-transform active:scale-[.98]">Bắt đầu luyện theo chương</button>
+            <button onclick="switchMainTab('quiz')" class="bg-white hover:bg-stone-50 text-teal-800 font-black px-5 py-3 rounded-xl border border-teal-200 shadow-sm transition-transform active:scale-[.98]">Vào đề tổng hợp</button>
+          </div>
+        </div>
+        <div class="bg-stone-900 text-white rounded-2xl p-6 shadow-xl">
+          <p class="text-xs uppercase tracking-widest text-teal-300 font-black mb-4">Bài luyện hiện có</p>
+          <div class="grid grid-cols-2 gap-3" id="overview-stats"></div>
+          <div class="mt-5 rounded-xl bg-white/10 p-4 border border-white/10">
+            <p class="text-sm text-stone-200">Chọn bài → Làm bài → Nộp bài → Xem kết quả và đối chiếu lý thuyết → Làm lại để củng cố kiến thức.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 mb-8">
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <div class="text-3xl mb-3">📚</div>
+        <h3 class="font-black text-lg text-slate-900 mb-2">Luyện theo chương</h3>
+        <p class="text-sm text-stone-600">Chia nhỏ các câu hỏi theo từng chương lý thuyết giúp sinh viên ôn tập có trọng tâm, nắm vững nguyên lý trước khi thử sức tổng hợp.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <div class="text-3xl mb-3">✅</div>
+        <h3 class="font-black text-lg text-slate-900 mb-2">Đề tổng hợp</h3>
+        <p class="text-sm text-stone-600">20 câu hỏi trắc nghiệm bao quát các chủ đề quan trọng, có đáp án và giải thích trích xuất trực tiếp từ giáo trình.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter" class="tab-content hidden">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện theo chương</h2>
+      <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Chọn bài theo chương để kiểm tra độ hiểu sâu của từng đơn vị kiến thức trước khi làm bài tổng hợp.</p>
+    </div>
+    <div id="chapter-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <section id="quiz" class="tab-content hidden">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện trắc nghiệm tổng hợp</h2>
+      <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Đề tổng hợp 20 câu hỏi có chấm điểm tức thì, thống kê tỷ lệ đúng và đối chiếu giải thích chi tiết.</p>
+    </div>
+    <div id="quiz-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <p class="practice-theory-link"><a href="/LTMQT">← Lý thuyết Luật thương mại quốc tế</a></p>
+
+  <section id="practice-panel" class="hidden mt-10 animate-fade-in">
+    <div class="flex items-center justify-between gap-4 mb-4">
+      <button onclick="closePracticePanel()" class="bg-white hover:bg-stone-50 text-stone-700 font-bold px-4 py-2 rounded-xl border border-stone-200 shadow-sm">← Quay lại danh sách</button>
+      <span id="practice-badge" class="pill text-xs font-black px-3 py-1 rounded-full"></span>
+    </div>
+    <div id="practice-content"></div>
+  </section>
+</main>
+
+<footer class="border-t border-stone-200 bg-white mt-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-stone-500 flex flex-col md:flex-row justify-between gap-3">
+    <p><strong class="text-teal-700">Edu Connect</strong> · Luyện đề Luật thương mại quốc tế</p>
+    <p><a href="/LTMQT" class="font-bold text-teal-700 underline">← Về lý thuyết Luật thương mại quốc tế</a></p>
+  </div>
+</footer>
+
+<script>
+const LOCAL_SETS = [{"id": "ltmqt-ch1-general", "title": "Chương 1: Tổng quan Luật Thương mại Quốc tế & WTO", "category": "chapter", "mode": "mcq", "chapter": "Chương 1", "difficulty": "Easy", "duration": 10, "description": "Khái niệm, nguồn luật, các nguyên tắc cơ bản và các hiệp định trụ cột Annex 1A, 1B, 1C.", "badge": "Luyện theo chương", "order": 1, "questions": [{"id": "ltmqt_1", "question": "Trong hệ thống các hiệp định của WTO, nguyên tắc không phân biệt đối xử (Non-discrimination) được cấu thành bởi hai trụ cột pháp lý cơ bản nào?", "options": ["Đãi ngộ tối huệ quốc (MFN) và Đãi ngộ quốc gia (National Treatment - NT)", "Chính sách bảo hộ mậu dịch nội địa và Trợ cấp xuất khẩu", "Tự do hóa luân chuyển lao động và Thống nhất đồng tiền chung", "Áp dụng hạn ngạch số lượng và Độc quyền thương mại nhà nước"], "answer": 0, "explanation": "Nguyên tắc không phân biệt đối xử là nền tảng của WTO, gồm hai nguyên tắc song hành: MFN (không phân biệt đối xử giữa các bạn hàng nước ngoài) và NT (không phân biệt đối xử giữa hàng ngoại và hàng nội)."}, {"id": "ltmqt_2", "question": "Phụ lục 1A (Annex 1A) trong cơ cấu Hiệp định thành lập WTO điều chỉnh lĩnh vực nào?", "options": ["Thương mại dịch vụ tài chính, vận tải và bảo hiểm (GATS)", "Thương mại hàng hóa (Multilateral Agreements on Trade in Goods), bao gồm GATT 1994 và các hiệp định chuyên ngành", "Các khía cạnh liên quan đến thương mại của quyền sở hữu trí tuệ (TRIPS)", "Quy chế hoạt động nội bộ của Ban Thư ký WTO tại Geneva"], "answer": 1, "explanation": "Annex 1A của WTO bao gồm GATT 1994 cùng 12 hiệp định đa phương điều chỉnh thương mại hàng hóa như Nông nghiệp, SPS, TBT, Chống bán phá giá, Trợ cấp..."}, {"id": "ltmqt_3", "question": "Hiệp định chung về Thương mại Dịch vụ (GATS) nằm ở phụ lục nào của Hiệp định Marrakech thành lập WTO?", "options": ["Phụ lục 1A (Annex 1A)", "Phụ lục 1C (Annex 1C)", "Phụ lục 1B (Annex 1B)", "Phụ lục 2 (Annex 2)"], "answer": 2, "explanation": "Cơ cấu trụ cột của WTO gồm: Annex 1A điều chỉnh Goods, Annex 1B là GATS điều chỉnh Services, và Annex 1C là TRIPS điều chỉnh Quyền sở hữu trí tuệ."}, {"id": "ltmqt_4", "question": "Phụ lục 1C (Annex 1C - Hiệp định TRIPS) của WTO quy định về vấn đề gì?", "options": ["Quy trình kiểm dịch động thực vật và an toàn thực phẩm nhập khẩu", "Thủ tục cấp phép hạn ngạch dệt may quốc tế", "Quy chế thành lập các liên minh thuế quan khu vực", "Các khía cạnh liên quan đến thương mại của quyền sở hữu trí tuệ (Intellectual Property Rights)"], "answer": 3, "explanation": "Hiệp định TRIPS (Annex 1C) đặt ra các tiêu chuẩn bảo hộ và thực thi quyền sở hữu trí tuệ tối thiểu mang tính ràng buộc đối với tất cả thành viên WTO."}]}, {"id": "ltmqt-ch2-mfn", "title": "Chương 2: Đãi ngộ Tối huệ quốc (MFN)", "category": "chapter", "mode": "mcq", "chapter": "Chương 2", "difficulty": "Medium", "duration": 10, "description": "Điều I:1 GATT, yêu cầu vô điều kiện, phép ẩn dụ chiếc đàn xếp Like products và ngoại lệ RTA / Enabling Clause.", "badge": "Luyện theo chương", "order": 2, "questions": [{"id": "ltmqt_5", "question": "Phạm vi áp dụng của nguyên tắc Đãi ngộ tối huệ quốc (MFN) theo Điều I:1 Hiệp định GATT bao gồm:", "options": ["Thuế quan, các khoản thu hải quan, thể thức xuất nhập khẩu và các biện pháp thuế/nội địa liên quan", "Chỉ áp dụng riêng cho các dự án viện trợ không hoàn lại của Liên Hợp Quốc", "Chỉ áp dụng đối với các giao dịch thương mại giữa các doanh nghiệp nhà nước", "Chỉ giới hạn trong việc miễn thị thực xuất nhập cảnh cho công dân các nước thành viên"], "answer": 0, "explanation": "GATT Điều I:1 có phạm vi rất rộng, áp dụng đối với thuế hải quan, lệ phí, phương thức thanh toán, quy tắc thủ tục xuất nhập khẩu và các loại thuế/quy định nội địa áp lên hàng xuất nhập khẩu."}, {"id": "ltmqt_6", "question": "Yêu cầu 'ngay lập tức và vô điều kiện' (immediate and unconditional) trong nguyên tắc MFN (Điều I:1 GATT) có nghĩa là:", "options": ["Nước nhập khẩu phải chờ đợi 3 năm trước khi chuyển giao ưu đãi cho các đối tác khác", "Bất kỳ lợi thế nào dành cho một nước phải tự động áp dụng ngay cho sản phẩm tương tự của mọi thành viên WTO mà không đòi hỏi sự nhân nhượng đền đáp", "Các nước đang phát triển phải thanh toán một khoản bồi thường tài chính trước khi được hưởng ưu đãi", "Quyền ưu đãi chỉ được kích hoạt nếu có phê chuẩn của Đại hội đồng Liên Hợp Quốc"], "answer": 1, "explanation": "Immediate & unconditional có nghĩa là khi một thành viên dành bất kỳ ưu đãi nào cho một quốc gia (kể cả không phải thành viên WTO), ưu đãi đó phải lập tức mở rộng cho mọi thành viên WTO khác mà không kèm điều kiện đánh đổi."}, {"id": "ltmqt_7", "question": "Khái niệm 'Sản phẩm tương tự' (Like products) trong án lệ WTO được ví như 'chiếc đàn xếp' (accordion) vì lý do gì?", "options": ["Các sản phẩm tương tự phải luôn luôn được định nghĩa bằng một công thức toán học bất biến", "Chỉ áp dụng riêng cho các loại nhạc cụ và thiết bị âm thanh nhập khẩu", "Khái niệm có độ co giãn linh hoạt tùy thuộc vào từng điều khoản, ngữ cảnh và hoàn cảnh cụ thể của vụ tranh chấp", "Được quy định cứng nhắc và đồng nhất trong tất cả các điều khoản của GATT, GATS và TRIPS"], "answer": 2, "explanation": "Án lệ Japan - Alcoholic Beverages khẳng định 'likeness' như chiếc đàn accordion có thể co hẹp (như trong Điều III:2 câu 1) hoặc giãn rộng (như trong Điều III:2 câu 2 hoặc Điều III:4) tùy theo ngữ cảnh của điều khoản."}, {"id": "ltmqt_8", "question": "Hai nhóm ngoại lệ lớn đối với nguyên tắc Đãi ngộ tối huệ quốc (MFN) trong thương mại hàng hóa là:", "options": ["Chính sách độc quyền ngoại thương của nhà nước và Lệnh cấm vận thương mại đơn phương", "Biện pháp tự vệ thương mại tạm thời và Quy chế miễn trừ ngoại giao", "Thuế tiêu thụ đặc biệt nội địa và Giấy phép lưu hành sản phẩm", "Thỏa thuận thương mại khu vực (RTA/FTA/Customs Union theo GATT Điều XXIV) và Điều khoản cho phép (Enabling Clause)"], "answer": 3, "explanation": "WTO cho phép miễn trừ MFN đối với các hiệp định liên kết khu vực (như Khu vực thương mại tự do hoặc Liên minh thuế quan theo Điều XXIV) và các chương trình ưu đãi thuế quan cho các nước đang phát triển theo Enabling Clause."}]}, {"id": "ltmqt-ch3-nt", "title": "Chương 3: Đãi ngộ Quốc gia (National Treatment)", "category": "chapter", "mode": "mcq", "chapter": "Chương 3", "difficulty": "Medium", "duration": 12, "description": "Điều III GATT: thuế nội địa (câu 1 Like products vs câu 2 DCS) và quy định pháp luật nội địa (Điều III:4).", "badge": "Luyện theo chương", "order": 3, "questions": [{"id": "ltmqt_9", "question": "Mục tiêu cơ bản của nguyên tắc Đãi ngộ quốc gia (National Treatment - Điều III GATT) là gì?", "options": ["Ngăn chặn việc sử dụng các biện pháp thuế và quy định nội địa để bảo hộ sản xuất trong nước trước hàng nhập khẩu", "Buộc các quốc gia phải bãi bỏ hoàn toàn hàng rào thuế quan tại cửa khẩu biên giới", "Đảm bảo các nhà đầu tư nước ngoài được miễn mọi nghĩa vụ nộp thuế thu nhập doanh nghiệp", "Quy định mức giá trần cố định cho các mặt hàng nông sản trên thị trường toàn cầu"], "answer": 0, "explanation": "Điều III:1 GATT khẳng định các loại thuế nội địa và quy định nội địa không được áp dụng đối với sản phẩm nhập khẩu hoặc nội địa nhằm mục đích bảo hộ sản xuất trong nước."}, {"id": "ltmqt_10", "question": "Để chứng minh vi phạm Điều III:2 câu thứ nhất (First sentence) của Hiệp định GATT, cần thỏa mãn điều kiện nào?", "options": ["Phải chứng minh khối lượng thương mại nhập khẩu bị sụt giảm trên 50%", "Sản phẩm nhập khẩu và sản phẩm nội địa là sản phẩm tương tự (like products), và sản phẩm nhập khẩu bị đánh thuế nội địa cao hơn (in excess of) dù chỉ là một mức rất nhỏ", "Doanh nghiệp trong nước bị phá sản hàng loạt sau khi hàng ngoại nhập tràn vào", "Hai nước phải có cùng mức thu nhập bình quân đầu người tương đương nhau"], "answer": 1, "explanation": "Điều III:2 câu 1 đòi hỏi: (1) Thuế/khoản thu nội địa, (2) Sản phẩm tương tự (like products), và (3) Hàng nhập khẩu bị đánh thuế cao hơn ('in excess of') hàng nội địa, không cần chứng minh mục đích bảo hộ hay tác động thương mại."}, {"id": "ltmqt_11", "question": "Theo Điều III:2 câu thứ hai (Second sentence) của Hiệp định GATT, các tiêu chuẩn kiểm tra pháp lý bao gồm:", "options": ["Chỉ cần chứng minh hai sản phẩm có tên gọi hoàn toàn trùng nhau theo từ điển", "Sản phẩm nhập khẩu phải có chất lượng vượt trội hơn hẳn sản phẩm trong nước", "Sản phẩm cạnh tranh trực tiếp hoặc thay thế (DCS), sản phẩm không bị đánh thuế tương tự (not similarly taxed), và thuế được áp dụng nhằm bảo hộ sản xuất nội địa (to afford protection)", "Chính phủ nước xuất khẩu đã có văn bản chấp thuận mức thuế suất ưu đãi"], "answer": 2, "explanation": "Điều III:2 câu 2 áp dụng cho sản phẩm cạnh tranh trực tiếp hoặc có thể thay thế nhau (DCS); vi phạm xảy ra nếu mức thuế chênh lệch đáng kể ('not similarly taxed') và cấu trúc thuế được thiết kế nhằm bảo hộ sản xuất nội địa."}, {"id": "ltmqt_12", "question": "Điều III:4 Hiệp định GATT điều chỉnh việc đối xử đối với hàng hóa nhập khẩu trong khía cạnh nào?", "options": ["Mức thuế quan áp dụng tại trạm kiểm soát biên phòng hải quan cửa khẩu", "Quy trình cấp thị thực nhập cảnh cho các chuyên gia kỹ thuật nước ngoài", "Thủ tục đăng ký quyền bảo hộ nhãn hiệu tại Cục Sở hữu trí tuệ", "Các đạo luật, quy định và yêu cầu nội địa ảnh hưởng đến việc bán, phân phối, vận chuyển hoặc sử dụng hàng hóa trên thị trường nội địa (phải dành đối xử không kém thuận lợi hơn)"], "answer": 3, "explanation": "Điều III:4 GATT cấm phân biệt đối xử thông qua các quy định phi thuế quan nội địa, yêu cầu hàng nhập khẩu phải nhận được đối xử 'không kém thuận lợi hơn' (no less favourable treatment) so với hàng nội địa tương tự."}]}, {"id": "ltmqt-ch4-goods", "title": "Chương 4: Thương mại Hàng hóa & Hàng rào Thuế quan", "category": "chapter", "mode": "mcq", "chapter": "Chương 4", "difficulty": "Medium", "duration": 10, "description": "Thuế giá trị vs đặc định, ràng buộc thuế quan (Tariff Binding), cấm hạn chế số lượng Điều XI:1.", "badge": "Luyện theo chương", "order": 4, "questions": [{"id": "ltmqt_13", "question": "Thuế quan theo giá trị (Ad valorem tariff) là phương thức đánh thuế được xác định như thế nào?", "options": ["Tính bằng một tỷ lệ phần trăm nhất định trên tổng giá trị hàng hóa nhập khẩu (ví dụ: thuế 30% tính trên giá trị lô hàng)", "Thu một khoản tiền cố định tính trên mỗi mét khối hoặc kilogam hàng hóa", "Khoản thuế cố định bắt buộc áp dụng bình quân cho tất cả các doanh nghiệp", "Thuế suất tự động nhân đôi nếu hàng hóa được vận chuyển bằng đường hàng không"], "answer": 0, "explanation": "Thuế quan theo giá trị (Ad valorem) được tính theo tỷ lệ phần trăm trên trị giá của hàng hóa (ví dụ: 30% trên chiếc laptop giá 1.000 USD thì tiền thuế là 300 USD)."}, {"id": "ltmqt_14", "question": "Thuế quan đặc định / cụ thể (Specific tariff) được áp dụng dưới hình thức nào?", "options": ["Một tỷ lệ phần trăm khấu trừ trực tiếp từ tiền lương của thủy thủ đoàn vận chuyển", "Một khoản tiền thuế cố định tính trên mỗi đơn vị vật lý của hàng hóa nhập khẩu (ví dụ: 100 USD/chiếc laptop)", "Khoản bảo lãnh ngân hàng bắt buộc nộp vào kho bạc nhà nước trước khi giao hàng", "Mức thuế suất thay đổi từng ngày theo chỉ số chứng khoán quốc gia"], "answer": 1, "explanation": "Thuế đặc định (Specific tariff) là khoản tiền mặt cố định tính trên một đơn vị đo lường vật lý (chiếc, tấn, lít...) mà không phụ thuộc vào giá trị đắt hay rẻ của đơn vị hàng hóa đó."}, {"id": "ltmqt_15", "question": "Khái niệm 'Ràng buộc thuế quan' (Tariff Binding) trong WTO có giá trị pháp lý ra sao?", "options": ["Bắt buộc tất cả các mặt hàng nhập khẩu đều phải chịu mức thuế quan bằng đúng 0%", "Các nước phát triển có quyền đơn phương tăng thuế quan bất cứ lúc nào mà không cần lý do", "Thành viên cam kết mức thuế quan trần trong Biểu nhân nhượng và không được tự ý nâng thuế suất áp dụng vượt quá mức cam kết ràng buộc này", "Chỉ mang tính chất khuyến nghị đạo đức và không có hiệu lực thi hành đối với cơ quan hải quan"], "answer": 2, "explanation": "Ràng buộc thuế quan (bound tariff rates) là mức thuế trần tối đa ghi nhận trong Biểu cam kết nhân nhượng; quốc gia thành viên không được phép áp dụng mức thuế hải quan thực tế vượt quá mức trần này."}, {"id": "ltmqt_16", "question": "Nguyên tắc tại Điều XI:1 Hiệp định GATT nghiêm cấm các biện pháp hạn chế số lượng (Quantitative Restrictions) bao gồm:", "options": ["Cấm các quốc gia thu bất kỳ khoản thuế hải quan nào đối với hàng thiết yếu", "Cấm các hãng tàu container vận chuyển hàng hóa vào ban đêm", "Cấm doanh nghiệp tư nhân tham gia vào các hoạt động xuất nhập khẩu", "Cấm áp dụng các biện pháp hạn chế xuất khẩu hoặc nhập khẩu dưới hình thức hạn ngạch (quotas), giấy phép xuất nhập khẩu hoặc các biện pháp phi thuế quan tương tự"], "answer": 3, "explanation": "GATT Điều XI:1 khẳng định việc bảo hộ thương mại chỉ được thực hiện thông qua thuế quan; nghiêm cấm các biện pháp hạn chế số lượng như hạn ngạch, giấy phép hoặc các rào cản phi thuế tương đương."}]}, {"id": "ltmqt-ch5-dispute", "title": "Chương 5: Cơ chế Giải quyết Tranh chấp WTO", "category": "chapter", "mode": "mcq", "chapter": "Chương 5", "difficulty": "Medium", "duration": 10, "description": "Hiệp định DSU, thẩm quyền DSB, quy tắc Đồng thuận nghịch (Reverse consensus) và các biện pháp tạm thời.", "badge": "Luyện theo chương", "order": 5, "questions": [{"id": "ltmqt_17", "question": "Cơ chế Giải quyết Tranh chấp của WTO được điều chỉnh chủ yếu bởi văn kiện pháp lý nào?", "options": ["Thỏa thuận về các Quy tắc và Thủ tục Giải quyết Tranh chấp (DSU - Dispute Settlement Understanding)", "Hiến chương Liên Hợp Quốc về Tòa án Hình sự Quốc tế", "Công ước Viên 1969 về Luật Điều ước Quốc tế", "Bộ quy tắc trọng tài của Phòng Thương mại Quốc tế (ICC)"], "answer": 0, "explanation": "Cơ chế giải quyết tranh chấp của WTO hoạt động dựa trên Hiệp định DSU (Phụ lục 2 của Hiệp định Marrakech), áp dụng thống nhất cho tất cả các tranh chấp trong khuôn khổ WTO."}, {"id": "ltmqt_18", "question": "Cơ chế 'Đồng thuận nghịch' (Reverse consensus / Negative consensus) trong thủ tục giải quyết tranh chấp của WTO mang ý nghĩa:", "options": ["Một phán quyết chỉ được thông qua nếu có đủ 100% phiếu bầu thuận từ tất cả các quốc gia", "Quyết định (như thành lập Panel, thông qua báo cáo) sẽ tự động được thông qua trừ khi tất cả các thành viên tham gia cuộc họp đều đồng thuận phản đối", "Nước bị kiện có quyền một mình phủ quyết toàn bộ tiến trình tố tụng", "Ban Thư ký WTO có quyền tự ý hủy bỏ phán quyết của Ban hội thẩm"], "answer": 1, "explanation": "Quy tắc đồng thuận nghịch (negative consensus) là đột phá lớn của WTO, đảm bảo tiến trình giải quyết tranh chấp không thể bị quốc gia thua kiện đơn phương ngăn cản hoặc phong tỏa như thời kỳ GATT 1947."}, {"id": "ltmqt_19", "question": "Trong thủ tục giải quyết tranh chấp của WTO, các biện pháp bồi thường (Compensation) và đình chỉ nhượng bộ/trả đũa (Retaliation) được coi là:", "options": ["Các hình phạt vĩnh viễn nhằm mục đích trừng phạt triệt để nền kinh tế của nước bị kiện", "Khoản tiền thưởng tài chính trích từ quỹ dự trữ của WTO trao cho bên khởi kiện", "Các biện pháp tạm thời (Temporary measures) được áp dụng khi bên vi phạm không thực thi các khuyến nghị trong thời hạn hợp lý", "Biện pháp bắt buộc phải áp dụng ngay trong ngày đầu tiên khởi kiện"], "answer": 2, "explanation": "Bồi thường thương mại và trả đũa (đình chỉ nhượng bộ) chỉ là các biện pháp tạm thời nhằm khôi phục cân bằng quyền lợi cho đến khi thành viên vi phạm đưa biện pháp của mình phù hợp với các hiệp định của WTO."}, {"id": "ltmqt_20", "question": "Bước thủ tục bắt buộc đầu tiên trong quy trình giải quyết tranh chấp theo Hiệp định DSU của WTO là gì?", "options": ["Lập tức thành lập Ban hội thẩm (Panel) và triệu tập phiên xử công khai", "Bên khởi kiện đơn phương tăng thuế quan lên 100% đối với hàng hóa của bên bị kiện", "Yêu cầu Tòa án Công lý Quốc tế (ICJ) ban hành lệnh bắt giữ khẩn cấp", "Tham vấn song phương (Consultations) giữa các bên tranh chấp để tìm kiếm giải pháp thỏa đáng"], "answer": 3, "explanation": "Tham vấn (Consultations) là bước bắt buộc đầu tiên kéo dài tối thiểu 60 ngày theo DSU, nhằm khuyến khích các bên tự nguyện đàm phán giải quyết bất đồng trước khi đưa ra hội đồng xét xử."}]}, {"id": "ltmqt-quiz-comprehensive", "title": "Đề trắc nghiệm tổng hợp 20 câu Luật Thương mại Quốc tế", "category": "quiz", "mode": "mcq", "chapter": "Tổng hợp", "difficulty": "Medium", "duration": 30, "description": "Bộ 20 câu trắc nghiệm bao quát các nguyên tắc cốt lõi, điều khoản GATT và án lệ tranh chấp có giải thích chi tiết.", "badge": "Trắc nghiệm tổng hợp", "order": 6, "questions": [{"id": "ltmqt_1", "question": "Trong hệ thống các hiệp định của WTO, nguyên tắc không phân biệt đối xử (Non-discrimination) được cấu thành bởi hai trụ cột pháp lý cơ bản nào?", "options": ["Đãi ngộ tối huệ quốc (MFN) và Đãi ngộ quốc gia (National Treatment - NT)", "Chính sách bảo hộ mậu dịch nội địa và Trợ cấp xuất khẩu", "Tự do hóa luân chuyển lao động và Thống nhất đồng tiền chung", "Áp dụng hạn ngạch số lượng và Độc quyền thương mại nhà nước"], "answer": 0, "explanation": "Nguyên tắc không phân biệt đối xử là nền tảng của WTO, gồm hai nguyên tắc song hành: MFN (không phân biệt đối xử giữa các bạn hàng nước ngoài) và NT (không phân biệt đối xử giữa hàng ngoại và hàng nội)."}, {"id": "ltmqt_2", "question": "Phụ lục 1A (Annex 1A) trong cơ cấu Hiệp định thành lập WTO điều chỉnh lĩnh vực nào?", "options": ["Thương mại dịch vụ tài chính, vận tải và bảo hiểm (GATS)", "Thương mại hàng hóa (Multilateral Agreements on Trade in Goods), bao gồm GATT 1994 và các hiệp định chuyên ngành", "Các khía cạnh liên quan đến thương mại của quyền sở hữu trí tuệ (TRIPS)", "Quy chế hoạt động nội bộ của Ban Thư ký WTO tại Geneva"], "answer": 1, "explanation": "Annex 1A của WTO bao gồm GATT 1994 cùng 12 hiệp định đa phương điều chỉnh thương mại hàng hóa như Nông nghiệp, SPS, TBT, Chống bán phá giá, Trợ cấp..."}, {"id": "ltmqt_3", "question": "Hiệp định chung về Thương mại Dịch vụ (GATS) nằm ở phụ lục nào của Hiệp định Marrakech thành lập WTO?", "options": ["Phụ lục 1A (Annex 1A)", "Phụ lục 1C (Annex 1C)", "Phụ lục 1B (Annex 1B)", "Phụ lục 2 (Annex 2)"], "answer": 2, "explanation": "Cơ cấu trụ cột của WTO gồm: Annex 1A điều chỉnh Goods, Annex 1B là GATS điều chỉnh Services, và Annex 1C là TRIPS điều chỉnh Quyền sở hữu trí tuệ."}, {"id": "ltmqt_4", "question": "Phụ lục 1C (Annex 1C - Hiệp định TRIPS) của WTO quy định về vấn đề gì?", "options": ["Quy trình kiểm dịch động thực vật và an toàn thực phẩm nhập khẩu", "Thủ tục cấp phép hạn ngạch dệt may quốc tế", "Quy chế thành lập các liên minh thuế quan khu vực", "Các khía cạnh liên quan đến thương mại của quyền sở hữu trí tuệ (Intellectual Property Rights)"], "answer": 3, "explanation": "Hiệp định TRIPS (Annex 1C) đặt ra các tiêu chuẩn bảo hộ và thực thi quyền sở hữu trí tuệ tối thiểu mang tính ràng buộc đối với tất cả thành viên WTO."}, {"id": "ltmqt_5", "question": "Phạm vi áp dụng của nguyên tắc Đãi ngộ tối huệ quốc (MFN) theo Điều I:1 Hiệp định GATT bao gồm:", "options": ["Thuế quan, các khoản thu hải quan, thể thức xuất nhập khẩu và các biện pháp thuế/nội địa liên quan", "Chỉ áp dụng riêng cho các dự án viện trợ không hoàn lại của Liên Hợp Quốc", "Chỉ áp dụng đối với các giao dịch thương mại giữa các doanh nghiệp nhà nước", "Chỉ giới hạn trong việc miễn thị thực xuất nhập cảnh cho công dân các nước thành viên"], "answer": 0, "explanation": "GATT Điều I:1 có phạm vi rất rộng, áp dụng đối với thuế hải quan, lệ phí, phương thức thanh toán, quy tắc thủ tục xuất nhập khẩu và các loại thuế/quy định nội địa áp lên hàng xuất nhập khẩu."}, {"id": "ltmqt_6", "question": "Yêu cầu 'ngay lập tức và vô điều kiện' (immediate and unconditional) trong nguyên tắc MFN (Điều I:1 GATT) có nghĩa là:", "options": ["Nước nhập khẩu phải chờ đợi 3 năm trước khi chuyển giao ưu đãi cho các đối tác khác", "Bất kỳ lợi thế nào dành cho một nước phải tự động áp dụng ngay cho sản phẩm tương tự của mọi thành viên WTO mà không đòi hỏi sự nhân nhượng đền đáp", "Các nước đang phát triển phải thanh toán một khoản bồi thường tài chính trước khi được hưởng ưu đãi", "Quyền ưu đãi chỉ được kích hoạt nếu có phê chuẩn của Đại hội đồng Liên Hợp Quốc"], "answer": 1, "explanation": "Immediate & unconditional có nghĩa là khi một thành viên dành bất kỳ ưu đãi nào cho một quốc gia (kể cả không phải thành viên WTO), ưu đãi đó phải lập tức mở rộng cho mọi thành viên WTO khác mà không kèm điều kiện đánh đổi."}, {"id": "ltmqt_7", "question": "Khái niệm 'Sản phẩm tương tự' (Like products) trong án lệ WTO được ví như 'chiếc đàn xếp' (accordion) vì lý do gì?", "options": ["Các sản phẩm tương tự phải luôn luôn được định nghĩa bằng một công thức toán học bất biến", "Chỉ áp dụng riêng cho các loại nhạc cụ và thiết bị âm thanh nhập khẩu", "Khái niệm có độ co giãn linh hoạt tùy thuộc vào từng điều khoản, ngữ cảnh và hoàn cảnh cụ thể của vụ tranh chấp", "Được quy định cứng nhắc và đồng nhất trong tất cả các điều khoản của GATT, GATS và TRIPS"], "answer": 2, "explanation": "Án lệ Japan - Alcoholic Beverages khẳng định 'likeness' như chiếc đàn accordion có thể co hẹp (như trong Điều III:2 câu 1) hoặc giãn rộng (như trong Điều III:2 câu 2 hoặc Điều III:4) tùy theo ngữ cảnh của điều khoản."}, {"id": "ltmqt_8", "question": "Hai nhóm ngoại lệ lớn đối với nguyên tắc Đãi ngộ tối huệ quốc (MFN) trong thương mại hàng hóa là:", "options": ["Chính sách độc quyền ngoại thương của nhà nước và Lệnh cấm vận thương mại đơn phương", "Biện pháp tự vệ thương mại tạm thời và Quy chế miễn trừ ngoại giao", "Thuế tiêu thụ đặc biệt nội địa và Giấy phép lưu hành sản phẩm", "Thỏa thuận thương mại khu vực (RTA/FTA/Customs Union theo GATT Điều XXIV) và Điều khoản cho phép (Enabling Clause)"], "answer": 3, "explanation": "WTO cho phép miễn trừ MFN đối với các hiệp định liên kết khu vực (như Khu vực thương mại tự do hoặc Liên minh thuế quan theo Điều XXIV) và các chương trình ưu đãi thuế quan cho các nước đang phát triển theo Enabling Clause."}, {"id": "ltmqt_9", "question": "Mục tiêu cơ bản của nguyên tắc Đãi ngộ quốc gia (National Treatment - Điều III GATT) là gì?", "options": ["Ngăn chặn việc sử dụng các biện pháp thuế và quy định nội địa để bảo hộ sản xuất trong nước trước hàng nhập khẩu", "Buộc các quốc gia phải bãi bỏ hoàn toàn hàng rào thuế quan tại cửa khẩu biên giới", "Đảm bảo các nhà đầu tư nước ngoài được miễn mọi nghĩa vụ nộp thuế thu nhập doanh nghiệp", "Quy định mức giá trần cố định cho các mặt hàng nông sản trên thị trường toàn cầu"], "answer": 0, "explanation": "Điều III:1 GATT khẳng định các loại thuế nội địa và quy định nội địa không được áp dụng đối với sản phẩm nhập khẩu hoặc nội địa nhằm mục đích bảo hộ sản xuất trong nước."}, {"id": "ltmqt_10", "question": "Để chứng minh vi phạm Điều III:2 câu thứ nhất (First sentence) của Hiệp định GATT, cần thỏa mãn điều kiện nào?", "options": ["Phải chứng minh khối lượng thương mại nhập khẩu bị sụt giảm trên 50%", "Sản phẩm nhập khẩu và sản phẩm nội địa là sản phẩm tương tự (like products), và sản phẩm nhập khẩu bị đánh thuế nội địa cao hơn (in excess of) dù chỉ là một mức rất nhỏ", "Doanh nghiệp trong nước bị phá sản hàng loạt sau khi hàng ngoại nhập tràn vào", "Hai nước phải có cùng mức thu nhập bình quân đầu người tương đương nhau"], "answer": 1, "explanation": "Điều III:2 câu 1 đòi hỏi: (1) Thuế/khoản thu nội địa, (2) Sản phẩm tương tự (like products), và (3) Hàng nhập khẩu bị đánh thuế cao hơn ('in excess of') hàng nội địa, không cần chứng minh mục đích bảo hộ hay tác động thương mại."}, {"id": "ltmqt_11", "question": "Theo Điều III:2 câu thứ hai (Second sentence) của Hiệp định GATT, các tiêu chuẩn kiểm tra pháp lý bao gồm:", "options": ["Chỉ cần chứng minh hai sản phẩm có tên gọi hoàn toàn trùng nhau theo từ điển", "Sản phẩm nhập khẩu phải có chất lượng vượt trội hơn hẳn sản phẩm trong nước", "Sản phẩm cạnh tranh trực tiếp hoặc thay thế (DCS), sản phẩm không bị đánh thuế tương tự (not similarly taxed), và thuế được áp dụng nhằm bảo hộ sản xuất nội địa (to afford protection)", "Chính phủ nước xuất khẩu đã có văn bản chấp thuận mức thuế suất ưu đãi"], "answer": 2, "explanation": "Điều III:2 câu 2 áp dụng cho sản phẩm cạnh tranh trực tiếp hoặc có thể thay thế nhau (DCS); vi phạm xảy ra nếu mức thuế chênh lệch đáng kể ('not similarly taxed') và cấu trúc thuế được thiết kế nhằm bảo hộ sản xuất nội địa."}, {"id": "ltmqt_12", "question": "Điều III:4 Hiệp định GATT điều chỉnh việc đối xử đối với hàng hóa nhập khẩu trong khía cạnh nào?", "options": ["Mức thuế quan áp dụng tại trạm kiểm soát biên phòng hải quan cửa khẩu", "Quy trình cấp thị thực nhập cảnh cho các chuyên gia kỹ thuật nước ngoài", "Thủ tục đăng ký quyền bảo hộ nhãn hiệu tại Cục Sở hữu trí tuệ", "Các đạo luật, quy định và yêu cầu nội địa ảnh hưởng đến việc bán, phân phối, vận chuyển hoặc sử dụng hàng hóa trên thị trường nội địa (phải dành đối xử không kém thuận lợi hơn)"], "answer": 3, "explanation": "Điều III:4 GATT cấm phân biệt đối xử thông qua các quy định phi thuế quan nội địa, yêu cầu hàng nhập khẩu phải nhận được đối xử 'không kém thuận lợi hơn' (no less favourable treatment) so với hàng nội địa tương tự."}, {"id": "ltmqt_13", "question": "Thuế quan theo giá trị (Ad valorem tariff) là phương thức đánh thuế được xác định như thế nào?", "options": ["Tính bằng một tỷ lệ phần trăm nhất định trên tổng giá trị hàng hóa nhập khẩu (ví dụ: thuế 30% tính trên giá trị lô hàng)", "Thu một khoản tiền cố định tính trên mỗi mét khối hoặc kilogam hàng hóa", "Khoản thuế cố định bắt buộc áp dụng bình quân cho tất cả các doanh nghiệp", "Thuế suất tự động nhân đôi nếu hàng hóa được vận chuyển bằng đường hàng không"], "answer": 0, "explanation": "Thuế quan theo giá trị (Ad valorem) được tính theo tỷ lệ phần trăm trên trị giá của hàng hóa (ví dụ: 30% trên chiếc laptop giá 1.000 USD thì tiền thuế là 300 USD)."}, {"id": "ltmqt_14", "question": "Thuế quan đặc định / cụ thể (Specific tariff) được áp dụng dưới hình thức nào?", "options": ["Một tỷ lệ phần trăm khấu trừ trực tiếp từ tiền lương của thủy thủ đoàn vận chuyển", "Một khoản tiền thuế cố định tính trên mỗi đơn vị vật lý của hàng hóa nhập khẩu (ví dụ: 100 USD/chiếc laptop)", "Khoản bảo lãnh ngân hàng bắt buộc nộp vào kho bạc nhà nước trước khi giao hàng", "Mức thuế suất thay đổi từng ngày theo chỉ số chứng khoán quốc gia"], "answer": 1, "explanation": "Thuế đặc định (Specific tariff) là khoản tiền mặt cố định tính trên một đơn vị đo lường vật lý (chiếc, tấn, lít...) mà không phụ thuộc vào giá trị đắt hay rẻ của đơn vị hàng hóa đó."}, {"id": "ltmqt_15", "question": "Khái niệm 'Ràng buộc thuế quan' (Tariff Binding) trong WTO có giá trị pháp lý ra sao?", "options": ["Bắt buộc tất cả các mặt hàng nhập khẩu đều phải chịu mức thuế quan bằng đúng 0%", "Các nước phát triển có quyền đơn phương tăng thuế quan bất cứ lúc nào mà không cần lý do", "Thành viên cam kết mức thuế quan trần trong Biểu nhân nhượng và không được tự ý nâng thuế suất áp dụng vượt quá mức cam kết ràng buộc này", "Chỉ mang tính chất khuyến nghị đạo đức và không có hiệu lực thi hành đối với cơ quan hải quan"], "answer": 2, "explanation": "Ràng buộc thuế quan (bound tariff rates) là mức thuế trần tối đa ghi nhận trong Biểu cam kết nhân nhượng; quốc gia thành viên không được phép áp dụng mức thuế hải quan thực tế vượt quá mức trần này."}, {"id": "ltmqt_16", "question": "Nguyên tắc tại Điều XI:1 Hiệp định GATT nghiêm cấm các biện pháp hạn chế số lượng (Quantitative Restrictions) bao gồm:", "options": ["Cấm các quốc gia thu bất kỳ khoản thuế hải quan nào đối với hàng thiết yếu", "Cấm các hãng tàu container vận chuyển hàng hóa vào ban đêm", "Cấm doanh nghiệp tư nhân tham gia vào các hoạt động xuất nhập khẩu", "Cấm áp dụng các biện pháp hạn chế xuất khẩu hoặc nhập khẩu dưới hình thức hạn ngạch (quotas), giấy phép xuất nhập khẩu hoặc các biện pháp phi thuế quan tương tự"], "answer": 3, "explanation": "GATT Điều XI:1 khẳng định việc bảo hộ thương mại chỉ được thực hiện thông qua thuế quan; nghiêm cấm các biện pháp hạn chế số lượng như hạn ngạch, giấy phép hoặc các rào cản phi thuế tương đương."}, {"id": "ltmqt_17", "question": "Cơ chế Giải quyết Tranh chấp của WTO được điều chỉnh chủ yếu bởi văn kiện pháp lý nào?", "options": ["Thỏa thuận về các Quy tắc và Thủ tục Giải quyết Tranh chấp (DSU - Dispute Settlement Understanding)", "Hiến chương Liên Hợp Quốc về Tòa án Hình sự Quốc tế", "Công ước Viên 1969 về Luật Điều ước Quốc tế", "Bộ quy tắc trọng tài của Phòng Thương mại Quốc tế (ICC)"], "answer": 0, "explanation": "Cơ chế giải quyết tranh chấp của WTO hoạt động dựa trên Hiệp định DSU (Phụ lục 2 của Hiệp định Marrakech), áp dụng thống nhất cho tất cả các tranh chấp trong khuôn khổ WTO."}, {"id": "ltmqt_18", "question": "Cơ chế 'Đồng thuận nghịch' (Reverse consensus / Negative consensus) trong thủ tục giải quyết tranh chấp của WTO mang ý nghĩa:", "options": ["Một phán quyết chỉ được thông qua nếu có đủ 100% phiếu bầu thuận từ tất cả các quốc gia", "Quyết định (như thành lập Panel, thông qua báo cáo) sẽ tự động được thông qua trừ khi tất cả các thành viên tham gia cuộc họp đều đồng thuận phản đối", "Nước bị kiện có quyền một mình phủ quyết toàn bộ tiến trình tố tụng", "Ban Thư ký WTO có quyền tự ý hủy bỏ phán quyết của Ban hội thẩm"], "answer": 1, "explanation": "Quy tắc đồng thuận nghịch (negative consensus) là đột phá lớn của WTO, đảm bảo tiến trình giải quyết tranh chấp không thể bị quốc gia thua kiện đơn phương ngăn cản hoặc phong tỏa như thời kỳ GATT 1947."}, {"id": "ltmqt_19", "question": "Trong thủ tục giải quyết tranh chấp của WTO, các biện pháp bồi thường (Compensation) và đình chỉ nhượng bộ/trả đũa (Retaliation) được coi là:", "options": ["Các hình phạt vĩnh viễn nhằm mục đích trừng phạt triệt để nền kinh tế của nước bị kiện", "Khoản tiền thưởng tài chính trích từ quỹ dự trữ của WTO trao cho bên khởi kiện", "Các biện pháp tạm thời (Temporary measures) được áp dụng khi bên vi phạm không thực thi các khuyến nghị trong thời hạn hợp lý", "Biện pháp bắt buộc phải áp dụng ngay trong ngày đầu tiên khởi kiện"], "answer": 2, "explanation": "Bồi thường thương mại và trả đũa (đình chỉ nhượng bộ) chỉ là các biện pháp tạm thời nhằm khôi phục cân bằng quyền lợi cho đến khi thành viên vi phạm đưa biện pháp của mình phù hợp với các hiệp định của WTO."}, {"id": "ltmqt_20", "question": "Bước thủ tục bắt buộc đầu tiên trong quy trình giải quyết tranh chấp theo Hiệp định DSU của WTO là gì?", "options": ["Lập tức thành lập Ban hội thẩm (Panel) và triệu tập phiên xử công khai", "Bên khởi kiện đơn phương tăng thuế quan lên 100% đối với hàng hóa của bên bị kiện", "Yêu cầu Tòa án Công lý Quốc tế (ICJ) ban hành lệnh bắt giữ khẩn cấp", "Tham vấn song phương (Consultations) giữa các bên tranh chấp để tìm kiếm giải pháp thỏa đáng"], "answer": 3, "explanation": "Tham vấn (Consultations) là bước bắt buộc đầu tiên kéo dài tối thiểu 60 ngày theo DSU, nhằm khuyến khích các bên tự nguyện đàm phán giải quyết bất đồng trước khi đưa ra hội đồng xét xử."}]}];
+
+let exerciseSets = [];
+let currentCategory = 'overview';
+let currentSet = null;
+let selectedAnswers = Object.create(null);
+let lastScore = null;
+
+function safeText(value, fallback = '') {
+  return typeof value === 'string' ? value.trim() : fallback;
+}
+
+function clearElement(element) {
+  if (!element) return;
+  while (element.firstChild) element.removeChild(element.firstChild);
+}
+
+function createElement(tagName, className, text) {
+  const element = document.createElement(tagName);
+  if (className) element.className = className;
+  if (text !== undefined) element.textContent = safeText(text);
+  return element;
+}
+
+function normalizeQuestion(rawQuestion, index) {
+  const data = rawQuestion && typeof rawQuestion === 'object' && !Array.isArray(rawQuestion) ? rawQuestion : {};
+  const options = Array.isArray(data.options) ? data.options.map(option => safeText(option)) : [];
+  const answer = Number.isInteger(data.answer) && data.answer >= 0 && data.answer < options.length ? data.answer : null;
+  return {
+    id: safeText(data.id, `question-${index + 1}`),
+    question: safeText(data.question, 'Câu hỏi chưa có nội dung.'),
+    options,
+    answer,
+    explanation: safeText(data.explanation, 'Chưa có giải thích.')
+  };
+}
+
+function normalizeExerciseSet(rawSet, fallbackId) {
+  const data = rawSet && typeof rawSet === 'object' && !Array.isArray(rawSet) ? rawSet : {};
+  const duration = typeof data.duration === 'number' && Number.isFinite(data.duration) && data.duration >= 0 ? data.duration : 0;
+  return {
+    id: safeText(data.id, fallbackId),
+    title: safeText(data.title, 'Bộ đề chưa có tiêu đề'),
+    category: safeText(data.category),
+    mode: data.mode === 'problem' ? 'problem' : 'mcq',
+    chapter: safeText(data.chapter, 'Chưa phân chương'),
+    difficulty: safeText(data.difficulty, 'Unknown'),
+    duration,
+    description: safeText(data.description, 'Chưa có mô tả.'),
+    badge: safeText(data.badge),
+    order: typeof data.order === 'number' && Number.isFinite(data.order) ? data.order : 99,
+    questions: Array.isArray(data.questions) ? data.questions.map((q, i) => normalizeQuestion(q, i)) : []
+  };
+}
+
+function isUsableExerciseSet(set) {
+  if (!set || !set.id || !set.title) return false;
+  if (!Array.isArray(set.questions) || set.questions.length === 0) return false;
+  const ids = set.questions.map(q => q.id);
+  if (new Set(ids).size !== ids.length) return false;
+  return set.questions.every(q => q.options.length >= 2 && q.answer !== null);
+}
+
+function initPractice() {
+  exerciseSets = LOCAL_SETS
+    .filter(isUsableExerciseSet)
+    .map((set, index) => normalizeExerciseSet(set, `local-set-${index + 1}`))
+    .sort((a,b) => a.order - b.order);
+  renderAll();
+}
+
+function renderAll() {
+  renderOverview();
+  renderGrid('chapter-grid', 'chapter');
+  renderGrid('quiz-grid', 'quiz');
+}
+
+function renderOverview() {
+  const stats = document.getElementById('overview-stats');
+  if (!stats) return;
+  const chapter = exerciseSets.filter(s => s.category === 'chapter').length;
+  const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);
+  clearElement(stats);
+  [
+    [chapter, 'bộ theo chương'],
+    [quizQ, 'câu trắc nghiệm']
+  ].forEach(([value, label]) => {
+    const card = createElement('div', 'bg-white/10 rounded-xl p-4 border border-white/10');
+    card.appendChild(createElement('div', 'text-2xl font-black', value));
+    card.appendChild(createElement('div', 'text-xs text-stone-300 font-bold', label));
+    stats.appendChild(card);
+  });
+}
+
+function appendMetric(parent, value, label, suffix = '') {
+  const metric = createElement('div', 'bg-stone-50 rounded-lg p-2 border border-stone-100');
+  const strong = createElement('strong', 'block text-slate-900', value);
+  if (suffix) strong.appendChild(document.createTextNode(suffix));
+  metric.appendChild(strong);
+  metric.appendChild(createElement('span', 'text-stone-500', label));
+  parent.appendChild(metric);
+}
+
+function renderGrid(containerId, category) {
+  const el = document.getElementById(containerId); if (!el) return;
+  const items = exerciseSets.filter(s => s.category === category);
+  clearElement(el);
+
+  items.forEach(set => {
+    const article = createElement('article', 'exercise-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm cursor-pointer flex flex-col min-h-[230px]');
+    article.addEventListener('click', () => openSet(set.id));
+
+    const meta = createElement('div', 'flex items-start justify-between gap-3 mb-4');
+    meta.appendChild(createElement('span', 'pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider', set.badge || set.category));
+    const difficultyClass = set.difficulty === 'Hard' ? 'bg-rose-50 text-rose-700 border border-rose-100' : set.difficulty === 'Medium' ? 'bg-amber-50 text-amber-700 border border-amber-100' : 'bg-green-50 text-green-700 border border-green-100';
+    meta.appendChild(createElement('span', `text-xs font-black rounded-full px-2 py-1 ${difficultyClass}`, set.difficulty));
+    article.appendChild(meta);
+    article.appendChild(createElement('h3', 'font-black text-slate-900 text-lg mb-2 leading-snug', set.title));
+    article.appendChild(createElement('p', 'text-sm text-stone-600 flex-grow', set.description));
+
+    const metrics = createElement('div', 'mt-5 grid grid-cols-3 gap-2 text-center text-xs');
+    appendMetric(metrics, set.chapter, 'Chương');
+    appendMetric(metrics, set.questions.length, 'Câu');
+    appendMetric(metrics, set.duration, 'Gợi ý', "'");
+    article.appendChild(metrics);
+    article.appendChild(createElement('button', 'mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-2.5 rounded-xl transition-colors', 'Mở bài luyện'));
+    el.appendChild(article);
+  });
+}
+
+function openSet(setId) {
+  currentSet = exerciseSets.find(s => s.id === setId);
+  selectedAnswers = Object.create(null);
+  lastScore = null;
+  if (!currentSet) return;
+  if (currentSet.category) currentCategory = currentSet.category;
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  const panel = document.getElementById('practice-panel');
+  panel.classList.remove('hidden');
+  const practiceBadge = document.getElementById('practice-badge');
+  clearElement(practiceBadge);
+  [currentSet.badge, currentSet.chapter, currentSet.duration ? `${currentSet.duration} phút` : ''].filter(Boolean).forEach(text => {
+    const s = createElement('span', 'mr-2', text);
+    practiceBadge.appendChild(s);
+  });
+  renderMcqSet(currentSet);
+}
+
+function closePracticePanel() {
+  document.getElementById('practice-panel').classList.add('hidden');
+  switchMainTab(currentCategory || 'chapter');
+}
+
+function renderMcqSet(set) {
+  const wrap = document.getElementById('practice-content');
+  if (!wrap) return;
+  clearElement(wrap);
+
+  const card = createElement('div', 'bg-white rounded-3xl border border-stone-200 shadow-sm p-6 md:p-8');
+  const header = createElement('div', 'mb-6');
+  header.appendChild(createElement('h2', 'text-2xl md:text-3xl font-extrabold text-slate-900 mb-2', set.title));
+  header.appendChild(createElement('p', 'text-stone-600', set.description));
+  card.appendChild(header);
+
+  const body = createElement('div', 'space-y-6');
+  const questionsWrap = createElement('div', 'space-y-6');
+  questionsWrap.id = 'question-list';
+  body.appendChild(questionsWrap);
+
+  const actions = createElement('div', 'mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4');
+  const counterWrap = createElement('div', 'text-sm font-bold text-stone-600');
+  counterWrap.appendChild(document.createTextNode('Đã chọn: '));
+  const countSpan = createElement('span', 'text-teal-700 font-extrabold', '0');
+  countSpan.id = 'answered-count';
+  counterWrap.appendChild(countSpan);
+  counterWrap.appendChild(document.createTextNode(` / ${set.questions.length} câu`));
+  actions.appendChild(counterWrap);
+
+  const buttons = createElement('div', 'flex items-center gap-3');
+  const resetButton = createElement('button', 'bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold px-4 py-2 rounded-xl transition-colors', 'Làm lại');
+  resetButton.type = 'button';
+  resetButton.addEventListener('click', resetCurrentQuiz);
+  const submitButton = createElement('button', 'bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl transition-colors', 'Nộp bài');
+  submitButton.type = 'button';
+  submitButton.id = 'submit-quiz';
+  submitButton.addEventListener('click', submitQuiz);
+  buttons.appendChild(resetButton);
+  buttons.appendChild(submitButton);
+  actions.appendChild(buttons);
+  body.appendChild(actions);
+
+  const resultBox = createElement('div', 'hidden mt-6');
+  resultBox.id = 'result-box';
+  body.appendChild(resultBox);
+  card.appendChild(body);
+  wrap.appendChild(card);
+  renderQuestions(set, false);
+}
+
+function renderQuestions(set, showResult) {
+  const list = document.getElementById('question-list');
+  if (!list) return;
+  clearElement(list);
+
+  set.questions.forEach((question, index) => {
+    const questionBox = createElement('div', 'rounded-2xl border border-stone-200 bg-stone-50/60 p-5');
+    questionBox.id = 'q-' + question.id;
+    const heading = createElement('div', 'flex gap-3 mb-4');
+    heading.appendChild(createElement('span', 'w-8 h-8 rounded-full bg-teal-600 text-white font-black flex items-center justify-center shrink-0', index + 1));
+    heading.appendChild(createElement('h3', 'font-bold text-slate-900 leading-relaxed', question.question));
+    questionBox.appendChild(heading);
+
+    const options = createElement('div', 'grid md:grid-cols-2 gap-3');
+    question.options.forEach((option, optionIndex) => {
+      options.appendChild(createOptionButton(question, optionIndex, option, showResult));
+    });
+    questionBox.appendChild(options);
+
+    if (showResult) {
+      const isCorrect = selectedAnswers[question.id] === question.answer;
+      const explanation = createElement('div', `mt-4 bg-white border-l-4 ${isCorrect ? 'border-green-500' : 'border-rose-500'} rounded-r-xl p-4 text-sm`);
+      explanation.appendChild(createElement('strong', '', selectedAnswers[question.id] === undefined ? 'Chưa trả lời — Giải thích:' : isCorrect ? 'Đúng — Giải thích:' : 'Sai — Giải thích:'));
+      explanation.appendChild(document.createTextNode(' '));
+      explanation.appendChild(document.createTextNode(question.explanation));
+      questionBox.appendChild(explanation);
+    }
+    list.appendChild(questionBox);
+  });
+  updateAnsweredCount();
+}
+
+function createOptionButton(question, optionIndex, option, showResult) {
+  let cls = 'option-card bg-white border border-stone-200 rounded-xl p-3 text-sm font-semibold cursor-pointer';
+  const selected = selectedAnswers[question.id] === optionIndex;
+  if (!showResult && selected) cls += ' option-selected';
+  if (showResult && optionIndex === question.answer) cls += ' option-correct';
+  if (showResult && selected && optionIndex !== question.answer) cls += ' option-wrong';
+
+  const button = createElement('button', cls);
+  button.type = 'button';
+  button.disabled = showResult;
+  button.setAttribute('aria-pressed', String(selected));
+  button.addEventListener('click', () => selectAnswer(question.id, optionIndex));
+  button.appendChild(createElement('span', 'font-black mr-2', `${String.fromCharCode(65 + optionIndex)}.`));
+  button.appendChild(document.createTextNode(option));
+  return button;
+}
+
+function selectAnswer(qid, index) {
+  const question = currentSet?.questions.find(q => q.id === qid);
+  if (lastScore !== null || !question || !Number.isInteger(index) || index < 0 || index >= question.options.length) return;
+  selectedAnswers[qid] = index;
+  document.getElementById('q-' + qid)?.querySelectorAll('.option-card').forEach((button, i) => {
+    button.classList.toggle('option-selected', i === index);
+    button.setAttribute('aria-pressed', String(i === index));
+  });
+  updateAnsweredCount();
+}
+
+function updateAnsweredCount() {
+  const el = document.getElementById('answered-count');
+  if (el) el.textContent = Object.keys(selectedAnswers).length;
+}
+
+function resetCurrentQuiz() {
+  selectedAnswers = Object.create(null);
+  lastScore = null;
+  if (currentSet) {
+    renderMcqSet(currentSet);
+    document.getElementById('practice-panel').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+
+function submitQuiz() {
+  if (lastScore !== null || !currentSet || !Array.isArray(currentSet.questions)) return;
+  const total = currentSet.questions.length;
+  const score = currentSet.questions.reduce((sum, q) => sum + (selectedAnswers[q.id] === q.answer ? 1 : 0), 0);
+  lastScore = score;
+  const submitButton = document.getElementById('submit-quiz');
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = 'Đã nộp bài';
+  }
+  renderQuestions(currentSet, true);
+  const percent = total > 0 ? Math.round(score / total * 100) : 0;
+  const box = document.getElementById('result-box');
+  if (!box) return;
+  box.classList.remove('hidden');
+  clearElement(box);
+
+  const resultClass = percent >= 80 ? 'border-green-300 bg-green-50' : percent >= 50 ? 'border-amber-300 bg-amber-50' : 'border-rose-300 bg-rose-50';
+  const message = percent >= 80 ? 'Bạn đã nắm rất vững kiến thức trong phần này!' : percent >= 50 ? 'Kết quả tương đối tốt, hãy đối chiếu thêm với các giải thích bên dưới để hoàn thiện.' : 'Hãy xem lại lý thuyết và làm lại bài để củng cố nền tảng kiến thức.';
+  box.className = `mt-6 p-6 rounded-2xl border ${resultClass}`;
+  const heading = createElement('div', 'flex items-center justify-between mb-3');
+  heading.appendChild(createElement('h3', 'text-xl font-black text-slate-900', `Kết quả: ${score}/${total} (${percent}% correct)`));
+  heading.appendChild(createElement('span', 'pill px-3 py-1 rounded-full text-xs font-black', `${percent}%`));
+  box.appendChild(heading);
+  box.appendChild(createElement('p', 'text-sm text-stone-600 mb-4', message));
+  const retryBtn = createElement('button', 'bg-teal-600 hover:bg-teal-700 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors', 'Làm lại bài luyện');
+  retryBtn.type = 'button';
+  retryBtn.addEventListener('click', resetCurrentQuiz);
+  box.appendChild(retryBtn);
+}
+
+function switchMainTab(tabId) {
+  currentCategory = tabId;
+  document.getElementById('practice-panel').classList.add('hidden');
+  document.querySelectorAll('.tab-content').forEach(el => {
+    el.classList.toggle('hidden', el.id !== tabId);
+    el.classList.toggle('block', el.id === tabId);
+  });
+  document.querySelectorAll('#nav-menu .nav-btn').forEach(button => {
+    const active = button.getAttribute('onclick')?.includes(tabId);
+    button.classList.toggle('tab-active', !!active);
+    button.classList.toggle('text-stone-500', !active);
+  });
+  const mobileNav = document.getElementById('mobile-nav');
+  if (mobileNav && mobileNav.value !== tabId) mobileNav.value = tabId;
+}
+
+window.addEventListener('DOMContentLoaded', initPractice);
+</script>
+</body>
+</html>

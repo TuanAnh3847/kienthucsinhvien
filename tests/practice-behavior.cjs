@@ -65,5 +65,31 @@ await test('NMLH: every MCQ key maps to full score',async()=>{const p=await open
  for(const q of qs)await p.locator('#q-'+q.id+' button').nth(q.answer).click();await p.getByRole('button',{name:'Nộp bài',exact:true}).click();assert.match(await p.locator('#result-box').innerText(),/100%/);assert.equal(await p.locator('.option-correct').count(),qs.length);}
  assert.deepEqual(p.errors,[]);
 }finally{await p.close()}});
-await test('Practice routes, theory links and four viewport widths',async()=>{for(const [route,theory]of [['NguyenLyKeToan-LuyenDe','/NLKT'],['TCCN-LuyenDe','/TCCN'],['KTQT-LuyenDe','/KTQT'],['NhapMonLuatHoc-LuyenDe','/NMLH']]){const p=await open(route);try{assert.equal(new URL(p.url()).pathname,'/'+route);assert(await p.locator('.practice-theory-link a').getAttribute('href')===theory);for(const [width,height]of [[1440,900],[1366,768],[390,844],[375,812]]){await p.setViewportSize({width,height});await p.evaluate(r=>r==='TCCN-LuyenDe'?startExam(0):openSet(exerciseSets.find(s=>s.mode==='mcq').id),route);assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await p.screenshot({path:path.join(__dirname,`screenshots/round2/${route}-${width}-practice.png`)});}await p.locator('.practice-theory-link a').click();assert.equal(new URL(p.url()).pathname,theory);assert.deepEqual(p.errors,[])}finally{await p.close()}}});
+await test('NLTTTC: wrong/change/submit twice, lock, reset, return category',async()=>{const p=await open('NLTTTC-LuyenDe');try{
+ await p.getByRole('button',{name:'Bắt đầu luyện theo chương',exact:true}).click();await p.getByRole('button',{name:'Mở bài luyện',exact:true}).first().click();
+ await p.locator('.option-card').nth(1).click();await p.locator('.option-card').first().click();assert.equal(await p.locator('.option-card').first().getAttribute('aria-pressed'),'true');
+ await p.getByRole('button',{name:'Nộp bài',exact:true}).click();assert.match(await p.locator('#result-box').innerText(),/% correct/);
+ await p.getByRole('button',{name:'Làm lại',exact:true}).first().click();assert.equal(await p.locator('#answered-count').innerText(),'0');assert(!await p.locator('#result-box').isVisible());
+ await p.getByRole('button',{name:'← Quay lại danh sách',exact:true}).click();assert(await p.locator('#chapter').isVisible());assert.deepEqual(p.errors,[]);
+}finally{await p.close()}});
+await test('NLTTTC: every MCQ key maps to full score',async()=>{const p=await open('NLTTTC-LuyenDe');try{
+ const ids=await p.evaluate(()=>exerciseSets.filter(s=>s.mode==='mcq').map(s=>s.id));
+ for(const id of ids){await p.evaluate(id=>openSet(id),id);const qs=await p.evaluate(()=>currentSet.questions.map(q=>({id:q.id,answer:q.answer})));
+ for(const q of qs)await p.locator('#q-'+q.id+' button').nth(q.answer).click();await p.getByRole('button',{name:'Nộp bài',exact:true}).click();assert.match(await p.locator('#result-box').innerText(),/100%/);assert.equal(await p.locator('.option-correct').count(),qs.length);}
+ assert.deepEqual(p.errors,[]);
+}finally{await p.close()}});
+await test('LTMQT: wrong/change/submit twice, lock, reset, return category',async()=>{const p=await open('LTMQT-LuyenDe');try{
+ await p.getByRole('button',{name:'Bắt đầu luyện theo chương',exact:true}).click();await p.getByRole('button',{name:'Mở bài luyện',exact:true}).first().click();
+ await p.locator('.option-card').nth(1).click();await p.locator('.option-card').first().click();assert.equal(await p.locator('.option-card').first().getAttribute('aria-pressed'),'true');
+ await p.getByRole('button',{name:'Nộp bài',exact:true}).click();assert.match(await p.locator('#result-box').innerText(),/% correct/);
+ await p.getByRole('button',{name:'Làm lại',exact:true}).first().click();assert.equal(await p.locator('#answered-count').innerText(),'0');assert(!await p.locator('#result-box').isVisible());
+ await p.getByRole('button',{name:'← Quay lại danh sách',exact:true}).click();assert(await p.locator('#chapter').isVisible());assert.deepEqual(p.errors,[]);
+}finally{await p.close()}});
+await test('LTMQT: every MCQ key maps to full score',async()=>{const p=await open('LTMQT-LuyenDe');try{
+ const ids=await p.evaluate(()=>exerciseSets.filter(s=>s.mode==='mcq').map(s=>s.id));
+ for(const id of ids){await p.evaluate(id=>openSet(id),id);const qs=await p.evaluate(()=>currentSet.questions.map(q=>({id:q.id,answer:q.answer})));
+ for(const q of qs)await p.locator('#q-'+q.id+' button').nth(q.answer).click();await p.getByRole('button',{name:'Nộp bài',exact:true}).click();assert.match(await p.locator('#result-box').innerText(),/100%/);assert.equal(await p.locator('.option-correct').count(),qs.length);}
+ assert.deepEqual(p.errors,[]);
+}finally{await p.close()}});
+await test('Practice routes, theory links and four viewport widths',async()=>{for(const [route,theory]of [['NguyenLyKeToan-LuyenDe','/NLKT'],['TCCN-LuyenDe','/TCCN'],['KTQT-LuyenDe','/KTQT'],['NhapMonLuatHoc-LuyenDe','/NMLH'],['NLTTTC-LuyenDe','/NLTTTC'],['LTMQT-LuyenDe','/LTMQT']]){const p=await open(route);try{assert.equal(new URL(p.url()).pathname,'/'+route);assert(await p.locator('.practice-theory-link a').getAttribute('href')===theory);for(const [width,height]of [[1440,900],[1366,768],[390,844],[375,812]]){await p.setViewportSize({width,height});await p.evaluate(r=>r==='TCCN-LuyenDe'?startExam(0):openSet(exerciseSets.find(s=>s.mode==='mcq').id),route);assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await p.screenshot({path:path.join(__dirname,`screenshots/round2/${route}-${width}-practice.png`)});}await p.locator('.practice-theory-link a').click();assert.equal(new URL(p.url()).pathname,theory);assert.deepEqual(p.errors,[])}finally{await p.close()}}});
 }finally{await browser.close();fs.writeFileSync(path.join(__dirname,'practice-behavior-results.json'),JSON.stringify(results,null,2))}if(results.some(r=>!r.pass))process.exitCode=1})().catch(e=>{console.error(e);process.exitCode=1});

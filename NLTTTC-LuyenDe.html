@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luyện đề Nguyên lý thị trường tài chính - Edu Connect</title>
+<meta name="description" content="Trang luyện đề Nguyên lý thị trường tài chính: ôn theo chương, trắc nghiệm 20 câu có đáp án và giải thích chi tiết trích từ lý thuyết.">
+<meta name="keywords" content="nguyên lý thị trường tài chính, luyện đề NLTTTC, trắc nghiệm thị trường tài chính, financial markets, edu connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta property="og:title" content="Luyện đề Nguyên lý thị trường tài chính - Edu Connect">
+<meta property="og:description" content="Trang luyện đề Nguyên lý thị trường tài chính: ôn theo chương, trắc nghiệm 20 câu có đáp án và giải thích chi tiết trích từ lý thuyết.">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png">
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/NLTTTC-LuyenDe">
+<meta property="og:type" content="article">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.glass-panel { background: rgba(255,255,255,0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 800; }
+@keyframes fadeIn { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn .45s ease-out forwards; }
+.modal-overlay { background-color: rgba(28,25,23,.75); backdrop-filter: blur(4px); }
+.exercise-card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.exercise-card:hover { transform: translateY(-3px); box-shadow: 0 18px 35px -24px rgba(13,148,136,.55); border-color: #5eead4; }
+.option-card { transition: all .15s ease; }
+.option-card:hover:not(:disabled) { border-color: #14b8a6; background: #f0fdfa; }
+.option-selected { border-color: #0d9488 !important; background: #ccfbf1 !important; color: #115e59; }
+.option-correct { border-color: #22c55e !important; background: #dcfce7 !important; color: #166534; }
+.option-wrong { border-color: #f43f5e !important; background: #ffe4e6 !important; color: #9f1239; }
+.pill { border: 1px solid #ccfbf1; background: #f0fdfa; color: #0f766e; }
+#practice-panel { scroll-margin-top: 96px; }
+</style>
+<link rel="stylesheet" href="/shared.css">
+</head>
+<body class="edu-practice-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="site-header-row flex justify-between items-center h-16">
+      <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+        <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+        <div class="flex flex-col justify-center min-w-0">
+          <h1 class="font-extrabold text-base sm:text-xl text-slate-900 tracking-tight leading-none">EDU CONNECT</h1>
+          <div class="max-w-[180px] sm:max-w-[260px] overflow-hidden" style="-webkit-mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);">
+            <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">📈 Luyện đề Nguyên Lý Thị Trường Tài Chính</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="flex items-center shrink-0">
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+          <span id="online-count" class="mr-1">...</span><span class="hidden sm:inline">online</span>
+        </div>
+        <div class="border-l border-stone-300 pl-3 sm:pl-4">
+          <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+          <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+            <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+            <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh viên</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-nav" id="nav-menu">
+      <button onclick="switchMainTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
+      <button onclick="switchMainTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
+      <button onclick="switchMainTab('quiz')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Trắc nghiệm</button>
+    </div>
+    <div class="chapter-select-row relative">
+      <select id="mobile-nav" aria-label="Chọn chương" onchange="switchMainTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+        <option value="overview">Tổng quan</option>
+        <option value="chapter">Luyện theo chương</option>
+        <option value="quiz">Luyện trắc nghiệm</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+  <section id="overview" class="tab-content block">
+    <div class="relative overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-sm p-6 md:p-10 mb-8">
+      <div class="absolute right-0 top-0 h-44 w-44 bg-teal-100 rounded-full blur-3xl opacity-80"></div>
+      <div class="absolute left-10 bottom-0 h-32 w-32 bg-blue-100 rounded-full blur-3xl opacity-70"></div>
+      <div class="relative z-10 grid lg:grid-cols-[1.4fr_.8fr] gap-8 items-center">
+        <div>
+          <span class="inline-flex items-center pill px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-4">🎯 Practice Pilot</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">Kho luyện đề Nguyên Lý Thị Trường Tài Chính</h2>
+          <p class="text-lg text-stone-600 max-w-2xl mb-6">Hệ thống 20 câu hỏi trắc nghiệm chuẩn mực bám sát 6 chương lý thuyết: tiền tệ, thị trường & công cụ tài chính, thông tin bất cân xứng, cầu tài sản, lãi suất và tỷ giá.</p>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="switchMainTab('chapter')" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl shadow-sm transition-transform active:scale-[.98]">Bắt đầu luyện theo chương</button>
+            <button onclick="switchMainTab('quiz')" class="bg-white hover:bg-stone-50 text-teal-800 font-black px-5 py-3 rounded-xl border border-teal-200 shadow-sm transition-transform active:scale-[.98]">Vào đề tổng hợp</button>
+          </div>
+        </div>
+        <div class="bg-stone-900 text-white rounded-2xl p-6 shadow-xl">
+          <p class="text-xs uppercase tracking-widest text-teal-300 font-black mb-4">Bài luyện hiện có</p>
+          <div class="grid grid-cols-2 gap-3" id="overview-stats"></div>
+          <div class="mt-5 rounded-xl bg-white/10 p-4 border border-white/10">
+            <p class="text-sm text-stone-200">Chọn bài → Làm bài → Nộp bài → Xem kết quả và đối chiếu lý thuyết → Làm lại để củng cố kiến thức.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 mb-8">
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <div class="text-3xl mb-3">📚</div>
+        <h3 class="font-black text-lg text-slate-900 mb-2">Luyện theo chương</h3>
+        <p class="text-sm text-stone-600">Chia nhỏ các câu hỏi theo từng chương lý thuyết giúp sinh viên ôn tập có trọng tâm, nắm vững nguyên lý trước khi thử sức tổng hợp.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <div class="text-3xl mb-3">✅</div>
+        <h3 class="font-black text-lg text-slate-900 mb-2">Đề tổng hợp</h3>
+        <p class="text-sm text-stone-600">20 câu hỏi trắc nghiệm bao quát các chủ đề quan trọng, có đáp án và giải thích trích xuất trực tiếp từ giáo trình.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter" class="tab-content hidden">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện theo chương</h2>
+      <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Chọn bài theo chương để kiểm tra độ hiểu sâu của từng đơn vị kiến thức trước khi làm bài tổng hợp.</p>
+    </div>
+    <div id="chapter-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <section id="quiz" class="tab-content hidden">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện trắc nghiệm tổng hợp</h2>
+      <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Đề tổng hợp 20 câu hỏi có chấm điểm tức thì, thống kê tỷ lệ đúng và đối chiếu giải thích chi tiết.</p>
+    </div>
+    <div id="quiz-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <p class="practice-theory-link"><a href="/NLTTTC">← Lý thuyết Nguyên lý thị trường tài chính</a></p>
+
+  <section id="practice-panel" class="hidden mt-10 animate-fade-in">
+    <div class="flex items-center justify-between gap-4 mb-4">
+      <button onclick="closePracticePanel()" class="bg-white hover:bg-stone-50 text-stone-700 font-bold px-4 py-2 rounded-xl border border-stone-200 shadow-sm">← Quay lại danh sách</button>
+      <span id="practice-badge" class="pill text-xs font-black px-3 py-1 rounded-full"></span>
+    </div>
+    <div id="practice-content"></div>
+  </section>
+</main>
+
+<footer class="border-t border-stone-200 bg-white mt-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-stone-500 flex flex-col md:flex-row justify-between gap-3">
+    <p><strong class="text-teal-700">Edu Connect</strong> · Luyện đề Nguyên lý thị trường tài chính</p>
+    <p><a href="/NLTTTC" class="font-bold text-teal-700 underline">← Về lý thuyết Nguyên lý thị trường tài chính</a></p>
+  </div>
+</footer>
+
+<script>
+const LOCAL_SETS = [{"id": "nltttc-ch1-money", "title": "Chương 1: Tiền tệ và Khối tiền", "category": "chapter", "mode": "mcq", "chapter": "Chương 1", "difficulty": "Easy", "duration": 10, "description": "Các đặc tính, chức năng của tiền tệ và phân biệt các khối tiền M1/M2.", "badge": "Luyện theo chương", "order": 1, "questions": [{"id": "nltttc_1", "question": "Trong nền kinh tế, chức năng phương tiện trao đổi (Medium of exchange) của tiền tệ giúp loại bỏ trở ngại lớn nào của phương thức hàng đổi hàng (barter)?", "options": ["Loại bỏ sự đòi hỏi trùng hợp kép về nhu cầu (double coincidence of needs)", "Loại bỏ hoàn toàn rủi ro lạm phát và mất giá sức mua của tiền mặt", "Cố định vĩnh viễn mức lãi suất thực tế trên thị trường vốn", "Đảm bảo mọi khoản vay nợ tín dụng đều được hoàn trả đúng hạn"], "answer": 0, "explanation": "Chức năng phương tiện trao đổi của tiền cho phép người mua và người bán giao dịch trực tiếp thông qua tiền tệ mà không cần tìm được đối tác có nhu cầu trao đổi tương thích trùng hợp (double coincidence of needs)."}, {"id": "nltttc_2", "question": "Chức năng đơn vị đo lường giá trị (Unit of account) của tiền tệ mang lại lợi ích kinh tế cơ bản nào?", "options": ["Tự động cân bằng giữa tổng cung và tổng cầu trong toàn bộ nền kinh tế", "Đo lường giá trị hàng hóa và giảm đáng kể số lượng giá tương đối (relative prices) cần niêm yết", "Bảo đảm tiền tệ không bao giờ bị hao mòn hay mất mát theo thời gian", "Tạo ra thu nhập lãi suất thụ động định kỳ cho người nắm giữ"], "answer": 1, "explanation": "Tiền đóng vai trò là thước đo chung giúp định giá mọi hàng hóa, giảm từ N(N-1)/2 mức giá tương đối trong nền kinh tế hàng đổi hàng xuống còn N mức giá niêm yết bằng tiền."}, {"id": "nltttc_3", "question": "Chức năng lưu trữ giá trị (Store of value) của tiền tệ phản ánh khía cạnh nào sau đây?", "options": ["Bắt buộc chính phủ phải bảo chứng bằng một lượng vàng vật chất tương ứng", "Tỷ lệ sinh lời của tiền tệ luôn vượt trội hơn cổ phiếu và bất động sản", "Khả năng lưu giữ sức mua từ thời điểm hiện tại sang tương lai", "Khả năng chuyển đổi thành ngoại tệ không giới hạn tại mọi thời điểm"], "answer": 2, "explanation": "Chức năng cất trữ giá trị cho phép chuyển giao sức mua từ hiện tại sang tương lai, dù tiền mặt chịu đánh đổi tính thanh khoản cao với việc không sinh lãi."}, {"id": "nltttc_4", "question": "Đặc tính 'Portability' (tính tiện lợi khi di chuyển/mang theo) của một loại tiền tệ tốt đòi hỏi yếu tố gì?", "options": ["Được đúc bằng các kim loại quý có trọng lượng cực nặng để tránh thất lạc", "Phải được lưu thông ở dạng vật chất kích thước lớn để dễ nhận diện", "Chỉ được phát hành dưới dạng tiền gửi điện tử tại các ngân hàng thương mại", "Dễ mang theo, chi phí vận chuyển và cất giữ thấp đối với giá trị lớn"], "answer": 3, "explanation": "Portability đòi hỏi tiền tệ phải có giá trị tập trung cao, gọn nhẹ, dễ mang theo và chi phí vận chuyển thấp để thuận tiện cho giao dịch thương mại."}, {"id": "nltttc_5", "question": "Trong đo lường các khối tiền tệ (monetary aggregates), tiêu chuẩn phân biệt chính giữa khối M1 và khối M2 là:", "options": ["M1 gồm tiền mặt và các khoản tiền gửi thanh toán có tính thanh khoản cao nhất; M2 bao gồm M1 cộng thêm các tài sản thanh khoản kém hơn như tiền gửi tiết kiệm và tiền gửi có kỳ hạn", "M1 chỉ bao gồm tiền giấy và tiền xu do ngân hàng trung ương phát hành; M2 chỉ bao gồm ngoại tệ mạnh", "M1 là lượng vốn đầu tư trên thị trường chứng khoán; M2 là dự trữ ngoại hối quốc gia", "M1 chỉ áp dụng cho giao dịch của chính phủ; M2 áp dụng cho khu vực tư nhân"], "answer": 0, "explanation": "M1 là khối tiền có tính thanh khoản cao nhất dùng trực tiếp trong thanh toán (tiền mặt, tiền gửi không kỳ hạn/viết séc); M2 mở rộng M1 thêm các tài sản ít lỏng hơn nhưng có thể nhanh chóng chuyển thành tiền mặt (tiền gửi tiết kiệm, tiền gửi kỳ hạn nhỏ)."}]}, {"id": "nltttc-ch2-markets", "title": "Chương 2: Thị trường và Công cụ tài chính", "category": "chapter", "mode": "mcq", "chapter": "Chương 2", "difficulty": "Medium", "duration": 12, "description": "Tài trợ trực tiếp/gián tiếp, thị trường tiền tệ vs thị trường vốn, sơ cấp vs thứ cấp.", "badge": "Luyện theo chương", "order": 2, "questions": [{"id": "nltttc_6", "question": "Cơ chế tài trợ trực tiếp (Direct finance) trong hệ thống tài chính diễn ra theo phương thức nào?", "options": ["Bên gửi tiền gửi vào ngân hàng thương mại rồi ngân hàng cấp tín dụng cho bên vay vốn", "Bên thặng dư vốn (SSU) chuyển vốn trực tiếp cho bên thiếu hụt vốn (DSU) bằng cách mua các chứng khoán do DSU phát hành", "Chính phủ dùng ngân sách nhà nước cấp phát không hoàn lại cho các doanh nghiệp", "Ngân hàng trung ương trực tiếp mua toàn bộ nợ xấu của các tổ chức tín dụng"], "answer": 1, "explanation": "Tài trợ trực tiếp là phương thức bên cần vốn (DSU) bán trực tiếp các công cụ tài chính (chứng khoán như cổ phiếu, trái phiếu) cho bên cấp vốn (SSU) trên thị trường tài chính."}, {"id": "nltttc_7", "question": "Đặc trưng cốt lõi của tài trợ gián tiếp (Indirect finance) là:", "options": ["Các doanh nghiệp phát hành cổ phiếu lần đầu ra công chúng (IPO) trực tiếp tới nhà đầu tư", "Người dân tự giữ tiền mặt tại nhà và trực tiếp cho người thân vay không cần giấy tờ", "Vốn được luân chuyển từ bên thừa vốn sang bên thiếu vốn thông qua tổ chức trung gian tài chính (Financial Intermediary)", "Nhà đầu tư nước ngoài mua trực tiếp nhà máy tại thị trường nội địa"], "answer": 2, "explanation": "Tài trợ gián tiếp có sự tham gia của trung gian tài chính (như ngân hàng, quỹ đầu tư), trung gian này huy động vốn từ SSU và tạo ra các tài sản tài chính mới để tài trợ cho DSU."}, {"id": "nltttc_8", "question": "Tiêu chí căn bản để phân định giữa Thị trường tiền tệ (Money market) và Thị trường vốn (Capital market) là:", "options": ["Đồng tiền sử dụng: thị trường tiền tệ dùng nội tệ, thị trường vốn chỉ dùng đô la Mỹ (USD)", "Địa điểm giao dịch: thị trường tiền tệ tại quầy giao dịch, thị trường vốn tại các sàn điện tử", "Quyền sở hữu: thị trường tiền tệ chỉ có ngân hàng nhà nước, thị trường vốn dành riêng cho tư nhân", "Kỳ hạn đáo hạn của các công cụ tài chính: thị trường tiền tệ giao dịch công cụ ngắn hạn (< 1 năm), thị trường vốn giao dịch công cụ dài hạn (≥ 1 năm)"], "answer": 3, "explanation": "Thị trường tiền tệ là thị trường cho các công cụ nợ ngắn hạn có tính thanh khoản cao với kỳ hạn dưới 1 năm; thị trường vốn giao dịch các công cụ nợ dài hạn và vốn chủ sở hữu với kỳ hạn từ 1 năm trở lên."}, {"id": "nltttc_9", "question": "Thị trường sơ cấp (Primary market) được phân biệt với Thị trường thứ cấp (Secondary market) ở điểm mấu chốt nào?", "options": ["Thị trường sơ cấp phát hành chứng khoán mới và mang lại vốn mới cho tổ chức phát hành; thị trường thứ cấp mua đi bán lại các chứng khoán đã lưu hành", "Thị trường sơ cấp chỉ dành cho nhà đầu tư cá nhân; thị trường thứ cấp chỉ dành cho tổ chức tài chính", "Thị trường sơ cấp có quy mô giao dịch hàng ngày lớn hơn nhiều so với thị trường thứ cấp", "Thị trường sơ cấp không chịu bất kỳ sự quản lý nào từ cơ quan chứng khoán nhà nước"], "answer": 0, "explanation": "Thị trường sơ cấp là nơi chứng khoán mới được bán lần đầu tiên, giúp tổ chức phát hành huy động vốn mới; thị trường thứ cấp là nơi các nhà đầu tư mua bán lại chứng khoán đã phát hành."}, {"id": "nltttc_10", "question": "Công cụ nào sau đây thuộc về Thị trường vốn (Capital market)?", "options": ["Tín phiếu kho bạc kỳ hạn 3 tháng (Treasury bills)", "Trái phiếu doanh nghiệp dài hạn (Corporate bonds) và Cổ phiếu phổ thông (Common stock)", "Hợp đồng mua lại kỳ hạn qua đêm (Repurchase agreements - REPO)", "Chứng chỉ tiền gửi khả chuyển ngắn hạn (Negotiable CDs) kỳ hạn 6 tháng"], "answer": 1, "explanation": "Trái phiếu dài hạn và cổ phiếu là các công cụ tài chính có kỳ hạn trên 1 năm hoặc không có thời hạn đáo hạn xác định, do đó thuộc về thị trường vốn."}]}, {"id": "nltttc-ch3-asymmetric", "title": "Chương 3: Bất cân xứng thông tin & Trung gian", "category": "chapter", "mode": "mcq", "chapter": "Chương 3", "difficulty": "Medium", "duration": 8, "description": "Lựa chọn đối nghịch (Adverse Selection), Rủi ro đạo đức (Moral Hazard) và bài toán Principal-Agent.", "badge": "Luyện theo chương", "order": 3, "questions": [{"id": "nltttc_11", "question": "Hiện tượng Lựa chọn đối nghịch (Adverse Selection) xuất hiện tại thời điểm nào và do nguyên nhân gì?", "options": ["Xuất hiện SAU khi nhận vốn đầu tư, khi bên vay sử dụng tiền vào các dự án cờ bạc nguy hiểm", "Xuất hiện khi các ngân hàng thương mại cạnh tranh hạ lãi suất cho vay", "Xuất hiện TRƯỚC khi giao dịch diễn ra (Before transaction), khi người có rủi ro cao tích cực tìm kiếm và dễ được chọn cấp tín dụng", "Xuất hiện khi ngân hàng trung ương đột ngột tăng tỷ lệ dự trữ bắt buộc"], "answer": 2, "explanation": "Adverse Selection là vấn đề thông tin bất cân xứng phát sinh TRƯỚC giao dịch, khiến những người có nguy cơ vỡ nợ cao nhất lại là những người tích cực nhất trong việc tìm kiếm khoản vay."}, {"id": "nltttc_12", "question": "Rủi ro đạo đức (Moral Hazard) trong hoạt động tài chính phản ánh hiện tượng nào sau đây?", "options": ["Bên cho vay che giấu thông tin lãi suất thực tế trước khi khách hàng đặt bút ký hợp đồng", "Nhà đầu tư cá nhân từ chối mua chứng khoán do lo sợ biến động giá thị trường", "Doanh nghiệp công bố báo cáo kiểm toán minh bạch đúng quy định pháp luật", "Sau khi hợp đồng được ký kết, bên nhận vốn thay đổi hành vi theo hướng mạo hiểm hơn làm tăng khả năng vỡ nợ"], "answer": 3, "explanation": "Moral Hazard là rủi ro phát sinh SAU khi giao dịch đã hoàn tất, khi bên nhận tài trợ có động cơ thực hiện các hoạt động rủi ro cao hơn thỏa thuận ban đầu vì họ không chịu toàn bộ hậu quả nếu thất bại."}, {"id": "nltttc_13", "question": "Xung đột Người ủy thác - Người đại lý (Principal-Agent Problem) trong các công ty cổ phần nảy sinh do:", "options": ["Sự tách biệt giữa quyền sở hữu (cổ đông - principal) và quyền quản lý điều hành (nhà quản lý - agent), khi người đại lý có thể theo đuổi lợi ích cá nhân", "Mâu thuẫn về điều kiện giao hàng giữa người bán và người mua trên thị trường quốc tế", "Tranh chấp giữa các cổ đông thiểu số và hội đồng thẩm phán tòa án nhân dân", "Sự cạnh tranh không lành mạnh giữa hai công ty sản xuất sản phẩm thay thế"], "answer": 0, "explanation": "Vấn đề Principal-Agent xuất hiện do tách rời quyền sở hữu và quyền kiểm soát; nhà quản lý (agent) có thông tin nội bộ tốt hơn và có thể hành động vì quyền lực/lợi ích riêng thay vì tối đa hóa lợi nhuận cho cổ đông (principal)."}]}, {"id": "nltttc-ch4-demand", "title": "Chương 4: Lý thuyết Cầu tài sản", "category": "chapter", "mode": "mcq", "chapter": "Chương 4", "difficulty": "Easy", "duration": 6, "description": "Tác động của của cải (Wealth), lợi tức kỳ vọng, rủi ro tương đối và tính thanh khoản lên cầu tài sản.", "badge": "Luyện theo chương", "order": 4, "questions": [{"id": "nltttc_14", "question": "Theo Lý thuyết Cầu tài sản (Theory of Asset Demand), sự gia tăng của của cải (Wealth) tác động thế nào đến lượng cầu tài sản?", "options": ["Lượng cầu đối với tất cả các tài sản đều giảm sút nghiêm trọng", "Lượng cầu đối với hầu hết các tài sản sẽ tăng lên (Wealth ↑ Demand ↑)", "Không tạo ra bất kỳ tác động nào vì nhu cầu đầu tư luôn cố định", "Chỉ làm tăng cầu đối với tiền mặt và triệt tiêu cầu đối với trái phiếu"], "answer": 1, "explanation": "Khi tổng của cải của nhà đầu tư tăng lên, họ có nhiều nguồn lực kinh tế hơn để phân bổ vào danh mục đầu tư, làm tăng lượng cầu đối với các tài sản tài chính."}, {"id": "nltttc_15", "question": "Khi rủi ro tương đối của một tài sản tăng lên so với các tài sản thay thế, lượng cầu đối với tài sản đó biến động như thế nào?", "options": ["Lượng cầu đối với tài sản đó tăng lên gấp đôi để bù đắp chi phí cơ hội", "Lượng cầu luôn giữ nguyên không đổi vì giá cả thị trường đã điều chỉnh", "Lượng cầu đối với tài sản đó giảm xuống (Risk ↑ Demand ↓) do đa số nhà đầu tư có tâm lý e ngại rủi ro (risk averse)", "Lượng cầu chuyển dịch hoàn toàn sang các hợp đồng phái sinh đòn bẩy cao"], "answer": 2, "explanation": "Vì đa số nhà đầu tư trên thị trường có xu hướng e ngại rủi ro (risk averse), khi một tài sản trở nên rủi ro hơn so với các lựa chọn khác, nhà đầu tư sẽ giảm nắm giữ tài sản đó."}]}, {"id": "nltttc-ch5-interest", "title": "Chương 5: Lãi suất & Trái phiếu", "category": "chapter", "mode": "mcq", "chapter": "Chương 5", "difficulty": "Medium", "duration": 8, "description": "Trái phiếu coupon, trái phiếu chiết khấu, lợi suất đáo hạn YTM và quan hệ nghịch biến giá - lãi suất.", "badge": "Luyện theo chương", "order": 5, "questions": [{"id": "nltttc_16", "question": "Trái phiếu trả lãi định kỳ (Coupon bond) có cơ cấu dòng tiền thanh toán như thế nào?", "options": ["Không trả bất kỳ khoản lãi định kỳ nào mà bán giảm giá sâu so với mệnh giá", "Hoàn trả toàn bộ cả gốc lẫn lãi bằng một khoản tiền gộp duy nhất sau 6 tháng", "Chỉ trả tiền lãi nếu doanh nghiệp phát hành đạt mức tăng trưởng lợi nhuận trên 20%", "Thanh toán lãi coupon định kỳ cho đến ngày đáo hạn, và hoàn trả mệnh giá (face value) tại ngày đáo hạn"], "answer": 3, "explanation": "Coupon bond là công cụ nợ trả cho chủ sở hữu các khoản tiền lãi cố định (coupon) theo các kỳ hạn định trước (hàng năm hoặc bán niên) và hoàn trả mệnh giá vào ngày đáo hạn."}, {"id": "nltttc_17", "question": "Trái phiếu chiết khấu / Trái phiếu không trả lãi định kỳ (Discount / Zero-coupon bond) có đặc điểm là:", "options": ["Được bán với giá thấp hơn mệnh giá (sold below face), không trả lãi định kỳ, và hoàn trả mệnh giá khi đáo hạn", "Được bán với giá cao hơn mệnh giá 50% và trả lãi bằng cổ phiếu thưởng", "Chỉ phát hành cho các nhân viên nội bộ của doanh nghiệp có thâm niên", "Cho phép người nắm giữ chuyển đổi thành vàng bất kỳ lúc nào"], "answer": 0, "explanation": "Zero-coupon bond không thanh toán coupon định kỳ; lợi tức của nhà đầu tư đến từ chênh lệch giữa giá mua chiết khấu ban đầu và mệnh giá nhận được khi đáo hạn."}, {"id": "nltttc_18", "question": "Mối quan hệ định lượng giữa giá trái phiếu (Bond price) và lãi suất thị trường (Interest rate) là:", "options": ["Biến động cùng chiều tuyệt đối: khi lãi suất tăng 1% thì giá trái phiếu tăng 1%", "Biến động ngược chiều nhau (move inversely): khi lãi suất tăng thì giá trái phiếu giảm, và ngược lại", "Hoàn toàn độc lập và không có bất kỳ mối liên hệ nào với nhau", "Chỉ biến động cùng chiều trong chu kỳ lạm phát phi mã"], "answer": 1, "explanation": "Vì các dòng tiền tương lai của trái phiếu cố định, khi lãi suất thị trường tăng (lãi suất chiết khấu tăng), giá trị hiện tại của các dòng tiền giảm xuống, làm giá trái phiếu giảm."}]}, {"id": "nltttc-ch6-fx", "title": "Chương 6: Tỷ giá hối đoái & Quy luật một giá", "category": "chapter", "mode": "mcq", "chapter": "Chương 6", "difficulty": "Medium", "duration": 6, "description": "Quy luật một giá, ngang giá sức mua (PPP) và phương pháp niêm yết tỷ giá trực tiếp.", "badge": "Luyện theo chương", "order": 6, "questions": [{"id": "nltttc_19", "question": "Quy luật một giá (Law of One Price) trong thương mại tài chính quốc tế phát biểu rằng:", "options": ["Chính phủ bắt buộc tất cả các mặt hàng thiết yếu phải bán đồng giá trên toàn cầu", "Mọi đồng tiền trên thế giới đều có tỷ giá cố định 1:1 so với đồng USD", "Một loại hàng hóa hoặc tài sản giống hệt nhau sẽ có cùng mức giá ở mọi quốc gia khi được quy đổi qua tỷ giá hối đoái (bỏ qua chi phí vận chuyển và rào cản)", "Giá xuất khẩu luôn phải thấp hơn giá bán buôn tại thị trường nội địa"], "answer": 2, "explanation": "Quy luật một giá khẳng định nếu hai nước cùng sản xuất một hàng hóa giống hệt nhau và không có chi phí giao dịch, giá của hàng hóa đó sẽ bằng nhau trên toàn thế giới khi tính theo cùng một đồng tiền."}, {"id": "nltttc_20", "question": "Phương pháp niêm yết tỷ giá trực tiếp (Direct quotation) được định nghĩa là:", "options": ["Biểu thị giá trị của một đơn vị nội tệ bằng một số lượng đơn vị ngoại tệ nhất định", "Niêm yết giá hàng hóa bằng vàng thay vì sử dụng tiền giấy lưu thông", "Phương thức thỏa thuận ngầm giữa các tổ chức tài chính không công khai", "Biểu thị giá trị của một đơn vị ngoại tệ bằng một số lượng đơn vị nội tệ nhất định (ví dụ: 1 USD = 25.000 VND)"], "answer": 3, "explanation": "Niêm yết trực tiếp (Direct quotation) lấy ngoại tệ làm đồng tiền cơ sở (commodity currency) và nội tệ làm đồng tiền định giá (term currency), thể hiện lượng nội tệ cần để mua 1 đơn vị ngoại tệ."}]}, {"id": "nltttc-quiz-comprehensive", "title": "Đề trắc nghiệm tổng hợp 20 câu Nguyên lý thị trường tài chính", "category": "quiz", "mode": "mcq", "chapter": "Tổng hợp", "difficulty": "Medium", "duration": 30, "description": "Bộ 20 câu trắc nghiệm chuẩn mực bao quát toàn bộ 6 chương có chấm điểm và đối chiếu giải thích từ lý thuyết.", "badge": "Trắc nghiệm tổng hợp", "order": 7, "questions": [{"id": "nltttc_1", "question": "Trong nền kinh tế, chức năng phương tiện trao đổi (Medium of exchange) của tiền tệ giúp loại bỏ trở ngại lớn nào của phương thức hàng đổi hàng (barter)?", "options": ["Loại bỏ sự đòi hỏi trùng hợp kép về nhu cầu (double coincidence of needs)", "Loại bỏ hoàn toàn rủi ro lạm phát và mất giá sức mua của tiền mặt", "Cố định vĩnh viễn mức lãi suất thực tế trên thị trường vốn", "Đảm bảo mọi khoản vay nợ tín dụng đều được hoàn trả đúng hạn"], "answer": 0, "explanation": "Chức năng phương tiện trao đổi của tiền cho phép người mua và người bán giao dịch trực tiếp thông qua tiền tệ mà không cần tìm được đối tác có nhu cầu trao đổi tương thích trùng hợp (double coincidence of needs)."}, {"id": "nltttc_2", "question": "Chức năng đơn vị đo lường giá trị (Unit of account) của tiền tệ mang lại lợi ích kinh tế cơ bản nào?", "options": ["Tự động cân bằng giữa tổng cung và tổng cầu trong toàn bộ nền kinh tế", "Đo lường giá trị hàng hóa và giảm đáng kể số lượng giá tương đối (relative prices) cần niêm yết", "Bảo đảm tiền tệ không bao giờ bị hao mòn hay mất mát theo thời gian", "Tạo ra thu nhập lãi suất thụ động định kỳ cho người nắm giữ"], "answer": 1, "explanation": "Tiền đóng vai trò là thước đo chung giúp định giá mọi hàng hóa, giảm từ N(N-1)/2 mức giá tương đối trong nền kinh tế hàng đổi hàng xuống còn N mức giá niêm yết bằng tiền."}, {"id": "nltttc_3", "question": "Chức năng lưu trữ giá trị (Store of value) của tiền tệ phản ánh khía cạnh nào sau đây?", "options": ["Bắt buộc chính phủ phải bảo chứng bằng một lượng vàng vật chất tương ứng", "Tỷ lệ sinh lời của tiền tệ luôn vượt trội hơn cổ phiếu và bất động sản", "Khả năng lưu giữ sức mua từ thời điểm hiện tại sang tương lai", "Khả năng chuyển đổi thành ngoại tệ không giới hạn tại mọi thời điểm"], "answer": 2, "explanation": "Chức năng cất trữ giá trị cho phép chuyển giao sức mua từ hiện tại sang tương lai, dù tiền mặt chịu đánh đổi tính thanh khoản cao với việc không sinh lãi."}, {"id": "nltttc_4", "question": "Đặc tính 'Portability' (tính tiện lợi khi di chuyển/mang theo) của một loại tiền tệ tốt đòi hỏi yếu tố gì?", "options": ["Được đúc bằng các kim loại quý có trọng lượng cực nặng để tránh thất lạc", "Phải được lưu thông ở dạng vật chất kích thước lớn để dễ nhận diện", "Chỉ được phát hành dưới dạng tiền gửi điện tử tại các ngân hàng thương mại", "Dễ mang theo, chi phí vận chuyển và cất giữ thấp đối với giá trị lớn"], "answer": 3, "explanation": "Portability đòi hỏi tiền tệ phải có giá trị tập trung cao, gọn nhẹ, dễ mang theo và chi phí vận chuyển thấp để thuận tiện cho giao dịch thương mại."}, {"id": "nltttc_5", "question": "Trong đo lường các khối tiền tệ (monetary aggregates), tiêu chuẩn phân biệt chính giữa khối M1 và khối M2 là:", "options": ["M1 gồm tiền mặt và các khoản tiền gửi thanh toán có tính thanh khoản cao nhất; M2 bao gồm M1 cộng thêm các tài sản thanh khoản kém hơn như tiền gửi tiết kiệm và tiền gửi có kỳ hạn", "M1 chỉ bao gồm tiền giấy và tiền xu do ngân hàng trung ương phát hành; M2 chỉ bao gồm ngoại tệ mạnh", "M1 là lượng vốn đầu tư trên thị trường chứng khoán; M2 là dự trữ ngoại hối quốc gia", "M1 chỉ áp dụng cho giao dịch của chính phủ; M2 áp dụng cho khu vực tư nhân"], "answer": 0, "explanation": "M1 là khối tiền có tính thanh khoản cao nhất dùng trực tiếp trong thanh toán (tiền mặt, tiền gửi không kỳ hạn/viết séc); M2 mở rộng M1 thêm các tài sản ít lỏng hơn nhưng có thể nhanh chóng chuyển thành tiền mặt (tiền gửi tiết kiệm, tiền gửi kỳ hạn nhỏ)."}, {"id": "nltttc_6", "question": "Cơ chế tài trợ trực tiếp (Direct finance) trong hệ thống tài chính diễn ra theo phương thức nào?", "options": ["Bên gửi tiền gửi vào ngân hàng thương mại rồi ngân hàng cấp tín dụng cho bên vay vốn", "Bên thặng dư vốn (SSU) chuyển vốn trực tiếp cho bên thiếu hụt vốn (DSU) bằng cách mua các chứng khoán do DSU phát hành", "Chính phủ dùng ngân sách nhà nước cấp phát không hoàn lại cho các doanh nghiệp", "Ngân hàng trung ương trực tiếp mua toàn bộ nợ xấu của các tổ chức tín dụng"], "answer": 1, "explanation": "Tài trợ trực tiếp là phương thức bên cần vốn (DSU) bán trực tiếp các công cụ tài chính (chứng khoán như cổ phiếu, trái phiếu) cho bên cấp vốn (SSU) trên thị trường tài chính."}, {"id": "nltttc_7", "question": "Đặc trưng cốt lõi của tài trợ gián tiếp (Indirect finance) là:", "options": ["Các doanh nghiệp phát hành cổ phiếu lần đầu ra công chúng (IPO) trực tiếp tới nhà đầu tư", "Người dân tự giữ tiền mặt tại nhà và trực tiếp cho người thân vay không cần giấy tờ", "Vốn được luân chuyển từ bên thừa vốn sang bên thiếu vốn thông qua tổ chức trung gian tài chính (Financial Intermediary)", "Nhà đầu tư nước ngoài mua trực tiếp nhà máy tại thị trường nội địa"], "answer": 2, "explanation": "Tài trợ gián tiếp có sự tham gia của trung gian tài chính (như ngân hàng, quỹ đầu tư), trung gian này huy động vốn từ SSU và tạo ra các tài sản tài chính mới để tài trợ cho DSU."}, {"id": "nltttc_8", "question": "Tiêu chí căn bản để phân định giữa Thị trường tiền tệ (Money market) và Thị trường vốn (Capital market) là:", "options": ["Đồng tiền sử dụng: thị trường tiền tệ dùng nội tệ, thị trường vốn chỉ dùng đô la Mỹ (USD)", "Địa điểm giao dịch: thị trường tiền tệ tại quầy giao dịch, thị trường vốn tại các sàn điện tử", "Quyền sở hữu: thị trường tiền tệ chỉ có ngân hàng nhà nước, thị trường vốn dành riêng cho tư nhân", "Kỳ hạn đáo hạn của các công cụ tài chính: thị trường tiền tệ giao dịch công cụ ngắn hạn (< 1 năm), thị trường vốn giao dịch công cụ dài hạn (≥ 1 năm)"], "answer": 3, "explanation": "Thị trường tiền tệ là thị trường cho các công cụ nợ ngắn hạn có tính thanh khoản cao với kỳ hạn dưới 1 năm; thị trường vốn giao dịch các công cụ nợ dài hạn và vốn chủ sở hữu với kỳ hạn từ 1 năm trở lên."}, {"id": "nltttc_9", "question": "Thị trường sơ cấp (Primary market) được phân biệt với Thị trường thứ cấp (Secondary market) ở điểm mấu chốt nào?", "options": ["Thị trường sơ cấp phát hành chứng khoán mới và mang lại vốn mới cho tổ chức phát hành; thị trường thứ cấp mua đi bán lại các chứng khoán đã lưu hành", "Thị trường sơ cấp chỉ dành cho nhà đầu tư cá nhân; thị trường thứ cấp chỉ dành cho tổ chức tài chính", "Thị trường sơ cấp có quy mô giao dịch hàng ngày lớn hơn nhiều so với thị trường thứ cấp", "Thị trường sơ cấp không chịu bất kỳ sự quản lý nào từ cơ quan chứng khoán nhà nước"], "answer": 0, "explanation": "Thị trường sơ cấp là nơi chứng khoán mới được bán lần đầu tiên, giúp tổ chức phát hành huy động vốn mới; thị trường thứ cấp là nơi các nhà đầu tư mua bán lại chứng khoán đã phát hành."}, {"id": "nltttc_10", "question": "Công cụ nào sau đây thuộc về Thị trường vốn (Capital market)?", "options": ["Tín phiếu kho bạc kỳ hạn 3 tháng (Treasury bills)", "Trái phiếu doanh nghiệp dài hạn (Corporate bonds) và Cổ phiếu phổ thông (Common stock)", "Hợp đồng mua lại kỳ hạn qua đêm (Repurchase agreements - REPO)", "Chứng chỉ tiền gửi khả chuyển ngắn hạn (Negotiable CDs) kỳ hạn 6 tháng"], "answer": 1, "explanation": "Trái phiếu dài hạn và cổ phiếu là các công cụ tài chính có kỳ hạn trên 1 năm hoặc không có thời hạn đáo hạn xác định, do đó thuộc về thị trường vốn."}, {"id": "nltttc_11", "question": "Hiện tượng Lựa chọn đối nghịch (Adverse Selection) xuất hiện tại thời điểm nào và do nguyên nhân gì?", "options": ["Xuất hiện SAU khi nhận vốn đầu tư, khi bên vay sử dụng tiền vào các dự án cờ bạc nguy hiểm", "Xuất hiện khi các ngân hàng thương mại cạnh tranh hạ lãi suất cho vay", "Xuất hiện TRƯỚC khi giao dịch diễn ra (Before transaction), khi người có rủi ro cao tích cực tìm kiếm và dễ được chọn cấp tín dụng", "Xuất hiện khi ngân hàng trung ương đột ngột tăng tỷ lệ dự trữ bắt buộc"], "answer": 2, "explanation": "Adverse Selection là vấn đề thông tin bất cân xứng phát sinh TRƯỚC giao dịch, khiến những người có nguy cơ vỡ nợ cao nhất lại là những người tích cực nhất trong việc tìm kiếm khoản vay."}, {"id": "nltttc_12", "question": "Rủi ro đạo đức (Moral Hazard) trong hoạt động tài chính phản ánh hiện tượng nào sau đây?", "options": ["Bên cho vay che giấu thông tin lãi suất thực tế trước khi khách hàng đặt bút ký hợp đồng", "Nhà đầu tư cá nhân từ chối mua chứng khoán do lo sợ biến động giá thị trường", "Doanh nghiệp công bố báo cáo kiểm toán minh bạch đúng quy định pháp luật", "Sau khi hợp đồng được ký kết, bên nhận vốn thay đổi hành vi theo hướng mạo hiểm hơn làm tăng khả năng vỡ nợ"], "answer": 3, "explanation": "Moral Hazard là rủi ro phát sinh SAU khi giao dịch đã hoàn tất, khi bên nhận tài trợ có động cơ thực hiện các hoạt động rủi ro cao hơn thỏa thuận ban đầu vì họ không chịu toàn bộ hậu quả nếu thất bại."}, {"id": "nltttc_13", "question": "Xung đột Người ủy thác - Người đại lý (Principal-Agent Problem) trong các công ty cổ phần nảy sinh do:", "options": ["Sự tách biệt giữa quyền sở hữu (cổ đông - principal) và quyền quản lý điều hành (nhà quản lý - agent), khi người đại lý có thể theo đuổi lợi ích cá nhân", "Mâu thuẫn về điều kiện giao hàng giữa người bán và người mua trên thị trường quốc tế", "Tranh chấp giữa các cổ đông thiểu số và hội đồng thẩm phán tòa án nhân dân", "Sự cạnh tranh không lành mạnh giữa hai công ty sản xuất sản phẩm thay thế"], "answer": 0, "explanation": "Vấn đề Principal-Agent xuất hiện do tách rời quyền sở hữu và quyền kiểm soát; nhà quản lý (agent) có thông tin nội bộ tốt hơn và có thể hành động vì quyền lực/lợi ích riêng thay vì tối đa hóa lợi nhuận cho cổ đông (principal)."}, {"id": "nltttc_14", "question": "Theo Lý thuyết Cầu tài sản (Theory of Asset Demand), sự gia tăng của của cải (Wealth) tác động thế nào đến lượng cầu tài sản?", "options": ["Lượng cầu đối với tất cả các tài sản đều giảm sút nghiêm trọng", "Lượng cầu đối với hầu hết các tài sản sẽ tăng lên (Wealth ↑ Demand ↑)", "Không tạo ra bất kỳ tác động nào vì nhu cầu đầu tư luôn cố định", "Chỉ làm tăng cầu đối với tiền mặt và triệt tiêu cầu đối với trái phiếu"], "answer": 1, "explanation": "Khi tổng của cải của nhà đầu tư tăng lên, họ có nhiều nguồn lực kinh tế hơn để phân bổ vào danh mục đầu tư, làm tăng lượng cầu đối với các tài sản tài chính."}, {"id": "nltttc_15", "question": "Khi rủi ro tương đối của một tài sản tăng lên so với các tài sản thay thế, lượng cầu đối với tài sản đó biến động như thế nào?", "options": ["Lượng cầu đối với tài sản đó tăng lên gấp đôi để bù đắp chi phí cơ hội", "Lượng cầu luôn giữ nguyên không đổi vì giá cả thị trường đã điều chỉnh", "Lượng cầu đối với tài sản đó giảm xuống (Risk ↑ Demand ↓) do đa số nhà đầu tư có tâm lý e ngại rủi ro (risk averse)", "Lượng cầu chuyển dịch hoàn toàn sang các hợp đồng phái sinh đòn bẩy cao"], "answer": 2, "explanation": "Vì đa số nhà đầu tư trên thị trường có xu hướng e ngại rủi ro (risk averse), khi một tài sản trở nên rủi ro hơn so với các lựa chọn khác, nhà đầu tư sẽ giảm nắm giữ tài sản đó."}, {"id": "nltttc_16", "question": "Trái phiếu trả lãi định kỳ (Coupon bond) có cơ cấu dòng tiền thanh toán như thế nào?", "options": ["Không trả bất kỳ khoản lãi định kỳ nào mà bán giảm giá sâu so với mệnh giá", "Hoàn trả toàn bộ cả gốc lẫn lãi bằng một khoản tiền gộp duy nhất sau 6 tháng", "Chỉ trả tiền lãi nếu doanh nghiệp phát hành đạt mức tăng trưởng lợi nhuận trên 20%", "Thanh toán lãi coupon định kỳ cho đến ngày đáo hạn, và hoàn trả mệnh giá (face value) tại ngày đáo hạn"], "answer": 3, "explanation": "Coupon bond là công cụ nợ trả cho chủ sở hữu các khoản tiền lãi cố định (coupon) theo các kỳ hạn định trước (hàng năm hoặc bán niên) và hoàn trả mệnh giá vào ngày đáo hạn."}, {"id": "nltttc_17", "question": "Trái phiếu chiết khấu / Trái phiếu không trả lãi định kỳ (Discount / Zero-coupon bond) có đặc điểm là:", "options": ["Được bán với giá thấp hơn mệnh giá (sold below face), không trả lãi định kỳ, và hoàn trả mệnh giá khi đáo hạn", "Được bán với giá cao hơn mệnh giá 50% và trả lãi bằng cổ phiếu thưởng", "Chỉ phát hành cho các nhân viên nội bộ của doanh nghiệp có thâm niên", "Cho phép người nắm giữ chuyển đổi thành vàng bất kỳ lúc nào"], "answer": 0, "explanation": "Zero-coupon bond không thanh toán coupon định kỳ; lợi tức của nhà đầu tư đến từ chênh lệch giữa giá mua chiết khấu ban đầu và mệnh giá nhận được khi đáo hạn."}, {"id": "nltttc_18", "question": "Mối quan hệ định lượng giữa giá trái phiếu (Bond price) và lãi suất thị trường (Interest rate) là:", "options": ["Biến động cùng chiều tuyệt đối: khi lãi suất tăng 1% thì giá trái phiếu tăng 1%", "Biến động ngược chiều nhau (move inversely): khi lãi suất tăng thì giá trái phiếu giảm, và ngược lại", "Hoàn toàn độc lập và không có bất kỳ mối liên hệ nào với nhau", "Chỉ biến động cùng chiều trong chu kỳ lạm phát phi mã"], "answer": 1, "explanation": "Vì các dòng tiền tương lai của trái phiếu cố định, khi lãi suất thị trường tăng (lãi suất chiết khấu tăng), giá trị hiện tại của các dòng tiền giảm xuống, làm giá trái phiếu giảm."}, {"id": "nltttc_19", "question": "Quy luật một giá (Law of One Price) trong thương mại tài chính quốc tế phát biểu rằng:", "options": ["Chính phủ bắt buộc tất cả các mặt hàng thiết yếu phải bán đồng giá trên toàn cầu", "Mọi đồng tiền trên thế giới đều có tỷ giá cố định 1:1 so với đồng USD", "Một loại hàng hóa hoặc tài sản giống hệt nhau sẽ có cùng mức giá ở mọi quốc gia khi được quy đổi qua tỷ giá hối đoái (bỏ qua chi phí vận chuyển và rào cản)", "Giá xuất khẩu luôn phải thấp hơn giá bán buôn tại thị trường nội địa"], "answer": 2, "explanation": "Quy luật một giá khẳng định nếu hai nước cùng sản xuất một hàng hóa giống hệt nhau và không có chi phí giao dịch, giá của hàng hóa đó sẽ bằng nhau trên toàn thế giới khi tính theo cùng một đồng tiền."}, {"id": "nltttc_20", "question": "Phương pháp niêm yết tỷ giá trực tiếp (Direct quotation) được định nghĩa là:", "options": ["Biểu thị giá trị của một đơn vị nội tệ bằng một số lượng đơn vị ngoại tệ nhất định", "Niêm yết giá hàng hóa bằng vàng thay vì sử dụng tiền giấy lưu thông", "Phương thức thỏa thuận ngầm giữa các tổ chức tài chính không công khai", "Biểu thị giá trị của một đơn vị ngoại tệ bằng một số lượng đơn vị nội tệ nhất định (ví dụ: 1 USD = 25.000 VND)"], "answer": 3, "explanation": "Niêm yết trực tiếp (Direct quotation) lấy ngoại tệ làm đồng tiền cơ sở (commodity currency) và nội tệ làm đồng tiền định giá (term currency), thể hiện lượng nội tệ cần để mua 1 đơn vị ngoại tệ."}]}];
+
+let exerciseSets = [];
+let currentCategory = 'overview';
+let currentSet = null;
+let selectedAnswers = Object.create(null);
+let lastScore = null;
+
+function safeText(value, fallback = '') {
+  return typeof value === 'string' ? value.trim() : fallback;
+}
+
+function clearElement(element) {
+  if (!element) return;
+  while (element.firstChild) element.removeChild(element.firstChild);
+}
+
+function createElement(tagName, className, text) {
+  const element = document.createElement(tagName);
+  if (className) element.className = className;
+  if (text !== undefined) element.textContent = safeText(text);
+  return element;
+}
+
+function normalizeQuestion(rawQuestion, index) {
+  const data = rawQuestion && typeof rawQuestion === 'object' && !Array.isArray(rawQuestion) ? rawQuestion : {};
+  const options = Array.isArray(data.options) ? data.options.map(option => safeText(option)) : [];
+  const answer = Number.isInteger(data.answer) && data.answer >= 0 && data.answer < options.length ? data.answer : null;
+  return {
+    id: safeText(data.id, `question-${index + 1}`),
+    question: safeText(data.question, 'Câu hỏi chưa có nội dung.'),
+    options,
+    answer,
+    explanation: safeText(data.explanation, 'Chưa có giải thích.')
+  };
+}
+
+function normalizeExerciseSet(rawSet, fallbackId) {
+  const data = rawSet && typeof rawSet === 'object' && !Array.isArray(rawSet) ? rawSet : {};
+  const duration = typeof data.duration === 'number' && Number.isFinite(data.duration) && data.duration >= 0 ? data.duration : 0;
+  return {
+    id: safeText(data.id, fallbackId),
+    title: safeText(data.title, 'Bộ đề chưa có tiêu đề'),
+    category: safeText(data.category),
+    mode: data.mode === 'problem' ? 'problem' : 'mcq',
+    chapter: safeText(data.chapter, 'Chưa phân chương'),
+    difficulty: safeText(data.difficulty, 'Unknown'),
+    duration,
+    description: safeText(data.description, 'Chưa có mô tả.'),
+    badge: safeText(data.badge),
+    order: typeof data.order === 'number' && Number.isFinite(data.order) ? data.order : 99,
+    questions: Array.isArray(data.questions) ? data.questions.map((q, i) => normalizeQuestion(q, i)) : []
+  };
+}
+
+function isUsableExerciseSet(set) {
+  if (!set || !set.id || !set.title) return false;
+  if (!Array.isArray(set.questions) || set.questions.length === 0) return false;
+  const ids = set.questions.map(q => q.id);
+  if (new Set(ids).size !== ids.length) return false;
+  return set.questions.every(q => q.options.length >= 2 && q.answer !== null);
+}
+
+function initPractice() {
+  exerciseSets = LOCAL_SETS
+    .filter(isUsableExerciseSet)
+    .map((set, index) => normalizeExerciseSet(set, `local-set-${index + 1}`))
+    .sort((a,b) => a.order - b.order);
+  renderAll();
+}
+
+function renderAll() {
+  renderOverview();
+  renderGrid('chapter-grid', 'chapter');
+  renderGrid('quiz-grid', 'quiz');
+}
+
+function renderOverview() {
+  const stats = document.getElementById('overview-stats');
+  if (!stats) return;
+  const chapter = exerciseSets.filter(s => s.category === 'chapter').length;
+  const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);
+  clearElement(stats);
+  [
+    [chapter, 'bộ theo chương'],
+    [quizQ, 'câu trắc nghiệm']
+  ].forEach(([value, label]) => {
+    const card = createElement('div', 'bg-white/10 rounded-xl p-4 border border-white/10');
+    card.appendChild(createElement('div', 'text-2xl font-black', value));
+    card.appendChild(createElement('div', 'text-xs text-stone-300 font-bold', label));
+    stats.appendChild(card);
+  });
+}
+
+function appendMetric(parent, value, label, suffix = '') {
+  const metric = createElement('div', 'bg-stone-50 rounded-lg p-2 border border-stone-100');
+  const strong = createElement('strong', 'block text-slate-900', value);
+  if (suffix) strong.appendChild(document.createTextNode(suffix));
+  metric.appendChild(strong);
+  metric.appendChild(createElement('span', 'text-stone-500', label));
+  parent.appendChild(metric);
+}
+
+function renderGrid(containerId, category) {
+  const el = document.getElementById(containerId); if (!el) return;
+  const items = exerciseSets.filter(s => s.category === category);
+  clearElement(el);
+
+  items.forEach(set => {
+    const article = createElement('article', 'exercise-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm cursor-pointer flex flex-col min-h-[230px]');
+    article.addEventListener('click', () => openSet(set.id));
+
+    const meta = createElement('div', 'flex items-start justify-between gap-3 mb-4');
+    meta.appendChild(createElement('span', 'pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider', set.badge || set.category));
+    const difficultyClass = set.difficulty === 'Hard' ? 'bg-rose-50 text-rose-700 border border-rose-100' : set.difficulty === 'Medium' ? 'bg-amber-50 text-amber-700 border border-amber-100' : 'bg-green-50 text-green-700 border border-green-100';
+    meta.appendChild(createElement('span', `text-xs font-black rounded-full px-2 py-1 ${difficultyClass}`, set.difficulty));
+    article.appendChild(meta);
+    article.appendChild(createElement('h3', 'font-black text-slate-900 text-lg mb-2 leading-snug', set.title));
+    article.appendChild(createElement('p', 'text-sm text-stone-600 flex-grow', set.description));
+
+    const metrics = createElement('div', 'mt-5 grid grid-cols-3 gap-2 text-center text-xs');
+    appendMetric(metrics, set.chapter, 'Chương');
+    appendMetric(metrics, set.questions.length, 'Câu');
+    appendMetric(metrics, set.duration, 'Gợi ý', "'");
+    article.appendChild(metrics);
+    article.appendChild(createElement('button', 'mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-2.5 rounded-xl transition-colors', 'Mở bài luyện'));
+    el.appendChild(article);
+  });
+}
+
+function openSet(setId) {
+  currentSet = exerciseSets.find(s => s.id === setId);
+  selectedAnswers = Object.create(null);
+  lastScore = null;
+  if (!currentSet) return;
+  if (currentSet.category) currentCategory = currentSet.category;
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  const panel = document.getElementById('practice-panel');
+  panel.classList.remove('hidden');
+  const practiceBadge = document.getElementById('practice-badge');
+  clearElement(practiceBadge);
+  [currentSet.badge, currentSet.chapter, currentSet.duration ? `${currentSet.duration} phút` : ''].filter(Boolean).forEach(text => {
+    const s = createElement('span', 'mr-2', text);
+    practiceBadge.appendChild(s);
+  });
+  renderMcqSet(currentSet);
+}
+
+function closePracticePanel() {
+  document.getElementById('practice-panel').classList.add('hidden');
+  switchMainTab(currentCategory || 'chapter');
+}
+
+function renderMcqSet(set) {
+  const wrap = document.getElementById('practice-content');
+  if (!wrap) return;
+  clearElement(wrap);
+
+  const card = createElement('div', 'bg-white rounded-3xl border border-stone-200 shadow-sm p-6 md:p-8');
+  const header = createElement('div', 'mb-6');
+  header.appendChild(createElement('h2', 'text-2xl md:text-3xl font-extrabold text-slate-900 mb-2', set.title));
+  header.appendChild(createElement('p', 'text-stone-600', set.description));
+  card.appendChild(header);
+
+  const body = createElement('div', 'space-y-6');
+  const questionsWrap = createElement('div', 'space-y-6');
+  questionsWrap.id = 'question-list';
+  body.appendChild(questionsWrap);
+
+  const actions = createElement('div', 'mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4');
+  const counterWrap = createElement('div', 'text-sm font-bold text-stone-600');
+  counterWrap.appendChild(document.createTextNode('Đã chọn: '));
+  const countSpan = createElement('span', 'text-teal-700 font-extrabold', '0');
+  countSpan.id = 'answered-count';
+  counterWrap.appendChild(countSpan);
+  counterWrap.appendChild(document.createTextNode(` / ${set.questions.length} câu`));
+  actions.appendChild(counterWrap);
+
+  const buttons = createElement('div', 'flex items-center gap-3');
+  const resetButton = createElement('button', 'bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold px-4 py-2 rounded-xl transition-colors', 'Làm lại');
+  resetButton.type = 'button';
+  resetButton.addEventListener('click', resetCurrentQuiz);
+  const submitButton = createElement('button', 'bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl transition-colors', 'Nộp bài');
+  submitButton.type = 'button';
+  submitButton.id = 'submit-quiz';
+  submitButton.addEventListener('click', submitQuiz);
+  buttons.appendChild(resetButton);
+  buttons.appendChild(submitButton);
+  actions.appendChild(buttons);
+  body.appendChild(actions);
+
+  const resultBox = createElement('div', 'hidden mt-6');
+  resultBox.id = 'result-box';
+  body.appendChild(resultBox);
+  card.appendChild(body);
+  wrap.appendChild(card);
+  renderQuestions(set, false);
+}
+
+function renderQuestions(set, showResult) {
+  const list = document.getElementById('question-list');
+  if (!list) return;
+  clearElement(list);
+
+  set.questions.forEach((question, index) => {
+    const questionBox = createElement('div', 'rounded-2xl border border-stone-200 bg-stone-50/60 p-5');
+    questionBox.id = 'q-' + question.id;
+    const heading = createElement('div', 'flex gap-3 mb-4');
+    heading.appendChild(createElement('span', 'w-8 h-8 rounded-full bg-teal-600 text-white font-black flex items-center justify-center shrink-0', index + 1));
+    heading.appendChild(createElement('h3', 'font-bold text-slate-900 leading-relaxed', question.question));
+    questionBox.appendChild(heading);
+
+    const options = createElement('div', 'grid md:grid-cols-2 gap-3');
+    question.options.forEach((option, optionIndex) => {
+      options.appendChild(createOptionButton(question, optionIndex, option, showResult));
+    });
+    questionBox.appendChild(options);
+
+    if (showResult) {
+      const isCorrect = selectedAnswers[question.id] === question.answer;
+      const explanation = createElement('div', `mt-4 bg-white border-l-4 ${isCorrect ? 'border-green-500' : 'border-rose-500'} rounded-r-xl p-4 text-sm`);
+      explanation.appendChild(createElement('strong', '', selectedAnswers[question.id] === undefined ? 'Chưa trả lời — Giải thích:' : isCorrect ? 'Đúng — Giải thích:' : 'Sai — Giải thích:'));
+      explanation.appendChild(document.createTextNode(' '));
+      explanation.appendChild(document.createTextNode(question.explanation));
+      questionBox.appendChild(explanation);
+    }
+    list.appendChild(questionBox);
+  });
+  updateAnsweredCount();
+}
+
+function createOptionButton(question, optionIndex, option, showResult) {
+  let cls = 'option-card bg-white border border-stone-200 rounded-xl p-3 text-sm font-semibold cursor-pointer';
+  const selected = selectedAnswers[question.id] === optionIndex;
+  if (!showResult && selected) cls += ' option-selected';
+  if (showResult && optionIndex === question.answer) cls += ' option-correct';
+  if (showResult && selected && optionIndex !== question.answer) cls += ' option-wrong';
+
+  const button = createElement('button', cls);
+  button.type = 'button';
+  button.disabled = showResult;
+  button.setAttribute('aria-pressed', String(selected));
+  button.addEventListener('click', () => selectAnswer(question.id, optionIndex));
+  button.appendChild(createElement('span', 'font-black mr-2', `${String.fromCharCode(65 + optionIndex)}.`));
+  button.appendChild(document.createTextNode(option));
+  return button;
+}
+
+function selectAnswer(qid, index) {
+  const question = currentSet?.questions.find(q => q.id === qid);
+  if (lastScore !== null || !question || !Number.isInteger(index) || index < 0 || index >= question.options.length) return;
+  selectedAnswers[qid] = index;
+  document.getElementById('q-' + qid)?.querySelectorAll('.option-card').forEach((button, i) => {
+    button.classList.toggle('option-selected', i === index);
+    button.setAttribute('aria-pressed', String(i === index));
+  });
+  updateAnsweredCount();
+}
+
+function updateAnsweredCount() {
+  const el = document.getElementById('answered-count');
+  if (el) el.textContent = Object.keys(selectedAnswers).length;
+}
+
+function resetCurrentQuiz() {
+  selectedAnswers = Object.create(null);
+  lastScore = null;
+  if (currentSet) {
+    renderMcqSet(currentSet);
+    document.getElementById('practice-panel').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+
+function submitQuiz() {
+  if (lastScore !== null || !currentSet || !Array.isArray(currentSet.questions)) return;
+  const total = currentSet.questions.length;
+  const score = currentSet.questions.reduce((sum, q) => sum + (selectedAnswers[q.id] === q.answer ? 1 : 0), 0);
+  lastScore = score;
+  const submitButton = document.getElementById('submit-quiz');
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = 'Đã nộp bài';
+  }
+  renderQuestions(currentSet, true);
+  const percent = total > 0 ? Math.round(score / total * 100) : 0;
+  const box = document.getElementById('result-box');
+  if (!box) return;
+  box.classList.remove('hidden');
+  clearElement(box);
+
+  const resultClass = percent >= 80 ? 'border-green-300 bg-green-50' : percent >= 50 ? 'border-amber-300 bg-amber-50' : 'border-rose-300 bg-rose-50';
+  const message = percent >= 80 ? 'Bạn đã nắm rất vững kiến thức trong phần này!' : percent >= 50 ? 'Kết quả tương đối tốt, hãy đối chiếu thêm với các giải thích bên dưới để hoàn thiện.' : 'Hãy xem lại lý thuyết và làm lại bài để củng cố nền tảng kiến thức.';
+  box.className = `mt-6 p-6 rounded-2xl border ${resultClass}`;
+  const heading = createElement('div', 'flex items-center justify-between mb-3');
+  heading.appendChild(createElement('h3', 'text-xl font-black text-slate-900', `Kết quả: ${score}/${total} (${percent}% correct)`));
+  heading.appendChild(createElement('span', 'pill px-3 py-1 rounded-full text-xs font-black', `${percent}%`));
+  box.appendChild(heading);
+  box.appendChild(createElement('p', 'text-sm text-stone-600 mb-4', message));
+  const retryBtn = createElement('button', 'bg-teal-600 hover:bg-teal-700 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors', 'Làm lại bài luyện');
+  retryBtn.type = 'button';
+  retryBtn.addEventListener('click', resetCurrentQuiz);
+  box.appendChild(retryBtn);
+}
+
+function switchMainTab(tabId) {
+  currentCategory = tabId;
+  document.getElementById('practice-panel').classList.add('hidden');
+  document.querySelectorAll('.tab-content').forEach(el => {
+    el.classList.toggle('hidden', el.id !== tabId);
+    el.classList.toggle('block', el.id === tabId);
+  });
+  document.querySelectorAll('#nav-menu .nav-btn').forEach(button => {
+    const active = button.getAttribute('onclick')?.includes(tabId);
+    button.classList.toggle('tab-active', !!active);
+    button.classList.toggle('text-stone-500', !active);
+  });
+  const mobileNav = document.getElementById('mobile-nav');
+  if (mobileNav && mobileNav.value !== tabId) mobileNav.value = tabId;
+}
+
+window.addEventListener('DOMContentLoaded', initPractice);
+</script>
+</body>
+</html>

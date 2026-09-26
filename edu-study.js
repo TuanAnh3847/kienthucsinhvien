@@ -6,7 +6,9 @@
         '/NLKT': '/NguyenLyKeToan-LuyenDe',
         '/TCCN': '/TCCN-LuyenDe',
         '/KTQT': '/KTQT-LuyenDe',
-        '/NMLH': '/NhapMonLuatHoc-LuyenDe'
+        '/NMLH': '/NhapMonLuatHoc-LuyenDe',
+        '/NLTTTC': '/NLTTTC-LuyenDe',
+        '/LTMQT': '/LTMQT-LuyenDe'
     };
     const practiceRoute = practiceRoutes[window.EDU_PAGE_CONFIG?.route];
     const intro = document.getElementById('course-intro') || document.querySelector('main > div.text-center');
