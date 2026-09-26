@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luyện đề Nhập môn Luật học - Edu Connect</title>
+<meta name="description" content="Trang luyện đề Nhập môn Luật học: luyện theo chương, trắc nghiệm 20 câu có đáp án và giải thích căn cứ lý thuyết.">
+<meta name="keywords" content="nhập môn luật học, luyện đề luật học, trắc nghiệm NMLH, legal norms, edu connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta property="og:title" content="Luyện đề Nhập môn Luật học - Edu Connect">
+<meta property="og:description" content="Trang luyện đề Nhập môn Luật học: luyện theo chương, trắc nghiệm 20 câu có đáp án và giải thích căn cứ lý thuyết.">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png">
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/NhapMonLuatHoc-LuyenDe">
+<meta property="og:type" content="article">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.glass-panel { background: rgba(255,255,255,0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 800; }
+@keyframes fadeIn { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn .45s ease-out forwards; }
+.modal-overlay { background-color: rgba(28,25,23,.75); backdrop-filter: blur(4px); }
+.exercise-card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.exercise-card:hover { transform: translateY(-3px); box-shadow: 0 18px 35px -24px rgba(13,148,136,.55); border-color: #5eead4; }
+.option-card { transition: all .15s ease; }
+.option-card:hover:not(:disabled) { border-color: #14b8a6; background: #f0fdfa; }
+.option-selected { border-color: #0d9488 !important; background: #ccfbf1 !important; color: #115e59; }
+.option-correct { border-color: #22c55e !important; background: #dcfce7 !important; color: #166534; }
+.option-wrong { border-color: #f43f5e !important; background: #ffe4e6 !important; color: #9f1239; }
+.pill { border: 1px solid #ccfbf1; background: #f0fdfa; color: #0f766e; }
+#practice-panel { scroll-margin-top: 96px; }
+</style>
+<link rel="stylesheet" href="/shared.css">
+</head>
+<body class="edu-practice-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="site-header-row flex justify-between items-center h-16">
+      <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+        <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+        <div class="flex flex-col justify-center min-w-0">
+          <h1 class="font-extrabold text-base sm:text-xl text-slate-900 tracking-tight leading-none">EDU CONNECT</h1>
+          <div class="max-w-[180px] sm:max-w-[260px] overflow-hidden" style="-webkit-mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);">
+            <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">⚖️ Luyện đề Nhập Môn Luật Học</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="flex items-center shrink-0">
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+          <span id="online-count" class="mr-1">...</span><span class="hidden sm:inline">online</span>
+        </div>
+        <div class="border-l border-stone-300 pl-3 sm:pl-4">
+          <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+          <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+            <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+            <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh viên</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-nav" id="nav-menu">
+      <button onclick="switchMainTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
+      <button onclick="switchMainTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
+      <button onclick="switchMainTab('quiz')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Trắc nghiệm</button>
+    </div>
+    <div class="chapter-select-row relative">
+      <select id="mobile-nav" aria-label="Chọn chương" onchange="switchMainTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+        <option value="overview">Tổng quan</option>
+        <option value="chapter">Luyện theo chương</option>
+        <option value="quiz">Luyện trắc nghiệm</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+  <section id="overview" class="tab-content block">
+    <div class="relative overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-sm p-6 md:p-10 mb-8">
+      <div class="absolute right-0 top-0 h-44 w-44 bg-teal-100 rounded-full blur-3xl opacity-80"></div>
+      <div class="absolute left-10 bottom-0 h-32 w-32 bg-blue-100 rounded-full blur-3xl opacity-70"></div>
+      <div class="relative z-10 grid lg:grid-cols-[1.4fr_.8fr] gap-8 items-center">
+        <div>
+          <span class="inline-flex items-center pill px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-4">🎯 Practice Pilot</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">Kho luyện đề Nhập Môn Luật Học</h2>
+          <p class="text-lg text-stone-600 max-w-2xl mb-6">Hệ thống 20 câu hỏi trắc nghiệm pháp lý nền tảng: bản chất nhà nước, IGOs, nguồn luật, cấu trúc quy phạm pháp luật, quan hệ pháp luật và vi phạm pháp luật.</p>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="switchMainTab('chapter')" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl shadow-sm transition-transform active:scale-[.98]">Bắt đầu luyện theo chương</button>
+            <button onclick="switchMainTab('quiz')" class="bg-white hover:bg-stone-50 text-teal-800 font-black px-5 py-3 rounded-xl border border-teal-200 shadow-sm transition-transform active:scale-[.98]">Vào đề tổng hợp</button>
+          </div>
+        </div>
+        <div class="bg-stone-900 text-white rounded-2xl p-6 shadow-xl">
+          <p class="text-xs uppercase tracking-widest text-teal-300 font-black mb-4">Bài luyện hiện có</p>
+          <div class="grid grid-cols-2 gap-3" id="overview-stats"></div>
+          <div class="mt-5 rounded-xl bg-white/10 p-4 border border-white/10">
+            <p class="text-sm text-stone-200">Chọn bài → Làm bài → Nộp bài → Xem kết quả và đối chiếu lý thuyết → Làm lại để củng cố kiến thức.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 mb-8">
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <div class="text-3xl mb-3">📚</div>
+        <h3 class="font-black text-lg text-slate-900 mb-2">Luyện theo chương</h3>
+        <p class="text-sm text-stone-600">Chia nhỏ các câu hỏi theo từng chương lý thuyết giúp sinh viên ôn tập có trọng tâm, nắm vững nguyên lý trước khi thử sức tổng hợp.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <div class="text-3xl mb-3">✅</div>
+        <h3 class="font-black text-lg text-slate-900 mb-2">Đề tổng hợp</h3>
+        <p class="text-sm text-stone-600">20 câu hỏi trắc nghiệm bao quát các chủ đề quan trọng, có đáp án và giải thích trích xuất trực tiếp từ giáo trình.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter" class="tab-content hidden">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện theo chương</h2>
+      <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Chọn bài theo chương để kiểm tra độ hiểu sâu của từng đơn vị kiến thức trước khi làm bài tổng hợp.</p>
+    </div>
+    <div id="chapter-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <section id="quiz" class="tab-content hidden">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện trắc nghiệm tổng hợp</h2>
+      <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Đề tổng hợp 20 câu hỏi có chấm điểm tức thì, thống kê tỷ lệ đúng và đối chiếu giải thích chi tiết.</p>
+    </div>
+    <div id="quiz-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <p class="practice-theory-link"><a href="/NMLH">← Lý thuyết Nhập môn Luật học</a></p>
+
+  <section id="practice-panel" class="hidden mt-10 animate-fade-in">
+    <div class="flex items-center justify-between gap-4 mb-4">
+      <button onclick="closePracticePanel()" class="bg-white hover:bg-stone-50 text-stone-700 font-bold px-4 py-2 rounded-xl border border-stone-200 shadow-sm">← Quay lại danh sách</button>
+      <span id="practice-badge" class="pill text-xs font-black px-3 py-1 rounded-full"></span>
+    </div>
+    <div id="practice-content"></div>
+  </section>
+</main>
+
+<footer class="border-t border-stone-200 bg-white mt-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-stone-500 flex flex-col md:flex-row justify-between gap-3">
+    <p><strong class="text-teal-700">Edu Connect</strong> · Luyện đề Nhập môn Luật học</p>
+    <p><a href="/NMLH" class="font-bold text-teal-700 underline">← Về lý thuyết Nhập môn Luật học</a></p>
+  </div>
+</footer>
+
+<script>
+const LOCAL_SETS = [{"id": "nmlh-ch12-state-igo", "title": "Chương 1 & 2: Bản chất Nhà nước & IGOs", "category": "chapter", "mode": "mcq", "chapter": "Chương 1-2", "difficulty": "Easy", "duration": 15, "description": "5 đặc trưng của nhà nước, chủ quyền quốc gia, quyền lực công cộng và quy chế pháp lý của IGOs.", "badge": "Luyện theo chương", "order": 1, "questions": [{"id": "nmlh_1", "question": "Đặc trưng quyền lực công cộng đặc biệt của nhà nước được thể hiện qua dấu hiệu nào?", "options": ["Được đảm bảo bằng một bộ máy cưỡng chế chuyên nghiệp tách rời khỏi quần chúng để duy trì trật tự", "Dựa trên sự đồng thuận tuyệt đối và tự nguyện hoàn toàn của tất cả thành viên trong xã hội", "Chỉ dựa vào các lời răn dạy đạo đức và dư luận xã hội mà không sử dụng bộ máy chuyên trách", "Được thực hiện trực tiếp bởi toàn thể người dân mà không cần cơ quan tư pháp hay lực lượng vũ trang"], "answer": 0, "explanation": "Nhà nước thiết lập quyền lực công cộng đặc biệt, được tổ chức và đảm bảo bởi bộ máy chuyên trách có sức mạnh cưỡng chế (quân đội, cảnh sát, tòa án...) tách rời khỏi quần chúng."}, {"id": "nmlh_2", "question": "Dấu hiệu phân chia dân cư theo lãnh thổ của nhà nước gắn liền với việc quản lý nào trong thực tế?", "options": ["Quản lý theo gia phả, dòng họ và mối quan hệ huyết thống huyết thống cổ truyền", "Gắn liền với việc cấp CCCD, hộ khẩu để quản lý theo đơn vị hành chính lãnh thổ", "Phân loại con người theo mức độ giàu có và tài sản sở hữu", "Xếp loại công dân hoàn toàn theo niềm tin tín ngưỡng tôn giáo"], "answer": 1, "explanation": "Nhà nước phân chia và quản lý dân cư theo ranh giới hành chính lãnh thổ chứ không theo thị tộc huyết thống, thể hiện qua các thủ tục quản lý cư trú, hộ tịch, CCCD."}, {"id": "nmlh_3", "question": "Chủ quyền quốc gia (Sovereignty) của nhà nước bao hàm hai khía cạnh cơ bản nào?", "options": ["Quyền sở hữu toàn bộ tài sản tư nhân và quyền kiểm soát mọi giao dịch thương mại", "Quyền can thiệp quân sự vào các nước láng giềng và độc quyền khai thác tài nguyên biển", "Quyền tối cao về đối nội và độc lập về đối ngoại", "Quyền miễn trừ mọi trách nhiệm pháp lý đối với công dân của mình"], "answer": 2, "explanation": "Chủ quyền của nhà nước gồm quyền lực tối cao trong phạm vi biên giới quốc gia (đối nội) và quyền độc lập, tự chủ, không chịu sự can thiệp từ bên ngoài (đối ngoại)."}, {"id": "nmlh_4", "question": "Về thẩm quyền ban hành pháp luật, khẳng định nào sau đây là chính xác?", "options": ["Mọi tổ chức xã hội và doanh nghiệp tư nhân đều có quyền ban hành văn bản luật bắt buộc cả nước", "Các hiệp hội ngành nghề có quyền tự đặt ra mức phạt tù cho hội viên vi phạm", "Pháp luật chỉ do các tổ chức quốc tế ban hành và chuyển giao cho các nước áp dụng", "Nhà nước là tổ chức duy nhất có quyền đặt ra các quy tắc xử sự mang tính bắt buộc chung cho toàn xã hội"], "answer": 3, "explanation": "Chỉ có nhà nước mới có chủ quyền và quyền lực công cộng tối cao để ban hành các quy phạm pháp luật có hiệu lực bắt buộc chung đối với mọi cá nhân, tổ chức trên lãnh thổ."}, {"id": "nmlh_5", "question": "Tại sao việc quy định và thu thuế mang tính bắt buộc là một đặc trưng cấu thành của nhà nước?", "options": ["Nhà nước không trực tiếp làm ra của cải vật chất nhưng phải duy trì bộ máy quản lý và đầu tư công", "Để tịch thu tài sản của các tầng lớp dân cư nhằm xóa bỏ hoàn toàn quyền tư hữu", "Để cung cấp nguồn kinh phí riêng cho các doanh nghiệp tư nhân làm từ thiện", "Nhằm mục đích triệt tiêu hoạt động giao thương buôn bán trên thị trường"], "answer": 0, "explanation": "Thuế là nguồn tài chính bắt buộc nuôi dưỡng bộ máy quản lý nhà nước, phục vụ quốc phòng an ninh và thực hiện các chức năng công cộng."}, {"id": "nmlh_6", "question": "Tổ chức Liên chính phủ (IGO) được định nghĩa là:", "options": ["Một doanh nghiệp liên doanh đa quốc gia hoạt động vì mục đích tìm kiếm lợi nhuận", "Một chủ thể của luật quốc tế, có các thành viên chủ yếu là các quốc gia có chủ quyền", "Một hiệp hội tự nguyện gồm các cá nhân hoạt động trong lĩnh vực phi lợi nhuận", "Một cơ quan thuộc chính phủ một quốc gia nhưng đặt trụ sở tại nước ngoài"], "answer": 1, "explanation": "IGOs là tổ chức liên chính phủ được thành lập bởi các điều ước quốc tế giữa các quốc gia có chủ quyền, có tư cách chủ thể độc lập của luật quốc tế."}, {"id": "nmlh_7", "question": "Ai có quyền đại diện ký kết tham gia làm thành viên của các Tổ chức Liên chính phủ (IGOs)?", "options": ["Bất kỳ công dân hoặc nhóm lợi ích tư nhân nào có năng lực tài chính", "Các tập đoàn kinh tế thương mại có chi nhánh trên 5 châu lục", "Chính phủ của các quốc gia độc lập có chủ quyền", "Chỉ các tổ chức phi chính phủ (NGOs) mới có quyền gia nhập"], "answer": 2, "explanation": "Thành viên của IGOs là các quốc gia có chủ quyền, do chính phủ hợp pháp đại diện ký kết và thực thi các cam kết quốc tế."}, {"id": "nmlh_8", "question": "Đặc điểm 'Tư cách pháp nhân quốc tế riêng' của IGO mang ý nghĩa gì?", "options": ["Mọi quyết định của IGO đều do nguyên thủ của quốc gia giàu nhất tự mình ra lệnh", "IGO không có tài sản riêng mà toàn bộ chi phí đều gắn vào ngân sách của nước sở tại", "Khi có tranh chấp, IGO không được phép tham gia bất kỳ thủ tục tố tụng pháp lý nào", "IGO có thể tự nhân danh mình để kiện, bị kiện hoặc sở hữu tài sản độc lập với các quốc gia thành viên"], "answer": 3, "explanation": "Tư cách pháp nhân quốc tế độc lập cho phép IGO tự mình tham gia các giao dịch pháp lý, sở hữu tài sản, ký thỏa thuận và tham gia giải quyết tranh chấp."}]}, {"id": "nmlh-ch34-norms", "title": "Chương 3 & 4: Nguồn luật & Quy phạm pháp luật", "category": "chapter", "mode": "mcq", "chapter": "Chương 3-4", "difficulty": "Medium", "duration": 15, "description": "Pháp luật tự nhiên vs thực định, vị trí tối cao của Hiến pháp, cấu trúc Giả định - Quy định - Chế tài.", "badge": "Luyện theo chương", "order": 2, "questions": [{"id": "nmlh_9", "question": "Trong trật tự thứ bậc các văn bản quy phạm pháp luật, nguyên tắc đối với Hiến pháp là gì?", "options": ["Mọi văn bản quy phạm pháp luật khác đều không được trái với Hiến pháp", "Các thông tư chuyên ngành có thể tạm đình chỉ thi hành các điều khoản của Hiến pháp", "Hiến pháp có giá trị pháp lý thấp hơn luật của các tổ chức quốc tế tư nhân", "Nghị định của Chính phủ có quyền thay đổi các quy định về quyền cơ bản trong Hiến pháp"], "answer": 0, "explanation": "Hiến pháp là đạo luật cơ bản có hiệu lực pháp lý cao nhất; bất kỳ văn bản quy phạm pháp luật nào trái với Hiến pháp đều phải bị bãi bỏ hoặc sửa đổi."}, {"id": "nmlh_10", "question": "Trường phái Pháp luật tự nhiên (Natural Law) quan niệm nguồn gốc của pháp luật là gì?", "options": ["Do cơ quan lập pháp ban hành thông qua các quy trình thủ tục hành chính thuần túy", "Xuất phát từ tự nhiên, lý trí con người hoặc ý chí của Thượng Đế", "Là sản phẩm ý chí chủ quan độc đoán áp đặt của giai cấp cầm quyền", "Chỉ được hình thành sau khi các bên ký kết hợp đồng dân sự cụ thể"], "answer": 1, "explanation": "Pháp luật tự nhiên cho rằng quyền con người và các giá trị công lý xuất phát từ tự nhiên, lý tính phổ quát của nhân loại trước khi nhà nước thành văn ghi nhận."}, {"id": "nmlh_11", "question": "Ba bộ phận cấu thành logic thông thường của một quy phạm pháp luật là:", "options": ["Mở đầu - Nội dung - Biện pháp thi hành", "Chủ thể - Khách thể - Ý chí nhà nước", "Giả định - Quy định - Chế tài", "Điều kiện - Thẩm quyền - Quyền lực"], "answer": 2, "explanation": "Quy phạm pháp luật thường được xây dựng theo mô hình 3 bộ phận: Giả định (hoàn cảnh, chủ thể), Quy định (mệnh lệnh hành vi) và Chế tài (hậu quả bất lợi khi vi phạm)."}, {"id": "nmlh_12", "question": "Bộ phận 'Giả định' (Hypothesis) trong quy phạm pháp luật có vai trò gì?", "options": ["Chỉ rõ hình phạt tù hoặc số tiền phải nộp phạt khi có sai phạm", "Nêu quy tắc xử sự bắt buộc phải thực hiện trong giao dịch", "Quy định ngày tháng văn bản bắt đầu có hiệu lực thi hành", "Nêu rõ điều kiện, hoàn cảnh áp dụng và xác định đối tượng chịu sự tác động"], "answer": 3, "explanation": "Giả định trả lời câu hỏi: Ai? Khi nào? Trong hoàn cảnh hay điều kiện nào thì quy tắc này được áp dụng."}, {"id": "nmlh_13", "question": "Bộ phận 'Quy định' (Disposition) trong quy phạm pháp luật xác định nội dung gì?", "options": ["Nêu quy tắc xử sự (được làm gì, không được làm gì, phải làm gì)", "Nêu mức phạt tiền cụ thể khi chủ thể không thực hiện đúng nghĩa vụ", "Xác định độ tuổi bắt đầu có năng lực pháp luật của công dân", "Mô tả địa bàn áp dụng của các cơ quan thi hành án"], "answer": 0, "explanation": "Quy định là bộ phận cốt lõi nêu lên mệnh lệnh của nhà nước, xác định mô hình hành vi hợp pháp: được phép, ngăn cấm hoặc bắt buộc hành động."}, {"id": "nmlh_14", "question": "Bộ phận 'Chế tài' (Sanction) trong quy phạm pháp luật quy định điều gì?", "options": ["Các chính sách khen thưởng và tôn vinh người có thành tích tốt", "Hậu quả pháp lý bất lợi hoặc hình phạt áp dụng khi không tuân thủ pháp luật", "Thời điểm chấm dứt hiệu lực của một bản án đã tuyên", "Thủ tục đăng ký kinh doanh cho các hợp tác xã và hộ kinh doanh"], "answer": 1, "explanation": "Chế tài nêu rõ những biện pháp tác động cưỡng chế mang tính bất lợi mà nhà nước áp dụng đối với chủ thể vi phạm quy phạm pháp luật."}]}, {"id": "nmlh-ch57-relations-liability", "title": "Chương 5, 6 & 7: Quan hệ PL, Vi phạm PL & Hệ thống PL", "category": "chapter", "mode": "mcq", "chapter": "Chương 5-7", "difficulty": "Medium", "duration": 15, "description": "Năng lực chủ thể, sự biến pháp lý, 4 dấu hiệu vi phạm pháp luật, nguyên tắc lỗi và hiệu lực hồi tố.", "badge": "Luyện theo chương", "order": 3, "questions": [{"id": "nmlh_15", "question": "Sự kiện pháp lý nào sau đây được phân loại là 'Sự biến pháp lý' (Objective legal facts)?", "options": ["Việc hai bên ký kết hợp đồng mua bán căn hộ tại phòng công chứng", "Hành vi cố ý vượt đèn đỏ gây nguy hiểm cho người đi đường", "Sự kiện xảy ra ngoài ý chí của con người (như sinh ra, qua đời, thiên tai bão lũ)", "Việc nộp đơn khởi kiện đòi bồi thường thiệt hại tại tòa án"], "answer": 2, "explanation": "Sự biến pháp lý là hiện tượng tự nhiên hoặc biến cố khách quan xảy ra ngoài ý chí của con người nhưng pháp luật gắn việc xuất hiện của nó với hậu quả pháp lý."}, {"id": "nmlh_16", "question": "Sự khác biệt cốt lõi giữa Năng lực pháp luật và Năng lực hành vi của cá nhân là:", "options": ["Năng lực pháp luật chỉ có ở người trưởng thành; Năng lực hành vi xuất hiện ngay khi sinh ra", "Năng lực pháp luật có thể bị bán hoặc chuyển nhượng; Năng lực hành vi thì không", "Hai khái niệm hoàn toàn đồng nhất và không có sự phân biệt trong khoa học pháp lý", "Năng lực pháp luật là khả năng có quyền/nghĩa vụ; Năng lực hành vi là khả năng tự mình thực hiện quyền/nghĩa vụ đó"], "answer": 3, "explanation": "Năng lực pháp luật là tiền đề do nhà nước quy định công nhận tư cách có quyền; còn năng lực hành vi phụ thuộc vào độ tuổi, khả năng nhận thức để tự mình thực hiện bằng hành vi thực tế."}, {"id": "nmlh_17", "question": "Trong khoa học pháp lý, dấu hiệu về 'Lỗi' đối với hành vi vi phạm pháp luật được khẳng định như thế nào?", "options": ["Không có lỗi thì không có vi phạm pháp luật", "Chỉ cần có hậu quả thiệt hại xảy ra là nghiễm nhiên coi là vi phạm pháp luật", "Lỗi là yếu tố tùy nghi không bắt buộc phải chứng minh trong vụ án hình sự", "Người mất hoàn toàn khả năng nhận thức vẫn bị coi là có lỗi khi vi phạm"], "answer": 0, "explanation": "Lỗi phản ánh thái độ chủ quan của chủ thể đối với hành vi nguy hiểm và hậu quả của nó. Một hành vi chỉ bị coi là vi phạm pháp luật nếu được thực hiện bởi chủ thể có lỗi (cố ý hoặc vô ý)."}, {"id": "nmlh_18", "question": "Để cấu thành một vi phạm pháp luật, dấu hiệu về mặt hành vi đòi hỏi điều kiện gì?", "options": ["Bất kỳ suy nghĩ chưa chuẩn mực nào trong nhận thức đều bị truy cứu trách nhiệm pháp lý", "Phải là hành vi thực tế thể hiện ra bên ngoài; ý nghĩ trong đầu mà chưa hành động thì không bị coi là vi phạm", "Chỉ những hành vi cố ý trực tiếp mới bị xử lý, hành vi vô ý không cần quan tâm", "Chỉ áp dụng với những việc làm gây thiệt hại trên một trăm triệu đồng"], "answer": 1, "explanation": "Pháp luật chỉ điều chỉnh hành vi thực tế của con người (hành động hoặc không hành động) biểu hiện ra thế giới khách quan, không truy cứu suy nghĩ tư tưởng thuần túy."}, {"id": "nmlh_19", "question": "Trong cấu trúc bên trong (Internal Structure) của hệ thống pháp luật, đơn vị nhỏ nhất là:", "options": ["Chế định pháp luật (Law Institution)", "Ngành luật (Law Branches)", "Quy phạm pháp luật (Legal Norms)", "Hệ thống văn bản luật của Quốc hội"], "answer": 2, "explanation": "Cấu trúc bên trong của hệ thống pháp luật gồm 3 cấp độ từ nhỏ đến lớn: Quy phạm pháp luật -> Chế định pháp luật -> Ngành luật."}, {"id": "nmlh_20", "question": "Quy tắc cấm kỵ nhằm bảo vệ quyền con người trong việc áp dụng hiệu lực hồi tố (Retrospective effect) là gì?", "options": ["Cho phép áp dụng luật mới để tăng nặng hình phạt cho mọi vụ án đã xử xong", "Bắt buộc tất cả các đạo luật kinh tế mới đều phải hồi tố lại mười năm trước", "Chỉ áp dụng hiệu lực hồi tố nếu có sự đồng thuận của nguyên đơn dân sự", "Không áp dụng hiệu lực hồi tố để áp đặt trách nhiệm pháp lý mới hoặc nặng hơn đối với hành vi quá khứ"], "answer": 3, "explanation": "Để bảo vệ quyền con người và nguyên tắc pháp quyền, pháp luật nghiêm cấm áp dụng hiệu lực hồi tố để đặt ra trách nhiệm pháp lý mới hoặc tăng nặng trách nhiệm pháp lý đối với hành vi đã diễn ra trước khi luật có hiệu lực."}]}, {"id": "nmlh-quiz-comprehensive", "title": "Đề trắc nghiệm tổng hợp 20 câu Nhập môn Luật học", "category": "quiz", "mode": "mcq", "chapter": "Tổng hợp", "difficulty": "Medium", "duration": 30, "description": "Bộ 20 câu trắc nghiệm chuẩn mực Nhập môn Luật học bám sát 7 chương lý thuyết, đối chiếu lời giải tức thì.", "badge": "Trắc nghiệm tổng hợp", "order": 4, "questions": [{"id": "nmlh_1", "question": "Đặc trưng quyền lực công cộng đặc biệt của nhà nước được thể hiện qua dấu hiệu nào?", "options": ["Được đảm bảo bằng một bộ máy cưỡng chế chuyên nghiệp tách rời khỏi quần chúng để duy trì trật tự", "Dựa trên sự đồng thuận tuyệt đối và tự nguyện hoàn toàn của tất cả thành viên trong xã hội", "Chỉ dựa vào các lời răn dạy đạo đức và dư luận xã hội mà không sử dụng bộ máy chuyên trách", "Được thực hiện trực tiếp bởi toàn thể người dân mà không cần cơ quan tư pháp hay lực lượng vũ trang"], "answer": 0, "explanation": "Nhà nước thiết lập quyền lực công cộng đặc biệt, được tổ chức và đảm bảo bởi bộ máy chuyên trách có sức mạnh cưỡng chế (quân đội, cảnh sát, tòa án...) tách rời khỏi quần chúng."}, {"id": "nmlh_2", "question": "Dấu hiệu phân chia dân cư theo lãnh thổ của nhà nước gắn liền với việc quản lý nào trong thực tế?", "options": ["Quản lý theo gia phả, dòng họ và mối quan hệ huyết thống huyết thống cổ truyền", "Gắn liền với việc cấp CCCD, hộ khẩu để quản lý theo đơn vị hành chính lãnh thổ", "Phân loại con người theo mức độ giàu có và tài sản sở hữu", "Xếp loại công dân hoàn toàn theo niềm tin tín ngưỡng tôn giáo"], "answer": 1, "explanation": "Nhà nước phân chia và quản lý dân cư theo ranh giới hành chính lãnh thổ chứ không theo thị tộc huyết thống, thể hiện qua các thủ tục quản lý cư trú, hộ tịch, CCCD."}, {"id": "nmlh_3", "question": "Chủ quyền quốc gia (Sovereignty) của nhà nước bao hàm hai khía cạnh cơ bản nào?", "options": ["Quyền sở hữu toàn bộ tài sản tư nhân và quyền kiểm soát mọi giao dịch thương mại", "Quyền can thiệp quân sự vào các nước láng giềng và độc quyền khai thác tài nguyên biển", "Quyền tối cao về đối nội và độc lập về đối ngoại", "Quyền miễn trừ mọi trách nhiệm pháp lý đối với công dân của mình"], "answer": 2, "explanation": "Chủ quyền của nhà nước gồm quyền lực tối cao trong phạm vi biên giới quốc gia (đối nội) và quyền độc lập, tự chủ, không chịu sự can thiệp từ bên ngoài (đối ngoại)."}, {"id": "nmlh_4", "question": "Về thẩm quyền ban hành pháp luật, khẳng định nào sau đây là chính xác?", "options": ["Mọi tổ chức xã hội và doanh nghiệp tư nhân đều có quyền ban hành văn bản luật bắt buộc cả nước", "Các hiệp hội ngành nghề có quyền tự đặt ra mức phạt tù cho hội viên vi phạm", "Pháp luật chỉ do các tổ chức quốc tế ban hành và chuyển giao cho các nước áp dụng", "Nhà nước là tổ chức duy nhất có quyền đặt ra các quy tắc xử sự mang tính bắt buộc chung cho toàn xã hội"], "answer": 3, "explanation": "Chỉ có nhà nước mới có chủ quyền và quyền lực công cộng tối cao để ban hành các quy phạm pháp luật có hiệu lực bắt buộc chung đối với mọi cá nhân, tổ chức trên lãnh thổ."}, {"id": "nmlh_5", "question": "Tại sao việc quy định và thu thuế mang tính bắt buộc là một đặc trưng cấu thành của nhà nước?", "options": ["Nhà nước không trực tiếp làm ra của cải vật chất nhưng phải duy trì bộ máy quản lý và đầu tư công", "Để tịch thu tài sản của các tầng lớp dân cư nhằm xóa bỏ hoàn toàn quyền tư hữu", "Để cung cấp nguồn kinh phí riêng cho các doanh nghiệp tư nhân làm từ thiện", "Nhằm mục đích triệt tiêu hoạt động giao thương buôn bán trên thị trường"], "answer": 0, "explanation": "Thuế là nguồn tài chính bắt buộc nuôi dưỡng bộ máy quản lý nhà nước, phục vụ quốc phòng an ninh và thực hiện các chức năng công cộng."}, {"id": "nmlh_6", "question": "Tổ chức Liên chính phủ (IGO) được định nghĩa là:", "options": ["Một doanh nghiệp liên doanh đa quốc gia hoạt động vì mục đích tìm kiếm lợi nhuận", "Một chủ thể của luật quốc tế, có các thành viên chủ yếu là các quốc gia có chủ quyền", "Một hiệp hội tự nguyện gồm các cá nhân hoạt động trong lĩnh vực phi lợi nhuận", "Một cơ quan thuộc chính phủ một quốc gia nhưng đặt trụ sở tại nước ngoài"], "answer": 1, "explanation": "IGOs là tổ chức liên chính phủ được thành lập bởi các điều ước quốc tế giữa các quốc gia có chủ quyền, có tư cách chủ thể độc lập của luật quốc tế."}, {"id": "nmlh_7", "question": "Ai có quyền đại diện ký kết tham gia làm thành viên của các Tổ chức Liên chính phủ (IGOs)?", "options": ["Bất kỳ công dân hoặc nhóm lợi ích tư nhân nào có năng lực tài chính", "Các tập đoàn kinh tế thương mại có chi nhánh trên 5 châu lục", "Chính phủ của các quốc gia độc lập có chủ quyền", "Chỉ các tổ chức phi chính phủ (NGOs) mới có quyền gia nhập"], "answer": 2, "explanation": "Thành viên của IGOs là các quốc gia có chủ quyền, do chính phủ hợp pháp đại diện ký kết và thực thi các cam kết quốc tế."}, {"id": "nmlh_8", "question": "Đặc điểm 'Tư cách pháp nhân quốc tế riêng' của IGO mang ý nghĩa gì?", "options": ["Mọi quyết định của IGO đều do nguyên thủ của quốc gia giàu nhất tự mình ra lệnh", "IGO không có tài sản riêng mà toàn bộ chi phí đều gắn vào ngân sách của nước sở tại", "Khi có tranh chấp, IGO không được phép tham gia bất kỳ thủ tục tố tụng pháp lý nào", "IGO có thể tự nhân danh mình để kiện, bị kiện hoặc sở hữu tài sản độc lập với các quốc gia thành viên"], "answer": 3, "explanation": "Tư cách pháp nhân quốc tế độc lập cho phép IGO tự mình tham gia các giao dịch pháp lý, sở hữu tài sản, ký thỏa thuận và tham gia giải quyết tranh chấp."}, {"id": "nmlh_9", "question": "Trong trật tự thứ bậc các văn bản quy phạm pháp luật, nguyên tắc đối với Hiến pháp là gì?", "options": ["Mọi văn bản quy phạm pháp luật khác đều không được trái với Hiến pháp", "Các thông tư chuyên ngành có thể tạm đình chỉ thi hành các điều khoản của Hiến pháp", "Hiến pháp có giá trị pháp lý thấp hơn luật của các tổ chức quốc tế tư nhân", "Nghị định của Chính phủ có quyền thay đổi các quy định về quyền cơ bản trong Hiến pháp"], "answer": 0, "explanation": "Hiến pháp là đạo luật cơ bản có hiệu lực pháp lý cao nhất; bất kỳ văn bản quy phạm pháp luật nào trái với Hiến pháp đều phải bị bãi bỏ hoặc sửa đổi."}, {"id": "nmlh_10", "question": "Trường phái Pháp luật tự nhiên (Natural Law) quan niệm nguồn gốc của pháp luật là gì?", "options": ["Do cơ quan lập pháp ban hành thông qua các quy trình thủ tục hành chính thuần túy", "Xuất phát từ tự nhiên, lý trí con người hoặc ý chí của Thượng Đế", "Là sản phẩm ý chí chủ quan độc đoán áp đặt của giai cấp cầm quyền", "Chỉ được hình thành sau khi các bên ký kết hợp đồng dân sự cụ thể"], "answer": 1, "explanation": "Pháp luật tự nhiên cho rằng quyền con người và các giá trị công lý xuất phát từ tự nhiên, lý tính phổ quát của nhân loại trước khi nhà nước thành văn ghi nhận."}, {"id": "nmlh_11", "question": "Ba bộ phận cấu thành logic thông thường của một quy phạm pháp luật là:", "options": ["Mở đầu - Nội dung - Biện pháp thi hành", "Chủ thể - Khách thể - Ý chí nhà nước", "Giả định - Quy định - Chế tài", "Điều kiện - Thẩm quyền - Quyền lực"], "answer": 2, "explanation": "Quy phạm pháp luật thường được xây dựng theo mô hình 3 bộ phận: Giả định (hoàn cảnh, chủ thể), Quy định (mệnh lệnh hành vi) và Chế tài (hậu quả bất lợi khi vi phạm)."}, {"id": "nmlh_12", "question": "Bộ phận 'Giả định' (Hypothesis) trong quy phạm pháp luật có vai trò gì?", "options": ["Chỉ rõ hình phạt tù hoặc số tiền phải nộp phạt khi có sai phạm", "Nêu quy tắc xử sự bắt buộc phải thực hiện trong giao dịch", "Quy định ngày tháng văn bản bắt đầu có hiệu lực thi hành", "Nêu rõ điều kiện, hoàn cảnh áp dụng và xác định đối tượng chịu sự tác động"], "answer": 3, "explanation": "Giả định trả lời câu hỏi: Ai? Khi nào? Trong hoàn cảnh hay điều kiện nào thì quy tắc này được áp dụng."}, {"id": "nmlh_13", "question": "Bộ phận 'Quy định' (Disposition) trong quy phạm pháp luật xác định nội dung gì?", "options": ["Nêu quy tắc xử sự (được làm gì, không được làm gì, phải làm gì)", "Nêu mức phạt tiền cụ thể khi chủ thể không thực hiện đúng nghĩa vụ", "Xác định độ tuổi bắt đầu có năng lực pháp luật của công dân", "Mô tả địa bàn áp dụng của các cơ quan thi hành án"], "answer": 0, "explanation": "Quy định là bộ phận cốt lõi nêu lên mệnh lệnh của nhà nước, xác định mô hình hành vi hợp pháp: được phép, ngăn cấm hoặc bắt buộc hành động."}, {"id": "nmlh_14", "question": "Bộ phận 'Chế tài' (Sanction) trong quy phạm pháp luật quy định điều gì?", "options": ["Các chính sách khen thưởng và tôn vinh người có thành tích tốt", "Hậu quả pháp lý bất lợi hoặc hình phạt áp dụng khi không tuân thủ pháp luật", "Thời điểm chấm dứt hiệu lực của một bản án đã tuyên", "Thủ tục đăng ký kinh doanh cho các hợp tác xã và hộ kinh doanh"], "answer": 1, "explanation": "Chế tài nêu rõ những biện pháp tác động cưỡng chế mang tính bất lợi mà nhà nước áp dụng đối với chủ thể vi phạm quy phạm pháp luật."}, {"id": "nmlh_15", "question": "Sự kiện pháp lý nào sau đây được phân loại là 'Sự biến pháp lý' (Objective legal facts)?", "options": ["Việc hai bên ký kết hợp đồng mua bán căn hộ tại phòng công chứng", "Hành vi cố ý vượt đèn đỏ gây nguy hiểm cho người đi đường", "Sự kiện xảy ra ngoài ý chí của con người (như sinh ra, qua đời, thiên tai bão lũ)", "Việc nộp đơn khởi kiện đòi bồi thường thiệt hại tại tòa án"], "answer": 2, "explanation": "Sự biến pháp lý là hiện tượng tự nhiên hoặc biến cố khách quan xảy ra ngoài ý chí của con người nhưng pháp luật gắn việc xuất hiện của nó với hậu quả pháp lý."}, {"id": "nmlh_16", "question": "Sự khác biệt cốt lõi giữa Năng lực pháp luật và Năng lực hành vi của cá nhân là:", "options": ["Năng lực pháp luật chỉ có ở người trưởng thành; Năng lực hành vi xuất hiện ngay khi sinh ra", "Năng lực pháp luật có thể bị bán hoặc chuyển nhượng; Năng lực hành vi thì không", "Hai khái niệm hoàn toàn đồng nhất và không có sự phân biệt trong khoa học pháp lý", "Năng lực pháp luật là khả năng có quyền/nghĩa vụ; Năng lực hành vi là khả năng tự mình thực hiện quyền/nghĩa vụ đó"], "answer": 3, "explanation": "Năng lực pháp luật là tiền đề do nhà nước quy định công nhận tư cách có quyền; còn năng lực hành vi phụ thuộc vào độ tuổi, khả năng nhận thức để tự mình thực hiện bằng hành vi thực tế."}, {"id": "nmlh_17", "question": "Trong khoa học pháp lý, dấu hiệu về 'Lỗi' đối với hành vi vi phạm pháp luật được khẳng định như thế nào?", "options": ["Không có lỗi thì không có vi phạm pháp luật", "Chỉ cần có hậu quả thiệt hại xảy ra là nghiễm nhiên coi là vi phạm pháp luật", "Lỗi là yếu tố tùy nghi không bắt buộc phải chứng minh trong vụ án hình sự", "Người mất hoàn toàn khả năng nhận thức vẫn bị coi là có lỗi khi vi phạm"], "answer": 0, "explanation": "Lỗi phản ánh thái độ chủ quan của chủ thể đối với hành vi nguy hiểm và hậu quả của nó. Một hành vi chỉ bị coi là vi phạm pháp luật nếu được thực hiện bởi chủ thể có lỗi (cố ý hoặc vô ý)."}, {"id": "nmlh_18", "question": "Để cấu thành một vi phạm pháp luật, dấu hiệu về mặt hành vi đòi hỏi điều kiện gì?", "options": ["Bất kỳ suy nghĩ chưa chuẩn mực nào trong nhận thức đều bị truy cứu trách nhiệm pháp lý", "Phải là hành vi thực tế thể hiện ra bên ngoài; ý nghĩ trong đầu mà chưa hành động thì không bị coi là vi phạm", "Chỉ những hành vi cố ý trực tiếp mới bị xử lý, hành vi vô ý không cần quan tâm", "Chỉ áp dụng với những việc làm gây thiệt hại trên một trăm triệu đồng"], "answer": 1, "explanation": "Pháp luật chỉ điều chỉnh hành vi thực tế của con người (hành động hoặc không hành động) biểu hiện ra thế giới khách quan, không truy cứu suy nghĩ tư tưởng thuần túy."}, {"id": "nmlh_19", "question": "Trong cấu trúc bên trong (Internal Structure) của hệ thống pháp luật, đơn vị nhỏ nhất là:", "options": ["Chế định pháp luật (Law Institution)", "Ngành luật (Law Branches)", "Quy phạm pháp luật (Legal Norms)", "Hệ thống văn bản luật của Quốc hội"], "answer": 2, "explanation": "Cấu trúc bên trong của hệ thống pháp luật gồm 3 cấp độ từ nhỏ đến lớn: Quy phạm pháp luật -> Chế định pháp luật -> Ngành luật."}, {"id": "nmlh_20", "question": "Quy tắc cấm kỵ nhằm bảo vệ quyền con người trong việc áp dụng hiệu lực hồi tố (Retrospective effect) là gì?", "options": ["Cho phép áp dụng luật mới để tăng nặng hình phạt cho mọi vụ án đã xử xong", "Bắt buộc tất cả các đạo luật kinh tế mới đều phải hồi tố lại mười năm trước", "Chỉ áp dụng hiệu lực hồi tố nếu có sự đồng thuận của nguyên đơn dân sự", "Không áp dụng hiệu lực hồi tố để áp đặt trách nhiệm pháp lý mới hoặc nặng hơn đối với hành vi quá khứ"], "answer": 3, "explanation": "Để bảo vệ quyền con người và nguyên tắc pháp quyền, pháp luật nghiêm cấm áp dụng hiệu lực hồi tố để đặt ra trách nhiệm pháp lý mới hoặc tăng nặng trách nhiệm pháp lý đối với hành vi đã diễn ra trước khi luật có hiệu lực."}]}];
+
+let exerciseSets = [];
+let currentCategory = 'overview';
+let currentSet = null;
+let selectedAnswers = Object.create(null);
+let lastScore = null;
+
+function safeText(value, fallback = '') {
+  return typeof value === 'string' ? value.trim() : fallback;
+}
+
+function clearElement(element) {
+  if (!element) return;
+  while (element.firstChild) element.removeChild(element.firstChild);
+}
+
+function createElement(tagName, className, text) {
+  const element = document.createElement(tagName);
+  if (className) element.className = className;
+  if (text !== undefined) element.textContent = safeText(text);
+  return element;
+}
+
+function normalizeQuestion(rawQuestion, index) {
+  const data = rawQuestion && typeof rawQuestion === 'object' && !Array.isArray(rawQuestion) ? rawQuestion : {};
+  const options = Array.isArray(data.options) ? data.options.map(option => safeText(option)) : [];
+  const answer = Number.isInteger(data.answer) && data.answer >= 0 && data.answer < options.length ? data.answer : null;
+  return {
+    id: safeText(data.id, `question-${index + 1}`),
+    question: safeText(data.question, 'Câu hỏi chưa có nội dung.'),
+    options,
+    answer,
+    explanation: safeText(data.explanation, 'Chưa có giải thích.')
+  };
+}
+
+function normalizeExerciseSet(rawSet, fallbackId) {
+  const data = rawSet && typeof rawSet === 'object' && !Array.isArray(rawSet) ? rawSet : {};
+  const duration = typeof data.duration === 'number' && Number.isFinite(data.duration) && data.duration >= 0 ? data.duration : 0;
+  return {
+    id: safeText(data.id, fallbackId),
+    title: safeText(data.title, 'Bộ đề chưa có tiêu đề'),
+    category: safeText(data.category),
+    mode: data.mode === 'problem' ? 'problem' : 'mcq',
+    chapter: safeText(data.chapter, 'Chưa phân chương'),
+    difficulty: safeText(data.difficulty, 'Unknown'),
+    duration,
+    description: safeText(data.description, 'Chưa có mô tả.'),
+    badge: safeText(data.badge),
+    order: typeof data.order === 'number' && Number.isFinite(data.order) ? data.order : 99,
+    questions: Array.isArray(data.questions) ? data.questions.map((q, i) => normalizeQuestion(q, i)) : []
+  };
+}
+
+function isUsableExerciseSet(set) {
+  if (!set || !set.id || !set.title) return false;
+  if (!Array.isArray(set.questions) || set.questions.length === 0) return false;
+  const ids = set.questions.map(q => q.id);
+  if (new Set(ids).size !== ids.length) return false;
+  return set.questions.every(q => q.options.length >= 2 && q.answer !== null);
+}
+
+function initPractice() {
+  exerciseSets = LOCAL_SETS
+    .filter(isUsableExerciseSet)
+    .map((set, index) => normalizeExerciseSet(set, `local-set-${index + 1}`))
+    .sort((a,b) => a.order - b.order);
+  renderAll();
+}
+
+function renderAll() {
+  renderOverview();
+  renderGrid('chapter-grid', 'chapter');
+  renderGrid('quiz-grid', 'quiz');
+}
+
+function renderOverview() {
+  const stats = document.getElementById('overview-stats');
+  if (!stats) return;
+  const chapter = exerciseSets.filter(s => s.category === 'chapter').length;
+  const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);
+  clearElement(stats);
+  [
+    [chapter, 'bộ theo chương'],
+    [quizQ, 'câu trắc nghiệm']
+  ].forEach(([value, label]) => {
+    const card = createElement('div', 'bg-white/10 rounded-xl p-4 border border-white/10');
+    card.appendChild(createElement('div', 'text-2xl font-black', value));
+    card.appendChild(createElement('div', 'text-xs text-stone-300 font-bold', label));
+    stats.appendChild(card);
+  });
+}
+
+function appendMetric(parent, value, label, suffix = '') {
+  const metric = createElement('div', 'bg-stone-50 rounded-lg p-2 border border-stone-100');
+  const strong = createElement('strong', 'block text-slate-900', value);
+  if (suffix) strong.appendChild(document.createTextNode(suffix));
+  metric.appendChild(strong);
+  metric.appendChild(createElement('span', 'text-stone-500', label));
+  parent.appendChild(metric);
+}
+
+function renderGrid(containerId, category) {
+  const el = document.getElementById(containerId); if (!el) return;
+  const items = exerciseSets.filter(s => s.category === category);
+  clearElement(el);
+
+  items.forEach(set => {
+    const article = createElement('article', 'exercise-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm cursor-pointer flex flex-col min-h-[230px]');
+    article.addEventListener('click', () => openSet(set.id));
+
+    const meta = createElement('div', 'flex items-start justify-between gap-3 mb-4');
+    meta.appendChild(createElement('span', 'pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider', set.badge || set.category));
+    const difficultyClass = set.difficulty === 'Hard' ? 'bg-rose-50 text-rose-700 border border-rose-100' : set.difficulty === 'Medium' ? 'bg-amber-50 text-amber-700 border border-amber-100' : 'bg-green-50 text-green-700 border border-green-100';
+    meta.appendChild(createElement('span', `text-xs font-black rounded-full px-2 py-1 ${difficultyClass}`, set.difficulty));
+    article.appendChild(meta);
+    article.appendChild(createElement('h3', 'font-black text-slate-900 text-lg mb-2 leading-snug', set.title));
+    article.appendChild(createElement('p', 'text-sm text-stone-600 flex-grow', set.description));
+
+    const metrics = createElement('div', 'mt-5 grid grid-cols-3 gap-2 text-center text-xs');
+    appendMetric(metrics, set.chapter, 'Chương');
+    appendMetric(metrics, set.questions.length, 'Câu');
+    appendMetric(metrics, set.duration, 'Gợi ý', "'");
+    article.appendChild(metrics);
+    article.appendChild(createElement('button', 'mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-2.5 rounded-xl transition-colors', 'Mở bài luyện'));
+    el.appendChild(article);
+  });
+}
+
+function openSet(setId) {
+  currentSet = exerciseSets.find(s => s.id === setId);
+  selectedAnswers = Object.create(null);
+  lastScore = null;
+  if (!currentSet) return;
+  if (currentSet.category) currentCategory = currentSet.category;
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  const panel = document.getElementById('practice-panel');
+  panel.classList.remove('hidden');
+  const practiceBadge = document.getElementById('practice-badge');
+  clearElement(practiceBadge);
+  [currentSet.badge, currentSet.chapter, currentSet.duration ? `${currentSet.duration} phút` : ''].filter(Boolean).forEach(text => {
+    const s = createElement('span', 'mr-2', text);
+    practiceBadge.appendChild(s);
+  });
+  renderMcqSet(currentSet);
+}
+
+function closePracticePanel() {
+  document.getElementById('practice-panel').classList.add('hidden');
+  switchMainTab(currentCategory || 'chapter');
+}
+
+function renderMcqSet(set) {
+  const wrap = document.getElementById('practice-content');
+  if (!wrap) return;
+  clearElement(wrap);
+
+  const card = createElement('div', 'bg-white rounded-3xl border border-stone-200 shadow-sm p-6 md:p-8');
+  const header = createElement('div', 'mb-6');
+  header.appendChild(createElement('h2', 'text-2xl md:text-3xl font-extrabold text-slate-900 mb-2', set.title));
+  header.appendChild(createElement('p', 'text-stone-600', set.description));
+  card.appendChild(header);
+
+  const body = createElement('div', 'space-y-6');
+  const questionsWrap = createElement('div', 'space-y-6');
+  questionsWrap.id = 'question-list';
+  body.appendChild(questionsWrap);
+
+  const actions = createElement('div', 'mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4');
+  const counterWrap = createElement('div', 'text-sm font-bold text-stone-600');
+  counterWrap.appendChild(document.createTextNode('Đã chọn: '));
+  const countSpan = createElement('span', 'text-teal-700 font-extrabold', '0');
+  countSpan.id = 'answered-count';
+  counterWrap.appendChild(countSpan);
+  counterWrap.appendChild(document.createTextNode(` / ${set.questions.length} câu`));
+  actions.appendChild(counterWrap);
+
+  const buttons = createElement('div', 'flex items-center gap-3');
+  const resetButton = createElement('button', 'bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold px-4 py-2 rounded-xl transition-colors', 'Làm lại');
+  resetButton.type = 'button';
+  resetButton.addEventListener('click', resetCurrentQuiz);
+  const submitButton = createElement('button', 'bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl transition-colors', 'Nộp bài');
+  submitButton.type = 'button';
+  submitButton.id = 'submit-quiz';
+  submitButton.addEventListener('click', submitQuiz);
+  buttons.appendChild(resetButton);
+  buttons.appendChild(submitButton);
+  actions.appendChild(buttons);
+  body.appendChild(actions);
+
+  const resultBox = createElement('div', 'hidden mt-6');
+  resultBox.id = 'result-box';
+  body.appendChild(resultBox);
+  card.appendChild(body);
+  wrap.appendChild(card);
+  renderQuestions(set, false);
+}
+
+function renderQuestions(set, showResult) {
+  const list = document.getElementById('question-list');
+  if (!list) return;
+  clearElement(list);
+
+  set.questions.forEach((question, index) => {
+    const questionBox = createElement('div', 'rounded-2xl border border-stone-200 bg-stone-50/60 p-5');
+    questionBox.id = 'q-' + question.id;
+    const heading = createElement('div', 'flex gap-3 mb-4');
+    heading.appendChild(createElement('span', 'w-8 h-8 rounded-full bg-teal-600 text-white font-black flex items-center justify-center shrink-0', index + 1));
+    heading.appendChild(createElement('h3', 'font-bold text-slate-900 leading-relaxed', question.question));
+    questionBox.appendChild(heading);
+
+    const options = createElement('div', 'grid md:grid-cols-2 gap-3');
+    question.options.forEach((option, optionIndex) => {
+      options.appendChild(createOptionButton(question, optionIndex, option, showResult));
+    });
+    questionBox.appendChild(options);
+
+    if (showResult) {
+      const isCorrect = selectedAnswers[question.id] === question.answer;
+      const explanation = createElement('div', `mt-4 bg-white border-l-4 ${isCorrect ? 'border-green-500' : 'border-rose-500'} rounded-r-xl p-4 text-sm`);
+      explanation.appendChild(createElement('strong', '', selectedAnswers[question.id] === undefined ? 'Chưa trả lời — Giải thích:' : isCorrect ? 'Đúng — Giải thích:' : 'Sai — Giải thích:'));
+      explanation.appendChild(document.createTextNode(' '));
+      explanation.appendChild(document.createTextNode(question.explanation));
+      questionBox.appendChild(explanation);
+    }
+    list.appendChild(questionBox);
+  });
+  updateAnsweredCount();
+}
+
+function createOptionButton(question, optionIndex, option, showResult) {
+  let cls = 'option-card bg-white border border-stone-200 rounded-xl p-3 text-sm font-semibold cursor-pointer';
+  const selected = selectedAnswers[question.id] === optionIndex;
+  if (!showResult && selected) cls += ' option-selected';
+  if (showResult && optionIndex === question.answer) cls += ' option-correct';
+  if (showResult && selected && optionIndex !== question.answer) cls += ' option-wrong';
+
+  const button = createElement('button', cls);
+  button.type = 'button';
+  button.disabled = showResult;
+  button.setAttribute('aria-pressed', String(selected));
+  button.addEventListener('click', () => selectAnswer(question.id, optionIndex));
+  button.appendChild(createElement('span', 'font-black mr-2', `${String.fromCharCode(65 + optionIndex)}.`));
+  button.appendChild(document.createTextNode(option));
+  return button;
+}
+
+function selectAnswer(qid, index) {
+  const question = currentSet?.questions.find(q => q.id === qid);
+  if (lastScore !== null || !question || !Number.isInteger(index) || index < 0 || index >= question.options.length) return;
+  selectedAnswers[qid] = index;
+  document.getElementById('q-' + qid)?.querySelectorAll('.option-card').forEach((button, i) => {
+    button.classList.toggle('option-selected', i === index);
+    button.setAttribute('aria-pressed', String(i === index));
+  });
+  updateAnsweredCount();
+}
+
+function updateAnsweredCount() {
+  const el = document.getElementById('answered-count');
+  if (el) el.textContent = Object.keys(selectedAnswers).length;
+}
+
+function resetCurrentQuiz() {
+  selectedAnswers = Object.create(null);
+  lastScore = null;
+  if (currentSet) {
+    renderMcqSet(currentSet);
+    document.getElementById('practice-panel').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+
+function submitQuiz() {
+  if (lastScore !== null || !currentSet || !Array.isArray(currentSet.questions)) return;
+  const total = currentSet.questions.length;
+  const score = currentSet.questions.reduce((sum, q) => sum + (selectedAnswers[q.id] === q.answer ? 1 : 0), 0);
+  lastScore = score;
+  const submitButton = document.getElementById('submit-quiz');
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = 'Đã nộp bài';
+  }
+  renderQuestions(currentSet, true);
+  const percent = total > 0 ? Math.round(score / total * 100) : 0;
+  const box = document.getElementById('result-box');
+  if (!box) return;
+  box.classList.remove('hidden');
+  clearElement(box);
+
+  const resultClass = percent >= 80 ? 'border-green-300 bg-green-50' : percent >= 50 ? 'border-amber-300 bg-amber-50' : 'border-rose-300 bg-rose-50';
+  const message = percent >= 80 ? 'Bạn đã nắm rất vững kiến thức trong phần này!' : percent >= 50 ? 'Kết quả tương đối tốt, hãy đối chiếu thêm với các giải thích bên dưới để hoàn thiện.' : 'Hãy xem lại lý thuyết và làm lại bài để củng cố nền tảng kiến thức.';
+  box.className = `mt-6 p-6 rounded-2xl border ${resultClass}`;
+  const heading = createElement('div', 'flex items-center justify-between mb-3');
+  heading.appendChild(createElement('h3', 'text-xl font-black text-slate-900', `Kết quả: ${score}/${total} (${percent}% correct)`));
+  heading.appendChild(createElement('span', 'pill px-3 py-1 rounded-full text-xs font-black', `${percent}%`));
+  box.appendChild(heading);
+  box.appendChild(createElement('p', 'text-sm text-stone-600 mb-4', message));
+  const retryBtn = createElement('button', 'bg-teal-600 hover:bg-teal-700 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors', 'Làm lại bài luyện');
+  retryBtn.type = 'button';
+  retryBtn.addEventListener('click', resetCurrentQuiz);
+  box.appendChild(retryBtn);
+}
+
+function switchMainTab(tabId) {
+  currentCategory = tabId;
+  document.getElementById('practice-panel').classList.add('hidden');
+  document.querySelectorAll('.tab-content').forEach(el => {
+    el.classList.toggle('hidden', el.id !== tabId);
+    el.classList.toggle('block', el.id === tabId);
+  });
+  document.querySelectorAll('#nav-menu .nav-btn').forEach(button => {
+    const active = button.getAttribute('onclick')?.includes(tabId);
+    button.classList.toggle('tab-active', !!active);
+    button.classList.toggle('text-stone-500', !active);
+  });
+  const mobileNav = document.getElementById('mobile-nav');
+  if (mobileNav && mobileNav.value !== tabId) mobileNav.value = tabId;
+}
+
+window.addEventListener('DOMContentLoaded', initPractice);
+</script>
+</body>
+</html>

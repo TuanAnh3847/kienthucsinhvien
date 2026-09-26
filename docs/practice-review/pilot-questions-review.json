@@ -1,0 +1,571 @@
+{
+  "review": "Master Task 02 Practice Pilot: KTQT and NMLH question banks anchored 100% to local theory text.",
+  "ktqt": [
+    {
+      "id": "ktqt_1",
+      "chapter": "ch1",
+      "heading": "Mercantilism",
+      "quote": "thương mại được nhìn như trò chơi zero-sum và chính phủ can thiệp mạnh.",
+      "question": "Theo quan điểm của trường phái Trọng thương (Mercantilism), thương mại quốc tế được nhìn nhận như thế nào?",
+      "options": [
+        "Là một trò chơi có tổng bằng không (zero-sum) cần sự can thiệp mạnh của chính phủ",
+        "Là một trò chơi đôi bên cùng có lợi (positive-sum) dựa trên tự do cạnh tranh",
+        "Là cơ chế tự cân bằng theo quy luật thị trường không cần bất kỳ sự quản lý nào",
+        "Là hoạt động thuần túy tự nguyện không đem lại sự giàu mạnh cho quốc gia"
+      ],
+      "explanation": "Trường phái Trọng thương quan niệm của cải quốc gia đo bằng kim loại quý (vàng, bạc) và thương mại quốc tế là trò chơi zero-sum, do đó nhà nước phải can thiệp mạnh để xuất siêu."
+    },
+    {
+      "id": "ktqt_2",
+      "chapter": "ch1",
+      "heading": "Absolute Advantage",
+      "quote": "Absolute advantage = hiệu quả cao hơn trong sản xuất, thể hiện qua productivity cao hơn hoặc labor cost thấp hơn.",
+      "question": "Theo Adam Smith (1776), lợi thế tuyệt đối (Absolute Advantage) trong sản xuất được thể hiện qua tiêu chí nào?",
+      "options": [
+        "Hiệu quả cao hơn trong sản xuất, thể hiện qua productivity cao hơn hoặc labor cost thấp hơn",
+        "Trữ lượng vàng bạc tích lũy và quy mô dân số lớn hơn các đối thủ",
+        "Mức thuế quan bảo hộ nội địa cao hơn nhằm hạn chế nhập khẩu thành phẩm",
+        "Khả năng khai thác nguồn tài nguyên khoáng sản tự nhiên dù năng suất thấp hơn"
+      ],
+      "explanation": "Adam Smith chỉ ra lợi thế tuyệt đối là việc một quốc gia sản xuất hàng hóa hiệu quả hơn quốc gia khác, phản ánh qua năng suất (productivity) cao hơn hoặc chi phí thời gian lao động (labor cost) thấp hơn."
+    },
+    {
+      "id": "ktqt_3",
+      "chapter": "ch1",
+      "heading": "Productivity definition",
+      "quote": "Productivity = output per unit of input.",
+      "question": "Trong phân tích lý thuyết thương mại cổ điển, năng suất (Productivity) được định nghĩa là:",
+      "options": [
+        "Sản lượng đầu ra trên một đơn vị yếu tố đầu vào (output per unit of input)",
+        "Tổng chi phí tiền tệ chia cho tổng số lượng sản phẩm hoàn thành",
+        "Số giờ lao động cần thiết để làm ra một đơn vị sản lượng chuẩn",
+        "Tỷ lệ giữa giá bán thị trường và chi phí nguyên liệu đầu vào"
+      ],
+      "explanation": "Năng suất (productivity) đo lường lượng sản lượng tạo ra được trên một đơn vị đầu vào (ví dụ: số tấn thép/giờ lao động)."
+    },
+    {
+      "id": "ktqt_4",
+      "chapter": "ch1",
+      "heading": "Labor cost formula",
+      "quote": "labor cost = 1 / productivity",
+      "question": "Trong mô hình thương mại cổ điển với lao động là yếu tố duy nhất, chi phí lao động tính theo thời gian liên hệ thế nào với năng suất?",
+      "options": [
+        "labor cost = 1 / productivity (nghịch đảo của năng suất)",
+        "labor cost = productivity / 2 (bằng một nửa năng suất)",
+        "labor cost = 2 × productivity (gấp đôi năng suất)",
+        "labor cost = 100 − productivity (bù trừ cho 100 đơn vị)"
+      ],
+      "explanation": "Nếu năng suất là 5 đơn vị/giờ thì thời gian lao động để tạo ra 1 đơn vị là 1/5 giờ. Do đó chi phí thời gian lao động là đại lượng nghịch đảo của năng suất."
+    },
+    {
+      "id": "ktqt_5",
+      "chapter": "ch1",
+      "heading": "Comparative Advantage",
+      "quote": "Comparative advantage = khả năng sản xuất ở relative cost thấp hơn hoặc relative productivity cao hơn.",
+      "question": "Theo David Ricardo (1817), một quốc gia có lợi thế so sánh (Comparative Advantage) ở hàng hóa nào?",
+      "options": [
+        "Khả năng sản xuất ở relative cost thấp hơn hoặc relative productivity cao hơn",
+        "Hàng hóa có chi phí sản xuất tuyệt đối thấp nhất trên thị trường thế giới",
+        "Hàng hóa mang lại doanh thu tiền mặt cao nhất cho các thương nhân xuất khẩu",
+        "Mặt hàng đòi hỏi nhiều chi phí bảo hộ nhất khi thâm nhập thị trường nước ngoài"
+      ],
+      "explanation": "Lợi thế so sánh không đòi hỏi phải có lợi thế tuyệt đối, mà chỉ cần có khả năng sản xuất ở chi phí tương đối thấp hơn hoặc năng suất tương đối cao hơn."
+    },
+    {
+      "id": "ktqt_6",
+      "chapter": "ch1",
+      "heading": "Opportunity Cost Theory",
+      "quote": "Opportunity cost của A = lượng B phải từ bỏ để giải phóng đủ nguồn lực sản xuất thêm một đơn vị A.",
+      "question": "Theo lý thuyết chi phí cơ hội của Haberler, chi phí cơ hội của hàng hóa A được định nghĩa là:",
+      "options": [
+        "Lượng B phải từ bỏ để giải phóng đủ nguồn lực sản xuất thêm một đơn vị A",
+        "Số tiền mặt phải trả cho nhân công khi sản xuất thêm một đơn vị A",
+        "Tổng giá trị hàng hóa A được xuất khẩu sang thị trường nước ngoài",
+        "Khoản thuế nhập khẩu mà người tiêu dùng phải gánh chịu khi mua hàng A"
+      ],
+      "explanation": "Chi phí cơ hội của sản phẩm A đo lường số lượng sản phẩm B buộc phải từ bỏ để giải phóng đủ tài nguyên sản xuất thêm một đơn vị sản phẩm A."
+    },
+    {
+      "id": "ktqt_7",
+      "chapter": "ch1",
+      "heading": "Opportunity cost formula",
+      "quote": "OC_A = Productivity_B / Productivity_A = Cost_A / Cost_B",
+      "question": "Công thức xác định chi phí cơ hội của hàng hóa A (OC_A) theo năng suất là:",
+      "options": [
+        "OC_A = Productivity_B / Productivity_A",
+        "OC_A = Productivity_A / Productivity_B",
+        "OC_A = Productivity_A × Productivity_B",
+        "OC_A = 1 / (Productivity_A × Productivity_B)"
+      ],
+      "explanation": "Chi phí cơ hội của A bằng năng suất của B chia cho năng suất của A (hoặc bằng chi phí lao động của A chia cho chi phí lao động của B)."
+    },
+    {
+      "id": "ktqt_8",
+      "chapter": "ch1",
+      "heading": "Constant-cost PPF",
+      "quote": "Trong ví dụ constant cost: PPF thẳng, OC không đổi, comparative price = OC.",
+      "question": "Trong trường hợp chi phí không đổi (constant cost), đường PPF và tỷ giá so sánh có đặc điểm gì?",
+      "options": [
+        "PPF thẳng, OC không đổi, comparative price = OC",
+        "PPF cong lõm về gốc tọa độ, OC tăng dần theo sản lượng",
+        "PPF cong lồi, OC giảm dần khi mở rộng quy mô sản xuất",
+        "PPF là đường hyperbol, comparative price bằng 0"
+      ],
+      "explanation": "Dưới giả định chi phí sản xuất không đổi, đường giới hạn khả năng sản xuất (PPF) là đường thẳng, chi phí cơ hội cố định dọc theo đường này và mức giá so sánh nội địa bằng chính chi phí cơ hội."
+    },
+    {
+      "id": "ktqt_9",
+      "chapter": "ch2",
+      "heading": "Increasing Opportunity Costs",
+      "quote": "Muốn sản xuất thêm từng đơn vị của một hàng hóa, quốc gia phải từ bỏ ngày càng nhiều hàng hóa kia.",
+      "question": "Quy luật chi phí cơ hội tăng dần (Increasing Opportunity Costs) được phát biểu như thế nào?",
+      "options": [
+        "Muốn sản xuất thêm từng đơn vị của một hàng hóa, quốc gia phải từ bỏ ngày càng nhiều hàng hóa kia",
+        "Mỗi đơn vị sản xuất tăng thêm đòi hỏi lượng hàng hóa từ bỏ ngày càng giảm đi",
+        "Chi phí cơ hội giữ nguyên không đổi tại mọi điểm trên đường biên sản xuất",
+        "Quốc gia có thể gia tăng sản lượng của cả hai ngành mà không cần đánh đổi tài nguyên"
+      ],
+      "explanation": "Do các yếu tố sản xuất không đồng nhất và không được sử dụng theo cùng tỷ lệ giữa các ngành, việc chuyển dịch nguồn lực sẽ khiến lượng hàng hóa phải hy sinh ngày càng lớn hơn."
+    },
+    {
+      "id": "ktqt_10",
+      "chapter": "ch2",
+      "heading": "Community Indifference Curve",
+      "quote": "CIC là các tổ hợp hai hàng hóa đem lại cùng mức thỏa dụng cho quốc gia.",
+      "question": "Đường bàng quan xã hội (Community Indifference Curve - CIC) biểu thị tập hợp nào?",
+      "options": [
+        "Các tổ hợp hai hàng hóa đem lại cùng mức thỏa dụng cho quốc gia",
+        "Các mức sản lượng tối đa nền kinh tế có thể sản xuất với công nghệ hiện hữu",
+        "Khối lượng kim ngạch xuất khẩu và nhập khẩu cân bằng nhau tại mức thuế quan",
+        "Tổng số lượng yếu tố sản xuất vốn và lao động được huy động trong xã hội"
+      ],
+      "explanation": "Đường bàng quan xã hội (CIC) thể hiện các tổ hợp tiêu dùng hai loại hàng hóa mang lại mức độ thỏa dụng (độ thỏa mãn) như nhau cho toàn thể quốc gia."
+    },
+    {
+      "id": "ktqt_11",
+      "chapter": "ch2",
+      "heading": "Marginal Rate of Substitution",
+      "quote": "MRS = độ dốc tuyệt đối của CIC tại điểm tiêu dùng",
+      "question": "Tỷ lệ thay thế biên trong tiêu dùng (MRS) được thể hiện hình học bằng:",
+      "options": [
+        "Độ dốc tuyệt đối của CIC tại điểm tiêu dùng",
+        "Độ dốc của đường giới hạn khả năng sản xuất (PPF) tại điểm sản xuất",
+        "Khoảng cách giữa hai điểm cân bằng trước và sau thương mại",
+        "Hệ số góc của đường ngân sách đầu tư công"
+      ],
+      "explanation": "Tỷ lệ thay thế biên trong tiêu dùng (MRS) đo lường mức độ sẵn sàng đánh đổi giữa hai sản phẩm và tương ứng với độ dốc tuyệt đối của đường CIC tại điểm khảo sát."
+    },
+    {
+      "id": "ktqt_12",
+      "chapter": "ch2",
+      "heading": "Heckscher-Ohlin Model",
+      "quote": "Factor intensity + factor abundance → trade pattern",
+      "question": "Cơ chế cốt lõi định hình mô hình thương mại trong lý thuyết Heckscher-Ohlin (H-O) là:",
+      "options": [
+        "Factor intensity (cường độ sử dụng yếu tố) + factor abundance (mức độ dồi dào yếu tố) → trade pattern",
+        "Chính sách bảo hộ mậu dịch + mức thuế quan cao → thặng dư cán cân thương mại",
+        "Sự tương đồng về sở thích tiêu dùng + quy mô dân số → khối lượng hàng trao đổi",
+        "Sự khác biệt về chi phí vận chuyển đường biển → vị trí đặt nhà máy sản xuất"
+      ],
+      "explanation": "Định lý Heckscher-Ohlin khẳng định một quốc gia sẽ xuất khẩu mặt hàng sử dụng thâm dụng yếu tố sản xuất mà quốc gia đó sở hữu dồi dào, và nhập khẩu mặt hàng sử dụng yếu tố khan hiếm."
+    },
+    {
+      "id": "ktqt_13",
+      "chapter": "ch3",
+      "heading": "Tariff Definition",
+      "quote": "Tax/duty levied on a traded commodity as it crosses a national boundary",
+      "question": "Thuế quan (Tariff) được định nghĩa là:",
+      "options": [
+        "Tax/duty levied on a traded commodity as it crosses a national boundary (thuế/khoản thu đánh vào hàng hóa khi vượt qua biên giới quốc gia)",
+        "Khoản tiền chính phủ bồi hoàn cho người tiêu dùng khi mua hàng ngoại nhập",
+        "Mức giá cố định mà các nhà xuất khẩu phải chi trả cho chủ sở hữu bản quyền",
+        "Giới hạn số lượng hàng hóa tối đa được phép thông quan trong một niên độ tài chính"
+      ],
+      "explanation": "Thuế quan là nghĩa vụ thuế/lệ phí áp đặt lên hàng hóa thương mại khi hàng hóa đó được vận chuyển vượt qua ranh giới thuế quan hoặc biên giới quốc gia."
+    },
+    {
+      "id": "ktqt_14",
+      "chapter": "ch3",
+      "heading": "Ad valorem tariff",
+      "quote": "Ad valorem: fixed % of commodity value",
+      "question": "Thuế quan tính theo giá trị (Ad valorem tariff) được áp dụng theo cách nào?",
+      "options": [
+        "Tỷ lệ phần trăm cố định trên giá trị của hàng hóa (fixed % of commodity value)",
+        "Một khoản tiền mặt cố định trên mỗi đơn vị trọng lượng hoặc thể tích",
+        "Tỷ lệ thay đổi liên tục theo số lượng chuyến tàu chở hàng nhập bến",
+        "Khoản phí cố định áp dụng bình quân cho tất cả các loại tờ khai hải quan"
+      ],
+      "explanation": "Thuế quan giá trị (ad valorem) được tính bằng một tỷ lệ phần trăm nhất định trên tổng giá trị hàng hóa được kê khai (ví dụ: thuế 10% tính trên trị giá CIF)."
+    },
+    {
+      "id": "ktqt_15",
+      "chapter": "ch3",
+      "heading": "Specific tariff",
+      "quote": "Specific: fixed sum per physical unit",
+      "question": "Thuế quan đặc định / cụ thể (Specific tariff) được xác định trên cơ sở nào?",
+      "options": [
+        "Khoản tiền cố định trên mỗi đơn vị vật lý của hàng hóa (fixed sum per physical unit)",
+        "Tỷ lệ phần trăm không đổi tính trên giá hóa đơn của sản phẩm",
+        "Tỷ lệ đóng góp theo lợi nhuận sau thuế của doanh nghiệp sản xuất",
+        "Mức phụ thu tính theo số dặm vận chuyển trên hải trình quốc tế"
+      ],
+      "explanation": "Thuế đặc định áp một mức tiền nhất định cho mỗi đơn vị hiện vật (chẳng hạn 45 USD cho mỗi chiếc ti vi nhập khẩu, bất kể giá trị ti vi đắt hay rẻ)."
+    },
+    {
+      "id": "ktqt_16",
+      "chapter": "ch3",
+      "heading": "Consumer Surplus",
+      "quote": "Consumer surplus (CS) Difference between willingness to pay and actual payment",
+      "question": "Thặng dư tiêu dùng (Consumer Surplus - CS) phản ánh đại lượng kinh tế nào?",
+      "options": [
+        "Chênh lệch giữa mức sẵn lòng chi trả của người mua và số tiền thực tế phải trả",
+        "Tổng số tiền người tiêu dùng đã chi ra để mua sắm hàng hóa trong kỳ",
+        "Khoản lợi nhuận mà người tiêu dùng nhận lại được từ chương trình giảm giá",
+        "Phần giá trị hàng hóa vượt trội hơn năng lực chi trả của hộ gia đình"
+      ],
+      "explanation": "Consumer Surplus là khoản thặng dư đo lường lợi ích ròng của người tiêu dùng, bằng khoảng chênh lệch giữa mức giá tối đa họ sẵn sàng trả và giá thực tế họ thanh toán trên thị trường."
+    },
+    {
+      "id": "ktqt_17",
+      "chapter": "ch3",
+      "heading": "Producer Surplus",
+      "quote": "Producer surplus (PS) Difference between what producers are willing to supply for and the amount actually received",
+      "question": "Thặng dư sản xuất (Producer Surplus - PS) được xác định bằng khoảng chênh lệch nào?",
+      "options": [
+        "Chênh lệch giữa mức giá nhà sản xuất sẵn lòng cung ứng và số tiền thực tế nhận được",
+        "Tổng doanh thu bán hàng sau khi khấu trừ toàn bộ các chi phí tài chính",
+        "Khoản hỗ trợ lãi suất từ ngân sách nhà nước cho các doanh nghiệp xuất khẩu",
+        "Phần giá trị tài sản ròng tích lũy sau nhiều năm tham gia thị trường"
+      ],
+      "explanation": "Producer Surplus phản ánh lợi ích tăng thêm của người sản xuất, bằng hiệu số giữa số tiền thực tế nhận được từ việc bán sản phẩm và chi phí tối thiểu họ sẵn lòng cung ứng lượng hàng đó."
+    },
+    {
+      "id": "ktqt_18",
+      "chapter": "ch3",
+      "heading": "Effective Rate of Protection",
+      "quote": "ERP: value added & tariff structure",
+      "question": "Tỷ lệ bảo hộ thực tế (Effective Rate of Protection - ERP) đo lường tác động của cơ cấu thuế quan đến yếu tố nào?",
+      "options": [
+        "Giá trị gia tăng (value added) tạo ra trong ngành sản xuất nội địa",
+        "Tổng kim ngạch xuất khẩu hàng hóa công nghiệp của cả nước",
+        "Mức giá bán buôn bình quân của các mặt hàng tiêu dùng thiết yếu",
+        "Số lượng lao động tham gia vào khu vực sản xuất hàng thay thế nhập khẩu"
+      ],
+      "explanation": "ERP phản ánh mức độ bảo hộ thực sự đối với giá trị gia tăng (value added) trong nước của một ngành sau khi tính đến cả thuế đánh vào sản phẩm đầu ra và thuế đánh vào các yếu tố đầu vào."
+    },
+    {
+      "id": "ktqt_19",
+      "chapter": "ch4",
+      "heading": "Dumping margin",
+      "quote": "Dumping margin: amount by which normal value exceeds export price; the basis for anti-dumping duties",
+      "question": "Biên độ bán phá giá (Dumping margin) được xác định trên cơ sở nào?",
+      "options": [
+        "Mức chênh lệch mà giá trị thông thường vượt quá giá xuất khẩu (normal value exceeds export price)",
+        "Khoản phụ phí vận tải biển quốc tế vượt quá dự toán ban đầu",
+        "Tỷ lệ giữa chi phí sản xuất tại nước nhập khẩu và giá chào bán của đối thủ",
+        "Mức chênh lệch giữa giá bán buôn và giá bán lẻ tại thị trường nước nhập khẩu"
+      ],
+      "explanation": "Dumping margin là độ chênh lệch khi giá bán thông thường tại thị trường nội địa của nước xuất khẩu cao hơn giá bán ra nước ngoài, là căn cứ pháp lý để áp dụng thuế chống bán phá giá."
+    },
+    {
+      "id": "ktqt_20",
+      "chapter": "ch4",
+      "heading": "Voluntary Export Restraint",
+      "quote": "Importing country induces another country to reduce exports",
+      "question": "Biện pháp Hạn chế xuất khẩu tự nguyện (VER - Voluntary Export Restraint) diễn ra dưới hình thức nào?",
+      "options": [
+        "Nước nhập khẩu gây sức ép buộc nước xuất khẩu phải cắt giảm lượng hàng xuất khẩu",
+        "Nước xuất khẩu tự động tăng thuế để ngăn cản doanh nghiệp của mình bán hàng ra nước ngoài",
+        "Hai quốc gia cùng thỏa thuận giảm giá thành sản phẩm để kích cầu tiêu dùng chung",
+        "Doanh nghiệp tư nhân tự giác đình chỉ xuất khẩu nhằm giữ thương hiệu độc quyền"
+      ],
+      "explanation": "VER là hình thức hạn chế xuất khẩu có tính chất bắt buộc ngầm, trong đó nước nhập khẩu tác động khiến nước xuất khẩu buộc phải 'tự nguyện' giới hạn số lượng xuất khẩu để tránh bị dựng rào cản khắc nghiệt hơn."
+    }
+  ],
+  "nmlh": [
+    {
+      "id": "nmlh_1",
+      "chapter": "ch1",
+      "heading": "Quyền lực công cộng",
+      "quote": "Có quyền lực công cộng đặc biệt. Được đảm bảo bằng một bộ máy cưỡng chế chuyên nghiệp tách rời khỏi quần chúng (Công an, Tòa án, Quân đội) để duy trì trật tự.",
+      "question": "Đặc trưng quyền lực công cộng đặc biệt của nhà nước được thể hiện qua dấu hiệu nào?",
+      "options": [
+        "Được đảm bảo bằng một bộ máy cưỡng chế chuyên nghiệp tách rời khỏi quần chúng để duy trì trật tự",
+        "Dựa trên sự đồng thuận tuyệt đối và tự nguyện hoàn toàn của tất cả thành viên trong xã hội",
+        "Chỉ dựa vào các lời răn dạy đạo đức và dư luận xã hội mà không sử dụng bộ máy chuyên trách",
+        "Được thực hiện trực tiếp bởi toàn thể người dân mà không cần cơ quan tư pháp hay lực lượng vũ trang"
+      ],
+      "explanation": "Nhà nước thiết lập quyền lực công cộng đặc biệt, được tổ chức và đảm bảo bởi bộ máy chuyên trách có sức mạnh cưỡng chế (quân đội, cảnh sát, tòa án...) tách rời khỏi quần chúng."
+    },
+    {
+      "id": "nmlh_2",
+      "chapter": "ch1",
+      "heading": "Phân chia dân cư",
+      "quote": "Gắn liền với việc cấp CCCD, hộ khẩu.",
+      "question": "Dấu hiệu phân chia dân cư theo lãnh thổ của nhà nước gắn liền với việc quản lý nào trong thực tế?",
+      "options": [
+        "Gắn liền với việc cấp CCCD, hộ khẩu để quản lý theo đơn vị hành chính lãnh thổ",
+        "Quản lý theo gia phả, dòng họ và mối quan hệ huyết thống huyết thống cổ truyền",
+        "Phân loại con người theo mức độ giàu có và tài sản sở hữu",
+        "Xếp loại công dân hoàn toàn theo niềm tin tín ngưỡng tôn giáo"
+      ],
+      "explanation": "Nhà nước phân chia và quản lý dân cư theo ranh giới hành chính lãnh thổ chứ không theo thị tộc huyết thống, thể hiện qua các thủ tục quản lý cư trú, hộ tịch, CCCD."
+    },
+    {
+      "id": "nmlh_3",
+      "chapter": "ch1",
+      "heading": "Chủ quyền quốc gia",
+      "quote": "Có Chủ quyền (Sovereignty). Quyền tối cao về đối nội (tự quyết định chính sách quốc gia) và độc lập về đối ngoại (không bị quốc gia khác can thiệp).",
+      "question": "Chủ quyền quốc gia (Sovereignty) của nhà nước bao hàm hai khía cạnh cơ bản nào?",
+      "options": [
+        "Quyền tối cao về đối nội và độc lập về đối ngoại",
+        "Quyền sở hữu toàn bộ tài sản tư nhân và quyền kiểm soát mọi giao dịch thương mại",
+        "Quyền can thiệp quân sự vào các nước láng giềng và độc quyền khai thác tài nguyên biển",
+        "Quyền miễn trừ mọi trách nhiệm pháp lý đối với công dân của mình"
+      ],
+      "explanation": "Chủ quyền của nhà nước gồm quyền lực tối cao trong phạm vi biên giới quốc gia (đối nội) và quyền độc lập, tự chủ, không chịu sự can thiệp từ bên ngoài (đối ngoại)."
+    },
+    {
+      "id": "nmlh_4",
+      "chapter": "ch1",
+      "heading": "Ban hành pháp luật",
+      "quote": "Ban hành Pháp luật (Law). Nhà nước là tổ chức duy nhất có quyền đặt ra các quy tắc xử sự mang tính bắt buộc chung cho toàn xã hội để quản lý đất nước.",
+      "question": "Về thẩm quyền ban hành pháp luật, khẳng định nào sau đây là chính xác?",
+      "options": [
+        "Nhà nước là tổ chức duy nhất có quyền đặt ra các quy tắc xử sự mang tính bắt buộc chung cho toàn xã hội",
+        "Mọi tổ chức xã hội và doanh nghiệp tư nhân đều có quyền ban hành văn bản luật bắt buộc cả nước",
+        "Các hiệp hội ngành nghề có quyền tự đặt ra mức phạt tù cho hội viên vi phạm",
+        "Pháp luật chỉ do các tổ chức quốc tế ban hành và chuyển giao cho các nước áp dụng"
+      ],
+      "explanation": "Chỉ có nhà nước mới có chủ quyền và quyền lực công cộng tối cao để ban hành các quy phạm pháp luật có hiệu lực bắt buộc chung đối với mọi cá nhân, tổ chức trên lãnh thổ."
+    },
+    {
+      "id": "nmlh_5",
+      "chapter": "ch1",
+      "heading": "Thu thuế",
+      "quote": "Thu Thuế (Tax). Nhà nước không trực tiếp làm ra của cải vật chất nhưng lại phải nuôi dưỡng bộ máy quản lý khổng lồ và đầu tư công.",
+      "question": "Tại sao việc quy định và thu thuế mang tính bắt buộc là một đặc trưng cấu thành của nhà nước?",
+      "options": [
+        "Nhà nước không trực tiếp làm ra của cải vật chất nhưng phải duy trì bộ máy quản lý và đầu tư công",
+        "Để tịch thu tài sản của các tầng lớp dân cư nhằm xóa bỏ hoàn toàn quyền tư hữu",
+        "Để cung cấp nguồn kinh phí riêng cho các doanh nghiệp tư nhân làm từ thiện",
+        "Nhằm mục đích triệt tiêu hoạt động giao thương buôn bán trên thị trường"
+      ],
+      "explanation": "Thuế là nguồn tài chính bắt buộc nuôi dưỡng bộ máy quản lý nhà nước, phục vụ quốc phòng an ninh và thực hiện các chức năng công cộng."
+    },
+    {
+      "id": "nmlh_6",
+      "chapter": "ch2",
+      "heading": "Khái niệm IGOs",
+      "quote": "IGO (Intergovernmental Organization) là một chủ thể của luật quốc tế, có các thành viên chủ yếu là các quốc gia có chủ quyền",
+      "question": "Tổ chức Liên chính phủ (IGO) được định nghĩa là:",
+      "options": [
+        "Một chủ thể của luật quốc tế, có các thành viên chủ yếu là các quốc gia có chủ quyền",
+        "Một doanh nghiệp liên doanh đa quốc gia hoạt động vì mục đích tìm kiếm lợi nhuận",
+        "Một hiệp hội tự nguyện gồm các cá nhân hoạt động trong lĩnh vực phi lợi nhuận",
+        "Một cơ quan thuộc chính phủ một quốc gia nhưng đặt trụ sở tại nước ngoài"
+      ],
+      "explanation": "IGOs là tổ chức liên chính phủ được thành lập bởi các điều ước quốc tế giữa các quốc gia có chủ quyền, có tư cách chủ thể độc lập của luật quốc tế."
+    },
+    {
+      "id": "nmlh_7",
+      "chapter": "ch2",
+      "heading": "Thành viên IGOs",
+      "quote": "Thành viên là quốc gia có chủ quyền. Chỉ có chính phủ của các quốc gia độc lập mới có quyền ký kết tham gia (Ví dụ: Chính phủ Việt Nam tham gia Liên Hợp Quốc).",
+      "question": "Ai có quyền đại diện ký kết tham gia làm thành viên của các Tổ chức Liên chính phủ (IGOs)?",
+      "options": [
+        "Chính phủ của các quốc gia độc lập có chủ quyền",
+        "Bất kỳ công dân hoặc nhóm lợi ích tư nhân nào có năng lực tài chính",
+        "Các tập đoàn kinh tế thương mại có chi nhánh trên 5 châu lục",
+        "Chỉ các tổ chức phi chính phủ (NGOs) mới có quyền gia nhập"
+      ],
+      "explanation": "Thành viên của IGOs là các quốc gia có chủ quyền, do chính phủ hợp pháp đại diện ký kết và thực thi các cam kết quốc tế."
+    },
+    {
+      "id": "nmlh_8",
+      "chapter": "ch2",
+      "heading": "Tư cách pháp nhân IGO",
+      "quote": "Tư cách pháp nhân quốc tế riêng. IGO có thể tự nhân danh mình để kiện, bị kiện hoặc sở hữu tài sản độc lập với các quốc gia thành viên đóng góp.",
+      "question": "Đặc điểm 'Tư cách pháp nhân quốc tế riêng' của IGO mang ý nghĩa gì?",
+      "options": [
+        "IGO có thể tự nhân danh mình để kiện, bị kiện hoặc sở hữu tài sản độc lập với các quốc gia thành viên",
+        "Mọi quyết định của IGO đều do nguyên thủ của quốc gia giàu nhất tự mình ra lệnh",
+        "IGO không có tài sản riêng mà toàn bộ chi phí đều gắn vào ngân sách của nước sở tại",
+        "Khi có tranh chấp, IGO không được phép tham gia bất kỳ thủ tục tố tụng pháp lý nào"
+      ],
+      "explanation": "Tư cách pháp nhân quốc tế độc lập cho phép IGO tự mình tham gia các giao dịch pháp lý, sở hữu tài sản, ký thỏa thuận và tham gia giải quyết tranh chấp."
+    },
+    {
+      "id": "nmlh_9",
+      "chapter": "ch3",
+      "heading": "Hiến pháp",
+      "quote": "Mọi văn bản khác không được trái với Hiến pháp",
+      "question": "Trong trật tự thứ bậc các văn bản quy phạm pháp luật, nguyên tắc đối với Hiến pháp là gì?",
+      "options": [
+        "Mọi văn bản quy phạm pháp luật khác đều không được trái với Hiến pháp",
+        "Các thông tư chuyên ngành có thể tạm đình chỉ thi hành các điều khoản của Hiến pháp",
+        "Hiến pháp có giá trị pháp lý thấp hơn luật của các tổ chức quốc tế tư nhân",
+        "Nghị định của Chính phủ có quyền thay đổi các quy định về quyền cơ bản trong Hiến pháp"
+      ],
+      "explanation": "Hiến pháp là đạo luật cơ bản có hiệu lực pháp lý cao nhất; bất kỳ văn bản quy phạm pháp luật nào trái với Hiến pháp đều phải bị bãi bỏ hoặc sửa đổi."
+    },
+    {
+      "id": "nmlh_10",
+      "chapter": "ch3",
+      "heading": "Pháp luật tự nhiên",
+      "quote": "xuất phát từ tự nhiên, lý trí con người hoặc ý chí của Thượng đế.",
+      "question": "Trường phái Pháp luật tự nhiên (Natural Law) quan niệm nguồn gốc của pháp luật là gì?",
+      "options": [
+        "Xuất phát từ tự nhiên, lý trí con người hoặc ý chí của Thượng Đế",
+        "Do cơ quan lập pháp ban hành thông qua các quy trình thủ tục hành chính thuần túy",
+        "Là sản phẩm ý chí chủ quan độc đoán áp đặt của giai cấp cầm quyền",
+        "Chỉ được hình thành sau khi các bên ký kết hợp đồng dân sự cụ thể"
+      ],
+      "explanation": "Pháp luật tự nhiên cho rằng quyền con người và các giá trị công lý xuất phát từ tự nhiên, lý tính phổ quát của nhân loại trước khi nhà nước thành văn ghi nhận."
+    },
+    {
+      "id": "nmlh_11",
+      "chapter": "ch4",
+      "heading": "Cấu trúc 3 thành phần",
+      "quote": "Giả định - Quy định - Chế tài",
+      "question": "Ba bộ phận cấu thành logic thông thường của một quy phạm pháp luật là:",
+      "options": [
+        "Giả định - Quy định - Chế tài",
+        "Mở đầu - Nội dung - Biện pháp thi hành",
+        "Chủ thể - Khách thể - Ý chí nhà nước",
+        "Điều kiện - Thẩm quyền - Quyền lực"
+      ],
+      "explanation": "Quy phạm pháp luật thường được xây dựng theo mô hình 3 bộ phận: Giả định (hoàn cảnh, chủ thể), Quy định (mệnh lệnh hành vi) và Chế tài (hậu quả bất lợi khi vi phạm)."
+    },
+    {
+      "id": "nmlh_12",
+      "chapter": "ch4",
+      "heading": "Giả định",
+      "quote": "Giả định (Hypothesis) Nêu rõ điều kiện, hoàn cảnh áp dụng và xác định đối tượng (chủ thể nào? trong hoàn cảnh nào?).",
+      "question": "Bộ phận 'Giả định' (Hypothesis) trong quy phạm pháp luật có vai trò gì?",
+      "options": [
+        "Nêu rõ điều kiện, hoàn cảnh áp dụng và xác định đối tượng chịu sự tác động",
+        "Chỉ rõ hình phạt tù hoặc số tiền phải nộp phạt khi có sai phạm",
+        "Nêu quy tắc xử sự bắt buộc phải thực hiện trong giao dịch",
+        "Quy định ngày tháng văn bản bắt đầu có hiệu lực thi hành"
+      ],
+      "explanation": "Giả định trả lời câu hỏi: Ai? Khi nào? Trong hoàn cảnh hay điều kiện nào thì quy tắc này được áp dụng."
+    },
+    {
+      "id": "nmlh_13",
+      "chapter": "ch4",
+      "heading": "Quy định",
+      "quote": "Quy định (Disposition) Nêu quy tắc xử sự (được làm gì, không được làm gì, phải làm gì).",
+      "question": "Bộ phận 'Quy định' (Disposition) trong quy phạm pháp luật xác định nội dung gì?",
+      "options": [
+        "Nêu quy tắc xử sự (được làm gì, không được làm gì, phải làm gì)",
+        "Nêu mức phạt tiền cụ thể khi chủ thể không thực hiện đúng nghĩa vụ",
+        "Xác định độ tuổi bắt đầu có năng lực pháp luật của công dân",
+        "Mô tả địa bàn áp dụng của các cơ quan thi hành án"
+      ],
+      "explanation": "Quy định là bộ phận cốt lõi nêu lên mệnh lệnh của nhà nước, xác định mô hình hành vi hợp pháp: được phép, ngăn cấm hoặc bắt buộc hành động."
+    },
+    {
+      "id": "nmlh_14",
+      "chapter": "ch4",
+      "heading": "Chế tài",
+      "quote": "Chế tài (Sanction) Hậu quả pháp lý bất lợi/hình phạt áp dụng khi không tuân thủ pháp luật",
+      "question": "Bộ phận 'Chế tài' (Sanction) trong quy phạm pháp luật quy định điều gì?",
+      "options": [
+        "Hậu quả pháp lý bất lợi hoặc hình phạt áp dụng khi không tuân thủ pháp luật",
+        "Các chính sách khen thưởng và tôn vinh người có thành tích tốt",
+        "Thời điểm chấm dứt hiệu lực của một bản án đã tuyên",
+        "Thủ tục đăng ký kinh doanh cho các hợp tác xã và hộ kinh doanh"
+      ],
+      "explanation": "Chế tài nêu rõ những biện pháp tác động cưỡng chế mang tính bất lợi mà nhà nước áp dụng đối với chủ thể vi phạm quy phạm pháp luật."
+    },
+    {
+      "id": "nmlh_15",
+      "chapter": "ch5",
+      "heading": "Sự biến pháp lý",
+      "quote": "Sự biến pháp lý (Objective legal facts) Xảy ra ngoài ý chí của con người (sinh, tử, thiên tai, đạt đến độ tuổi).",
+      "question": "Sự kiện pháp lý nào sau đây được phân loại là 'Sự biến pháp lý' (Objective legal facts)?",
+      "options": [
+        "Sự kiện xảy ra ngoài ý chí của con người (như sinh ra, qua đời, thiên tai bão lũ)",
+        "Việc hai bên ký kết hợp đồng mua bán căn hộ tại phòng công chứng",
+        "Hành vi cố ý vượt đèn đỏ gây nguy hiểm cho người đi đường",
+        "Việc nộp đơn khởi kiện đòi bồi thường thiệt hại tại tòa án"
+      ],
+      "explanation": "Sự biến pháp lý là hiện tượng tự nhiên hoặc biến cố khách quan xảy ra ngoài ý chí của con người nhưng pháp luật gắn việc xuất hiện của nó với hậu quả pháp lý."
+    },
+    {
+      "id": "nmlh_16",
+      "chapter": "ch5",
+      "heading": "Năng lực chủ thể",
+      "quote": "Năng lực pháp luật: Khả năng có quyền/nghĩa vụ. Năng lực hành vi: Khả năng tự mình thực hiện quyền/nghĩa vụ đó.",
+      "question": "Sự khác biệt cốt lõi giữa Năng lực pháp luật và Năng lực hành vi của cá nhân là:",
+      "options": [
+        "Năng lực pháp luật là khả năng có quyền/nghĩa vụ; Năng lực hành vi là khả năng tự mình thực hiện quyền/nghĩa vụ đó",
+        "Năng lực pháp luật chỉ có ở người trưởng thành; Năng lực hành vi xuất hiện ngay khi sinh ra",
+        "Năng lực pháp luật có thể bị bán hoặc chuyển nhượng; Năng lực hành vi thì không",
+        "Hai khái niệm hoàn toàn đồng nhất và không có sự phân biệt trong khoa học pháp lý"
+      ],
+      "explanation": "Năng lực pháp luật là tiền đề do nhà nước quy định công nhận tư cách có quyền; còn năng lực hành vi phụ thuộc vào độ tuổi, khả năng nhận thức để tự mình thực hiện bằng hành vi thực tế."
+    },
+    {
+      "id": "nmlh_17",
+      "chapter": "ch6",
+      "heading": "Dấu hiệu vi phạm pháp luật",
+      "quote": "Không có lỗi = Không vi phạm.",
+      "question": "Trong khoa học pháp lý, dấu hiệu về 'Lỗi' đối với hành vi vi phạm pháp luật được khẳng định như thế nào?",
+      "options": [
+        "Không có lỗi thì không có vi phạm pháp luật",
+        "Chỉ cần có hậu quả thiệt hại xảy ra là nghiễm nhiên coi là vi phạm pháp luật",
+        "Lỗi là yếu tố tùy nghi không bắt buộc phải chứng minh trong vụ án hình sự",
+        "Người mất hoàn toàn khả năng nhận thức vẫn bị coi là có lỗi khi vi phạm"
+      ],
+      "explanation": "Lỗi phản ánh thái độ chủ quan của chủ thể đối với hành vi nguy hiểm và hậu quả của nó. Một hành vi chỉ bị coi là vi phạm pháp luật nếu được thực hiện bởi chủ thể có lỗi (cố ý hoặc vô ý)."
+    },
+    {
+      "id": "nmlh_18",
+      "chapter": "ch6",
+      "heading": "Hành vi thực tế",
+      "quote": "Suy nghĩ đen tối trong đầu mà chưa làm thì không vi phạm.",
+      "question": "Để cấu thành một vi phạm pháp luật, dấu hiệu về mặt hành vi đòi hỏi điều kiện gì?",
+      "options": [
+        "Phải là hành vi thực tế thể hiện ra bên ngoài; ý nghĩ trong đầu mà chưa hành động thì không bị coi là vi phạm",
+        "Bất kỳ suy nghĩ chưa chuẩn mực nào trong nhận thức đều bị truy cứu trách nhiệm pháp lý",
+        "Chỉ những hành vi cố ý trực tiếp mới bị xử lý, hành vi vô ý không cần quan tâm",
+        "Chỉ áp dụng với những việc làm gây thiệt hại trên một trăm triệu đồng"
+      ],
+      "explanation": "Pháp luật chỉ điều chỉnh hành vi thực tế của con người (hành động hoặc không hành động) biểu hiện ra thế giới khách quan, không truy cứu suy nghĩ tư tưởng thuần túy."
+    },
+    {
+      "id": "nmlh_19",
+      "chapter": "ch7",
+      "heading": "Cấu trúc bên trong",
+      "quote": "Quy phạm pháp luật (Legal Norms). Là \"viên gạch\" đơn vị nhỏ nhất",
+      "question": "Trong cấu trúc bên trong (Internal Structure) của hệ thống pháp luật, đơn vị nhỏ nhất là:",
+      "options": [
+        "Quy phạm pháp luật (Legal Norms)",
+        "Chế định pháp luật (Law Institution)",
+        "Ngành luật (Law Branches)",
+        "Hệ thống văn bản luật của Quốc hội"
+      ],
+      "explanation": "Cấu trúc bên trong của hệ thống pháp luật gồm 3 cấp độ từ nhỏ đến lớn: Quy phạm pháp luật -> Chế định pháp luật -> Ngành luật."
+    },
+    {
+      "id": "nmlh_20",
+      "chapter": "ch7",
+      "heading": "Hiệu lực hồi tố",
+      "quote": "Quy định áp đặt trách nhiệm pháp lý mới đối với hành vi mà vào thời điểm thực hiện, pháp luật đương thời không coi là vi phạm pháp luật.",
+      "question": "Quy tắc cấm kỵ nhằm bảo vệ quyền con người trong việc áp dụng hiệu lực hồi tố (Retrospective effect) là gì?",
+      "options": [
+        "Không áp dụng hiệu lực hồi tố để áp đặt trách nhiệm pháp lý mới hoặc nặng hơn đối với hành vi quá khứ",
+        "Cho phép áp dụng luật mới để tăng nặng hình phạt cho mọi vụ án đã xử xong",
+        "Bắt buộc tất cả các đạo luật kinh tế mới đều phải hồi tố lại mười năm trước",
+        "Chỉ áp dụng hiệu lực hồi tố nếu có sự đồng thuận của nguyên đơn dân sự"
+      ],
+      "explanation": "Để bảo vệ quyền con người và nguyên tắc pháp quyền, pháp luật nghiêm cấm áp dụng hiệu lực hồi tố để đặt ra trách nhiệm pháp lý mới hoặc tăng nặng trách nhiệm pháp lý đối với hành vi đã diễn ra trước khi luật có hiệu lực."
+    }
+  ],
+  "sources": {
+    "ktqt": "KINH_TE_QUOC_TE.html",
+    "nmlh": "NhapMonLuatHoc.html"
+  }
+}

@@ -27,3 +27,31 @@ for subject in ('accounting','finance'):
         assert item['options'][item['answer']]==q['options'][0],f'{q["id"]}: rotated answer mismatch'
         count+=1
 print(f'PASS {count} new questions: local chapter evidence, distinct options, published wording and rotated answer keys')
+
+pilot_path = root / 'docs/practice-review/pilot-questions-review.json'
+if pilot_path.exists():
+    pilot = json.loads(pilot_path.read_text(encoding='utf-8'))
+    ktqt_source = (root / 'KTQT-LuyenDe.html').read_text(encoding='utf-8')
+    ktqt_sets = json.loads(re.search(r'const LOCAL_SETS = ([\s\S]*?);\r?\n', ktqt_source)[1])
+    nmlh_source = (root / 'NhapMonLuatHoc-LuyenDe.html').read_text(encoding='utf-8')
+    nmlh_sets = json.loads(re.search(r'const LOCAL_SETS = ([\s\S]*?);\r?\n', nmlh_source)[1])
+    published_pilot = {
+        'ktqt': next(s['questions'] for s in ktqt_sets if s['id'] == 'ktqt-quiz-comprehensive'),
+        'nmlh': next(s['questions'] for s in nmlh_sets if s['id'] == 'nmlh-quiz-comprehensive')
+    }
+    pilot_count = 0
+    for subject in ('ktqt', 'nmlh'):
+        tree = html5lib.parse((root / pilot['sources'][subject]).read_text(encoding='utf-8'))
+        assert len(published_pilot[subject]) == len(pilot[subject]) == 20
+        for q in pilot[subject]:
+            chapter = next(el for el in tree.iter() if el.attrib.get('id') == q['chapter'])
+            text = norm(' '.join(chapter.itertext()))
+            assert norm(q['quote']) in text, f'{q["id"]}: missing theory evidence {q["quote"]}'
+            assert len(q['options']) == len(set(q['options'])) == 4, f'{q["id"]}: invalid options'
+            assert q['explanation'].strip(), q['id']
+            item = next(p for p in published_pilot[subject] if p['id'] == q['id'])
+            assert item['question'] == q['question'] and item['explanation'] == q['explanation'], q['id']
+            assert sorted(item['options']) == sorted(q['options']), q['id']
+            assert item['options'][item['answer']] == q['options'][0], f'{q["id"]}: rotated answer mismatch'
+            pilot_count += 1
+    print(f'PASS {pilot_count} pilot questions: local chapter evidence, distinct options, published wording and rotated answer keys')

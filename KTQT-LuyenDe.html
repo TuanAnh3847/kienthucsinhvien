@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luyện đề Kinh tế quốc tế - Edu Connect</title>
+<meta name="description" content="Trang luyện đề Kinh tế quốc tế: ôn theo chương, trắc nghiệm 20 câu có đáp án và giải thích trích từ lý thuyết.">
+<meta name="keywords" content="kinh tế quốc tế, luyện đề kinh tế quốc tế, trắc nghiệm KTQT, international economics, edu connect">
+<meta name="author" content="Nguyễn Đình Tuấn Anh - Edu Connect">
+<meta property="og:title" content="Luyện đề Kinh tế quốc tế - Edu Connect">
+<meta property="og:description" content="Trang luyện đề Kinh tế quốc tế: ôn theo chương, trắc nghiệm 20 câu có đáp án và giải thích trích từ lý thuyết.">
+<meta property="og:image" content="https://kienthucsinhvien.id.vn/android-chrome-512x512.png">
+<meta property="og:url" content="https://kienthucsinhvien.id.vn/KTQT-LuyenDe">
+<meta property="og:type" content="article">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<script defer src="auth.js"></script>
+<style>
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+.glass-panel { background: rgba(255,255,255,0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.tab-active { border-bottom: 4px solid #0d9488; color: #0d9488; font-weight: 800; }
+@keyframes fadeIn { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn .45s ease-out forwards; }
+.modal-overlay { background-color: rgba(28,25,23,.75); backdrop-filter: blur(4px); }
+.exercise-card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.exercise-card:hover { transform: translateY(-3px); box-shadow: 0 18px 35px -24px rgba(13,148,136,.55); border-color: #5eead4; }
+.option-card { transition: all .15s ease; }
+.option-card:hover:not(:disabled) { border-color: #14b8a6; background: #f0fdfa; }
+.option-selected { border-color: #0d9488 !important; background: #ccfbf1 !important; color: #115e59; }
+.option-correct { border-color: #22c55e !important; background: #dcfce7 !important; color: #166534; }
+.option-wrong { border-color: #f43f5e !important; background: #ffe4e6 !important; color: #9f1239; }
+.pill { border: 1px solid #ccfbf1; background: #f0fdfa; color: #0f766e; }
+#practice-panel { scroll-margin-top: 96px; }
+</style>
+<link rel="stylesheet" href="/shared.css">
+</head>
+<body class="edu-practice-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+<nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="site-header-row flex justify-between items-center h-16">
+      <a href="/" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group whitespace-nowrap min-w-0">
+        <img src="/android-chrome-192x192.png" alt="Edu Connect" class="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-full shadow-sm border border-stone-200 group-hover:scale-105 transition-transform shrink-0">
+        <div class="flex flex-col justify-center min-w-0">
+          <h1 class="font-extrabold text-base sm:text-xl text-slate-900 tracking-tight leading-none">EDU CONNECT</h1>
+          <div class="max-w-[180px] sm:max-w-[260px] overflow-hidden" style="-webkit-mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);mask-image:linear-gradient(to right,black calc(100% - 25px),transparent 100%);">
+            <p class="text-[10px] sm:text-xs text-teal-700 font-bold uppercase tracking-wider mt-1">🌍 Luyện đề Kinh Tế Quốc Tế</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="flex items-center shrink-0">
+        <div class="flex px-2 sm:px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs sm:text-sm font-bold border border-green-200 items-center mr-2 sm:mr-4">
+          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2 animate-pulse"></span>
+          <span id="online-count" class="mr-1">...</span><span class="hidden sm:inline">online</span>
+        </div>
+        <div class="border-l border-stone-300 pl-3 sm:pl-4">
+          <button id="nav-login-btn" onclick="requestLogin()" class="hidden text-sm font-bold text-teal-700 bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded-lg border border-teal-200 transition-colors">Đăng nhập</button>
+          <div id="nav-user-profile" role="button" tabindex="0" aria-label="Đăng xuất" class="hidden flex items-center gap-2 cursor-pointer group" onclick="logoutReal()" title="Đăng xuất">
+            <img id="user-avatar" src="/android-chrome-192x192.png" alt="Avatar" class="w-8 h-8 rounded-full shadow-sm border border-teal-200 object-cover">
+            <span id="user-name" class="text-sm font-bold text-slate-800 hidden sm:block whitespace-nowrap">Sinh viên</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-nav" id="nav-menu">
+      <button onclick="switchMainTab('overview')" class="nav-btn tab-active px-3 py-2 text-sm font-bold transition-colors hover:text-teal-600">Tổng quan</button>
+      <button onclick="switchMainTab('chapter')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Theo chương</button>
+      <button onclick="switchMainTab('quiz')" class="nav-btn px-3 py-2 text-sm font-bold text-stone-500 transition-colors hover:text-teal-600">Trắc nghiệm</button>
+    </div>
+    <div class="chapter-select-row relative">
+      <select id="mobile-nav" aria-label="Chọn chương" onchange="switchMainTab(this.value)" class="w-full bg-stone-100 border border-stone-200 text-sm font-bold text-teal-800 rounded-md py-2 px-3 focus:ring-teal-500 focus:outline-none appearance-none">
+        <option value="overview">Tổng quan</option>
+        <option value="chapter">Luyện theo chương</option>
+        <option value="quiz">Luyện trắc nghiệm</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+  <section id="overview" class="tab-content block">
+    <div class="relative overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-sm p-6 md:p-10 mb-8">
+      <div class="absolute right-0 top-0 h-44 w-44 bg-teal-100 rounded-full blur-3xl opacity-80"></div>
+      <div class="absolute left-10 bottom-0 h-32 w-32 bg-blue-100 rounded-full blur-3xl opacity-70"></div>
+      <div class="relative z-10 grid lg:grid-cols-[1.4fr_.8fr] gap-8 items-center">
+        <div>
+          <span class="inline-flex items-center pill px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-4">🎯 Practice Pilot</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">Kho luyện đề Kinh Tế Quốc Tế</h2>
+          <p class="text-lg text-stone-600 max-w-2xl mb-6">Hệ thống 20 câu hỏi trắc nghiệm chuẩn mực bám sát 4 chương lý thuyết: thương mại cổ điển, mô hình hiện đại, thuế quan và rào cản phi thuế quan.</p>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="switchMainTab('chapter')" class="bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-3 rounded-xl shadow-sm transition-transform active:scale-[.98]">Bắt đầu luyện theo chương</button>
+            <button onclick="switchMainTab('quiz')" class="bg-white hover:bg-stone-50 text-teal-800 font-black px-5 py-3 rounded-xl border border-teal-200 shadow-sm transition-transform active:scale-[.98]">Vào đề tổng hợp</button>
+          </div>
+        </div>
+        <div class="bg-stone-900 text-white rounded-2xl p-6 shadow-xl">
+          <p class="text-xs uppercase tracking-widest text-teal-300 font-black mb-4">Bài luyện hiện có</p>
+          <div class="grid grid-cols-2 gap-3" id="overview-stats"></div>
+          <div class="mt-5 rounded-xl bg-white/10 p-4 border border-white/10">
+            <p class="text-sm text-stone-200">Chọn bài → Làm bài → Nộp bài → Xem kết quả và đối chiếu lý thuyết → Làm lại để củng cố kiến thức.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 mb-8">
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <div class="text-3xl mb-3">📚</div>
+        <h3 class="font-black text-lg text-slate-900 mb-2">Luyện theo chương</h3>
+        <p class="text-sm text-stone-600">Chia nhỏ các câu hỏi theo từng chương lý thuyết giúp sinh viên ôn tập có trọng tâm, nắm vững nguyên lý trước khi thử sức tổng hợp.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm">
+        <div class="text-3xl mb-3">✅</div>
+        <h3 class="font-black text-lg text-slate-900 mb-2">Đề tổng hợp</h3>
+        <p class="text-sm text-stone-600">20 câu hỏi trắc nghiệm bao quát các chủ đề quan trọng, có đáp án và giải thích trích xuất trực tiếp từ giáo trình.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter" class="tab-content hidden">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện theo chương</h2>
+      <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Chọn bài theo chương để kiểm tra độ hiểu sâu của từng đơn vị kiến thức trước khi làm bài tổng hợp.</p>
+    </div>
+    <div id="chapter-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <section id="quiz" class="tab-content hidden">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-teal-800 border-l-4 border-teal-600 pl-3 mb-2">Luyện trắc nghiệm tổng hợp</h2>
+      <p class="text-stone-600 bg-teal-50 p-4 rounded-lg">Đề tổng hợp 20 câu hỏi có chấm điểm tức thì, thống kê tỷ lệ đúng và đối chiếu giải thích chi tiết.</p>
+    </div>
+    <div id="quiz-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <p class="practice-theory-link"><a href="/KTQT">← Lý thuyết Kinh tế quốc tế</a></p>
+
+  <section id="practice-panel" class="hidden mt-10 animate-fade-in">
+    <div class="flex items-center justify-between gap-4 mb-4">
+      <button onclick="closePracticePanel()" class="bg-white hover:bg-stone-50 text-stone-700 font-bold px-4 py-2 rounded-xl border border-stone-200 shadow-sm">← Quay lại danh sách</button>
+      <span id="practice-badge" class="pill text-xs font-black px-3 py-1 rounded-full"></span>
+    </div>
+    <div id="practice-content"></div>
+  </section>
+</main>
+
+<footer class="border-t border-stone-200 bg-white mt-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-stone-500 flex flex-col md:flex-row justify-between gap-3">
+    <p><strong class="text-teal-700">Edu Connect</strong> · Luyện đề Kinh tế quốc tế</p>
+    <p><a href="/KTQT" class="font-bold text-teal-700 underline">← Về lý thuyết Kinh tế quốc tế</a></p>
+  </div>
+</footer>
+
+<script>
+const LOCAL_SETS = [{"id": "ktqt-ch1-classical", "title": "Chương 1: Classical Trade Theories", "category": "chapter", "mode": "mcq", "chapter": "Chương 1", "difficulty": "Easy", "duration": 15, "description": "Thuyết Trọng thương, Lợi thế tuyệt đối (Smith), Lợi thế so sánh (Ricardo) và Chi phí cơ hội.", "badge": "Luyện theo chương", "order": 1, "questions": [{"id": "ktqt_1", "question": "Theo quan điểm của trường phái Trọng thương (Mercantilism), thương mại quốc tế được nhìn nhận như thế nào?", "options": ["Là một trò chơi có tổng bằng không (zero-sum) cần sự can thiệp mạnh của chính phủ", "Là một trò chơi đôi bên cùng có lợi (positive-sum) dựa trên tự do cạnh tranh", "Là cơ chế tự cân bằng theo quy luật thị trường không cần bất kỳ sự quản lý nào", "Là hoạt động thuần túy tự nguyện không đem lại sự giàu mạnh cho quốc gia"], "answer": 0, "explanation": "Trường phái Trọng thương quan niệm của cải quốc gia đo bằng kim loại quý (vàng, bạc) và thương mại quốc tế là trò chơi zero-sum, do đó nhà nước phải can thiệp mạnh để xuất siêu."}, {"id": "ktqt_2", "question": "Theo Adam Smith (1776), lợi thế tuyệt đối (Absolute Advantage) trong sản xuất được thể hiện qua tiêu chí nào?", "options": ["Trữ lượng vàng bạc tích lũy và quy mô dân số lớn hơn các đối thủ", "Hiệu quả cao hơn trong sản xuất, thể hiện qua productivity cao hơn hoặc labor cost thấp hơn", "Mức thuế quan bảo hộ nội địa cao hơn nhằm hạn chế nhập khẩu thành phẩm", "Khả năng khai thác nguồn tài nguyên khoáng sản tự nhiên dù năng suất thấp hơn"], "answer": 1, "explanation": "Adam Smith chỉ ra lợi thế tuyệt đối là việc một quốc gia sản xuất hàng hóa hiệu quả hơn quốc gia khác, phản ánh qua năng suất (productivity) cao hơn hoặc chi phí thời gian lao động (labor cost) thấp hơn."}, {"id": "ktqt_3", "question": "Trong phân tích lý thuyết thương mại cổ điển, năng suất (Productivity) được định nghĩa là:", "options": ["Tổng chi phí tiền tệ chia cho tổng số lượng sản phẩm hoàn thành", "Số giờ lao động cần thiết để làm ra một đơn vị sản lượng chuẩn", "Sản lượng đầu ra trên một đơn vị yếu tố đầu vào (output per unit of input)", "Tỷ lệ giữa giá bán thị trường và chi phí nguyên liệu đầu vào"], "answer": 2, "explanation": "Năng suất (productivity) đo lường lượng sản lượng tạo ra được trên một đơn vị đầu vào (ví dụ: số tấn thép/giờ lao động)."}, {"id": "ktqt_4", "question": "Trong mô hình thương mại cổ điển với lao động là yếu tố duy nhất, chi phí lao động tính theo thời gian liên hệ thế nào với năng suất?", "options": ["labor cost = productivity / 2 (bằng một nửa năng suất)", "labor cost = 2 × productivity (gấp đôi năng suất)", "labor cost = 100 − productivity (bù trừ cho 100 đơn vị)", "labor cost = 1 / productivity (nghịch đảo của năng suất)"], "answer": 3, "explanation": "Nếu năng suất là 5 đơn vị/giờ thì thời gian lao động để tạo ra 1 đơn vị là 1/5 giờ. Do đó chi phí thời gian lao động là đại lượng nghịch đảo của năng suất."}, {"id": "ktqt_5", "question": "Theo David Ricardo (1817), một quốc gia có lợi thế so sánh (Comparative Advantage) ở hàng hóa nào?", "options": ["Khả năng sản xuất ở relative cost thấp hơn hoặc relative productivity cao hơn", "Hàng hóa có chi phí sản xuất tuyệt đối thấp nhất trên thị trường thế giới", "Hàng hóa mang lại doanh thu tiền mặt cao nhất cho các thương nhân xuất khẩu", "Mặt hàng đòi hỏi nhiều chi phí bảo hộ nhất khi thâm nhập thị trường nước ngoài"], "answer": 0, "explanation": "Lợi thế so sánh không đòi hỏi phải có lợi thế tuyệt đối, mà chỉ cần có khả năng sản xuất ở chi phí tương đối thấp hơn hoặc năng suất tương đối cao hơn."}, {"id": "ktqt_6", "question": "Theo lý thuyết chi phí cơ hội của Haberler, chi phí cơ hội của hàng hóa A được định nghĩa là:", "options": ["Số tiền mặt phải trả cho nhân công khi sản xuất thêm một đơn vị A", "Lượng B phải từ bỏ để giải phóng đủ nguồn lực sản xuất thêm một đơn vị A", "Tổng giá trị hàng hóa A được xuất khẩu sang thị trường nước ngoài", "Khoản thuế nhập khẩu mà người tiêu dùng phải gánh chịu khi mua hàng A"], "answer": 1, "explanation": "Chi phí cơ hội của sản phẩm A đo lường số lượng sản phẩm B buộc phải từ bỏ để giải phóng đủ tài nguyên sản xuất thêm một đơn vị sản phẩm A."}, {"id": "ktqt_7", "question": "Công thức xác định chi phí cơ hội của hàng hóa A (OC_A) theo năng suất là:", "options": ["OC_A = Productivity_A / Productivity_B", "OC_A = Productivity_A × Productivity_B", "OC_A = Productivity_B / Productivity_A", "OC_A = 1 / (Productivity_A × Productivity_B)"], "answer": 2, "explanation": "Chi phí cơ hội của A bằng năng suất của B chia cho năng suất của A (hoặc bằng chi phí lao động của A chia cho chi phí lao động của B)."}, {"id": "ktqt_8", "question": "Trong trường hợp chi phí không đổi (constant cost), đường PPF và tỷ giá so sánh có đặc điểm gì?", "options": ["PPF cong lõm về gốc tọa độ, OC tăng dần theo sản lượng", "PPF cong lồi, OC giảm dần khi mở rộng quy mô sản xuất", "PPF là đường hyperbol, comparative price bằng 0", "PPF thẳng, OC không đổi, comparative price = OC"], "answer": 3, "explanation": "Dưới giả định chi phí sản xuất không đổi, đường giới hạn khả năng sản xuất (PPF) là đường thẳng, chi phí cơ hội cố định dọc theo đường này và mức giá so sánh nội địa bằng chính chi phí cơ hội."}]}, {"id": "ktqt-ch2-standard", "title": "Chương 2: Modern / Standard Trade Theory", "category": "chapter", "mode": "mcq", "chapter": "Chương 2", "difficulty": "Medium", "duration": 12, "description": "Chi phí cơ hội tăng dần, đường bàng quan xã hội (CIC), tỷ lệ thay thế biên (MRS) và mô hình H-O.", "badge": "Luyện theo chương", "order": 2, "questions": [{"id": "ktqt_9", "question": "Quy luật chi phí cơ hội tăng dần (Increasing Opportunity Costs) được phát biểu như thế nào?", "options": ["Muốn sản xuất thêm từng đơn vị của một hàng hóa, quốc gia phải từ bỏ ngày càng nhiều hàng hóa kia", "Mỗi đơn vị sản xuất tăng thêm đòi hỏi lượng hàng hóa từ bỏ ngày càng giảm đi", "Chi phí cơ hội giữ nguyên không đổi tại mọi điểm trên đường biên sản xuất", "Quốc gia có thể gia tăng sản lượng của cả hai ngành mà không cần đánh đổi tài nguyên"], "answer": 0, "explanation": "Do các yếu tố sản xuất không đồng nhất và không được sử dụng theo cùng tỷ lệ giữa các ngành, việc chuyển dịch nguồn lực sẽ khiến lượng hàng hóa phải hy sinh ngày càng lớn hơn."}, {"id": "ktqt_10", "question": "Đường bàng quan xã hội (Community Indifference Curve - CIC) biểu thị tập hợp nào?", "options": ["Các mức sản lượng tối đa nền kinh tế có thể sản xuất với công nghệ hiện hữu", "Các tổ hợp hai hàng hóa đem lại cùng mức thỏa dụng cho quốc gia", "Khối lượng kim ngạch xuất khẩu và nhập khẩu cân bằng nhau tại mức thuế quan", "Tổng số lượng yếu tố sản xuất vốn và lao động được huy động trong xã hội"], "answer": 1, "explanation": "Đường bàng quan xã hội (CIC) thể hiện các tổ hợp tiêu dùng hai loại hàng hóa mang lại mức độ thỏa dụng (độ thỏa mãn) như nhau cho toàn thể quốc gia."}, {"id": "ktqt_11", "question": "Tỷ lệ thay thế biên trong tiêu dùng (MRS) được thể hiện hình học bằng:", "options": ["Độ dốc của đường giới hạn khả năng sản xuất (PPF) tại điểm sản xuất", "Khoảng cách giữa hai điểm cân bằng trước và sau thương mại", "Độ dốc tuyệt đối của CIC tại điểm tiêu dùng", "Hệ số góc của đường ngân sách đầu tư công"], "answer": 2, "explanation": "Tỷ lệ thay thế biên trong tiêu dùng (MRS) đo lường mức độ sẵn sàng đánh đổi giữa hai sản phẩm và tương ứng với độ dốc tuyệt đối của đường CIC tại điểm khảo sát."}, {"id": "ktqt_12", "question": "Cơ chế cốt lõi định hình mô hình thương mại trong lý thuyết Heckscher-Ohlin (H-O) là:", "options": ["Chính sách bảo hộ mậu dịch + mức thuế quan cao → thặng dư cán cân thương mại", "Sự tương đồng về sở thích tiêu dùng + quy mô dân số → khối lượng hàng trao đổi", "Sự khác biệt về chi phí vận chuyển đường biển → vị trí đặt nhà máy sản xuất", "Factor intensity (cường độ sử dụng yếu tố) + factor abundance (mức độ dồi dào yếu tố) → trade pattern"], "answer": 3, "explanation": "Định lý Heckscher-Ohlin khẳng định một quốc gia sẽ xuất khẩu mặt hàng sử dụng thâm dụng yếu tố sản xuất mà quốc gia đó sở hữu dồi dào, và nhập khẩu mặt hàng sử dụng yếu tố khan hiếm."}]}, {"id": "ktqt-ch3-tariffs", "title": "Chương 3: Tariffs & Protection", "category": "chapter", "mode": "mcq", "chapter": "Chương 3", "difficulty": "Medium", "duration": 15, "description": "Khái niệm thuế quan, thuế giá trị vs thuế đặc định, thặng dư CS/PS và tỷ lệ bảo hộ thực tế ERP.", "badge": "Luyện theo chương", "order": 3, "questions": [{"id": "ktqt_13", "question": "Thuế quan (Tariff) được định nghĩa là:", "options": ["Tax/duty levied on a traded commodity as it crosses a national boundary (thuế/khoản thu đánh vào hàng hóa khi vượt qua biên giới quốc gia)", "Khoản tiền chính phủ bồi hoàn cho người tiêu dùng khi mua hàng ngoại nhập", "Mức giá cố định mà các nhà xuất khẩu phải chi trả cho chủ sở hữu bản quyền", "Giới hạn số lượng hàng hóa tối đa được phép thông quan trong một niên độ tài chính"], "answer": 0, "explanation": "Thuế quan là nghĩa vụ thuế/lệ phí áp đặt lên hàng hóa thương mại khi hàng hóa đó được vận chuyển vượt qua ranh giới thuế quan hoặc biên giới quốc gia."}, {"id": "ktqt_14", "question": "Thuế quan tính theo giá trị (Ad valorem tariff) được áp dụng theo cách nào?", "options": ["Một khoản tiền mặt cố định trên mỗi đơn vị trọng lượng hoặc thể tích", "Tỷ lệ phần trăm cố định trên giá trị của hàng hóa (fixed % of commodity value)", "Tỷ lệ thay đổi liên tục theo số lượng chuyến tàu chở hàng nhập bến", "Khoản phí cố định áp dụng bình quân cho tất cả các loại tờ khai hải quan"], "answer": 1, "explanation": "Thuế quan giá trị (ad valorem) được tính bằng một tỷ lệ phần trăm nhất định trên tổng giá trị hàng hóa được kê khai (ví dụ: thuế 10% tính trên trị giá CIF)."}, {"id": "ktqt_15", "question": "Thuế quan đặc định / cụ thể (Specific tariff) được xác định trên cơ sở nào?", "options": ["Tỷ lệ phần trăm không đổi tính trên giá hóa đơn của sản phẩm", "Tỷ lệ đóng góp theo lợi nhuận sau thuế của doanh nghiệp sản xuất", "Khoản tiền cố định trên mỗi đơn vị vật lý của hàng hóa (fixed sum per physical unit)", "Mức phụ thu tính theo số dặm vận chuyển trên hải trình quốc tế"], "answer": 2, "explanation": "Thuế đặc định áp một mức tiền nhất định cho mỗi đơn vị hiện vật (chẳng hạn 45 USD cho mỗi chiếc ti vi nhập khẩu, bất kể giá trị ti vi đắt hay rẻ)."}, {"id": "ktqt_16", "question": "Thặng dư tiêu dùng (Consumer Surplus - CS) phản ánh đại lượng kinh tế nào?", "options": ["Tổng số tiền người tiêu dùng đã chi ra để mua sắm hàng hóa trong kỳ", "Khoản lợi nhuận mà người tiêu dùng nhận lại được từ chương trình giảm giá", "Phần giá trị hàng hóa vượt trội hơn năng lực chi trả của hộ gia đình", "Chênh lệch giữa mức sẵn lòng chi trả của người mua và số tiền thực tế phải trả"], "answer": 3, "explanation": "Consumer Surplus là khoản thặng dư đo lường lợi ích ròng của người tiêu dùng, bằng khoảng chênh lệch giữa mức giá tối đa họ sẵn sàng trả và giá thực tế họ thanh toán trên thị trường."}, {"id": "ktqt_17", "question": "Thặng dư sản xuất (Producer Surplus - PS) được xác định bằng khoảng chênh lệch nào?", "options": ["Chênh lệch giữa mức giá nhà sản xuất sẵn lòng cung ứng và số tiền thực tế nhận được", "Tổng doanh thu bán hàng sau khi khấu trừ toàn bộ các chi phí tài chính", "Khoản hỗ trợ lãi suất từ ngân sách nhà nước cho các doanh nghiệp xuất khẩu", "Phần giá trị tài sản ròng tích lũy sau nhiều năm tham gia thị trường"], "answer": 0, "explanation": "Producer Surplus phản ánh lợi ích tăng thêm của người sản xuất, bằng hiệu số giữa số tiền thực tế nhận được từ việc bán sản phẩm và chi phí tối thiểu họ sẵn lòng cung ứng lượng hàng đó."}, {"id": "ktqt_18", "question": "Tỷ lệ bảo hộ thực tế (Effective Rate of Protection - ERP) đo lường tác động của cơ cấu thuế quan đến yếu tố nào?", "options": ["Tổng kim ngạch xuất khẩu hàng hóa công nghiệp của cả nước", "Giá trị gia tăng (value added) tạo ra trong ngành sản xuất nội địa", "Mức giá bán buôn bình quân của các mặt hàng tiêu dùng thiết yếu", "Số lượng lao động tham gia vào khu vực sản xuất hàng thay thế nhập khẩu"], "answer": 1, "explanation": "ERP phản ánh mức độ bảo hộ thực sự đối với giá trị gia tăng (value added) trong nước của một ngành sau khi tính đến cả thuế đánh vào sản phẩm đầu ra và thuế đánh vào các yếu tố đầu vào."}]}, {"id": "ktqt-ch4-nontariff", "title": "Chương 4: Non-Tariff Barriers & Dumping", "category": "chapter", "mode": "mcq", "chapter": "Chương 4", "difficulty": "Medium", "duration": 10, "description": "Biên độ phá giá (Dumping margin), hạn chế xuất khẩu tự nguyện (VER) và rào cản phi thuế quan.", "badge": "Luyện theo chương", "order": 4, "questions": [{"id": "ktqt_19", "question": "Biên độ bán phá giá (Dumping margin) được xác định trên cơ sở nào?", "options": ["Khoản phụ phí vận tải biển quốc tế vượt quá dự toán ban đầu", "Tỷ lệ giữa chi phí sản xuất tại nước nhập khẩu và giá chào bán của đối thủ", "Mức chênh lệch mà giá trị thông thường vượt quá giá xuất khẩu (normal value exceeds export price)", "Mức chênh lệch giữa giá bán buôn và giá bán lẻ tại thị trường nước nhập khẩu"], "answer": 2, "explanation": "Dumping margin là độ chênh lệch khi giá bán thông thường tại thị trường nội địa của nước xuất khẩu cao hơn giá bán ra nước ngoài, là căn cứ pháp lý để áp dụng thuế chống bán phá giá."}, {"id": "ktqt_20", "question": "Biện pháp Hạn chế xuất khẩu tự nguyện (VER - Voluntary Export Restraint) diễn ra dưới hình thức nào?", "options": ["Nước xuất khẩu tự động tăng thuế để ngăn cản doanh nghiệp của mình bán hàng ra nước ngoài", "Hai quốc gia cùng thỏa thuận giảm giá thành sản phẩm để kích cầu tiêu dùng chung", "Doanh nghiệp tư nhân tự giác đình chỉ xuất khẩu nhằm giữ thương hiệu độc quyền", "Nước nhập khẩu gây sức ép buộc nước xuất khẩu phải cắt giảm lượng hàng xuất khẩu"], "answer": 3, "explanation": "VER là hình thức hạn chế xuất khẩu có tính chất bắt buộc ngầm, trong đó nước nhập khẩu tác động khiến nước xuất khẩu buộc phải 'tự nguyện' giới hạn số lượng xuất khẩu để tránh bị dựng rào cản khắc nghiệt hơn."}]}, {"id": "ktqt-quiz-comprehensive", "title": "Đề trắc nghiệm tổng hợp 20 câu Kinh tế quốc tế", "category": "quiz", "mode": "mcq", "chapter": "Tổng hợp", "difficulty": "Medium", "duration": 30, "description": "Bộ 20 câu trắc nghiệm bao quát Chương 1 đến Chương 4 có giải thích chi tiết trích xuất từ lý thuyết.", "badge": "Trắc nghiệm tổng hợp", "order": 5, "questions": [{"id": "ktqt_1", "question": "Theo quan điểm của trường phái Trọng thương (Mercantilism), thương mại quốc tế được nhìn nhận như thế nào?", "options": ["Là một trò chơi có tổng bằng không (zero-sum) cần sự can thiệp mạnh của chính phủ", "Là một trò chơi đôi bên cùng có lợi (positive-sum) dựa trên tự do cạnh tranh", "Là cơ chế tự cân bằng theo quy luật thị trường không cần bất kỳ sự quản lý nào", "Là hoạt động thuần túy tự nguyện không đem lại sự giàu mạnh cho quốc gia"], "answer": 0, "explanation": "Trường phái Trọng thương quan niệm của cải quốc gia đo bằng kim loại quý (vàng, bạc) và thương mại quốc tế là trò chơi zero-sum, do đó nhà nước phải can thiệp mạnh để xuất siêu."}, {"id": "ktqt_2", "question": "Theo Adam Smith (1776), lợi thế tuyệt đối (Absolute Advantage) trong sản xuất được thể hiện qua tiêu chí nào?", "options": ["Trữ lượng vàng bạc tích lũy và quy mô dân số lớn hơn các đối thủ", "Hiệu quả cao hơn trong sản xuất, thể hiện qua productivity cao hơn hoặc labor cost thấp hơn", "Mức thuế quan bảo hộ nội địa cao hơn nhằm hạn chế nhập khẩu thành phẩm", "Khả năng khai thác nguồn tài nguyên khoáng sản tự nhiên dù năng suất thấp hơn"], "answer": 1, "explanation": "Adam Smith chỉ ra lợi thế tuyệt đối là việc một quốc gia sản xuất hàng hóa hiệu quả hơn quốc gia khác, phản ánh qua năng suất (productivity) cao hơn hoặc chi phí thời gian lao động (labor cost) thấp hơn."}, {"id": "ktqt_3", "question": "Trong phân tích lý thuyết thương mại cổ điển, năng suất (Productivity) được định nghĩa là:", "options": ["Tổng chi phí tiền tệ chia cho tổng số lượng sản phẩm hoàn thành", "Số giờ lao động cần thiết để làm ra một đơn vị sản lượng chuẩn", "Sản lượng đầu ra trên một đơn vị yếu tố đầu vào (output per unit of input)", "Tỷ lệ giữa giá bán thị trường và chi phí nguyên liệu đầu vào"], "answer": 2, "explanation": "Năng suất (productivity) đo lường lượng sản lượng tạo ra được trên một đơn vị đầu vào (ví dụ: số tấn thép/giờ lao động)."}, {"id": "ktqt_4", "question": "Trong mô hình thương mại cổ điển với lao động là yếu tố duy nhất, chi phí lao động tính theo thời gian liên hệ thế nào với năng suất?", "options": ["labor cost = productivity / 2 (bằng một nửa năng suất)", "labor cost = 2 × productivity (gấp đôi năng suất)", "labor cost = 100 − productivity (bù trừ cho 100 đơn vị)", "labor cost = 1 / productivity (nghịch đảo của năng suất)"], "answer": 3, "explanation": "Nếu năng suất là 5 đơn vị/giờ thì thời gian lao động để tạo ra 1 đơn vị là 1/5 giờ. Do đó chi phí thời gian lao động là đại lượng nghịch đảo của năng suất."}, {"id": "ktqt_5", "question": "Theo David Ricardo (1817), một quốc gia có lợi thế so sánh (Comparative Advantage) ở hàng hóa nào?", "options": ["Khả năng sản xuất ở relative cost thấp hơn hoặc relative productivity cao hơn", "Hàng hóa có chi phí sản xuất tuyệt đối thấp nhất trên thị trường thế giới", "Hàng hóa mang lại doanh thu tiền mặt cao nhất cho các thương nhân xuất khẩu", "Mặt hàng đòi hỏi nhiều chi phí bảo hộ nhất khi thâm nhập thị trường nước ngoài"], "answer": 0, "explanation": "Lợi thế so sánh không đòi hỏi phải có lợi thế tuyệt đối, mà chỉ cần có khả năng sản xuất ở chi phí tương đối thấp hơn hoặc năng suất tương đối cao hơn."}, {"id": "ktqt_6", "question": "Theo lý thuyết chi phí cơ hội của Haberler, chi phí cơ hội của hàng hóa A được định nghĩa là:", "options": ["Số tiền mặt phải trả cho nhân công khi sản xuất thêm một đơn vị A", "Lượng B phải từ bỏ để giải phóng đủ nguồn lực sản xuất thêm một đơn vị A", "Tổng giá trị hàng hóa A được xuất khẩu sang thị trường nước ngoài", "Khoản thuế nhập khẩu mà người tiêu dùng phải gánh chịu khi mua hàng A"], "answer": 1, "explanation": "Chi phí cơ hội của sản phẩm A đo lường số lượng sản phẩm B buộc phải từ bỏ để giải phóng đủ tài nguyên sản xuất thêm một đơn vị sản phẩm A."}, {"id": "ktqt_7", "question": "Công thức xác định chi phí cơ hội của hàng hóa A (OC_A) theo năng suất là:", "options": ["OC_A = Productivity_A / Productivity_B", "OC_A = Productivity_A × Productivity_B", "OC_A = Productivity_B / Productivity_A", "OC_A = 1 / (Productivity_A × Productivity_B)"], "answer": 2, "explanation": "Chi phí cơ hội của A bằng năng suất của B chia cho năng suất của A (hoặc bằng chi phí lao động của A chia cho chi phí lao động của B)."}, {"id": "ktqt_8", "question": "Trong trường hợp chi phí không đổi (constant cost), đường PPF và tỷ giá so sánh có đặc điểm gì?", "options": ["PPF cong lõm về gốc tọa độ, OC tăng dần theo sản lượng", "PPF cong lồi, OC giảm dần khi mở rộng quy mô sản xuất", "PPF là đường hyperbol, comparative price bằng 0", "PPF thẳng, OC không đổi, comparative price = OC"], "answer": 3, "explanation": "Dưới giả định chi phí sản xuất không đổi, đường giới hạn khả năng sản xuất (PPF) là đường thẳng, chi phí cơ hội cố định dọc theo đường này và mức giá so sánh nội địa bằng chính chi phí cơ hội."}, {"id": "ktqt_9", "question": "Quy luật chi phí cơ hội tăng dần (Increasing Opportunity Costs) được phát biểu như thế nào?", "options": ["Muốn sản xuất thêm từng đơn vị của một hàng hóa, quốc gia phải từ bỏ ngày càng nhiều hàng hóa kia", "Mỗi đơn vị sản xuất tăng thêm đòi hỏi lượng hàng hóa từ bỏ ngày càng giảm đi", "Chi phí cơ hội giữ nguyên không đổi tại mọi điểm trên đường biên sản xuất", "Quốc gia có thể gia tăng sản lượng của cả hai ngành mà không cần đánh đổi tài nguyên"], "answer": 0, "explanation": "Do các yếu tố sản xuất không đồng nhất và không được sử dụng theo cùng tỷ lệ giữa các ngành, việc chuyển dịch nguồn lực sẽ khiến lượng hàng hóa phải hy sinh ngày càng lớn hơn."}, {"id": "ktqt_10", "question": "Đường bàng quan xã hội (Community Indifference Curve - CIC) biểu thị tập hợp nào?", "options": ["Các mức sản lượng tối đa nền kinh tế có thể sản xuất với công nghệ hiện hữu", "Các tổ hợp hai hàng hóa đem lại cùng mức thỏa dụng cho quốc gia", "Khối lượng kim ngạch xuất khẩu và nhập khẩu cân bằng nhau tại mức thuế quan", "Tổng số lượng yếu tố sản xuất vốn và lao động được huy động trong xã hội"], "answer": 1, "explanation": "Đường bàng quan xã hội (CIC) thể hiện các tổ hợp tiêu dùng hai loại hàng hóa mang lại mức độ thỏa dụng (độ thỏa mãn) như nhau cho toàn thể quốc gia."}, {"id": "ktqt_11", "question": "Tỷ lệ thay thế biên trong tiêu dùng (MRS) được thể hiện hình học bằng:", "options": ["Độ dốc của đường giới hạn khả năng sản xuất (PPF) tại điểm sản xuất", "Khoảng cách giữa hai điểm cân bằng trước và sau thương mại", "Độ dốc tuyệt đối của CIC tại điểm tiêu dùng", "Hệ số góc của đường ngân sách đầu tư công"], "answer": 2, "explanation": "Tỷ lệ thay thế biên trong tiêu dùng (MRS) đo lường mức độ sẵn sàng đánh đổi giữa hai sản phẩm và tương ứng với độ dốc tuyệt đối của đường CIC tại điểm khảo sát."}, {"id": "ktqt_12", "question": "Cơ chế cốt lõi định hình mô hình thương mại trong lý thuyết Heckscher-Ohlin (H-O) là:", "options": ["Chính sách bảo hộ mậu dịch + mức thuế quan cao → thặng dư cán cân thương mại", "Sự tương đồng về sở thích tiêu dùng + quy mô dân số → khối lượng hàng trao đổi", "Sự khác biệt về chi phí vận chuyển đường biển → vị trí đặt nhà máy sản xuất", "Factor intensity (cường độ sử dụng yếu tố) + factor abundance (mức độ dồi dào yếu tố) → trade pattern"], "answer": 3, "explanation": "Định lý Heckscher-Ohlin khẳng định một quốc gia sẽ xuất khẩu mặt hàng sử dụng thâm dụng yếu tố sản xuất mà quốc gia đó sở hữu dồi dào, và nhập khẩu mặt hàng sử dụng yếu tố khan hiếm."}, {"id": "ktqt_13", "question": "Thuế quan (Tariff) được định nghĩa là:", "options": ["Tax/duty levied on a traded commodity as it crosses a national boundary (thuế/khoản thu đánh vào hàng hóa khi vượt qua biên giới quốc gia)", "Khoản tiền chính phủ bồi hoàn cho người tiêu dùng khi mua hàng ngoại nhập", "Mức giá cố định mà các nhà xuất khẩu phải chi trả cho chủ sở hữu bản quyền", "Giới hạn số lượng hàng hóa tối đa được phép thông quan trong một niên độ tài chính"], "answer": 0, "explanation": "Thuế quan là nghĩa vụ thuế/lệ phí áp đặt lên hàng hóa thương mại khi hàng hóa đó được vận chuyển vượt qua ranh giới thuế quan hoặc biên giới quốc gia."}, {"id": "ktqt_14", "question": "Thuế quan tính theo giá trị (Ad valorem tariff) được áp dụng theo cách nào?", "options": ["Một khoản tiền mặt cố định trên mỗi đơn vị trọng lượng hoặc thể tích", "Tỷ lệ phần trăm cố định trên giá trị của hàng hóa (fixed % of commodity value)", "Tỷ lệ thay đổi liên tục theo số lượng chuyến tàu chở hàng nhập bến", "Khoản phí cố định áp dụng bình quân cho tất cả các loại tờ khai hải quan"], "answer": 1, "explanation": "Thuế quan giá trị (ad valorem) được tính bằng một tỷ lệ phần trăm nhất định trên tổng giá trị hàng hóa được kê khai (ví dụ: thuế 10% tính trên trị giá CIF)."}, {"id": "ktqt_15", "question": "Thuế quan đặc định / cụ thể (Specific tariff) được xác định trên cơ sở nào?", "options": ["Tỷ lệ phần trăm không đổi tính trên giá hóa đơn của sản phẩm", "Tỷ lệ đóng góp theo lợi nhuận sau thuế của doanh nghiệp sản xuất", "Khoản tiền cố định trên mỗi đơn vị vật lý của hàng hóa (fixed sum per physical unit)", "Mức phụ thu tính theo số dặm vận chuyển trên hải trình quốc tế"], "answer": 2, "explanation": "Thuế đặc định áp một mức tiền nhất định cho mỗi đơn vị hiện vật (chẳng hạn 45 USD cho mỗi chiếc ti vi nhập khẩu, bất kể giá trị ti vi đắt hay rẻ)."}, {"id": "ktqt_16", "question": "Thặng dư tiêu dùng (Consumer Surplus - CS) phản ánh đại lượng kinh tế nào?", "options": ["Tổng số tiền người tiêu dùng đã chi ra để mua sắm hàng hóa trong kỳ", "Khoản lợi nhuận mà người tiêu dùng nhận lại được từ chương trình giảm giá", "Phần giá trị hàng hóa vượt trội hơn năng lực chi trả của hộ gia đình", "Chênh lệch giữa mức sẵn lòng chi trả của người mua và số tiền thực tế phải trả"], "answer": 3, "explanation": "Consumer Surplus là khoản thặng dư đo lường lợi ích ròng của người tiêu dùng, bằng khoảng chênh lệch giữa mức giá tối đa họ sẵn sàng trả và giá thực tế họ thanh toán trên thị trường."}, {"id": "ktqt_17", "question": "Thặng dư sản xuất (Producer Surplus - PS) được xác định bằng khoảng chênh lệch nào?", "options": ["Chênh lệch giữa mức giá nhà sản xuất sẵn lòng cung ứng và số tiền thực tế nhận được", "Tổng doanh thu bán hàng sau khi khấu trừ toàn bộ các chi phí tài chính", "Khoản hỗ trợ lãi suất từ ngân sách nhà nước cho các doanh nghiệp xuất khẩu", "Phần giá trị tài sản ròng tích lũy sau nhiều năm tham gia thị trường"], "answer": 0, "explanation": "Producer Surplus phản ánh lợi ích tăng thêm của người sản xuất, bằng hiệu số giữa số tiền thực tế nhận được từ việc bán sản phẩm và chi phí tối thiểu họ sẵn lòng cung ứng lượng hàng đó."}, {"id": "ktqt_18", "question": "Tỷ lệ bảo hộ thực tế (Effective Rate of Protection - ERP) đo lường tác động của cơ cấu thuế quan đến yếu tố nào?", "options": ["Tổng kim ngạch xuất khẩu hàng hóa công nghiệp của cả nước", "Giá trị gia tăng (value added) tạo ra trong ngành sản xuất nội địa", "Mức giá bán buôn bình quân của các mặt hàng tiêu dùng thiết yếu", "Số lượng lao động tham gia vào khu vực sản xuất hàng thay thế nhập khẩu"], "answer": 1, "explanation": "ERP phản ánh mức độ bảo hộ thực sự đối với giá trị gia tăng (value added) trong nước của một ngành sau khi tính đến cả thuế đánh vào sản phẩm đầu ra và thuế đánh vào các yếu tố đầu vào."}, {"id": "ktqt_19", "question": "Biên độ bán phá giá (Dumping margin) được xác định trên cơ sở nào?", "options": ["Khoản phụ phí vận tải biển quốc tế vượt quá dự toán ban đầu", "Tỷ lệ giữa chi phí sản xuất tại nước nhập khẩu và giá chào bán của đối thủ", "Mức chênh lệch mà giá trị thông thường vượt quá giá xuất khẩu (normal value exceeds export price)", "Mức chênh lệch giữa giá bán buôn và giá bán lẻ tại thị trường nước nhập khẩu"], "answer": 2, "explanation": "Dumping margin là độ chênh lệch khi giá bán thông thường tại thị trường nội địa của nước xuất khẩu cao hơn giá bán ra nước ngoài, là căn cứ pháp lý để áp dụng thuế chống bán phá giá."}, {"id": "ktqt_20", "question": "Biện pháp Hạn chế xuất khẩu tự nguyện (VER - Voluntary Export Restraint) diễn ra dưới hình thức nào?", "options": ["Nước xuất khẩu tự động tăng thuế để ngăn cản doanh nghiệp của mình bán hàng ra nước ngoài", "Hai quốc gia cùng thỏa thuận giảm giá thành sản phẩm để kích cầu tiêu dùng chung", "Doanh nghiệp tư nhân tự giác đình chỉ xuất khẩu nhằm giữ thương hiệu độc quyền", "Nước nhập khẩu gây sức ép buộc nước xuất khẩu phải cắt giảm lượng hàng xuất khẩu"], "answer": 3, "explanation": "VER là hình thức hạn chế xuất khẩu có tính chất bắt buộc ngầm, trong đó nước nhập khẩu tác động khiến nước xuất khẩu buộc phải 'tự nguyện' giới hạn số lượng xuất khẩu để tránh bị dựng rào cản khắc nghiệt hơn."}]}];
+
+let exerciseSets = [];
+let currentCategory = 'overview';
+let currentSet = null;
+let selectedAnswers = Object.create(null);
+let lastScore = null;
+
+function safeText(value, fallback = '') {
+  return typeof value === 'string' ? value.trim() : fallback;
+}
+
+function clearElement(element) {
+  if (!element) return;
+  while (element.firstChild) element.removeChild(element.firstChild);
+}
+
+function createElement(tagName, className, text) {
+  const element = document.createElement(tagName);
+  if (className) element.className = className;
+  if (text !== undefined) element.textContent = safeText(text);
+  return element;
+}
+
+function normalizeQuestion(rawQuestion, index) {
+  const data = rawQuestion && typeof rawQuestion === 'object' && !Array.isArray(rawQuestion) ? rawQuestion : {};
+  const options = Array.isArray(data.options) ? data.options.map(option => safeText(option)) : [];
+  const answer = Number.isInteger(data.answer) && data.answer >= 0 && data.answer < options.length ? data.answer : null;
+  return {
+    id: safeText(data.id, `question-${index + 1}`),
+    question: safeText(data.question, 'Câu hỏi chưa có nội dung.'),
+    options,
+    answer,
+    explanation: safeText(data.explanation, 'Chưa có giải thích.')
+  };
+}
+
+function normalizeExerciseSet(rawSet, fallbackId) {
+  const data = rawSet && typeof rawSet === 'object' && !Array.isArray(rawSet) ? rawSet : {};
+  const duration = typeof data.duration === 'number' && Number.isFinite(data.duration) && data.duration >= 0 ? data.duration : 0;
+  return {
+    id: safeText(data.id, fallbackId),
+    title: safeText(data.title, 'Bộ đề chưa có tiêu đề'),
+    category: safeText(data.category),
+    mode: data.mode === 'problem' ? 'problem' : 'mcq',
+    chapter: safeText(data.chapter, 'Chưa phân chương'),
+    difficulty: safeText(data.difficulty, 'Unknown'),
+    duration,
+    description: safeText(data.description, 'Chưa có mô tả.'),
+    badge: safeText(data.badge),
+    order: typeof data.order === 'number' && Number.isFinite(data.order) ? data.order : 99,
+    questions: Array.isArray(data.questions) ? data.questions.map((q, i) => normalizeQuestion(q, i)) : []
+  };
+}
+
+function isUsableExerciseSet(set) {
+  if (!set || !set.id || !set.title) return false;
+  if (!Array.isArray(set.questions) || set.questions.length === 0) return false;
+  const ids = set.questions.map(q => q.id);
+  if (new Set(ids).size !== ids.length) return false;
+  return set.questions.every(q => q.options.length >= 2 && q.answer !== null);
+}
+
+function initPractice() {
+  exerciseSets = LOCAL_SETS
+    .filter(isUsableExerciseSet)
+    .map((set, index) => normalizeExerciseSet(set, `local-set-${index + 1}`))
+    .sort((a,b) => a.order - b.order);
+  renderAll();
+}
+
+function renderAll() {
+  renderOverview();
+  renderGrid('chapter-grid', 'chapter');
+  renderGrid('quiz-grid', 'quiz');
+}
+
+function renderOverview() {
+  const stats = document.getElementById('overview-stats');
+  if (!stats) return;
+  const chapter = exerciseSets.filter(s => s.category === 'chapter').length;
+  const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);
+  clearElement(stats);
+  [
+    [chapter, 'bộ theo chương'],
+    [quizQ, 'câu trắc nghiệm']
+  ].forEach(([value, label]) => {
+    const card = createElement('div', 'bg-white/10 rounded-xl p-4 border border-white/10');
+    card.appendChild(createElement('div', 'text-2xl font-black', value));
+    card.appendChild(createElement('div', 'text-xs text-stone-300 font-bold', label));
+    stats.appendChild(card);
+  });
+}
+
+function appendMetric(parent, value, label, suffix = '') {
+  const metric = createElement('div', 'bg-stone-50 rounded-lg p-2 border border-stone-100');
+  const strong = createElement('strong', 'block text-slate-900', value);
+  if (suffix) strong.appendChild(document.createTextNode(suffix));
+  metric.appendChild(strong);
+  metric.appendChild(createElement('span', 'text-stone-500', label));
+  parent.appendChild(metric);
+}
+
+function renderGrid(containerId, category) {
+  const el = document.getElementById(containerId); if (!el) return;
+  const items = exerciseSets.filter(s => s.category === category);
+  clearElement(el);
+
+  items.forEach(set => {
+    const article = createElement('article', 'exercise-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm cursor-pointer flex flex-col min-h-[230px]');
+    article.addEventListener('click', () => openSet(set.id));
+
+    const meta = createElement('div', 'flex items-start justify-between gap-3 mb-4');
+    meta.appendChild(createElement('span', 'pill px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider', set.badge || set.category));
+    const difficultyClass = set.difficulty === 'Hard' ? 'bg-rose-50 text-rose-700 border border-rose-100' : set.difficulty === 'Medium' ? 'bg-amber-50 text-amber-700 border border-amber-100' : 'bg-green-50 text-green-700 border border-green-100';
+    meta.appendChild(createElement('span', `text-xs font-black rounded-full px-2 py-1 ${difficultyClass}`, set.difficulty));
+    article.appendChild(meta);
+    article.appendChild(createElement('h3', 'font-black text-slate-900 text-lg mb-2 leading-snug', set.title));
+    article.appendChild(createElement('p', 'text-sm text-stone-600 flex-grow', set.description));
+
+    const metrics = createElement('div', 'mt-5 grid grid-cols-3 gap-2 text-center text-xs');
+    appendMetric(metrics, set.chapter, 'Chương');
+    appendMetric(metrics, set.questions.length, 'Câu');
+    appendMetric(metrics, set.duration, 'Gợi ý', "'");
+    article.appendChild(metrics);
+    article.appendChild(createElement('button', 'mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-2.5 rounded-xl transition-colors', 'Mở bài luyện'));
+    el.appendChild(article);
+  });
+}
+
+function openSet(setId) {
+  currentSet = exerciseSets.find(s => s.id === setId);
+  selectedAnswers = Object.create(null);
+  lastScore = null;
+  if (!currentSet) return;
+  if (currentSet.category) currentCategory = currentSet.category;
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  const panel = document.getElementById('practice-panel');
+  panel.classList.remove('hidden');
+  const practiceBadge = document.getElementById('practice-badge');
+  clearElement(practiceBadge);
+  [currentSet.badge, currentSet.chapter, currentSet.duration ? `${currentSet.duration} phút` : ''].filter(Boolean).forEach(text => {
+    const s = createElement('span', 'mr-2', text);
+    practiceBadge.appendChild(s);
+  });
+  renderMcqSet(currentSet);
+}
+
+function closePracticePanel() {
+  document.getElementById('practice-panel').classList.add('hidden');
+  switchMainTab(currentCategory || 'chapter');
+}
+
+function renderMcqSet(set) {
+  const wrap = document.getElementById('practice-content');
+  if (!wrap) return;
+  clearElement(wrap);
+
+  const card = createElement('div', 'bg-white rounded-3xl border border-stone-200 shadow-sm p-6 md:p-8');
+  const header = createElement('div', 'mb-6');
+  header.appendChild(createElement('h2', 'text-2xl md:text-3xl font-extrabold text-slate-900 mb-2', set.title));
+  header.appendChild(createElement('p', 'text-stone-600', set.description));
+  card.appendChild(header);
+
+  const body = createElement('div', 'space-y-6');
+  const questionsWrap = createElement('div', 'space-y-6');
+  questionsWrap.id = 'question-list';
+  body.appendChild(questionsWrap);
+
+  const actions = createElement('div', 'mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4');
+  const counterWrap = createElement('div', 'text-sm font-bold text-stone-600');
+  counterWrap.appendChild(document.createTextNode('Đã chọn: '));
+  const countSpan = createElement('span', 'text-teal-700 font-extrabold', '0');
+  countSpan.id = 'answered-count';
+  counterWrap.appendChild(countSpan);
+  counterWrap.appendChild(document.createTextNode(` / ${set.questions.length} câu`));
+  actions.appendChild(counterWrap);
+
+  const buttons = createElement('div', 'flex items-center gap-3');
+  const resetButton = createElement('button', 'bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold px-4 py-2 rounded-xl transition-colors', 'Làm lại');
+  resetButton.type = 'button';
+  resetButton.addEventListener('click', resetCurrentQuiz);
+  const submitButton = createElement('button', 'bg-teal-600 hover:bg-teal-700 text-white font-black px-5 py-2 rounded-xl transition-colors', 'Nộp bài');
+  submitButton.type = 'button';
+  submitButton.id = 'submit-quiz';
+  submitButton.addEventListener('click', submitQuiz);
+  buttons.appendChild(resetButton);
+  buttons.appendChild(submitButton);
+  actions.appendChild(buttons);
+  body.appendChild(actions);
+
+  const resultBox = createElement('div', 'hidden mt-6');
+  resultBox.id = 'result-box';
+  body.appendChild(resultBox);
+  card.appendChild(body);
+  wrap.appendChild(card);
+  renderQuestions(set, false);
+}
+
+function renderQuestions(set, showResult) {
+  const list = document.getElementById('question-list');
+  if (!list) return;
+  clearElement(list);
+
+  set.questions.forEach((question, index) => {
+    const questionBox = createElement('div', 'rounded-2xl border border-stone-200 bg-stone-50/60 p-5');
+    questionBox.id = 'q-' + question.id;
+    const heading = createElement('div', 'flex gap-3 mb-4');
+    heading.appendChild(createElement('span', 'w-8 h-8 rounded-full bg-teal-600 text-white font-black flex items-center justify-center shrink-0', index + 1));
+    heading.appendChild(createElement('h3', 'font-bold text-slate-900 leading-relaxed', question.question));
+    questionBox.appendChild(heading);
+
+    const options = createElement('div', 'grid md:grid-cols-2 gap-3');
+    question.options.forEach((option, optionIndex) => {
+      options.appendChild(createOptionButton(question, optionIndex, option, showResult));
+    });
+    questionBox.appendChild(options);
+
+    if (showResult) {
+      const isCorrect = selectedAnswers[question.id] === question.answer;
+      const explanation = createElement('div', `mt-4 bg-white border-l-4 ${isCorrect ? 'border-green-500' : 'border-rose-500'} rounded-r-xl p-4 text-sm`);
+      explanation.appendChild(createElement('strong', '', selectedAnswers[question.id] === undefined ? 'Chưa trả lời — Giải thích:' : isCorrect ? 'Đúng — Giải thích:' : 'Sai — Giải thích:'));
+      explanation.appendChild(document.createTextNode(' '));
+      explanation.appendChild(document.createTextNode(question.explanation));
+      questionBox.appendChild(explanation);
+    }
+    list.appendChild(questionBox);
+  });
+  updateAnsweredCount();
+}
+
+function createOptionButton(question, optionIndex, option, showResult) {
+  let cls = 'option-card bg-white border border-stone-200 rounded-xl p-3 text-sm font-semibold cursor-pointer';
+  const selected = selectedAnswers[question.id] === optionIndex;
+  if (!showResult && selected) cls += ' option-selected';
+  if (showResult && optionIndex === question.answer) cls += ' option-correct';
+  if (showResult && selected && optionIndex !== question.answer) cls += ' option-wrong';
+
+  const button = createElement('button', cls);
+  button.type = 'button';
+  button.disabled = showResult;
+  button.setAttribute('aria-pressed', String(selected));
+  button.addEventListener('click', () => selectAnswer(question.id, optionIndex));
+  button.appendChild(createElement('span', 'font-black mr-2', `${String.fromCharCode(65 + optionIndex)}.`));
+  button.appendChild(document.createTextNode(option));
+  return button;
+}
+
+function selectAnswer(qid, index) {
+  const question = currentSet?.questions.find(q => q.id === qid);
+  if (lastScore !== null || !question || !Number.isInteger(index) || index < 0 || index >= question.options.length) return;
+  selectedAnswers[qid] = index;
+  document.getElementById('q-' + qid)?.querySelectorAll('.option-card').forEach((button, i) => {
+    button.classList.toggle('option-selected', i === index);
+    button.setAttribute('aria-pressed', String(i === index));
+  });
+  updateAnsweredCount();
+}
+
+function updateAnsweredCount() {
+  const el = document.getElementById('answered-count');
+  if (el) el.textContent = Object.keys(selectedAnswers).length;
+}
+
+function resetCurrentQuiz() {
+  selectedAnswers = Object.create(null);
+  lastScore = null;
+  if (currentSet) {
+    renderMcqSet(currentSet);
+    document.getElementById('practice-panel').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+
+function submitQuiz() {
+  if (lastScore !== null || !currentSet || !Array.isArray(currentSet.questions)) return;
+  const total = currentSet.questions.length;
+  const score = currentSet.questions.reduce((sum, q) => sum + (selectedAnswers[q.id] === q.answer ? 1 : 0), 0);
+  lastScore = score;
+  const submitButton = document.getElementById('submit-quiz');
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = 'Đã nộp bài';
+  }
+  renderQuestions(currentSet, true);
+  const percent = total > 0 ? Math.round(score / total * 100) : 0;
+  const box = document.getElementById('result-box');
+  if (!box) return;
+  box.classList.remove('hidden');
+  clearElement(box);
+
+  const resultClass = percent >= 80 ? 'border-green-300 bg-green-50' : percent >= 50 ? 'border-amber-300 bg-amber-50' : 'border-rose-300 bg-rose-50';
+  const message = percent >= 80 ? 'Bạn đã nắm rất vững kiến thức trong phần này!' : percent >= 50 ? 'Kết quả tương đối tốt, hãy đối chiếu thêm với các giải thích bên dưới để hoàn thiện.' : 'Hãy xem lại lý thuyết và làm lại bài để củng cố nền tảng kiến thức.';
+  box.className = `mt-6 p-6 rounded-2xl border ${resultClass}`;
+  const heading = createElement('div', 'flex items-center justify-between mb-3');
+  heading.appendChild(createElement('h3', 'text-xl font-black text-slate-900', `Kết quả: ${score}/${total} (${percent}% correct)`));
+  heading.appendChild(createElement('span', 'pill px-3 py-1 rounded-full text-xs font-black', `${percent}%`));
+  box.appendChild(heading);
+  box.appendChild(createElement('p', 'text-sm text-stone-600 mb-4', message));
+  const retryBtn = createElement('button', 'bg-teal-600 hover:bg-teal-700 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors', 'Làm lại bài luyện');
+  retryBtn.type = 'button';
+  retryBtn.addEventListener('click', resetCurrentQuiz);
+  box.appendChild(retryBtn);
+}
+
+function switchMainTab(tabId) {
+  currentCategory = tabId;
+  document.getElementById('practice-panel').classList.add('hidden');
+  document.querySelectorAll('.tab-content').forEach(el => {
+    el.classList.toggle('hidden', el.id !== tabId);
+    el.classList.toggle('block', el.id === tabId);
+  });
+  document.querySelectorAll('#nav-menu .nav-btn').forEach(button => {
+    const active = button.getAttribute('onclick')?.includes(tabId);
+    button.classList.toggle('tab-active', !!active);
+    button.classList.toggle('text-stone-500', !active);
+  });
+  const mobileNav = document.getElementById('mobile-nav');
+  if (mobileNav && mobileNav.value !== tabId) mobileNav.value = tabId;
+}
+
+window.addEventListener('DOMContentLoaded', initPractice);
+</script>
+</body>
+</html>

@@ -2,10 +2,14 @@
  * Existing select values and page-owned checking/reset logic remain authoritative.
  */
 (function enhanceStudyChoices() {
-    'use strict';
-    const practiceRoutes = { '/NLKT': '/NguyenLyKeToan-LuyenDe', '/TCCN': '/TCCN-LuyenDe' };
+    const practiceRoutes = {
+        '/NLKT': '/NguyenLyKeToan-LuyenDe',
+        '/TCCN': '/TCCN-LuyenDe',
+        '/KTQT': '/KTQT-LuyenDe',
+        '/NMLH': '/NhapMonLuatHoc-LuyenDe'
+    };
     const practiceRoute = practiceRoutes[window.EDU_PAGE_CONFIG?.route];
-    const intro = document.getElementById('course-intro');
+    const intro = document.getElementById('course-intro') || document.querySelector('main > div.text-center');
     if (practiceRoute && intro) {
         const link = document.createElement('a');
         link.href = practiceRoute;
