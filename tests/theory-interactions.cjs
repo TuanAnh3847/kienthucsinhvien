@@ -2,9 +2,39 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');const fixture=fs.readFileSync(path.join(__dirname,'firebase-fixture.js'),'utf8');
 const routes=JSON.parse(fs.readFileSync('firebase.json')).hosting.rewrites.map(r=>r.source);const report=[];
+
+const LEAKAGE_REGEX = /được bảo toàn|không được bảo toàn|Tài liệu môn học|Bài học (?:preserves|contains|keeps|explicitly|says|states|connects|supplies|asks|target|statistic|history|numerical|also|labels|criteria|equity|basis|account-basis|rows|problem|equilibrium|rate)|theo cách diễn đạt|cách diễn đạt trong bài|course terminology|formal items|readable extrema|consideration set|the[⚠\s]*Lưu ý|Build Pack|compiler|renderer|CLO\s*\d/i;
+
+// Regression self-test: verify that forbidden builder residue is actively detected and flagged
+const regressionBad = [
+  'Bài học says Article IX:2 had not been used',
+  'theo cách diễn đạt trong bài',
+  'cách diễn đạt trong bài',
+  'Convergent vs Divergent — course terminology',
+  '29 formal items',
+  'Neutral / Emotional chart — readable extrema',
+  'chỉ trình bày như một consideration set',
+  'Duration, capacity & the⚠ Lưu ý',
+  'Bài học states price is not the most important factor',
+  'dữ liệu được bảo toàn'
+];
+for (const s of regressionBad) {
+  assert(LEAKAGE_REGEX.test(s), 'Leakage regression failed to detect bad phrasing: ' + s);
+}
+const regressionGood = [
+  'Thời lượng, dung lượng và các lưu ý trọng tâm',
+  '29 tiêu chí ôn tập',
+  'Tư duy hội tụ và tư duy phân kỳ (Convergent vs Divergent)',
+  'tập hợp các phương án cần cân nhắc khi lập kế hoạch',
+  'Trị giá hải quan sử dụng giá trị giao dịch thực tế'
+];
+for (const s of regressionGood) {
+  assert(!LEAKAGE_REGEX.test(s), 'Leakage regression falsely flagged clean phrasing: ' + s);
+}
+
 (async()=>{const b=await chromium.launch({channel:'msedge',headless:true});try{for(const route of routes.filter(r=>!process.env.THEORY_FILTER||r===process.env.THEORY_FILTER)){const p=await b.newPage({viewport:{width:375,height:812},isMobile:true,hasTouch:true});const errors=[];p.on('pageerror',e=>errors.push(e.message));p.on('dialog',d=>d.accept());await p.addInitScript(()=>window.__fixtureOptions={user:{uid:'test-user',email:'student@example.test',displayName:'Sinh viên'}});await p.route(/https:\/\/www\.gstatic\.com\/firebasejs\/.+\.js/,r=>r.fulfill({contentType:'text/javascript',body:r.request().url().includes('firebase-app-compat')?fixture:''}));try{await p.goto('http://127.0.0.1:4173'+route);await p.waitForFunction(()=>window.EduHeader);let actions=0;const chapters=await p.evaluate(()=>EduHeader.config.chapters.map(c=>c.id));const findings=[];
 for(const id of chapters){await p.locator(`#nav-menu [data-edu-tab="${id}"]`).click();await p.waitForTimeout(100);
- const scan=await p.locator('#'+id).evaluate(el=>{const bad=[];for(const e of el.querySelectorAll('*'))for(const a of e.attributes){if(a.name.startsWith('on'))try{new Function('event',a.value)}catch(err){bad.push(e.tagName+' '+a.name+': '+err.message)}}return{handlers:bad,encoding:el.innerText.match(/.{0,35}(?:Ã[\u0080-\u00bf]|Â[\u0080-\u00bf]|Æ[\u0080-\u00bf]|�).{0,35}/g),copy:[...el.querySelectorAll('p,.source-line,.source-note,.status-note')].map(e=>e.textContent.trim()).filter(t=>/được bảo toàn|không được bảo toàn|Tài liệu môn học|Bài học (preserves|contains|keeps|explicitly)|Build Pack|compiler|CLO\s*\d/i.test(t))}});
+ const scan=await p.locator('#'+id).evaluate((el, pattern)=>{const rx=new RegExp(pattern, 'i');const bad=[];for(const e of el.querySelectorAll('*'))for(const a of e.attributes){if(a.name.startsWith('on'))try{new Function('event',a.value)}catch(err){bad.push(e.tagName+' '+a.name+': '+err.message)}}return{handlers:bad,encoding:el.innerText.match(/.{0,35}(?:Ã[\u0080-\u00bf]|Â[\u0080-\u00bf]|Æ[\u0080-\u00bf]|\uFFFD).{0,35}/g),copy:[...el.querySelectorAll('p,li,h1,h2,h3,h4,summary,td,th,.source-tag,.source-note,.source-line,.status-note,.interaction-badge,.warning-box')].map(e=>e.textContent.trim()).filter(t=>rx.test(t))}}, LEAKAGE_REGEX.source);
  assert.deepEqual(scan.handlers,[],route+' '+id);assert(!scan.encoding,route+' '+id+' mojibake: '+JSON.stringify(scan.encoding));findings.push(...scan.copy);
  const buttons=p.locator('#'+id).getByRole('button').filter({hasText:/^(Kiểm tra|Check|Tính|Calculate|Làm lại|Reset|Câu khác|Xáo lại)/i});
  const count=Math.min(await buttons.count(),4);for(let i=0;i<count;i++){if(await buttons.nth(i).isVisible()&&await buttons.nth(i).isEnabled()){await buttons.nth(i).click();await buttons.nth(i).click();actions+=2;}}

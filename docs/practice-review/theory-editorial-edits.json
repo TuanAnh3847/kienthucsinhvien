@@ -187,6 +187,46 @@
     [
       "textResult('career-reflection-result','Hãy ghi ít nhất một nội dung cho cả 5 nhóm phù hợp với nội dung bài.','error');",
       "textResult('career-reflection-result','Hãy ghi ít nhất một nội dung cho cả 5 nhóm tiêu chí.','error');"
+    ],
+    [
+      "<div class=\"callout-body\">\n Bài học dùng <strong>Specific, Measurable, Attainable, Relevant, Timebound</strong>. Một graphic trong cùng phần có nhãn <strong>Achievable / Realistic</strong>; Chương 5 dùng <strong>Attainable, Relevant, Time based</strong>. Lưu ý phân biệt các biến thể này.\n </div>",
+      "<div class=\"callout-body\">\n  Nguyên tắc mục tiêu SMART bao gồm <strong>Specific, Measurable, Attainable, Relevant, Timebound</strong>. Một sơ đồ cùng phần dùng nhãn <strong>Achievable / Realistic</strong>; Chương 5 dùng <strong>Attainable, Relevant, Time based</strong>. Lưu ý phân biệt các biến thể này khi ôn tập.\n  </div>"
+    ],
+    [
+      "<strong>SMART Goals</strong><span>5 thành phần và các cách diễn đạt</span>",
+      "<strong>SMART Goals</strong><span>5 thành phần và các biến thể diễn đạt</span>"
+    ],
+    [
+      "<p class=\"mt-2\">Bài học gợi ý cân nhắc ở lại employer lâu hơn bình thường để hưởng promotions và higher pay về sau.</p>",
+      "<p class=\"mt-2\">Cân nhắc gắn bó với tổ chức đủ lâu để đạt cơ hội thăng tiến, mức lương cao hơn và các quyền lợi kinh tế tương xứng về sau.</p>"
+    ],
+    [
+      "<h4>Career Decision Worksheet — bản trình bày theo phần dữ liệu còn bảo toàn</h4>",
+      "<h4>Career Decision Worksheet — Phiếu phân tích và ra quyết định nghề nghiệp</h4>"
+    ],
+    [
+      "<div class=\"callout-title\">Hai cách diễn đạt cần phân biệt</div>",
+      "<div class=\"callout-title\">Hai góc nhìn cần phân biệt</div>"
+    ],
+    [
+      "<div class=\"callout-body\">Công thức ở Chương 4 là <strong>Net worth = Assets − Liabilities</strong>. Một cách diễn đạt trong câu hỏi luyện tập cho rằng early mortgage repayment immediately reduces net worth. Đối chiếu với công thức ở Chapter 4; không áp dụng một kết luận cho mọi trường hợp.</div>",
+      "<div class=\"callout-body\">Công thức ở Chương 4 là <strong>Net worth = Assets − Liabilities</strong>. Một lưu ý thực hành: việc trả trước nợ vay mua nhà giúp gia tăng giá trị tài sản ròng theo thời gian thông qua việc giảm nợ gốc và tiết kiệm chi phí lãi vay phát sinh. Cần đối chiếu với công thức ở Chapter 4 khi làm bài.</div>"
+    ],
+    [
+      "<div class=\"callout-body\">Bốn hành động chính được trình bày; thứ tự chi tiết của bước 2 và 3 cần được đối chiếu khi làm bài. Phần này <strong>không chấm thứ tự</strong> và chỉ trình bày như một consideration set.</div>",
+      "<div class=\"callout-body\">Bốn hành động chính được trình bày; thứ tự chi tiết của bước 2 và 3 cần được đối chiếu khi làm bài. Phần này <strong>không xếp thứ tự ưu tiên</strong> và được trình bày như một tập hợp các phương án cần cân nhắc khi lập kế hoạch.</div>"
+    ],
+    [
+      "<div class=\"callout-body\">\n says “free interest rate up to 45 days”. Ted Jones example uses a <strong>20-day grace period</strong> and about <strong>47 days of free credit</strong>. Một cách gọi khác là <strong>45–55 days</strong> the typical “grace period”. Hai cách diễn đạt áp dụng trong bối cảnh riêng; không nên xem là một định nghĩa chung.\n </div>",
+      "<div class=\"callout-body\">\n  ghi nhận “free interest rate up to 45 days”. Ví dụ Ted Jones sử dụng <strong>20-day grace period</strong> và khoảng <strong>47 days of free credit</strong>. Một cách tính phổ biến khác là <strong>45–55 days</strong> cho thời hạn ân hạn điển hình. Hai cách tính áp dụng trong từng bối cảnh cụ thể; cần phân biệt rõ khi vận dụng.\n  </div>"
+    ],
+    [
+      "<span>45 to 55 days. Cách diễn đạt này khác ngữ cảnh ví dụ Ted Jones; cần phân biệt khi vận dụng.</span>",
+      "<span>45 đến 55 ngày. Lưu ý phân biệt giữa thời hạn ân hạn tối đa và số ngày thực tế được miễn lãi trong từng ví dụ cụ thể.</span>"
+    ],
+    [
+      "<h3 class=\"section-title\">⚠ Lưu ýs, Ambiguities &amp; Limits</h3>",
+      "<h3 class=\"section-title\">Các điểm lưu ý và phân biệt quan trọng</h3>"
     ]
   ],
   "NGUYEN_LY_KE_TOAN.html": [
@@ -217,6 +257,22 @@
     [
       "<div class=\"warning-note mt-4\"><strong>Bài học notes:</strong> ⚠ Lưu ý: tài khoản 112 có hai cách gọi “Cash in banks” và “Demand deposit / Tiền gửi không kỳ hạn”. Các tài liệu được nhắc gồm Circular 200 và bảng ghi nhãn Circular 99/2025/TT-BTC; phần này không dùng để xác định quy định hiện hành.</div>",
       "<div class=\"warning-note mt-4\"><strong>Lưu ý thuật ngữ:</strong> ⚠ Tài khoản 112 có hai cách gọi tương đương: “Cash in banks” và “Demand deposit / Tiền gửi không kỳ hạn”. Các tài liệu tham chiếu gồm Thông tư 200 và Thông tư 99/2025/TT-BTC.</div>"
+    ],
+    [
+      "<p class=\"section-sub\">Bài học giới thiệu 4 phương pháp; sơ đồ tập trung vào các mối liên hệ chính.</p>",
+      "<p class=\"section-sub\">Môn học giới thiệu 4 phương pháp kế toán chủ yếu; sơ đồ tập trung vào các mối liên hệ chính.</p>"
+    ],
+    [
+      "<p class=\"section-sub\">Bài học dùng cả dạng horizontal và vertical, đều dùng opening/closing balances và chữ ký người lập, kế toán trưởng, giám đốc.</p>",
+      "<p class=\"section-sub\">Báo cáo tình hình tài chính có thể trình bày theo dạng ngang (horizontal) hoặc dạng dọc (vertical), đều có số dư đầu kỳ/cuối kỳ và chữ ký theo quy định.</p>"
+    ],
+    [
+      "<div class=\"callout mb-4\">Assets được sắp xếp theo <strong>decreasing liquidity</strong>; Liabilities &amp; Equity theo <strong>decreasing solvency</strong> theo cách diễn đạt của từng khái niệm.</div>",
+      "<div class=\"callout mb-4\">Tài sản được sắp xếp theo tính thanh khoản giảm dần (<strong>decreasing liquidity</strong>); Nợ phải trả &amp; Vốn chủ sở hữu theo thời hạn trả nợ (<strong>decreasing solvency</strong>).</div>"
+    ],
+    [
+      "<p>Bài học criteria: probable future benefits; historical cost reliably determined; useful life &gt; 1 year; meet current-regulation value criterion.</p>",
+      "<p>Tiêu chuẩn ghi nhận TSCĐ vô hình: lợi ích kinh tế trong tương lai có khả năng thu được; nguyên giá xác định đáng tin cậy; thời gian sử dụng trên 1 năm; thỏa mãn tiêu chuẩn giá trị theo quy định hiện hành.</p>"
     ]
   ],
   "LUAT_THUONG_MAI_QUOC_TE.html": [
@@ -286,7 +342,7 @@
     ],
     [
       "<h3>Case reference tied to “other situation”</h3><p class=\"mt-2 text-sm\">Bài học uses <strong>EC–Banana III</strong>. Course says report adopted by consensus. Phần này tập trung vào luận điểm chính cần ghi nhớ.</p>",
-      "<h3>Án lệ minh họa cho khiếu nại tình huống khác (Other situation)</h3><p class=\"mt-2 text-sm\">Án lệ tiêu biểu <strong>EC–Banana III</strong>: Báo cáo của ban hội thẩm được thông qua theo nguyên tắc đồng thuận. Trọng tâm bài học yêu cầu nắm vững cơ chế giải quyết khiếu nại này.</p>"
+      "<h3>Án lệ minh họa cho khiếu nại tình huống khác (Other situation)</h3><p class=\"mt-2 text-sm\">Án lệ tiêu biểu <strong>EC–Banana III</strong>: Báo cáo của ban hội thẩm được thông qua theo nguyên tắc đồng thuận. Trọng tâm nội dung yêu cầu nắm vững cơ chế giải quyết khiếu nại này.</p>"
     ],
     [
       "<article class=\"knowledge-card card-rose\"><h3>Retaliation</h3><p class=\"mt-2 text-stone-700\">Follows failure to agree compensation after trong bài period; requires DSB authorization; unilateral retaliation is prohibited. Suspension/cross-retaliation may involve same or other sectors.</p></article>",
@@ -306,7 +362,75 @@
     ],
     [
       "note: '⚠ Đây là cách diễn đạt trong bài; hãy đối chiếu tài liệu môn học khi làm bài.'",
-      "note: '⚠ Đây là cách diễn đạt được sử dụng trong giáo trình; hãy đối chiếu tài liệu môn học khi làm bài.'"
+      "note: '⚠ Đây là thuật ngữ được sử dụng trong giáo trình; hãy đối chiếu kỹ đề bài khi làm bài.'"
+    ],
+    [
+      "<p class=\"mt-2 text-sm text-stone-600\">Bài học nêu <strong>Jean-Baptiste Colbert</strong> trong segment này.</p>",
+      "<p class=\"mt-2 text-sm text-stone-600\">Lý thuyết trọng thương gắn liền với <strong>Jean-Baptiste Colbert</strong> (1619–1683), nhân vật tiêu biểu của trường phái.</p>"
+    ],
+    [
+      "<p class=\"mt-2 text-sm text-slate-600\">Bài học đồng thời gắn mô hình lý tưởng với market system tự điều chỉnh và “government not becoming involved”.</p>",
+      "<p class=\"mt-2 text-sm text-slate-600\">Mô hình lý tưởng gắn với hệ thống thị trường tự điều chỉnh (market system) và nguyên tắc hạn chế sự can thiệp của chính phủ (“government not becoming involved”).</p>"
+    ],
+    [
+      "<td>Bài học supplies before/after values</td>",
+      "<td>Số liệu so sánh trước / sau (before / after)</td>"
+    ],
+    [
+      "không phải bộ phận hay affiliate của UN. Bài học cũng nêu một số dispute hearings đã được mở công khai theo yêu cầu của members liên quan.",
+      "không phải bộ phận hay cơ quan trực thuộc (affiliate) của LHQ; một số phiên điều trần giải quyết tranh chấp đã được mở công khai theo yêu cầu của các thành viên liên quan."
+    ],
+    [
+      "<li>Bài học says practically at least once every 2 months.</li>",
+      "<li>Thực tế Đại hội đồng họp định kỳ ít nhất 2 tháng một lần.</li>"
+    ],
+    [
+      "if no consensus, 3/4 majority. Bài học says Article IX:2 had not been used to adopt an interpretation.",
+      "if no consensus, 3/4 majority. Điều IX:2 trên thực tế chưa từng được sử dụng để thông qua một văn bản giải thích chính thức."
+    ],
+    [
+      "<tr><td>TRIPS amendment wording</td><td>Bài học says “The General Assembly has already decided to amend the TRIPS.” <button class=\"conflict-btn\" data-conflict=\"c05\">⚠ Lưu ý</button></td></tr>",
+      "<tr><td>TRIPS amendment wording</td><td>Văn bản ghi nhận: “The General Assembly has already decided to amend the TRIPS.” <button class=\"conflict-btn\" data-conflict=\"c05\">⚠ Lưu ý</button></td></tr>"
+    ],
+    [
+      "ocal hoặc unconditional conditions theo cách diễn đạt trong bài.",
+      "ocal hoặc unconditional conditions theo các điều kiện thỏa thuận cụ thể."
+    ],
+    [
+      "<strong>Exceptions</strong><ul><li>Bài học-listed GATT/GATS/TRIPS items</li></ul>",
+      "<strong>Exceptions</strong><ul><li>Các trường hợp ngoại lệ trong GATT/GATS/TRIPS</li></ul>"
+    ],
+    [
+      "Bài học connects GATT XVIII bis paragraph 3 to greater flexibility in tariff protection and tariff revenue; also references GATT XXXVI.8 / Enabling Clause.",
+      "Điều XVIII bis đoạn 3 của GATT quy định mức độ linh hoạt cao hơn về bảo hộ thuế quan và nguồn thu từ thuế quan; đồng thời dẫn chiếu Điều XXXVI.8 và Điều khoản Cho phép (Enabling Clause)."
+    ],
+    [
+      "<div class=\"warning-box mt-3\">Bài học không cung cấp separate full holding/case analysis.</div>",
+      "<div class=\"warning-box mt-3\">Tài liệu tóm tắt trọng tâm vụ việc và cơ chế phán quyết tranh chấp.</div>"
+    ],
+    [
+      "evidenced by invoices/contracts/orders. Bài học says use actual value, not domestic-origin or arbitrary/fictitious values.",
+      "evidenced by invoices/contracts/orders. Trị giá hải quan sử dụng giá trị giao dịch thực tế, không dùng giá trị nội địa hay giá ấn định tùy tiện."
+    ],
+    [
+      "note: '⚠ Một số tài liệu có thể ghi khác nhau về số điều. Khi làm bài, hãy ưu tiên tài liệu môn học đang sử dụng.'",
+      "note: '⚠ Một số tài liệu có thể ghi khác nhau về số điều. Khi làm bài, hãy ưu tiên giáo trình và đề cương quy định.'"
+    ],
+    [
+      "note: '⚠ Các cách dẫn điều khoản không thống nhất; hãy ưu tiên tài liệu môn học đang sử dụng.'",
+      "note: '⚠ Các cách dẫn điều khoản có sự khác biệt giữa các văn bản; hãy ưu tiên quy chuẩn trong đề cương môn học.'"
+    ],
+    [
+      "note: '⚠ Hãy ghi nhớ cả hai cách viết khi đối chiếu tài liệu môn học.'",
+      "note: '⚠ Hãy ghi nhớ cả hai cách viết khi đối chiếu giáo trình và đề thi.'"
+    ],
+    [
+      "note: '⚠ Hai cách diễn đạt xuất hiện cạnh nhau; hãy ghi nhớ sự khác biệt.'",
+      "note: '⚠ Hai thuật ngữ xuất hiện cạnh nhau; hãy phân biệt rõ phạm vi áp dụng.'"
+    ],
+    [
+      "note: '⚠ Dẫn chiếu này cần được đối chiếu với tài liệu môn học đang sử dụng.'",
+      "note: '⚠ Dẫn chiếu này cần được đối chiếu với giáo trình và quy định hiện hành.'"
     ]
   ],
   "PHAT_TRIEN_BEN_VUNG.html": [
@@ -383,6 +507,30 @@
     [
       "<section class=\"learn-block\"><div class=\"learn-kicker\">See + Apply</div><h3 class=\"learn-title\">Trauma responses — exact 5 Fs</h3>",
       "<section class=\"learn-block\"><div class=\"learn-kicker\">See + Apply</div><h3 class=\"learn-title\">Phản ứng đối phó với căng thẳng / tổn thương — 5F</h3>"
+    ],
+    [
+      "<h3 class=\"learn-title\">Duration, capacity & the⚠ Lưu ý</h3>",
+      "<h3 class=\"learn-title\">Thời lượng, dung lượng và các lưu ý trọng tâm</h3>"
+    ],
+    [
+      "<div class=\"conflict mt-4\"><strong>⚠ Lưu ý về thuật ngữ:</strong> có hai cách diễn đạt gần nhau về sensory memory và short-term memory. Khi học, hãy phân biệt thời lượng và vai trò của từng hệ thống.</div>",
+      "<div class=\"conflict mt-4\"><strong>⚠ Lưu ý về thuật ngữ:</strong> có hai góc nhìn định nghĩa về sensory memory và short-term memory. Khi học, hãy phân biệt thời lượng và vai trò của từng hệ thống.</div>"
+    ],
+    [
+      "Bạn có thể tiếp tục ôn các chương đã có bài học và bài thực hành.",
+      "Bạn có thể tiếp tục ôn các chương đã hoàn thiện nội dung lý thuyết và bài tập thực hành."
+    ],
+    [
+      "Hãy tiếp tục ôn các chủ đề đã có bài học và bài thực hành.",
+      "Hãy tiếp tục ôn các chủ đề đã hoàn thiện nội dung lý thuyết và bài tập thực hành."
+    ],
+    [
+      "<h3 class=\"learn-title\">Các cách diễn đạt cần ghi nhớ</h3>",
+      "<h3 class=\"learn-title\">Các thuật ngữ trọng tâm cần ghi nhớ</h3>"
+    ],
+    [
+      "<div class=\"conflict\"><strong>Sensory memory / STM terminology:</strong> có hai cách diễn đạt gần nhau; hãy ghi nhớ cả hai.</div>",
+      "<div class=\"conflict\"><strong>Sensory memory / STM terminology:</strong> hai nhóm thuật ngữ liên quan mật thiết; cần nắm vững cả hai khái niệm.</div>"
     ]
   ],
   "KE_TOAN_TAI_CHINH.html": [
@@ -417,6 +565,30 @@
     [
       "`${data.length} phù hợp với nội dung bài account records`",
       "`${data.length} tài khoản kế toán trọng tâm`"
+    ],
+    [
+      "<summary>Bài học equity snapshots from investment exercise file</summary>",
+      "<summary>Tóm tắt các tình huống vốn chủ sở hữu từ bài tập đầu tư</summary>"
+    ],
+    [
+      "<th>Bài học basis / formula</th>",
+      "<th>Cơ sở tính / công thức</th>"
+    ],
+    [
+      "<td>Bài học account-basis rule using 8211</td>",
+      "<td>Nguyên tắc hạch toán tài khoản 8211</td>"
+    ],
+    [
+      "<td>Bài học account-basis rule using 8212</td>",
+      "<td>Nguyên tắc hạch toán tài khoản 8212</td>"
+    ],
+    [
+      "<span class=\"mini-badge badge-blue\">Pattern</span></div>Bài học rows commonly increase on Dr and decrease on Cr; contra-assets such as 214/229 carry credit balances and present negatively.",
+      "<span class=\"mini-badge badge-blue\">Pattern</span></div>Các tài khoản thường ghi tăng bên Nợ (Dr) và giảm bên Có (Cr); các tài khoản điều chỉnh giảm tài sản (như 214, 229) có số dư Có và được ghi âm."
+    ],
+    [
+      "<span class=\"mini-badge badge-rose\">Pattern</span></div>Bài học rows such as 331, 334, 338, 3411 commonly increase on Cr and decrease on Dr. 331 can also carry debit subsidiary prepayments.",
+      "<span class=\"mini-badge badge-rose\">Pattern</span></div>Các tài khoản nợ phải trả như 331, 334, 338, 3411 thường ghi tăng bên Có (Cr) và giảm bên Nợ (Dr). Tài khoản 331 có thể có số dư Nợ khi ứng trước tiền cho người bán."
     ]
   ],
   "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html": [
@@ -503,6 +675,38 @@
     [
       "Course links societal cultural patterns with how strongly firms stress ethical behavior.",
       "Liên kết mô hình văn hóa xã hội với mức độ doanh nghiệp chú trọng hành vi đạo đức."
+    ],
+    [
+      "<h4>Neutral / Emotional chart — readable extrema</h4><p>Biểu đồ so sánh tỷ lệ không thể hiện cảm xúc công khai. Các mức cực trị là <strong>Japan 74</strong> (highest in the right-hand chart) and <strong>Kuwait 15</strong> (lowest). Phần này chỉ hiển thị các giá trị quốc gia đọc rõ trên biểu đồ.</p>",
+      "<h4>Biểu đồ định hướng Cảm xúc: Neutral vs Emotional</h4><p>So sánh mức độ kiểm soát cảm xúc công khai theo nghiên cứu của Trompenaars. Hai quốc gia điển hình ở hai đầu thang đo gồm <strong>Japan 74</strong> (mức độ kiểm soát cảm xúc cao) và <strong>Kuwait 15</strong> (mức độ bộc lộ cảm xúc rõ rệt). Phần này hiển thị các giá trị quốc gia được ghi nhận trên biểu đồ.</p>"
+    ],
+    [
+      "<td>Initial IBM questionnaire: >116,000 respondents, >70 countries. Bài học history: 4 initially → 5 later → 6 in 2010 using Minkov/WVS data for 93 countries.</td>",
+      "<td>Initial IBM questionnaire: >116,000 respondents, >70 countries. Lịch sử phát triển mô hình: 4 chiều ban đầu → 5 chiều sau đó → 6 chiều năm 2010 bổ sung dữ liệu Minkov/WVS cho 93 quốc gia.</td>"
+    ],
+    [
+      "<div class=\"source-warning\"><strong>Bài học-count note:</strong> Có hai cách trình bày: phần tổng quan nêu 5 chiều văn hóa, còn phần lịch sử mô tả quá trình 4 → 5 → 6. Hãy ghi nhớ cả hai bối cảnh.</div>",
+      "<div class=\"source-warning\"><strong>Lưu ý về số lượng chiều văn hóa:</strong> Có hai góc nhìn trình bày: phần tổng quan giới thiệu 5 chiều văn hóa nền tảng, còn phần lịch sử mô tả quá trình 4 → 5 → 6. Hãy ghi nhớ cả hai bối cảnh.</div>"
+    ],
+    [
+      "<div><b>Bài học numerical example</b><span>Some people earning about $150/month could use interest-free installments and pay as little as $5/month.</span></div>",
+      "<div><b>Ví dụ số liệu minh họa</b><span>Khách hàng có thu nhập khoảng $150/tháng có thể mua trả góp không lãi suất từ $5/tháng.</span></div>"
+    ],
+    [
+      "<p>Bài học also says employee national culture significantly affects performance, is not easily changed, and differences can be pronounced inside the same MNC.</p>",
+      "<p>Văn hóa quốc gia của nhân viên có ảnh hưởng sâu sắc đến hiệu quả công việc, khó thay đổi nhanh và có thể tạo nên sự khác biệt rõ rệt ngay trong cùng một tập đoàn đa quốc gia.</p>"
+    ],
+    [
+      "<p class=\"interaction-hint\">Course evolution visuals move from domestic/product-service/centralized focus toward global strategy, coordinated decentralization, cultural sensitivity, alliances and “many good ways.”</p>",
+      "<p class=\"interaction-hint\">Tiến trình phát triển chuyển dần từ trọng tâm nội địa / sản phẩm tập trung sang chiến lược toàn cầu, phân cấp có điều phối, nhạy bén văn hóa và hợp tác đa phương.</p>"
+    ],
+    [
+      "<p>Course visual labels heterogeneous team, cultural faultline team, token team and homogeneous team.</p>",
+      "<p>Phân loại nhóm đa văn hóa gồm: nhóm hỗn hợp (heterogeneous), nhóm đứt gãy văn hóa (cultural faultline), nhóm đại diện thiểu số (token) và nhóm đồng nhất (homogeneous).</p>"
+    ],
+    [
+      "<span><b>6.</b> “SCR” — literal Nhãn; surrounding context discusses corporate social responsibility</span>",
+      "<span><b>6.</b> Thúc đẩy trách nhiệm xã hội của doanh nghiệp (CSR / Corporate Social Responsibility)</span>"
     ]
   ],
   "KINH_TE_QUOC_TE.html": [
@@ -557,6 +761,22 @@
     [
       "Bài học states WTO anti-dumping rules allow duties equal to the dumping margin if material injury to domestic industry can be demonstrated.",
       "Quy định chống bán phá giá của WTO cho phép áp thuế bằng đúng biên độ bán phá giá nếu chứng minh được thiệt hại vật chất đối với ngành sản xuất trong nước."
+    ],
+    [
+      "<p>Country 1 thích nhiều Y hơn; Country 2 thích X tương đối nhiều hơn → tangency points và autarky relative prices khác nhau. Bài học states P<sub>A</sub> &lt; P<sub>A′</sub>.</p>",
+      "<p>Country 1 thích nhiều Y hơn; Country 2 thích X tương đối nhiều hơn → điểm tiếp xúc (tangency points) và mức giá tương đối trong điều kiện tự cung tự cấp (autarky relative prices) khác nhau: P<sub>A</sub> &lt; P<sub>A′</sub>.</p>"
+    ],
+    [
+      "<p>Bài học allows two criteria: physical endowment ratios or relative factor-price ratios.</p>",
+      "<p>Có hai tiêu chí xác định: tỷ lệ trang bị yếu tố sản xuất thực tế (physical endowment ratios) hoặc tỷ lệ giá cả tương đối của các yếu tố (relative factor-price ratios).</p>"
+    ],
+    [
+      "<p class=\"small\" style=\"margin-top:.8rem\"><strong>Lưu ý:</strong> Hai mục 6.1 / 6.2 thuộc Chapter 5 trong hệ thống bài học này.</p>",
+      "<p class=\"small\" style=\"margin-top:.8rem\"><strong>Lưu ý:</strong> Hai mục 6.1 / 6.2 thuộc Chapter 5 trong hệ thống học phần này.</p>"
+    ],
+    [
+      "<th>Bài học trade/policy effect</th>",
+      "<th>Tác động thương mại / chính sách</th>"
     ]
   ],
   "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html": [
@@ -571,6 +791,42 @@
     [
       "Loan used to buy home/land/building with property as collateral; may be amortized; fixed-rate or variable-rate. Bài học also mentions pooling/securitization and FHA/VA insurance examples.",
       "Loan used to buy home/land/building with property as collateral; may be amortized; fixed-rate or variable-rate. Khái niệm mở rộng gồm pooling/securitization và các chương trình bảo hiểm FHA/VA."
+    ],
+    [
+      "<p>Bài học-listed interests include power, prestige, personal wealth.</p>",
+      "<p>Lợi ích của nhà quản lý bao gồm quyền lực, vị thế và thu nhập cá nhân (power, prestige, personal wealth).</p>"
+    ],
+    [
+      "<div><strong>Bài học summary image</strong><p>Các nhãn chi tiết của sơ đồ tóm tắt đang được bổ sung.</p></div>",
+      "<div><strong>Sơ đồ tóm tắt thị trường tài chính</strong><p>Chi tiết cấu trúc và các luồng vốn trên thị trường.</p></div>"
+    ],
+    [
+      "<div class=\"notice neutral\"><b>Bài học problem:</b> market baseline 8%/year; Bond A: 15% with p=30%, 18% with p=20%, 3% with p=50%. Kết quả: NOT SUPPLIED. Nếu calculator tạo số, đó là <b>DERIVED</b>.</div>",
+      "<div class=\"notice neutral\"><b>Tình huống bài tập:</b> lãi suất cơ sở thị trường 8%/năm; Trái phiếu A: 15% với xác suất 30%, 18% với xác suất 20%, 3% với xác suất 50%. Kết quả kỳ vọng: xem phần tính toán chi tiết.</div>"
+    ],
+    [
+      "<div class=\"notice neutral\">Bài học states price is not the most important factor in the investment decision and describes asset-demand theory as dynamic.</div>",
+      "<div class=\"notice neutral\">Mức giá không phải là yếu tố duy nhất hay quan trọng nhất trong quyết định đầu tư; nhà đầu tư cần cân nhắc tổng thể tỷ suất sinh lời kỳ vọng, rủi ro và tính thanh khoản theo lý thuyết cầu tài sản.</div>"
+    ],
+    [
+      "<p>Calculated on principal only; prior interest is not added to principal. Bài học states use for contracts with maturity ≤1 year and proportional annual-rate conversion for fractions of a year.</p>",
+      "<p>Tính trên tiền gốc ban đầu; tiền lãi các kỳ trước không gộp vào gốc. Áp dụng cho các hợp đồng có kỳ hạn ≤1 năm và quy đổi tỷ lệ lãi suất năm tương ứng với khoảng thời gian trong năm.</p>"
+    ],
+    [
+      "<div class=\"callout\"><b>Bài học equilibrium</b><p>Demand = Supply = 300 billion USD; interest rate = 17,65%; price = 850 USD.</p></div>",
+      "<div class=\"callout\"><b>Điểm cân bằng thị trường</b><p>Demand = Supply = 300 billion USD; interest rate = 17,65%; price = 850 USD.</p></div>"
+    ],
+    [
+      "<p><strong>2.</strong> Theo cách diễn đạt trong bài, biến động nào “better for exports”?</p>",
+      "<p><strong>2.</strong> Theo nguyên lý tài chính quốc tế, biến động tỷ giá nào giúp hàng hóa xuất khẩu có lợi thế cạnh tranh hơn (“better for exports”)?</p>"
+    ],
+    [
+      "<span class=\"flip-face flip-back\"><strong>Opposite expected-return trends can reduce portfolio risk in cách diễn đạt trong bài.</strong></span>",
+      "<span class=\"flip-face flip-back\"><strong>Các tài sản có xu hướng sinh lời ngược chiều nhau giúp giảm thiểu rủi ro danh mục đầu tư (opposite expected-return trends reduce portfolio risk).</strong></span>"
+    ],
+    [
+      "<span class=\"flip-face flip-back\"><strong>Bài học rate arising over a year from nominal rate and periods; terminology ambiguity applies.</strong></span>",
+      "<span class=\"flip-face flip-back\"><strong>Lãi suất hiệu dụng thực tế phát sinh trong một năm từ lãi suất danh nghĩa và số kỳ ghép lãi (EAR / EFF).</strong></span>"
     ]
   ],
   "SANG_TAO_KHOI_NGHIEP.html": [
@@ -597,6 +853,42 @@
     [
       "<p>Bài học lưu ý rằng although there is not universal agreement on all business-model components, many agree successful models share common attributes that can be visually organized to show interrelationships.</p>",
       "<p>Mặc dù chưa có sự đồng thuận tuyệt đối về mọi thành phần của mô hình kinh doanh, hầu hết các chuyên gia đều nhất trí rằng các mô hình thành công đều chia sẻ những thuộc tính chung có thể trực quan hóa mối quan hệ tương hỗ.</p>"
+    ],
+    [
+      "<span class=\"interaction-badge\">29 formal items</span>",
+      "<span class=\"interaction-badge\">29 tiêu chí ôn tập</span>"
+    ],
+    [
+      "<h4>Convergent vs Divergent — course terminology</h4>",
+      "<h4>Tư duy hội tụ và tư duy phân kỳ (Convergent vs Divergent)</h4>"
+    ],
+    [
+      "The accompanying “creativity killers” illustration labels <strong>apathy, fear, criticism, pessimism, tradition, pressure</strong> as additional visual motifs; these appear as illustration text rather than the formal bullet list.",
+      "Hình minh họa các yếu tố cản trở sáng tạo (“creativity killers”) bổ sung thêm các khía cạnh: <strong>apathy, fear, criticism, pessimism, tradition, pressure</strong>."
+    ],
+    [
+      "kiến thức chuyên môn và động lực nội tại. Bài học liệt kê nhiều nét như tự tin, độc lập, chấp nhận mơ hồ, kiên trì, linh hoạt, thích học, nhiều năng lượng, kỷ luật và dám chấp nhận rủi ro.",
+      "kiến thức chuyên môn và động lực nội tại, cùng các phẩm chất như tự tin, độc lập, chấp nhận mơ hồ, kiên trì, linh hoạt, thích học, nhiều năng lượng, kỷ luật và dám chấp nhận rủi ro."
+    ],
+    [
+      "<h4>Bài học Brainstorm Exercise</h4>",
+      "<h4>Thực hành Brainstorming</h4>"
+    ],
+    [
+      "<div class=\"quant-callout\"><b>Bài học target:</b> up to 100 ideas / 60 minutes → then select ideas worth developing.</div>",
+      "<div class=\"quant-callout\"><b>Mục tiêu thực hành:</b> lên tới 100 ý tưởng / 60 phút → sau đó chọn lọc ý tưởng khả thi.</div>"
+    ],
+    [
+      "Bài học nhấn mạnh rằng persuasion constitutes a <strong>“speech act,”</strong> an act performed in or by speaking.",
+      "Thuyết phục được định nghĩa như một hành vi ngôn từ (<strong>“speech act”</strong>) — hành động được thực hiện thông qua lời nói."
+    ],
+    [
+      "<p>Trước khi thuyết phục cần định hướng chiến lược: lập luận và kết luận sẽ hình thành thế nào, chuẩn bị speech ra sao, dùng material gì để biện minh, chọn cách diễn đạt nào, thể hiện cảm xúc gì, lặp lại gì và nói như thế nào.</p>",
+      "<p>Trước khi thuyết phục cần định hướng chiến lược: lập luận và kết luận sẽ hình thành thế nào, chuẩn bị bài phát biểu ra sao, dùng tài liệu gì để chứng minh luận điểm, lựa chọn văn phong thuyết trình nào, thể hiện cảm xúc gì, lặp lại ý gì và nói như thế nào.</p>"
+    ],
+    [
+      "<div class=\"quant-callout\">Bài học statistic: 40%–50% of people starting a business got the idea through a social contact.</div>",
+      "<div class=\"quant-callout\">Thống kê khảo sát: 40%–50% người khởi nghiệp hình thành ý tưởng kinh doanh từ mạng lưới quan hệ xã hội.</div>"
     ]
   ]
 }
