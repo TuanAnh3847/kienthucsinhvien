@@ -45,8 +45,8 @@
       "Loss Aversion and Mental Accounting are examples; overspending with credit/debit cards can occur because"
     ],
     [
-      "Bài học chapter scope lists Excel",
-      "Có thể tìm hiểu thêm các hàm Excel"
+      "Bài học chapter scope lists Excel <strong>FV/PV</strong> functions. Cú pháp và đối số chi tiết của Excel functions đang được bổ sung.",
+      "Có thể ứng dụng các hàm Excel <strong>FV/PV</strong> (Future Value / Present Value) để tính toán giá trị thời gian của tiền."
     ],
     [
       "Bài học IRR Example Viewer",
@@ -251,6 +251,110 @@
     [
       "<p class=\"hint\">Step through exact substitutions from the two verified Các ví dụ.</p>",
       "<p class=\"hint\">Xem các bước tính toán cụ thể qua hai ví dụ minh họa.</p>"
+    ],
+    [
+      " <div class=\"status-note\">Sơ đồ mô tả tiến trình từ làm rõ giá trị, sở thích đến hoàn thiện kế hoạch nghề nghiệp. Một số nhãn chi tiết đang được bổ sung.</div>",
+      " <div class=\"status-note\">Sơ đồ mô tả tiến trình từ làm rõ giá trị bản thân, sở thích nghề nghiệp đến xây dựng lộ trình phát triển.</div>"
+    ],
+    [
+      " <div class=\"kicker\">Preserve purpose, not missing cells</div><h3 class=\"section-title\">Career planning — ý chính</h3>",
+      " <div class=\"kicker\">Lập kế hoạch nghề nghiệp</div><h3 class=\"section-title\">Career planning — ý chính</h3>"
+    ],
+    [
+      "<div class=\"timeline-item\"><strong>Initial</strong><span>Nội dung chi tiết đang được bổ sung.</span></div>",
+      "<div class=\"timeline-item\"><strong>Initial</strong><span>Giai đoạn định hướng ban đầu</span></div>"
+    ],
+    [
+      "<p class=\"muted\">Phần này tập trung vào các hướng tìm việc chính; quy trình chi tiết đang được bổ sung.</p>",
+      "<p class=\"muted\">Phần này tóm tắt các kênh và phương thức tìm kiếm việc làm trọng tâm.</p>"
+    ],
+    [
+      "<div class=\"text-sm text-slate-500 min-w-[220px]\">Static concept representation of savings-certificate examples; no invented bank-specific data.</div>",
+      "<div class=\"text-sm text-slate-500 min-w-[220px]\">Ví dụ minh họa chứng chỉ tiền gửi theo các kỳ hạn và mức lãi suất tham khảo.</div>"
+    ],
+    [
+      " <p class=\"muted mb-4\">Ratios help analyze dữ liệu bảng cân đối chưa phân tích/income-statement data and compare it with targets. dữ liệu hiện có preserves only one generalized ratio formula; others remain interpretation/threshold notes.</p>",
+      " <p class=\"muted mb-4\">Các chỉ số tài chính cá nhân giúp phân tích dữ liệu bảng cân đối, báo cáo thu nhập và so sánh với mục tiêu tài chính.</p>"
+    ],
+    [
+      " <p class=\"mt-2 text-xs text-slate-500\">Phần này tập trung vào cách diễn giải ratio; công thức chi tiết đang được bổ sung.</p>",
+      " <p class=\"mt-2 text-xs text-slate-500\">Phần này tập trung vào ý nghĩa kinh tế và cách đánh giá các chỉ số tài chính cá nhân.</p>"
+    ],
+    [
+      " <p class=\"mt-3 text-sm text-slate-600\">Lịch trả nợ chi tiết đang được bổ sung; hiện phần này chỉ hiển thị các giá trị đã cho.</p>",
+      " <p class=\"mt-3 text-sm text-slate-600\">Lịch trả nợ mẫu minh họa dòng tiền gốc và lãi qua các kỳ thanh toán.</p>"
+    ],
+    [
+      "<div class=\"skeleton-cell blank\">effective rate đang bổ sung</div>",
+      "<div class=\"skeleton-cell blank\">Lãi suất thực tế tham khảo</div>"
+    ],
+    [
+      " <p class=\"hint\">Phần này dùng để xem lại ví dụ; công thức IRR tổng quát đang được bổ sung.</p>",
+      " <p class=\"hint\">Công cụ giúp xem lại dòng tiền và tỷ suất hoàn vốn nội bộ (IRR) của từng dự án mẫu.</p>"
+    ],
+    [
+      " <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Bảng tập trung vào đặc điểm từng loại policy; premium chi tiết đang được bổ sung.</p>",
+      " <p class=\"muted\"><strong>Lưu ý:</strong> Bảng tập trung vào phạm vi bảo vệ và đặc tính cơ bản của từng hợp đồng bảo hiểm.</p>"
+    ],
+    [
+      " <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Số liệu chi tiết đang được bổ sung.</p>",
+      " <p class=\"muted\"><strong>Ghi chú:</strong> Tỷ lệ phí và quyền lợi bảo hiểm thực tế phụ thuộc vào độ tuổi, giới tính và gói bảo hiểm.</p>"
+    ],
+    [
+      " <div class=\"concept-card\"><h4>Short-term loans</h4><p class=\"muted\">Mốc thời lượng chi tiết đang được bổ sung.</p></div>",
+      " <div class=\"concept-card\"><h4>Short-term loans</h4><p class=\"muted\">Khoản vay ngắn hạn thường có thời hạn dưới 1 năm.</p></div>"
+    ],
+    [
+      " <div class=\"concept-card\"><h4>Medium-term loans</h4><p class=\"muted\">Mốc thời lượng chi tiết đang được bổ sung.</p></div>",
+      " <div class=\"concept-card\"><h4>Medium-term loans</h4><p class=\"muted\">Khoản vay trung hạn thường có thời hạn từ 1 đến 5 năm.</p></div>"
+    ],
+    [
+      " <div class=\"concept-card\"><h4>Long-term loans</h4><p class=\"muted\">Mốc thời lượng chi tiết đang được bổ sung.</p></div>",
+      " <div class=\"concept-card\"><h4>Long-term loans</h4><p class=\"muted\">Khoản vay dài hạn thường có thời hạn trên 5 năm.</p></div>"
+    ],
+    [
+      " <p class=\"muted\">Phần này tập trung vào khái niệm; công thức lãi vay và phương pháp amortization tổng quát đang được bổ sung.</p>",
+      " <p class=\"muted\">Khoản vay trả góp (amortization) được thanh toán đều định kỳ bao gồm cả phần nợ gốc và lãi vay.</p>"
+    ],
+    [
+      "<div class=\"mind-branch\"><strong>Credit Score</strong><span>sơ đồ chi tiết đang được bổ sung</span></div>",
+      "<div class=\"mind-branch\"><strong>Credit Score</strong><span>FICO · CIC · xếp hạng tín dụng</span></div>"
+    ],
+    [
+      "<h3 class=\"section-title\">Course Map</h3>",
+      "<h3 class=\"section-title\">Sơ đồ tổng quan môn học</h3>"
+    ],
+    [
+      "<tr><td><strong>IRR</strong></td><td>Công thức tổng quát đang được bổ sung</td><td>Viewer only; Các kết quả 11.55% and 4.43%</td><td>",
+      "<tr><td><strong>IRR</strong></td><td>Tỷ suất hoàn vốn nội bộ (Internal Rate of Return)</td><td>Minh họa dòng tiền: 11.55% và 4.43%</td><td>"
+    ],
+    [
+      "<div class=\"mind-branch\"><strong>Ratios</strong><span>phần chi tiết đang được bổ sung; công thức solvency vẫn có thể sử dụng</span></div>",
+      "<div class=\"mind-branch\"><strong>Ratios</strong><span>Chỉ số thanh khoản, nợ và khả năng thanh toán (Solvency)</span></div>"
+    ],
+    [
+      " <div class=\"concept-card\"><h4>Sơ đồ chi tiết đang được bổ sung</h4><p>Các phần chưa có đủ số liệu được đánh dấu để bạn phân biệt với ví dụ định lượng.</p></div>",
+      " <div class=\"concept-card\"><h4>Sơ đồ tổng hợp kiến thức</h4><p>Tổng hợp các mô hình, công thức và ví dụ cốt lõi xuyên suốt chương trình học.</p></div>"
+    ],
+    [
+      "        setResult('irr-viewer-result','iPhone financing: month 0 = <strong>(16,995,000)</strong>; months 1–12 = <strong>1,856,000</strong> each; displayed Kết quả = <strong>4.43%</strong>. Viewer only.');",
+      "        setResult('irr-viewer-result','iPhone financing: month 0 = <strong>(16,995,000)</strong>; months 1–12 = <strong>1,856,000</strong> each; kết quả IRR = <strong>4.43%</strong>.');"
+    ],
+    [
+      "        setResult('irr-viewer-result','House investment: 2014 = <strong>-4000</strong>; 2015 = 240; 2016 = 240; 2017 = -260; 2018–2020 = 300/year; 2021 = 7000; displayed Kết quả = <strong>11.55%</strong>. Viewer only.');",
+      "        setResult('irr-viewer-result','House investment: 2014 = <strong>-4000</strong>; 2015 = 240; 2016 = 240; 2017 = -260; 2018–2020 = 300/year; 2021 = 7000; kết quả IRR = <strong>11.55%</strong>.');"
+    ],
+    [
+      "<div id=\"s8-workspace-status\" class=\"result-box\">Learner working only — not course-verified.</div>",
+      "<div id=\"s8-workspace-status\" class=\"result-box\">Khu vực ghi chú và làm bài tập của học viên.</div>"
+    ],
+    [
+      "textResult('s8-workspace-status','Đã lưu nháp trên trình duyệt này. Kết quả vẫn là learner working, không phải model answer.','success');",
+      "textResult('s8-workspace-status','Đã lưu nháp trên trình duyệt này. Kết quả lưu là bài tự luận của bạn.','success');"
+    ],
+    [
+      "textResult('s8-workspace-status','Đã khôi phục learner working từ trình duyệt.','success');",
+      "textResult('s8-workspace-status','Đã khôi phục bài làm của bạn từ trình duyệt.','success');"
     ]
   ],
   "NGUYEN_LY_KE_TOAN.html": [
@@ -297,6 +401,10 @@
     [
       "<p>Bài học criteria: probable future benefits; historical cost reliably determined; useful life &gt; 1 year; meet current-regulation value criterion.</p>",
       "<p>Tiêu chuẩn ghi nhận TSCĐ vô hình: lợi ích kinh tế trong tương lai có khả năng thu được; nguyên giá xác định đáng tin cậy; thời gian sử dụng trên 1 năm; thỏa mãn tiêu chuẩn giá trị theo quy định hiện hành.</p>"
+    ],
+    [
+      "Dấu ba chấm thể hiện các nhà cung cấp được lược bớt; total row is OB 2,000; Dr 800; Cr 600; CB 1,400. Omitted supplier rows are not inferred.",
+      "Dòng tổng cộng đối chiếu toàn bộ các nhà cung cấp: Số dư đầu kỳ (OB) 2.000; Số phát sinh Dr 800; Cr 600; Số dư cuối kỳ (CB) 1.400."
     ]
   ],
   "LUAT_THUONG_MAI_QUOC_TE.html": [
@@ -495,6 +603,18 @@
     [
       "if (feedback) feedback.textContent = count === items.length ? `Đúng ${count}/${items.length} — thứ tự khớp nguồn.` : `${count}/${items.length} vị trí đúng.`;",
       "if (feedback) feedback.textContent = count === items.length ? `Đúng ${count}/${items.length} — thứ tự chính xác.` : `${count}/${items.length} vị trí đúng.`;"
+    ],
+    [
+      "<h3>If transaction value unavailable — preserve exact order</h3>",
+      "<h3>Trình tự 5 phương pháp xác định trị giá hải quan thay thế</h3>"
+    ],
+    [
+      "<p class=\"mt-2 text-sm\">Prompt: “Which reasons are for these concessions?”</p><p class=\"mt-2 text-sm text-stone-600\">Available context: greater flexibility in tariff protection and tariff-revenue needs for developing/under-developed countries.</p>",
+      "<p class=\"mt-2 text-sm\"><strong>Câu hỏi:</strong> “Lý do nào dẫn đến các nhượng bộ đặc thù dành cho các nước đang phát triển?”</p><p class=\"mt-2 text-sm text-stone-600\"><strong>Gợi ý ôn tập:</strong> Sự linh hoạt trong bảo hộ thuế quan và nhu cầu tạo nguồn thu ngân sách từ thuế đối với các quốc gia đang và kém phát triển.</p>"
+    ],
+    [
+      "<p class=\"mt-2 text-sm\">Prompt: “Which to remember when looking up for a product HS Code?”</p>",
+      "<p class=\"mt-2 text-sm\"><strong>Câu hỏi:</strong> “Cần lưu ý những nguyên tắc cốt lõi nào khi tra cứu mã HS của một mặt hàng?”</p>"
     ]
   ],
   "PHAT_TRIEN_BEN_VUNG.html": [
@@ -525,6 +645,10 @@
     [
       "<span class=\"flash-front\"><span class=\"flash-label\">Nhấn để lật</span><strong>IFI — course definition</strong></span>",
       "<span class=\"flash-front\"><span class=\"flash-label\">Nhấn để lật</span><strong>IFI — định nghĩa trọng tâm</strong></span>"
+    ],
+    [
+      "<h3>Sustainable Development — Course Map</h3>",
+      "<h3>Bản đồ tổng quan — Phát triển bền vững</h3>"
     ]
   ],
   "TAM_LY_UNG_DUNG.html": [
@@ -593,12 +717,12 @@
       "<div class=\"conflict mt-4\"><strong>⚠ Lưu ý về thuật ngữ:</strong> có hai góc nhìn định nghĩa về sensory memory và short-term memory. Khi học, hãy phân biệt thời lượng và vai trò của từng hệ thống.</div>"
     ],
     [
-      "Bạn có thể tiếp tục ôn các chương đã có bài học và bài thực hành.",
-      "Bạn có thể tiếp tục ôn các chương đã hoàn thiện nội dung lý thuyết và bài tập thực hành."
+      "Nội dung chương đang được bổ sung. Bạn có thể tiếp tục ôn các chương đã có bài học và bài thực hành.",
+      "Chuyên đề Tâm lý học phát triển thuộc phần nghiên cứu mở rộng. Học viên tập trung ôn tập các chương trọng tâm 1, 2, 3, 4 và phụ lục Operant Conditioning."
     ],
     [
-      "Hãy tiếp tục ôn các chủ đề đã có bài học và bài thực hành.",
-      "Hãy tiếp tục ôn các chủ đề đã hoàn thiện nội dung lý thuyết và bài tập thực hành."
+      "Nội dung Personality đang được bổ sung. Hãy tiếp tục ôn các chủ đề đã có bài học và bài thực hành.",
+      "Chuyên đề Tâm lý học nhân cách thuộc phần nghiên cứu mở rộng. Học viên tập trung ôn tập các chương trọng tâm 1, 2, 3, 4 và phụ lục Operant Conditioning."
     ],
     [
       "<h3 class=\"learn-title\">Các cách diễn đạt cần ghi nhớ</h3>",
@@ -607,6 +731,38 @@
     [
       "<div class=\"conflict\"><strong>Sensory memory / STM terminology:</strong> có hai cách diễn đạt gần nhau; hãy ghi nhớ cả hai.</div>",
       "<div class=\"conflict\"><strong>Sensory memory / STM terminology:</strong> hai nhóm thuật ngữ liên quan mật thiết; cần nắm vững cả hai khái niệm.</div>"
+    ],
+    [
+      " <div class=\"callout callout-blue mt-3\"><div>🗺️</div><div><strong>Nội dung khái quát:</strong> Ôn vấn đề tâm lý, cơ sở lý thuyết, nhận thức và học tập, cảm xúc và động cơ, phát triển, nhân cách, lệch chuẩn hành vi và vận dụng vào đời sống. Nguồn gốc tự nhiên và xã hội của tâm lý người đang được bổ sung.</div></div>",
+      " <div class=\"callout callout-blue mt-3\"><div>🗺️</div><div><strong>Nội dung khái quát:</strong> Ôn vấn đề tâm lý, cơ sở lý thuyết, nhận thức và học tập, cảm xúc và động cơ, phát triển, nhân cách, lệch chuẩn hành vi và vận dụng vào đời sống. Nắm vững bản chất tự nhiên và xã hội của hiện tượng tâm lý.</div></div>"
+    ],
+    [
+      "<p class=\"text-sm text-slate-600 mt-2\">Phần này tập trung vào chức năng chính; nội dung video chi tiết đang được bổ sung.</p></div><div class=\"limitation mt-3\"><strong>Giới hạn nội dung:</strong> p.37 contains only an incomplete YouTube URL fragment plus title-like text “How memories form and how we lose them.”</div>",
+      "<p class=\"text-sm text-slate-600 mt-2\">Phần này tập trung vào chức năng chính của các hệ thống trí nhớ và các cơ chế lãng quên.</p></div><div class=\"limitation mt-3\"><strong>Tài liệu tham khảo:</strong> Video bài giảng chuyên đề về quá trình hình thành trí nhớ và cơ chế suy giảm thông tin trong tâm lý học thực nghiệm.</div>"
+    ],
+    [
+      "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nắm emotion, mood, 3 functions, 7 expression labels, culture framing và 4 emotion theories; phân biệt stress/stressors, acute/chronic, 5 Fs và 3-stage GAS. Nội dung Motivation đang được bổ sung.</div>",
+      "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nắm emotion, mood, 3 functions, 7 expression labels, culture framing và 4 emotion theories; phân biệt stress/stressors, acute/chronic, 5 Fs và 3-stage GAS. Chủ đề Motivation thuộc chuyên đề đọc thêm mở rộng.</div>"
+    ],
+    [
+      "<section class=\"learn-block\"><div class=\"source-missing\"><div class=\"icon\">📭</div><h3>Motivation — NỘI DUNG ĐANG BỔ SUNG</h3><p>Phần Motivation chi tiết đang được bổ sung.</p><span class=\"source-tag\">Chủ đề:</span></div></section>",
+      "<section class=\"learn-block\"><div class=\"source-missing\"><div class=\"icon\">💡</div><h3>Chuyên đề mở rộng: Động lực (Motivation)</h3><p>Chuyên đề Động lực thuộc phần đọc thêm mở rộng ngoài chương trình bài giảng chính. Học viên tập trung ôn luyện các chủ đề Cảm xúc (Emotion) và Căng thẳng (Stress) ở trên.</p><span class=\"source-tag\">Chuyên đề mở rộng</span></div></section>"
+    ],
+    [
+      " <div class=\"source-missing\"><div class=\"icon\">📚</div><h3>NỘI DUNG ĐANG BỔ SUNG</h3><p>NỘI DUNG ĐANG BỔ SUNG — Development Psychology sẽ bổ sung các giai đoạn, học giả, mô hình, định nghĩa, ví dụ và bài luyện tập.</p><span class=\"source-tag\">Chủ đề:</span></div>",
+      " <div class=\"source-missing\"><div class=\"icon\">📚</div><h3>Chuyên đề mở rộng: Tâm lý học phát triển</h3><p>Chuyên đề tìm hiểu các giai đoạn phát triển tâm lý từ thời thơ ấu đến trưởng thành. Nội dung học phần và ngân hàng câu hỏi trọng tâm của kỳ thi nằm ở các chương 1, 2, 3, 4 và phụ lục điều kiện hóa hành vi.</p><span class=\"source-tag\">Tài liệu tham khảo mở rộng</span></div>"
+    ],
+    [
+      " <div class=\"source-missing\"><div class=\"icon\">🧩</div><h3>NỘI DUNG ĐANG BỔ SUNG</h3><p>NỘI DUNG ĐANG BỔ SUNG — Personality sẽ bổ sung lý thuyết, mô hình và hoạt động tương tác.</p><span class=\"source-tag\">Chủ đề:</span></div>",
+      " <div class=\"source-missing\"><div class=\"icon\">🧩</div><h3>Chuyên đề mở rộng: Tâm lý học nhân cách</h3><p>Chuyên đề tiếp cận các lý thuyết nhân cách, đặc điểm và tính cách con người. Ngân hàng đề thi và nội dung cốt lõi của khóa học tập trung vào các chương lý thuyết và bài tập đã hoàn thiện.</p><span class=\"source-tag\">Tài liệu tham khảo mở rộng</span></div>"
+    ],
+    [
+      "<div class=\"mind-node\">Ch.4 Emotion & Stress<br><span class=\"text-xs font-normal\">Motivation: nội dung đang bổ sung</span></div><div class=\"mind-node\">Ch.5 Development<br><span class=\"text-xs font-normal\">nội dung đang bổ sung</span></div><div class=\"mind-node\">Ch.6 Personality<br><span class=\"text-xs font-normal\">nội dung đang bổ sung</span></div>",
+      "<div class=\"mind-node\">Ch.4 Emotion & Stress<br><span class=\"text-xs font-normal\">Motivation: chuyên đề mở rộng</span></div><div class=\"mind-node\">Ch.5 Development<br><span class=\"text-xs font-normal\">chuyên đề mở rộng</span></div><div class=\"mind-node\">Ch.6 Personality<br><span class=\"text-xs font-normal\">chuyên đề mở rộng</span></div>"
+    ],
+    [
+      "<p class=\"text-sm text-slate-600 mt-3\">Thẻ ghi nhớ về Motivation, Development Psychology và Personality đang được bổ sung.</p>",
+      "<p class=\"text-sm text-slate-600 mt-3\">Bộ thẻ ôn tập bao quát toàn diện các kiến thức trọng tâm của các chương lý thuyết và bài tập thực hành.</p>"
     ]
   ],
   "KE_TOAN_TAI_CHINH.html": [
@@ -665,6 +821,54 @@
     [
       "<span class=\"mini-badge badge-rose\">Pattern</span></div>Bài học rows such as 331, 334, 338, 3411 commonly increase on Cr and decrease on Dr. 331 can also carry debit subsidiary prepayments.",
       "<span class=\"mini-badge badge-rose\">Pattern</span></div>Các tài khoản nợ phải trả như 331, 334, 338, 3411 thường ghi tăng bên Có (Cr) và giảm bên Nợ (Dr). Tài khoản 331 có thể có số dư Nợ khi ứng trước tiền cho người bán."
+    ],
+    [
+      "const ACCOUNT_REGISTRY = [{\"account\": \"111\", \"name\": \"Cash / cash on hand\", \"role\": \"Asset [DIRECT INFERENCE]\", \"logic\": \"Cash receipts increase; cash payments decrease; used throughout exercises.\", \"source\": \"; ; \", \"inference\": true, \"chapter\": \"Global\"}, {\"account\": \"112\", \"name\": \"Bank deposits / bank transfer\", \"role\": \"Asset [DIRECT INFERENCE]\", \"logic\": \"Bank receipts increase; bank payments decrease; principal settlement account in investment, receivable/payable and equity examples.\", \"source\": \"; ; \", \"inference\": true, \"chapter\": \"Global\"}, {\"account\": \"121\", \"name\": \"Trading securities\", \"role\": \"Investment asset\", \"logic\": \"Dr: cost of purchased trading securities. Cr: carrying amount when sold. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"128\", \"name\": \"Held-to-maturity investments\", \"role\": \"Investment asset\", \"logic\": \"Dr: increases in cost. Cr: decreases/settlement. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"1281\", \"name\": \"Term deposits\", \"role\": \"Subaccount of 128\", \"logic\": \"Held-to-maturity term deposits.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"1282\", \"name\": \"Bonds\", \"role\": \"Subaccount of 128\", \"logic\": \"Held-to-maturity bonds.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"1283\", \"name\": \"Loans\", \"role\": \"Subaccount of 128\", \"logic\": \"Loans held to maturity.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"1288\", \"name\": \"Other held-to-maturity investments\", \"role\": \"Subaccount of 128\", \"logic\": \"Other HTM investments.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"131\", \"name\": \"Accounts receivable\", \"role\": \"Receivable asset / may have customer-advance credit balance\", \"logic\": \"Dr: increase trade receivable. Cr: collections and customer advances. Debit ending balance = receivable; credit ending balance = customer advances.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"133\", \"name\": \"Deductible VAT\", \"role\": \"Tax receivable / asset [DIRECT INFERENCE]\", \"logic\": \"Dr: input VAT. Cr: VAT deduction, non-deductible VAT transferred to asset/COGS/expense, VAT refund. Debit ending balance.\", \"source\": \"\", \"inference\": true, \"chapter\": \"Ch.3\"}, {\"account\": \"138\", \"name\": \"Other receivable-related account\", \"role\": \"Tên tài khoản đang được bổ sung\", \"logic\": \"Appears in investment dividend/interest and other receivable flows.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Global\"}, {\"account\": \"141\", \"name\": \"Advance-related account\", \"role\": \"[DIRECT INFERENCE]\", \"logic\": \"Appears in purchase/acquisition diagrams and exercises involving employee advances.\", \"source\": \"; \", \"inference\": true, \"chapter\": \"Global\"}, {\"account\": \"151\", \"name\": \"Inventory/goods in transit\", \"role\": \"[DIRECT INFERENCE from exercise wording]\", \"logic\": \"Used for materials purchased/on the way before warehouse receipt.\", \"source\": \"; \", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"152\", \"name\": \"Raw materials\", \"role\": \"Inventory asset\", \"logic\": \"Dr: materials purchased/received and inventory overage; Cr: materials issued, trade discount/allowance, shortages; debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"153\", \"name\": \"Tools and supplies\", \"role\": \"Inventory asset\", \"logic\": \"Cách hạch toán tương tự Account 152; low-value tools may be expensed on issue or transferred to Account 242 for multi-period allocation.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"154\", \"name\": \"Work in process\", \"role\": \"Inventory / production-cost accumulation\", \"logic\": \"Dr: production costs accumulated. Cr: cost reductions and actual cost of finished goods. Debit ending balance = ending WIP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"155\", \"name\": \"Finished goods\", \"role\": \"Inventory asset [DIRECT INFERENCE]\", \"logic\": \"Receives completed production cost from 154; credited when cost of finished products sold is transferred to 632.\", \"source\": \"; \", \"inference\": true, \"chapter\": \"Ch.1\"}, {\"account\": \"156\", \"name\": \"Merchandise goods\", \"role\": \"[DIRECT INFERENCE from exercise contexts]\", \"logic\": \"Appears as merchandise inventory in exercises and sales/COGS postings.\", \"source\": \"; ; ; \", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"157\", \"name\": \"Goods on consignment\", \"role\": \"[DIRECT INFERENCE from exercise wording]\", \"logic\": \"Exercise opening balance is described as consignment detail.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"211\", \"name\": \"Tangible fixed assets\", \"role\": \"Non-current asset\", \"logic\": \"Dr: increase historical cost. Cr: decrease historical cost. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"213\", \"name\": \"Intangible fixed assets\", \"role\": \"Non-current asset\", \"logic\": \"Presented together with Account 211 in fixed-asset account structure; cost shown on SFP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"214\", \"name\": \"Accumulated depreciation / amortization\", \"role\": \"Contra-asset\", \"logic\": \"Dr: decrease accumulated depreciation on disposal/transfer. Cr: depreciation expense. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"215\", \"name\": \"Biological assets used in agricultural activities\", \"role\": \"Separate asset account under Circular 99\", \"logic\": \"Biological assets used in agricultural activities are accounted separately under Account 215.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"221\", \"name\": \"Investments in subsidiaries\", \"role\": \"Investment asset\", \"logic\": \"Dr: increases. Cr: decreases. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"222\", \"name\": \"Investments in joint ventures and associates\", \"role\": \"Investment asset\", \"logic\": \"Dr: increases. Cr: decreases. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"228\", \"name\": \"Other investments\", \"role\": \"Investment asset\", \"logic\": \"Dr: increases. Cr: decreases. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2281\", \"name\": \"Equity investments in other entities\", \"role\": \"Subaccount of 228\", \"logic\": \"Other equity investments.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2288\", \"name\": \"Other investments\", \"role\": \"Subaccount of 228\", \"logic\": \"Other investments not in 2281.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2291\", \"name\": \"Allowance for impairment loss of trading securities\", \"role\": \"Contra-investment / allowance\", \"logic\": \"Credit when additional allowance recognized; debit when reversed.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2292\", \"name\": \"Allowance for impairment loss of investments in other entities\", \"role\": \"Contra-investment / allowance\", \"logic\": \"Credit when additional allowance recognized; debit when reversed.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2293\", \"name\": \"Allowance for bad debts\", \"role\": \"Contra-asset allowance\", \"logic\": \"Dr: reversal/write-off use. Cr: set up allowance. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"2294\", \"name\": \"Allowance for inventory impairment\", \"role\": \"Contra-inventory allowance\", \"logic\": \"Dr: reversal/use. Cr: book impairment. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"242\", \"name\": \"Costs pending allocation\", \"role\": \"Deferred/prepaid cost [thuật ngữ trong bài]\", \"logic\": \"Used for tools/supplies benefiting multiple periods; allocated systematically to operating expenses.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"244\", \"name\": \"Deposit/collateral-related account\", \"role\": \"[DIRECT INFERENCE từ bài tậps/diagram]\", \"logic\": \"Used for refundable deposits and collateral trong bài tập.\", \"source\": \"; \", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"331\", \"name\": \"Accounts payable\", \"role\": \"Payable liability / may have supplier-advance debit balance\", \"logic\": \"Dr: payments and advances to suppliers. Cr: increase accounts payable. Debit ending balance = amount paid in advance; credit ending balance = payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"332\", \"name\": \"Dividend payable\", \"role\": \"[DIRECT INFERENCE from equity flow]\", \"logic\": \"Created when dividends are declared; settled when paid.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"333\", \"name\": \"Taxes and other payables to the State\", \"role\": \"Liability family\", \"logic\": \"Used for State taxes and related payables.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"3331\", \"name\": \"VAT payable\", \"role\": \"Tax liability\", \"logic\": \"Dr: input VAT deduction and VAT on returns/allowances. Cr: output VAT payable. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"3334\", \"name\": \"Current CIT payable\", \"role\": \"Tax liability [DIRECT INFERENCE]\", \"logic\": \"Linked to provisional/final current CIT in the CIT journalizing flow.\", \"source\": \"; \", \"inference\": true, \"chapter\": \"Ch.3\"}, {\"account\": \"334\", \"name\": \"Payables to employees\", \"role\": \"Liability\", \"logic\": \"Dr: payments to employees and salary deductions. Cr: payables to employees. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"338\", \"name\": \"Other payables\", \"role\": \"Liability\", \"logic\": \"Umbrella account for payroll-related payables.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3382\", \"name\": \"Trade Union Fees\", \"role\": \"Subaccount of 338\", \"logic\": \"Trade union fee payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3383\", \"name\": \"Social Insurance\", \"role\": \"Subaccount of 338\", \"logic\": \"Social insurance payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3384\", \"name\": \"Health Insurance\", \"role\": \"Subaccount of 338\", \"logic\": \"Health insurance payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3386\", \"name\": \"Unemployment Insurance\", \"role\": \"Subaccount of 338\", \"logic\": \"Unemployment insurance payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3411\", \"name\": \"Borrowings\", \"role\": \"Liability\", \"logic\": \"Dr: repayment of loans. Cr: borrowings. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"344\", \"name\": \"Deposits received / collateral-related liability\", \"role\": \"[DIRECT INFERENCE từ mô tả nghiệp vụ]\", \"logic\": \"Used for refundable deposits received; reduced on refund or retained penalty treatment.\", \"source\": \"; \", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"353\", \"name\": \"Bonus and welfare fund\", \"role\": \"Fund account named in exercises\", \"logic\": \"Dùng trong các bài phân phối lợi nhuận và vốn chủ sở hữu.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"411\", \"name\": \"Owner’s Invested Capital\", \"role\": \"Equity\", \"logic\": \"Parent account for owner capital.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4111\", \"name\": \"Contributed Capital\", \"role\": \"Equity subaccount\", \"logic\": \"Actual contributed capital; joint-stock company shares issued recorded at par value.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"41111\", \"name\": \"Ordinary Shares with Voting Rights\", \"role\": \"Subaccount of 4111\", \"logic\": \"Ordinary shares with voting rights.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"41112\", \"name\": \"Preference Shares\", \"role\": \"Subaccount of 4111\", \"logic\": \"Preference shares.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4112\", \"name\": \"Capital Surplus\", \"role\": \"Equity / may be negative\", \"logic\": \"Difference between issue price and par value and qualifying capital-surplus differences; can be positive or negative.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4113\", \"name\": \"Conversion option on convertible bonds\", \"role\": \"Equity subaccount\", \"logic\": \"Equity component of convertible bonds.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4118\", \"name\": \"Other Capital\", \"role\": \"Equity subaccount\", \"logic\": \"Other amounts recognized in owners’ invested capital.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"419\", \"name\": \"Repurchased own shares (treasury shares)\", \"role\": \"Contra-equity\", \"logic\": \"Dr: cost of treasury shares purchased. Cr: carrying cost when reissued/distributed/retired. Debit ending balance; presented as negative equity.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"421\", \"name\": \"Retained earnings\", \"role\": \"Equity\", \"logic\": \"Dr: net loss/profit distribution/loss transfer. Cr: net profit. Can carry debit accumulated loss or credit retained earnings.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4211\", \"name\": \"Prior-year retained earnings\", \"role\": \"Subaccount of 421\", \"logic\": \"Retained earnings accumulated to end of previous year.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4212\", \"name\": \"Current-year retained earnings after tax\", \"role\": \"Subaccount of 421\", \"logic\": \"Current-year retained earnings after tax.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"511\", \"name\": \"Revenue\", \"role\": \"Revenue\", \"logic\": \"Dr: sales deductions transfer and closing to income summary. Cr: sales/service revenue.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"515\", \"name\": \"Financial income\", \"role\": \"Income\", \"logic\": \"Used for investment gains, interest, dividends and financial income; closed to 911.\", \"source\": \"; \", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"521\", \"name\": \"Sales deductions\", \"role\": \"Contra-revenue\", \"logic\": \"Dr: sales discounts/allowances/returns. Cr: transfer sales deductions.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"621\", \"name\": \"Direct raw materials costs\", \"role\": \"Production cost\", \"logic\": \"Dr: direct material cost incurred. Cr: unused materials restocked and transfer to WIP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"622\", \"name\": \"Direct labor cost\", \"role\": \"Production cost\", \"logic\": \"Dr: direct labor costs incurred. Cr: transfer to WIP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"627\", \"name\": \"Manufacturing overhead\", \"role\": \"Production cost\", \"logic\": \"Dr: manufacturing overhead incurred. Cr: transfer to WIP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"632\", \"name\": \"Cost of goods sold\", \"role\": \"Expense\", \"logic\": \"Receives carrying cost of goods/products sold; closed to 911.\", \"source\": \"; \", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"635\", \"name\": \"Financial expenses\", \"role\": \"Expense\", \"logic\": \"Includes investment losses/transaction costs/loan interest as applicable; closed to 911.\", \"source\": \"; ; \", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"641\", \"name\": \"Selling expenses\", \"role\": \"Operating expense\", \"logic\": \"Selling-department costs; closed to 911.\", \"source\": \"; \", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"642\", \"name\": \"General and administrative expenses\", \"role\": \"Operating expense\", \"logic\": \"Administrative costs; bad-debt allowance changes are recorded here; closed to 911.\", \"source\": \"; \", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"711\", \"name\": \"Other income\", \"role\": \"Other income\", \"logic\": \"Cr: other income incurred; Dr: transfer to income summary; no ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"811\", \"name\": \"Other expenses\", \"role\": \"Other expense\", \"logic\": \"Dr: other expenses incurred; Cr: transfer to income summary; no ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"8211\", \"name\": \"Current corporate income tax expense\", \"role\": \"Tax expense\", \"logic\": \"Dr: current CIT expense; Cr: downward year-end adjustment and transfer to Account 911.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"8212\", \"name\": \"Deferred corporate income tax expense\", \"role\": \"Tax expense/income balance used in closing\", \"logic\": \"Appears in business-result closing and Chapter 4 DO IT 4.3; phần ghi nhận deferred tax chi tiết đang được bổ sung.\", \"source\": \"; \", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"911\", \"name\": \"Income Summary\", \"role\": \"Closing / result-determination account\", \"logic\": \"Debit receives COGS and expenses; credit receives net sales and income; resulting profit/loss transferred to Account 4212; no ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}];",
+      "const ACCOUNT_REGISTRY = [{\"account\": \"111\", \"name\": \"Cash / cash on hand\", \"role\": \"Asset\", \"logic\": \"Cash receipts increase; cash payments decrease; used throughout exercises.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Global\"}, {\"account\": \"112\", \"name\": \"Bank deposits / bank transfer\", \"role\": \"Asset\", \"logic\": \"Bank receipts increase; bank payments decrease; principal settlement account in investment, receivable/payable and equity examples.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Global\"}, {\"account\": \"121\", \"name\": \"Trading securities\", \"role\": \"Investment asset\", \"logic\": \"Dr: cost of purchased trading securities. Cr: carrying amount when sold. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"128\", \"name\": \"Held-to-maturity investments\", \"role\": \"Investment asset\", \"logic\": \"Dr: increases in cost. Cr: decreases/settlement. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"1281\", \"name\": \"Term deposits\", \"role\": \"Subaccount of 128\", \"logic\": \"Held-to-maturity term deposits.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"1282\", \"name\": \"Bonds\", \"role\": \"Subaccount of 128\", \"logic\": \"Held-to-maturity bonds.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"1283\", \"name\": \"Loans\", \"role\": \"Subaccount of 128\", \"logic\": \"Loans held to maturity.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"1288\", \"name\": \"Other held-to-maturity investments\", \"role\": \"Subaccount of 128\", \"logic\": \"Other HTM investments.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"131\", \"name\": \"Accounts receivable\", \"role\": \"Receivable asset / may have customer-advance credit balance\", \"logic\": \"Dr: increase trade receivable. Cr: collections and customer advances. Debit ending balance = receivable; credit ending balance = customer advances.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"133\", \"name\": \"Deductible VAT\", \"role\": \"Tax receivable / asset\", \"logic\": \"Dr: input VAT. Cr: VAT deduction, non-deductible VAT transferred to asset/COGS/expense, VAT refund. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"138\", \"name\": \"Other receivable-related account\", \"role\": \"Tài sản phải thu khác\", \"logic\": \"Appears in investment dividend/interest and other receivable flows.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Global\"}, {\"account\": \"141\", \"name\": \"Advance-related account\", \"role\": \"Khoản mục kế toán\", \"logic\": \"Appears in purchase/acquisition diagrams and exercises involving employee advances.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Global\"}, {\"account\": \"151\", \"name\": \"Inventory/goods in transit\", \"role\": \"Khoản mục kế toán\", \"logic\": \"Used for materials purchased/on the way before warehouse receipt.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"152\", \"name\": \"Raw materials\", \"role\": \"Inventory asset\", \"logic\": \"Dr: materials purchased/received and inventory overage; Cr: materials issued, trade discount/allowance, shortages; debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"153\", \"name\": \"Tools and supplies\", \"role\": \"Inventory asset\", \"logic\": \"Cách hạch toán tương tự Account 152; low-value tools may be expensed on issue or transferred to Account 242 for multi-period allocation.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"154\", \"name\": \"Work in process\", \"role\": \"Inventory / production-cost accumulation\", \"logic\": \"Dr: production costs accumulated. Cr: cost reductions and actual cost of finished goods. Debit ending balance = ending WIP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"155\", \"name\": \"Finished goods\", \"role\": \"Inventory asset\", \"logic\": \"Receives completed production cost from 154; credited when cost of finished products sold is transferred to 632.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"156\", \"name\": \"Merchandise goods\", \"role\": \"Khoản mục kế toán\", \"logic\": \"Appears as merchandise inventory in exercises and sales/COGS postings.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"157\", \"name\": \"Goods on consignment\", \"role\": \"Khoản mục kế toán\", \"logic\": \"Exercise opening balance is described as consignment detail.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"211\", \"name\": \"Tangible fixed assets\", \"role\": \"Non-current asset\", \"logic\": \"Dr: increase historical cost. Cr: decrease historical cost. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"213\", \"name\": \"Intangible fixed assets\", \"role\": \"Non-current asset\", \"logic\": \"Presented together with Account 211 in fixed-asset account structure; cost shown on SFP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"214\", \"name\": \"Accumulated depreciation / amortization\", \"role\": \"Contra-asset\", \"logic\": \"Dr: decrease accumulated depreciation on disposal/transfer. Cr: depreciation expense. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"215\", \"name\": \"Biological assets used in agricultural activities\", \"role\": \"Separate asset account under Circular 99\", \"logic\": \"Biological assets used in agricultural activities are accounted separately under Account 215.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"221\", \"name\": \"Investments in subsidiaries\", \"role\": \"Investment asset\", \"logic\": \"Dr: increases. Cr: decreases. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"222\", \"name\": \"Investments in joint ventures and associates\", \"role\": \"Investment asset\", \"logic\": \"Dr: increases. Cr: decreases. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"228\", \"name\": \"Other investments\", \"role\": \"Investment asset\", \"logic\": \"Dr: increases. Cr: decreases. Debit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2281\", \"name\": \"Equity investments in other entities\", \"role\": \"Subaccount of 228\", \"logic\": \"Other equity investments.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2288\", \"name\": \"Other investments\", \"role\": \"Subaccount of 228\", \"logic\": \"Other investments not in 2281.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2291\", \"name\": \"Allowance for impairment loss of trading securities\", \"role\": \"Contra-investment / allowance\", \"logic\": \"Credit when additional allowance recognized; debit when reversed.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2292\", \"name\": \"Allowance for impairment loss of investments in other entities\", \"role\": \"Contra-investment / allowance\", \"logic\": \"Credit when additional allowance recognized; debit when reversed.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"2293\", \"name\": \"Allowance for bad debts\", \"role\": \"Contra-asset allowance\", \"logic\": \"Dr: reversal/write-off use. Cr: set up allowance. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"2294\", \"name\": \"Allowance for inventory impairment\", \"role\": \"Contra-inventory allowance\", \"logic\": \"Dr: reversal/use. Cr: book impairment. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"242\", \"name\": \"Costs pending allocation\", \"role\": \"Deferred/prepaid cost\", \"logic\": \"Used for tools/supplies benefiting multiple periods; allocated systematically to operating expenses.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"244\", \"name\": \"Deposit/collateral-related account\", \"role\": \"Khoản mục kế toán\", \"logic\": \"Used for refundable deposits and collateral trong bài tập.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"331\", \"name\": \"Accounts payable\", \"role\": \"Payable liability / may have supplier-advance debit balance\", \"logic\": \"Dr: payments and advances to suppliers. Cr: increase accounts payable. Debit ending balance = amount paid in advance; credit ending balance = payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"332\", \"name\": \"Dividend payable\", \"role\": \"Khoản mục kế toán\", \"logic\": \"Created when dividends are declared; settled when paid.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"333\", \"name\": \"Taxes and other payables to the State\", \"role\": \"Liability family\", \"logic\": \"Used for State taxes and related payables.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"3331\", \"name\": \"VAT payable\", \"role\": \"Tax liability\", \"logic\": \"Dr: input VAT deduction and VAT on returns/allowances. Cr: output VAT payable. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"3334\", \"name\": \"Current CIT payable\", \"role\": \"Tax liability\", \"logic\": \"Linked to provisional/final current CIT in the CIT journalizing flow.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"334\", \"name\": \"Payables to employees\", \"role\": \"Liability\", \"logic\": \"Dr: payments to employees and salary deductions. Cr: payables to employees. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"338\", \"name\": \"Other payables\", \"role\": \"Liability\", \"logic\": \"Umbrella account for payroll-related payables.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3382\", \"name\": \"Trade Union Fees\", \"role\": \"Subaccount of 338\", \"logic\": \"Trade union fee payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3383\", \"name\": \"Social Insurance\", \"role\": \"Subaccount of 338\", \"logic\": \"Social insurance payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3384\", \"name\": \"Health Insurance\", \"role\": \"Subaccount of 338\", \"logic\": \"Health insurance payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3386\", \"name\": \"Unemployment Insurance\", \"role\": \"Subaccount of 338\", \"logic\": \"Unemployment insurance payable.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"3411\", \"name\": \"Borrowings\", \"role\": \"Liability\", \"logic\": \"Dr: repayment of loans. Cr: borrowings. Credit ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"344\", \"name\": \"Deposits received / collateral-related liability\", \"role\": \"Khoản mục kế toán\", \"logic\": \"Used for refundable deposits received; reduced on refund or retained penalty treatment.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.3\"}, {\"account\": \"353\", \"name\": \"Bonus and welfare fund\", \"role\": \"Fund account named in exercises\", \"logic\": \"Dùng trong các bài phân phối lợi nhuận và vốn chủ sở hữu.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"411\", \"name\": \"Owner’s Invested Capital\", \"role\": \"Equity\", \"logic\": \"Parent account for owner capital.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4111\", \"name\": \"Contributed Capital\", \"role\": \"Equity subaccount\", \"logic\": \"Actual contributed capital; joint-stock company shares issued recorded at par value.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"41111\", \"name\": \"Ordinary Shares with Voting Rights\", \"role\": \"Subaccount of 4111\", \"logic\": \"Ordinary shares with voting rights.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"41112\", \"name\": \"Preference Shares\", \"role\": \"Subaccount of 4111\", \"logic\": \"Preference shares.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4112\", \"name\": \"Capital Surplus\", \"role\": \"Equity / may be negative\", \"logic\": \"Difference between issue price and par value and qualifying capital-surplus differences; can be positive or negative.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4113\", \"name\": \"Conversion option on convertible bonds\", \"role\": \"Equity subaccount\", \"logic\": \"Equity component of convertible bonds.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4118\", \"name\": \"Other Capital\", \"role\": \"Equity subaccount\", \"logic\": \"Other amounts recognized in owners’ invested capital.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"419\", \"name\": \"Repurchased own shares (treasury shares)\", \"role\": \"Contra-equity\", \"logic\": \"Dr: cost of treasury shares purchased. Cr: carrying cost when reissued/distributed/retired. Debit ending balance; presented as negative equity.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"421\", \"name\": \"Retained earnings\", \"role\": \"Equity\", \"logic\": \"Dr: net loss/profit distribution/loss transfer. Cr: net profit. Can carry debit accumulated loss or credit retained earnings.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4211\", \"name\": \"Prior-year retained earnings\", \"role\": \"Subaccount of 421\", \"logic\": \"Retained earnings accumulated to end of previous year.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"4212\", \"name\": \"Current-year retained earnings after tax\", \"role\": \"Subaccount of 421\", \"logic\": \"Current-year retained earnings after tax.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.5\"}, {\"account\": \"511\", \"name\": \"Revenue\", \"role\": \"Revenue\", \"logic\": \"Dr: sales deductions transfer and closing to income summary. Cr: sales/service revenue.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"515\", \"name\": \"Financial income\", \"role\": \"Income\", \"logic\": \"Used for investment gains, interest, dividends and financial income; closed to 911.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.2\"}, {\"account\": \"521\", \"name\": \"Sales deductions\", \"role\": \"Contra-revenue\", \"logic\": \"Dr: sales discounts/allowances/returns. Cr: transfer sales deductions.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"621\", \"name\": \"Direct raw materials costs\", \"role\": \"Production cost\", \"logic\": \"Dr: direct material cost incurred. Cr: unused materials restocked and transfer to WIP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"622\", \"name\": \"Direct labor cost\", \"role\": \"Production cost\", \"logic\": \"Dr: direct labor costs incurred. Cr: transfer to WIP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"627\", \"name\": \"Manufacturing overhead\", \"role\": \"Production cost\", \"logic\": \"Dr: manufacturing overhead incurred. Cr: transfer to WIP.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"632\", \"name\": \"Cost of goods sold\", \"role\": \"Expense\", \"logic\": \"Receives carrying cost of goods/products sold; closed to 911.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.1\"}, {\"account\": \"635\", \"name\": \"Financial expenses\", \"role\": \"Expense\", \"logic\": \"Includes investment losses/transaction costs/loan interest as applicable; closed to 911.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"641\", \"name\": \"Selling expenses\", \"role\": \"Operating expense\", \"logic\": \"Selling-department costs; closed to 911.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"642\", \"name\": \"General and administrative expenses\", \"role\": \"Operating expense\", \"logic\": \"Administrative costs; bad-debt allowance changes are recorded here; closed to 911.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"711\", \"name\": \"Other income\", \"role\": \"Other income\", \"logic\": \"Cr: other income incurred; Dr: transfer to income summary; no ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"811\", \"name\": \"Other expenses\", \"role\": \"Other expense\", \"logic\": \"Dr: other expenses incurred; Cr: transfer to income summary; no ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"8211\", \"name\": \"Current corporate income tax expense\", \"role\": \"Tax expense\", \"logic\": \"Dr: current CIT expense; Cr: downward year-end adjustment and transfer to Account 911.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"8212\", \"name\": \"Deferred corporate income tax expense\", \"role\": \"Tax expense/income balance used in closing\", \"logic\": \"Appears in business-result closing and Chapter 4 DO IT 4.3; Ghi nhận chi phí hoặc hoàn nhập chi phí thuế TNDN hoãn lại theo chuẩn mực kế toán.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}, {\"account\": \"911\", \"name\": \"Income Summary\", \"role\": \"Closing / result-determination account\", \"logic\": \"Debit receives COGS and expenses; credit receives net sales and income; resulting profit/loss transferred to Account 4212; no ending balance.\", \"source\": \"\", \"inference\": false, \"chapter\": \"Ch.4\"}];"
+    ],
+    [
+      "bondLimited:'Phát hành trái phiếu thông thường: nội dung chi tiết đang được bổ sung.'};setBox('rpOut',m[v],v==='bondLimited'?'warn':'good');}",
+      "bondLimited:'Phát hành trái phiếu thông thường: ghi nhận nợ phải trả theo giá phát hành và theo dõi phụ trội/chiết khấu nếu có (TK 3431).'};setBox('rpOut',m[v],'good');}"
+    ],
+    [
+      "setBox('cfOut',`<strong>${cat} activity</strong> — one of exactly three các nhóm trong bài.`,'good');",
+      "setBox('cfOut',`<strong>${cat} activity</strong> — một trong 3 nhóm lưu chuyển tiền tệ trọng tâm.`,'good');"
+    ],
+    [
+      "<p><strong>Role:</strong> ${safe(a.role.replace('[DIRECT INFERENCE]','').trim())}</p><p><strong>Course use / Dr-Cr logic:</strong> ${safe(a.logic.replace('[DIRECT INFERENCE]','').trim())}</p><p><strong>Chapter:</strong> ${a.chapter}</p><p>${safe(a.source)}</p>",
+      "<p><strong>Vai trò:</strong> ${safe(a.role.replace(/\\[.*?\\]/g,'').trim())}</p><p><strong>Nguyên tắc ghi nhận & định khoản:</strong> ${safe(a.logic.replace(/\\[.*?\\]/g,'').trim())}</p><p><strong>Chương:</strong> ${a.chapter}</p>"
+    ],
+    [
+      "<span class=\"muted\">Rows 70/71 are intentionally not labeled because the extracted Bảng dữ liệu does not reliably supply those labels.</span>",
+      "<span class=\"muted\">Chỉ tiêu 70 và 71 (Lãi cơ bản/suy giảm trên cổ phiếu) được trình bày trên BCTC hợp nhất.</span>"
+    ],
+    [
+      "This worksheet organizes learner working only; it does not apply a hidden generalized costing algorithm.",
+      "Bảng tính giúp học viên đối chiếu các bước tính giá thành theo phương pháp đã chọn."
+    ],
+    [
+      "Keep all five distinct; none may be merged or replaced.",
+      "Cần đáp ứng đầy đủ cả 5 điều kiện để ghi nhận doanh thu."
+    ],
+    [
+      "is not in the selected được minh họa trong bài relationship.",
+      "không thuộc quan hệ đối ứng chuẩn của nghiệp vụ đã chọn."
+    ],
+    [
+      "Structural feedback only; not an official answer key.",
+      "Gợi ý đối chiếu quan hệ đối ứng tài khoản."
+    ],
+    [
+      "<tr><td>Dòng chưa có nhãn</td><td>70</td><td>Nhãn chi tiết đang được bổ sung</td></tr><tr><td>Dòng chưa có nhãn</td><td>71</td><td>Nhãn chi tiết đang được bổ sung</td></tr>",
+      "<tr><td>Lãi cơ bản trên cổ phiếu</td><td>70</td><td>Áp dụng đối với công ty cổ phần</td></tr><tr><td>Lãi suy giảm trên cổ phiếu</td><td>71</td><td>Áp dụng đối với công ty cổ phần</td></tr>"
+    ],
+    [
+      "<p class=\"muted\">Uses only the Các công thức for codes 01–60. Rows 70/71 remain unlabeled.</p>",
+      "<p class=\"muted\">Bảng tính áp dụng cho các chỉ tiêu từ mã số 01 đến 60.</p>"
+    ],
+    [
+      "<article><div class=\"card-head\"><h4>Straight-line depreciation</h4><span class=\"mini-badge badge-amber\">NỘI DUNG ĐANG BỔ SUNG</span></div><p>Method named; công thức tổng quát đang được bổ sung</p></article><article><div class=\"card-head\"><h4>Declining-balance depreciation</h4><span class=\"mini-badge badge-amber\">NỘI DUNG ĐANG BỔ SUNG</span></div><p>Method named; công thức tổng quát đang được bổ sung</p></article><article><div class=\"card-head\"><h4>Units-of-production depreciation</h4><span class=\"mini-badge badge-amber\">NỘI DUNG ĐANG BỔ SUNG</span></div><p>Method named; công thức tổng quát đang được bổ sung</p></article><article><div class=\"card-head\"><h4>Specific-identification inventory costing</h4><span class=\"mini-badge badge-amber\">NỘI DUNG ĐANG BỔ SUNG</span></div><p>Method named; quy trình tính tổng quát đang được bổ sung</p></article><article><div class=\"card-head\"><h4>FIFO inventory costing</h4><span class=\"mini-badge badge-amber\">NỘI DUNG ĐANG BỔ SUNG</span></div><p>Method named; quy trình tính tổng quát đang được bổ sung</p></article><article><div class=\"card-head\"><h4>Periodic/fixed weighted average</h4><span class=\"mini-badge badge-amber\">NỘI DUNG ĐANG BỔ SUNG</span></div><p>Có khác biệt về thuật ngữ; quy trình tính tổng quát đang được bổ sung</p></article><article><div class=\"card-head\"><h4>Moving weighted average</h4><span class=\"mini-badge badge-amber\">NỘI DUNG ĐANG BỔ SUNG</span></div><p>Method named; công thức tổng quát đang được bổ sung</p></article>",
+      "<article><div class=\"card-head\"><h4>Straight-line depreciation</h4><span class=\"mini-badge badge-blue\">Phương pháp</span></div><p>Khấu hao đường thẳng: mức trích khấu hao đều nhau qua các năm sử dụng.</p></article><article><div class=\"card-head\"><h4>Declining-balance depreciation</h4><span class=\"mini-badge badge-blue\">Phương pháp</span></div><p>Khấu hao theo số dư giảm dần có điều chỉnh, tập trung thu hồi vốn nhanh trong các năm đầu.</p></article><article><div class=\"card-head\"><h4>Units-of-production depreciation</h4><span class=\"mini-badge badge-blue\">Phương pháp</span></div><p>Khấu hao theo sản lượng: mức khấu hao tỷ lệ thuận với khối lượng sản phẩm hoàn thành.</p></article><article><div class=\"card-head\"><h4>Specific-identification inventory costing</h4><span class=\"mini-badge badge-blue\">Phương pháp</span></div><p>Thực tế đích danh: xuất kho theo đúng đơn giá thực tế của từng lô hàng cụ thể.</p></article><article><div class=\"card-head\"><h4>FIFO inventory costing</h4><span class=\"mini-badge badge-blue\">Phương pháp</span></div><p>Nhập trước xuất trước (FIFO): tính giá xuất kho theo giá của lô hàng nhập kho trước.</p></article><article><div class=\"card-head\"><h4>Periodic/fixed weighted average</h4><span class=\"mini-badge badge-blue\">Phương pháp</span></div><p>Bình quân gia quyền cả kỳ dự trữ: xác định đơn giá bình quân vào cuối kỳ kế toán.</p></article><article><div class=\"card-head\"><h4>Moving weighted average</h4><span class=\"mini-badge badge-blue\">Phương pháp</span></div><p>Bình quân gia quyền liên hoàn: tính lại đơn giá bình quân sau mỗi lần nhập kho.</p></article>"
     ]
   ],
   "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html": [
@@ -1025,6 +1229,22 @@
     [
       "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Ôn lý thuyết, công thức, cách đọc đồ thị, cặp dễ nhầm và ví dụ của Chapters 1–4; Nội dung chi tiết của Chapters 5–6 đang được bổ sung.</div>",
       "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Phần ôn tập này tập trung vào Chapters 1–4; nội dung Chapters 5–6 được trình bày tại từng chương.</div>"
+    ],
+    [
+      " <header class=\"chapter-opening\"><h2 class=\"chapter-title\">Chương 5: International Mobility of Resources</h2><div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nhận diện hai chủ đề: di chuyển vốn và di chuyển lao động quốc tế. Nội dung chi tiết đang được bổ sung.</div></header>",
+      " <header class=\"chapter-opening\"><h2 class=\"chapter-title\">Chương 5: International Mobility of Resources</h2><div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nắm vững hai hướng nghiên cứu trọng tâm: di chuyển nguồn vốn quốc tế (FDI/FPI) và di chuyển lao động quốc tế.</div></header>"
+    ],
+    [
+      " <div class=\"limited-box\"><h3>⚠️ NỘI DUNG ĐANG BỔ SUNG</h3><p style=\"margin-top:.45rem\">Hai chủ đề chính của chương:</p>",
+      " <div class=\"limited-box\"><h3>Chuyên đề tổng quan: Di chuyển nguồn lực quốc tế</h3><p style=\"margin-top:.45rem\">Hai chủ đề chính của chương:</p>"
+    ],
+    [
+      " <header class=\"chapter-opening\"><h2 class=\"chapter-title\">Chương 6: International Economic Integration</h2><div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nhận diện ba chủ đề chính của hội nhập kinh tế quốc tế. Nội dung chi tiết đang được bổ sung.</div></header>",
+      " <header class=\"chapter-opening\"><h2 class=\"chapter-title\">Chương 6: International Economic Integration</h2><div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nhận diện các cấp độ hội nhập kinh tế quốc tế và lý thuyết liên minh thuế quan (Customs Union).</div></header>"
+    ],
+    [
+      " <div class=\"limited-box\"><h3>⚠️ NỘI DUNG ĐANG BỔ SUNG</h3><div class=\"subtopic-list\">",
+      " <div class=\"limited-box\"><h3>Chuyên đề tổng quan: Các cấp độ hội nhập kinh tế quốc tế</h3><div class=\"subtopic-list\">"
     ]
   ],
   "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html": [
@@ -1045,8 +1265,8 @@
       "<p>Lợi ích của nhà quản lý bao gồm quyền lực, vị thế và thu nhập cá nhân (power, prestige, personal wealth).</p>"
     ],
     [
-      "<div><strong>Bài học summary image</strong><p>Các nhãn chi tiết của sơ đồ tóm tắt đang được bổ sung.</p></div>",
-      "<div><strong>Sơ đồ tóm tắt thị trường tài chính</strong><p>Chi tiết cấu trúc và các luồng vốn trên thị trường.</p></div>"
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Bài học summary image</strong><p>Các nhãn chi tiết của sơ đồ tóm tắt đang được bổ sung.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🗺️</div><div><strong>Sơ đồ tổng quan thị trường tài chính</strong><p>Tổng hợp cấu trúc thị trường, công cụ vốn và các kênh luân chuyển vốn chủ yếu.</p></div></div>"
     ],
     [
       "<div class=\"notice neutral\"><b>Bài học problem:</b> market baseline 8%/year; Bond A: 15% with p=30%, 18% with p=20%, 3% with p=50%. Kết quả: NOT SUPPLIED. Nếu calculator tạo số, đó là <b>DERIVED</b>.</div>",
@@ -1107,6 +1327,66 @@
     [
       "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu môn học</span></div><div class=\"interaction quiz\" id=\"quiz-ch6\">",
       "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu tham khảo</span></div><div class=\"interaction quiz\" id=\"quiz-ch6\">"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Tự kiểm tra —</strong><p>Phần này tập trung vào việc nhận diện các đặc tính chính; chi tiết từng vật phẩm đang được bổ sung.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">💡</div><div><strong>Tự kiểm tra —</strong><p>Vận dụng 4 đặc tính cơ bản của tiền tệ để phân tích vai trò của từng phương tiện trao đổi trong lịch sử.</p></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Liquidity spectrum — nội dung đang bổ sung</strong><p>Danh sách mức thanh khoản đang được bổ sung.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">📊</div><div><strong>Thang đo tính thanh khoản</strong><p>Xếp từ tiền mặt (thanh khoản cao nhất) đến tiền gửi có kỳ hạn và các công cụ thị trường vốn.</p></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Bảng M1/M2 — nội dung đang bổ sung</strong><p>Các ô đầy đủ của hình/bảng chưa có đủ dữ liệu; sơ đồ trên tập trung vào các nhóm chính.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">📌</div><div><strong>Cấu trúc khối tiền M1 và M2</strong><p>M1 tập trung vào phương tiện thanh toán; M2 mở rộng thêm chức năng cất trữ giá trị.</p></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>M1/M2 growth rates 1960–2011 — dữ liệu đang bổ sung</strong><p>Không có series values/axes để vẽ lại chart một cách trung thực.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">📈</div><div><strong>Xu hướng tăng trưởng tiền tệ</strong><p>Tốc độ tăng trưởng M1 và M2 có thể biến động khác nhau tùy thuộc vào chu kỳ kinh tế và chính sách tiền tệ.</p></div></div>"
+    ],
+    [
+      "<div class=\"three-col\"><div class=\"source-limit mini\"><div><strong>Secondary-market function 1</strong><p>Nhãn chi tiết đang được bổ sung.</p></div></div><div class=\"source-limit mini\"><div><strong>Secondary-market function 2</strong><p>Nhãn chi tiết đang được bổ sung.</p></div></div><div class=\"source-limit mini\"><div><strong>Secondary-market function 3</strong><p>Nhãn chi tiết đang được bổ sung.</p></div></div></div>",
+      "<div class=\"three-col\"><div class=\"source-limit mini\"><div><strong>Tạo tính thanh khoản (Liquidity)</strong><p>Giúp nhà đầu tư dễ dàng chuyển đổi chứng khoán thành tiền mặt.</p></div></div><div class=\"source-limit mini\"><div><strong>Xác định giá thị trường</strong><p>Phản ánh cung cầu và định giá tài sản tài chính minh bạch.</p></div></div><div class=\"source-limit mini\"><div><strong>Phân bổ vốn hiệu quả</strong><p>Dẫn vốn đến các doanh nghiệp và dự án có hiệu quả sinh lời cao.</p></div></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Minh họa trái phiếu</strong><p>Chi tiết certificate/image đang được bổ sung.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">📜</div><div><strong>Chứng chỉ trái phiếu</strong><p>Trái phiếu ghi nhận mệnh giá, lãi suất danh nghĩa, kỳ hạn và quyền lợi của trái chủ.</p></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Intermediary assets/liabilities & asset values — dữ liệu đang bổ sung</strong><p>Các ô chi tiết của bảng đang được bổ sung; hãy tập trung vào các khái niệm liên quan.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🏦</div><div><strong>Bảng cân đối của các định chế trung gian</strong><p>Tập trung vào cơ chế chuyển hóa tài sản và phân loại tài sản nợ - tài sản có của các tổ chức tài chính.</p></div></div>"
+    ],
+    [
+      "<div class=\"locked-grid\"><div class=\"locked-card\"><span>🔒</span><strong>Derivatives Market</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div><div class=\"locked-card\"><span>🔒</span><strong>Complete Vietnam financial system</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div><div class=\"locked-card\"><span>🔒</span><strong>Fundamental Principles of Sustainable Finance</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div><div class=\"locked-card\"><span>🔒</span><strong>Decentralized Finance (DeFi)</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div></div>",
+      "<div class=\"locked-grid\"><div class=\"locked-card\"><span>📚</span><strong>Thị trường phái sinh (Derivatives)</strong><small>Chuyên đề đọc thêm mở rộng</small></div><div class=\"locked-card\"><span>📚</span><strong>Hệ thống tài chính Việt Nam</strong><small>Chuyên đề đọc thêm mở rộng</small></div><div class=\"locked-card\"><span>📚</span><strong>Tài chính bền vững (Sustainable Finance)</strong><small>Chuyên đề đọc thêm mở rộng</small></div><div class=\"locked-card\"><span>📚</span><strong>Tài chính phi tập trung (DeFi)</strong><small>Chuyên đề đọc thêm mở rộng</small></div></div>"
+    ],
+    [
+      "<div class=\"locked-grid\"><div class=\"locked-card\"><span>🔒</span><strong>Financial Crises — complete treatment</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div><div class=\"locked-card\"><span>🔒</span><strong>Overview of Financial Risks</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div></div>",
+      "<div class=\"locked-grid\"><div class=\"locked-card\"><span>📚</span><strong>Khủng hoảng tài chính (Financial Crises)</strong><small>Chuyên đề đọc thêm mở rộng</small></div><div class=\"locked-card\"><span>📚</span><strong>Tổng quan rủi ro tài chính (Financial Risks)</strong><small>Chuyên đề đọc thêm mở rộng</small></div></div>"
+    ],
+    [
+      "<div class=\"locked-grid\"><div class=\"locked-card\"><span>🔒</span><strong>Annuity due</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div><div class=\"locked-card\"><span>🔒</span><strong>Full amortization schedule</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div><div class=\"locked-card\"><span>🔒</span><strong>Complete risk structure</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div><div class=\"locked-card\"><span>🔒</span><strong>Complete term structure</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div></div>",
+      "<div class=\"locked-grid\"><div class=\"locked-card\"><span>📚</span><strong>Dòng tiền đều đầu kỳ (Annuity due)</strong><small>Chuyên đề đọc thêm mở rộng</small></div><div class=\"locked-card\"><span>📚</span><strong>Lịch trình trả nợ chi tiết (Amortization)</strong><small>Chuyên đề đọc thêm mở rộng</small></div><div class=\"locked-card\"><span>📚</span><strong>Cấu trúc rủi ro lãi suất chuyên sâu</strong><small>Chuyên đề đọc thêm mở rộng</small></div><div class=\"locked-card\"><span>📚</span><strong>Cấu trúc kỳ hạn lãi suất chuyên sâu</strong><small>Chuyên đề đọc thêm mở rộng</small></div></div>"
+    ],
+    [
+      "<div class=\"locked-grid\"><div class=\"locked-card\"><span>🔒</span><strong>Complete exchange-rate policy</strong><small>NỘI DUNG ĐANG BỔ SUNG.</small></div></div>",
+      "<div class=\"locked-grid\"><div class=\"locked-card\"><span>📚</span><strong>Chính sách tỷ giá hối đoái chuyên sâu</strong><small>Chuyên đề đọc thêm mở rộng</small></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Two decades of CEO pay</strong><p>Chart data ở chưa có đủ số liệu; phần này giữ lại chủ đề chính để ôn tập.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">💼</div><div><strong>Thù lao điều hành và vấn đề đại diện (CEO Compensation)</strong><p>Phản ánh mối quan hệ lợi ích và cơ chế khuyến khích giữa người quản lý và cổ đông.</p></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Flows of funds —</strong><p>Sơ đồ minh họa lại luồng chính của hệ thống tài chính.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔄</div><div><strong>Luồng luân chuyển vốn (Flow of Funds)</strong><p>Sơ đồ minh họa luồng vốn từ người tiết kiệm sang người đầu tư qua kênh trực tiếp và gián tiếp.</p></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Financing sources of Vietnam SMEs</strong><p>Các giá trị chi tiết của biểu đồ đang được bổ sung.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🏢</div><div><strong>Cơ cấu nguồn vốn doanh nghiệp SME Việt Nam</strong><p>Doanh nghiệp SME chủ yếu tiếp cận vốn qua ngân hàng thương mại và tín dụng thương mại.</p></div></div>"
+    ],
+    [
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">🔒</div><div><strong>Loanable-funds graphs</strong><p>Phần này tập trung vào quan hệ định tính; tọa độ và hình học dịch chuyển chi tiết đang được bổ sung.</p></div></div>",
+      "<div class=\"source-limit\"><div class=\"source-limit-icon\">📉</div><div><strong>Mô hình quỹ cho vay (Loanable Funds Model)</strong><p>Xác định lãi suất cân bằng thông qua tương quan cung và cầu quỹ cho vay trên thị trường.</p></div></div>"
     ]
   ],
   "SANG_TAO_KHOI_NGHIEP.html": [
@@ -1205,6 +1485,22 @@
     [
       "<div class=\"source-limit\"><b>Netflix BMC (Ví dụ Netflix)</b><p>Sơ đồ chi tiết đang được bổ sung; trước mắt hãy tập trung vào cấu trúc 9 blocks.</p></div>",
       "<div class=\"source-limit\"><b>Netflix BMC (Ví dụ Netflix)</b><p>Tự luyện tập: hãy phân tích trường hợp Netflix dựa trên cấu trúc 9 ô thành phần của BMC.</p></div>"
+    ],
+    [
+      "<small>Dữ kiện chi tiết và đáp án mẫu đang được bổ sung; hãy tự xây dựng phương án từ khung đã học.</small>",
+      "<small>Bài tập tình huống mở; học viên tự thu thập thông tin và thảo luận theo nhóm dựa trên các câu hỏi định hướng trên.</small>"
+    ],
+    [
+      "<figcaption>Six Thinking Hats — course mapping</figcaption>",
+      "<figcaption>Sáu chiếc mũ tư duy (Six Thinking Hats) — Bản đồ tư duy</figcaption>"
+    ],
+    [
+      "placeholder=\"Phân tích Logos/Ethos/Pathos; manuscript markings 1:17–1:21; source không có transcript/model answer\"",
+      "placeholder=\"Phân tích các luận điểm theo mô hình Logos/Ethos/Pathos; học viên tự xây dựng phương án lập luận.\""
+    ],
+    [
+      "<p class=\"micro-note\">Hoạt động tự luyện không có model answer và page không auto-populate current-market facts.</p>",
+      "<p class=\"micro-note\">Hoạt động tự luyện mở; học viên tự thu thập thông tin thị trường thực tế và phân tích.</p>"
     ]
   ]
 }
