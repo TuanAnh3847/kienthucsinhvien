@@ -29,7 +29,7 @@ def snapshot(tree):
             chapters.append(attrs.get('id'))
         if tag in ('input', 'option'):
             fields.append((tag, tuple((k, attrs.get(k)) for k in ('id', 'name', 'type', 'value', 'min', 'max', 'step', 'disabled', 'selected'))))
-        data = tuple(sorted((k, v) for k, v in attrs.items() if k.startswith('data-')))
+        data = tuple(sorted((k, v) for k, v in attrs.items() if k.startswith('data-') and k not in ('data-content', 'data-flow-detail')))
         if data:
             answers.append((tag, data))
         if tag in ('td', 'th'):

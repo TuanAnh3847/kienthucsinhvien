@@ -227,6 +227,30 @@
     [
       "<h3 class=\"section-title\">⚠ Lưu ýs, Ambiguities &amp; Limits</h3>",
       "<h3 class=\"section-title\">Các điểm lưu ý và phân biệt quan trọng</h3>"
+    ],
+    [
+      "<div class=\"kicker\">3 learning blocks</div><h3 class=\"section-title\">Financial products ecosystem</h3>",
+      "<div class=\"kicker\">3 nhóm sản phẩm chính</div><h3 class=\"section-title\">Financial products ecosystem</h3>"
+    ],
+    [
+      "aria-label=\"Flashcard: Give Các ví dụ of employee benefits.\"",
+      "aria-label=\"Flashcard: Nêu các ví dụ về phúc lợi nhân viên (employee benefits).\""
+    ],
+    [
+      "<strong>Give Các ví dụ of employee benefits.</strong>",
+      "<strong>Nêu các ví dụ về phúc lợi nhân viên (employee benefits).</strong>"
+    ],
+    [
+      "<div class=\"kicker\">Minh họa thực tế</div><h3 class=\"section-title\">Loan-rate &amp; IRR Các ví dụ</h3>",
+      "<div class=\"kicker\">Minh họa thực tế</div><h3 class=\"section-title\">Ví dụ về lãi suất vay &amp; IRR</h3>"
+    ],
+    [
+      "<p class=\"hint\">Classify Các định nghĩa/examples as speculative or pure risk.</p>",
+      "<p class=\"hint\">Phân loại các định nghĩa và ví dụ thành speculative risk hoặc pure risk.</p>"
+    ],
+    [
+      "<p class=\"hint\">Step through exact substitutions from the two verified Các ví dụ.</p>",
+      "<p class=\"hint\">Xem các bước tính toán cụ thể qua hai ví dụ minh họa.</p>"
     ]
   ],
   "NGUYEN_LY_KE_TOAN.html": [
@@ -431,6 +455,46 @@
     [
       "note: '⚠ Dẫn chiếu này cần được đối chiếu với tài liệu môn học đang sử dụng.'",
       "note: '⚠ Dẫn chiếu này cần được đối chiếu với giáo trình và quy định hiện hành.'"
+    ],
+    [
+      "data-content=\"Regional/bilateral arrangements: legal bases listed GATT XXIV, Understanding on GATT XXIV, GATS V. Course emphasizes free-trade area and customs union/common market; implementation includes notification/reporting, WTO review/monitoring, internal condition and external condition.\"><strong>RTA branch</strong><p class=\"text-sm mt-1\">GATT XXIV · GATS V</p></button><button class=\"branch-btn\" data-branch-group=\"mfnex\" data-branch-output=\"mfnex-out\" data-content=\"Enabling Clause: GSP and differential/favourable treatment for developing/under-developed countries, including tariff and non-tariff preferences.\"><strong>Enabling Clause branch</strong><p class=\"text-sm mt-1\">Developing/LDC preferences</p></button></div><div id=\"mfnex-out\" class=\"branch-output\">Regional/bilateral arrangements: legal bases listed GATT XXIV, Understanding on GATT XXIV, GATS V. Course emphasizes free-trade area and customs union/common market; implementation includes notification/reporting, WTO review/monitoring, internal condition and external condition.</div>",
+      "data-content=\"Regional/bilateral arrangements: căn cứ pháp lý gồm GATT XXIV, Understanding on GATT XXIV, GATS V. Hai hình thức trọng tâm là khu vực mậu dịch tự do (FTA) và liên minh thuế quan/thị trường chung; việc thực thi bao gồm nghĩa vụ thông báo, cơ chế rà soát của WTO cùng các điều kiện nội khối và ngoại khối.\"><strong>RTA branch</strong><p class=\"text-sm mt-1\">GATT XXIV · GATS V</p></button><button class=\"branch-btn\" data-branch-group=\"mfnex\" data-branch-output=\"mfnex-out\" data-content=\"Enabling Clause: GSP and differential/favourable treatment for developing/under-developed countries, including tariff and non-tariff preferences.\"><strong>Enabling Clause branch</strong><p class=\"text-sm mt-1\">Developing/LDC preferences</p></button></div><div id=\"mfnex-out\" class=\"branch-output\">Regional/bilateral arrangements: căn cứ pháp lý gồm GATT XXIV, Understanding on GATT XXIV, GATS V. Hai hình thức trọng tâm là khu vực mậu dịch tự do (FTA) và liên minh thuế quan/thị trường chung; việc thực thi bao gồm nghĩa vụ thông báo, cơ chế rà soát của WTO cùng các điều kiện nội khối và ngoại khối.</div>"
+    ],
+    [
+      "<button class=\"branch-btn\" data-branch-group=\"nt\" data-branch-output=\"nt-out\" data-content=\"Services: NT applies only in sectors where a member undertook commitments; schedule limits/conditions define scope. ⚠ Lưu ý: số điều GATS có nhiều cách ghi; khi làm bài, hãy ưu tiên tài liệu môn học đang sử dụng.\">",
+      "<button class=\"branch-btn\" data-branch-group=\"nt\" data-branch-output=\"nt-out\" data-content=\"Services: NT áp dụng trong các ngành mà thành viên đã cam kết; biểu cam kết cụ thể xác định phạm vi và điều kiện áp dụng.\">"
+    ],
+    [
+      "<button class=\"branch-btn\" data-branch-group=\"nt\" data-branch-output=\"nt-out\" data-content=\"IP: TRIPS III.1 — nationals of other members receive treatment no less favourable than own nationals concerning IP protection. Slide asks “What is protection?” without defining it.\">",
+      "<button class=\"branch-btn\" data-branch-group=\"nt\" data-branch-output=\"nt-out\" data-content=\"IP: TRIPS III.1 — đối xử dành cho công dân của các thành viên khác không kém thuận lợi hơn công dân nước mình về bảo hộ quyền sở hữu trí tuệ.\">"
+    ],
+    [
+      "<div class=\"section-kicker\">Exact Bảng dữ liệu</div>",
+      "<div class=\"section-kicker\">Bảng thuế suất tham khảo</div>"
+    ],
+    [
+      "<p class=\"source-note\">Historical/trạng thái nội dung customs data; không phải live/current customs rate.</p>",
+      "<p class=\"source-note\">Dữ liệu biểu thuế mang tính tham khảo lịch sử; không phải biểu thuế hiện hành.</p>"
+    ],
+    [
+      "<button class=\"branch-btn\" data-branch-group=\"gri\" data-branch-output=\"gri-out\" data-content=\"Rule 3(c): if 3(a)/(b) cannot resolve, choose heading last in numerical order among headings equally meriting consideration. Ví dụ: 50% leather / 50% fabric bag → 65.17; preserved exactly as written.\">",
+      "<button class=\"branch-btn\" data-branch-group=\"gri\" data-branch-output=\"gri-out\" data-content=\"Rule 3(c): nếu không thể phân loại theo 3(a) hoặc 3(b), phân loại vào nhóm có số thứ tự sau cùng trong số các nhóm cùng được xem xét. Ví dụ: túi 50% da / 50% vải → 65.17.\">"
+    ],
+    [
+      "data-content=\"1 · Change of tariff classification. Sơ đồ also labels components HS 7009 China; HS 8306 India; HS 7320 Vietnam; final HS 8708 Germany.\"><strong>1 · Change classification</strong><p class=\"text-sm mt-1\">Tariff-classification method</p></button><button class=\"branch-btn\" data-branch-group=\"roo\" data-branch-output=\"roo-out\" data-content=\"2 · Specific manufacturing / processing operations. Quy trình: cotton → yarn → fabric → shirt.\"><strong>2 · Specific processing</strong><p class=\"text-sm mt-1\">cotton → yarn → fabric → shirt</p></button><button class=\"branch-btn\" data-branch-group=\"roo\" data-branch-output=\"roo-out\" data-content=\"3 · Value-added rule / threshold. A visual exists, but no exact threshold number is transcribed; no number is invented here.\"><strong>3 · Value-added</strong><p class=\"text-sm mt-1\">Threshold concept only</p></button></div><div id=\"roo-out\" class=\"branch-output\">1 · Change of tariff classification. Sơ đồ also labels components HS 7009 China; HS 8306 India; HS 7320 Vietnam; final HS 8708 Germany.</div>",
+      "data-content=\"1 · Chuyển đổi mã số hàng hóa (CTC). Ví dụ linh kiện: HS 7009 (Trung Quốc), HS 8306 (Ấn Độ), HS 7320 (Việt Nam) cấu thành sản phẩm hoàn thiện HS 8708 (Đức).\"><strong>1 · Change classification</strong><p class=\"text-sm mt-1\">Tariff-classification method</p></button><button class=\"branch-btn\" data-branch-group=\"roo\" data-branch-output=\"roo-out\" data-content=\"2 · Specific manufacturing / processing operations. Quy trình: cotton → yarn → fabric → shirt.\"><strong>2 · Specific processing</strong><p class=\"text-sm mt-1\">cotton → yarn → fabric → shirt</p></button><button class=\"branch-btn\" data-branch-group=\"roo\" data-branch-output=\"roo-out\" data-content=\"3 · Tiêu chí hàm lượng giá trị gia tăng (RVC/VA). Áp dụng ngưỡng tỷ lệ phần trăm giá trị gia tăng tối thiểu đạt được trong quá trình sản xuất.\"><strong>3 · Value-added</strong><p class=\"text-sm mt-1\">Threshold concept only</p></button></div><div id=\"roo-out\" class=\"branch-output\">1 · Chuyển đổi mã số hàng hóa (CTC). Ví dụ linh kiện: HS 7009 (Trung Quốc), HS 8306 (Ấn Độ), HS 7320 (Việt Nam) cấu thành sản phẩm hoàn thiện HS 8708 (Đức).</div>"
+    ],
+    [
+      "<div class=\"section-kicker\">Open Các câu hỏi tự luyện</div><h3 class=\"section-title\">Các câu hỏi chưa có đáp án mẫu</h3>",
+      "<div class=\"section-kicker\">Câu hỏi tự luyện</div><h3 class=\"section-title\">Câu hỏi mở tự luyện</h3>"
+    ],
+    [
+      "data-flow-detail=\"6 · Appellate Body review/adoption — 60–90 days in Mô hình minh họa.\"",
+      "data-flow-detail=\"6 · Appellate Body review/adoption — 60–90 days theo quy trình chuẩn.\""
+    ],
+    [
+      "if (feedback) feedback.textContent = count === items.length ? `Đúng ${count}/${items.length} — thứ tự khớp nguồn.` : `${count}/${items.length} vị trí đúng.`;",
+      "if (feedback) feedback.textContent = count === items.length ? `Đúng ${count}/${items.length} — thứ tự chính xác.` : `${count}/${items.length} vị trí đúng.`;"
     ]
   ],
   "PHAT_TRIEN_BEN_VUNG.html": [
@@ -449,6 +513,18 @@
     [
       "<p class=\"source-note\"> ví dụ liên quan</p>",
       "<p class=\"source-note\">Tham chiếu các tổ chức tài chính quốc tế và thỏa thuận phát triển bền vững tiêu biểu.</p>"
+    ],
+    [
+      "<th>Comparison</th><th>What to preserve</th>",
+      "<th>Comparison</th><th>Điểm cần nhớ</th>"
+    ],
+    [
+      "<td>Challenges vs Opportunities</td><td>4 vs 3; no invented one-to-one mapping</td>",
+      "<td>Challenges vs Opportunities</td><td>4 vs 3; không ghép cứng từng thách thức với một cơ hội duy nhất</td>"
+    ],
+    [
+      "<span class=\"flash-front\"><span class=\"flash-label\">Nhấn để lật</span><strong>IFI — course definition</strong></span>",
+      "<span class=\"flash-front\"><span class=\"flash-label\">Nhấn để lật</span><strong>IFI — định nghĩa trọng tâm</strong></span>"
     ]
   ],
   "TAM_LY_UNG_DUNG.html": [
@@ -707,6 +783,174 @@
     [
       "<span><b>6.</b> “SCR” — literal Nhãn; surrounding context discusses corporate social responsibility</span>",
       "<span><b>6.</b> Thúc đẩy trách nhiệm xã hội của doanh nghiệp (CSR / Corporate Social Responsibility)</span>"
+    ],
+    [
+      "<p>Course focus: participation in goal setting, goal difficulty, goal specificity, importance of objective, timely feedback.</p>",
+      "<p>Trọng tâm áp dụng: mức độ tham gia vào việc thiết lập mục tiêu, độ khó, tính cụ thể của mục tiêu và vai trò phản hồi trong bối cảnh văn hóa.</p>"
+    ],
+    [
+      "<h3>1. What is ethics?</h3></div><p>Three Các định nghĩa form the chapter foundation.</p>",
+      "<h3>1. What is ethics?</h3></div><p>Ba định nghĩa nền tảng của chương bao gồm:</p>"
+    ],
+    [
+      "<h3>3. Roots of unethical behavior</h3></div><p>Exactly six roots — no causal weights or rankings are added.</p>",
+      "<h3>3. Roots of unethical behavior</h3></div><p>Sáu nguồn gốc cốt lõi dẫn đến hành vi phi đạo đức:</p>"
+    ],
+    [
+      "<h3>Eight compact mindmap guides</h3></div><p>One-screen review anchors across the course.</p>",
+      "<h3>Eight compact mindmap guides</h3></div><p>Tổng hợp các sơ đồ tư duy trọng tâm toàn bộ môn học.</p>"
+    ],
+    [
+      "<h3>6. EPRG — strategic dispositions</h3></div><p>Bốn orientation được giữ nguyên: E, P, R, G.</p>",
+      "<h3>6. EPRG — strategic dispositions</h3></div><p>Bốn định hướng chiến lược cơ bản: Ethnocentric, Polycentric, Regiocentric, Geocentric.</p>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>1. What is culture?</h3>",
+      "<span class=\"section-label\">Khái niệm</span><h3>1. What is culture?</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>2. Culture has layers</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>2. Culture has layers</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>3. Determinants of culture</h3>",
+      "<span class=\"section-label\">Phân tích</span><h3>3. Determinants of culture</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>4. Why culture matters in business</h3>",
+      "<span class=\"section-label\">Ứng dụng</span><h3>4. Why culture matters in business</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>5. Responding to cultural difference</h3>",
+      "<span class=\"section-label\">Phân tích</span><h3>5. Responding to cultural difference</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>6. EPRG — strategic dispositions</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>6. EPRG — strategic dispositions</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>7. Standardize or adapt?</h3>",
+      "<span class=\"section-label\">So sánh</span><h3>7. Standardize or adapt?</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>1. Three cultural models</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>1. Three cultural models</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>2. Hofstede dimension explorer</h3>",
+      "<span class=\"section-label\">Khám phá</span><h3>2. Hofstede dimension explorer</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>3. Trompenaars dimension explorer</h3>",
+      "<span class=\"section-label\">Khám phá</span><h3>3. Trompenaars dimension explorer</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>4. GLOBE — 9 cultural attributes</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>4. GLOBE — 9 cultural attributes</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>5. Compare models without inventing equivalences</h3>",
+      "<span class=\"section-label\">So sánh</span><h3>5. Compare models without inventing equivalences</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>6. Similarities, differences & stereotype caution</h3>",
+      "<span class=\"section-label\">Ghi nhớ</span><h3>6. Similarities, differences & stereotype caution</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>1. What is organizational culture?</h3>",
+      "<span class=\"section-label\">Khái niệm</span><h3>1. What is organizational culture?</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>2. Three levels</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>2. Three levels</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>3. How culture forms — and what it does</h3>",
+      "<span class=\"section-label\">Phân tích</span><h3>3. How culture forms — and what it does</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>4. National culture meets organizational culture</h3>",
+      "<span class=\"section-label\">So sánh</span><h3>4. National culture meets organizational culture</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>5. Four corporate cultures</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>5. Four corporate cultures</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>6. Cultural diversity in MNCs</h3>",
+      "<span class=\"section-label\">Ứng dụng</span><h3>6. Cultural diversity in MNCs</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>1. Motivation basics</h3>",
+      "<span class=\"section-label\">Khái niệm</span><h3>1. Motivation basics</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>2. Content vs process — theory map</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>2. Content vs process — theory map</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>3. Maslow across cultures</h3>",
+      "<span class=\"section-label\">Ứng dụng</span><h3>3. Maslow across cultures</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>4. Herzberg Two-Factor Theory</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>4. Herzberg Two-Factor Theory</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>5. Achievement Motivation</h3>",
+      "<span class=\"section-label\">Lý thuyết</span><h3>5. Achievement Motivation</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>6. Process theories</h3>",
+      "<span class=\"section-label\">Mô hình</span><h3>6. Process theories</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>7. Applied motivation across cultures</h3>",
+      "<span class=\"section-label\">Ứng dụng</span><h3>7. Applied motivation across cultures</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>1. What is ethics?</h3>",
+      "<span class=\"section-label\">Khái niệm</span><h3>1. What is ethics?</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>2. Five recurring international-business issue areas</h3>",
+      "<span class=\"section-label\">Phân tích</span><h3>2. Five recurring international-business issue areas</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>3. Roots of unethical behavior</h3>",
+      "<span class=\"section-label\">Phân tích</span><h3>3. Roots of unethical behavior</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>4. Philosophical approaches</h3>",
+      "<span class=\"section-label\">Lý thuyết</span><h3>4. Philosophical approaches</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>5. Five-step ethical decision process</h3>",
+      "<span class=\"section-label\">Quy trình</span><h3>5. Five-step ethical decision process</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>6. Building ethical organizations</h3>",
+      "<span class=\"section-label\">Ứng dụng</span><h3>6. Building ethical organizations</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>Eight compact mindmap guides</h3>",
+      "<span class=\"section-label\">Sơ đồ ôn tập</span><h3>Eight compact mindmap guides</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>Confusion Busters</h3>",
+      "<span class=\"section-label\">Phân biệt khái niệm</span><h3>Confusion Busters</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>Formula sheet</h3>",
+      "<span class=\"section-label\">Công thức</span><h3>Formula sheet</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>Flashcards</h3>",
+      "<span class=\"section-label\">Ghi nhớ nhanh</span><h3>Flashcards</h3>"
+    ],
+    [
+      "<span class=\"section-label\">Learning block</span><h3>Cross-chapter review path</h3>",
+      "<span class=\"section-label\">Lộ trình ôn tập</span><h3>Cross-chapter review path</h3>"
     ]
   ],
   "KINH_TE_QUOC_TE.html": [
@@ -777,6 +1021,10 @@
     [
       "<th>Bài học trade/policy effect</th>",
       "<th>Tác động thương mại / chính sách</th>"
+    ],
+    [
+      "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Ôn lý thuyết, công thức, cách đọc đồ thị, cặp dễ nhầm và ví dụ của Chapters 1–4; Nội dung chi tiết của Chapters 5–6 đang được bổ sung.</div>",
+      "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Phần ôn tập này tập trung vào Chapters 1–4; nội dung Chapters 5–6 được trình bày tại từng chương.</div>"
     ]
   ],
   "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html": [
@@ -827,6 +1075,38 @@
     [
       "<span class=\"flip-face flip-back\"><strong>Bài học rate arising over a year from nominal rate and periods; terminology ambiguity applies.</strong></span>",
       "<span class=\"flip-face flip-back\"><strong>Lãi suất hiệu dụng thực tế phát sinh trong một năm từ lãi suất danh nghĩa và số kỳ ghép lãi (EAR / EFF).</strong></span>"
+    ],
+    [
+      "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Hiểu definition/classifications, credit instruments, được hướng dẫn trong bài interest/YTM methods, Loanable Funds và Liquidity Preference, đồng thời tôn trọng các formula/graph limitations.</div>",
+      "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nắm vững định nghĩa, phân loại công cụ tín dụng, các phương pháp xác định lãi suất/YTM, mô hình Loanable Funds và Liquidity Preference, cùng phạm vi công thức và đồ thị chuẩn.</div>"
+    ],
+    [
+      "<div class=\"panel\"><h3>được hướng dẫn trong bài statements</h3>",
+      "<div class=\"panel\"><h3>Các kết luận trọng tâm</h3>"
+    ],
+    [
+      "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nắm định nghĩa/quotation methods, appreciation-depreciation, Law of One Price, PPP, các factor groups và exchange-rate systems trong phạm vi bài.</div>",
+      "<div class=\"chapter-objective\"><strong>Mục tiêu trọng tâm:</strong> Nắm vững định nghĩa, phương pháp niêm yết tỷ giá, phân biệt appreciation/depreciation, quy luật một giá (Law of One Price), lý thuyết PPP, các nhóm yếu tố tác động và hệ thống tỷ giá.</div>"
+    ],
+    [
+      "<div class=\"section-head\"><span>REVIEW · COURSE MAP</span><h3>Ôn toàn bộ theory theo “điểm dễ nhầm”</h3><p>Review chỉ tái sử dụng theory, formulas, flashcards và comparisons đã đóng gói — không thành exam engine.</p></div>",
+      "<div class=\"section-head\"><span>SƠ ĐỒ ÔN TẬP</span><h3>Ôn toàn bộ lý thuyết theo “điểm dễ nhầm”</h3><p>Phần này dùng để ôn nhanh lý thuyết, công thức, thẻ ghi nhớ và các bảng so sánh trọng tâm.</p></div>"
+    ],
+    [
+      "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu môn học</span></div><div class=\"interaction quiz\" id=\"quiz-ch2\">",
+      "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu tham khảo</span></div><div class=\"interaction quiz\" id=\"quiz-ch2\">"
+    ],
+    [
+      "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu môn học</span></div><div class=\"interaction quiz\" id=\"quiz-ch3\">",
+      "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu tham khảo</span></div><div class=\"interaction quiz\" id=\"quiz-ch3\">"
+    ],
+    [
+      "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu môn học</span></div><div class=\"interaction quiz\" id=\"quiz-ch5\">",
+      "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu tham khảo</span></div><div class=\"interaction quiz\" id=\"quiz-ch5\">"
+    ],
+    [
+      "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu môn học</span></div><div class=\"interaction quiz\" id=\"quiz-ch6\">",
+      "<div class=\"mt8\"><span class=\"source-ref\">Tài liệu tham khảo</span></div><div class=\"interaction quiz\" id=\"quiz-ch6\">"
     ]
   ],
   "SANG_TAO_KHOI_NGHIEP.html": [
@@ -889,6 +1169,42 @@
     [
       "<div class=\"quant-callout\">Bài học statistic: 40%–50% of people starting a business got the idea through a social contact.</div>",
       "<div class=\"quant-callout\">Thống kê khảo sát: 40%–50% người khởi nghiệp hình thành ý tưởng kinh doanh từ mạng lưới quan hệ xã hội.</div>"
+    ],
+    [
+      "<p class=\"micro-note\">Template giữ nguyên labels của course; nội dung mở không được hệ thống chấm factual quality.</p>",
+      "<p class=\"micro-note\">Nội dung trả lời mở dùng để tự đánh giá và rèn luyện kỹ năng; không chấm điểm tự động.</p>"
+    ],
+    [
+      "<textarea placeholder=\"Ghi observations theo source description\" rows=\"3\"></textarea></label><label class=\"workspace-field\"><span>Environments</span><textarea placeholder=\"Ghi observations theo source description\" rows=\"3\"></textarea></label><label class=\"workspace-field\"><span>Interactions</span><textarea placeholder=\"Ghi observations theo source description\" rows=\"3\"></textarea></label><label class=\"workspace-field\"><span>Objects</span><textarea placeholder=\"Ghi observations theo source description\" rows=\"3\"></textarea></label><label class=\"workspace-field\"><span>Users</span><textarea placeholder=\"Ghi observations theo source description\" rows=\"3\"></textarea></label>",
+      "<textarea placeholder=\"Ghi lại quan sát của bạn\" rows=\"3\"></textarea></label><label class=\"workspace-field\"><span>Environments</span><textarea placeholder=\"Ghi lại quan sát của bạn\" rows=\"3\"></textarea></label><label class=\"workspace-field\"><span>Interactions</span><textarea placeholder=\"Ghi lại quan sát của bạn\" rows=\"3\"></textarea></label><label class=\"workspace-field\"><span>Objects</span><textarea placeholder=\"Ghi lại quan sát của bạn\" rows=\"3\"></textarea></label><label class=\"workspace-field\"><span>Users</span><textarea placeholder=\"Ghi lại quan sát của bạn\" rows=\"3\"></textarea></label>"
+    ],
+    [
+      "<p class=\"micro-note\">Self-check: response cần trực tiếp address stated refusal reason; course exercise không đưa universal persuasion scoring rubric.</p>",
+      "<p class=\"micro-note\">Tự kiểm tra: mỗi phản hồi cần trực tiếp giải quyết lý do từ chối cụ thể; phần này dùng để tự luyện, không chấm điểm tự động.</p>"
+    ],
+    [
+      "<h4>Match 9 BMC blocks với Các định nghĩa</h4>",
+      "<h4>Ghép 9 khối BMC với định nghĩa tương ứng</h4>"
+    ],
+    [
+      "<h3>BMC Các ví dụ</h3>",
+      "<h3>Các ví dụ Business Model Canvas</h3>"
+    ],
+    [
+      "<figcaption>BMC Các ví dụ — switch dataset</figcaption>",
+      "<figcaption>Các ví dụ Business Model Canvas</figcaption>"
+    ],
+    [
+      "<p>Các ví dụ BMC gồm: financial/banking-type, Uber, MoviePass, Facebook với dữ liệu block đã trích; Netflix BMC được nêu như một ví dụ nhưng chưa có dữ liệu chi tiết cho từng ô; hãy tập trung vào cấu trúc 9 blocks.</p>",
+      "<p>Các ví dụ BMC minh họa gồm: mô hình tài chính/ngân hàng, Uber, MoviePass và Facebook; với trường hợp Netflix, hãy tập trung vào việc tự vận dụng cấu trúc 9 thành phần.</p>"
+    ],
+    [
+      "<li>Netflix BMC được nêu như một ví dụ; dữ liệu chi tiết cho từng ô đang được bổ sung.</li>",
+      "<li>Trường hợp Netflix: sinh viên tự vận dụng phân tích theo 9 ô thành phần của BMC.</li>"
+    ],
+    [
+      "<div class=\"source-limit\"><b>Netflix BMC (Ví dụ Netflix)</b><p>Sơ đồ chi tiết đang được bổ sung; trước mắt hãy tập trung vào cấu trúc 9 blocks.</p></div>",
+      "<div class=\"source-limit\"><b>Netflix BMC (Ví dụ Netflix)</b><p>Tự luyện tập: hãy phân tích trường hợp Netflix dựa trên cấu trúc 9 ô thành phần của BMC.</p></div>"
     ]
   ]
 }
