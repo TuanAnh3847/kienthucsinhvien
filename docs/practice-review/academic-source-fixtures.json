@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "description": "Baseline fixtures for academic facts, formulas, legal citations, and quiz keys across Edu Connect targets",
+  "KTQT": {
+    "capital_demand_equation": "Q_K = -5r + 80",
+    "capital_initial_rates": {
+      "country_1": 0.02,
+      "country_2": 0.04
+    },
+    "capital_initial_quantities": {
+      "country_1": 70,
+      "country_2": 60
+    },
+    "capital_equilibrium_rate": 0.03,
+    "capital_equilibrium_quantities": {
+      "country_1": 65,
+      "country_2": 65
+    },
+    "capital_delta_k": 5,
+    "capital_welfare_gains": {
+      "country_1_delta_gnp_million": 25,
+      "country_2_delta_gnp_million": 25,
+      "world_gain_million": 50
+    },
+    "labor_demand_equations": {
+      "country_1": "Q_L1 = -w + 30",
+      "country_2": "Q_L2 = -w + 29"
+    },
+    "labor_equilibrium_wage": 12,
+    "fdi_purposes_count": 5,
+    "fdi_forms": [
+      "BCC",
+      "JV",
+      "100% Foreign Owned",
+      "BOT/BTO/BT"
+    ],
+    "fdi_pros_count": 6,
+    "fdi_cons_count": 6,
+    "integration_stages": [
+      "PTA",
+      "FTA",
+      "Customs Union",
+      "Common Market",
+      "Economic Union"
+    ],
+    "customs_union_welfare": {
+      "trade_creation": "b + d",
+      "trade_diversion": "(b + d) - e"
+    }
+  },
+  "TCCN": {
+    "credit_score_weights": {
+      "Payment History": 0.35,
+      "Amount of Debt / Owing": 0.30,
+      "Length of Credit History": 0.15,
+      "Type / Mix of Credit": 0.10,
+      "New Credit / Searching": 0.10
+    },
+    "loan_durations_legal": {
+      "regulation": "Thông tư 39/2016/TT-NHNN Điều 10",
+      "short_term": "≤ 1 năm",
+      "medium_term": "> 1 năm đến 5 năm",
+      "long_term": "> 5 năm"
+    },
+    "ratios": {
+      "solvency_ratio": "Net Worth / Total Assets",
+      "debt_ratio": "Total Debt / Total Assets",
+      "liquidity_ratio": "Liquid Assets / Short-term Debt"
+    }
+  },
+  "NLTTTC": {
+    "institutional_sources": {
+      "sustainable_finance": "ICMA GBP 2021 / EU Taxonomy",
+      "defi": "BIS Quarterly Review Dec 2021"
+    },
+    "mishkin_chapters": {
+      "derivatives": "Ch. 24",
+      "crises": "Ch. 9",
+      "risks": "Ch. 22 & 23",
+      "annuity_due": "Ch. 4",
+      "risk_structure": "Ch. 6",
+      "term_structure": "Ch. 6",
+      "exchange_rate": "Ch. 17 & 18"
+    },
+    "quiz_ch6_direct_quotation": {
+      "id": "quiz-ch6",
+      "question": "Vietnam USD/VND = 22,750",
+      "correct_answer": "Direct quotation",
+      "commodity_currency": "USD",
+      "term_currency": "VND"
+    },
+    "formulas": {
+      "simple_interest_fv": "FV = P × (1 + i·t)",
+      "compound_interest_fv": "FV = P × (1 + i/n)^(n·t)",
+      "effective_annual_rate": "EAR = (1 + i/n)^n - 1",
+      "fisher": "i = ir + πe"
+    }
+  },
+  "TLUD": {
+    "modules": [
+      {
+        "id": "mod4",
+        "title": "Động lực học tập & Hành vi",
+        "theories": [
+          "Clark Hull",
+          "Yerkes-Dodson",
+          "Maslow",
+          "Deci & Ryan"
+        ]
+      },
+      {
+        "id": "mod5",
+        "title": "Tâm lý học phát triển",
+        "theories": [
+          "Piaget",
+          "Erikson",
+          "Bowlby",
+          "Ainsworth"
+        ]
+      },
+      {
+        "id": "mod6",
+        "title": "Tâm lý học nhân cách",
+        "theories": [
+          "Freud",
+          "Rogers",
+          "Big Five",
+          "OCEAN"
+        ]
+      }
+    ],
+    "prohibited_public_terms": [
+      "chuyên đề đọc thêm mở rộng",
+      "ngoài chương trình thi",
+      "ngoài trọng tâm thi",
+      "locked-card",
+      "limited-box"
+    ]
+  }
+}

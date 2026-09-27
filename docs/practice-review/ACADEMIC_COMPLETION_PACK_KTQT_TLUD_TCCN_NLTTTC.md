@@ -107,15 +107,32 @@
 - *Phân biệt bản chất:*
   + **FDI (Foreign Direct Investment):** Đầu tư dài hạn của một chủ thể từ một quốc gia vào một doanh nghiệp/dự án ở quốc gia khác, với mục đích thiết lập mối quan hệ gắn bó lâu dài và có quyền trực tiếp tham gia quản lý, điều hành hoạt động sản xuất kinh doanh.
   + **FPI (Foreign Portfolio Investment):** Đầu tư tài chính thông qua mua cổ phiếu, trái phiếu, chứng chỉ quỹ mà không kèm theo quyền kiểm soát hay trực tiếp tham gia điều hành doanh nghiệp.
-- *Mục đích chính của FDI:* Tối đa hóa lợi nhuận, quản trị rủi ro; đa dạng hóa tài sản; khai thác uy tín thương hiệu quốc tế; khai thác tài nguyên và chi phí nhân công rẻ; tối ưu hóa chính sách thuế và né tránh rào cản thương mại.
-- *Các hình thức FDI chủ yếu:*
+- *Mục đích chính của FDI (Slide 14 - 5 mục đích):*
+  1. Tối đa hóa lợi nhuận.
+  2. Quản trị rủi ro và đa dạng hóa danh mục đầu tư.
+  3. Khai thác và bảo vệ uy tín thương hiệu quốc tế.
+  4. Khai thác nguồn tài nguyên thiên nhiên và chi phí nhân công rẻ.
+  5. Tiếp cận thị trường mới, tối ưu hóa thuế và né tránh các rào cản thương mại.
+- *Các hình thức FDI chủ yếu (Slide 15 - 4 hình thức):*
   1. Hợp đồng hợp tác kinh doanh (BCC - Business Cooperation Contract).
   2. Doanh nghiệp liên doanh (JV - Joint Venture).
   3. Doanh nghiệp 100% vốn nước ngoài (Wholly Foreign-Owned Enterprise).
   4. Hợp đồng đối tác công tư: BOT (Xây dựng - Vận hành - Chuyển giao), BTO, BT.
-- *Tác động kinh tế hai mặt của FDI:*
-  + Mặt tích cực: Bổ sung vốn đầu tư phát triển; chuyển giao công nghệ và kỹ năng quản lý; phát triển vùng; tăng cường tính cạnh tranh; cải thiện cán cân thanh toán (BOP); tạo thêm việc làm.
-  + Mặt tiêu cực / Rủi ro: Tỷ lệ nghiên cứu và phát triển (R&D) chuyển giao thấp; nguy cơ gia tăng dòng vốn chuyển lợi nhuận về nước; chèn ép doanh nghiệp nội địa non trẻ (crowding-out); xói mòn bản sắc văn hóa; rủi ro phụ thuộc chính sách nước ngoài.
+- *Tác động kinh tế hai mặt của FDI (Slide 16 - 6 ưu điểm & 6 nhược điểm):*
+  + Mặt tích cực (6 ưu điểm):
+    1. Bổ sung nguồn vốn đầu tư phát triển kinh tế xã hội.
+    2. Tiếp thu và chuyển giao công nghệ tiên tiến, kỹ năng quản lý hiện đại.
+    3. Thúc đẩy phát triển các vùng kinh tế trọng điểm và địa phương khó khăn.
+    4. Gia tăng tính cạnh tranh và hiệu quả thị trường trong nước.
+    5. Cải thiện cán cân thanh toán quốc tế (BOP) thông qua dòng vốn và xuất khẩu.
+    6. Giải quyết việc làm và nâng cao tay nghề cho người lao động.
+  + Mặt tiêu cực / Rủi ro (6 nhược điểm):
+    1. Chi tiêu cho hoạt động nghiên cứu và phát triển (R&D) tại nước sở tại thường thấp.
+    2. Nguy cơ gia tăng dòng vốn ngoại tệ chuyển lợi nhuận về nước trong dài hạn.
+    3. Có thể gây áp lực chèn ép (crowding-out), làm suy thoái các doanh nghiệp nội địa non trẻ.
+    4. Nguy cơ xói mòn bản sắc văn hóa doanh nghiệp và văn hóa truyền thống địa phương.
+    5. Tiềm ẩn nguy cơ tác động xấu đến môi trường sinh thái nếu không kiểm soát tốt.
+    6. Rủi ro gia tăng mức độ phụ thuộc vào quyết định chiến lược và chính sách của công ty mẹ ở nước ngoài.
 <!-- TRACE: SOURCE TYPE: LECTURER | SOURCE FILE: d:\Download\KINH TẾ QUỐC TẾ\Chapter 6_ST.pdf | LOCATION: Slide 14-16 | CONFIDENCE: HIGH -->
 
 #### 2.1.4. Nội dung lý thuyết chi tiết — Phần Lao động (International Labor Migration)
@@ -235,8 +252,8 @@
 
 ### 4.3. Hồi phục hệ thống công thức tài chính
 1. **Tỷ số khả năng thanh toán (Solvency Ratio):** $\text{Solvency Ratio} = \frac{\text{Net Worth}}{\text{Total Assets}}$.
-2. **Tỷ số nợ (Debt Ratio):** $\text{Debt Ratio} = \frac{\text{Total Debt}}{\text{Total Assets}}$ (ngưỡng an toàn khuyến nghị $< 50\%$).
-3. **Tỷ số thanh khoản (Liquidity Ratio):** $\text{Liquidity Ratio} = \frac{\text{Liquid Assets (Tiền mặt + Tiền gửi)}}{\text{Short-term Debt (Nợ ngắn hạn)}}$.
+2. **Tỷ số nợ (Debt Ratio):** $\text{Debt Ratio} = \frac{\text{Total Debt}}{\text{Total Assets}}$ (loại bỏ ngưỡng '< 50%' võ đoán do không có căn cứ từ bài tập gốc; ngưỡng an toàn thực tế phụ thuộc cơ cấu tài sản cá nhân).
+3. **Tỷ số thanh khoản (Liquidity Ratio):** $\text{Liquidity Ratio} = \frac{\text{Liquid Assets (Tiền mặt + Tiền gửi)}}{\text{Short-term Debt (Nợ ngắn hạn)}}$ (tách biệt rõ ràng với khuyến nghị quỹ dự phòng khẩn cấp 3–6 tháng chi phí thiết yếu).
 4. **Công thức trả góp niên kim đều (Amortization PMT):** $PMT = PV \times \frac{r(1 + r)^n}{(1 + r)^n - 1}$.
 5. **Quỹ khẩn cấp & Ngân sách:** 3 đến 6 tháng chi phí thiết yếu; Quy tắc 50/30/20, PYF (Pay Yourself First) 20%, Zero-Based Budgeting.
 <!-- TRACE: SOURCE TYPE: LECTURER & LEGAL | SOURCE FILE: Chapter 6 Eng.pdf, Thông tư 39/2016/TT-NHNN Điều 10, Bài GK TCCN (1).xlsx | CONFIDENCE: HIGH -->
@@ -248,24 +265,24 @@
 - **Giáo trình chính thức:** Frederic S. Mishkin, *Economics of Money, Banking and Financial Markets* (13th Edition, 2022); Jeff Madura, *Financial Markets and Institutions*.
 - **KHẲNG ĐỊNH CỐT LÕI TỪ HEAD:** Cả 11 chuyên đề đều thuộc đề cương đào tạo chính thức (bao gồm Tài chính bền vững mục 2.8 và DeFi mục 2.9). Toàn bộ 11 chuyên đề được biên soạn hoàn chỉnh:
 
-1. **Thị trường phái sinh (Derivatives - Mục 2.6/Update):** Hợp đồng kỳ hạn (Forwards), tương lai (Futures), quyền chọn (Options - Call/Put), hoán đổi (Swaps). Vai trò phòng ngừa rủi ro (Hedging) vs Đầu cơ (Speculation). (Mishkin Ch. 2 & Ch. 13).
+1. **Thị trường phái sinh (Derivatives - Mục 2.6/Update):** Hợp đồng kỳ hạn (Forwards), tương lai (Futures), quyền chọn (Options - Call/Put), hoán đổi (Swaps). Vai trò phòng ngừa rủi ro (Hedging) vs Đầu cơ (Speculation). (Mishkin Ch. 24: Financial Derivatives).
 2. **Hệ thống tài chính Việt Nam (Mục 2.7):** Sơ đồ cấu trúc gồm Thị trường tài chính (thị trường tiền tệ, thị trường vốn) và Định chế trung gian (NHTM, TCTD phi ngân hàng, tổ chức tài chính vi mô, quỹ tín dụng nhân dân) dưới sự quản lý của NHNN và Bộ Tài chính.
-3. **Nguyên lý cơ bản của Tài chính bền vững (Sustainable Finance - Mục 2.8):** Tích hợp các yếu tố Môi trường, Xã hội và Quản trị (ESG - Environmental, Social, Governance) vào quyết định đầu tư và phân bổ vốn nhằm giảm thiểu rủi ro khí hậu và thúc đẩy phát triển bền vững. (Khung World Bank / IMF / BIS).
-4. **Tài chính phi tập trung (DeFi - Mục 2.9):** Ứng dụng công nghệ sổ cái phân tán (Blockchain) và Hợp đồng thông minh (Smart Contracts) để thực hiện các dịch vụ tài chính (vay, cho vay, giao dịch) mà không cần trung gian tài chính truyền thống; nhận diện các rủi ro công nghệ, thanh khoản và rủi ro quy định pháp lý. (Báo cáo BIS / IMF).
-5. **Khủng hoảng tài chính (Financial Crises - Chương 3):** 3 giai đoạn theo mô hình Mishkin: (1) Bùng nổ tín dụng và sụp đổ bong bóng giá tài sản $\rightarrow$ (2) Khủng hoảng ngân hàng và thắt chặt tín dụng $\rightarrow$ (3) Suy thoái kinh tế và giảm phát nợ nần (Debt Deflation). (Mishkin Ch. 9).
-6. **Tổng quan rủi ro tài chính (Financial Risks - Chương 3):** 4 rủi ro cơ bản của định chế tài chính: Rủi ro tín dụng (Credit risk), Rủi ro lãi suất (Interest-rate risk), Rủi ro thanh khoản (Liquidity risk), Rủi ro thị trường (Market risk). (Mishkin Ch. 12).
+3. **Nguyên lý cơ bản của Tài chính bền vững (Sustainable Finance - Mục 2.8):** Tích hợp các yếu tố Môi trường, Xã hội và Quản trị (ESG - Environmental, Social, Governance) vào quyết định đầu tư và phân bổ vốn nhằm giảm thiểu rủi ro khí hậu và thúc đẩy phát triển bền vững. (Khung chuẩn quốc tế: ICMA Green Bond Principles - GBP 2021 & European Commission EU Taxonomy Regulation - EU 2020/852; World Bank).
+4. **Tài chính phi tập trung (DeFi - Mục 2.9):** Ứng dụng công nghệ sổ cái phân tán (Blockchain) và Hợp đồng thông minh (Smart Contracts) để thực hiện các dịch vụ tài chính (vay, cho vay, giao dịch) mà không cần trung gian tài chính truyền thống; nhận diện các rủi ro công nghệ, rủi ro thanh khoản và rủi ro quy định pháp lý. (Bank for International Settlements - BIS Quarterly Review Dec 2021: "DeFi lending: liquidity for the crypto world"; IMF Global Financial Stability Report).
+5. **Khủng hoảng tài chính (Financial Crises - Chương 3):** 3 giai đoạn theo mô hình Mishkin: (1) Bùng nổ tín dụng và sụp đổ bong bóng giá tài sản $\rightarrow$ (2) Khủng hoảng ngân hàng và thắt chặt tín dụng $\rightarrow$ (3) Suy thoái kinh tế và giảm phát nợ nần (Debt Deflation). (Mishkin Ch. 9 & 10).
+6. **Tổng quan rủi ro tài chính (Financial Risks - Chương 3):** 4 rủi ro cơ bản của định chế tài chính: Rủi ro tín dụng (Credit risk), Rủi ro lãi suất (Interest-rate risk), Rủi ro thanh khoản (Liquidity risk), Rủi ro thị trường (Market risk). (Mishkin Ch. 22 & 23: Managing Financial Risks).
 7. **Giá trị thời gian của tiền & Dòng tiền đều (TVM - Chương 5):**
    - Giá trị tương lai món đơn: $FV = PV \times (1 + r)^n$.
    - Giá trị hiện tại món đơn: $PV = \frac{FV}{(1 + r)^n}$.
    - Dòng tiền đều cuối kỳ (Ordinary Annuity): $FV = PMT \times \frac{(1 + r)^n - 1}{r}$.
    - Dòng tiền đều đầu kỳ (Annuity Due): $FV_{due} = FV_{ord} \times (1 + r) = PMT \times \frac{(1 + r)^n - 1}{r} \times (1 + r)$.
    - Lãi suất hiệu dụng: $EAR = \left(1 + \frac{r_{nom}}{m}\right)^m - 1$.
-   *(Giải quyết triệt để vấn đề số mũ rõ ràng, loại bỏ toàn bộ ghi chú 'cần làm rõ số mũ')*.
+   *(Mishkin Ch. 4: Understanding Interest Rates; loại bỏ hoàn toàn các ghi chú cảnh báo tạm thời)*.
 8. **Lịch trình trả nợ chi tiết (Amortization Schedule - Chương 5):** Khoản vay trả góp định kỳ cố định (Fixed-payment loan). Số tiền trả mỗi kỳ $PMT = PV \times \frac{r(1+r)^n}{(1+r)^n - 1}$, trong đó tỷ trọng trả nợ gốc tăng dần và tiền lãi giảm dần theo thời gian. (Mishkin Ch. 4).
 9. **Cấu trúc rủi ro của lãi suất (Risk Structure of Interest Rates - Chương 5):** 3 nhân tố quyết định chênh lệch lãi suất giữa các trái phiếu cùng kỳ hạn: (1) Rủi ro vỡ nợ (Default risk và Phần bù rủi ro - Risk premium), (2) Tính thanh khoản (Liquidity), (3) Thuế thu nhập (Income tax considerations). (Mishkin Ch. 6).
 10. **Cấu trúc kỳ hạn của lãi suất (Term Structure of Interest Rates - Chương 5):** Đường cong lợi suất (Yield Curve) và 3 lý thuyết kinh điển: (1) Thuyết kỳ vọng (Expectations Theory), (2) Thuyết thị trường phân cách (Segmented Markets Theory), (3) Thuyết phần bù thanh khoản (Liquidity Premium Theory - giải thích hoàn chỉnh nhất hình dạng dốc lên của đường cong lợi suất). (Mishkin Ch. 6).
 11. **Chính sách & Chế độ tỷ giá hối đoái (Exchange Rate Regimes - Chương 6):** 3 chế độ tỷ giá: Tỷ giá cố định (Fixed), Tỷ giá thả nổi hoàn toàn (Flexible/Floating), Tỷ giá thả nổi có điều tiết (Managed Float); Nguyên lý Tam giác bất khả thi (The Policy Trilemma / Impossible Trinity): Một quốc gia không thể đồng thời đạt được Tỷ giá cố định, Dòng vốn tự do và Chính sách tiền tệ độc lập. (Mishkin Ch. 17 & 18).
-<!-- TRACE: SOURCE TYPE: TEXTBOOK & SYLLABUS | SOURCE FILE: Mishkin, 13th Ed. & UEL EFF2044 Syllabus | CONFIDENCE: HIGH -->
+<!-- TRACE: SOURCE TYPE: TEXTBOOK & SYLLABUS | SOURCE FILE: Mishkin 13e, ICMA GBP 2021, BIS Dec 2021 & UEL EFF2044 Syllabus | CONFIDENCE: HIGH -->
 
 ---
 
@@ -290,4 +307,4 @@
 | Kỳ hạn vay (<1, 1–5, >5 năm) | TCCN Chương 6 | Thông tư 39/2016/TT-NHNN | Điều 10, Khoản 1, 2, 3 | LEGAL_SUPPLEMENT | HIGH | Căn cứ Điều 10 Thông tư 39 |
 | Tỷ trọng điểm tín dụng (35/30/15/10/10) | TCCN Chương 6 | `Chapter 6 Eng.pdf` | Trang 'Credit Score Criteria' | LECTURER | HIGH | Chuẩn hóa không đặt FICO |
 | Công thức Solvency, Debt, Liquidity | TCCN Chương 4 & 6 | `Bài GK TCCN (1).xlsx` | Dòng 207–210 | LECTURER | HIGH | Khôi phục từ bài tập sinh viên |
-| 11 Chuyên đề tài chính (Gồm ESG, DeFi) | NLTTTC | Mishkin 13e & UEL EFF2044 Syllabus | Ch. 2, 4, 6, 9, 12, 13, 17, 18 | TEXTBOOK_SUPPLEMENT | HIGH | Giáo trình đại học chính thức |
+| 11 Chuyên đề tài chính (Gồm ESG, DeFi) | NLTTTC | Mishkin 13e, ICMA & BIS | Ch. 4, 6, 9-10, 17-18, 22-24; ICMA GBP 2021; BIS Dec 2021 | TEXTBOOK_SUPPLEMENT | HIGH | Giáo trình đại học chính thức & tổ chức quốc tế |

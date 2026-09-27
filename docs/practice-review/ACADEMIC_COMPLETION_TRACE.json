@@ -1,9 +1,9 @@
 {
   "pack_metadata": {
-    "version": "1.1.0",
-    "created_at": "2026-09-27T23:16:00+07:00",
+    "version": "1.2.0",
+    "created_at": "2026-09-28T00:15:00+07:00",
     "branch": "gravity/site-completion-v1",
-    "head_commit": "ae54edc10ad7d9975edc13351425bacb82b1d587",
+    "head_commit": "0aefbb24da3c8759f03c37040c7c8e92619c86e0",
     "status": "HEAD_LOCKED_APPROVED"
   },
   "subjects": {
@@ -17,19 +17,29 @@
         ],
         "capital_mobility": {
           "VMPK_model": true,
-          "exercise": "Qk = -5r + 80, r1=2%, r2=4%, r*=3%, DeltaK=5B USD"
+          "slide_source": "Slide 11-13, 17",
+          "demand_curve": "Qk = -5r + 80 (shared by both nations)",
+          "initial_parameters": "r1=2%, r2=4%, Qk1=70B USD, Qk2=60B USD",
+          "equilibrium_parameters": "r*=3%, Qk1*=65B USD, Qk2*=65B USD",
+          "capital_movement": "DeltaK = 5B USD from Nation 1 to Nation 2",
+          "welfare_distribution": "Delta_GNP1 = 25M USD, Delta_GNP2 = 25M USD, World gain = 50M USD"
         },
         "labor_mobility": {
           "VMPL_model": true,
-          "exercise": "QL1 = -w + 30, QL2 = -w + 29, w*=12 USD/hr"
+          "slide_source": "Slide 18-25",
+          "exercise": "QL1 = -w + 30, QL2 = -w + 29, w*=12 USD/hr, net gain 2,000 USD/hr per nation"
         },
         "fdi_fpi": {
+          "slide_source": "Slide 14-16",
+          "purposes_count": 5,
           "forms": [
             "BCC",
             "JV",
             "100% Foreign Owned",
             "BOT/BTO/BT"
           ],
+          "pros_count": 6,
+          "cons_count": 6,
           "pros_cons_balanced": true
         }
       },
@@ -65,6 +75,7 @@
       "modules": {
         "mod4": {
           "name": "Motivation",
+          "textbook": "Schacter et al. (2020) 5th Edition Ch. 10/11",
           "theories": [
             "Clark Hull Drive-Reduction",
             "Yerkes-Dodson Law",
@@ -74,6 +85,7 @@
         },
         "mod5": {
           "name": "Development Psychology",
+          "textbook": "Gillibrand et al. (2016) Ch. 4-8",
           "theories": [
             "Piaget 4 stages",
             "Erikson 8 psychosocial stages",
@@ -82,6 +94,7 @@
         },
         "mod6": {
           "name": "Personality",
+          "textbook": "Psychoanalysis.docx; Schacter et al. (2020) Ch. 12",
           "theories": [
             "Freud Id/Ego/Superego & Defense Mechanisms",
             "Rogers Humanistic Self",
@@ -94,7 +107,7 @@
     "TCCN": {
       "page": "TAI_CHINH_CA_NHAN.html",
       "legal_loan_durations": {
-        "regulation": "Thông tư 39/2016/TT-NHNN, Điều 10",
+        "regulation": "Thông tư 39/2016/TT-NHNN, Điều 10, Khoản 1, 2, 3",
         "short_term": "<= 1 year",
         "medium_term": "> 1 year to 5 years",
         "long_term": "> 5 years"
@@ -112,14 +125,27 @@
       },
       "formulas": [
         "Solvency Ratio = Net Worth / Total Assets",
-        "Debt Ratio = Total Debt / Total Assets",
-        "Liquidity Ratio = Liquid Cash / Short-term Debt",
+        "Debt Ratio = Total Debt / Total Assets (arbitrary <50% threshold purged as unsupported)",
+        "Liquidity Ratio = Liquid Cash / Short-term Debt (separated from emergency reserve 3-6 months)",
         "PMT amortization formula"
       ]
     },
     "NLTTTC": {
       "page": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
       "syllabus": "EFF2044 (Frederic S. Mishkin 13e, Jeff Madura)",
+      "institutional_sources": {
+        "sustainable_finance": "ICMA Green Bond Principles (GBP) 2021 & European Commission EU Taxonomy Regulation (EU) 2020/852",
+        "defi": "Bank for International Settlements (BIS) Quarterly Review Dec 2021 & IMF Global Financial Stability Report"
+      },
+      "mishkin_chapters": {
+        "derivatives": "Ch. 24",
+        "financial_crises": "Ch. 9 & 10",
+        "financial_risks": "Ch. 22 & 23",
+        "tvm_annuity_due": "Ch. 4",
+        "risk_structure": "Ch. 6",
+        "term_structure": "Ch. 6",
+        "exchange_rate_regimes": "Ch. 17 & 18"
+      },
       "topics_retained": [
         "Derivatives Market",
         "Vietnam Financial System",
