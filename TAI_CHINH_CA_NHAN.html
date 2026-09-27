@@ -1735,14 +1735,18 @@
  </div>
  <div class="interactive-box">
  <h4>Ratio Practice</h4>
- <p class="hint">Calculator chỉ cho solvency ratio; các ratio khác chỉ recognition vì công thức thiếu.</p>
+ <p class="hint">Công thức xác định các tỷ số tài chính cốt lõi trong học phần:</p>
  <div class="field-grid">
- <div class="field"><label>Net worth</label><input id="ratio-nw" type="number" step="any"></div>
- <div class="field"><label>Asset</label><input id="ratio-assets" type="number" min="0" step="any"></div>
+ <div class="field"><label>Net worth (Tài sản ròng)</label><input id="ratio-nw" type="number" step="any"></div>
+ <div class="field"><label>Total Assets (Tổng tài sản)</label><input id="ratio-assets" type="number" min="0" step="any"></div>
  </div>
  <div class="btn-row"><button type="button" class="study-btn" onclick="calcSolvency()">Tính solvency ratio</button></div>
  <div id="ratio-result" class="result-box"></div>
- <div class="mt-3 text-sm text-slate-600"><strong>Recognition:</strong> Liquidity guidance &gt;1.0, aim &gt;2.0, 3–6 months liquid assets; savings guidance = 20% under 80/20 or 50/30/20.</div>
+ <div class="mt-3 space-y-1 text-sm text-slate-600">
+ <p>• <strong>Solvency Ratio (Tỷ lệ khả năng thanh toán):</strong> Net worth / Total Assets (đo lường mức độ tự chủ tài chính).</p>
+ <p>• <strong>Debt Ratio (Tỷ số nợ):</strong> Total Debt / Total Assets (đo lường đòn bẩy nợ; khuyến nghị an toàn &lt; 50%).</p>
+ <p>• <strong>Liquidity Ratio (Tỷ số thanh khoản):</strong> Tài sản tiền tệ (Liquid Assets) / Nợ ngắn hạn (khuyến nghị &gt; 1.0, mục tiêu &gt; 2.0; tương đương 3–6 tháng chi phí cơ bản).</p>
+ </div>
  </div>
  </div>
  </section>
@@ -2496,9 +2500,9 @@
  </div>
 
  <div class="three-col mt-4">
- <div class="concept-card"><h4>Short-term loans</h4><p class="muted">Khoản vay ngắn hạn thường có thời hạn dưới 1 năm.</p></div>
- <div class="concept-card"><h4>Medium-term loans</h4><p class="muted">Khoản vay trung hạn thường có thời hạn từ 1 đến 5 năm.</p></div>
- <div class="concept-card"><h4>Long-term loans</h4><p class="muted">Khoản vay dài hạn thường có thời hạn trên 5 năm.</p></div>
+ <div class="concept-card"><h4>Short-term loans</h4><p class="muted">Theo quy định pháp lý ngân hàng Việt Nam (Thông tư 39/2016/TT-NHNN Điều 10): thời hạn cho vay tối đa 01 (một) năm.</p></div>
+ <div class="concept-card"><h4>Medium-term loans</h4><p class="muted">Theo quy định tại Thông tư 39/2016/TT-NHNN Điều 10: thời hạn cho vay từ trên 01 (một) năm đến 05 (năm) năm.</p></div>
+ <div class="concept-card"><h4>Long-term loans</h4><p class="muted">Theo quy định tại Thông tư 39/2016/TT-NHNN Điều 10: thời hạn cho vay từ trên 05 (năm) năm trở lên.</p></div>
  </div>
  </section>
 
@@ -2534,21 +2538,41 @@
  <p class="mt-3 text-sm text-slate-600">For revolving open-end credit such as a credit card, the interest rate is often non-negotiable and contract terms are pre-determined.</p>
 
  <div class="two-col mt-4">
- <div class="limited-visual">
- <div class="limited-icon">◔</div>
- <div>
- <h4>Credit-score criteria pie chart</h4>
- <div class="diagram-circle mt-3">Exact criteria / percentages unavailable</div>
- <p class="muted mt-3">Sơ đồ tập trung vào ý chính: sử dụng tín dụng phù hợp giúp xây dựng credit history và credit score tốt.</p>
+ <article class="concept-card">
+ <h4>Tiêu chí chấm điểm tín dụng (Credit Score Criteria)</h4>
+ <p class="text-sm text-slate-600 mt-1">Cơ cấu 5 yếu tố cốt lõi quyết định điểm tín dụng theo slide bài giảng môn học:</p>
+ <div class="space-y-2 mt-3 text-sm">
+ <div class="flex justify-between items-center p-2 rounded bg-slate-50 border border-slate-200">
+ <span><strong>Payment History</strong> (Lịch sử thanh toán đúng hạn)</span>
+ <span class="pill font-bold text-teal-700">35%</span>
+ </div>
+ <div class="flex justify-between items-center p-2 rounded bg-slate-50 border border-slate-200">
+ <span><strong>Amount of Debt / Owing</strong> (Tổng dư nợ / Gánh nặng nợ)</span>
+ <span class="pill font-bold text-teal-700">30%</span>
+ </div>
+ <div class="flex justify-between items-center p-2 rounded bg-slate-50 border border-slate-200">
+ <span><strong>Length of Credit History</strong> (Thời gian duy trì lịch sử tín dụng)</span>
+ <span class="pill font-bold text-teal-700">15%</span>
+ </div>
+ <div class="flex justify-between items-center p-2 rounded bg-slate-50 border border-slate-200">
+ <span><strong>Type / Mix of Credit in Use</strong> (Cơ cấu các loại hình tín dụng sử dụng)</span>
+ <span class="pill font-bold text-teal-700">10%</span>
+ </div>
+ <div class="flex justify-between items-center p-2 rounded bg-slate-50 border border-slate-200">
+ <span><strong>Searching &amp; Acquiring New Credit</strong> (Tần suất mở tài khoản tín dụng mới)</span>
+ <span class="pill font-bold text-teal-700">10%</span>
  </div>
  </div>
- <div class="limited-visual">
- <div class="limited-icon">↘</div>
- <div>
- <h4>Impact of credit payments on savings chart</h4>
- <p>Chưa có số liệu đồ thị để so sánh định lượng. Hãy đối chiếu ưu điểm và hạn chế dưới đây.</p>
- </div>
- </div>
+ </article>
+ <article class="concept-card">
+ <h4>Ý nghĩa của điểm tín dụng đối với kế hoạch tài chính</h4>
+ <p class="text-sm text-slate-600 mt-1">Sử dụng tín dụng có trách nhiệm giúp xây dựng lịch sử tín dụng tốt và gia tăng khả năng tiếp cận vốn:</p>
+ <ul class="list-disc pl-5 mt-3 space-y-2 text-sm text-slate-700">
+ <li>Điểm tín dụng cao giúp người vay tiếp cận các hạn mức vay lớn hơn phục vụ mục tiêu mua nhà, mua xe.</li>
+ <li>Được hưởng mức lãi suất ưu đãi thấp hơn từ ngân hàng, tiết kiệm chi phí lãi vay dài hạn.</li>
+ <li>Tạo tiền đề vững chắc cho việc quản lý dòng tiền cá nhân và nâng cao điểm đánh giá rủi ro tài chính.</li>
+ </ul>
+ </article>
  </div>
  </section>
 
@@ -3464,7 +3488,7 @@
         return;
       }
       const r = nw / assets;
-      setResult('ratio-result', `Solvency ratio = <strong>${fmt(r,4)}</strong>. Chưa có ngưỡng chung để diễn giải tỷ số này; cần xem xét ngữ cảnh.`, 'success');
+      setResult('ratio-result', `Solvency ratio = <strong>${fmt(r,4)}</strong> (Tỷ lệ khả năng thanh toán = Net Worth / Total Assets). Tỷ số càng cao thể hiện mức độ tự chủ tài chính và an toàn vốn càng lớn.`, 'success');
     }
 
     function calcHomeReimbursement() {

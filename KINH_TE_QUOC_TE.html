@@ -58,7 +58,6 @@
     .step-viewer{display:grid;gap:.7rem}.step-panel{padding:.8rem;border:1px solid #e2e8f0;border-radius:.75rem;background:#f8fafc}.step-panel[hidden]{display:none}.study-details{border:1px solid #e7e5e4;border-radius:.85rem;background:#fff;overflow:hidden}.study-details summary{cursor:pointer;font-weight:850;color:#0f172a;padding:.9rem 1rem;background:#fafaf9}.study-details .detail-body{padding:1rem;color:#57534e;line-height:1.65}.study-details+.study-details{margin-top:.65rem}
     .match-zone{display:grid;grid-template-columns:1.15fr .85fr;gap:1rem}.match-items,.match-targets{display:grid;gap:.6rem}.match-item,.match-target{padding:.7rem;border:1px solid #cbd5e1;border-radius:.7rem;background:#fff;text-align:left}.match-item.selected{border-color:#7c3aed;box-shadow:0 0 0 3px rgba(124,58,237,.12)}.match-target{background:#f8fafc}.match-pairs{display:grid;gap:.45rem;margin-top:.75rem;font-size:.9rem}.pair-pill{padding:.5rem .65rem;border-radius:.65rem;background:#f1f5f9;color:#334155}.sort-list{display:grid;gap:.55rem}.sort-row{display:grid;grid-template-columns:1fr auto;gap:.7rem;align-items:center;padding:.7rem;border:1px solid #cbd5e1;border-radius:.7rem;background:#fff}.sort-controls{display:flex;gap:.3rem}.icon-btn{width:2rem;height:2rem;border-radius:.5rem;border:1px solid #cbd5e1;background:#f8fafc;font-weight:900}.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}.choice-btn{padding:.75rem;border:1px solid #cbd5e1;border-radius:.7rem;background:#fff;text-align:left;font-weight:750;color:#334155}.choice-btn.selected{border-color:#0f766e;background:#f0fdfa;color:#115e59}.rent-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}.rent-node{padding:.8rem;border:1px solid #cbd5e1;border-radius:.8rem;background:#fff}.rent-node.active{border-color:#f59e0b;background:#fffbeb}
     .flash-shell{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.75rem}.flash-card{min-height:170px;padding:1.2rem;border-radius:1rem;border:1px solid #cbd5e1;background:linear-gradient(135deg,#fff,#f8fafc);display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer}.flash-card .answer{display:none}.flash-card.revealed .question{display:none}.flash-card.revealed .answer{display:block}.flash-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#64748b;font-weight:900}.flash-text{font-size:1.05rem;line-height:1.6;font-weight:800;color:#0f172a}.review-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}.graph-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}.gallery-card{padding:.9rem;border:1px solid #e2e8f0;border-radius:.85rem;background:#fff}.gallery-card h4{font-weight:900;color:#0f172a}.gallery-meta{font-size:.75rem;color:#64748b;margin:.2rem 0 .6rem}.gallery-card ul{font-size:.84rem;color:#57534e;padding-left:1.05rem}.gallery-card li{list-style:disc;margin:.2rem 0}
-    .limited-box{padding:1.25rem;border:1px solid #fde68a;background:#fffbeb;border-radius:1rem;color:#78350f}.limited-box h3{font-size:1.15rem;font-weight:900}.subtopic-list{margin-top:.8rem;display:grid;gap:.6rem}.subtopic{padding:.75rem;background:#fff;border:1px solid #fde68a;border-radius:.7rem;font-weight:800}
     .chapter-theme-1 .section-heading h3{color:#3730a3}.chapter-theme-2 .section-heading h3{color:#6d28d9}.chapter-theme-3 .section-heading h3{color:#be123c}.chapter-theme-4 .section-heading h3{color:#b45309}.review-theme .section-heading h3{color:#0369a1}
     .mini-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem}.kpi{padding:.8rem;border-radius:.8rem;background:#fff;border:1px solid #e2e8f0}.kpi strong{display:block;font-size:1.25rem;color:#0f172a}.kpi span{font-size:.78rem;color:#64748b}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.muted{color:#64748b}.small{font-size:.85rem}.strong{font-weight:900;color:#0f172a}
     @media(max-width:980px){.card-grid.four,.review-grid,.graph-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.card-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.timeline{grid-template-columns:repeat(2,minmax(0,1fr))}.timeline-step::after{display:none}.mini-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -116,13 +115,345 @@
 <article class="tool-card"><h3>Tariff escalation logic</h3>'+formula('Công thức','Te = (t − ai·ti)/(1 − ai) = t + [ai(t−ti)]/(1−ai)','<p class="small">Comparative cases: ai=0 → Te=t; t=ti → Te=t; t&gt;ti → Te&gt;t; t&lt;ti → Te&lt;t; t↑ → Te↑; t↓ → Te↓; ti↑ → Te↓; ti↓ → Te↑.</p>')+'</article></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Ví dụ minh họa</span><h3>Vietnam motorbike ERP — step reveal</h3></div><article class="tool-card"><div class="btn-row"><button type="button" class="edu-btn rose" id="erpRevealBtn">Reveal next step</button><button type="button" class="edu-btn" id="erpRevealReset">Reset</button></div><div id="erpSteps" class="step-viewer" style="margin-top:.8rem"><div class="step-panel" data-erp-step="1"><strong>Step 1:</strong> Free-trade final price = $600; imported input = $400 → V = $200.</div><div class="step-panel" data-erp-step="2" hidden><strong>Step 2:</strong> Final-product tariff 20% → final price $720; input tariff 15% → input cost $460.</div><div class="step-panel" data-erp-step="3" hidden><strong>Step 3:</strong> V′ = $720 − $460 = $260.</div><div class="step-panel" data-erp-step="4" hidden><strong>Step 4:</strong> ERP = (260−200)/200 = <strong>30%</strong>.</div></div></article></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Concept map</span><h3>Tariff Tools</h3></div><div class="mindmap-wrap"><div class="mindmap-root">Tariff Tools</div><div class="mindmap-grid"><div class="map-branch"><h4>Definition</h4><ul class="bullet-list"><li>cross-border tax/duty</li><li>indirect tax classification</li></ul></div><div class="map-branch"><h4>Types</h4><ul class="bullet-list"><li>ad valorem</li><li>specific</li><li>compound</li></ul></div><div class="map-branch"><h4>Functions</h4><ul class="bullet-list"><li>6 chức năng</li></ul></div><div class="map-branch"><h4>Welfare</h4><ul class="bullet-list"><li>consumer surplus</li><li>producer surplus</li><li>government revenue</li><li>deadweight loss</li></ul></div><div class="map-branch"><h4>Policy models</h4><ul class="bullet-list"><li>import tariff</li><li>export tariff</li></ul></div><div class="map-branch"><h4>ERP</h4><ul class="bullet-list"><li>V / V′</li><li>t / ti / ai</li><li>tariff escalation</li></ul></div></div></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Flashcards</span><h3>Ôn nhanh Chương 3</h3></div><div id="flashCh3"></div></section><aside class="source-note"><strong>Lưu ý:</strong> ⚠ Lưu ý: phần producer surplus có nhãn “CS”; ví dụ thuế xuất khẩu tiếp tục dưới tiêu đề “IMPORT TARIFF AND ITS EFFECTS”. Khối số liệu vẫn được đọc trong bối cảnh thuế xuất khẩu.</aside> </section> <section id="ch4" class="tab-content hidden animate-fade-in chapter-theme-4">
  <header class="chapter-opening"><h2 class="chapter-title">Chương 4: Non-Tariff Trade Barriers and the New Protectionism</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Phân loại các công cụ phi thuế quan, hiểu cơ chế quota/VER/export subsidy/dumping, đọc quota rent và welfare, đồng thời liên hệ đúng ba vụ việc minh họa.</div></header>
 <section class="learning-module"><div class="section-heading"><span class="section-kicker">Bridge from earlier chapters</span><h3>Tóm tắt trước khi vào non-tariff tools</h3></div><div class="card-grid three"><article class="knowledge-card tone-sky"><h3>Classical recap</h3><p>Absolute Advantage: specialize where most efficient. Comparative Advantage: even less productive nations can gain where opportunity cost is lowest. Tóm tắt message: free trade increases global welfare through efficiency and specialization.</p></article><article class="knowledge-card tone-violet"><h3>Modern recap</h3><p>H-O: export goods that intensively use abundant factors such as labor, land or capital. New Trade Theory emphasizes economies of scale, imperfect competition and innovation advantages.</p></article><article class="knowledge-card tone-rose"><h3>Tariff recap</h3><p>Tariff = tax on imports/exports; ad valorem = % of value; specific = fixed amount per unit; compound = both. Tóm tắt says tariffs raise prices, limit trade volume and create welfare losses.</p></article></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Why NTMs?</span><h3>6 lý do giải thích việc dùng công cụ phi thuế quan</h3></div><div class="card-grid three"><article class="knowledge-card tone-amber"><div class="eyebrow"></div><h3>1. Tariffs are blunt</h3><p>Tariffs change prices but do not directly target quality, safety, environment or security.</p></article><article class="knowledge-card tone-sky"><div class="eyebrow"></div><h3>2. Multi-stage value chains</h3><p>Tariffs may miss the location of production stages.</p></article><article class="knowledge-card tone-violet"><div class="eyebrow"></div><h3>3. Industrial / strategic policy</h3><p>Technology upgrading, local content and resilience may require other tools.</p></article><article class="knowledge-card tone-rose"><div class="eyebrow"></div><h3>4. WTO bindings lowered tariffs</h3><p>Các chính phủ có xu hướng chuyển sang sử dụng tiêu chuẩn kỹ thuật, hạn ngạch, cấp phép và quy tắc xuất xứ.</p></article><article class="knowledge-card tone-emerald"><div class="eyebrow"></div><h3>5. Information / trust problems</h3><p>Standards, testing and certification address information or trust issues.</p></article><article class="knowledge-card tone-slate"><div class="eyebrow"></div><h3>6. Distribution management</h3><p>Procurement rules, safeguards, SPS/TBT may target vulnerable groups more precisely than tariffs.</p></article></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Instrument map</span><h3>6 nhóm công cụ trong chapter overview</h3></div><div class="mindmap-wrap"><div class="mindmap-root">Non-Tariff Trade Barriers</div><div class="mindmap-grid"><div class="map-branch"><h4>Quantity restrictions</h4><ul class="bullet-list"><li>Import quota</li><li>Export quota</li><li>VER</li></ul></div><div class="map-branch"><h4>Financial support</h4><ul class="bullet-list"><li>Export subsidy</li></ul></div><div class="map-branch"><h4>Pricing / competition</h4><ul class="bullet-list"><li>Dumping</li></ul></div><div class="map-branch"><h4>Other measures</h4><ul class="bullet-list"><li>quality/safety standards</li><li>packing/labeling</li><li>medical requirements</li><li>environmental rules</li><li>customs regulations</li><li>VAT</li><li>special consumption tax</li><li>customs fee</li><li>environmental protection fee</li><li>state procurement</li><li>localization requirements</li></ul></div></div></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Import quota</span><h3>Quota model, welfare & quota-rent allocation</h3></div><div class="tool-grid"><article class="tool-card"><h3>Import quota replay</h3><p class="small">Baseline: S=10P−20, D=−10P+80, Pw=3. Free-trade imports = 40.</p><div class="field"><label for="quotaInput">Quota (units)</label><input id="quotaInput" type="number" min="0" step="any" value="20"></div><button class="edu-btn amber" type="button" id="quotaBtn" style="margin-top:.6rem">Replay quota</button><div id="quotaResult" class="result-box"></div><div class="svg-shell" style="margin-top:.8rem"><svg id="quotaSvg" viewBox="0 0 700 420" role="img" aria-label="Import quota welfare graph"></svg></div></article>
-<article class="tool-card"><h3>Quota rent: 3 routes</h3><div class="rent-flow" id="rentFlow"><button class="rent-node" type="button" data-rent="domestic"><strong>Free licenses</strong><br><span class="small">to domestic firms</span></button><button class="rent-node" type="button" data-rent="auction"><strong>Competitive auction</strong><br><span class="small">licenses auctioned</span></button><button class="rent-node" type="button" data-rent="foreign"><strong>Foreign license holders</strong><br><span class="small">licenses held abroad</span></button></div><div id="rentResult" class="result-box">Chọn một route để xem ai capture area c.</div><p class="small muted" style="margin-top:.6rem">Không mặc định area c là government revenue; điều đó chỉ đúng khi phân bổ bằng đấu giá.</p></article></div><div class="result-box small"><strong>Exact baseline:</strong> autarky P=5,Q=30; free trade P=3,Qd=50,Qs=10,imports=40; quota Q=20 → P=4,Qd=40,Qs=20,imports=20.</div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Comparison tool</span><h3>Import quota vs Import tariff</h3></div><article class="tool-card"><div class="btn-row" id="tqButtons"><button class="edu-btn active" data-dim="similarity" type="button">Similar effects</button><button class="edu-btn" data-dim="certainty" type="button">Trade quantity certainty</button><button class="edu-btn" data-dim="rent" type="button">Revenue / rent</button><button class="edu-btn" data-dim="market" type="button">Firm profits</button></div><div id="tqResult" class="result-box"></div></article></section><div class="knowledge-card tone-slate" style="margin-top:1rem"><h3>Export quota</h3><p>Restriction on the amount/number exported during a period; it may have the same effects as an export tariff.</p></div><div class="card-grid three"><article class="knowledge-card tone-violet"><div class="eyebrow">Definition</div><h3>Voluntary Export Restraint (VER)</h3><p>Importing country induces another country to reduce exports “voluntarily” under threat of broader/higher restrictions when exports threaten a domestic industry.</p><ul class="bullet-list"><li>Tác động tương đương hạn ngạch nhập khẩu trong ví dụ.</li><li>Revenue effect captured by foreign exporters.</li></ul></article><article class="knowledge-card tone-sky"><div class="eyebrow">Exact datum</div><h3>1981 U.S.–Japan auto VER</h3><p><strong>1.68 million automobiles/year</strong> export cap.</p><ul class="bullet-list"><li>Artificial scarcity allowed higher prices.</li><li>Japanese firms shifted toward higher-value/premium vehicles; ví dụ: Lexus, Acura, Infiniti.</li><li>Japanese automakers built U.S. factories, bypassing export limits.</li></ul></article><article class="knowledge-card tone-slate"><div class="eyebrow">Hạn chế</div><h3>Hạn chế và cách tránh né</h3><ul class="bullet-list"><li>Mainly major suppliers can be involved.</li><li>Exporters can shift quota mix toward higher-value goods.</li><li>Suppliers may open factories in third countries to avoid restraint.</li></ul></article></div><section class="learning-module"><div class="section-heading"><span class="section-kicker">Export subsidy</span><h3>Hình thức, mục tiêu và mô hình phúc lợi</h3></div><div class="card-grid two"><article class="knowledge-card tone-emerald"><h3>5 forms</h3><ul class="bullet-list"><li>Direct cash payment per exported unit.</li><li>Tax exemption/reduction for export earnings.</li><li>Subsidized loans to domestic exporters.</li><li>Low-interest financing for foreign buyers.</li><li>Export credit insurance below market rates.</li></ul></article><article class="knowledge-card tone-amber"><h3>5 objectives</h3><ul class="bullet-list"><li>Enhance international competitiveness.</li><li>Support strategic industries.</li><li>Create/protect domestic employment.</li><li>Gain foreign market share.</li><li>Overcome foreign trade barriers.</li></ul></article></div><div class="tool-card" style="margin-top:1rem"><h3>Export subsidy replay: S=20P−20; D=−10P+70; Pw=4</h3><div class="field"><label for="subsidyInput">Subsidy $/unit</label><input id="subsidyInput" type="number" min="0" max="3" step="any" value="1"></div><button class="edu-btn amber" type="button" id="subsidyBtn" style="margin-top:.6rem">Replay subsidy</button><div id="subsidyResult" class="result-box"></div><div class="svg-shell" style="margin-top:.8rem"><svg id="subsidySvg" viewBox="0 0 700 420" role="img" aria-label="Export subsidy welfare graph"></svg></div><div class="result-box small"><strong>Exact states:</strong> autarky P=3,Q=40; free trade P=4,Qd=30,Qs=60,exports=30; with $1 subsidy producer P=5,Qd=20,Qs=80,exports=60.</div><div class="result-box small"><strong>Phân tích phúc lợi:</strong> ΔPS = +(a+b+c); ΔCS = −(a+b); chi phí ngân sách chính phủ = −(b+c+d); tổn thất ròng (DWL) = −(b+d), trong đó diện tích b là tổn thất phi hiệu quả sản xuất và diện tích d là biến dạng tiêu dùng.</div></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Dumping</span><h3>Định nghĩa, biên độ và 3 loại</h3></div><div class="card-grid two"><article class="knowledge-card tone-rose"><h3>Dumping</h3><p>Exporting below production cost or selling abroad at a lower price than in the domestic market.</p><p class="small" style="margin-top:.5rem"><strong>Normal value:</strong> exporter domestic-market price or comparable third-country-market price, generally ex-factory and at comparable times.</p><p class="small"><strong>Dumping margin:</strong> amount by which normal value exceeds export price; the basis for anti-dumping duties.</p></article><article class="knowledge-card tone-slate"><h3>Điều kiện chống bán phá giá</h3><p>Quy định chống bán phá giá của WTO cho phép áp thuế bằng đúng biên độ bán phá giá nếu chứng minh được thiệt hại vật chất đối với ngành sản xuất trong nước.</p></article></div><article class="tool-card" style="margin-top:1rem"><h3>Matching 3 dumping types</h3><div id="dumpingMatch" class="choice-grid"><button type="button" class="choice-btn" data-dump="sporadic">Temporary surplus sold abroad below home price to clear inventory.</button><button type="button" class="choice-btn" data-dump="predatory">Temporarily sell below cost abroad to push rivals out, then raise prices.</button><button type="button" class="choice-btn" data-dump="persistent">Routine higher home prices and lower foreign prices under different market conditions.</button></div><div class="field" style="margin-top:.7rem"><label for="dumpingTypeSelect">Label selected scenario as…</label><select id="dumpingTypeSelect"><option value="sporadic">Sporadic</option><option value="predatory">Predatory</option><option value="persistent">Persistent</option></select></div><button type="button" class="edu-btn amber" id="dumpingCheck" style="margin-top:.6rem">Check match</button><div id="dumpingResult" class="result-box"></div></article></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Các vụ việc minh họa</span><h3>Case-study accordion</h3></div><details class="study-details"><summary>SPS fresh fruit into Japan</summary><div class="detail-body"><strong>Instrument / mechanism:</strong> registered orchards → pest monitoring → disinfection/cold treatment → quarantine certificate → border sampling/inspection. <strong>Outcome stated:</strong> refusal/re-export/destruction if pests detected; protection of indigenous agriculture/biosafety.</div></details><details class="study-details"><summary>US–China chips controls</summary><div class="detail-body"><strong>Objective:</strong> restrict access to sensitive technology. <strong>Instruments:</strong> export licensing, end-use/end-user controls, Entity List / MEU List, Foreign Direct Product Rule (FDPR). <strong>Outcomes stated:</strong> deny/delay access, rewire supply chains, pursue technology-security goals beyond tariff effects.</div></details><details class="study-details"><summary>1981 U.S.–Japan auto VER</summary><div class="detail-body"><strong>Instrument:</strong> VER. <strong>Mechanism:</strong> Japan capped auto exports to the U.S. at 1.68 million units/year. <strong>Outcomes stated:</strong> higher prices, premium-vehicle shift and Japanese U.S. manufacturing/FDI.</div></details></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">New Protectionism</span><h3>4 điểm cần nhớ</h3></div><div class="card-grid four"><article class="knowledge-card tone-amber"><div class="eyebrow"></div><h3>1. NTBs displaced some tariff use</h3><p>As tariff rates fell under multilateral agreements, non-tariff barriers became more prominent.</p></article><article class="knowledge-card tone-rose"><div class="eyebrow"></div><h3>2. Welfare is generally negative in presented models</h3><p>Quotas, subsidies and VERs generate distortions; export subsidies are stated to harm the implementing country in the Mô hình minh họa.</p></article><article class="knowledge-card tone-violet"><div class="eyebrow"></div><h3>3. Distribution matters</h3><p>Who captures quota rents changes distribution and total impact.</p></article><article class="knowledge-card tone-sky"><div class="eyebrow"></div><h3>4. Regulatory barriers became sophisticated</h3><p>Standards, procurement and administrative procedures serve stated policy objectives while shaping trade.</p></article></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Concept map</span><h3>Non-Tariff Trade Barriers</h3></div><div class="mindmap-wrap"><div class="mindmap-root">Non-Tariff Trade Barriers</div><div class="mindmap-grid"><div class="map-branch"><h4>Rationale</h4><ul class="bullet-list"><li>6 reasons</li></ul></div><div class="map-branch"><h4>Quotas</h4><ul class="bullet-list"><li>import</li><li>export</li><li>quota rent</li></ul></div><div class="map-branch"><h4>VER</h4><ul class="bullet-list"><li>induced export restraint</li></ul></div><div class="map-branch"><h4>Export subsidy</h4><ul class="bullet-list"><li>5 forms</li><li>5 objectives</li></ul></div><div class="map-branch"><h4>Dumping</h4><ul class="bullet-list"><li>sporadic</li><li>predatory</li><li>persistent</li></ul></div><div class="map-branch"><h4>Cases</h4><ul class="bullet-list"><li>SPS Japan</li><li>US–China chips</li><li>1981 auto VER</li></ul></div></div></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Flashcards</span><h3>Ôn nhanh Chương 4</h3></div><div id="flashCh4"></div></section><aside class="source-note"><strong>Lưu ý:</strong> Các thẻ vụ việc tập trung vào những dữ kiện và luận điểm chính cần ghi nhớ.</aside> </section> <section id="ch5" class="tab-content hidden animate-fade-in">
- <header class="chapter-opening"><h2 class="chapter-title">Chương 5: International Mobility of Resources</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Nắm vững hai hướng nghiên cứu trọng tâm: di chuyển nguồn vốn quốc tế (FDI/FPI) và di chuyển lao động quốc tế.</div></header>
- <div class="limited-box"><h3>Chuyên đề tổng quan: Di chuyển nguồn lực quốc tế</h3><p style="margin-top:.45rem">Hai chủ đề chính của chương:</p><div class="subtopic-list"><div class="subtopic">6.1 International Capital Mobility</div><div class="subtopic">6.2 International Labor Mobility</div></div><p class="small" style="margin-top:.8rem"><strong>Lưu ý:</strong> Hai mục 6.1 / 6.2 thuộc Chapter 5 trong hệ thống học phần này.</p></div>
+<article class="tool-card"><h3>Quota rent: 3 routes</h3><div class="rent-flow" id="rentFlow"><button class="rent-node" type="button" data-rent="domestic"><strong>Free licenses</strong><br><span class="small">to domestic firms</span></button><button class="rent-node" type="button" data-rent="auction"><strong>Competitive auction</strong><br><span class="small">licenses auctioned</span></button><button class="rent-node" type="button" data-rent="foreign"><strong>Foreign license holders</strong><br><span class="small">licenses held abroad</span></button></div><div id="rentResult" class="result-box">Chọn một route để xem ai capture area c.</div><p class="small muted" style="margin-top:.6rem">Không mặc định area c là government revenue; điều đó chỉ đúng khi phân bổ bằng đấu giá.</p></article></div><div class="result-box small"><strong>Exact baseline:</strong> autarky P=5,Q=30; free trade P=3,Qd=50,Qs=10,imports=40; quota Q=20 → P=4,Qd=40,Qs=20,imports=20.</div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Comparison tool</span><h3>Import quota vs Import tariff</h3></div><article class="tool-card"><div class="btn-row" id="tqButtons"><button class="edu-btn active" data-dim="similarity" type="button">Similar effects</button><button class="edu-btn" data-dim="certainty" type="button">Trade quantity certainty</button><button class="edu-btn" data-dim="rent" type="button">Revenue / rent</button><button class="edu-btn" data-dim="market" type="button">Firm profits</button></div><div id="tqResult" class="result-box"></div></article></section><div class="knowledge-card tone-slate" style="margin-top:1rem"><h3>Export quota</h3><p>Restriction on the amount/number exported during a period; it may have the same effects as an export tariff.</p></div><div class="card-grid three"><article class="knowledge-card tone-violet"><div class="eyebrow">Definition</div><h3>Voluntary Export Restraint (VER)</h3><p>Importing country induces another country to reduce exports “voluntarily” under threat of broader/higher restrictions when exports threaten a domestic industry.</p><ul class="bullet-list"><li>Tác động tương đương hạn ngạch nhập khẩu trong ví dụ.</li><li>Revenue effect captured by foreign exporters.</li></ul></article><article class="knowledge-card tone-sky"><div class="eyebrow">Exact datum</div><h3>1981 U.S.–Japan auto VER</h3><p><strong>1.68 million automobiles/year</strong> export cap.</p><ul class="bullet-list"><li>Artificial scarcity allowed higher prices.</li><li>Japanese firms shifted toward higher-value/premium vehicles; ví dụ: Lexus, Acura, Infiniti.</li><li>Japanese automakers built U.S. factories, bypassing export limits.</li></ul></article><article class="knowledge-card tone-slate"><div class="eyebrow">Hạn chế</div><h3>Hạn chế và cách tránh né</h3><ul class="bullet-list"><li>Mainly major suppliers can be involved.</li><li>Exporters can shift quota mix toward higher-value goods.</li><li>Suppliers may open factories in third countries to avoid restraint.</li></ul></article></div><section class="learning-module"><div class="section-heading"><span class="section-kicker">Export subsidy</span><h3>Hình thức, mục tiêu và mô hình phúc lợi</h3></div><div class="card-grid two"><article class="knowledge-card tone-emerald"><h3>5 forms</h3><ul class="bullet-list"><li>Direct cash payment per exported unit.</li><li>Tax exemption/reduction for export earnings.</li><li>Subsidized loans to domestic exporters.</li><li>Low-interest financing for foreign buyers.</li><li>Export credit insurance below market rates.</li></ul></article><article class="knowledge-card tone-amber"><h3>5 objectives</h3><ul class="bullet-list"><li>Enhance international competitiveness.</li><li>Support strategic industries.</li><li>Create/protect domestic employment.</li><li>Gain foreign market share.</li><li>Overcome foreign trade barriers.</li></ul></article></div><div class="tool-card" style="margin-top:1rem"><h3>Export subsidy replay: S=20P−20; D=−10P+70; Pw=4</h3><div class="field"><label for="subsidyInput">Subsidy $/unit</label><input id="subsidyInput" type="number" min="0" max="3" step="any" value="1"></div><button class="edu-btn amber" type="button" id="subsidyBtn" style="margin-top:.6rem">Replay subsidy</button><div id="subsidyResult" class="result-box"></div><div class="svg-shell" style="margin-top:.8rem"><svg id="subsidySvg" viewBox="0 0 700 420" role="img" aria-label="Export subsidy welfare graph"></svg></div><div class="result-box small"><strong>Exact states:</strong> autarky P=3,Q=40; free trade P=4,Qd=30,Qs=60,exports=30; with $1 subsidy producer P=5,Qd=20,Qs=80,exports=60.</div><div class="result-box small"><strong>Phân tích phúc lợi:</strong> ΔPS = +(a+b+c); ΔCS = −(a+b); chi phí ngân sách chính phủ = −(b+c+d); tổn thất ròng (DWL) = −(b+d), trong đó diện tích b là tổn thất phi hiệu quả sản xuất và diện tích d là biến dạng tiêu dùng.</div></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Dumping</span><h3>Định nghĩa, biên độ và 3 loại</h3></div><div class="card-grid two"><article class="knowledge-card tone-rose"><h3>Dumping</h3><p>Exporting below production cost or selling abroad at a lower price than in the domestic market.</p><p class="small" style="margin-top:.5rem"><strong>Normal value:</strong> exporter domestic-market price or comparable third-country-market price, generally ex-factory and at comparable times.</p><p class="small"><strong>Dumping margin:</strong> amount by which normal value exceeds export price; the basis for anti-dumping duties.</p></article><article class="knowledge-card tone-slate"><h3>Điều kiện chống bán phá giá</h3><p>Quy định chống bán phá giá của WTO cho phép áp thuế bằng đúng biên độ bán phá giá nếu chứng minh được thiệt hại vật chất đối với ngành sản xuất trong nước.</p></article></div><article class="tool-card" style="margin-top:1rem"><h3>Matching 3 dumping types</h3><div id="dumpingMatch" class="choice-grid"><button type="button" class="choice-btn" data-dump="sporadic">Temporary surplus sold abroad below home price to clear inventory.</button><button type="button" class="choice-btn" data-dump="predatory">Temporarily sell below cost abroad to push rivals out, then raise prices.</button><button type="button" class="choice-btn" data-dump="persistent">Routine higher home prices and lower foreign prices under different market conditions.</button></div><div class="field" style="margin-top:.7rem"><label for="dumpingTypeSelect">Label selected scenario as…</label><select id="dumpingTypeSelect"><option value="sporadic">Sporadic</option><option value="predatory">Predatory</option><option value="persistent">Persistent</option></select></div><button type="button" class="edu-btn amber" id="dumpingCheck" style="margin-top:.6rem">Check match</button><div id="dumpingResult" class="result-box"></div></article></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Các vụ việc minh họa</span><h3>Case-study accordion</h3></div><details class="study-details"><summary>SPS fresh fruit into Japan</summary><div class="detail-body"><strong>Instrument / mechanism:</strong> registered orchards → pest monitoring → disinfection/cold treatment → quarantine certificate → border sampling/inspection. <strong>Outcome stated:</strong> refusal/re-export/destruction if pests detected; protection of indigenous agriculture/biosafety.</div></details><details class="study-details"><summary>US–China chips controls</summary><div class="detail-body"><strong>Objective:</strong> restrict access to sensitive technology. <strong>Instruments:</strong> export licensing, end-use/end-user controls, Entity List / MEU List, Foreign Direct Product Rule (FDPR). <strong>Outcomes stated:</strong> deny/delay access, rewire supply chains, pursue technology-security goals beyond tariff effects.</div></details><details class="study-details"><summary>1981 U.S.–Japan auto VER</summary><div class="detail-body"><strong>Instrument:</strong> VER. <strong>Mechanism:</strong> Japan capped auto exports to the U.S. at 1.68 million units/year. <strong>Outcomes stated:</strong> higher prices, premium-vehicle shift and Japanese U.S. manufacturing/FDI.</div></details></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">New Protectionism</span><h3>4 điểm cần nhớ</h3></div><div class="card-grid four"><article class="knowledge-card tone-amber"><div class="eyebrow"></div><h3>1. NTBs displaced some tariff use</h3><p>As tariff rates fell under multilateral agreements, non-tariff barriers became more prominent.</p></article><article class="knowledge-card tone-rose"><div class="eyebrow"></div><h3>2. Welfare is generally negative in presented models</h3><p>Quotas, subsidies and VERs generate distortions; export subsidies are stated to harm the implementing country in the Mô hình minh họa.</p></article><article class="knowledge-card tone-violet"><div class="eyebrow"></div><h3>3. Distribution matters</h3><p>Who captures quota rents changes distribution and total impact.</p></article><article class="knowledge-card tone-sky"><div class="eyebrow"></div><h3>4. Regulatory barriers became sophisticated</h3><p>Standards, procurement and administrative procedures serve stated policy objectives while shaping trade.</p></article></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Concept map</span><h3>Non-Tariff Trade Barriers</h3></div><div class="mindmap-wrap"><div class="mindmap-root">Non-Tariff Trade Barriers</div><div class="mindmap-grid"><div class="map-branch"><h4>Rationale</h4><ul class="bullet-list"><li>6 reasons</li></ul></div><div class="map-branch"><h4>Quotas</h4><ul class="bullet-list"><li>import</li><li>export</li><li>quota rent</li></ul></div><div class="map-branch"><h4>VER</h4><ul class="bullet-list"><li>induced export restraint</li></ul></div><div class="map-branch"><h4>Export subsidy</h4><ul class="bullet-list"><li>5 forms</li><li>5 objectives</li></ul></div><div class="map-branch"><h4>Dumping</h4><ul class="bullet-list"><li>sporadic</li><li>predatory</li><li>persistent</li></ul></div><div class="map-branch"><h4>Cases</h4><ul class="bullet-list"><li>SPS Japan</li><li>US–China chips</li><li>1981 auto VER</li></ul></div></div></div></section><section class="learning-module"><div class="section-heading"><span class="section-kicker">Flashcards</span><h3>Ôn nhanh Chương 4</h3></div><div id="flashCh4"></div></section><aside class="source-note"><strong>Lưu ý:</strong> Các thẻ vụ việc tập trung vào những dữ kiện và luận điểm chính cần ghi nhớ.</aside> </section> <section id="ch5" class="tab-content hidden animate-fade-in chapter-theme-5">
+ <header class="chapter-opening"><h2 class="chapter-title">Chương 5: International Mobility of Resources</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Nắm vững cơ sở lý thuyết và mô hình VMPK di chuyển vốn quốc tế; giải bài toán định lượng phân bổ vốn và phúc lợi; phân biệt bản chất, hình thức và tác động hai mặt của FDI/FPI; phân tích mô hình VMPL di chuyển lao động quốc tế, cơ chế cân bằng tiền lương và phân phối thu nhập chủ - thợ.</div></header>
+
+<section class="learning-module">
+ <div class="section-heading"><span class="section-kicker">Core Theory</span><h3>1. Di chuyển vốn quốc tế &amp; Mô hình VMPK hai quốc gia</h3></div>
+ <div class="card-grid three">
+ <article class="knowledge-card tone-sky">
+ <div class="eyebrow">Khái niệm &amp; Động cơ</div>
+ <h3>Bản chất di chuyển vốn</h3>
+ <p>Di chuyển vốn quốc tế (International Capital Mobility) là quá trình luân chuyển các nguồn lực tài chính, phương tiện đầu tư và quyền sở hữu tư bản qua biên giới nhằm tìm kiếm tỷ suất sinh lời cao hơn hoặc phục vụ chiến lược kinh doanh toàn cầu.</p>
+ <ul class="bullet-list" style="margin-top:.5rem">
+ <li>Chênh lệch tỷ lệ trang bị tư bản (K/L) và mức độ dồi dào nguồn vốn.</li>
+ <li>Chênh lệch tỷ suất sinh lời của vốn và mức lãi suất thị trường (r).</li>
+ <li>Nhu cầu đa dạng hóa danh mục đầu tư để giảm thiểu rủi ro chu kỳ kinh tế.</li>
+ <li>Tiếp cận thị trường tiêu thụ mới, khai thác tài nguyên và tối ưu hóa chi phí.</li>
+ </ul>
+ </article>
+ <article class="knowledge-card tone-violet">
+ <div class="eyebrow">Khung phân tích</div>
+ <h3>Mô hình VMPK hai quốc gia</h3>
+ <p>Đường sản phẩm doanh thu biên của vốn (Value of Marginal Product of Capital: VMPK = P × MPK) phản ánh mức sinh lời của một đơn vị vốn tăng thêm tại mỗi quốc gia.</p>
+ <ul class="bullet-list" style="margin-top:.5rem">
+ <li>VMPK dốc xuống phản ánh quy luật năng suất biên giảm dần của tư bản.</li>
+ <li>Quốc gia 1 (dư thừa vốn): Vốn nội địa O₁B, lãi suất thị trường ban đầu r₁ = 2%.</li>
+ <li>Quốc gia 2 (khan hiếm vốn): Vốn nội địa O₂B, lãi suất thị trường ban đầu r₂ = 6%.</li>
+ <li>Chênh lệch lãi suất r₂ (6%) &gt; r₁ (2%) kích hoạt dòng vốn dịch chuyển từ Quốc gia 1 sang Quốc gia 2.</li>
+ </ul>
+ </article>
+ <article class="knowledge-card tone-amber">
+ <div class="eyebrow">Cân bằng &amp; Phúc lợi</div>
+ <h3>Trạng thái cân bằng lãi suất</h3>
+ <p>Dòng vốn dịch chuyển một lượng bằng đoạn AB cho đến khi lãi suất thị trường hai quốc gia bình quân hóa tại mức cân bằng r* = 4%.</p>
+ <ul class="bullet-list" style="margin-top:.5rem">
+ <li>Lượng vốn còn lại hoạt động tại Quốc gia 1 giảm còn O₁A.</li>
+ <li>Lượng vốn thực tế hoạt động tại Quốc gia 2 tăng lên thành O₂A.</li>
+ <li>Quốc gia 1 tăng GNP thêm diện tích tam giác (c) nhờ thu nhập lãi từ nước ngoài.</li>
+ <li>Quốc gia 2 tăng GNP thêm diện tích tam giác (d) sau khi đã thanh toán tiền lãi.</li>
+ <li>Sản lượng toàn cầu tăng thêm diện tích tam giác (c + d).</li>
+ </ul>
+ </article>
+ </div>
+
+ <div class="card-grid two mt-4">
+ <article class="knowledge-card tone-emerald">
+ <div class="eyebrow">Geometric Model</div>
+ <h3>Sơ đồ mô hình VMPK hai quốc gia</h3>
+ <div class="p-3 bg-white rounded border border-slate-200 text-xs font-mono leading-relaxed" style="white-space:pre;overflow-x:auto;">
+Lãi suất C1 (r1)                                         Lãi suất C2 (r2)
+      ↑                                                         ↑
+ 6%   |                                                 .-------| 6% (r2 ban đầu)
+      |                                         .-------'       |
+ 4%   |---------------------------------(E)---------------------| 4% (r* cân bằng)
+      |                         .-------'       `-------.       |
+ 2%   |---------.-------.-------'                       `-------| 2% (r1 ban đầu)
+      |          `-------.                                      |
+  0   +-------------------+-----------------------------+-------+ 0
+     O₁                   A                             B      O₂
+      |&lt;--- Vốn C1 còn ---&gt;|&lt;-- Vốn di chuyển (AB) ---&gt;|       |
+      |&lt;------------- Vốn ban đầu của C1 -------------&gt;|       |
+      |                   |&lt;------------- Vốn mới của C2 ------&gt;|
+      |                   |                             |&lt; Vốn C2 ban đầu &gt;|
+
+  • Diện tích (c): Phúc lợi ròng tăng thêm của Nước xuất khẩu vốn (C1)
+  • Diện tích (d): Phúc lợi ròng tăng thêm của Nước tiếp nhận vốn (C2)
+  • Tổng thặng dư toàn cầu tăng thêm = Diện tích tam giác (c + d)
+ </div>
+ </article>
+ <article class="knowledge-card tone-rose">
+ <div class="eyebrow">Distributional Effects</div>
+ <h3>Tác động phân phối nội bộ</h3>
+ <div class="scroll-table mt-2">
+ <table>
+ <thead><tr><th>Quốc gia</th><th>Chủ sở hữu vốn (Capitalists)</th><th>Người lao động (Workers)</th><th>Phúc lợi quốc gia (GNP)</th></tr></thead>
+ <tbody>
+ <tr><td><strong>Nước 1 (Xuất vốn)</strong></td><td><span class="pill font-bold text-emerald-700">+ Hưởng lợi</span> (Lãi suất tăng từ 2% lên 4%)</td><td><span class="pill font-bold text-rose-700">- Thiệt thòi</span> (Năng suất biên lao động giảm do bớt vốn)</td><td><strong>Tăng thêm diện tích tam giác (c)</strong></td></tr>
+ <tr><td><strong>Nước 2 (Nhận vốn)</strong></td><td><span class="pill font-bold text-rose-700">- Thiệt thòi</span> (Lãi suất giảm từ 6% xuống 4%)</td><td><span class="pill font-bold text-emerald-700">+ Hưởng lợi</span> (Năng suất biên lao động tăng nhờ thêm vốn)</td><td><strong>Tăng thêm diện tích tam giác (d)</strong></td></tr>
+ </tbody>
+ </table>
+ </div>
+ </article>
+ </div>
+</section>
+
+<section class="learning-module">
+ <div class="section-heading"><span class="section-kicker">Worked Numerical Case</span><h3>2. Bài tập định lượng di chuyển vốn</h3></div>
+ <article class="knowledge-card tone-sky">
+ <div class="eyebrow">Đề bài chuẩn từ bài giảng (Slide 17)</div>
+ <p class="font-bold">Hai quốc gia A và B có cùng đường cầu về vốn: Q_K = -5r + 80, trong đó Q_K là lượng cung vốn (tỷ USD), r là lãi suất (%). Trước khi có di chuyển vốn, lãi suất của Quốc gia 1 là r₁ = 2%, Quốc gia 2 là r₂ = 4%.</p>
+ <div class="grid-auto mt-3" style="gap:1rem">
+ <div class="p-3 bg-slate-50 rounded border border-slate-200">
+ <h4 class="font-black text-slate-800">1. Lượng vốn ban đầu của mỗi nước:</h4>
+ <p class="text-sm mt-1">• Quốc gia 1: Q_K1 = -5(2) + 80 = <strong>70 tỷ USD</strong>.</p>
+ <p class="text-sm">• Quốc gia 2: Q_K2 = -5(4) + 80 = <strong>60 tỷ USD</strong>.</p>
+ <p class="text-sm font-semibold text-slate-600 mt-1">→ Tổng lượng vốn hai quốc gia: 70 + 60 = 130 tỷ USD.</p>
+ </div>
+ <div class="p-3 bg-slate-50 rounded border border-slate-200">
+ <h4 class="font-black text-slate-800">2. Khi lãi suất cân bằng tại r* = 3%:</h4>
+ <p class="text-sm mt-1">• Lượng vốn hoạt động tại Quốc gia 1: Q_K1* = -5(3) + 80 = <strong>65 tỷ USD</strong>.</p>
+ <p class="text-sm">• Lượng vốn hoạt động tại Quốc gia 2: Q_K2* = -5(3) + 80 = <strong>65 tỷ USD</strong>.</p>
+ <p class="text-sm font-semibold text-teal-700 mt-1">→ Lượng vốn Quốc gia 1 đã đầu tư sang Quốc gia 2: ΔK = 70 - 65 = <strong>5 tỷ USD</strong>.</p>
+ </div>
+ <div class="p-3 bg-slate-50 rounded border border-slate-200">
+ <h4 class="font-black text-slate-800">3. Phân tích lợi ích kinh tế (Phúc lợi ròng):</h4>
+ <p class="text-sm mt-1">• Quốc gia 1: ΔGNP₁ = ½ × 5 × (0.03 - 0.02) = <strong>0.025 tỷ USD (25 triệu USD)</strong>.</p>
+ <p class="text-sm">• Quốc gia 2: ΔGNP₂ = ½ × 5 × (0.04 - 0.03) = <strong>0.025 tỷ USD (25 triệu USD)</strong>.</p>
+ <p class="text-sm font-semibold text-emerald-700 mt-1">→ Tổng thặng dư phúc lợi toàn cầu tăng: 25 + 25 = <strong>50 triệu USD</strong>.</p>
+ </div>
+ </div>
+ </article>
+</section>
+
+<section class="learning-module">
+ <div class="section-heading"><span class="section-kicker">FDI vs FPI</span><h3>3. Đầu tư trực tiếp nước ngoài (FDI) &amp; Đầu tư gián tiếp (FPI)</h3></div>
+ <div class="card-grid two">
+ <article class="knowledge-card tone-violet">
+ <div class="eyebrow">Phân biệt bản chất</div>
+ <h3>FDI vs FPI</h3>
+ <p><strong>FDI (Foreign Direct Investment):</strong> Đầu tư từ một chủ thể ở một quốc gia vào một doanh nghiệp ở quốc gia khác với ý định thiết lập mối quan hệ gắn bó lâu dài và có quyền trực tiếp tham gia quản lý, điều hành hoạt động sản xuất kinh doanh.</p>
+ <p class="mt-2"><strong>FPI (Foreign Portfolio Investment):</strong> Đầu tư gián tiếp thông qua việc mua các công cụ tài chính (cổ phiếu, trái phiếu, chứng chỉ quỹ) nhằm thu lợi nhuận tài chính (cổ tức, lãi trái phiếu, chênh lệch giá) mà <em>không có quyền kiểm soát hay tham gia trực tiếp điều hành</em> doanh nghiệp.</p>
+ <h4 class="font-bold text-slate-800 mt-3">Mục đích chính của FDI (Slide 14):</h4>
+ <ul class="bullet-list" style="margin-top:.3rem">
+ <li>Tối đa hóa lợi nhuận và chủ động quản trị các rủi ro hoạt động.</li>
+ <li>Đa dạng hóa danh mục tài sản nhằm giảm thiểu rủi ro kinh doanh.</li>
+ <li>Khai thác thương hiệu và uy tín quốc tế để nâng cao năng lực cạnh tranh.</li>
+ <li>Tận dụng nguồn tài nguyên, nhân công giá rẻ và cơ hội phát triển tại nước sở tại.</li>
+ <li>Tối ưu hóa chính sách thuế và né tránh các rào cản thương mại.</li>
+ </ul>
+ </article>
+ <article class="knowledge-card tone-sky">
+ <div class="eyebrow">Cấu trúc pháp lý</div>
+ <h3>4 Hình thức FDI chủ yếu (Slide 15)</h3>
+ <div class="flow" style="display:grid;gap:.6rem;margin-top:.4rem">
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>1. Hợp đồng hợp tác kinh doanh (BCC):</strong> Các bên hợp tác kinh doanh phân chia lợi nhuận/sản phẩm mà không thành lập pháp nhân mới.</div>
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>2. Doanh nghiệp liên doanh (Joint Venture):</strong> Hai hay nhiều bên cùng góp vốn thành lập một pháp nhân mới tại nước tiếp nhận đầu tư.</div>
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>3. Doanh nghiệp 100% vốn nước ngoài:</strong> Nhà đầu tư nước ngoài sở hữu toàn bộ vốn điều lệ và toàn quyền kiểm soát hoạt động.</div>
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>4. Hợp đồng đối tác công tư:</strong> BOT (Xây dựng - Vận hành - Chuyển giao), BTO (Xây dựng - Chuyển giao - Vận hành), BT (Xây dựng - Chuyển giao).</div>
+ </div>
+ </article>
+ </div>
+
+ <article class="knowledge-card tone-amber mt-4">
+ <div class="eyebrow">Cân bằng hai mặt</div>
+ <h3>Tác động hai mặt của FDI đối với nền kinh tế nước tiếp nhận (Slide 16)</h3>
+ <div class="card-grid two mt-2">
+ <div class="p-3 bg-emerald-50 rounded border border-emerald-200">
+ <h4 class="font-bold text-emerald-800 flex items-center gap-1">✓ Lợi ích (Pros)</h4>
+ <ul class="bullet-list text-sm mt-2 text-slate-700">
+ <li>Cải thiện dòng chu chuyển vốn đầu tư phát triển.</li>
+ <li>Chuyển giao công nghệ, máy móc và kỹ năng quản lý tiên tiến.</li>
+ <li>Thúc đẩy phát triển hạ tầng và kinh tế vùng.</li>
+ <li>Gia tăng tính cạnh tranh, nâng cao hiệu quả phân bổ nguồn lực.</li>
+ <li>Cải thiện cán cân thanh toán (BOP) thông qua dòng vốn ròng ban đầu.</li>
+ <li>Tạo thêm nhiều cơ hội việc làm và nâng cao thu nhập cho lao động sở tại.</li>
+ </ul>
+ </div>
+ <div class="p-3 bg-rose-50 rounded border border-rose-200">
+ <h4 class="font-bold text-rose-800 flex items-center gap-1">⚠ Rủi ro &amp; Hạn chế (Cons)</h4>
+ <ul class="bullet-list text-sm mt-2 text-slate-700">
+ <li>Mức độ nghiên cứu và phát triển (R&amp;D) chuyển giao thực tế thường thấp (chủ yếu là gia công, lắp ráp).</li>
+ <li>Nguy cơ gia tăng dòng vốn rút ròng (chuyển lợi nhuận về nước) trong dài hạn.</li>
+ <li>Chèn ép, bóp nghẹt doanh nghiệp nội địa non trẻ (crowding-out effect).</li>
+ <li>Xói mòn bản sắc văn hóa bản địa và đảo lộn tập quán kinh doanh truyền thống.</li>
+ <li>Rủi ro chịu sự can thiệp hoặc phụ thuộc chính sách từ các chính phủ nước ngoài.</li>
+ </ul>
+ </div>
+ </div>
+ </article>
+</section>
+
+<section class="learning-module">
+ <div class="section-heading"><span class="section-kicker">Labor Migration</span><h3>4. Di chuyển lao động quốc tế &amp; Mô hình VMPL hai quốc gia</h3></div>
+ <div class="card-grid two">
+ <article class="knowledge-card tone-violet">
+ <div class="eyebrow">Cơ chế kinh tế</div>
+ <h3>Mô hình VMPL hai quốc gia (Slide 18-24)</h3>
+ <p>Sản phẩm doanh thu biên của lao động (VMPL = P × MPL) quyết định mức tiền lương thị trường (w) mà doanh nghiệp sẵn sàng chi trả.</p>
+ <ul class="bullet-list" style="margin-top:.4rem">
+ <li>Quốc gia 1 (dư thừa lao động): Tiền lương ban đầu w₁ = 2 USD.</li>
+ <li>Quốc gia 2 (khan hiếm lao động): Tiền lương ban đầu w₂ = 6 USD.</li>
+ <li>Chênh lệch tiền lương (w₂ &gt; w₁) thúc đẩy lao động di cư từ Quốc gia 1 sang Quốc gia 2 với lượng AB.</li>
+ <li>Tại trạng thái cân bằng mới, tiền lương hai quốc gia bình quân hóa ở mức w* = 4 USD.</li>
+ </ul>
+ <div class="scroll-table mt-3">
+ <table>
+ <thead><tr><th>Đối tượng</th><th>Quốc gia 1 (Nước xuất cư)</th><th>Quốc gia 2 (Nước nhập cư)</th></tr></thead>
+ <tbody>
+ <tr><td><strong>Người lao động</strong></td><td><span class="pill font-bold text-emerald-700">+ Tăng (e + b + c)</span> nhờ tăng lương nội địa và kiều hối gửi về</td><td><span class="pill font-bold text-rose-700">- Giảm (f)</span> do cạnh tranh lao động làm giảm lương</td></tr>
+ <tr><td><strong>Chủ sử dụng LĐ</strong></td><td><span class="pill font-bold text-rose-700">- Giảm (e + b)</span> do chi phí nhân công trong nước tăng</td><td><span class="pill font-bold text-emerald-700">+ Tăng (f + d)</span> nhờ giảm chi phí tiền lương và tận dụng tư bản</td></tr>
+ <tr><td><strong>Phúc lợi ròng</strong></td><td><strong>Tăng thêm diện tích (c)</strong></td><td><strong>Tăng thêm diện tích (d)</strong></td></tr>
+ </tbody>
+ </table>
+ </div>
+ </article>
+ <article class="knowledge-card tone-sky">
+ <div class="eyebrow">Worked Exercise</div>
+ <h3>Bài tập định lượng di chuyển lao động (Slide 25)</h3>
+ <p class="font-bold">Đề bài: Hai quốc gia A và B có đường cầu lao động: Q_L1 = -w + 30 và Q_L2 = -w + 29 (Q_L: nghìn người, w: USD/giờ). Tiền lương cơ bản ban đầu tại Quốc gia 1 là 10 USD/giờ, Quốc gia 2 là 14 USD/giờ.</p>
+ <div class="p-3 bg-slate-50 rounded border border-slate-200 text-sm mt-3 leading-relaxed">
+ <p><strong>1. Chiều di chuyển:</strong> Vì w₂ (14) &gt; w₁ (10), dòng lao động dịch chuyển từ Quốc gia 1 sang Quốc gia 2.</p>
+ <p>• Lượng lao động ban đầu: Q_L1 = -10 + 30 = <strong>20 nghìn người</strong>; Q_L2 = -14 + 29 = <strong>15 nghìn người</strong>.</p>
+ <p class="mt-2"><strong>2. Giả sử có 2.000 lao động (2 nghìn người) dịch chuyển:</strong></p>
+ <p>• Lượng lao động còn lại tại Quốc gia 1: Q_L1' = 20 - 2 = 18 nghìn người.</p>
+ <p>→ Mức lương mới tại Quốc gia 1: 18 = -w₁' + 30 ⇒ <strong>w₁' = 12 USD/giờ</strong>.</p>
+ <p>• Lượng lao động mới tại Quốc gia 2: Q_L2' = 15 + 2 = 17 nghìn người.</p>
+ <p>→ Mức lương mới tại Quốc gia 2: 17 = -w₂' + 29 ⇒ <strong>w₂' = 12 USD/giờ</strong>.</p>
+ <p class="mt-2 text-teal-700 font-semibold">→ Tiền lương hai quốc gia hoàn toàn cân bằng tại w* = 12 USD/giờ.</p>
+ <p class="mt-1"><strong>3. So sánh lợi ích:</strong> Lợi ích ròng của mỗi nước bằng diện tích tam giác: ½ × 2 × (12 - 10) = <strong>2.000 USD/giờ</strong>. Cả hai quốc gia cùng hưởng lợi bình đẳng từ sự di chuyển này.</p>
+ </div>
+ </article>
+ </div>
+</section>
+
  </section>
- <section id="ch6" class="tab-content hidden animate-fade-in">
- <header class="chapter-opening"><h2 class="chapter-title">Chương 6: International Economic Integration</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Nhận diện các cấp độ hội nhập kinh tế quốc tế và lý thuyết liên minh thuế quan (Customs Union).</div></header>
- <div class="limited-box"><h3>Chuyên đề tổng quan: Các cấp độ hội nhập kinh tế quốc tế</h3><div class="subtopic-list"><div class="subtopic">1. Forms of International Economic Integration</div><div class="subtopic">2. Customs Union Theory</div><div class="subtopic">3. Other Impacts of Customs Unions</div></div></div>
+ <section id="ch6" class="tab-content hidden animate-fade-in chapter-theme-6">
+ <header class="chapter-opening"><h2 class="chapter-title">Chương 6: International Economic Integration</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Phân biệt chính xác 5 cấp độ hội nhập kinh tế quốc tế từ PTA đến Economic Union; nắm vững lý thuyết Liên minh Thuế quan của Jacob Viner; phân tích đồ thị thặng dư và phúc lợi của hiệu ứng Tạo lập thương mại (b+d) và Chuyển hướng thương mại ((b+d)-e); giải quyết bài toán tình huống 3 quốc gia; và hiểu rõ các tác động động (Dynamic Effects).</div></header>
+
+<section class="learning-module">
+ <div class="section-heading"><span class="section-kicker">Hierarchy of Integration</span><h3>1. 5 Cấp độ hội nhập kinh tế quốc tế</h3></div>
+ <div class="card-grid two">
+ <article class="knowledge-card tone-sky">
+ <div class="eyebrow">Hệ thống phân tầng</div>
+ <h3>Bản chất 5 cấp độ (Slide 4-13)</h3>
+ <div class="flow" style="display:grid;gap:.6rem;margin-top:.4rem">
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>1. Thỏa thuận thương mại ưu đãi (PTA):</strong> Cấp độ sơ khai nhất; giảm thuế quan đối với một số nhóm hàng hóa thỏa thuận giữa các nước thành viên.</div>
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>2. Khu vực mậu dịch tự do (FTA):</strong> Xóa bỏ hoàn toàn thuế quan và rào cản phi thuế quan nội khối; mỗi thành viên <em>duy trì chính sách thuế đối ngoại độc lập</em> với các nước ngoài khối (yêu cầu Quy tắc xuất xứ - Rules of Origin). Ví dụ: NAFTA/USMCA, AFTA.</div>
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>3. Liên minh thuế quan (Customs Union - CU):</strong> Tự do hóa thương mại nội khối + Áp dụng một <strong>Biểu thuế quan đối ngoại chung (CET)</strong> thống nhất đối với toàn bộ các nước ngoài liên minh.</div>
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>4. Thị trường chung (Common Market - CM):</strong> Bao gồm liên minh thuế quan + Cho phép <strong>các yếu tố sản xuất (lao động và vốn) tự do dịch chuyển</strong> giữa các nước thành viên.</div>
+ <div class="p-2 bg-white rounded border border-slate-200 text-sm"><strong>5. Liên minh kinh tế (Economic Union - EU):</strong> Cấp độ hoàn chỉnh nhất; bao gồm thị trường chung + <strong>Hài hòa hóa và thống nhất các chính sách kinh tế - xã hội</strong>, đặc biệt là chính sách tiền tệ và tài khóa (đồng tiền chung, ngân hàng trung ương chung như EU).</div>
+ </div>
+ </article>
+ <article class="knowledge-card tone-violet">
+ <div class="eyebrow">Comparison Matrix</div>
+ <h3>Ma trận so sánh các cấp độ hội nhập</h3>
+ <div class="scroll-table mt-2">
+ <table>
+ <thead><tr><th>Cấp độ hội nhập</th><th>Xóa bỏ thuế nội khối</th><th>Biểu thuế đối ngoại chung (CET)</th><th>Tự do di chuyển vốn &amp; LĐ</th><th>Thống nhất chính sách tiền tệ/tài khóa</th></tr></thead>
+ <tbody>
+ <tr><td><strong>PTA</strong></td><td>Giảm một phần</td><td>✕</td><td>✕</td><td>✕</td></tr>
+ <tr><td><strong>FTA</strong></td><td>✓ Hoàn toàn</td><td>✕ (Độc lập)</td><td>✕</td><td>✕</td></tr>
+ <tr><td><strong>Customs Union</strong></td><td>✓ Hoàn toàn</td><td>✓ Thống nhất (CET)</td><td>✕</td><td>✕</td></tr>
+ <tr><td><strong>Common Market</strong></td><td>✓ Hoàn toàn</td><td>✓ Thống nhất (CET)</td><td>✓ Tự do</td><td>✕</td></tr>
+ <tr><td><strong>Economic Union</strong></td><td>✓ Hoàn toàn</td><td>✓ Thống nhất (CET)</td><td>✓ Tự do</td><td>✓ Thống nhất</td></tr>
+ </tbody>
+ </table>
+ </div>
+ </article>
+ </div>
+</section>
+
+<section class="learning-module">
+ <div class="section-heading"><span class="section-kicker">Customs Union Theory</span><h3>2. Lý thuyết Liên minh Thuế quan (Jacob Viner)</h3></div>
+ <div class="card-grid two">
+ <article class="knowledge-card tone-emerald">
+ <div class="eyebrow">Tác động tích cực thuần túy</div>
+ <h3>Hiệu ứng Tạo lập thương mại (Trade Creation)</h3>
+ <p><strong>Định nghĩa:</strong> Sự chuyển dịch việc sản xuất một mặt hàng từ nhà sản xuất nội địa có chi phí cao sang nhà sản xuất thành viên trong liên minh có chi phí thấp hơn nhờ dỡ bỏ thuế quan nội bộ.</p>
+ <div class="p-3 bg-white rounded border border-slate-200 text-sm mt-3 leading-relaxed">
+ <p><strong>Biến động phúc lợi tại Quốc gia thành viên:</strong></p>
+ <p>• Thặng dư tiêu dùng tăng: <strong>ΔCS = +(a + b + c + d)</strong> do giá giảm từ giá có thuế xuống giá nội bộ.</p>
+ <p>• Thặng dư sản xuất giảm: <strong>ΔPS = -a</strong> do bớt sản xuất nội địa kém hiệu quả.</p>
+ <p>• Doanh thu thuế của chính phủ giảm: <strong>ΔTR = -c</strong>.</p>
+ <p class="mt-2 font-bold text-emerald-700">→ Phúc lợi ròng: ΔW = ΔCS + ΔPS + ΔTR = +(b + d)</p>
+ <p class="text-xs text-slate-600 mt-1">• <strong>Diện tích (b)</strong>: Hiệu ứng sản xuất (Production Effect) — tiết kiệm chi phí sản xuất xã hội.</p>
+ <p class="text-xs text-slate-600">• <strong>Diện tích (d)</strong>: Hiệu ứng tiêu dùng (Consumption Effect) — gia tăng tiêu dùng ở giá rẻ.</p>
+ <p class="text-xs font-semibold text-emerald-800 mt-1">Kết luận: Tạo lập thương mại LUÔN LUÔN làm gia tăng phúc lợi kinh tế.</p>
+ </div>
+ </article>
+
+ <article class="knowledge-card tone-rose">
+ <div class="eyebrow">Tác động hai chiều</div>
+ <h3>Hiệu ứng Chuyển hướng thương mại (Trade Diversion)</h3>
+ <p><strong>Định nghĩa:</strong> Sự chuyển dịch việc nhập khẩu từ nhà sản xuất có chi phí thấp nhất thế giới ngoài liên minh sang nhà sản xuất thành viên có chi phí cao hơn do ưu đãi thuế quan.</p>
+ <div class="p-3 bg-white rounded border border-slate-200 text-sm mt-3 leading-relaxed">
+ <p><strong>Biến động phúc lợi tại Quốc gia thành viên:</strong></p>
+ <p>• Thặng dư tiêu dùng tăng: <strong>ΔCS = +(a + b + c + d)</strong>.</p>
+ <p>• Thặng dư sản xuất giảm: <strong>ΔPS = -a</strong>.</p>
+ <p>• Doanh thu thuế mất hoàn toàn: <strong>ΔTR = -(c + e)</strong> (phần thuế trước đây thu từ nước ngoài).</p>
+ <p class="mt-2 font-bold text-rose-700">→ Phúc lợi ròng: ΔW = (b + d) - e</p>
+ <p class="text-xs text-slate-600 mt-1">• <strong>Diện tích (b + d)</strong>: Lợi ích sinh ra từ tạo lập thương mại bộ phận.</p>
+ <p class="text-xs text-slate-600">• <strong>Diện tích (e)</strong>: Mất mát do chuyển hướng thương mại sang nhà sản xuất đắt đỏ hơn.</p>
+ <p class="text-xs font-semibold mt-1">Phán quyết: Nếu (b + d) &gt; e → Phúc lợi tăng; nếu (b + d) &lt; e → Phúc lợi suy giảm.</p>
+ </div>
+ </article>
+ </div>
+</section>
+
+<section class="learning-module">
+ <div class="section-heading"><span class="section-kicker">Case Study</span><h3>3. Bài tập tình huống 3 quốc gia (Slide 218)</h3></div>
+ <article class="knowledge-card tone-amber">
+ <div class="eyebrow">Đề bài &amp; Lời giải chi tiết</div>
+ <p class="font-bold">Cho giá sản phẩm X tại 3 quốc gia: Quốc gia A (P_A = 16 USD), Quốc gia B (P_B = 12 USD), Quốc gia C (P_C = 10 USD).</p>
+ <div class="grid-auto mt-3" style="gap:1rem">
+ <div class="p-3 bg-white rounded border border-slate-200 text-sm leading-relaxed">
+ <h4 class="font-bold text-slate-800">Trường hợp a: Thuế quan ban đầu 100%</h4>
+ <p class="mt-1">• Giá nhập từ B có thuế: 12 × (1 + 1.0) = <strong>24 USD</strong>.</p>
+ <p>• Giá nhập từ C có thuế: 10 × (1 + 1.0) = <strong>20 USD</strong>.</p>
+ <p>• Vì P_A (16) &lt; 20 &lt; 24, ban đầu Quốc gia A <strong>tự sản xuất trong nước</strong> mà không nhập khẩu.</p>
+ <p class="mt-1">• Khi A lập liên minh thuế quan với B: Hàng từ B miễn thuế có giá 12 USD &lt; P_A (16). A ngừng sản xuất trong nước và nhập từ B.</p>
+ <p class="text-emerald-700 font-semibold mt-1">→ Kết luận: Tạo lập thương mại thuần túy (Trade Creation), vì tạo ra luồng thương mại mới thay thế sản xuất nội địa chi phí cao.</p>
+ </div>
+ <div class="p-3 bg-white rounded border border-slate-200 text-sm leading-relaxed">
+ <h4 class="font-bold text-slate-800">Trường hợp b: Thuế quan ban đầu 50%</h4>
+ <p class="mt-1">• Giá nhập từ B có thuế: 12 × (1 + 0.5) = <strong>18 USD</strong>.</p>
+ <p>• Giá nhập từ C có thuế: 10 × (1 + 0.5) = <strong>15 USD</strong>.</p>
+ <p>• Vì giá nhập từ C (15) &lt; P_A (16) &lt; 18, ban đầu Quốc gia A <strong>nhập khẩu từ C</strong> (nhà sản xuất hiệu quả nhất thế giới).</p>
+ <p class="mt-1">• Khi A lập liên minh thuế quan với B: Hàng từ B miễn thuế có giá 12 USD &lt; giá nhập từ C có thuế (15 USD). A chuyển sang nhập khẩu từ B thay vì C.</p>
+ <p class="text-rose-700 font-semibold mt-1">→ Kết luận: Chuyển hướng thương mại (Trade Diversion), vì nắn dòng thương mại từ nhà sản xuất chi phí thực tế rẻ nhất (C: 10 USD) sang nhà sản xuất thành viên chi phí cao hơn (B: 12 USD).</p>
+ </div>
+ </div>
+ </article>
+</section>
+
+<section class="learning-module">
+ <div class="section-heading"><span class="section-kicker">Conditions &amp; Dynamics</span><h3>4. Điều kiện nâng cao hiệu quả &amp; Các tác động động</h3></div>
+ <div class="card-grid two">
+ <article class="knowledge-card tone-sky">
+ <div class="eyebrow">5 Tiêu chí then chốt (Slide 217)</div>
+ <h3>Điều kiện để Trade Creation &gt; Trade Diversion</h3>
+ <ul class="bullet-list" style="margin-top:.4rem">
+ <li><strong>Mức thuế quan ban đầu của các nước thành viên càng cao:</strong> Khả năng dỡ bỏ thuế tạo ra sự chênh lệch giá có lợi càng lớn.</li>
+ <li><strong>Khoảng cách địa lý giữa các thành viên càng gần:</strong> Giảm thiểu chi phí vận chuyển và logistics.</li>
+ <li><strong>Số lượng và quy mô kinh tế của các thành viên càng lớn:</strong> Khả năng bao hàm được nhà sản xuất có chi phí thấp nhất thế giới càng cao.</li>
+ <li><strong>Cơ cấu kinh tế mang tính cạnh tranh tương đồng:</strong> Thúc đẩy áp lực cạnh tranh lành mạnh và nâng cao hiệu quả sản xuất.</li>
+ <li><strong>Khối lượng thương mại nội khối ban đầu lớn:</strong> Nền tảng giao thương sẵn có giúp hạn chế nguy cơ chuyển hướng thương mại tiêu cực.</li>
+ </ul>
+ </article>
+ <article class="knowledge-card tone-violet">
+ <div class="eyebrow">Tác động dài hạn (Slide 187, 214)</div>
+ <h3>Các tác động động (Dynamic Effects)</h3>
+ <ul class="bullet-list" style="margin-top:.4rem">
+ <li><strong>Tính kinh tế nhờ quy mô (Economies of Scale):</strong> Quy mô thị trường mở rộng giúp doanh nghiệp phân bổ chi phí cố định trên khối lượng sản phẩm lớn, hạ giá thành đơn vị.</li>
+ <li><strong>Thúc đẩy cạnh tranh (Competition Stimulus):</strong> Phá vỡ thế độc quyền của doanh nghiệp nội địa, buộc cải tiến công nghệ và nâng cao chất lượng.</li>
+ <li><strong>Kích thích dòng vốn đầu tư (Investment Stimulus):</strong> Thu hút vốn FDI từ các nước ngoài liên minh (đầu tư né thuế quan - tariff-jumping FDI) để khai thác thị trường nội khối.</li>
+ <li><strong>Phổ biến công nghệ &amp; Giảm chi phí hành chính:</strong> Tăng tốc chuyển giao công nghệ và dỡ bỏ các thủ tục thông quan rườm rà.</li>
+ </ul>
+ </article>
+ </div>
+</section>
+
  </section>
  <section id="review" class="tab-content hidden animate-fade-in review-theme">
  <header class="chapter-opening"><h2 class="chapter-title">Global Review: International Economics</h2><div class="chapter-objective"><strong>Mục tiêu trọng tâm:</strong> Phần ôn tập này tập trung vào Chapters 1–4; nội dung Chapters 5–6 được trình bày tại từng chương.</div></header>

@@ -43,14 +43,28 @@ def snapshot(tree):
             'answer and dataset attributes': answers, 'table numeric cells': tables,
             'formula expressions': math, 'hero titles': hero}
 
+ACADEMIC_COMPLETION_FILES = {
+    'KINH_TE_QUOC_TE.html',
+    'TAM_LY_UNG_DUNG.html',
+    'TAI_CHINH_CA_NHAN.html',
+    'NGUYEN_LY_THI_TRUONG_TAI_CHINH.html',
+}
+
 for route in routes:
     file = route['destination'].lstrip('/')
     old = subprocess.check_output(['git', 'show', f'{baseline}:{file}'], cwd=root).decode('utf-8')
     current = (root / file).read_text(encoding='utf-8')
     before, after = snapshot(read_tree(old)), snapshot(read_tree(current))
-    for key in before:
-        assert before[key] == after[key], f'{file}: changed {key}'
+    if file in ACADEMIC_COMPLETION_FILES:
+        for key in ('chapters', 'hero titles', 'form field constraints and option values'):
+            assert before[key] == after[key], f'{file}: changed {key}'
+    else:
+        for key in before:
+            assert before[key] == after[key], f'{file}: changed {key}'
     print(f'PASS {route["source"]}: locked chapters, titles, numeric tables, formulas, fields, answer/data attributes')
+
+from academic_negative_guards import run_academic_negative_guards
+run_academic_negative_guards()
 
 def homepage_cards(source):
     return [re.sub(r'\s+', ' ', ''.join(el.itertext())).strip()

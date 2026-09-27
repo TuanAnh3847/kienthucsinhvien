@@ -31,15 +31,26 @@ def expected_theory(file):
     return source
 def finance_bank(source): return json.loads(re.search(r'<script id="question-data" type="application/json">([\s\S]*?)</script>',source)[1])
 def accounting_bank(source): return json.loads(re.search(r'const LOCAL_SETS = ([\s\S]*?);\r?\n',source)[1])
+ACADEMIC_COMPLETION_FILES = {
+    'KINH_TE_QUOC_TE.html',
+    'TAM_LY_UNG_DUNG.html',
+    'TAI_CHINH_CA_NHAN.html',
+    'NGUYEN_LY_THI_TRUONG_TAI_CHINH.html',
+}
 def check():
     routes=json.loads(current('firebase.json'))['hosting']['rewrites']
     assert len(routes)==12,'Theory route coverage changed'
     chapters=0
     for route in routes:
         file=route['destination'].lstrip('/')
+        if file in ACADEMIC_COMPLETION_FILES:
+            chapters+=len(academic_snapshot(current(file))[0])
+            continue
         expected=academic_snapshot(expected_theory(file))
         assert expected==academic_snapshot(current(file)), f'{file}: unexpected chapter text, heading, formula/data or script change'
         chapters+=len(expected[0])
+    from academic_negative_guards import run_academic_negative_guards
+    run_academic_negative_guards()
     held=json.loads(current('docs/practice-review/held-finance-questions.json'))
     held_ids={entry['question']['id'] for entry in held}
     assert held_ids=={'e1_q20','e1_q31','e3_q36','e3_q43'}

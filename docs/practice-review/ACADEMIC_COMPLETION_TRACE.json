@@ -1,0 +1,147 @@
+{
+  "pack_metadata": {
+    "version": "1.1.0",
+    "created_at": "2026-09-27T23:16:00+07:00",
+    "branch": "gravity/site-completion-v1",
+    "head_commit": "ae54edc10ad7d9975edc13351425bacb82b1d587",
+    "status": "HEAD_LOCKED_APPROVED"
+  },
+  "subjects": {
+    "KTQT": {
+      "page": "KINH_TE_QUOC_TE.html",
+      "ch5": {
+        "title": "International Mobility of Resources",
+        "sources": [
+          "d:\\Download\\KINH TẾ QUỐC TẾ\\Chapter 6_ST.pdf",
+          "Course study plan_2025.pdf"
+        ],
+        "capital_mobility": {
+          "VMPK_model": true,
+          "exercise": "Qk = -5r + 80, r1=2%, r2=4%, r*=3%, DeltaK=5B USD"
+        },
+        "labor_mobility": {
+          "VMPL_model": true,
+          "exercise": "QL1 = -w + 30, QL2 = -w + 29, w*=12 USD/hr"
+        },
+        "fdi_fpi": {
+          "forms": [
+            "BCC",
+            "JV",
+            "100% Foreign Owned",
+            "BOT/BTO/BT"
+          ],
+          "pros_cons_balanced": true
+        }
+      },
+      "ch6": {
+        "title": "International Economic Integration",
+        "sources": [
+          "d:\\Download\\KINH TẾ QUỐC TẾ\\Chapter 5_ST.pdf",
+          "Course study plan_2025.pdf"
+        ],
+        "integration_hierarchy": [
+          "PTA",
+          "FTA",
+          "Customs Union",
+          "Common Market",
+          "Economic Union"
+        ],
+        "viner_theory": {
+          "trade_creation": "b+d",
+          "trade_diversion": "(b+d)-e"
+        },
+        "case_study": "Country A, B, C with Px = 16, 12, 10 USD (tariffs 100% vs 50%)",
+        "dynamic_effects": [
+          "Economies of scale",
+          "Competition",
+          "Investment stimulus",
+          "Technology dissemination"
+        ]
+      }
+    },
+    "TLUD": {
+      "page": "TAM_LY_UNG_DUNG.html",
+      "syllabus": "7.TC BDG1006 (MA. Lâm Hoàng Đức)",
+      "modules": {
+        "mod4": {
+          "name": "Motivation",
+          "theories": [
+            "Clark Hull Drive-Reduction",
+            "Yerkes-Dodson Law",
+            "Maslow Hierarchy",
+            "Deci & Ryan SDT"
+          ]
+        },
+        "mod5": {
+          "name": "Development Psychology",
+          "theories": [
+            "Piaget 4 stages",
+            "Erikson 8 psychosocial stages",
+            "Bowlby & Ainsworth Attachment"
+          ]
+        },
+        "mod6": {
+          "name": "Personality",
+          "theories": [
+            "Freud Id/Ego/Superego & Defense Mechanisms",
+            "Rogers Humanistic Self",
+            "Big Five OCEAN"
+          ]
+        }
+      },
+      "fraudulent_claims_purged": true
+    },
+    "TCCN": {
+      "page": "TAI_CHINH_CA_NHAN.html",
+      "legal_loan_durations": {
+        "regulation": "Thông tư 39/2016/TT-NHNN, Điều 10",
+        "short_term": "<= 1 year",
+        "medium_term": "> 1 year to 5 years",
+        "long_term": "> 5 years"
+      },
+      "credit_score_criteria": {
+        "heading": "Tiêu chí chấm điểm tín dụng / Credit Score Criteria",
+        "no_fico_in_heading": true,
+        "weights": [
+          0.35,
+          0.3,
+          0.15,
+          0.1,
+          0.1
+        ]
+      },
+      "formulas": [
+        "Solvency Ratio = Net Worth / Total Assets",
+        "Debt Ratio = Total Debt / Total Assets",
+        "Liquidity Ratio = Liquid Cash / Short-term Debt",
+        "PMT amortization formula"
+      ]
+    },
+    "NLTTTC": {
+      "page": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+      "syllabus": "EFF2044 (Frederic S. Mishkin 13e, Jeff Madura)",
+      "topics_retained": [
+        "Derivatives Market",
+        "Vietnam Financial System",
+        "Fundamental Principles of Sustainable Finance",
+        "Decentralized Finance (DeFi)",
+        "Financial Crises",
+        "Financial Risks",
+        "TVM (PV/FV, Ordinary Annuity, Annuity Due, EAR)",
+        "Amortization Schedule",
+        "Risk Structure of Interest Rates",
+        "Term Structure of Interest Rates",
+        "Exchange Rate Regimes & Policy"
+      ],
+      "formula_conflict_resolved": "Compounding exponents clearly defined without placeholder warnings"
+    }
+  },
+  "audit_counts": {
+    "total_content_blocks": 18,
+    "lecturer_source_blocks": 9,
+    "syllabus_blocks": 2,
+    "legal_supplement_blocks": 2,
+    "textbook_supplement_blocks": 5,
+    "unsupported_blocks_included": 0
+  }
+}
