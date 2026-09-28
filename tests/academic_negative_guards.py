@@ -50,6 +50,14 @@ def run_academic_negative_guards():
     
     # 1. TLUD guards
     tlud = (root / 'TAM_LY_UNG_DUNG.html').read_text(encoding='utf-8')
+    tlud_public = re.sub(r'<!--.*?-->|<(script|style)\b[^>]*>.*?</\1>', '', tlud, flags=re.S | re.I)
+    tlud_public = ' '.join(unescape(re.sub(r'<[^>]+>', ' ', tlud_public)).split()).casefold()
+    for residue in ['chuyên đề mở rộng', 'p.15 states']:
+        assert residue not in tlud_public, f"TLUD public residue: '{residue}'"
+    source_tags = re.findall(r'<span\b[^>]*class=[\"\'][^\"\']*\bsource-tag\b[^\"\']*[\"\'][^>]*>(.*?)</span>', tlud, re.S | re.I)
+    for tag in source_tags:
+        label = ' '.join(unescape(re.sub(r'<[^>]+>', '', tag)).split())
+        assert label not in {', p.14', ', p.48', '·'}, f"TLUD malformed source tag: '{label}'"
     for term in fixtures['TLUD']['prohibited_public_terms']:
         assert term not in tlud, f"TLUD still contains prohibited term: '{term}'"
     for module in fixtures['TLUD']['modules']:
