@@ -31,5 +31,6 @@ const fixture=fs.readFileSync('tests/firebase-fixture.js','utf8');
   }
   fs.writeFileSync('tests/component-overflow-results.json',JSON.stringify(results,null,2));
   console.log(JSON.stringify(results,null,2));
+  if (results.length) process.exitCode = 1;
  } finally {await browser.close();}
 })();

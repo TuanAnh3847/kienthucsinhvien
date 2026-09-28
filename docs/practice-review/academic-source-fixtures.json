@@ -76,8 +76,8 @@
     },
     "mishkin_chapters": {
       "crises": "Ch. 12",
-      "risks": "Jeff Madura Ch. 13-14 / Mishkin Ch. 10",
-      "derivatives": "Jeff Madura Ch. 10-12 / Mishkin Web Material",
+      "risks": "Madura 13e Ch. 17-19 / Mishkin 13e Ch. 9",
+      "derivatives": "Madura 13e Ch. 13-16; Mishkin companion location unverified",
       "annuity_due": "Ch. 4",
       "risk_structure": "Ch. 6",
       "term_structure": "Ch. 6",
@@ -138,5 +138,33 @@
       "locked-card",
       "limited-box"
     ]
+  },
+  "source_provenance": {
+    "KTQT": {
+      "status": "independently_verified",
+      "capital": "D:/Download/KINH TẾ QUỐC TẾ/Chapter 6_ST.pdf, page 17; rates are percent units (2,4,3). Quantities and welfare recomputed from the equation, not copied from HTML.",
+      "labor": "Same file, page 25; total labor 35 thousand, w=(59-35)/2=12; migration 2 thousand.",
+      "fdi": "Same file, pages 14-16: five purposes, four forms, six pros and six cons.",
+      "integration": "Chapter 5_ST.pdf, pages 4-9, 16, 22, 26."
+    },
+    "TCCN": {
+      "status": "independently_verified",
+      "ratios": "TÀI LIỆU UEL/UEL TCCN/Chapter 4_Personal Financial Statement & Budgeting.pdf, PDF pages 18-19 (image formulas visually inspected): monetary assets/current liabilities; separate months-of-expenses measure; total debt/total assets; net worth/assets. Student workbook independently agrees on Debt/Solvency.",
+      "credit_weights": "TÀI LIỆU UEL/UEL TCCN/Chapter 6 Eng.pdf, PDF page 21: chart visually confirms 35/30/15/10/10.",
+      "legal": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/06-vbhn-nhnn.pdf; Article 10(1)-(3), page 11."
+    },
+    "TLUD": {
+      "status": "topic_trace_unverified",
+      "syllabus": "D:/Download/7.TC BDG1006 Tâm lý ứng dụng 2TC.docx independently confirms modules and authorized reading list; this does not verify every retained textbook claim.",
+      "textbook_pages": "Prior precise Schacter page ranges and Gillibrand Ch. 4-8 blanket mapping withdrawn; see ACADEMIC_COMPLETION_TRACE.json source_audit."
+    },
+    "NLTTTC": {
+      "status": "syllabus_lecturer_and_publisher_toc_verified",
+      "note": "Original EFF2044 syllabus in TÀI LIỆU UEL/UEL NGUYÊN LÍ THỊ TRƯỜNG TÀI CHÍNH independently confirms retained scope and reading list. Chapter 5 - Interest rate.pptx slides 13-15 confirms compounding notation. Publisher TOCs verify chapter topics only, not every exact formula/page.",
+      "publisher_tocs": [
+        "https://www.pearson.com/en-au/media/fwvdzehg/9781292409481-toc.pdf",
+        "https://www.cengage.uk/c/new-edition/9780357130797/?filterBy=Higher-Education"
+      ]
+    }
   }
 }

@@ -61,7 +61,8 @@ for route in routes:
     else:
         for key in before:
             assert before[key] == after[key], f'{file}: changed {key}'
-    print(f'PASS {route["source"]}: locked chapters, titles, numeric tables, formulas, fields, answer/data attributes')
+    coverage = 'chapter order, titles and fields; completion content checked separately' if file in ACADEMIC_COMPLETION_FILES else 'chapters, titles, numeric tables, formulas, fields, answer/data attributes'
+    print(f'PASS {route["source"]}: {coverage}')
 
 from academic_negative_guards import run_academic_negative_guards
 run_academic_negative_guards()

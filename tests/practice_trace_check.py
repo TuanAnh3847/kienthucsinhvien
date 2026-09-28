@@ -29,6 +29,7 @@ for subject in ('accounting','finance'):
 print(f'PASS {count} new questions: local chapter evidence, distinct options, published wording and rotated answer keys')
 
 pilot_path = root / 'docs/practice-review/pilot-questions-review.json'
+assert pilot_path.is_file(), 'Missing required 40-question pilot trace'
 if pilot_path.exists():
     pilot = json.loads(pilot_path.read_text(encoding='utf-8'))
     ktqt_source = (root / 'KTQT-LuyenDe.html').read_text(encoding='utf-8')
@@ -57,6 +58,7 @@ if pilot_path.exists():
     print(f'PASS {pilot_count} pilot questions: local chapter evidence, distinct options, published wording and rotated answer keys')
 
 pass03_path = root / 'docs/practice-review/pass03-questions-review.json'
+assert pass03_path.is_file(), 'Missing required 40-question Pass 03 trace'
 if pass03_path.exists():
     pass03 = json.loads(pass03_path.read_text(encoding='utf-8'))
     nltttc_source = (root / 'NLTTTC-LuyenDe.html').read_text(encoding='utf-8')

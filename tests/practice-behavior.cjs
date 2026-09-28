@@ -5,6 +5,30 @@ const results=[];let browser;
 async function open(route,init){const p=await browser.newPage({viewport:{width:390,height:844}});p.errors=[];p.on('pageerror',e=>p.errors.push(e.message));p.on('dialog',d=>d.accept());await p.addInitScript(()=>window.__fixtureOptions={user:{uid:'test-user',email:'student@example.test',displayName:'Sinh viên'}});if(init)await p.addInitScript(init);await p.route(/https:\/\/www\.gstatic\.com\/firebasejs\/.+\.js/,r=>r.fulfill({contentType:'text/javascript',body:r.request().url().includes('firebase-app-compat')?fixture:''}));await p.goto('http://127.0.0.1:4173/'+route);await p.waitForFunction(()=>window.firebase?.apps.length);return p;}
 async function test(name,fn){try{await fn();results.push({name,pass:true});console.log('PASS',name)}catch(e){results.push({name,pass:false,error:e.stack});console.error('FAIL',name,e.message)}}
 (async()=>{browser=await chromium.launch({channel:'msedge',headless:true});try{
+for (const route of ['NguyenLyKeToan-LuyenDe','KTQT-LuyenDe','NhapMonLuatHoc-LuyenDe','NLTTTC-LuyenDe','LTMQT-LuyenDe']) {
+ await test(route+': blank/zero, duplicate submit, locked answers, explanations, retry and blocked storage',async()=>{
+  const p=await open(route,()=>{Storage.prototype.getItem=()=>{throw new DOMException('Blocked','SecurityError')};Storage.prototype.setItem=()=>{throw new DOMException('Blocked','SecurityError')}});
+  try {
+   await p.evaluate(()=>openSet(exerciseSets.find(s=>s.mode==='mcq').id));
+   assert.equal(await p.locator('#answered-count').innerText(),'0');
+   for(const blank of [true,false]) {
+    if(!blank) await p.evaluate(()=>{for(const q of currentSet.questions)selectAnswer(q.id,(q.answer+1)%q.options.length)});
+    await p.evaluate(()=>submitQuiz());
+    const graded=await p.locator('#result-box').innerText();assert.match(graded,/0\//);
+    const answers=await p.evaluate(()=>JSON.stringify(selectedAnswers));
+    await p.evaluate(()=>{submitQuiz();selectAnswer(currentSet.questions[0].id,currentSet.questions[0].answer)});
+    assert.equal(await p.locator('#result-box').innerText(),graded);
+    assert.equal(await p.evaluate(()=>JSON.stringify(selectedAnswers)),answers);
+    assert.equal(await p.locator('.option-card:not(:disabled)').count(),0);
+    for(const q of await p.evaluate(()=>currentSet.questions.map(q=>({id:q.id,explanation:q.explanation}))))assert((await p.locator('#q-'+q.id).innerText()).includes(q.explanation));
+    await p.evaluate(()=>resetCurrentQuiz());
+    assert.equal(await p.locator('#answered-count').innerText(),'0');
+    assert(!await p.locator('#result-box').isVisible());
+   }
+   assert.deepEqual(p.errors,[]);
+  } finally {await p.close()}
+ });
+}
 await test('Accounting: wrong/change/submit twice, lock, reset, return category',async()=>{const p=await open('NguyenLyKeToan-LuyenDe');try{
  await p.getByRole('button',{name:'Bắt đầu luyện theo chương',exact:true}).click();await p.getByRole('button',{name:'Mở bài luyện',exact:true}).first().click();
  await p.locator('.option-card').nth(1).click();await p.locator('.option-card').first().click();assert.equal(await p.locator('.option-card').first().getAttribute('aria-pressed'),'true');assert(await p.locator('.option-card').first().evaluate(e=>document.activeElement===e),'selection retains keyboard focus');

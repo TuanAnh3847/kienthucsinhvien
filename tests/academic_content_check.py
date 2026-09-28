@@ -37,6 +37,25 @@ ACADEMIC_COMPLETION_FILES = {
     'TAI_CHINH_CA_NHAN.html',
     'NGUYEN_LY_THI_TRUONG_TAI_CHINH.html',
 }
+# Only the documented completion chapters may differ. Frozen chapters and all
+# inline runtime code still use the approved checkpoint plus exact corrections.
+COMPLETION_CHAPTERS = {
+    'KINH_TE_QUOC_TE.html': {'ch5', 'ch6'},
+    'TAM_LY_UNG_DUNG.html': {'ch4', 'ch5', 'ch6'},
+    'TAI_CHINH_CA_NHAN.html': {'ch4', 'ch6'},
+    'NGUYEN_LY_THI_TRUONG_TAI_CHINH.html': {'ch2', 'ch3', 'ch5', 'ch6', 'review'},
+}
+def frozen_snapshot(source, file):
+    tree = html5lib.parse(source)
+    for el in tree.iter():
+        if el.attrib.get('id') in COMPLETION_CHAPTERS[file] and 'tab-content' in el.attrib.get('class', '').split():
+            for child in list(el): el.remove(child)
+            el.text = ''
+    return academic_snapshot(html5lib.serialize(tree, omit_optional_tags=False))
+
+def check_frozen_completion(file, source):
+    assert frozen_snapshot(expected_theory(file), file) == frozen_snapshot(source, file), f'{file}: frozen chapter, heading or runtime changed'
+
 def check():
     routes=json.loads(current('firebase.json'))['hosting']['rewrites']
     assert len(routes)==12,'Theory route coverage changed'
@@ -44,6 +63,7 @@ def check():
     for route in routes:
         file=route['destination'].lstrip('/')
         if file in ACADEMIC_COMPLETION_FILES:
+            check_frozen_completion(file, current(file))
             chapters+=len(academic_snapshot(current(file))[0])
             continue
         expected=academic_snapshot(expected_theory(file))
@@ -74,9 +94,16 @@ def check():
     abc['caseHtml']=abc['caseHtml'][:abc['caseHtml'].index("<p class='mt-4'>")]
     abc['solutionHtml']=abc['solutionHtml'][:abc['solutionHtml'].index("<div><h4 class='font-black text-teal-800 mb-2'>B.")]+ '</div>'
     assert [s for s in actual if s['id']!='quiz-applied-review-12']==original,'Existing accounting question data changed'
-    print(f'PASS academic preservation: 12 theory pages, {chapters} chapter/review sections, both original practice banks; exact reviewed exceptions only')
+    print(f'PASS preservation: 12 theory pages, {chapters} sections; frozen chapters/runtime and original practice banks protected. Completion chapters use separate guards, not full source verification.')
     print(f'Content checkpoint: {baseline}. Original strict prose audit remains available separately.')
     if '--self-test' in sys.argv:
+        for file in ACADEMIC_COMPLETION_FILES:
+            source = current(file)
+            mutated = source.replace('id="ch1"', 'id="missing-chapter"', 1)
+            assert mutated != source
+            try: check_frozen_completion(file, mutated)
+            except AssertionError: pass
+            else: raise AssertionError(f'Guard missed frozen chapter mutation in {file}')
         source=expected_theory('TAI_CHINH_CA_NHAN.html'); snapshot=academic_snapshot(source)
         for before,after in [('Net worth = Assets − Liabilities','Net worth = Assets + Liabilities'),('Selena Torres','Different Case'),('$72,000','$73,000'),('id="ch4"','id="missing-chapter"')]:
             assert before in source

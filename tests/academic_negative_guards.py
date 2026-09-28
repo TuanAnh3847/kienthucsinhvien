@@ -1,8 +1,45 @@
 import re
 from pathlib import Path
 import json
+from html import unescape
 
 root = Path(__file__).resolve().parent.parent
+
+def check_exact_recovered_values(ktqt, nltttc):
+    # Lecturer Chapter 6_ST pp.17/25: independently solved percent-unit models.
+    plain = unescape(re.sub(r'<[^>]+>', '', ktqt))
+    for expression in ['r₁ = 2%', 'r₂ = 4%', 'r* = 3%',
+                       'Q_K1 = -5(2) + 80 = 70 tỷ USD',
+                       'Q_K2 = -5(4) + 80 = 60 tỷ USD',
+                       'Q_K1* = -5(3) + 80 = 65 tỷ USD',
+                       'Q_K2* = -5(3) + 80 = 65 tỷ USD',
+                       'ΔK = 70 - 65 = 5 tỷ USD',
+                       'ΔGNP₁ = ½ × 5 × (3% - 2%) = 25 triệu USD',
+                       'ΔGNP₂ = ½ × 5 × (4% - 3%) = 25 triệu USD',
+                       '25 + 25 = 50 triệu USD',
+                       '½ × 2 × (12 - 10) = 2.000 USD/giờ']:
+        assert expression in plain, f'KTQT exact source-derived result changed: {expression}'
+    # Check every rendered exponent, not a formula prefix elsewhere on the page.
+    for prefix, exponent in [('FV = P × (1 + i/n)', 'n·t'), ('EAR = (1 + i/n)', 'n')]:
+        occurrences = re.findall(re.escape(prefix) + r'<sup>(.*?)</sup>', nltttc)
+        assert len(occurrences) == 3 and all(x == exponent for x in occurrences), f'Wrong/missing exponent: {prefix}'
+    assert 'FV = PMT × [((1 + r)ⁿ - 1) / r] × (1 + r)' in nltttc, 'Annuity-due multiplier changed'
+    forms = re.search(r'4 Hình thức FDI.*?</article>', ktqt, re.S)
+    assert forms and re.findall(r'<strong>(\d+)\.', forms[0]) == ['1', '2', '3', '4'], 'FDI forms count changed'
+    for heading, count in [('5 Mục đích chính của FDI', 5), ('6 Lợi ích cốt lõi', 6), ('6 Rủi ro &amp; Hạn chế', 6)]:
+        block = re.search(re.escape(heading) + r'.*?</h[34]>\s*<[uo]l[^>]*>(.*?)</[uo]l>', ktqt, re.S)
+        assert block and len(re.findall(r'<li\b', block[1])) == count, f'FDI count mismatch: {heading}'
+
+def exact_guard_self_test(ktqt, nltttc):
+    mutations = [(ktqt.replace('70 tỷ USD', '71 tỷ USD', 1), nltttc),
+                 (ktqt.replace('25 triệu USD', '26 triệu USD', 1), nltttc),
+                 (ktqt, nltttc.replace('<sup>n·t</sup>', '<sup>n+t</sup>', 1)),
+                 (ktqt, nltttc.replace('<sup>n</sup>', '<sup>t</sup>', 1)),
+                 (ktqt, nltttc.replace('/ r] × (1 + r)', '/ r] × (1 - r)', 1))]
+    for mutated in mutations:
+        try: check_exact_recovered_values(*mutated)
+        except AssertionError: pass
+        else: raise AssertionError('Exact guard accepted an academic mutation')
 
 def run_academic_negative_guards():
     print("Running Academic Negative Guards...")
@@ -24,7 +61,7 @@ def run_academic_negative_guards():
     assert 'Self-Determination' not in tlud, "TLUD should not contain unsourced Self-Determination"
     assert 'Schacter 2020' not in tlud, "TLUD should not cite Schacter 2020"
     assert 'Schacter et al. (2020)' not in tlud, "TLUD should not cite Schacter et al. (2020)"
-    print("  PASS: TLUD Academic Negative Guards (Source Fixture Validated)")
+    print("  PASS: TLUD Academic Negative Guards (contract checked; independent source status recorded in fixture provenance)")
 
     # 2. KTQT guards
     ktqt = (root / 'KINH_TE_QUOC_TE.html').read_text(encoding='utf-8')
@@ -42,7 +79,7 @@ def run_academic_negative_guards():
     assert 'Jacob Viner' in ktqt, "KTQT missing Jacob Viner"
     assert fixtures['KTQT']['customs_union_welfare']['trade_creation'] in ktqt, "KTQT missing trade creation welfare (b+d)"
     assert fixtures['KTQT']['customs_union_welfare']['trade_diversion'] in ktqt, "KTQT missing trade diversion welfare ((b+d)-e)"
-    print("  PASS: KTQT Academic Negative Guards (Source Fixture Validated)")
+    print("  PASS: KTQT Academic Negative Guards (contract checked; independent source status recorded in fixture provenance)")
 
     # 3. TCCN guards
     tccn = (root / 'TAI_CHINH_CA_NHAN.html').read_text(encoding='utf-8')
@@ -56,10 +93,12 @@ def run_academic_negative_guards():
     assert 'FICO MODEL' not in tccn, "TCCN has forbidden FICO MODEL in main heading"
     assert 'FICO · CIC · xếp hạng tín dụng' not in tccn, "TCCN mindmap still leaks FICO CIC"
     assert 'an toàn < 50%' not in tccn and '< 50%' not in tccn[tccn.find('Tỷ số nợ (Debt Ratio)'):tccn.find('Tỷ số nợ (Debt Ratio)') + 300], "TCCN still has arbitrary < 50% threshold on Debt Ratio"
-    print("  PASS: TCCN Academic Negative Guards (Source Fixture Validated)")
+    print("  PASS: TCCN Academic Negative Guards (contract checked; independent source status recorded in fixture provenance)")
 
     # 4. NLTTTC guards
     nltttc = (root / 'NGUYEN_LY_THI_TRUONG_TAI_CHINH.html').read_text(encoding='utf-8')
+    check_exact_recovered_values(ktqt, nltttc)
+    exact_guard_self_test(ktqt, nltttc)
     assert 'locked-card' not in nltttc, "NLTTTC still contains locked-card placeholders"
     assert 'Chuyên đề đọc thêm mở rộng' not in nltttc, "NLTTTC still contains 'Chuyên đề đọc thêm mở rộng'"
     assert '[cần làm rõ số mũ]' not in nltttc, "NLTTTC still contains '[cần làm rõ số mũ]'"

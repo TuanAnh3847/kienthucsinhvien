@@ -3,5 +3,21 @@
     ["${JSON.stringify(c)}", "${esc(JSON.stringify(c))}"],
     ["${JSON.stringify(x)}", "${esc(JSON.stringify(x))}"],
     ["forEach(zone=>{zone.addEventListener('dragover'", "forEach(zone=>{zone.addEventListener('keydown',e=>{if(e.target===zone&&(e.key==='Enter'||e.key===' ')){e.preventDefault();zone.click();}});zone.addEventListener('dragover'"]
+  ],
+  "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html": [
+    [
+      "[\"F04\", \"Compound-interest FV\", \"FV = P × (1 + i/n)n.t [ký hiệu trong bài]\", \"Ký hiệu số mũ chưa đủ rõ; máy tính tạm khóa.\", \"S6 p.14\", \"blocked\"]",
+      "[\"F04\", \"Compound-interest FV\", \"FV = P × (1 + i/n)^(n·t)\", \"Lãi kép với n kỳ ghép lãi mỗi năm, thời hạn t năm.\", \"S6 p.14\", \"active\"]"
+    ],
+    [
+      "[\"F05\", \"Effective rate\", \"ief = (1 + i/n)n − 1 [ký hiệu trong bài]\", \"Ký hiệu số mũ và thuật ngữ chưa đủ rõ; máy tính tạm khóa.\", \"S6 p.16\", \"blocked\"]",
+      "[\"F05\", \"Effective rate\", \"EAR = (1 + i/n)^n − 1\", \"Lãi suất hiệu dụng thực tế hàng năm (EAR / EFF).\", \"S6 p.16\", \"active\"]"
+    ]
+  ],
+  "TAI_CHINH_CA_NHAN.html": [
+    [
+      "Solvency ratio = <strong>${fmt(r,4)}</strong>. Chưa có ngưỡng chung để diễn giải tỷ số này; cần xem xét ngữ cảnh.",
+      "Solvency ratio = <strong>${fmt(r,4)}</strong> (Tỷ lệ khả năng thanh toán = Net Worth / Total Assets). Tỷ số càng cao thể hiện mức độ tự chủ tài chính và an toàn vốn càng lớn."
+    ]
   ]
 }
