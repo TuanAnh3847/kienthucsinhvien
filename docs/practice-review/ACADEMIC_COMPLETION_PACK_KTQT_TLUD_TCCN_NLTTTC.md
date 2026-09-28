@@ -185,14 +185,16 @@
 - Xóa bỏ toàn bộ các tuyên bố ngụy tạo trước đây cho rằng Động lực, Phát triển và Nhân cách là 'đọc thêm ngoài thi'.
 
 ### 3.2. TLUD Module 4: Động lực học tập & Hành vi (Motivation Theory)
+- **Căn cứ giáo trình chính thức chỉ định:** Daniel L. Schacter, Daniel T. Gilbert, Daniel M. Wegner, *Psychology* (Worth Publishers, 2009, 1st Edition), Chương 10: "Emotion and Motivation", pp. 403–416.
 - **Định nghĩa:** Động lực là trạng thái nội tại định hướng, kích hoạt và duy trì hành vi có chủ đích.
-- **Động lực nội tại (Intrinsic) vs Động lực ngoại tại (Extrinsic):** Động lực nội tại xuất phát từ niềm vui, sự thỏa mãn tự thân và tò mò trí tuệ; động lực ngoại tại hướng tới phần thưởng vật chất, điểm số hoặc tránh hình phạt. Hiệu ứng thừa nhận quá mức (Overjustification Effect) cảnh báo phần thưởng ngoại tại hữu hình có thể làm suy giảm động lực nội tại.
-- **Các trường phái lý thuyết:**
-  1. Thuyết giảm xung năng (Clark Hull): Thiếu hụt sinh học $\rightarrow$ Nhu cầu $\rightarrow$ Xung năng (Drive) $\rightarrow$ Hành vi nhằm duy trì cân bằng nội môi (Homeostasis).
-  2. Thuyết kích thích & Định luật Yerkes-Dodson: Mối quan hệ giữa kích thích sinh lý và hiệu suất có dạng đường cong chữ U ngược (nhiệm vụ phức tạp đòi hỏi mức kích thích vừa phải).
-  3. Thuyết Thang bậc nhu cầu của Abraham Maslow: 5 tầng (Sinh lý $\rightarrow$ An toàn $\rightarrow$ Xã hội $\rightarrow$ Tôn trọng $\rightarrow$ Tự hiện thực hóa).
-  4. Thuyết Tự quyết (Deci & Ryan): 3 nhu cầu tâm lý cốt lõi gồm Tự chủ (Autonomy), Năng lực (Competence), và Gắn kết (Relatedness).
-<!-- TRACE: SOURCE TYPE: TEXTBOOK SUPPLEMENT | SOURCE FILE: Schacter et al., Psychology (2009), Ch. 10 (Trang 380-415) | CONFIDENCE: HIGH -->
+- **Động lực nội tại (Intrinsic) vs Động lực ngoại tại (Extrinsic):** Động lực nội tại xuất phát từ niềm vui, sự thỏa mãn tự thân và tò mò trí tuệ; động lực ngoại tại hướng tới phần thưởng vật chất, điểm số hoặc tránh hình phạt. Hiệu ứng thừa nhận quá mức (Overjustification Effect - Lepper et al., 1973) cảnh báo phần thưởng ngoại tại hữu hình có thể làm suy giảm động lực nội tại (Schacter 2009, pp. 414–416).
+- **Các trường phái lý thuyết đã được thẩm định nguồn:**
+  1. Thuyết giảm xung năng & Cân bằng nội môi (Clark Hull, 1943; Walter Cannon, 1932): Thiếu hụt sinh học sinh ra Nhu cầu (Need) $\rightarrow$ Xung năng (Drive) thôi thúc hành vi giải tỏa nhằm duy trì trạng thái cân bằng nội môi (Homeostasis) (Schacter 2009, pp. 403–404).
+  2. Thuyết Thang bậc nhu cầu của Abraham Maslow (1943, 1954): 5 tầng từ thấp lên cao (Sinh lý $\rightarrow$ An toàn $\rightarrow$ Xã hội $\rightarrow$ Được tôn trọng $\rightarrow$ Tự hiện thực hóa bản thân) (Schacter 2009, pp. 404–405).
+- **Loại bỏ khỏi bài học do không có trong giáo trình chỉ định:**
+  + Định luật Yerkes-Dodson (Arousal Theory) $\rightarrow$ *REMOVE — NO AUTHORIZED TRACE*.
+  + Thuyết Tự quyết của Deci & Ryan (Self-Determination Theory) $\rightarrow$ *REMOVE — NO AUTHORIZED TRACE*.
+<!-- TRACE: SOURCE TYPE: TEXTBOOK SYLLABUS-AUTHORIZED | SOURCE FILE: Schacter et al., Psychology (Worth Publishers, 2009), Ch. 10 (Trang 403-416) | CONFIDENCE: HIGH -->
 
 ### 3.3. TLUD Module 5: Tâm lý học phát triển (Developmental Psychology)
 - **Đối tượng nghiên cứu:** Sự phát triển thể chất, nhận thức và xã hội xuyên suốt dòng đời (Lifespan perspective). Ba tranh luận cốt lõi: Nature vs Nurture, Continuity vs Discontinuity, Stability vs Change.
@@ -265,24 +267,24 @@
 - **Giáo trình chính thức:** Frederic S. Mishkin, *Economics of Money, Banking and Financial Markets* (13th Edition, 2022); Jeff Madura, *Financial Markets and Institutions*.
 - **KHẲNG ĐỊNH CỐT LÕI TỪ HEAD:** Cả 11 chuyên đề đều thuộc đề cương đào tạo chính thức (bao gồm Tài chính bền vững mục 2.8 và DeFi mục 2.9). Toàn bộ 11 chuyên đề được biên soạn hoàn chỉnh:
 
-1. **Thị trường phái sinh (Derivatives - Mục 2.6/Update):** Hợp đồng kỳ hạn (Forwards), tương lai (Futures), quyền chọn (Options - Call/Put), hoán đổi (Swaps). Vai trò phòng ngừa rủi ro (Hedging) vs Đầu cơ (Speculation). (Mishkin Ch. 24: Financial Derivatives).
+1. **Thị trường phái sinh (Derivatives - Mục 2.6/Update):** Hợp đồng kỳ hạn (Forwards), tương lai (Futures), quyền chọn (Options - Call/Put), hoán đổi (Swaps). Vai trò phòng ngừa rủi ro (Hedging) vs Đầu cơ (Speculation). (Jeff Madura, Financial Markets and Institutions 13e, Ch. 10–12 & Mishkin 13e Web/Companion Material: Financial Derivatives).
 2. **Hệ thống tài chính Việt Nam (Mục 2.7):** Sơ đồ cấu trúc gồm Thị trường tài chính (thị trường tiền tệ, thị trường vốn) và Định chế trung gian (NHTM, TCTD phi ngân hàng, tổ chức tài chính vi mô, quỹ tín dụng nhân dân) dưới sự quản lý của NHNN và Bộ Tài chính.
 3. **Nguyên lý cơ bản của Tài chính bền vững (Sustainable Finance - Mục 2.8):** Tích hợp các yếu tố Môi trường, Xã hội và Quản trị (ESG - Environmental, Social, Governance) vào quyết định đầu tư và phân bổ vốn nhằm giảm thiểu rủi ro khí hậu và thúc đẩy phát triển bền vững. (Khung chuẩn quốc tế: ICMA Green Bond Principles - GBP 2021 & European Commission EU Taxonomy Regulation - EU 2020/852; World Bank).
 4. **Tài chính phi tập trung (DeFi - Mục 2.9):** Ứng dụng công nghệ sổ cái phân tán (Blockchain) và Hợp đồng thông minh (Smart Contracts) để thực hiện các dịch vụ tài chính (vay, cho vay, giao dịch) mà không cần trung gian tài chính truyền thống; nhận diện các rủi ro công nghệ, rủi ro thanh khoản và rủi ro quy định pháp lý. (Bank for International Settlements - BIS Quarterly Review Dec 2021: "DeFi lending: liquidity for the crypto world"; IMF Global Financial Stability Report).
-5. **Khủng hoảng tài chính (Financial Crises - Chương 3):** 3 giai đoạn theo mô hình Mishkin: (1) Bùng nổ tín dụng và sụp đổ bong bóng giá tài sản $\rightarrow$ (2) Khủng hoảng ngân hàng và thắt chặt tín dụng $\rightarrow$ (3) Suy thoái kinh tế và giảm phát nợ nần (Debt Deflation). (Mishkin Ch. 9 & 10).
-6. **Tổng quan rủi ro tài chính (Financial Risks - Chương 3):** 4 rủi ro cơ bản của định chế tài chính: Rủi ro tín dụng (Credit risk), Rủi ro lãi suất (Interest-rate risk), Rủi ro thanh khoản (Liquidity risk), Rủi ro thị trường (Market risk). (Mishkin Ch. 22 & 23: Managing Financial Risks).
+5. **Khủng hoảng tài chính (Financial Crises - Chương 3):** 3 giai đoạn theo mô hình Mishkin: (1) Bùng nổ tín dụng và sụp đổ bong bóng giá tài sản $\rightarrow$ (2) Khủng hoảng ngân hàng và thắt chặt tín dụng $\rightarrow$ (3) Suy thoái kinh tế và giảm phát nợ nần (Debt Deflation). (Frederic S. Mishkin, The Economics of Money, Banking and Financial Markets, 13th Edition, Pearson, 2022, Chapter 12: Financial Crises).
+6. **Tổng quan rủi ro tài chính (Financial Risks - Chương 3):** 4 rủi ro cơ bản của định chế tài chính: Rủi ro tín dụng (Credit risk), Rủi ro lãi suất (Interest-rate risk), Rủi ro thanh khoản (Liquidity risk), Rủi ro thị trường (Market risk). (Jeff Madura, Financial Markets and Institutions 13e, Ch. 13 & 14: Commercial Bank Operations and Regulation; Frederic S. Mishkin 13e, Ch. 10: Banking and the Management of Financial Institutions).
 7. **Giá trị thời gian của tiền & Dòng tiền đều (TVM - Chương 5):**
    - Giá trị tương lai món đơn: $FV = PV \times (1 + r)^n$.
    - Giá trị hiện tại món đơn: $PV = \frac{FV}{(1 + r)^n}$.
    - Dòng tiền đều cuối kỳ (Ordinary Annuity): $FV = PMT \times \frac{(1 + r)^n - 1}{r}$.
    - Dòng tiền đều đầu kỳ (Annuity Due): $FV_{due} = FV_{ord} \times (1 + r) = PMT \times \frac{(1 + r)^n - 1}{r} \times (1 + r)$.
    - Lãi suất hiệu dụng: $EAR = \left(1 + \frac{r_{nom}}{m}\right)^m - 1$.
-   *(Mishkin Ch. 4: Understanding Interest Rates; loại bỏ hoàn toàn các ghi chú cảnh báo tạm thời)*.
-8. **Lịch trình trả nợ chi tiết (Amortization Schedule - Chương 5):** Khoản vay trả góp định kỳ cố định (Fixed-payment loan). Số tiền trả mỗi kỳ $PMT = PV \times \frac{r(1+r)^n}{(1+r)^n - 1}$, trong đó tỷ trọng trả nợ gốc tăng dần và tiền lãi giảm dần theo thời gian. (Mishkin Ch. 4).
-9. **Cấu trúc rủi ro của lãi suất (Risk Structure of Interest Rates - Chương 5):** 3 nhân tố quyết định chênh lệch lãi suất giữa các trái phiếu cùng kỳ hạn: (1) Rủi ro vỡ nợ (Default risk và Phần bù rủi ro - Risk premium), (2) Tính thanh khoản (Liquidity), (3) Thuế thu nhập (Income tax considerations). (Mishkin Ch. 6).
-10. **Cấu trúc kỳ hạn của lãi suất (Term Structure of Interest Rates - Chương 5):** Đường cong lợi suất (Yield Curve) và 3 lý thuyết kinh điển: (1) Thuyết kỳ vọng (Expectations Theory), (2) Thuyết thị trường phân cách (Segmented Markets Theory), (3) Thuyết phần bù thanh khoản (Liquidity Premium Theory - giải thích hoàn chỉnh nhất hình dạng dốc lên của đường cong lợi suất). (Mishkin Ch. 6).
-11. **Chính sách & Chế độ tỷ giá hối đoái (Exchange Rate Regimes - Chương 6):** 3 chế độ tỷ giá: Tỷ giá cố định (Fixed), Tỷ giá thả nổi hoàn toàn (Flexible/Floating), Tỷ giá thả nổi có điều tiết (Managed Float); Nguyên lý Tam giác bất khả thi (The Policy Trilemma / Impossible Trinity): Một quốc gia không thể đồng thời đạt được Tỷ giá cố định, Dòng vốn tự do và Chính sách tiền tệ độc lập. (Mishkin Ch. 17 & 18).
-<!-- TRACE: SOURCE TYPE: TEXTBOOK & SYLLABUS | SOURCE FILE: Mishkin 13e, ICMA GBP 2021, BIS Dec 2021 & UEL EFF2044 Syllabus | CONFIDENCE: HIGH -->
+   *(Mishkin 13e, Ch. 4: The Meaning of Interest Rates; loại bỏ hoàn toàn các ghi chú cảnh báo tạm thời)*.
+8. **Lịch trình trả nợ chi tiết (Amortization Schedule - Chương 5):** Khoản vay trả góp định kỳ cố định (Fixed-payment loan). Số tiền trả mỗi kỳ $PMT = PV \times \frac{r(1+r)^n}{(1+r)^n - 1}$, trong đó tỷ trọng trả nợ gốc tăng dần và tiền lãi giảm dần theo thời gian. (Mishkin 13e, Ch. 4).
+9. **Cấu trúc rủi ro của lãi suất (Risk Structure of Interest Rates - Chương 5):** 3 nhân tố quyết định chênh lệch lãi suất giữa các trái phiếu cùng kỳ hạn: (1) Rủi ro vỡ nợ (Default risk và Phần bù rủi ro - Risk premium), (2) Tính thanh khoản (Liquidity), (3) Thuế thu nhập (Income tax considerations). (Mishkin 13e, Ch. 6: The Risk and Term Structure of Interest Rates).
+10. **Cấu trúc kỳ hạn của lãi suất (Term Structure of Interest Rates - Chương 5):** Đường cong lợi suất (Yield Curve) và 3 lý thuyết kinh điển: (1) Thuyết kỳ vọng (Expectations Theory), (2) Thuyết thị trường phân cách (Segmented Markets Theory), (3) Thuyết phần bù thanh khoản (Liquidity Premium Theory - giải thích hoàn chỉnh nhất hình dạng dốc lên của đường cong lợi suất). (Mishkin 13e, Ch. 6).
+11. **Chính sách & Chế độ tỷ giá hối đoái (Exchange Rate Regimes - Chương 6):** 3 chế độ tỷ giá: Tỷ giá cố định (Fixed), Tỷ giá thả nổi hoàn toàn (Flexible/Floating), Tỷ giá thả nổi có điều tiết (Managed Float); Nguyên lý Tam giác bất khả thi (The Policy Trilemma / Impossible Trinity): Một quốc gia không thể đồng thời đạt được Tỷ giá cố định, Dòng vốn tự do và Chính sách tiền tệ độc lập. (Mishkin 13e, Ch. 17: The Foreign Exchange Market & Ch. 18: The International Financial System).
+<!-- TRACE: SOURCE TYPE: TEXTBOOK & SYLLABUS | SOURCE FILE: Mishkin 13e (Ch. 4, 6, 10, 12, 17, 18), Madura 13e (Ch. 10-14), ICMA GBP 2021, BIS Dec 2021 & UEL EFF2044 Syllabus | CONFIDENCE: HIGH -->
 
 ---
 
@@ -301,10 +303,10 @@
 | Tác động động liên minh | KTQT Chương 6 | `Chapter 5_ST.pdf` | Slide 187, 214, 217 | LECTURER | HIGH | Đã trích xuất toàn văn |
 | Đề cương 6 Module bắt buộc | TLUD Tổng quan | `7.TC BDG1006 Tâm lý ứng dụng 2TC.docx` | Đoạn 16–76 | SYLLABUS | HIGH | Xóa bỏ ngụy tạo 'ngoài thi' |
 | Cấu trúc phân tâm học | TLUD Module 6 | `Psychoanalysis.docx` | Toàn văn | LECTURER | HIGH | Khớp 100% tài liệu môn học |
-| Thuyết Động lực | TLUD Module 4 | Schacter et al. (2009), Ch. 10 | Trang 380–415 | TEXTBOOK_SUPPLEMENT | HIGH | Giáo trình chỉ định trong đề cương |
+| Thuyết Động lực (Hull, Maslow) | TLUD Module 4 | Schacter et al. (Worth Publishers, 2009), Ch. 10 | Trang 403–416 | TEXTBOOK_SUPPLEMENT | HIGH | Giáo trình chỉ định trong đề cương |
 | Thuyết Phát triển Piaget, Erikson | TLUD Module 5 | Gillibrand et al. (2016), Ch. 4–8 | Toàn bộ các chương giai đoạn | TEXTBOOK_SUPPLEMENT | HIGH | Giáo trình chỉ định trong đề cương |
 | Thuyết Big Five (OCEAN) | TLUD Module 6 | Schacter et al. (2009), Ch. 12 | Trang 460–495 | TEXTBOOK_SUPPLEMENT | HIGH | Giáo trình chỉ định trong đề cương |
 | Kỳ hạn vay (<1, 1–5, >5 năm) | TCCN Chương 6 | Thông tư 39/2016/TT-NHNN | Điều 10, Khoản 1, 2, 3 | LEGAL_SUPPLEMENT | HIGH | Căn cứ Điều 10 Thông tư 39 |
 | Tỷ trọng điểm tín dụng (35/30/15/10/10) | TCCN Chương 6 | `Chapter 6 Eng.pdf` | Trang 'Credit Score Criteria' | LECTURER | HIGH | Chuẩn hóa không đặt FICO |
 | Công thức Solvency, Debt, Liquidity | TCCN Chương 4 & 6 | `Bài GK TCCN (1).xlsx` | Dòng 207–210 | LECTURER | HIGH | Khôi phục từ bài tập sinh viên |
-| 11 Chuyên đề tài chính (Gồm ESG, DeFi) | NLTTTC | Mishkin 13e, ICMA & BIS | Ch. 4, 6, 9-10, 17-18, 22-24; ICMA GBP 2021; BIS Dec 2021 | TEXTBOOK_SUPPLEMENT | HIGH | Giáo trình đại học chính thức & tổ chức quốc tế |
+| 11 Chuyên đề tài chính (Gồm ESG, DeFi) | NLTTTC | Mishkin 13e, Madura 13e, ICMA & BIS | Mishkin Ch. 4, 6, 10, 12, 17, 18; Madura Ch. 10-14; ICMA GBP 2021; BIS Dec 2021 | TEXTBOOK_SUPPLEMENT | HIGH | Giáo trình đại học chính thức & tổ chức quốc tế |

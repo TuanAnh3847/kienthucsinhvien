@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Baseline fixtures for academic facts, formulas, legal citations, and quiz keys across Edu Connect targets",
   "KTQT": {
     "capital_demand_equation": "Q_K = -5r + 80",
@@ -75,9 +75,9 @@
       "defi": "BIS Quarterly Review Dec 2021"
     },
     "mishkin_chapters": {
-      "derivatives": "Ch. 24",
-      "crises": "Ch. 9",
-      "risks": "Ch. 22 & 23",
+      "crises": "Ch. 12",
+      "risks": "Jeff Madura Ch. 13-14 / Mishkin Ch. 10",
+      "derivatives": "Jeff Madura Ch. 10-12 / Mishkin Web Material",
       "annuity_due": "Ch. 4",
       "risk_structure": "Ch. 6",
       "term_structure": "Ch. 6",
@@ -98,15 +98,16 @@
     }
   },
   "TLUD": {
+    "syllabus_authorized_source": "Schacter, Gilbert & Wegner, Psychology (Worth Publishers, 2009)",
     "modules": [
       {
         "id": "mod4",
         "title": "Động lực học tập & Hành vi",
         "theories": [
           "Clark Hull",
-          "Yerkes-Dodson",
           "Maslow",
-          "Deci & Ryan"
+          "Intrinsic Motivation",
+          "Overjustification Effect"
         ]
       },
       {

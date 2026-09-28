@@ -1,9 +1,9 @@
 {
   "pack_metadata": {
-    "version": "1.2.0",
-    "created_at": "2026-09-28T00:15:00+07:00",
+    "version": "1.3.0",
+    "created_at": "2026-09-28T09:55:00+07:00",
     "branch": "gravity/site-completion-v1",
-    "head_commit": "0aefbb24da3c8759f03c37040c7c8e92619c86e0",
+    "head_commit": "ed78a14cb0656c50991c64343de29f1fcca73743",
     "status": "HEAD_LOCKED_APPROVED"
   },
   "subjects": {
@@ -72,20 +72,25 @@
     "TLUD": {
       "page": "TAM_LY_UNG_DUNG.html",
       "syllabus": "7.TC BDG1006 (MA. Lâm Hoàng Đức)",
+      "syllabus_authorized_textbook": "Schacter, Gilbert & Wegner, Psychology (Worth Publishers, 2009)",
       "modules": {
         "mod4": {
           "name": "Motivation",
-          "textbook": "Schacter et al. (2020) 5th Edition Ch. 10/11",
+          "textbook": "Schacter, Gilbert & Wegner (2009) Ch. 10 (pp. 403-416)",
           "theories": [
-            "Clark Hull Drive-Reduction",
+            "Clark Hull Drive-Reduction & Homeostasis",
+            "Maslow Hierarchy of Needs",
+            "Intrinsic vs Extrinsic Motivation",
+            "Overjustification Effect"
+          ],
+          "removed_unsourced": [
             "Yerkes-Dodson Law",
-            "Maslow Hierarchy",
-            "Deci & Ryan SDT"
+            "Deci & Ryan Self-Determination Theory"
           ]
         },
         "mod5": {
           "name": "Development Psychology",
-          "textbook": "Gillibrand et al. (2016) Ch. 4-8",
+          "textbook": "Rachel Gillibrand et al. (2016) Ch. 4-8; Schacter et al. (2009) Ch. 11",
           "theories": [
             "Piaget 4 stages",
             "Erikson 8 psychosocial stages",
@@ -94,7 +99,7 @@
         },
         "mod6": {
           "name": "Personality",
-          "textbook": "Psychoanalysis.docx; Schacter et al. (2020) Ch. 12",
+          "textbook": "Psychoanalysis.docx; Schacter, Gilbert & Wegner (2009) Ch. 12",
           "theories": [
             "Freud Id/Ego/Superego & Defense Mechanisms",
             "Rogers Humanistic Self",
@@ -137,14 +142,14 @@
         "sustainable_finance": "ICMA Green Bond Principles (GBP) 2021 & European Commission EU Taxonomy Regulation (EU) 2020/852",
         "defi": "Bank for International Settlements (BIS) Quarterly Review Dec 2021 & IMF Global Financial Stability Report"
       },
-      "mishkin_chapters": {
-        "derivatives": "Ch. 24",
-        "financial_crises": "Ch. 9 & 10",
-        "financial_risks": "Ch. 22 & 23",
-        "tvm_annuity_due": "Ch. 4",
-        "risk_structure": "Ch. 6",
-        "term_structure": "Ch. 6",
-        "exchange_rate_regimes": "Ch. 17 & 18"
+      "source_chapters": {
+        "derivatives": "Jeff Madura, Financial Markets and Institutions (13e) Ch. 10-12 & Mishkin 13e Web/Companion Material",
+        "financial_crises": "Frederic S. Mishkin, Economics of Money, Banking and Financial Markets (13e, 2022) Ch. 12",
+        "financial_risks": "Jeff Madura, Financial Markets and Institutions (13e) Ch. 13-14 & Mishkin 13e Ch. 10",
+        "tvm_annuity_due": "Frederic S. Mishkin (13e) Ch. 4",
+        "risk_structure": "Frederic S. Mishkin (13e) Ch. 6",
+        "term_structure": "Frederic S. Mishkin (13e) Ch. 6",
+        "exchange_rate_regimes": "Frederic S. Mishkin (13e) Ch. 17 & 18"
       },
       "topics_retained": [
         "Derivatives Market",

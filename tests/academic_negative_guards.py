@@ -19,7 +19,11 @@ def run_academic_negative_guards():
         for theory in module['theories']:
             assert theory in tlud, f"TLUD missing theory '{theory}' from fixture module {module['id']}"
     assert 'Intrinsic Motivation' in tlud, "TLUD missing Intrinsic Motivation"
-    assert 'Yerkes-Dodson' in tlud, "TLUD missing Yerkes-Dodson"
+    assert 'Yerkes-Dodson' not in tlud, "TLUD should not contain unsourced Yerkes-Dodson"
+    assert 'Deci & Ryan' not in tlud, "TLUD should not contain unsourced Deci & Ryan"
+    assert 'Self-Determination' not in tlud, "TLUD should not contain unsourced Self-Determination"
+    assert 'Schacter 2020' not in tlud, "TLUD should not cite Schacter 2020"
+    assert 'Schacter et al. (2020)' not in tlud, "TLUD should not cite Schacter et al. (2020)"
     print("  PASS: TLUD Academic Negative Guards (Source Fixture Validated)")
 
     # 2. KTQT guards
@@ -64,9 +68,11 @@ def run_academic_negative_guards():
     assert 'Blocked pending verification' not in nltttc, "NLTTTC still contains 'Blocked pending verification'"
     assert 'Tài chính bền vững (Sustainable Finance)' in nltttc, "NLTTTC missing Sustainable Finance"
     assert 'Tài chính phi tập trung (DeFi)' in nltttc, "NLTTTC missing DeFi"
-    assert 'Thị trường phái sinh (Derivatives Market)' in nltttc, "NLTTTC missing Derivatives Market"
-    assert 'Khủng hoảng tài chính (Financial Crises - Mishkin Ch. 9)' in nltttc, "NLTTTC missing Financial Crises Mishkin Ch. 9"
-    assert 'Tổng quan rủi ro tài chính (Financial Risks - Mishkin Ch. 22 & 23)' in nltttc, "NLTTTC missing Financial Risks Mishkin Ch. 22 & 23"
+    assert 'Khủng hoảng tài chính (Financial Crises)' in nltttc, "NLTTTC missing Financial Crises"
+    assert 'Tổng quan rủi ro tài chính (Financial Risks)' in nltttc, "NLTTTC missing Financial Risks"
+    assert 'Financial Crises - Mishkin Ch. 9' not in nltttc, "NLTTTC contains inaccurate Mishkin Ch. 9"
+    assert 'Financial Risks - Mishkin Ch. 22 & 23' not in nltttc, "NLTTTC contains inaccurate Mishkin Ch. 22 & 23"
+    assert 'Derivatives - Mishkin Ch. 24' not in nltttc, "NLTTTC contains inaccurate Mishkin Ch. 24"
     assert 'Dòng tiền đều đầu kỳ (Annuity Due - Mishkin Ch. 4)' in nltttc, "NLTTTC missing Annuity Due"
     assert 'Tam giác bất khả thi' in nltttc, "NLTTTC missing Impossible Trinity"
     assert 'FV = P × (1 + i/n)' in nltttc, "NLTTTC missing Compound interest formula"
