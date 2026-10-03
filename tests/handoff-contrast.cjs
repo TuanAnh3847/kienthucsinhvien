@@ -9,7 +9,7 @@ const rows=readCSV(path.join(evidence,'../checklists/RENDER-COVERAGE-416.csv')).
   if(row.kind==='PRACTICE')await page.locator('#mobile-nav').evaluate((el,label)=>{const id={'Tổng quan':'overview','Theo chương':'chapter','Trắc nghiệm':'quiz','Luyện đề':'practice','Test 20 câu':'quick','Luyện thi':'exam','Câu sai':'mistakes'}[label]||label;const option=[...el.options].find(o=>o.value===id||o.textContent.trim()===label||o.textContent.trim()===label.replace(/^\d+\.\s*/,''));el.value=option.value;el.dispatchEvent(new Event('change',{bubbles:true}))},row.state);
   const record=await page.evaluate(()=>{
    const rgb=s=>(s.match(/[\d.]+/g)||[]).map(Number),lum=c=>c.slice(0,3).reduce((v,x,i)=>{x/=255;return v+[.2126,.7152,.0722][i]*(x<=.04045?x/12.92:((x+.055)/1.055)**2.4)},0),fails=new Map();let tested=0,excluded=0;
-   for(const e of document.querySelectorAll(document.body.classList.contains('edu-home-page')?'body *':'main *,#overview *,#practice-content *')){
+   for(const e of document.querySelectorAll('body *')){
     if(!e.getClientRects().length||e.closest('svg,[aria-hidden=true],.edu-visually-hidden')||![...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim()))continue;
     const style=getComputedStyle(e);if(style.visibility==='hidden'||style.opacity!=='1'||e.closest(':disabled')||/^[\p{Extended_Pictographic}\uFE0F\u200D\s]+$/u.test(e.textContent.trim())){excluded++;continue}
     const fg=rgb(style.color),layers=[];let gradient=false;

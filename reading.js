@@ -5,6 +5,9 @@
         const config = window.EDU_PAGE_CONFIG;
         if (config?.route) document.body.classList.add('edu-route-' + config.route.slice(1));
         const header = document.getElementById('edu-header');
+        const mapLauncher = document.querySelector('.course-map-fab');
+        const headerContainer = header?.querySelector('.edu-subject-header > div');
+        if (mapLauncher && headerContainer) headerContainer.append(mapLauncher);
         const updateOffset = () => document.documentElement.style.setProperty('--edu-visible-header', `${Math.max(0,header?.getBoundingClientRect().bottom || 0)}px`);
         window.addEventListener('scroll', updateOffset, {passive:true});
         window.addEventListener('resize', updateOffset);

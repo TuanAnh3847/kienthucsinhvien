@@ -8,7 +8,8 @@ const rows=readCSV(path.join(root,'docs/edu-connect-handoff-2026-10-03/checklist
 const output=path.join(evidence,'after/render');fs.mkdirSync(output,{recursive:true});
 const shard=process.env.RENDER_SHARD===undefined?null:+process.env.RENDER_SHARD,shards=+(process.env.RENDER_SHARDS||2);
 const resultsFile=path.join(output,shard===null?'results.json':`results-shard-${shard}.json`);
-const previous=process.env.RENDER_FILTER && fs.existsSync(path.join(output,'results.json')) ? JSON.parse(fs.readFileSync(path.join(output,'results.json'),'utf8')).results : [];
+const old=process.env.RENDER_FILTER && fs.existsSync(path.join(output,'results.json')) ? JSON.parse(fs.readFileSync(path.join(output,'results.json'),'utf8')) : null;
+const previous=old ? old.results.map(r=>({...r,tested_source_hashes:r.tested_source_hashes||old.source_hashes})) : [];
 const results=previous.filter(r=>!process.env.RENDER_FILTER.split(',').includes(r.route));
 const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.test(f)||['reading.css','reading.js','edu-header.js','edu-study.js','shared.css'].includes(f)).map(f=>[f,createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex')]));
 (async()=>{
@@ -71,12 +72,12 @@ const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.t
      if(row.kind!=='HOME' && metrics.smallButtons.length)failures.push('buttons below 44px');
      if(p.errors.length)failures.push('runtime errors');
      if(/\$\\(?:to|rightarrow|times)|\$[Wm]\$|�|â€/.test(text))failures.push('raw notation or broken encoding');
-     results.push({coverage_id:row.coverage_id,route:row.route,state:row.state,width:+row.width,height:+row.height,automated_status:failures.length?'FAIL':'PASS',full_body_visual_review:'PENDING',failures,metrics,interactions,capture:captured,errors:[...p.errors],evidence:`evidence/after/render/${screenshot}`});
+     results.push({coverage_id:row.coverage_id,route:row.route,state:row.state,width:+row.width,height:+row.height,tested_source_hashes:sourceHashes,automated_status:failures.length?'FAIL':'PASS',full_body_visual_review:'PENDING',failures,metrics,interactions,capture:captured,errors:[...p.errors],evidence:`evidence/after/render/${screenshot}`});
      console.log([failures.length?'FAIL':'RENDER',row.coverage_id,failures.join(';'),metrics.tiny.length?'small prose:'+metrics.tiny.length:''].filter(Boolean).join(' '));
      await p.locator(section).evaluate(section=>section.querySelectorAll('details').forEach(d=>d.open=false));
     }
    }finally{await p.close();}
-   fs.writeFileSync(resultsFile,JSON.stringify({browser:b.version(),source_hashes:sourceHashes,shard,shards,results},null,2));
+   fs.writeFileSync(resultsFile,JSON.stringify({browser:b.version(),source_hashes:sourceHashes,source_provenance:'Each row records the exact source hashes captured; filtered reruns retain earlier provenance for unaffected rows.',shard,shards,results},null,2));
   }
  }finally{await b.close();}
  if(results.some(r=>r.failures.length))process.exitCode=1;
