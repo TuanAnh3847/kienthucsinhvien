@@ -1,0 +1,20 @@
+THÔNG SỐ TRÌNH BÀY VÀ TIÊU CHÍ ĐỌC BÀI
+
+Vùng ưu tiên: từ heading Chương xuống hết chương/review, gồm bảng, sơ đồ, thẻ lật, calculators và disclosures. Header, navigation, homepage và practice phải đồng bộ về vai trò thị giác.
+Palette: page #F6F9FC; surface #FFFFFF; primary #2563EB; heading #1E40AF; body #1E293B; muted #475569; border #DCE6F0; soft #EFF6FF.
+Chữ thường contrast >=4.5:1, chữ lớn >=3:1; focus và controls rõ. Đo trên surface thực tế. Giữ màu đúng/sai/cảnh báo, nhóm đồ thị, SDGs và mũ đen trong Six Thinking Hats. Không đổi màu hàng loạt.
+
+Prose: 16px, line-height 1.65–1.75, tối đa khoảng 75–78ch cho đoạn dài. Note khoảng 15px, metadata/labels >=13px; homepage descriptions 15–16px.
+Hero 28–34px; chapter 24–28px desktop và 22–24px phone; module 20–22px. Tiêu đề dài wrap, cấp h1/h2/h3 hợp lý. Bảng/sơ đồ có thể full width. Không ép mọi chart label/formula/table bằng 16px nếu phá ý nghĩa, nhưng mọi ngoại lệ phải đọc được và có bằng chứng.
+
+Card: padding 16–24px, radius 12–16px, gap 16–24px, height tự nhiên, min-width:0. Phone một cột cho prose dài; grid phải vừa container lồng. VHDD lesson-section cần hòa hợp outer/inner padding, không thêm hai lần.
+Thẻ lật: hai mặt tham gia sizing, ví dụ cùng grid area; height lấy mặt dài hơn, giữ min-height thoải mái và logic 3D/events/aria. Không dùng fixed height cắt đáp án. Mặt ẩn cần focus/announcement phù hợp.
+
+Navigation: desktop có cue và nút cuộn đủ hit area; phone picker hoặc strip rõ. Mọi chương truy cập được, active/picker đồng bộ, anchor nằm dưới header với khoảng thở. Giữ #nav-menu/data-edu-tab/IDs/onTabChange. Practice picker riêng dưới1280 giữ behavior hiện có.
+Bảng/graphs nhiều cột: wrapper cuộn riêng, caption/cue và header associations; chạm hoặc keyboard tới cột cuối được. Không cuộn ngang cả document, không giấu text bằng overflow:hidden. Không break digit/đơn vị làm đổi nghĩa dữ liệu.
+
+Controls tối thiểu 44x44px hoặc vùng chạm tương đương; input 16px. Focus-visible, keyboard Enter/Space/radio/Escape và touch; reduced motion. Không chỉ dùng hover để truy cập chức năng.
+Sơ đồ phone reflow giữ center/categories/quan hệ/trục/đơn vị/chú giải. Không scale hoặc negative margin khiến chữ nhỏ. Modal có max-height theo viewport/safe area, cuộn trong, focus trap/Escape/trả focus. Sticky actions/FAB không che câu cuối hoặc controls.
+
+Nhãn khối có thể dùng “Mục tiêu chương”, “Khái niệm”, “Ví dụ và sơ đồ”, “Tự luyện”, “Ôn nhanh”, “Lưu ý khi dùng dữ liệu”. Không ép mọi môn cùng số block hoặc đảo thứ tự lý luận.
+Khối thiếu dữ liệu: ghi hạn chế ngắn, không hứa bài tập/đồ thị đầy đủ. Nếu gom, giữ nhãn/ngữ cảnh có nguồn trong details. Minh họa định tính ghi rõ; không tự thêm số, công thức, mũi tên hay đáp án.

@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
+const fixture = fs.readFileSync(path.join(__dirname,'firebase-fixture.js'),'utf8');
 const root = path.resolve(__dirname, '..');
 const hosting = JSON.parse(fs.readFileSync(path.join(root, 'firebase.json'), 'utf8')).hosting;
 const rewrites = hosting.rewrites || [];
@@ -13,6 +14,9 @@ const report = [];
   const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 'msedge', headless: true });
   for (const file of files) {
     const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    await page.addInitScript(()=>window.__fixtureOptions={user:null});
+    await page.route(/https:\/\/www\.gstatic\.com\/firebasejs\/.+\.js/,r=>r.fulfill({contentType:'text/javascript',body:r.request().url().includes('firebase-app-compat')?fixture:''}));
+    await page.route(/firebaseio\.com|firebasedatabase\.app|firestore\.googleapis\.com/,r=>r.abort());
     const errors = [], consoleErrors = [], failedRequests = [];
     page.on('pageerror', e => errors.push(e.message));
     page.on('console', m => { if (m.type() === 'error') consoleErrors.push(m.text()); });
@@ -51,7 +55,7 @@ const report = [];
     const widths = [];
     // Inspect content behind the login overlay without signing into the live backend.
     await page.evaluate(() => document.getElementById('welcome-modal')?.classList.add('hidden'));
-    for (const width of [375,768,1280,1440]) {
+    for (const width of [320,390,375,768,1280,1366,1440]) {
       await page.setViewportSize({ width, height: 900 });
       const states = [];
       for (const chapter of structure.chapters.length ? structure.chapters : ['']) {
@@ -64,7 +68,7 @@ const report = [];
           const visible = el => !!el && el.getBoundingClientRect().width > 0 && el.getBoundingClientRect().height > 0;
           const overflow = [...document.querySelectorAll('body *')].filter(el => { const r=el.getBoundingClientRect(); return visible(el) && r.right > innerWidth+2 && !el.closest('.overflow-x-auto, .scroll-table'); }).slice(0,8).map(el => el.tagName + '#' + el.id + '.' + String(el.className).slice(0,80));
           const wideScroll = [...document.querySelectorAll('body *')].filter(el => visible(el) && el.scrollWidth > el.clientWidth + 2).slice(0,8).map(el => ({el:el.tagName + '#' + el.id + '.' + String(el.className).slice(0,60), clientWidth:el.clientWidth, scrollWidth:el.scrollWidth, overflowX:getComputedStyle(el).overflowX}));
-          return { chapter: window.EduHeader?.activeTab || document.getElementById('mobile-nav')?.value, scrollWidth:document.documentElement.scrollWidth, desktopNav:visible(document.getElementById('nav-menu')), mobileNav:visible(document.getElementById('mobile-nav')), overflow, wideScroll };
+          return { chapter: window.EduHeader?.activeTab || document.getElementById('mobile-nav')?.value, scrollWidth:document.documentElement.scrollWidth, desktopNav:visible(document.getElementById('nav-menu')), mobileNav:visible(document.getElementById('mobile-nav')) || visible(document.getElementById('edu-chapter-picker')), overflow, wideScroll };
         }));
       }
       widths.push({width, states});

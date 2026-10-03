@@ -1,0 +1,1282 @@
+[
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "NhapMonLuatHoc.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "index.html",
+    "before": "</head>",
+    "after": "<link rel=\"stylesheet\" href=\"/reading.css\">\n<script defer src=\"/reading.js\"></script>\n</head>",
+    "count": 1,
+    "issue": "G01-G09/X03/H01",
+    "reason": "Load presentation layer after local styles"
+  },
+  {
+    "file": "index.html",
+    "before": "<body class=\"bg-stone-50 text-slate-800 font-sans antialiased bg-pattern min-h-screen flex flex-col\">",
+    "after": "<body class=\"edu-home-page bg-stone-50 text-slate-800 font-sans antialiased bg-pattern min-h-screen flex flex-col\">",
+    "count": 1,
+    "issue": "H01",
+    "reason": "Scope homepage reading styles"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$W$",
+    "after": "W",
+    "count": 2,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$m'$",
+    "after": "m′",
+    "count": 1,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$\\to$",
+    "after": "→",
+    "count": 1,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$L_{pt} = n \\times L_{gd}$",
+    "after": "L<sub>pt</sub> = n × L<sub>gd</sub>",
+    "count": 1,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$H - T - H$",
+    "after": "H - T - H",
+    "count": 1,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$T - H - T'$",
+    "after": "T - H - T′",
+    "count": 1,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$T' = T + m$",
+    "after": "T′ = T + m",
+    "count": 1,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$m$",
+    "after": "m",
+    "count": 5,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$c$",
+    "after": "c",
+    "count": 3,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$v$",
+    "after": "v",
+    "count": 4,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$V$",
+    "after": "V",
+    "count": 1,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "$\\rightarrow$",
+    "after": "→",
+    "count": 8,
+    "issue": "K01",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "before": "if (text !== undefined) element.textContent = safeText(text);",
+    "after": "if (text !== undefined) element.textContent = typeof text === 'number' && Number.isFinite(text) ? String(text) : safeText(text);",
+    "count": 1,
+    "issue": "X01",
+    "reason": "Convert finite numbers only at display boundary; strict data normalization unchanged"
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "before": "const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);",
+    "after": "const quizQ = new Set(exerciseSets.filter(s => s.mode === 'mcq').flatMap(s => s.questions.map(q => q.id))).size;",
+    "count": 1,
+    "issue": "X02",
+    "reason": "Count unique IDs across overlapping sets"
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "before": "[quizQ, 'câu trắc nghiệm']",
+    "after": "[quizQ, 'câu trắc nghiệm riêng']",
+    "count": 1,
+    "issue": "X02",
+    "reason": "Make count scope explicit"
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "before": "set.duration, 'Gợi ý',",
+    "after": "set.duration, 'Thời gian gợi ý',",
+    "count": 1,
+    "issue": "X02",
+    "reason": "These pilots have suggested duration, no countdown"
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "before": "if (text !== undefined) element.textContent = safeText(text);",
+    "after": "if (text !== undefined) element.textContent = typeof text === 'number' && Number.isFinite(text) ? String(text) : safeText(text);",
+    "count": 1,
+    "issue": "X01",
+    "reason": "Convert finite numbers only at display boundary; strict data normalization unchanged"
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "before": "const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);",
+    "after": "const quizQ = new Set(exerciseSets.filter(s => s.mode === 'mcq').flatMap(s => s.questions.map(q => q.id))).size;",
+    "count": 1,
+    "issue": "X02",
+    "reason": "Count unique IDs across overlapping sets"
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "before": "[quizQ, 'câu trắc nghiệm']",
+    "after": "[quizQ, 'câu trắc nghiệm riêng']",
+    "count": 1,
+    "issue": "X02",
+    "reason": "Make count scope explicit"
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "before": "set.duration, 'Gợi ý',",
+    "after": "set.duration, 'Thời gian gợi ý',",
+    "count": 1,
+    "issue": "X02",
+    "reason": "These pilots have suggested duration, no countdown"
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "before": "if (text !== undefined) element.textContent = safeText(text);",
+    "after": "if (text !== undefined) element.textContent = typeof text === 'number' && Number.isFinite(text) ? String(text) : safeText(text);",
+    "count": 1,
+    "issue": "X01",
+    "reason": "Convert finite numbers only at display boundary; strict data normalization unchanged"
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "before": "const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);",
+    "after": "const quizQ = new Set(exerciseSets.filter(s => s.mode === 'mcq').flatMap(s => s.questions.map(q => q.id))).size;",
+    "count": 1,
+    "issue": "X02",
+    "reason": "Count unique IDs across overlapping sets"
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "before": "[quizQ, 'câu trắc nghiệm']",
+    "after": "[quizQ, 'câu trắc nghiệm riêng']",
+    "count": 1,
+    "issue": "X02",
+    "reason": "Make count scope explicit"
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "before": "set.duration, 'Gợi ý',",
+    "after": "set.duration, 'Thời gian gợi ý',",
+    "count": 1,
+    "issue": "X02",
+    "reason": "These pilots have suggested duration, no countdown"
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "before": "if (text !== undefined) element.textContent = safeText(text);",
+    "after": "if (text !== undefined) element.textContent = typeof text === 'number' && Number.isFinite(text) ? String(text) : safeText(text);",
+    "count": 1,
+    "issue": "X01",
+    "reason": "Convert finite numbers only at display boundary; strict data normalization unchanged"
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "before": "const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);",
+    "after": "const quizQ = new Set(exerciseSets.filter(s => s.mode === 'mcq').flatMap(s => s.questions.map(q => q.id))).size;",
+    "count": 1,
+    "issue": "X02",
+    "reason": "Count unique IDs across overlapping sets"
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "before": "[quizQ, 'câu trắc nghiệm']",
+    "after": "[quizQ, 'câu trắc nghiệm riêng']",
+    "count": 1,
+    "issue": "X02",
+    "reason": "Make count scope explicit"
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "before": "set.duration, 'Gợi ý',",
+    "after": "set.duration, 'Thời gian gợi ý',",
+    "count": 1,
+    "issue": "X02",
+    "reason": "These pilots have suggested duration, no countdown"
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "before": "<div class=\"eyebrow\">Exact cardinality</div><h3>3 tariff types</h3>",
+    "after": "<div class=\"eyebrow\">3 loại thuế quan</div><h3>3 tariff types</h3>",
+    "count": 1,
+    "issue": "Q02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "before": "<div class=\"eyebrow\">Exact cardinality</div><h3>6 primary functions</h3>",
+    "after": "<div class=\"eyebrow\">6 chức năng</div><h3>6 primary functions</h3>",
+    "count": 1,
+    "issue": "Q02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "before": "exact p.31 symbolic layout not safely recovered",
+    "after": "Ký hiệu công thức ở phần này chưa đủ rõ; ôn quy tắc so sánh qua các ví dụ trong Chương 1.",
+    "count": 1,
+    "issue": "Q02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "before": "chỉ xem: exact p.31 notation is chưa đủ dữ liệu. Use semantic rule + verified examples instead.",
+    "after": "Phần ký hiệu chưa đủ rõ để trình bày đầy đủ. Hãy dùng quy tắc bằng lời và các ví dụ trong Chương 1 để ôn tập.",
+    "count": 1,
+    "issue": "Q02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "before": "Reveal từng bước: Given → Method → Kết quả → Concept",
+    "after": "Xem từng bước: Dữ kiện → Cách làm → Kết quả → Khái niệm",
+    "count": 1,
+    "issue": "Q02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "before": "H-O gains from trade — mối quan hệ minh họa schematic",
+    "after": "Lợi ích thương mại theo H-O — sơ đồ minh họa",
+    "count": 1,
+    "issue": "Q02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Structured Các bảng dữ liệu · Chapter 2",
+    "after": "Bảng dữ liệu thực hành · Chương 2",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": ">Snapshot<",
+    "after": ">Tình huống<",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Show structured transaction manifest (33 events; not verbatim reproduction)",
+    "after": "Xem 33 nghiệp vụ trong bài tập",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Statement-presentation Bảng dữ liệu · Chapter 3",
+    "after": "Bảng thực hành trình bày báo cáo · Chương 3",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Other-income Câu hỏi tự luyện data (structured, not verbatim)",
+    "after": "Bài tự luyện về thu nhập khác",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Other-expense Câu hỏi tự luyện data (structured, not verbatim)",
+    "after": "Bài tự luyện về chi phí khác",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Structured financial-statement Các bảng dữ liệu",
+    "after": "Bảng dữ liệu báo cáo tài chính",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "<span class=\"mini-badge badge-emerald\">VERIFIED</span>",
+    "after": "<span class=\"mini-badge badge-emerald\">Công thức</span>",
+    "count": 14,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Chapter 3 title / coverage",
+    "after": "Phạm vi nghiệp vụ Chương 3",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Transaction workflows remain perpetual; periodic is named only.",
+    "after": "Các ví dụ nghiệp vụ dùng phương pháp kê khai thường xuyên; phương pháp kiểm kê định kỳ được giới thiệu ở mức tổng quan.",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Trading Security Cost vs Fee Splitter",
+    "after": "Tách giá mua và phí giao dịch chứng khoán",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Production Cost Flow Mapper",
+    "after": "Xem luồng hạch toán chi phí sản xuất",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "before": "Equity SFP Preview",
+    "after": "Xem cách trình bày vốn chủ sở hữu",
+    "count": 1,
+    "issue": "F02",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "before": "<strong>Code depth:</strong> Cấu trúc mã được giải thích đến chữ số thứ 4.",
+    "after": "<strong>Phạm vi giải thích mã tài khoản:</strong> đến chữ số thứ 4.",
+    "count": 1,
+    "issue": "A03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "before": "So sánh framing, sample và cardinality theo đúng dữ liệu.",
+    "after": "So sánh góc nhìn, mẫu nghiên cứu và số chiều văn hóa của ba mô hình.",
+    "count": 1,
+    "issue": "V04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "before": "Sáu detailed dimensions + low/high cues + exact country-score viewer.",
+    "after": "Khám phá sáu chiều văn hóa, đặc điểm ở hai mức thấp/cao và điểm số theo quốc gia.",
+    "count": 1,
+    "issue": "V04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "before": "<strong>Lưu ý khi đọc sơ đồ:</strong> một số world maps, country scatterplots, bảng Ease of Doing Business 190 nền kinh tế và bảng best regulatory performance có microtext/điểm màu không đủ dữ liệu để tái tạo chính xác. Trang chỉ giữ axes/legend/ý nghĩa hoặc dữ liệu đọc được; không nhập dữ liệu ngoài để “lấp chỗ trống”.",
+    "after": "<strong>Lưu ý khi đọc sơ đồ:</strong> Một số bản đồ, đồ thị quốc gia và bảng xếp hạng chưa đủ chi tiết để đọc điểm hoặc số liệu chính xác. Hãy ôn trục, chú giải, ý nghĩa và các giá trị có sẵn; không suy ra phần còn thiếu.",
+    "count": 1,
+    "issue": "V04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "before": "2×2 matrix + exact four-type summary.",
+    "after": "Ma trận 2×2 và bảng tóm tắt bốn loại văn hóa tổ chức.",
+    "count": 1,
+    "issue": "V04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "before": "Benefits/problems are conditional; six guidelines remain a checklist, not a causal process.",
+    "after": "Lợi ích và hạn chế phụ thuộc bối cảnh. Sáu hướng dẫn dưới đây là các điểm cần cân nhắc.",
+    "count": 1,
+    "issue": "V04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "School visuals — bám sát nội dung bài recreation",
+    "after": "Sơ đồ minh họa các trường phái tâm lý học",
+    "count": 1,
+    "issue": "D04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "Không có separate Ví dụ.",
+    "after": "Phần này giới thiệu phương pháp; chưa có ví dụ riêng.",
+    "count": 1,
+    "issue": "D04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "the blank practice file heading contains “ANSWER KEY” although response blanks are empty; S6 is the separate filled answer key. This is a document-label inconsistency, not an academic-content conflict.",
+    "after": "Hãy phân loại tình huống theo hệ quả và tác động tới hành vi.",
+    "count": 1,
+    "issue": "D04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "Bộ thẻ ôn tập bao quát toàn diện các kiến thức trọng tâm của các chương lý thuyết và bài tập thực hành.",
+    "after": "Ôn các thẻ đang có của Chương 1–4 và phần điều kiện hóa thao tác; dùng bộ lọc để chọn nội dung.",
+    "count": 1,
+    "issue": "D04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "Ambiguous recognition visual — unscored",
+    "after": "Hình ảnh đa nghĩa — tự quan sát, không chấm điểm",
+    "count": 1,
+    "issue": "D04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Exact Balance-Sheet Examples",
+    "after": "Ví dụ bảng cân đối cá nhân",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Exact Cash-Flow Examples",
+    "after": "Ví dụ báo cáo dòng tiền",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Các factor labels cụ thể không được đóng gói thành dữ liệu text đáng tin cậy, nên trang chỉ giữ quan hệ inflow/outflow thay vì tự điền tên yếu tố.",
+    "after": "Phần này thể hiện quan hệ dòng tiền vào và dòng tiền ra; chưa đủ thông tin để nêu từng yếu tố.",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Detailed rows/cells from are not extractable; no plan features or values are invented.",
+    "after": "Chưa đủ chi tiết từng phương án bảo hiểm để so sánh quyền lợi và chi phí.",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Chọn đúng 5 steps from. This is not the ambiguous claims process.",
+    "after": "Sắp xếp năm bước của quy trình quản lý rủi ro.",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Apply Công thức exactly. Coverage factor restricted to 0.80 or 1.00.",
+    "after": "Áp dụng công thức bên trên. Chọn hệ số bảo hiểm 0,80 hoặc 1,00 theo điều kiện của bài.",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Unverified Bài tập minh họa",
+    "after": "Bài tự luyện",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "S8 Credit-Card Case Workspace",
+    "after": "Thực hành tình huống thẻ tín dụng",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Dùng dữ kiện của tình huống để ghi cách làm và kết quả. Bài tập này <strong>không auto-solve</strong> và không gắn “verified answer” cho kết quả người học.",
+    "after": "Bạn tự ghi cách làm và kết quả; hoạt động này chưa chấm đáp án.",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "10 principles: exact cardinality?",
+    "after": "Học phần nêu bao nhiêu nguyên tắc tài chính cá nhân?",
+    "count": 2,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Planning process: exact cardinality?",
+    "after": "Quy trình lập kế hoạch tài chính cá nhân có bao nhiêu bước?",
+    "count": 2,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "bảng thực hành dimension",
+    "after": "chiều phân tích trong bảng thực hành",
+    "count": 2,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "outcome label",
+    "after": "nhãn kết quả",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "Enterprise A / VAT — organizer, không auto-kết luận",
+    "after": "Tự phân tích tình huống Enterprise A về VAT",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "Provisional nội dung giới hạn conclusion?",
+    "after": "Kết luận sơ bộ và căn cứ?",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "with unresolved article reference",
+    "after": "Chưa xác định số điều khoản trong tài liệu đang dùng.",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "Số điều khoản cần được làm rõ",
+    "after": "Chưa xác định số điều khoản.",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "Exact tax data",
+    "after": "Dữ liệu thuế trong ví dụ",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "Tariff quota — exact example",
+    "after": "Ví dụ hạn ngạch thuế quan",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "Exact institution figures",
+    "after": "Cơ cấu và nhiệm kỳ trong mô hình được học",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "Comparison — chỉ dùng dimensions trong course",
+    "after": "So sánh theo các tiêu chí trong học phần",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "before": "Exact direction table",
+    "after": "Bảng chiều tác động tới cầu tài sản",
+    "count": 1,
+    "issue": "B05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "before": "Use exact 8-dimension table in Ch.2.",
+    "after": "Xem bảng so sánh tám tiêu chí ở Chương 2.",
+    "count": 1,
+    "issue": "B05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "before": "Global compact deck",
+    "after": "Thẻ ghi nhớ toàn môn",
+    "count": 1,
+    "issue": "B05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "before": "mục tiêu được ghi là: “Maximing shareholder value”",
+    "after": "mục tiêu: “Maximizing shareholder value”",
+    "count": 1,
+    "issue": "B05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "FPT case — questions only",
+    "after": "Tự thảo luận tình huống FPT",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "Câu hỏi set",
+    "after": "Câu hỏi định hướng",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "Case 2 / 3 BMC Workspace",
+    "after": "Thực hành BMC cho hai tình huống",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "27 Framework Library",
+    "after": "27 khung kiến thức để ôn tập",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "Visual dùng nhãn Motivation / Creative Thinking Skills; prose của course dùng Task motivation / Creative thinking.",
+    "after": "Trong sơ đồ, hai thành phần được ghi là Motivation và Creative Thinking Skills; phần giải thích dùng tên Task motivation và Creative thinking.",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "Thứ tự 1–6 phải được giữ nguyên vì đây là cấu trúc của mô hình.",
+    "after": "Ôn theo thứ tự sáu cấp độ để theo dõi cách mô hình phát triển từ nhớ kiến thức đến tạo ra cái mới.",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "Không trộn visual này với 4 opportunity characteristics của Ch.6.",
+    "after": "Đây là bốn đặc điểm được trình bày ở Chương 7; hãy đối chiếu với mô hình đặc điểm cơ hội ở Chương 6.",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "Bằng chứng theo cách bạn đang xây draft",
+    "after": "Ghi bằng chứng hỗ trợ lập luận của bạn",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "Chọn một trong 5 source topics:",
+    "after": "Chọn một trong năm chủ đề:",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "before": "The diagram links four broad inputs to the",
+    "after": "Sơ đồ liên kết bốn nhóm yếu tố với",
+    "count": 1,
+    "issue": "S05",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "before": "Cardinality checklist",
+    "after": "Số lượng và nhóm kiến thức cần nhớ",
+    "count": 1,
+    "issue": "P04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "before": "State vs IFI — descriptive only",
+    "after": "So sánh vai trò Nhà nước và các tổ chức tài chính quốc tế",
+    "count": 1,
+    "issue": "P04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "before": "17-goal visual",
+    "after": "Sơ đồ 17 mục tiêu",
+    "count": 1,
+    "issue": "P04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "index.html",
+    "before": "Trung Tâm Luyện Đề Thực Chiến",
+    "after": "Luyện tập theo môn",
+    "count": 1,
+    "issue": "H02-H04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "index.html",
+    "before": "Luyện định khoản nợ/có, lập bảng CĐKT, báo cáo P&amp;L và tập hợp chi phí giá thành sản phẩm.",
+    "after": "Trắc nghiệm theo chương và bài tự luận kế toán có lời giải để tự đối chiếu.",
+    "count": 1,
+    "issue": "H02-H04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "index.html",
+    "before": "Trắc Nghiệm Luật Học",
+    "after": "Trắc nghiệm Nhập môn Luật học",
+    "count": 1,
+    "issue": "H02-H04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "index.html",
+    "before": "Bộ đề thi thử phân tích cấu trúc quy phạm pháp luật, xác định loại lỗi vi phạm và hệ thống văn bản pháp luật.",
+    "after": "Luyện thử 20 câu trắc nghiệm nền tảng, gồm 3 bộ theo chương và một đề tổng hợp; chấm điểm và xem giải thích.",
+    "count": 1,
+    "issue": "H02-H04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "index.html",
+    "before": "<span class=\"text-sm font-bold text-stone-500\" aria-disabled=\"true\">Sắp ra mắt</span>",
+    "after": "<a href=\"/NhapMonLuatHoc-LuyenDe\" class=\"inline-flex items-center gap-1.5 text-sm font-bold text-blue-700 hover:underline\">Vào luyện tập &rarr;</a>",
+    "count": 1,
+    "issue": "H02-H04",
+    "reason": "Learner-facing copy; preserve facts and qualifiers"
+  },
+  {
+    "file": "index.html",
+    "before": "    </div>\n</div>\n\n   <!-- Footer -->",
+    "after": "<div class=\"bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col\">\n<div class=\"text-2xl mb-4\">🌐</div><h3 class=\"font-extrabold text-lg text-stone-800 mb-1\">Kinh tế quốc tế</h3>\n<p class=\"text-sm text-stone-600 leading-relaxed mb-4\">Luyện thử 20 câu trắc nghiệm riêng, gồm 4 bộ theo chương và một đề tổng hợp; có chấm điểm, giải thích và thời gian gợi ý.</p>\n<a href=\"/KTQT-LuyenDe\" class=\"inline-flex items-center text-sm font-bold text-blue-700 hover:underline mt-auto\">Vào luyện tập &rarr;</a></div>\n<div class=\"bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col\">\n<div class=\"text-2xl mb-4\">⚖️</div><h3 class=\"font-extrabold text-lg text-stone-800 mb-1\">Luật thương mại quốc tế</h3>\n<p class=\"text-sm text-stone-600 leading-relaxed mb-4\">Luyện thử 20 câu trắc nghiệm riêng, gồm 5 bộ theo chương và một đề tổng hợp; có chấm điểm, giải thích và thời gian gợi ý.</p>\n<a href=\"/LTMQT-LuyenDe\" class=\"inline-flex items-center text-sm font-bold text-blue-700 hover:underline mt-auto\">Vào luyện tập &rarr;</a></div>\n<div class=\"bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col\">\n<div class=\"text-2xl mb-4\">🏦</div><h3 class=\"font-extrabold text-lg text-stone-800 mb-1\">Nguyên lý thị trường tài chính</h3>\n<p class=\"text-sm text-stone-600 leading-relaxed mb-4\">Luyện thử 20 câu trắc nghiệm riêng, gồm 6 bộ theo chương và một đề tổng hợp; có chấm điểm, giải thích và thời gian gợi ý.</p>\n<a href=\"/NLTTTC-LuyenDe\" class=\"inline-flex items-center text-sm font-bold text-blue-700 hover:underline mt-auto\">Vào luyện tập &rarr;</a></div>\n    </div>\n</div>\n\n   <!-- Footer -->",
+    "count": 1,
+    "issue": "H03",
+    "reason": "Add the three existing pilot routes without changing course cards"
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "before": "<strong>Giới hạn tái dựng:</strong> Bố cục Company A/B chưa đủ rõ để ghép chắc chắn từng cột; phần này tập trung vào khái niệm và công thức net cash flow.",
+    "after": "<strong>Lưu ý về ví dụ Company A/B:</strong> chưa đủ thông tin để xác định từng cột. Phần này ôn khái niệm và công thức dòng tiền thuần.",
+    "count": 1,
+    "issue": "A03",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "before": "<strong>Giới hạn dữ liệu:</strong> tiêu chí giá trị TSCĐ theo quy định hiện hành được nhắc nhưng không có ngưỡng số; Nội dung chưa cung cấp threshold.",
+    "after": "<strong>Lưu ý:</strong> Phần này chưa nêu ngưỡng giá trị để phân loại TSCĐ. Không suy ra ngưỡng từ các ví dụ.",
+    "count": 1,
+    "issue": "A03",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<p class=\"text-xs text-slate-500 mt-2\">Câu hỏi uses 100 candles with K=0.08. Any number shown here is calculator output from the verified formula, <strong>not</strong> a worked solution.</p>",
+    "after": "<p class=\"hint\">Ví dụ dùng 100 cây nến và K = 0,08. Máy tính áp dụng ΔI = K × I; kết quả hiển thị không thay thế phần trình bày lời giải.</p>",
+    "count": 1,
+    "issue": "D04",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<strong>Ý chính:</strong> Quan hệ học thuật: visual compares two compounding paths to illustrate timing effects.",
+    "after": "<strong>Minh họa định tính:</strong> Sơ đồ so sánh hai quá trình tích lũy để minh họa tác động của thời điểm đóng góp.",
+    "count": 1,
+    "issue": "T04",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "before": "Pros listed — “CONS?” remains unanswered",
+    "after": "Ưu điểm và câu hỏi tự luyện về hạn chế",
+    "count": 1,
+    "issue": "L03",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "before": "Cấu trúc review 3 phần của implementation.",
+    "after": "Ba phần: thành tựu, hạn chế và giải pháp trong thực hiện SDGs tại Việt Nam.",
+    "count": 1,
+    "issue": "P04",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "before": "<div class=\"text-2xl font-black\">4</div><div class=\"text-xs text-stone-300 font-bold\">bộ luyện thi</div>",
+    "after": "<div class=\"text-2xl font-black\">5</div><div class=\"text-xs text-stone-300 font-bold\">bộ luyện thi</div>",
+    "count": 1,
+    "issue": "X05",
+    "reason": "Match the existing five exam configurations; banks and timer unchanged"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div>\n <h4 class=\"sub-title\">Vietnamese career-field salary-range visual</h4>\n <div class=\"concept-grid\"><div class=\"concept-card\"><h4>IT</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Marketing</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Fashion</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Construction</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Tourism</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Foreign Languages</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Hotel Management</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Electrical/Electronics</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Medicine</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Food Technology</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Real Estate</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Law</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Banking</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Aviation</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div></div>\n <div class=\"status-note\">Bảng chưa có khoảng lương để đối chiếu.</div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Ví dụ khoảng lương theo nghề — chưa đủ số liệu</summary><p>Ví dụ này chưa đủ số liệu để thực hành. Các nhãn gốc được giữ bên dưới để đối chiếu.</p><div>\n <h4 class=\"sub-title\">Vietnamese career-field salary-range visual</h4>\n <div class=\"concept-grid\"><div class=\"concept-card\"><h4>IT</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Marketing</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Fashion</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Construction</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Tourism</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Foreign Languages</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Hotel Management</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Electrical/Electronics</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Medicine</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Food Technology</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Real Estate</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Law</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Banking</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div><div class=\"concept-card\"><h4>Aviation</h4><p class=\"muted\">Chưa có khoảng lương để đối chiếu.</p></div></div>\n <div class=\"status-note\">Bảng chưa có khoảng lương để đối chiếu.</div>\n </div></details>",
+    "count": 1,
+    "issue": "T01-context",
+    "reason": "Collapse incomplete source context; no salary, goals or dates invented"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div>\n <h4 class=\"sub-title\">Career Plans for Harry Johnson</h4>\n <div class=\"timeline\">\n <div class=\"timeline-item\"><strong>Initial</strong><span>Giai đoạn định hướng ban đầu</span></div>\n <div class=\"timeline-item\"><strong>Short-term</strong><span>Chưa có nội dung mục tiêu cụ thể.</span></div>\n <div class=\"timeline-item\"><strong>Medium-term</strong><span>Chưa có nội dung mục tiêu cụ thể.</span></div>\n <div class=\"timeline-item\"><strong>Long-term</strong><span>Chưa có nội dung mục tiêu cụ thể.</span></div>\n </div>\n <div class=\"status-note\">Ví dụ Harry Johnson chưa có đủ nội dung mục tiêu và mốc năm.</div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Kế hoạch nghề nghiệp của Harry Johnson — chưa đủ dữ kiện</summary><p>Ví dụ này chưa đủ số liệu để thực hành. Các nhãn gốc được giữ bên dưới để đối chiếu.</p><div>\n <h4 class=\"sub-title\">Career Plans for Harry Johnson</h4>\n <div class=\"timeline\">\n <div class=\"timeline-item\"><strong>Initial</strong><span>Giai đoạn định hướng ban đầu</span></div>\n <div class=\"timeline-item\"><strong>Short-term</strong><span>Chưa có nội dung mục tiêu cụ thể.</span></div>\n <div class=\"timeline-item\"><strong>Medium-term</strong><span>Chưa có nội dung mục tiêu cụ thể.</span></div>\n <div class=\"timeline-item\"><strong>Long-term</strong><span>Chưa có nội dung mục tiêu cụ thể.</span></div>\n </div>\n <div class=\"status-note\">Ví dụ Harry Johnson chưa có đủ nội dung mục tiêu và mốc năm.</div>\n </div></details>",
+    "count": 1,
+    "issue": "T01-context",
+    "reason": "Collapse incomplete source context; no salary, goals or dates invented"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "Vietnamese career-field salary-range visual",
+    "after": "Khoảng lương theo nhóm nghề",
+    "count": 1,
+    "issue": "T01-context",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"mt-4 limited-visual\">\n <div class=\"limited-icon\">6</div>\n <div>\n <h4>How to buy life insurance — six-position visual</h4>\n <div class=\"concept-grid mt-3\">\n <div class=\"concept-card\"><h4>Unordered consideration</h4><p>Exact label mapping unavailable.</p></div>\n <div class=\"concept-card\"><h4>Unordered consideration</h4><p>Exact label mapping unavailable.</p></div>\n <div class=\"concept-card\"><h4>Unordered consideration</h4><p>Exact label mapping unavailable.</p></div>\n <div class=\"concept-card\"><h4>Unordered consideration</h4><p>Exact label mapping unavailable.</p></div>\n <div class=\"concept-card\"><h4>Unordered consideration</h4><p>Exact label mapping unavailable.</p></div>\n <div class=\"concept-card\"><h4>Unordered consideration</h4><p>Exact label mapping unavailable.</p></div>\n </div>\n <p class=\"mt-3\"><strong>Điểm cần nhớ:</strong> sales commissions can amount to 90 percent of the annual premium.</p>\n <p class=\"muted mt-2\">Các consideration được trình bày theo nhóm; thứ tự chi tiết chưa được xác định.</p>\n </div>\n </div>",
+    "after": "<div class=\"mt-4 limited-visual\">\n \n <div>\n <h4>Các điểm cân nhắc khi mua bảo hiểm nhân thọ</h4>\n <p class=\"status-note\">Chưa đủ thông tin để xác định thứ tự sáu vị trí.</p><div class=\"concept-grid mt-3\">\n \n \n \n \n \n \n </div>\n <p class=\"mt-3\"><strong>Điểm cần nhớ:</strong> sales commissions can amount to 90 percent of the annual premium.</p>\n <p class=\"muted mt-2\">Các consideration được trình bày theo nhóm; thứ tự chi tiết chưa được xác định.</p>\n </div>\n </div>",
+    "count": 1,
+    "issue": "T02",
+    "reason": "Remove six empty repeated slots, preserve supplied considerations and unresolved order"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">◌</div>\n <div>\n <h4>Starting age / $1 million by age 68</h4>\n <p><strong>Ý chính:</strong> Quan hệ minh họa: bắt đầu ở các độ tuổi khác nhau và mức lãi suất khác nhau làm thay đổi khoản đóng góp cần thiết để đạt $1 million ở tuổi 68.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Bảng chưa có số liệu cụ thể về tuổi và khoản đóng góp.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Starting age / $1 million by age 68 — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>Starting age / $1 million by age 68</h4>\n <p><strong>Ý chính:</strong> Quan hệ minh họa: bắt đầu ở các độ tuổi khác nhau và mức lãi suất khác nhau làm thay đổi khoản đóng góp cần thiết để đạt $1 million ở tuổi 68.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Bảng chưa có số liệu cụ thể về tuổi và khoản đóng góp.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">◌</div>\n <div>\n <h4>Decision Making Worksheet</h4>\n <p><strong>Ý chính:</strong> Work-style reflection, values, professional interests và benefits/costs là các trường thông tin tiêu chuẩn để định hướng nghề nghiệp.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Bảng chưa có đầy đủ tiêu chí và thang điểm để tự chấm.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Decision Making Worksheet — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>Decision Making Worksheet</h4>\n <p><strong>Ý chính:</strong> Work-style reflection, values, professional interests và benefits/costs là các trường thông tin tiêu chuẩn để định hướng nghề nghiệp.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Bảng chưa có đầy đủ tiêu chí và thang điểm để tự chấm.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">◌</div>\n <div>\n <h4>Bancassurance product table</h4>\n <p><strong>Ý chính:</strong> Bảng phân biệt life và non-life bancassurance products, đồng thời minh họa quan hệ bank ↔ insurer.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Phần này chưa có danh sách sản phẩm life/non-life để đối chiếu.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Bancassurance product table — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>Bancassurance product table</h4>\n <p><strong>Ý chính:</strong> Bảng phân biệt life và non-life bancassurance products, đồng thời minh họa quan hệ bank ↔ insurer.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Phần này chưa có danh sách sản phẩm life/non-life để đối chiếu.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">◌</div>\n <div>\n <h4>Personal Property Checklist — Living Room</h4>\n <p><strong>Ý chính:</strong> Sơ đồ uses columns for purchase price, actual cash value and replacement cost.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Chưa có chi tiết từng tài sản và giá trị để lập bảng kiểm kê định lượng.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Personal Property Checklist — Living Room — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>Personal Property Checklist — Living Room</h4>\n <p><strong>Ý chính:</strong> Sơ đồ uses columns for purchase price, actual cash value and replacement cost.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Chưa có chi tiết từng tài sản và giá trị để lập bảng kiểm kê định lượng.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">◌</div>\n <div>\n <h4>Basic supplemental group health insurance plans table</h4>\n <p><strong>Ý chính:</strong> Đối chiếu tiêu đề với nhóm tương ứng.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Chưa đủ chi tiết từng phương án bảo hiểm để so sánh quyền lợi và chi phí.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Basic supplemental group health insurance plans table — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>Basic supplemental group health insurance plans table</h4>\n <p><strong>Ý chính:</strong> Đối chiếu tiêu đề với nhóm tương ứng.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Chưa đủ chi tiết từng phương án bảo hiểm để so sánh quyền lợi và chi phí.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">◌</div>\n <div>\n <h4>$100,000 policy annual-premiums table</h4>\n <p><strong>Ý chính:</strong> So sánh phí thường niên giữa các loại bảo hiểm nhân thọ.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Chưa có chi tiết hợp đồng và mức phí để so sánh định lượng.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>$100,000 policy annual-premiums table — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>$100,000 policy annual-premiums table</h4>\n <p><strong>Ý chính:</strong> So sánh phí thường niên giữa các loại bảo hiểm nhân thọ.</p>\n <p class=\"muted\"><strong>Giới hạn dữ liệu:</strong> Chưa có chi tiết hợp đồng và mức phí để so sánh định lượng.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">◌</div>\n <div>\n <h4>Life-insurance odds / numbers table</h4>\n <p><strong>Ý chính:</strong> Minh họa số liệu và xác suất.</p>\n <p class=\"muted\"><strong>Ghi chú:</strong> Tỷ lệ phí và quyền lợi bảo hiểm thực tế phụ thuộc vào độ tuổi, giới tính và gói bảo hiểm.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Life-insurance odds / numbers table — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>Life-insurance odds / numbers table</h4>\n <p><strong>Ý chính:</strong> Minh họa số liệu và xác suất.</p>\n <p class=\"muted\"><strong>Ghi chú:</strong> Tỷ lệ phí và quyền lợi bảo hiểm thực tế phụ thuộc vào độ tuổi, giới tính và gói bảo hiểm.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">Σ</div>\n <div>\n <h4>Second-income worksheet</h4>\n <div class=\"flow mt-2\">\n <div class=\"flow-node\"><strong>Earnings</strong><span>chiều phân tích trong bảng thực hành</span></div>\n <div class=\"flow-node\"><strong>Expenses</strong><span>chiều phân tích trong bảng thực hành</span></div>\n <div class=\"flow-node\"><strong>Net value</strong><span>bảng thực hành nhãn kết quả</span></div>\n </div>\n <p class=\"muted mt-2\">Bảng thực hành chưa có chi tiết từng khoản và số liệu để tính.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>Second-income worksheet — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>Second-income worksheet</h4>\n <div class=\"flow mt-2\">\n <div class=\"flow-node\"><strong>Earnings</strong><span>chiều phân tích trong bảng thực hành</span></div>\n <div class=\"flow-node\"><strong>Expenses</strong><span>chiều phân tích trong bảng thực hành</span></div>\n <div class=\"flow-node\"><strong>Net value</strong><span>bảng thực hành nhãn kết quả</span></div>\n </div>\n <p class=\"muted mt-2\">Bảng thực hành chưa có chi tiết từng khoản và số liệu để tính.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<div class=\"limited-visual\">\n <div class=\"limited-icon\">⇢</div>\n <div>\n <h4>“Buy Term Insurance and Invest the Rest”</h4>\n <div class=\"flow mt-2\">\n <div class=\"flow-node\"><strong>Premium difference</strong><span>Bảng dữ liệu concept</span></div>\n <div class=\"flow-node\"><strong>Invested</strong><span>Bảng dữ liệu relationship</span></div>\n <div class=\"flow-node\"><strong>Estate buildup</strong><span>nhãn kết quả</span></div>\n </div>\n <p class=\"muted mt-2\">Bảng chưa có giá trị cụ thể.</p>\n </div>\n </div>",
+    "after": "<details class=\"edu-incomplete\"><summary>“Buy Term Insurance and Invest the Rest” — chưa đủ dữ liệu để thực hành</summary><p>Phần này chưa có đủ dữ liệu để lập bảng hoặc đọc số liệu định lượng.</p><div class=\"limited-visual\">\n \n <div>\n <h4>“Buy Term Insurance and Invest the Rest”</h4>\n <div class=\"flow mt-2\">\n <div class=\"flow-node\"><strong>Premium difference</strong><span>Bảng dữ liệu concept</span></div>\n <div class=\"flow-node\"><strong>Invested</strong><span>Bảng dữ liệu relationship</span></div>\n <div class=\"flow-node\"><strong>Estate buildup</strong><span>nhãn kết quả</span></div>\n </div>\n <p class=\"muted mt-2\">Bảng chưa có giá trị cụ thể.</p>\n </div>\n </div></details>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Keep all source labels and uncertainty accessible; close incomplete quantitative illustration"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<h4>Hierarchy of Financial Needs</h4>",
+    "after": "<h4>Hierarchy of Financial Needs</h4><p class=\"helper\">Minh họa định tính; chưa dùng để đọc giá trị định lượng.</p>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<h4>Earlier contributions compound longer</h4>",
+    "after": "<h4>Earlier contributions compound longer</h4><p class=\"helper\">Minh họa định tính; chưa dùng để đọc giá trị định lượng.</p>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<h4>Nature of cash-value life insurance</h4>",
+    "after": "<h4>Nature of cash-value life insurance</h4><p class=\"helper\">Minh họa định tính; chưa dùng để đọc giá trị định lượng.</p>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": "<h4>Life-cycle graph</h4>",
+    "after": "<h4>Life-cycle graph</h4><p class=\"helper\">Minh họa định tính; chưa dùng để đọc giá trị định lượng.</p>",
+    "count": 1,
+    "issue": "T03",
+    "reason": "Exact contextual learner-facing substitution"
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "before": "<table><caption></caption><thead><tr><th scope=\"col\">Factors</th><th scope=\"col\">Change of factors</th><th scope=\"col\">Shift in demand curve</th></tr></thead><tbody><tr><td>Wealth</td><td></td><td></td></tr><tr><td>Expected market rate</td><td></td><td></td></tr><tr><td>Expected inflation rate</td><td></td><td></td></tr><tr><td>Relative risk</td><td></td><td></td></tr><tr><td>Relative liquidity</td><td></td><td></td></tr></tbody></table>",
+    "after": "<table><caption></caption><thead><tr><th scope=\"col\">Factors</th><th scope=\"col\">Change of factors</th><th scope=\"col\">Shift in demand curve</th></tr></thead><tbody><tr><td>Wealth</td><td><span class=\"helper\">Chưa có dữ kiện</span></td><td><span class=\"helper\">Chưa có dữ kiện</span></td></tr><tr><td>Expected market rate</td><td><span class=\"helper\">Chưa có dữ kiện</span></td><td><span class=\"helper\">Chưa có dữ kiện</span></td></tr><tr><td>Expected inflation rate</td><td><span class=\"helper\">Chưa có dữ kiện</span></td><td><span class=\"helper\">Chưa có dữ kiện</span></td></tr><tr><td>Relative risk</td><td><span class=\"helper\">Chưa có dữ kiện</span></td><td><span class=\"helper\">Chưa có dữ kiện</span></td></tr><tr><td>Relative liquidity</td><td><span class=\"helper\">Chưa có dữ kiện</span></td><td><span class=\"helper\">Chưa có dữ kiện</span></td></tr></tbody></table>",
+    "count": 1,
+    "issue": "B05",
+    "reason": "Label explicitly empty direction cells without filling arrows or answers"
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "before": "<table><caption></caption><thead><tr><th scope=\"col\">Factors</th><th scope=\"col\">Change of factors</th><th scope=\"col\">Shift in supply curve</th></tr></thead><tbody><tr><td>Investment profitability</td><td></td><td></td></tr><tr><td>Expected inflation rate</td><td></td><td></td></tr><tr><td>Budget deficit</td><td></td><td></td></tr></tbody></table>",
+    "after": "<table><caption></caption><thead><tr><th scope=\"col\">Factors</th><th scope=\"col\">Change of factors</th><th scope=\"col\">Shift in supply curve</th></tr></thead><tbody><tr><td>Investment profitability</td><td><span class=\"helper\">Chưa có dữ kiện</span></td><td><span class=\"helper\">Chưa có dữ kiện</span></td></tr><tr><td>Expected inflation rate</td><td><span class=\"helper\">Chưa có dữ kiện</span></td><td><span class=\"helper\">Chưa có dữ kiện</span></td></tr><tr><td>Budget deficit</td><td><span class=\"helper\">Chưa có dữ kiện</span></td><td><span class=\"helper\">Chưa có dữ kiện</span></td></tr></tbody></table>",
+    "count": 1,
+    "issue": "B05",
+    "reason": "Label explicitly empty direction cells without filling arrows or answers"
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "before": "Tiền cần thiết $M$ =",
+    "after": "Tiền cần thiết M =",
+    "count": 1,
+    "issue": "K01",
+    "reason": "Remaining monetary-calculator symbol; only output formatting, arithmetic unchanged"
+  },
+  {
+    "file": "index.html",
+    "before": "<div class=\"max-w-[1200px] mx-auto px-4 mb-16\">",
+    "after": "<div id=\"practice-courses\" class=\"max-w-[1200px] mx-auto px-4 mb-16\">",
+    "count": 1,
+    "issue": "H01/H03",
+    "reason": "Scope practice-card typography; preserve all existing course cards"
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "before": "<div class=\"section-kicker\">Recall</div>",
+    "after": "<div class=\"section-kicker\">Ôn nhanh</div>",
+    "count": 5,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<div class=\"learn-kicker\">Understand</div>",
+    "after": "<div class=\"learn-kicker\">Khái niệm</div>",
+    "count": 12,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<div class=\"learn-kicker\">See</div>",
+    "after": "<div class=\"learn-kicker\">Ví dụ và sơ đồ</div>",
+    "count": 8,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<div class=\"learn-kicker\">Compare</div>",
+    "after": "<div class=\"learn-kicker\">So sánh</div>",
+    "count": 4,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<div class=\"learn-kicker\">Apply</div>",
+    "after": "<div class=\"learn-kicker\">Tự luyện</div>",
+    "count": 6,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<div class=\"learn-kicker\">Recall</div>",
+    "after": "<div class=\"learn-kicker\">Ôn nhanh</div>",
+    "count": 7,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<div class=\"learn-kicker\">Understand + Apply</div>",
+    "after": "<div class=\"learn-kicker\">Khái niệm và tự luyện</div>",
+    "count": 1,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<div class=\"learn-kicker\">See + Apply</div>",
+    "after": "<div class=\"learn-kicker\">Ví dụ và tự luyện</div>",
+    "count": 3,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "before": "<div class=\"learn-kicker\">Map</div>",
+    "after": "<div class=\"learn-kicker\">Sơ đồ ôn tập</div>",
+    "count": 1,
+    "issue": "CP061-labels",
+    "reason": "Translate interface role label only; academic English, order and tool logic preserved"
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "before": " \n",
+    "after": "\n",
+    "count": 16,
+    "issue": "FZ02-whitespace",
+    "reason": "Remove whitespace-only lines introduced by collapsing incomplete illustrations; no visible or academic change."
+  }
+]

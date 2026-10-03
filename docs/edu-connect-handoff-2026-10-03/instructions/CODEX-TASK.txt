@@ -1,0 +1,18 @@
+IMPLEMENT TOÀN BỘ GÓI EDU CONNECT VÀ KIỂM THỬ TỚI KHI NGHIỆM THU
+
+Mục tiêu: sinh viên đọc bài dễ hơn trên desktop và điện thoại. Chữ Việt/English rõ, tiêu đề cùng cấp đồng bộ, card vừa nội dung, mọi chương dễ tìm, kiến thức trình bày có trật tự; không lộ lời tác giả/tool/code, không làm khối thiếu dữ liệu trông như ví dụ đầy đủ.
+Người dùng đã đồng ý các vấn đề được nêu và yêu cầu một kế hoạch cùng checklist trong ZIP để Codex triển khai. Gói này là plan và bằng chứng trước sửa, chưa phải website đã sửa.
+
+Repo: https://github.com/TuanAnh3847/kienthucsinhvien
+Production: https://kienthucsinhvien.id.vn/
+Baseline audit: 5b0e619fb6838363a79dcb2966a6c138375a59ec
+Làm trên nhánh riêng. Ghi actual implementation base. Nếu upstream có thay đổi, đối chiếu và giữ phần mới; không reset/xóa work người khác.
+
+Đọc theo START-HERE và thực hiện đủ 66 issue sửa/kiểm/guard, 79 dòng copy review; không chỉ làm ba lỗi P1. Phạm vi: homepage, 12 môn/82 tab, 6 route luyện tập/21 mode. Vùng ưu tiên là từ heading Chương xuống hết bài; header, navigation và practice cũng nằm trong scope.
+OBSERVED_DESKTOP đã thấy trên web. SOURCE_RISK cần tái hiện. DRAFT_REGRESSION_RISK thuộc nháp chưa áp. VERIFIED_NO_FIX chỉ dùng cho risk khi actual UI đã đạt spec và có ảnh/viewport/rationale.
+
+Được sửa: HTML/CSS trình bày, navigation visual/offset, numeric renderers, formatting output, exact copy/hướng dẫn/nhãn/aria, TOC và reflow/sơ đồ tương đương giữ ý nghĩa. Từng copy edit ghi before/after; giữ mức bất định khi nguồn thiếu.
+Giữ số liệu, công thức, phép tính, định khoản, model, vụ án/điều khoản, question IDs/stems/options/answers/explanations, chapter IDs/thứ tự, input constraints, auth/Firebase/routes/scoring/timer/storage. Không thêm kiến thức hoặc tự cập nhật luật/chuẩn kế toán trong pass UI. Không bỏ NLKT hay môn nào.
+
+Đã quan sát đủ 82 tab/21 mode trên desktop 1363x936. Mobile/zoom/grading/expiry chưa nghiệm thu. Source review không tính mobile PASS. Dùng preview và fixtures cô lập; không ghi điểm thử lên production. Tái hiện → sửa → render → thử tương tác → đối chiếu → ghi bằng chứng; lặp tới khi đạt.
+Kết thúc bằng commit/draft PR review được, checklist đã điền và báo cáo. Thiếu gate bắt buộc thì báo PARTIAL_WITH_BLOCKERS. Không merge main hoặc deploy production; bước phát hành cần chấp thuận riêng.

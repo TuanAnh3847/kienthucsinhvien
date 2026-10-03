@@ -1,0 +1,13 @@
+PASS / [] visible scan candidates: 0
+PASS /KTTC [] visible scan candidates: 0
+PASS /KTQT [] visible scan candidates: 16
+PASS /KTCTMLN [] visible scan candidates: 0
+PASS /LTMQT [] visible scan candidates: 0
+PASS /NLKT [] visible scan candidates: 0
+PASS /NLTTTC [{"width":320,"groups":16,"grids":4},{"width":390,"groups":16,"grids":4},{"width":375,"groups":16,"grids":4},{"width":768,"groups":16,"grids":4},{"width":1366,"groups":16,"grids":4},{"width":1440,"groups":16,"grids":4}] visible scan candidates: 0
+PASS /NMLH [] visible scan candidates: 0
+PASS /PTBV [{"width":320,"groups":59,"grids":7},{"width":390,"groups":59,"grids":7},{"width":375,"groups":59,"grids":7},{"width":768,"groups":59,"grids":7},{"width":1366,"groups":59,"grids":7},{"width":1440,"groups":59,"grids":7}] visible scan candidates: 0
+PASS /STKN [] visible scan candidates: 0
+PASS /TCCN [] visible scan candidates: 1
+PASS /TLUD [] visible scan candidates: 0
+PASS /VHDDTKD [{"width":320,"groups":6,"grids":0},{"width":390,"groups":6,"grids":0},{"width":375,"groups":6,"grids":0},{"width":768,"groups":6,"grids":0},{"width":1366,"groups":6,"grids":0},{"width":1440,"groups":6,"grids":0}] visible scan candidates: 0

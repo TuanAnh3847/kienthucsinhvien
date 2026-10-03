@@ -1,0 +1,110 @@
+EDU CONNECT — RÀ SOÁT COPY HƯỚNG NGƯỜI HỌC / HANDOFF
+Baseline duy nhất: 5b0e619fb6838363a79dcb2966a6c138375a59ec.
+Đọc bằng git show; bỏ qua working tree có chỉnh sửa. Không sửa source, commit, push. Đây là kiểm tra copy/tổ chức nội dung từ source; không chứng nhận nội dung học thuật, pháp luật hoặc tài chính đúng/hiện hành.
+
+PHẠM VI VÀ QUY TẮC TRIỂN KHAI
+Đã rà văn bản trong thân chương và các tab ôn tập của cả 12 trang lý thuyết, không chỉ heading. Có ba loại:
+- D: copy nội bộ còn lộ ra (reconstruction, exact/cardinality, file S6/S8, verified, manifest, structured/not verbatim).
+- U: giới hạn dữ liệu/nguồn thật. Đổi cách nói cho người học dễ hiểu, giữ nguyên mức độ bất định. Không tự điền số liệu, ghép cột, đánh dấu lời giải đã xác minh hay lặng lẽ bỏ cảnh báo.
+- O: tên khối/điều hướng chưa rõ. Chỉ đổi nhãn hoặc nhóm khối hiện có; giữ thứ tự học, công thức, số liệu, điều khoản, đáp án và tập câu hỏi.
+Không coi toàn bộ tiếng Anh là scaffolding: tên học thuyết, thuật ngữ, ký hiệu, tên vụ án, trích dẫn và đề bài tiếng Anh là nội dung học thuật hợp lệ. Không thay hàng loạt theo regex.
+
+1. KINH_TE_QUOC_TE.html
+- D, Ch3: hai badge “Exact cardinality” dưới “3 tariff types” và “6 primary functions” → “3 loại thuế quan” / “6 chức năng”. Giữ nguyên các nhóm và số lượng.
+- D/U, Global Review / Theory & instrument map: “exact p.31 symbolic layout not safely recovered” → “Ký hiệu công thức ở phần này chưa đủ rõ; ôn quy tắc so sánh qua các ví dụ trong Chương 1.”
+- D/U, Global Review / Comparative-advantage ratio block: “chỉ xem: exact p.31 notation is chưa đủ dữ liệu. Use semantic rule + verified examples instead.” → “Phần ký hiệu chưa đủ rõ để trình bày đầy đủ. Hãy dùng quy tắc bằng lời và các ví dụ trong Chương 1 để ôn tập.” Không phục dựng lại công thức.
+- O, Ch1: “Reveal từng bước: Given → Method → Kết quả → Concept” → “Xem từng bước: Dữ kiện → Cách làm → Kết quả → Khái niệm”. Không thay dữ kiện hoặc kết quả phía dưới.
+- O, Ch2: “H-O gains from trade — mối quan hệ minh họa schematic” → “Lợi ích thương mại theo H-O — sơ đồ minh họa”. “Schematic” mô tả loại sơ đồ, không phải tên học thuyết.
+- U cần giữ: tên ghép Modern / Standard và caveat về Britain/America theo đơn vị hiện vật, phần giá yếu tố chưa có lời giải; không xóa chỉ vì có chữ “chưa”. Global Review hiện nêu rõ chỉ tập trung Ch1–4: giữ hạn chế này, không gọi là ôn đủ 6 chương.
+
+2. KE_TOAN_TAI_CHINH.html
+- D/O, Ch2: “Structured Các bảng dữ liệu · Chapter 2” → “Bảng dữ liệu thực hành · Chương 2”; trong bảng tương ứng “Snapshot” → “Tình huống”. Giữ các ô trống và mọi giá trị.
+- D, Ch3 / Bộ dữ liệu nghiệp vụ để đối chiếu: “Show structured transaction manifest (33 events; not verbatim reproduction)” → “Xem 33 nghiệp vụ trong bài tập”. Không thay danh sách 33 nghiệp vụ.
+- D/O, Ch3: “Statement-presentation Bảng dữ liệu · Chapter 3” → “Bảng thực hành trình bày báo cáo · Chương 3”.
+- D, Ch4 / Dữ liệu thực hành: “Other-income Câu hỏi tự luyện data (structured, not verbatim)” → “Bài tự luyện về thu nhập khác”; “Other-expense Câu hỏi tự luyện data (structured, not verbatim)” → “Bài tự luyện về chi phí khác”.
+- D/O, Ch6: “Structured financial-statement Các bảng dữ liệu” → “Bảng dữ liệu báo cáo tài chính”. Giữ dòng “Ô trống thể hiện dữ kiện chưa có.”
+- D, Ôn tập toàn môn / Formula & Method Deck: 14 badge “VERIFIED” → “Công thức” (hoặc bỏ badge). Đây là nhãn quy trình kiểm duyệt lộ ra, không phải kiến thức; không đổi công thức phía dưới.
+- D/O, cuối Ôn tập toàn môn: “Chapter 3 title / coverage” → “Phạm vi nghiệp vụ Chương 3”; “Transaction workflows remain perpetual; periodic is named only.” → “Các ví dụ nghiệp vụ dùng phương pháp kê khai thường xuyên; phương pháp kiểm kê định kỳ được giới thiệu ở mức tổng quan.”
+- O toàn trang: nhóm rõ “Khái niệm và tài khoản”, “Sơ đồ hạch toán”, “Dữ liệu thực hành”, “Ôn nhanh”, bằng nhãn khối hiện có; các công cụ “Splitter/Mapper/Preview” nên có tên thao tác tiếng Việt phía trước. Không trộn chúng với lời giải đã chấm.
+- U cần giữ: bài tự luyện chưa có lời giải, bảng inventory chưa tính tự động, treasury shares yêu cầu người học nhập giá trị ghi sổ, giới hạn mã P&L 01–60. Không dùng thay copy để quảng bá công cụ rộng hơn khả năng hiện tại.
+
+3. NGUYEN_LY_KE_TOAN.html
+- D/U, Ch2 / Cash Flow Statement & Notes: “Giới hạn tái dựng: Bố cục Company A/B chưa đủ rõ để ghép chắc chắn từng cột; phần này tập trung vào khái niệm và công thức net cash flow.” → “Lưu ý về ví dụ Company A/B: chưa đủ thông tin để xác định từng cột. Phần này ôn khái niệm và công thức dòng tiền thuần.”
+- D/U, Ch6: “Giới hạn dữ liệu: tiêu chí giá trị TSCĐ theo quy định hiện hành được nhắc nhưng không có ngưỡng số; Nội dung chưa cung cấp threshold.” → “Phần này chưa nêu ngưỡng giá trị để phân loại TSCĐ. Không suy ra ngưỡng từ các ví dụ.” Không tự bổ sung ngưỡng pháp lý.
+- O, Chart of Accounts Lookup: “Code depth: Cấu trúc mã được giải thích đến chữ số thứ 4...” → “Phạm vi giải thích mã tài khoản: đến chữ số thứ 4...”; giữ nguyên phần không suy rộng sang vị trí 5/6.
+- U cần giữ: tên 112 có hai cách gọi/tài liệu tham chiếu khác nhau; bảng tỷ lệ là dữ liệu bài tập, chưa xác nhận hiệu lực hiện tại; ngày vận chuyển Sep 19 vs 18/9. Có thể gom thành hộp “Lưu ý khi dùng ví dụ”, không tự chọn một bên.
+
+4. VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html
+- D/O, Ch2 / Three cultural models: “So sánh framing, sample và cardinality theo đúng dữ liệu.” → “So sánh góc nhìn, mẫu nghiên cứu và số chiều văn hóa của ba mô hình.”
+- D/O, Ch2 / Hofstede dimension explorer: “Sáu detailed dimensions + low/high cues + exact country-score viewer.” → “Khám phá sáu chiều văn hóa, đặc điểm ở hai mức thấp/cao và điểm số theo quốc gia.” Giữ nguyên bảng điểm.
+- D/U, cuối Ch2: đoạn bắt đầu “Lưu ý khi đọc sơ đồ: một số world maps, country scatterplots...” và kết “không nhập dữ liệu ngoài để ‘lấp chỗ trống’.” → “Một số bản đồ, đồ thị quốc gia và bảng xếp hạng chưa đủ chi tiết để đọc điểm hoặc số liệu chính xác. Hãy ôn trục, chú giải, ý nghĩa và các giá trị có sẵn; không suy ra phần còn thiếu.” Vẫn lưu mô tả nguồn gốc trong tài liệu nội bộ nếu cần.
+- D/O, Ch3 / Four corporate cultures: “2×2 matrix + exact four-type summary.” → “Ma trận 2×2 và bảng tóm tắt bốn loại văn hóa tổ chức.”
+- O, Ch3 / Cultural diversity: “Benefits/problems are conditional; six guidelines remain a checklist, not a causal process.” → “Lợi ích và hạn chế phụ thuộc bối cảnh. Sáu hướng dẫn dưới đây là các điểm cần cân nhắc.” Giữ tính không tuyến tính, không vẽ lại thành quy trình nhân quả.
+- U cần giữ: Toyota có ba giá trị tổng 90%; lịch sử Hofstede 4→5→6 và hai bối cảnh; cảnh báo không khái quát quốc gia từ tình huống minh họa. Đây không phải rác nội bộ.
+
+5. TAM_LY_UNG_DUNG.html
+- D, Ch1: “School visuals — bám sát nội dung bài recreation” → “Sơ đồ minh họa các trường phái tâm lý học”.
+- D/U, Ch1 / Research methods: “Không có separate Ví dụ.” → “Phần này giới thiệu phương pháp; chưa có ví dụ riêng.”
+- D/U, Ch2 / Weber calculator: “Câu hỏi uses 100 candles with K=0.08. Any number shown here is calculator output from the verified formula, not a worked solution.” → “Ví dụ dùng 100 cây nến và K = 0,08. Máy tính áp dụng ΔI = K × I; kết quả hiển thị không thay thế phần trình bày lời giải.” Giữ công thức và tham số.
+- D, Ch7 / 2×2 operant matrix: đoạn “the blank practice file heading contains ‘ANSWER KEY’ ... S6 ... document-label inconsistency, not an academic-content conflict.” chỉ là nhận xét file nguồn. Đưa ra khỏi thân bài; hướng dẫn thay thế “Hãy xác định tình huống trước khi xem đáp án ở phần luyện tập.” Nếu giao diện chưa có xem đáp án, bỏ câu thay thế này và chỉ giữ hướng dẫn phân loại.
+- O/U, Review / Master Flashcard Deck: bộ lọc có Ch1–4 + Supplement Operant, thiếu Ch5–6. Chuỗi “Bộ thẻ ôn tập bao quát toàn diện các kiến thức trọng tâm của các chương lý thuyết và bài tập thực hành.” đang hứa quá phạm vi. → “Ôn các thẻ đang có của Chương 1–4 và phần điều kiện hóa thao tác; dùng bộ lọc để chọn nội dung.” Không tạo thẻ Ch5–6 trong pass copy.
+- U cần giữ: ví dụ S.F. có 3493 / ‘...2 seconds’ / 3492; các cột hình ảnh chỉ tương quan, đường cong quên không dùng đọc số tuyệt đối; taste illustration không chứng minh mỗi vùng lưỡi chỉ nhận một vị; Biological Foundation chỉ có sáu tên.
+
+6. TAI_CHINH_CA_NHAN.html
+- D/O, Ch4: “Exact Balance-Sheet Examples” → “Ví dụ bảng cân đối cá nhân”; “Exact Cash-Flow Examples” → “Ví dụ báo cáo dòng tiền”. Giữ dữ liệu minh họa và đơn vị.
+- D/U, Ch4: “Các factor labels cụ thể không được đóng gói thành dữ liệu text đáng tin cậy...” → “Phần này thể hiện quan hệ dòng tiền vào và dòng tiền ra; chưa đủ thông tin để nêu từng yếu tố.”
+- D/O, Ch4: “Ý chính: Quan hệ học thuật: visual compares two compounding paths to illustrate timing effects.” → “Sơ đồ so sánh hai quá trình tích lũy để minh họa tác động của thời điểm đóng góp.” Không tính lại các bảng từ công thức FV đơn lẻ.
+- D/U, Ch5 / health plan: “Detailed rows/cells from are not extractable; no plan features or values are invented.” → “Chưa đủ chi tiết từng phương án bảo hiểm để so sánh quyền lợi và chi phí.” Giữ bốn câu hỏi độc lập, không ghép A/B/C/D khi thiếu nguồn.
+- D, Ch5 / Risk-Management Step Ordering: “Chọn đúng 5 steps from. This is not the ambiguous claims process.” → “Sắp xếp năm bước của quy trình quản lý rủi ro.” Không đụng các bước.
+- D/O, Ch5 / Homeowner Reimbursement Calculator: “Apply Công thức exactly. Coverage factor restricted to 0.80 or 1.00.” → “Áp dụng công thức bên trên. Chọn hệ số bảo hiểm 0,80 hoặc 1,00 theo điều kiện của bài.”
+- D, Ch6: “Unverified Bài tập minh họa” → “Bài tự luyện”; “S8 Credit-Card Case Workspace” → “Thực hành tình huống thẻ tín dụng”; “không auto-solve ... không gắn ‘verified answer’” → “Bạn tự ghi cách làm và kết quả; hoạt động này chưa chấm đáp án.” Giữ nhãn “chưa có lời giải mẫu”.
+- D/O, Review flashcards: “10 principles: exact cardinality?” → “Học phần nêu bao nhiêu nguyên tắc tài chính cá nhân?”; “Planning process: exact cardinality?” → “Quy trình lập kế hoạch tài chính cá nhân có bao nhiêu bước?” Đổi cả aria-label tương ứng, giữ đáp án 10 và 5.
+- O/U, Ch2 “Vietnamese career-field salary-range visual”: 14 thẻ nghề đều lặp “Chưa có khoảng lương để đối chiếu.”; “Career Plans for Harry Johnson” lặp ba mục “Chưa có nội dung mục tiêu cụ thể.”; “Second-income worksheet” có “bảng thực hành dimension/outcome label”. Không hiển thị như ví dụ hoàn chỉnh. Gom mỗi khối rỗng thành một thông báo nhỏ “Ví dụ này chưa đủ số liệu để thực hành.” hoặc đưa vào một details đóng mặc định. Giữ nhãn/ngữ cảnh có nguồn, không thêm số lương/mục tiêu/công thức mới.
+- O/U, Ch5 “How to buy life insurance — six-position visual”: sáu thẻ giống nhau “Unordered consideration / Exact label mapping unavailable.” không mang thông tin học. Gom thành “Các điểm cân nhắc khi mua bảo hiểm nhân thọ; chưa đủ thông tin để xác định thứ tự sáu vị trí.” và trình bày các consideration đã có như danh sách không đánh số. Giữ ghi chú chưa xác định thứ tự; không ghép lại sáu nhãn.
+- O/U, Ch1/4/5 còn nhiều khối chỉ có title + “Ý chính” + giới hạn không có dữ liệu (age/contribution, premiums table, insurance odds, life-cycle). Đóng gọn những khối thật sự rỗng, không để ◌/mũi tên và tên đồ thị làm người học tưởng có biểu đồ để đọc. Các đồ thị có ý nghĩa định tính phải giữ nhãn “minh họa định tính”.
+- U cần giữ: ngưỡng “Less than 2.5...” chưa gắn chắc một tỷ số; IRR chưa đủ điều kiện/công cụ; claims Step 2/3 chưa xác định; câu hỏi Michelle/Jason chưa có lời giải. Không “làm sạch copy” bằng cách khẳng định một đáp án.
+
+7. LUAT_THUONG_MAI_QUOC_TE.html
+- D/O, Ch3 / Enterprise A–VAT: “Enterprise A / VAT — organizer, không auto-kết luận” → “Tự phân tích tình huống Enterprise A về VAT”; prompt “Provisional nội dung giới hạn conclusion?” → “Kết luận sơ bộ và căn cứ?”. Giữ nguyên các câu hỏi phân tích, thuế suất và lời nhắc chưa có kết luận mẫu.
+- D/U, Ch4 / Exemptions, application principles, licensing: “with unresolved article reference” → “Chưa xác định số điều khoản trong tài liệu đang dùng.”; “Số điều khoản cần được làm rõ” → “Chưa xác định số điều khoản.” Giữ caveat sát đoạn liên quan; không tra rồi chèn số điều trong pass trình bày.
+- O, “Exact tax data”, “Tariff quota — exact example”, “Exact institution figures” → “Dữ liệu thuế trong ví dụ”, “Ví dụ hạn ngạch thuế quan”, “Cơ cấu và nhiệm kỳ trong mô hình được học”. Không sửa số, năm, thuế suất, điều khoản hay tình trạng cơ quan từ audit copy.
+- U cần giữ: ví dụ chưa có lời giải, kết luận vụ việc theo phạm vi bài học, thuế suất có thể không hiện hành. Tên án lệ và legal English là nội dung học thuật, không xóa.
+
+8. NGUYEN_LY_THI_TRUONG_TAI_CHINH.html
+- D/O, Ch4: “Exact direction table” → “Bảng chiều tác động tới cầu tài sản”.
+- D/O, Theory Review: “Use exact 8-dimension table in Ch.2.” → “Xem bảng so sánh tám tiêu chí ở Chương 2.” Giữ đúng bảng hiện có.
+- O/U, Ch5: “Bảng dịch chuyển cầu — một số ô chưa đủ dữ kiện” và “Bảng dịch chuyển cung — một số ô chưa đủ dữ kiện” đang có cột yếu tố nhưng cột change/shift trống. Giữ nhãn giới hạn; có thể đóng bảng vào details “Các yếu tố được nêu trong bài” và đánh dấu ô trống “Chưa có dữ kiện”. Không dùng chúng làm quiz có chấm hay tự điền chiều mũi tên. Ch6 bảng yếu tố dài hạn cũng cần giữ sự bất định.
+- D/O, Ch1: “mục tiêu được ghi là: ‘Maximing shareholder value’” có lỗi đánh máy và giọng chép nguồn. Có thể sửa spelling “Maximizing shareholder value” nhưng chỉ sau khi kiểm tra nguyên văn/guard; không mở rộng thành chuẩn mực tài chính mới.
+
+9. SANG_TAO_KHOI_NGHIEP.html
+- D/O, Ch7: “FPT case — questions only” → “Tự thảo luận tình huống FPT”; “Câu hỏi set” → “Câu hỏi định hướng”. Giữ tính câu hỏi mở, không thêm đáp án.
+- O, Ch7: “Case 2 / 3 BMC Workspace” → “Thực hành BMC cho hai tình huống”; “27 Framework Library” → “27 khung kiến thức để ôn tập”. Không xóa con số/mô hình.
+- O, giải thích rời rạc “Visual dùng nhãn ... prose của course dùng ...”, “The diagram ...”, “Ch.7 visual ...” → dùng “Trong sơ đồ...” / “Trong phần giải thích...” / “Sơ đồ Chương 7...”. Đây là hai cách diễn đạt hoặc mô hình khác nhau, cần giữ sự phân biệt, không gộp 4 và 5 bước sáng tạo hay BMC 9 blocks với Barringer/Ireland 4 sections.
+- U cần giữ: Myth/Facts chỉ là tình huống thảo luận, không phải hồ sơ tiểu sử đã kiểm chứng; bài FPT, interview, BMC mở không có đáp án mẫu. Phần học Lean có MVP/test/review là nội dung môn học thật, không phải scaffolding kỹ thuật.
+
+10. PHAT_TRIEN_BEN_VUNG.html
+- D/O, Review: “Cardinality checklist” → “Số lượng và nhóm kiến thức cần nhớ”. Giữ các nhóm 5/4/8, 5 goals, 3 pillars, 5 principles...; không gộp chúng.
+- O, Ch5 flashcard: “Ghi nhớ Cấu trúc review 3 phần của implementation.” → “Ghi nhớ ba phần: thành tựu, hạn chế và giải pháp trong thực hiện SDGs tại Việt Nam.” Đây là nhãn ba phần đang có ngay trong chương.
+- O, “State vs IFI — descriptive only” → “So sánh vai trò Nhà nước và các tổ chức tài chính quốc tế”; “17-goal visual” → “Sơ đồ 17 mục tiêu”. Giữ mô tả thay vì biến thành xếp hạng định lượng.
+- U cần giữ: giao thông xanh là ví dụ không đại diện toàn bộ chương trình, phát triển bền vững không đi theo một chuỗi Crisis→Conflict→Compromise tuyến tính. Không coi “chưa bền vững”, “nguồn lực” hay “coverage >92%” trong nội dung là placeholder; đó là nhận định/số liệu học thuật chưa được audit tính đúng.
+
+11. NhapMonLuatHoc.html và 12. KinhTeChinhTriMacLeNin.html
+Không thấy lộ reconstruction/manifest/verified/source-file metadata trong thân chương như các trang trên. Có “PREMIUM”/đăng nhập và tên thuật ngữ song ngữ: đó là chức năng/thuật ngữ, không xóa như scaffolding. Có thể thống nhất nhãn ôn tập và dấu câu ở pass biên tập, nhưng không cập nhật luật, đổi phân loại hay xác nhận tính đúng của các câu khái quát.
+
+TỔ CHỨC TOÀN 12 MÔN
+Dùng một cấu trúc nhãn dễ đọc trên những khối sẵn có: “Mục tiêu chương”, “Khái niệm”, “Ví dụ và sơ đồ”, “Tự luyện”, “Ôn nhanh”, “Lưu ý khi dùng dữ liệu”. Không buộc mọi môn thành cùng số block; không thay thứ tự lý luận. Các nhãn See/Understand/Try/Recall/Map/Compact deck và tên công cụ nên có bản tiếng Việt nhất quán. Tách nội dung có số liệu/công thức khỏi hướng dẫn thao tác và giới hạn nguồn để người học thấy rõ họ đang đọc gì. Điều này khác với dịch/xóa mọi đoạn tiếng Anh.
+
+HOMEPAGE — KHẢ NĂNG LUYỆN TẬP TRONG SOURCE
+firebase.json có cleanUrls:true; sáu route có file, data và handler. Chưa xác minh trạng thái deploy.
+- /TCCN-LuyenDe: luyện theo chương, nhanh 20 câu, đề countdown/tự nộp, giải thích, ôn sai; homepage link đúng.
+- /NguyenLyKeToan-LuyenDe: 6 bộ MCQ + 3 bài tự luận có lời giải bật/tắt; homepage link đúng. Không có ô nộp hay chấm tự luận tự động.
+- /NhapMonLuatHoc-LuyenDe: 3 bộ theo chương + quiz 20 câu, chấm và giải thích. index.html card “Trắc Nghiệm Luật Học” vẫn có aria-disabled=true / “Sắp ra mắt”. Đổi “Trắc nghiệm Nhập môn Luật học”, “Có bài luyện”, CTA “Vào luyện tập →” tới route này; đây là availability stale, không phải thiếu câu hỏi.
+- /KTQT-LuyenDe: 4 bộ theo chương + quiz 20 câu. /LTMQT-LuyenDe: 5 bộ + quiz 20 câu. /NLTTTC-LuyenDe: 6 bộ + quiz 20 câu. Chưa có card homepage; edu-study.js đã nối cả ba route và NMLH với lý thuyết qua “Luyện đề và tự kiểm tra →”. Có thể thêm ba card đúng dữ liệu hiện tại; không ghi đang phát triển.
+- Bốn trang KTQT/NMLH/LTMQT/NLTTTC chỉ có duration “Gợi ý”, chưa countdown. Dùng “Thời gian gợi ý”; không quảng bá thi có đồng hồ.
+- index.html “Trung Tâm Luyện Đề Thực Chiến” → “Luyện tập theo môn”. Subtitle “Trắc nghiệm tự động chấm điểm & bài tập tự luận có giải” đúng mức tính năng.
+- index.html mô tả NLKT “Luyện định khoản nợ/có, lập bảng CĐKT, báo cáo P&L và tập hợp chi phí giá thành sản phẩm.” → “Trắc nghiệm theo chương và bài tự luận kế toán có lời giải để tự đối chiếu.”
+- TCCN-LuyenDe.html overview “4 bộ luyện thi” nhưng renderExamGrid() tạo 5 card (3 đề nguồn, 1 vận dụng, Final Mix). Hiển thị count thực tế hoặc bỏ số cố định.
+- Card “Luật Doanh Nghiệp” / “⏳ Sắp ra mắt...” chưa có route môn tương ứng: nhãn chờ ra mắt phù hợp. Empty state TCCN “Chưa có câu sai nào được lưu” khi chưa luyện cũng hợp lệ; không gắn đang phát triển.
+
+NGHIỆM THU PASS COPY
+Tìm nguyên chuỗi trước/sau trong đúng chapter; kiểm tra cả nội dung sau khi mở tab/details, flashcard, kết quả calculator và aria-label. Không dùng scan từ khóa đơn lẻ để xóa tên academic/model. Diff phải chỉ thay copy/nhãn/cấu trúc trình bày được phép; mọi số liệu, công thức, định khoản, đáp án, tên vụ việc/điều khoản giữ nguyên. Với những block thiếu nguồn, nghiệm thu bằng mô tả giới hạn dễ hiểu và không hứa bài tập/đồ thị hoạt động hoàn chỉnh.

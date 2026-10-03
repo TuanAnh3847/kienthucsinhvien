@@ -1,0 +1,49 @@
+KẾ HOẠCH TRIỂN KHAI EDU CONNECT — 7 GIAI ĐOẠN
+
+0. GHI BASELINE, TẠO NHÁNH VÀ CHUẨN BỊ PREVIEW [FZ01, FZ02]
+Ghi branch, HEAD và trạng thái repo. Baseline audit: 5b0e619fb6838363a79dcb2966a6c138375a59ec. Nếu upstream đã đổi, đối chiếu phần mới và giữ công việc người khác; không reset hoặc ghi đè. Tạo nhánh triển khai riêng.
+Đọc START-HERE, issue register, route map và source reviews. Stash reading-polish chỉ là đề xuất chưa nghiệm thu; nếu tham khảo, rà từng hunk. Không áp nguyên stash hoặc chạy lại các script authoring để test.
+Chụp lỗi trên preview cô lập ở desktop và 320/390px. Lưu snapshot văn bản, dữ liệu, công thức, inline scripts, IDs, constraints, các bank câu hỏi, đáp án, routes và auth trước sửa. Thiết lập Firebase/storage fixtures; không gửi điểm thử lên production.
+Điều kiện chuyển bước: hiểu đúng phạm vi 12 môn/82 tab, 6 route luyện tập/21 mode; preview hoạt động hoặc có giới hạn ghi rõ; mỗi issue có trạng thái và người xử lý.
+
+1. SỬA BUG HIỂN THỊ TRỰC TIẾP [K01, X01, X02]
+KTCT: sửa TeX thô trong nội dung tĩnh và output máy tính. Map từng biểu thức sang ký hiệu native/sub/sup tương đương; giữ phép tính, biến và mọi constraints.
+Bốn pilot: chuyển số hữu hạn thành văn bản tại lớp render. Giữ safeText dùng để chuẩn hóa dữ liệu. Count, phút gợi ý và số thứ tự câu phải hiện từ dữ liệu thật; phân biệt 20 câu riêng với 40 lượt xuất hiện.
+Kiểm mặc định, input tự nhập và lỗi input; mở mọi bộ trong bốn pilot, kiểm số thứ tự 1…n. Ghi before/after và ngoại lệ chỉ đổi định dạng output.
+Điều kiện chuyển bước: hết lỗi đã tái hiện; arithmetic, dữ liệu và chấm điểm không đổi; bằng chứng và allowlist hẹp đã có.
+
+2. CHỮ, MÀU, CARD VÀ ĐIỀU HƯỚNG DÙNG CHUNG [G01–G06, H01, X03, V02]
+Áp DESIGN-SPEC vào đúng vùng đọc. shared.css tải trước local CSS: dùng specificity vừa đủ và kiểm computed style trên cả 12 môn. Không tăng mọi p/span hoặc đổi mọi màu/height hàng loạt.
+Đồng bộ heading và card; phone ưu tiên một cột cho prose dài. VHDD cần xử lý outer padding cùng inner padding/margins để tránh bóp card lồng.
+Thanh chương có dấu hiệu cuộn và nút trên desktop, picker hoặc strip rõ trên phone. Giữ IDs/events, đồng bộ lựa chọn, tính offset từ header thực sự hiện. Kiểm tên account dài và bộ đếm online bốn chữ số bằng fixture.
+Practice có bộ navigation riêng; đồng bộ hình thức, giữ logic mode/scoring. Chuyển nền trang trí quá nặng sang surface nhẹ và xử lý coherent colors của phần tử con.
+Điều kiện chuyển bước: đại diện mọi route đạt spec ở 320/390/768/1366; không chồng header, không mất event hoặc tab. Mỗi lần đổi quy tắc chung, kiểm lại những route bị ảnh hưởng.
+
+3. COMPONENT TỪNG MÔN VÀ MOBILE [MỌI ISSUE PHASE 3]
+Thẻ lật NLKT/NLTTTC/STKN/TLUD/VHDD cần chiều cao theo mặt dài hơn. Giữ flip/data/events/aria. Những variant đã intrinsic chỉ kiểm để tránh sửa thừa. Xem hai mặt mọi thẻ và đáp án dài nhất ở 200% text zoom.
+STKN: Venn, wheel, empathy map, opportunity ring và workspace. TLUD: ma trận operant, gallery và grid. NLTTTC: function wheel, timeline, nguồn. VHDD: culture matrix, continuum và concept map. PTBV: goals, quiz, modal và FAB. LTMQT: matching, sorter, mindmap và case. Legacy: bảng, calculators, card headings và grids.
+Thêm mục lục thu gọn cho chương dài bằng heading có sẵn. Bảng/sơ đồ rộng phải cuộn trong wrapper với dấu hiệu rõ. Reflow giữ quan hệ, trục, đơn vị, chú giải, nhãn và màu có ý nghĩa; không scale làm chữ nhỏ để giấu overflow.
+Điều kiện chuyển bước: ảnh và tương tác đạt ở bốn viewport cùng các breakpoint đặc thù trong QA. Với SOURCE_RISK không tái hiện và UI đã đạt spec, VERIFIED_NO_FIX cần bằng chứng thực tế.
+
+4. COPY, KHỐI THIẾU DỮ LIỆU VÀ LỐI VÀO LUYỆN TẬP [MỌI ISSUE PHASE 4]
+Xử lý đủ 79 dòng COPY-REVIEW-CHECKLIST, đọc ngữ cảnh trong source review. Từng sửa có file/chapter, exact before/after, số lần xuất hiện và lý do. Không dùng regex để xóa mọi thuật ngữ English/exact/source.
+TCCN: gom hoặc đóng gọn salary/goals, six-position visual và khối thực sự rỗng. Giữ ngữ cảnh gốc truy cập được và ghi rõ thiếu dữ liệu. NLTTTC: ô chiều tác động chưa có dữ kiện phải giữ giới hạn, không tự điền mũi tên hay đáp án.
+Homepage: mở CTA NMLH, thêm lối vào KTQT/LTMQT/NLTTTC, nói đúng phạm vi. TCCN có 5 card đề thi. NLKT có bài tự luận để tự đối chiếu lời giải. TLUD deck chỉ có Ch1–4 và phần operant. Giữ Luật Doanh nghiệp “Sắp ra mắt” khi chưa có route.
+NMLH và KTCT không có cùng nhóm metadata leak như các môn khác; chỉ sửa nhãn cần thiết, không xóa premium/auth hoặc thuật ngữ học thuật.
+Điều kiện chuyển bước: mọi candidate có kết quả; qualifier còn nguyên, không đổi kiến thức. Allowlist chính xác gồm cả copy sinh từ script/aria cần sửa.
+
+5. KIỂM THỬ VÀ ĐỐI CHIẾU ĐẦY ĐỦ [FZ01, FZ03]
+Điền 416 dòng render: 82 tab lý thuyết +21 mode luyện tập +homepage ở 320/390/768/1366. Scroll hết thân bài, mở details, hai mặt thẻ, modal và giải thích. Không chỉ kiểm heading đầu trang.
+Điền 184 dòng trạng thái của 46 bộ/biến thể đã liệt kê, gồm toàn bộ bộ cố định, các bộ TCCN theo chương, quick/weak/mistakes và 5 đề thi. Với bộ random hoặc câu sai lưu, ghi fixture và IDs thực tế. Không giả định có countdown/autograde khi tính năng không tồn tại.
+Kiểm sai → đổi → đúng, unanswered, submit, repeat, lock khi có, giải thích, retry, expiry, storage lỗi và empty/populated mistakes. Bài tự luận không tự chấm.
+Chạy TEST-RUNBOOK. Mở rộng coverage còn thiếu, giữ assertions và negative guards. Historical guard có khoảng trống ở completion chapters của bốn môn; thêm đối chiếu nghiêm toàn bộ với baseline triển khai hiện tại và allowlist hẹp.
+Điều kiện chuyển bước: mọi gate bắt buộc PASS, không FAIL/BLOCKED chưa giải quyết; dữ liệu/đáp án giữ; whitespace sạch; evidence đọc được.
+
+6. BÀN GIAO NHÁNH REVIEW [FZ04]
+Điền các checklist bằng kết quả thực tế, commit, command/exit code, viewport/state và evidence. Ảnh mỗi lỗi sửa hoặc VERIFIED_NO_FIX; có ảnh đại diện route/viewport. Coverage có thể dẫn tới log/contact sheet kèm visual review, không nhất thiết 416 ảnh full-page riêng.
+Viết báo cáo theo template: thay đổi, tác dụng với người học, phạm vi đã test, phần còn thiếu, branch/commit/draft PR. Nếu còn gate bắt buộc chưa đạt, ghi PARTIAL_WITH_BLOCKERS, không FULL_COMPLETE.
+Không merge main hoặc deploy production trong task này. Chuẩn bị kết quả review được; phát hành cần chấp thuận riêng.
+
+TRẠNG THÁI
+TODO → IN_PROGRESS → IMPLEMENTED → VERIFIED_FIXED. Risk có thể VERIFIED_NO_FIX kèm proof. IMPLEMENTED chưa có nghĩa đã nghiệm thu. Guard/test: PASS/FAIL/BLOCKED/NOT_RUN. N/A chỉ khi không có tính năng và có lý do/bằng chứng; không dùng cho coverage hoặc guard bắt buộc.
+Làm theo phase/component, tránh CSS mâu thuẫn. Khi gặp blocker, ghi rõ và tiếp tục phần độc lập. Không đổi học thuật để làm test pass; ghi câu hỏi cần nguồn vào báo cáo.

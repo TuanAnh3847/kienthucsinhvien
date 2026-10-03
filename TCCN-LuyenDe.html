@@ -44,6 +44,8 @@
 .question-card { scroll-margin-top: 96px; }
 </style>
     <link rel="stylesheet" href="/shared.css">
+<link rel="stylesheet" href="/reading.css">
+<script defer src="/reading.js"></script>
 </head>
 <body class="edu-practice-page bg-stone-50 bg-pattern text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -3244,7 +3246,7 @@ function renderOverview() {
   const wrongCount = getWrongIds().length;
   stats.innerHTML = `
     <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${deduplicateQuestions(QUESTION_BANK).length}</div><div class="text-xs text-stone-300 font-bold">câu hỏi</div></div>
-    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">4</div><div class="text-xs text-stone-300 font-bold">bộ luyện thi</div></div>
+    <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">5</div><div class="text-xs text-stone-300 font-bold">bộ luyện thi</div></div>
     <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${CHAPTERS.length}</div><div class="text-xs text-stone-300 font-bold">nhóm kiến thức</div></div>
     <div class="bg-white/10 rounded-xl p-4 border border-white/10"><div class="text-2xl font-black">${wrongCount}</div><div class="text-xs text-stone-300 font-bold">câu sai đã lưu</div></div>`;
 }

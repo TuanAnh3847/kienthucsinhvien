@@ -1,0 +1,20 @@
+﻿kind,route,subject,file,state_count,states
+THEORY,/NMLH,Nhập môn Luật học,NhapMonLuatHoc.html,7,ch1: Ch.1: Nhà Nước | ch2: Ch.2: IGOs | ch3: Ch.3: PL Chung | ch4: Ch.4: QPPL | ch5: Ch.5: QH Pháp Luật | ch6: Ch.6: Vi Phạm | ch7: Ch.7: HTPL VN
+THEORY,/KTCTMLN,Kinh tế chính trị Mác–Lênin,KinhTeChinhTriMacLeNin.html,6,"ch1: Ch.1: Mở đầu | ch2: Ch.2: Hàng hóa | ch3: Ch.3: Giá trị thặng dư | ch4: Ch.4: Độc quyền | ch5: Ch.5: KTTT ĐHXHCN | ch6: Ch.6: CNH, HĐH"
+THEORY,/KTTC,Kế toán tài chính,KE_TOAN_TAI_CHINH.html,7,ch1: Ch.1: Main Transactions | ch2: Ch.2: Investments | ch3: Ch.3: Receivables & Payables | ch4: Ch.4: Other Activities & Result | ch5: Ch.5: Equity | ch6: Ch.6: Financial Statements | review: Review
+THEORY,/NLKT,Nguyên lý kế toán,NGUYEN_LY_KE_TOAN.html,8,ch1: Ch.1: Introduction | ch2: Ch.2: Financial Statements | ch3: Ch.3: Accounts & Double Entry | ch4: Ch.4: Measurement | ch5: Ch.5: Documents & Books | ch6: Ch.6: Manufacturer | coa: Chart of Accounts | review: Review
+THEORY,/KTQT,Kinh tế quốc tế,KINH_TE_QUOC_TE.html,7,ch1: Ch.1: Classical Trade | ch2: Ch.2: Modern / Standard | ch3: Ch.3: Tariffs | ch4: Ch.4: Non-Tariff | ch5: Ch.5: Resource Mobility | ch6: Ch.6: Integration | review: Review
+THEORY,/TCCN,Tài chính cá nhân,TAI_CHINH_CA_NHAN.html,7,ch1: Ch.1: Overview | ch2: Ch.2: Career | ch3: Ch.3: Products | ch4: Ch.4: Financial Health | ch5: Ch.5: Protection | ch6: Ch.6: Borrow & Repay | review: Review
+THEORY,/NLTTTC,Nguyên lý thị trường tài chính,NGUYEN_LY_THI_TRUONG_TAI_CHINH.html,7,ch1: Ch.1: Money & Finance | ch2: Ch.2: Financial Markets | ch3: Ch.3: Asymmetric Info | ch4: Ch.4: Asset Demand | ch5: Ch.5: Interest Rate | ch6: Ch.6: Exchange Rate | review: Review
+THEORY,/LTMQT,Luật thương mại quốc tế,LUAT_THUONG_MAI_QUOC_TE.html,5,ch1: Ch.1: Overview & WTO | ch2: Ch.2: MFN | ch3: Ch.3: NT | ch4: Ch.4: Trade in Goods | ch5: Ch.5: Dispute Settlement
+THEORY,/VHDDTKD,Văn hóa và đạo đức trong kinh doanh quốc tế,VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html,6,"ch1: Ch.1: Culture & CCM | ch2: Ch.2: Cultural Differences | ch3: Ch.3: Org Culture & Diversity | ch4: Ch.4: Motivation | ch5: Ch.5: Ethics, CSR & Sustainability | review: Review"
+THEORY,/PTBV,Phát triển bền vững,PHAT_TRIEN_BEN_VUNG.html,6,ch1: Ch.1: Foundations | ch2: Ch.2: Challenges & Opportunities | ch3: Ch.3: Stakeholders | ch4: Ch.4: International Cooperation | ch5: Ch.5: Vietnam | review: Review
+THEORY,/STKN,Sáng tạo khởi nghiệp,SANG_TAO_KHOI_NGHIEP.html,8,ch1: Ch.1: Creativity | ch2: Ch.2: Brainstorm | ch3: Ch.3: Critical Thinking | ch4: Ch.4: Design Thinking | ch5: Ch.5: Persuasion | ch6: Ch.6: Opportunity | ch7: Ch.7: Mindset | review: Review
+THEORY,/TLUD,Tâm lý ứng dụng,TAM_LY_UNG_DUNG.html,8,ch1: Ch.1: Introduction | ch2: Ch.2: Feeling & Perception | ch3: Ch.3: Memory & Thinking | ch4: Ch.4: Emotion & Stress | ch5: Ch.5: Development | ch6: Ch.6: Personality | ch7: Supplement: Operant | review: Review
+PRACTICE,/NhapMonLuatHoc-LuyenDe,,NhapMonLuatHoc-LuyenDe.html,3,Tổng quan | Theo chương | Trắc nghiệm
+PRACTICE,/KTQT-LuyenDe,,KTQT-LuyenDe.html,3,Tổng quan | Theo chương | Trắc nghiệm
+PRACTICE,/LTMQT-LuyenDe,,LTMQT-LuyenDe.html,3,Tổng quan | Theo chương | Trắc nghiệm
+PRACTICE,/NLTTTC-LuyenDe,,NLTTTC-LuyenDe.html,3,Tổng quan | Theo chương | Trắc nghiệm
+PRACTICE,/TCCN-LuyenDe,,TCCN-LuyenDe.html,5,Tổng quan | Theo chương | Test 20 câu | Luyện thi | Câu sai
+PRACTICE,/NguyenLyKeToan-LuyenDe,,NguyenLyKeToan-LuyenDe.html,4,Tổng quan | Theo chương | Trắc nghiệm | Luyện đề
+HOME,/,Homepage,index.html,1,homepage

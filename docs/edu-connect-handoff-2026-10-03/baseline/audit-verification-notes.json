@@ -1,0 +1,91 @@
+{
+  "date_local": "2026-10-03",
+  "timezone": "Asia/Saigon",
+  "implementation_status": "deferred to next user-directed Codex pass; local proposals only; no push/merge/deploy",
+  "observed_desktop": {
+    "viewport": [
+      1363,
+      936
+    ],
+    "theory_tabs": 82,
+    "theory_routes": 12,
+    "practice_modes": 21,
+    "practice_routes": 6
+  },
+  "mobile_rendered": false,
+  "academic_source_verified": false,
+  "production_quiz_submitted": false,
+  "confirmed_findings": [
+    {
+      "route": "/KTCTMLN",
+      "chapters": [
+        "ch2",
+        "ch3"
+      ],
+      "finding": "raw dollar-delimited maths and TeX arrows/times in live text/output"
+    },
+    {
+      "route": "/NLKT",
+      "finding": "navigation scrollWidth about1360 vs clientWidth1216; no overflow cue; lasttabs outside firstview"
+    },
+    {
+      "routes": [
+        "/NhapMonLuatHoc-LuyenDe",
+        "/KTQT-LuyenDe",
+        "/LTMQT-LuyenDe",
+        "/NLTTTC-LuyenDe"
+      ],
+      "finding": "overview/card numeric fields blank; NMLH opened quiz has20blocks with empty question number circles",
+      "source_cause": "createElement passes numbers to string-only safeText"
+    },
+    {
+      "route": "/",
+      "finding": "12 course descriptions at13px; NMLH practice marked comingsoon despite live pilot"
+    }
+  ],
+  "candidates_refined": [
+    {
+      "route": "/NMLH",
+      "chapter": "ch5",
+      "candidate": "overflow:hidden card client318 scroll370",
+      "verification": "h-full body plus52pxheading causes padding overflow; all checked actual text bottoms are inside box; not a confirmed missing-text issue"
+    },
+    {
+      "route": "/NLKT",
+      "chapter": "ch1",
+      "sample": "Conservatism",
+      "verification": "click flips and Enter flipsback; back scrollHeight153/clientHeight153. Fixed sizing remains mobile/textzoom risk, not desktop clipping observed."
+    }
+  ],
+  "pilot_source_counts": {
+    "/NhapMonLuatHoc-LuyenDe": {
+      "chapter_sets": 3,
+      "unique_question_ids": 20,
+      "instances": 40
+    },
+    "/KTQT-LuyenDe": {
+      "chapter_sets": 4,
+      "unique_question_ids": 20,
+      "instances": 40
+    },
+    "/LTMQT-LuyenDe": {
+      "chapter_sets": 5,
+      "unique_question_ids": 20,
+      "instances": 40
+    },
+    "/NLTTTC-LuyenDe": {
+      "chapter_sets": 6,
+      "unique_question_ids": 20,
+      "instances": 40
+    }
+  },
+  "grading_states_tested": false,
+  "note": "after implementation use isolated preview for grading/expiry/retry; do not represent source checks as rendered after-verification",
+  "header_offset_sample": {
+    "route": "/NLTTTC",
+    "chapter": "ch2",
+    "header_bottom": 58.375,
+    "heading_top": 61.359375,
+    "observed": "no desktop heading overlap; gap about3px, improve breathingroom in polish"
+  }
+}

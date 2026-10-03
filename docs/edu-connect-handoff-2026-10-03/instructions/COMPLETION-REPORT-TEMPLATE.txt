@@ -1,0 +1,29 @@
+BÁO CÁO EDU CONNECT — ĐIỀN SAU IMPLEMENT
+
+Trạng thái: [FULL_COMPLETE | PARTIAL_WITH_BLOCKERS]
+Branch / commit / draft PR:
+Implementation base / audit base / delta upstream:
+Preview URL / environment / browser / fixtures / ngày test:
+
+Thay đổi chính và tác dụng với sinh viên:
+- [Chữ, card, heading, palette, navigation]
+- [Công thức, số thống kê, thẻ lật, reflow]
+- [Copy, khối thiếu dữ liệu, lối vào luyện tập]
+
+Issue: 66 mục. VERIFIED_FIXED [...], VERIFIED_NO_FIX [...], pending/failed/blocked [...].
+Mã issue | kết quả hoặc lý do không cần sửa | file/commit | viewport/state đã test | evidence trước/sau | phần còn lại.
+
+Coverage: 12 môn/82 tab +6 practice/21 mode +homepage x4 =416 dòng.
+PASS [...]/416; FAIL [...]; BLOCKED [...]; NOT_RUN [...].
+Breakpoints/zoom/landscape/keyboard/touch/modal/header fixture dài:
+Copy review: 79 dòng, verified [...], pending [...], đường dẫn exact edit journal:
+Practice: 46 bộ/biến thể x4 =184 dòng; fixture/IDs cho random/mistakes:
+Preservation: 24 mục, dữ liệu/công thức/đáp án/IDs/auth/Firebase giữ:
+QA: 51 mục, verified [...], pending [...]:
+
+Lệnh kiểm | exit code | kết quả | log path | phạm vi/giới hạn
+[HTML5, shared JS, inline handlers, preservation, full current-base snapshot, academic self-test, practice trace, browser regression, theory interactions, overflow, nightly, diff check]
+
+Các câu hỏi học thuật còn cần nguồn và vị trí qualifier đã giữ:
+Blockers còn lại: [issue IDs, lý do, việc còn cần; không giấu phần chưa test]
+Phát hành: chưa merge/chưa deploy production. Nhánh/draft PR sẵn review; chấp thuận phát hành riêng.

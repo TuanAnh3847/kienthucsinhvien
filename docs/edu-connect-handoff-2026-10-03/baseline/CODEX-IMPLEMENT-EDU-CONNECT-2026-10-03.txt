@@ -1,0 +1,79 @@
+TASK CHO CODEX: HOÀN THIỆN TRẢI NGHIỆM ĐỌC VÀ HỌC EDU CONNECT
+
+Mục tiêu: Sửa giao diện theo góc nhìn sinh viên đọc bài và tự luyện. Người dùng đã chốt rà soát trước, rồi giao một gói implementation vào ngày mai. Tiếp tục tới khi sửa và kiểm thử xong; đừng dừng ở việc liệt kê lỗi.
+Repo: TuanAnh3847/kienthucsinhvien
+Production: https://kienthucsinhvien.id.vn/
+Baseline đối chiếu: 5b0e619fb6838363a79dcb2966a6c138375a59ec
+Phạm vi: Trang chủ, 12 môn lý thuyết với 82 tab, 6 trang luyện tập với 21 chế độ. Ưu tiên nội dung từ heading Chương xuống dưới; đồng bộ header, thanh chương và lối vào luyện tập.
+Làm trên nhánh riêng, chuẩn bị commit/draft PR review được. Merge main và deploy production cần chấp thuận riêng.
+
+BẰNG CHỨNG HIỆN CÓ
+Đã đăng nhập production và mở đủ 82 tab +21 chế độ trên desktop 1363 ×936. JSON ghi route/tab và số đo; ảnh là production trước sửa. Đã mở form NMLH 20 câu và lật thẻ NLKT Conservatism bằng click/Enter. Thẻ này vừa khung 153 px trên desktop.
+Mobile 320/390 px chưa được render trực tiếp; responsive-review là dự đoán từ CSS. Chưa nộp bài thử lên production, kiểm timer hết giờ hoặc xác minh học thuật với giáo trình gốc. Không diễn đạt các phần này thành đã pass.
+NMLH Ch5 Pháp nhân có scrollHeight 370/clientHeight 318 do body h-full cộng header. Kiểm tra text vẫn trong box desktop; phần bị cắt là phần đệm. Không ghi thành lỗi mất kiến thức.
+
+HỆ TRÌNH BÀY
+Prose 16 px, line-height 1.65–1.75; đoạn dài khoảng 75–78ch. Nhãn phụ ít nhất 13 px, note khoảng 15 px. Hero 28–34 px; heading chương 24–28 px desktop, 22–24 px mobile; module 20–22 px.
+Palette đề xuất: nền #F6F9FC, card trắng, primary #2563EB, heading #1E40AF, body #1E293B, muted #475569, border #DCE6F0. Giữ màu đúng/sai/cảnh báo và màu có ý nghĩa trong đồ thị. Mục tiêu tương phản chữ thường ≥4.5:1.
+Card padding 16–24 px, radius 12–16 px, gap 16–24 px, min-width:0 và chiều cao tự nhiên. Phone dùng một cột cho prose dài. Không co font để giấu overflow. Bảng nhiều cột cuộn trong wrapper và có dấu hiệu cuộn. Controls tối thiểu 44 px, input 16 px, focus rõ và reduced-motion hoạt động.
+Chương dài có mục lục “Trong chương này” thu gọn từ heading hiện có; giữ thứ tự học. Không tăng toàn bộ p/span vì sẽ phá sơ đồ, bảng và công thức.
+
+SỬA THEO THỨ TỰ
+1. P1 - Raw TeX trong KTCTMLN Ch2/Ch3.
+Còn $W$, $m'$, \to, \times, L_{pt}, L_{gd} trong nội dung tĩnh và kết quả máy tính. Dùng sub/sup và ký hiệu native theo đúng biến. Giữ phép tính, công thức, dữ kiện và field constraints. Kiểm mặc định lẫn số người học nhập, cả hai máy tính Ch2 và output thặng dư/lợi nhuận Ch3. Ghi chính xác các ngoại lệ chỉ đổi output trong script.
+
+2. P1 - Số bị rỗng trong bốn trang luyện thử.
+Files: NhapMonLuatHoc-LuyenDe.html, KTQT-LuyenDe.html, LTMQT-LuyenDe.html, NLTTTC-LuyenDe.html.
+createElement(tag,class,text) đưa text qua safeText chỉ nhận string; numeric values bị thành chuỗi rỗng. Sửa chuyển finite number thành văn bản ở renderer hoặc từng numeric call. Giữ safeText dùng để normalize dữ liệu, ngân hàng câu hỏi và chấm điểm.
+Overview, số câu trên card, phút gợi ý và vòng số thứ tự 1…n phải hiện. Số bộ theo chương tương ứng NMLH/KTQT/LTMQT/NLTTTC là 3/4/5/6. Mỗi ngân hàng có 20 ID câu riêng nhưng 40 lượt xuất hiện nếu cộng drills và quiz; hiển thị 20 câu riêng hoặc ghi rõ “40 lượt câu”, tránh ngụ ý 40 câu độc lập. Duration theo dữ liệu từng set; dùng nhãn “Thời gian gợi ý”, không quảng bá countdown.
+
+3. P1 cần kiểm hình ảnh - Thẻ lật có chiều cao cố định.
+Affected variants: NLKT 155 px, NLTTTC 170/190 px, STKN 150 px, TLUD/VHDD inner 160/190 px với hai mặt absolute.
+Cho hai mặt tham gia sizing, ví dụ overlapping grid faces tự lấy chiều cao mặt dài hơn; giữ flip classes, event, aria và keyboard. KTTC/KTQT/TCCN/LTMQT đã có intrinsic/min-height variants: không chuyển hàng loạt. Kiểm đáp án dài nhất trên 320/390 px và text zoom 200%.
+
+4. P2 - Hệ chữ, màu và khoảng cách dùng chung.
+shared.css tải trước local style trên 12 môn; dùng specificity phù hợp và kiểm computed style.
+Heading selectors: .chapter-title, .section-title, .panel-title, .learn-title, .module-heading h3, .section-heading h3, .section-head h3.
+Prose selectors: .chapter-objective, .source-detail, .learn-card-body, .concept-card p/li.
+Không áp blanket font/height/color phá bảng và sơ đồ. Riêng VHDD .lesson-section: không thêm outer padding trong khi inner padding/margins còn nguyên, làm card lồng bị bóp nhỏ.
+
+5. P2 - Điều hướng chương.
+edu-header.js giữ #nav-menu, chapter IDs, data-edu-tab và onTabChange. Desktop có tín hiệu còn chương bên ngoài và nút cuộn; mobile dùng picker hoặc điều hướng tương đương rõ ràng. Giữ lựa chọn chung và offset khi chọn chương sau khi cuộn sâu.
+Nếu dùng native picker, cập nhật regression assertion để kiểm strip hoặc picker đang hiển thị; giữ toàn bộ coverage, không xóa tests để vượt suite. Kiểm 767/768 px, active tab nhìn thấy, font load, reduced-motion và focus.
+
+6. P2 - Các component cần kiểm mobile riêng.
+TLUD .matrix4 (95px 1fr 1fr, overflow:hidden): dùng minmax/wrap hoặc scroll rõ ràng, không cắt cột.
+KTCT nhóm input grid-cols-3: collapse phone để nhập số và đọc label được.
+STKN: Venn, wheel, opportunity ring, empathy map và workspaces. NLTTTC: function wheel, timeline. VHDD: culture matrix, continuum, concept map. PTBV: goal tiles, course-map modal và FAB.
+Kiểm 320–768 px và card lồng nhau. Giữ topology, trục, đơn vị, chú thích và màu có ý nghĩa; không scale toàn sơ đồ thành chữ quá nhỏ. KTQT ASCII Ch5 có thể đổi thành SVG accessible giữ các labels/rates/segments, ghi rõ sơ đồ minh họa.
+
+7. P2 - Copy hướng người học.
+Đọc learner-copy-review.txt và các source reviews kèm. Thay nhãn nội bộ như exact/cardinality/manifest/structured/not verbatim/VERIFIED/source file S6/S8/replay/Required comparison bằng tên khối hoặc hướng dẫn tự nhiên.
+Giữ thuật ngữ tiếng Anh học thuật, tên riêng, vụ án, công thức và câu hỏi gốc. Giữ mức độ bất định khi thiếu nguồn; không bịa số liệu/đáp án hoặc quảng bá rộng hơn dữ liệu thật.
+TCCN salary/goals/6 empty cards: gộp thành thông báo giới hạn rõ hoặc thu gọn, không tạo số giả. TLUD deck chỉ ch1–4/ch7 thì không quảng bá bao quát toàn môn. Mỗi copy edit có before/after chính xác và allowlist hẹp; không regex replace mù.
+
+8. P2 - Homepage và luyện tập.
+Mô tả homepage 13 px nên lên 15–16 px, card và nhãn nhất quán. Card NMLH đang “Sắp ra mắt” dù route đã có bài: đổi CTA tới trang luyện thử, nói đúng phạm vi 20 câu. Thêm lối vào KTQT/LTMQT/NLTTTC hiện có dữ liệu.
+TCCN overview nói 4 bộ luyện thi nhưng render 5 cards: lấy count thật hoặc đổi câu cho đúng. Khối thống kê nền đen chuyển surface nhẹ, đồng bộ palette; câu và lựa chọn đủ lớn để đọc. Giữ score, timer, localStorage, auth và Firebase.
+
+GIỚI HẠN NỘI DUNG
+Giữ đủ các môn, kể cả Nguyên lý kế toán. Không đổi số liệu, công thức, phép tính, định khoản, vụ án/điều khoản, chapter IDs/thứ tự, input constraints, option values, question IDs/options/answer keys, Firebase/auth/routes.
+Nếu nghi kiến thức sai, ghi issue cần đối chiếu nguồn riêng. Không cập nhật luật/chuẩn kế toán hiện hành trong pass UI.
+Nháp cục bộ có shared.css, edu-header.js và 5 legacy HTML: chưa visual-test, academic guard FAIL vì copy chưa có allowlist, whitespace FAIL. Bắt đầu từ baseline sạch hoặc rà từng hunk; không coi nháp đã pass.
+
+NGHIỆM THU BẮT BUỘC
+- Render đủ 12 routes/82 tabs và 6 practice/21 modes ở 320,390,768,1366 px. Lưu coverage và screenshot đại diện cùng mọi lỗi đã sửa. Chụp sau khi animation kết thúc.
+- Không cuộn ngang toàn trang. Bảng/đồ thị cuộn chủ động có cue. Không mất chữ trong card/flashcard; label dài wrap, font tiếng Việt không lỗi glyph. Kiểm text zoom 200% và keyboard/touch.
+- Chọn chương đầu/giữa/cuối sau khi cuộn sâu; heading dưới sticky header. Picker/strip đồng bộ; tên account dài và online-counter bốn chữ số không chen mất nội dung.
+- Trên preview cô lập: unanswered, sai, đổi đáp án, đúng, nộp, khóa sau nộp, giải thích, làm lại, hết giờ và storage failure. Đối chiếu số câu/card/phút/index với dữ liệu. Không ghi điểm thử lên production.
+- node --check shared JS; compile executable inline scripts; HTML5/duplicate IDs; preservation_check với baseline5b0...; academic guard với ngoại lệ exact before/after; practice_trace; git diff --check. Giữ độ chặt của tests. Guard hiện cho phép một số completion chapters nên cần thêm strict text/script diff với baseline hiện tại.
+- Kết thúc bằng nhánh review, commit/draft PR, bằng chứng trước-sau, lệnh và kết quả kiểm thử, những phần còn hạn chế được ghi đúng trạng thái. Không báo “đã sửa xong” nếu chưa render test. Merge/deploy production cần được duyệt riêng.
+
+TỆP KÈM
+EDU-CONNECT-audit-2026-10-03.pdf: báo cáo 5 trang và ảnh minh họa.
+live-study-audit.json: 82 states quan sát desktop.
+live-practice-audit.json: 21 modes quan sát desktop.
+responsive-review.md: source responsive risks và giới hạn validation nháp.
+learner-copy-review.txt: đề xuất before/after có ngữ cảnh.
+modern-source-review.txt, legacy-source-review.txt, practice-source-review.txt (nếu có): review độc lập từ source.
+evidence/before/: screenshot production gốc.

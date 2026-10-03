@@ -1,0 +1,2288 @@
+[
+  {
+    "name": "NMLH keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "NMLH",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.4375,
+      "header": 62,
+      "id": "edu-reading-ch7-3"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NMLH_320_header_keyboard.png"
+  },
+  {
+    "name": "NMLH keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "NMLH",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.125,
+      "header": 62,
+      "id": "edu-reading-ch7-3"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NMLH_390_header_keyboard.png"
+  },
+  {
+    "name": "NMLH keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "NMLH",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 186.0625,
+      "header": 58,
+      "id": "edu-reading-ch7-3"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NMLH_768_header_keyboard.png"
+  },
+  {
+    "name": "NMLH keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "NMLH",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 376.375,
+      "header": 58,
+      "id": "edu-reading-ch7-3"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NMLH_1366_header_keyboard.png"
+  },
+  {
+    "name": "KTCTMLN keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "KTCTMLN",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 214.75,
+      "header": 62,
+      "id": "edu-reading-ch6-3"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTCTMLN_320_header_keyboard.png"
+  },
+  {
+    "name": "KTCTMLN keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "KTCTMLN",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 300.5625,
+      "header": 62,
+      "id": "edu-reading-ch6-3"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTCTMLN_390_header_keyboard.png"
+  },
+  {
+    "name": "KTCTMLN keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "KTCTMLN",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 677.375,
+      "header": 58,
+      "id": "edu-reading-ch6-3"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTCTMLN_768_header_keyboard.png"
+  },
+  {
+    "name": "KTCTMLN keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "KTCTMLN",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 736.5,
+      "header": 58,
+      "id": "edu-reading-ch6-3"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTCTMLN_1366_header_keyboard.png"
+  },
+  {
+    "name": "KTTC keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "KTTC",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 438.453125,
+      "header": 62,
+      "id": "edu-reading-review-7"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTTC_320_header_keyboard.png"
+  },
+  {
+    "name": "KTTC keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "KTTC",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 484.34375,
+      "header": 62,
+      "id": "edu-reading-review-7"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTTC_390_header_keyboard.png"
+  },
+  {
+    "name": "KTTC keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "KTTC",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 686.765625,
+      "header": 58,
+      "id": "edu-reading-review-7"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTTC_768_header_keyboard.png"
+  },
+  {
+    "name": "KTTC keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "KTTC",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 686.84375,
+      "header": 58,
+      "id": "edu-reading-review-7"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTTC_1366_header_keyboard.png"
+  },
+  {
+    "name": "NLKT keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "NLKT",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "coa",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.34375,
+      "header": 62,
+      "id": "edu-reading-review-3"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NLKT_320_header_keyboard.png"
+  },
+  {
+    "name": "NLKT keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "NLKT",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "coa",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.1875,
+      "header": 62,
+      "id": "edu-reading-review-3"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NLKT_390_header_keyboard.png"
+  },
+  {
+    "name": "NLKT keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "NLKT",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "coa",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 379.40625,
+      "header": 58,
+      "id": "edu-reading-review-3"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NLKT_768_header_keyboard.png"
+  },
+  {
+    "name": "NLKT keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "NLKT",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "coa",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 483.03125,
+      "header": 58,
+      "id": "edu-reading-review-3"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NLKT_1366_header_keyboard.png"
+  },
+  {
+    "name": "KTQT keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "KTQT",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 108.984375,
+      "header": 62,
+      "id": "edu-reading-review-34"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTQT_320_header_keyboard.png"
+  },
+  {
+    "name": "KTQT keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "KTQT",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 206.25,
+      "header": 62,
+      "id": "edu-reading-review-34"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTQT_390_header_keyboard.png"
+  },
+  {
+    "name": "KTQT keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "KTQT",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 427.796875,
+      "header": 58,
+      "id": "edu-reading-review-34"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTQT_768_header_keyboard.png"
+  },
+  {
+    "name": "KTQT keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "KTQT",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 531.890625,
+      "header": 58,
+      "id": "edu-reading-review-34"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/KTQT_1366_header_keyboard.png"
+  },
+  {
+    "name": "TCCN keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "TCCN",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 85.578125,
+      "header": 62,
+      "id": "edu-reading-review-7"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/TCCN_320_header_keyboard.png"
+  },
+  {
+    "name": "TCCN keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "TCCN",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.234375,
+      "header": 62,
+      "id": "edu-reading-review-7"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/TCCN_390_header_keyboard.png"
+  },
+  {
+    "name": "TCCN keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "TCCN",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 169.953125,
+      "header": 58,
+      "id": "edu-reading-review-7"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/TCCN_768_header_keyboard.png"
+  },
+  {
+    "name": "TCCN keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "TCCN",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 326.796875,
+      "header": 58,
+      "id": "edu-reading-review-7"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/TCCN_1366_header_keyboard.png"
+  },
+  {
+    "name": "NLTTTC keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "NLTTTC",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.0625,
+      "header": 62,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NLTTTC_320_header_keyboard.png"
+  },
+  {
+    "name": "NLTTTC keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "NLTTTC",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 85.625,
+      "header": 62,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NLTTTC_390_header_keyboard.png"
+  },
+  {
+    "name": "NLTTTC keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "NLTTTC",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 81.625,
+      "header": 58,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NLTTTC_768_header_keyboard.png"
+  },
+  {
+    "name": "NLTTTC keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "NLTTTC",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 82.09375,
+      "header": 58,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/NLTTTC_1366_header_keyboard.png"
+  },
+  {
+    "name": "LTMQT keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "LTMQT",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 235.09375,
+      "header": 62,
+      "id": "edu-reading-ch5-32"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/LTMQT_320_header_keyboard.png"
+  },
+  {
+    "name": "LTMQT keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "LTMQT",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 315.6875,
+      "header": 62,
+      "id": "edu-reading-ch5-32"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/LTMQT_390_header_keyboard.png"
+  },
+  {
+    "name": "LTMQT keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "LTMQT",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 531.4375,
+      "header": 58,
+      "id": "edu-reading-ch5-32"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/LTMQT_768_header_keyboard.png"
+  },
+  {
+    "name": "LTMQT keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "LTMQT",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 523.578125,
+      "header": 58,
+      "id": "edu-reading-ch5-32"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/LTMQT_1366_header_keyboard.png"
+  },
+  {
+    "name": "VHDDTKD keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "VHDDTKD",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 85.515625,
+      "header": 62,
+      "id": "edu-reading-review-5"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/VHDDTKD_320_header_keyboard.png"
+  },
+  {
+    "name": "VHDDTKD keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "VHDDTKD",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.234375,
+      "header": 62,
+      "id": "edu-reading-review-5"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/VHDDTKD_390_header_keyboard.png"
+  },
+  {
+    "name": "VHDDTKD keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "VHDDTKD",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 373.5625,
+      "header": 58,
+      "id": "edu-reading-review-5"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/VHDDTKD_768_header_keyboard.png"
+  },
+  {
+    "name": "VHDDTKD keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "VHDDTKD",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 373.484375,
+      "header": 58,
+      "id": "edu-reading-review-5"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/VHDDTKD_1366_header_keyboard.png"
+  },
+  {
+    "name": "PTBV keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "PTBV",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 85.578125,
+      "header": 62,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/PTBV_320_header_keyboard.png"
+  },
+  {
+    "name": "PTBV keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "PTBV",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.25,
+      "header": 62,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/PTBV_390_header_keyboard.png"
+  },
+  {
+    "name": "PTBV keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "PTBV",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 313.75,
+      "header": 58,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/PTBV_768_header_keyboard.png"
+  },
+  {
+    "name": "PTBV keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "PTBV",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 413.890625,
+      "header": 58,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/PTBV_1366_header_keyboard.png"
+  },
+  {
+    "name": "STKN keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "STKN",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.078125,
+      "header": 62,
+      "id": "edu-reading-review-3"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/STKN_320_header_keyboard.png"
+  },
+  {
+    "name": "STKN keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "STKN",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 86.0625,
+      "header": 62,
+      "id": "edu-reading-review-3"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/STKN_390_header_keyboard.png"
+  },
+  {
+    "name": "STKN keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "STKN",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 82.46875,
+      "header": 58,
+      "id": "edu-reading-review-3"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/STKN_768_header_keyboard.png"
+  },
+  {
+    "name": "STKN keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "STKN",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 81.515625,
+      "header": 58,
+      "id": "edu-reading-review-3"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/STKN_1366_header_keyboard.png"
+  },
+  {
+    "name": "TLUD keyboard, TOC, long header 320",
+    "pass": true,
+    "route": "TLUD",
+    "width": 320,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 97.96875,
+      "header": 62,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 320,
+      "width": 320
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/TLUD_320_header_keyboard.png"
+  },
+  {
+    "name": "TLUD keyboard, TOC, long header 390",
+    "pass": true,
+    "route": "TLUD",
+    "width": 390,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 170.5625,
+      "header": 62,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 390,
+      "width": 390
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/TLUD_390_header_keyboard.png"
+  },
+  {
+    "name": "TLUD keyboard, TOC, long header 768",
+    "pass": true,
+    "route": "TLUD",
+    "width": 768,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 573.90625,
+      "header": 58,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 768,
+      "width": 768
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/TLUD_768_header_keyboard.png"
+  },
+  {
+    "name": "TLUD keyboard, TOC, long header 1366",
+    "pass": true,
+    "route": "TLUD",
+    "width": 1366,
+    "chapters": [
+      "ch1",
+      "ch2",
+      "ch3",
+      "ch4",
+      "ch5",
+      "ch6",
+      "ch7",
+      "review"
+    ],
+    "anchor": {
+      "tag": "H3",
+      "top": 625.765625,
+      "header": 58,
+      "id": "edu-reading-review-4"
+    },
+    "header": {
+      "scroll": 1366,
+      "width": 1366
+    },
+    "online": 1234,
+    "evidence": "evidence/after/accessibility/TLUD_1366_header_keyboard.png"
+  },
+  {
+    "name": "NhapMonLuatHoc finite numeric renderer boundaries",
+    "pass": true,
+    "values": [
+      {
+        "type": "0",
+        "rendered": "0",
+        "normalized": ""
+      },
+      {
+        "type": "20",
+        "rendered": "20",
+        "normalized": ""
+      },
+      {
+        "type": "-1",
+        "rendered": "-1",
+        "normalized": ""
+      },
+      {
+        "type": "1.25",
+        "rendered": "1.25",
+        "normalized": ""
+      },
+      {
+        "type": "null",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "undefined",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "NaN",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "Infinity",
+        "rendered": "",
+        "normalized": ""
+      }
+    ]
+  },
+  {
+    "name": "KTQT finite numeric renderer boundaries",
+    "pass": true,
+    "values": [
+      {
+        "type": "0",
+        "rendered": "0",
+        "normalized": ""
+      },
+      {
+        "type": "20",
+        "rendered": "20",
+        "normalized": ""
+      },
+      {
+        "type": "-1",
+        "rendered": "-1",
+        "normalized": ""
+      },
+      {
+        "type": "1.25",
+        "rendered": "1.25",
+        "normalized": ""
+      },
+      {
+        "type": "null",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "undefined",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "NaN",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "Infinity",
+        "rendered": "",
+        "normalized": ""
+      }
+    ]
+  },
+  {
+    "name": "LTMQT finite numeric renderer boundaries",
+    "pass": true,
+    "values": [
+      {
+        "type": "0",
+        "rendered": "0",
+        "normalized": ""
+      },
+      {
+        "type": "20",
+        "rendered": "20",
+        "normalized": ""
+      },
+      {
+        "type": "-1",
+        "rendered": "-1",
+        "normalized": ""
+      },
+      {
+        "type": "1.25",
+        "rendered": "1.25",
+        "normalized": ""
+      },
+      {
+        "type": "null",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "undefined",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "NaN",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "Infinity",
+        "rendered": "",
+        "normalized": ""
+      }
+    ]
+  },
+  {
+    "name": "NLTTTC finite numeric renderer boundaries",
+    "pass": true,
+    "values": [
+      {
+        "type": "0",
+        "rendered": "0",
+        "normalized": ""
+      },
+      {
+        "type": "20",
+        "rendered": "20",
+        "normalized": ""
+      },
+      {
+        "type": "-1",
+        "rendered": "-1",
+        "normalized": ""
+      },
+      {
+        "type": "1.25",
+        "rendered": "1.25",
+        "normalized": ""
+      },
+      {
+        "type": "null",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "undefined",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "NaN",
+        "rendered": "",
+        "normalized": ""
+      },
+      {
+        "type": "Infinity",
+        "rendered": "",
+        "normalized": ""
+      }
+    ]
+  },
+  {
+    "name": "NMLH contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "KTCTMLN contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "KTTC contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": [
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s"
+    ]
+  },
+  {
+    "name": "NLKT contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": [
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s"
+    ]
+  },
+  {
+    "name": "KTQT contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "TCCN contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "NLTTTC contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": [
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s"
+    ]
+  },
+  {
+    "name": "LTMQT contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": [
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s"
+    ]
+  },
+  {
+    "name": "VHDDTKD contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": [
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s"
+    ]
+  },
+  {
+    "name": "PTBV contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "STKN contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": [
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s"
+    ]
+  },
+  {
+    "name": "TLUD contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": [
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s",
+      "0s"
+    ]
+  },
+  {
+    "name": "NhapMonLuatHoc-LuyenDe contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "KTQT-LuyenDe contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "LTMQT-LuyenDe contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "NLTTTC-LuyenDe contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "TCCN-LuyenDe contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "NguyenLyKeToan-LuyenDe contrast roles and reduced motion",
+    "pass": true,
+    "colors": [
+      {
+        "role": "--edu-body",
+        "color": "rgb(30, 41, 59)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.628718079350334
+      },
+      {
+        "role": "--edu-muted",
+        "color": "rgb(71, 85, 105)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 7.577663953533317
+      },
+      {
+        "role": "--edu-heading",
+        "color": "rgb(30, 64, 175)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.722410784954462
+      },
+      {
+        "role": "--edu-primary",
+        "color": "rgb(37, 99, 235)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.168555560022562
+      }
+    ],
+    "reduced_motion": true,
+    "flip_transition_durations": []
+  },
+  {
+    "name": "NLKT actual touch flip",
+    "pass": true,
+    "touch_taps": 1
+  },
+  {
+    "name": "NLTTTC actual touch flip",
+    "pass": true,
+    "touch_taps": 1
+  },
+  {
+    "name": "STKN actual touch flip",
+    "pass": true,
+    "touch_taps": 1
+  },
+  {
+    "name": "TLUD actual touch flip",
+    "pass": true,
+    "touch_taps": 1
+  },
+  {
+    "name": "VHDDTKD actual touch flip",
+    "pass": true,
+    "touch_taps": 1
+  },
+  {
+    "name": "PTBV modal viewport 320x568",
+    "pass": true,
+    "evidence": "evidence/after/accessibility/PTBV_modal_320x568.png"
+  },
+  {
+    "name": "PTBV modal viewport 390x844",
+    "pass": true,
+    "evidence": "evidence/after/accessibility/PTBV_modal_390x844.png"
+  },
+  {
+    "name": "PTBV modal viewport 844x390",
+    "pass": true,
+    "evidence": "evidence/after/accessibility/PTBV_modal_844x390.png"
+  },
+  {
+    "name": "PTBV modal viewport 768x1024",
+    "pass": true,
+    "evidence": "evidence/after/accessibility/PTBV_modal_768x1024.png"
+  }
+]

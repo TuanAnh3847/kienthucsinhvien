@@ -1,0 +1,66 @@
+EDU CONNECT — SOURCE REVIEW: SIX MODERN THEORY PAGES
+Scope: current checkout /workspace/scratch/640294d55680/edu-connect, branch codex/reading-polish-20261003.
+This agent performed source review only. Live browser coverage by this agent: 0. Two CUA createBrowserTab requests blocked and were aborted; root subsequently performed the live audit. Do not represent the findings below as device-tested or independently browser-confirmed. No owned HTML was changed.
+Files reviewed: NGUYEN_LY_THI_TRUONG_TAI_CHINH.html; SANG_TAO_KHOI_NGHIEP.html; TAM_LY_UNG_DUNG.html; PHAT_TRIEN_BEN_VUNG.html; VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html; LUAT_THUONG_MAI_QUOC_TE.html.
+
+PRIORITY 1 — FIXED HEIGHT FLIPCARDS: POTENTIAL CLIPPING WHEN TEXT WRAPS OR IS ENLARGED
+NLTTTC: .flip-card has height:170px (190px below520px), .flip-inner height:100%, .flip-face position:absolute; .flip-back strong uses .87rem/1.5. Content on either face cannot increase the card height.
+STKN: .flip-card height:150px; .flip-front/.flip-back absolute; review cards are three columns desktop and one column mobile. Long back-face text cannot influence sizing.
+TLUD: .flip-card and .flip-inner min-height:160px with absolutely positioned .flip-front/.flip-back. Although nominally min-height, the faces do not participate in normal sizing, so long answers still risk overflow.
+VHDD: .flip-card and .flip-inner min-height:190px; .flip-front/.flip-back absolute. Same intrinsic-size issue, aggravated by four desktop columns.
+Suggested implementation: display:grid on flip-inner, position:relative and grid-area:1/1 on both faces, height:auto, retain minimum comfortable height and existing rotateY/backface logic. Both faces then participate in maximum intrinsic size. Keep the interaction classes and all data answers unchanged. Root should coordinate shared/local CSS before implementing to avoid duplicate conflicting overrides.
+Acceptance: both faces fully readable at320/375/390/768/1280px, 200% text zoom, longest actual answer; flipping does not collapse layout, move content outside the border, or overlap following material. Verify through actual UI, not only scrollWidth heuristics.
+
+PRIORITY 1 — STKN MOBILE DIAGRAMS: TRANSFORMS SHRINK VISUALS WITHOUT FIXING LAYOUT WIDTH
+.venn max-width:520px; .circle absolute width190px; .c3 left165px. At<=640px .venn transform:scale(.78) with negative margin-bottom. This retains fixed child positions and creates a small text diagram; the lower circle extends to355px before scaling even when inner card width is narrower.
+.wheel width380px/height380px, absolute wheel buttons; scaled .82 and then .76 in later mobile override, with negative bottom margin. Fixed380px layout can still extend beyond its containing card; labels also become smaller.
+.empathy-grid stays three columns 1fr 90px 1fr at<=640px; narrow outer columns are unfavorable for16px text, long English labels and future user input.
+.opportunity-ring uses padding5rem, gap6rem desktop and absolute135px center; at<=900px gap5rem and padding1rem, only <=640px changes to linear list. Intermediate widths need collision verification.
+Suggested implementation: replace Venn/wheel with equivalent labeled grid/list layout at narrow widths; keep desktop diagrams and semantic categories. Use original center heading and all existing component labels. Do not simply set overflow:hidden, shrink font, or scale the diagram further. Make empathy map2columns with stakeholder spanning full width below700px, and1column at narrowest width if needed. Make opportunity ring an ordered central heading +4traits before center/trait collision.
+Acceptance: no horizontal document scroll, overlapping labels, clipped buttons or negative-margin collision at320–768px; each component remains visible and the academic relationship is communicated. Preserve diagram labels and model differences.
+
+PRIORITY 2 — NLTTTC TABLET FUNCTION WHEEL AND SOURCE BADGES
+.function-wheel has absolute250px .f-node boxes and150px center, min-height360px. The existing conversion to a stacked grid happens only below768px. At768–1024px, node center overlaps are plausible when inner width is restricted; verify actual card width.
+.source-ref explicitly white-space:nowrap/font-size:.7rem. Long references may push interactive heading rows wider than their container.
+Suggested fix: switch function wheel to a2column grid with center spanning both columns earlier, then1column mobile; references wrap naturally and remain secondary but legible. .interaction-head children need min-width:0.
+Acceptance: center and all four functions readable without intersection at768/820/900px and narrow column layouts. References remain attached to the exercise and do not truncate.
+
+PRIORITY 2 — AUTO-FIT GRID MINIMUMS AND ORGANIZERS
+TLUD .grid-auto/.flip-grid minmax(220px,1fr), .gallery minmax(230px,1fr); nested padding and text zoom can leave less than the declared minimum. Use minmax(min(100%,220px),1fr), zero intrinsic minimum on grid children. .matrix4 keeps three semantic columns even at520px,95px firstcolumn and .78rem font. Do not solve readability by shrinking text; consider a scrollable labeled matrix or mobile comparison cards, preserving header associations.
+LTMQT .flash-grid minmax(220px,1fr) shares the minimum-width risk. .match-row has minmax(180px,1fr)/minmax(220px,1.3fr) and switches only at640px; investigate at tablet or textzoom. .sort-item display:flex; .sort-actions margin-left:auto can squeeze long rule labels. Use a flexible label and nonshrinking controls; collapse to a second row where needed.
+PTBV .quiz-row.dual has fixed minimum250px for answer block and collapses at640px; check641–800px nested-card conditions. .goal-grid below640px remains two columns; long SDG labels should have natural height,16px body and no internal clipping. .map-card max-height85vh can leave a modal uncomfortably tall on landscape mobile; root should consider100dvh safe-area padding and keyboard interaction.
+Acceptance: reading text stays comfortable and containers expand; wide data tables stay scrollable within their own wrapper, not the whole document. Correct/incorrect feedback remains visibly associated with its prompt.
+
+PRIORITY 2 — STUDENT READING SURFACES
+STKN .interaction uses a near-black gradient, white text, broad shadow, and multiple inner dark translucent .sort-bank/.drop-zone/.source-prompt-stack/.source-exercise-brief blocks. These are large decorative panels rather than semantic dark categories.
+NLTTTC .goal-strip/.fact-ribbon/.signal-strip, .claim-rule, .market-map, .stepper-screen and .definition-hero use near-black/highcontrast decoration with yellow emphasis. PTBV .timeline-detail and .course-map-fab similarly stand out heavily.
+Suggested fix: targeted light surfaces using site palette(bg#F6F9FC, white surface, blue#2563EB, heading#1E40AF, body#1E293B, muted#475569, border#DCE6F0). Set descendant text/border colors coherently so existing white/yellow text does not become invisible. Retain dark black-hat card in Six Thinking Hats, category palettes in charts, and semantic correct/error states. No blanket color replacement.
+STKN .module-heading p spans a large width despite long prose. Root plans a shared reading-width rule; restrict prose to a comfortable line length without reducing space available to diagrams and tables.
+Acceptance: exercise distinction comes from border/heading/spacing, text contrast stays clear, multi-category meaning retained, no accidental loss of answer-state colors.
+
+PRIORITY 2 — SAFE EDITORIAL CANDIDATES (PRESERVE KNOWLEDGE AND ANSWERS)
+NLTTTC rendered-source paragraph: "Use exact 8-dimension table in Ch.2." Suggested: "Đối chiếu theo tám tiêu chí trong bảng ở Chương 2."
+NLTTTC h3 "Exact direction table" → "Bảng chiều tác động"; "Global compact deck" → "Thẻ ghi nhớ toàn môn".
+STKN: "Visual dùng nhãn Motivation / Creative Thinking Skills; prose của course dùng Task motivation / Creative thinking." → "Trong sơ đồ, hai thành phần được ghi là Motivation và Creative Thinking Skills; phần giải thích dùng tên Task motivation và Creative thinking." Keep both sets of source labels.
+STKN: "Thứ tự1–6 phải được giữ nguyên vì đây là cấu trúc của mô hình." → "Ôn theo thứ tự sáu cấp độ để theo dõi cách mô hình phát triển từ nhớ kiến thức đến tạo ra cái mới." Preserve all six labels and their order.
+STKN: "Không trộn visual này với4opportunity characteristics của Ch.6." → "Đây là bốn đặc điểm được trình bày ở Chương7; hãy đối chiếu với mô hình đặc điểm cơ hội ở Chương6." Preserve both chapter-specific formulations.
+STKN textarea placeholder "Bằng chứng theo cách bạn đang xây draft" → "Ghi bằng chứng hỗ trợ lập luận của bạn"; "Chọn một trong5source topics:..." → "Chọn một trong năm chủ đề:..." with the same five topics. Placeholder changes do not alter grading.
+TLUD heading "School visuals — bám sát nội dung bài recreation" → "Sơ đồ minh họa các trường phái tâm lý học". "Ambiguous recognition visual — unscored" → "Hình ảnh đa nghĩa — tự quan sát, không chấm điểm".
+VHDD: "Sáu detailed dimensions + low/high cues + exact country-score viewer." → "Khám phá sáu chiều văn hóa, dấu hiệu mức thấp/cao và điểm của các quốc gia." "2×2matrix + exact four-type summary." → "Ma trận2×2và bảng tóm tắt bốn loại văn hóa doanh nghiệp."
+LTMQT: "Comparison — chỉ dùng dimensions trong course" → "So sánh theo các tiêu chí trong học phần". "Pros listed — ‘CONS?’ remains unanswered" → "Ưu điểm và câu hỏi tự luyện về hạn chế". Maintain explanation that the source does not supply a model answer to the limitations prompt. "Enterprise A / VAT — organizer, không auto-kết luận" → "Tình huống Enterprise A/VAT — sắp xếp dữ kiện trước khi kết luận".
+Do not replace legitimate academic terms such as visual imagery, time draft, meaning in cognitive theory, or sources in ARES; these are content, not code artifacts.
+
+ACADEMIC UNCERTAINTIES — DO NOT AUTOCORRECT IN THIS UI PASS
+1) STKN "6cấp độ sáng tạo" lists Remembering/Understanding/Applying/Analysing/Evaluating/Creating. Confirm instructor framing before relabeling; same labels also appear in criticalthinking lessons.
+2) STKN chapter6 opportunity characteristics differ from chapter7 opportunity qualities. The current source explicitly distinguishes them; preserve that distinction and do not merge the models.
+3) STKN ARES uses "Evidences" in the instructor terminology; do not change answer keys while polishing surrounding Vietnamese prose.
+4) NLTTTC financial formulas, quotation convention, model signs and missing-direction cells require source-grounded finance review; all must remain unchanged during layout work.
+5) TLUD supplement operant matrix and source limitation/conflict notes must retain qualifiers; cosmetic changes cannot imply academically validated answers.
+6) LTMQT contemporary WTO institutions, proceedings and legal tests are time-dependent course/legal content. Preserve course framing/date notes and route to separate source-backed academic review if the user wants substantive correction.
+
+RECOMMENDED IMPLEMENTATION ORDER FOR TOMORROW
+A. Confirm root live evidence and reproduce actual issues, especially any flipcard clipping and absolute diagram overlap.
+B. Shared typography/header changes first, then local diagrams/cards above.
+C. Safe copy only, exact old/new mapping; do not mutate script blocks or data-/answer attributes.
+D. Verify each affected chapter on desktop/mobile, flip both faces and exercise controls, compare screenshots and existing preservation tests.
+Source review alone is not a pass/fail browser test. All predictions above need root evidence or tomorrow implementation verification.

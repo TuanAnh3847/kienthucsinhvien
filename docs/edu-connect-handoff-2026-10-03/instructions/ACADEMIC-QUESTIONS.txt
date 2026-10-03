@@ -1,0 +1,13 @@
+GIỚI HẠN HỌC THUẬT CẦN GIỮ TRONG PASS UI
+
+Audit chưa đối chiếu giáo trình gốc hoặc xác minh luật/tài chính hiện hành. Nếu nghi kiến thức sai, ghi quote/location/source cần bổ sung vào báo cáo; không coi polish là đã xác minh kiến thức.
+NLKT: Company A/B thiếu mapping cột; ngưỡng TSCĐ chưa có số; tài khoản112 có hai tên; Sep19 và18/9 khác nhau. Giữ qualifier, không chọn một bên.
+KTTC: giữ33events, định khoản, formulas và mãP&L01–60. Bài tự luyện thiếu lời giải, inventory chưa tự tính, treasury shares dùng giá trị ghi sổ người học nhập.
+KTQT: thiếu ký hiệu p31; Britain/America có đơn vị; Modern/Standard có caveat; factor-price chưa có lời giải. Review chỉCh1–4, không hứa đủ6chương.
+TCCN: thiếu salary/goals; Less than2.5 chưa gắn chắc ratio; giới hạn IRR; claimsStep2/3 chưa rõ;4health questions không mapA/B/C/D; Michelle/Jason thiếu lời giải. Six-position visual chưa xác định mapping/thứ tự; compounding có minh họa định tính.
+NLTTTC: thiếu direction cellsCh5/6; giữ formulas/signs/quotation convention. Maximing chỉ sửa typo sau kiểm đúng ngữ cảnh và guard, không đổi nhận định tài chính.
+STKN: framing six levels cần giảng viên xác nhận. Opportunity modelsCh6/7 khác nhau; creative4/5steps và BMC9/Barringer4 không gộp. ARES Evidences giữ đáp án; Myth/Facts là thảo luận; FPT/BMC/interview chưa có model answer.
+TLUD: S6file label không chứng minh đáp án đúng. Giữ S.F.3493/3492, forgetting curves định tính, caveat taste và Biological Foundation sáu tên. Deck chỉCh1–4/operant.
+VHDD: Toyota90% không chuẩn hóa100%; Hofstede4→5→6 và hai bối cảnh giữ; không khái quát quốc gia từ case; six guidelines không thành chuỗi nhân quả.
+LTMQT/NMLH: giữ case/rates/years/legal English và article uncertainty theo học phần; không cập nhật thể chế/điều luật hiện hành trong UI pass.
+PTBV: không biến Crisis→Conflict→Compromise thành quy trình tuyến tính. Coverage>92% chưa được audit tính đúng; giao thông xanh không đại diện tất cả chương trình.

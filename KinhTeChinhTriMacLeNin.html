@@ -80,6 +80,8 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 .flashcard-back { transform: rotateY(180deg); }
 .timeline-dot { width: 16px; height: 16px; background-color: #0d9488; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #0d9488; position: absolute; left: -8px; top: 6px; }
 </style>
+<link rel="stylesheet" href="/reading.css">
+<script defer src="/reading.js"></script>
 </head>
 <body class="edu-study-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -129,7 +131,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 </li>
 <li class="flex items-start">
 <span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
-<span><strong>Công cụ Tính toán (Chương 2, 3):</strong> Nhập số liệu vào Máy tính Lượng giá trị ($W$) và Tỷ suất thặng dư ($m'$). Trình duyệt sẽ giải thích step-by-step.</span>
+<span><strong>Công cụ Tính toán (Chương 2, 3):</strong> Nhập số liệu vào Máy tính Lượng giá trị (W) và Tỷ suất thặng dư (m′). Trình duyệt sẽ giải thích step-by-step.</span>
 </li>
 <li class="flex items-start">
 <span class="text-teal-500 mr-2 mt-0.5 font-bold">✓</span> 
@@ -319,7 +321,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
             <tbody>
                 <tr>
                     <td class="p-3 border-b font-bold">Năng suất LĐ</td>
-                    <td class="p-3 border-b border-l text-rose-600 font-bold">TỶ LỆ NGHỊCH (NS tăng $\to$ Giá trị giảm)</td>
+                    <td class="p-3 border-b border-l text-rose-600 font-bold">TỶ LỆ NGHỊCH (NS tăng → Giá trị giảm)</td>
                 </tr>
                 <tr>
                     <td class="p-3 border-b font-bold">Cường độ LĐ</td>
@@ -327,7 +329,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
                 </tr>
                 <tr>
                     <td class="p-3 font-bold">Mức độ phức tạp</td>
-                    <td class="p-3 border-l text-teal-700 font-bold">TỶ LỆ THUẬN ($L_{pt} = n \times L_{gd}$)</td>
+                    <td class="p-3 border-l text-teal-700 font-bold">TỶ LỆ THUẬN (L<sub>pt</sub> = n × L<sub>gd</sub>)</td>
                 </tr>
             </tbody>
         </table>
@@ -415,11 +417,11 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
     <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
         <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Mâu Thuẫn Công Thức Chung</h3>
-        <p class="text-sm text-stone-600 mb-3"><strong>Lưu thông HH giản đơn:</strong> $H - T - H$ (Mục đích: Giá trị sử dụng).</p>
-        <p class="text-sm text-rose-700 font-bold mb-3"><strong>Lưu thông Tư bản:</strong> $T - H - T'$ (Mục đích: Giá trị thặng dư $m$). $T' = T + m$.</p>
+        <p class="text-sm text-stone-600 mb-3"><strong>Lưu thông HH giản đơn:</strong> H - T - H (Mục đích: Giá trị sử dụng).</p>
+        <p class="text-sm text-rose-700 font-bold mb-3"><strong>Lưu thông Tư bản:</strong> T - H - T′ (Mục đích: Giá trị thặng dư m). T′ = T + m.</p>
         <div class="bg-stone-50 p-3 rounded border text-sm">
             <strong>Mâu thuẫn:</strong> Mua bán trên thị trường KHÔNG tạo ra giá trị mới, nhưng Tư bản lại không thể sinh lời nếu nằm ngoài thị trường. <br>
-            $\rightarrow$ <em>Chìa khóa giải quyết chính là Hàng hóa sức lao động.</em>
+            → <em>Chìa khóa giải quyết chính là Hàng hóa sức lao động.</em>
         </div>
     </div>
 
@@ -440,12 +442,12 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
         <table class="w-full text-sm text-left">
             <tbody class="divide-y">
                 <tr>
-                    <td class="p-4 bg-stone-50 font-bold w-1/3">Tư bản Bất biến ($c$)</td>
-                    <td class="p-4">Máy móc, nguyên liệu. Giá trị <strong>BẢO TỒN</strong> và chuyển nguyên vẹn vào SP. <em>KHÔNG tạo ra $m$.</em></td>
+                    <td class="p-4 bg-stone-50 font-bold w-1/3">Tư bản Bất biến (c)</td>
+                    <td class="p-4">Máy móc, nguyên liệu. Giá trị <strong>BẢO TỒN</strong> và chuyển nguyên vẹn vào SP. <em>KHÔNG tạo ra m.</em></td>
                 </tr>
                 <tr>
-                    <td class="p-4 bg-teal-50 text-teal-800 font-bold">Tư bản Khả biến ($v$)</td>
-                    <td class="p-4 bg-white">Tiền lương công nhân. Qua lao động trừu tượng, giá trị của nó <strong>TĂNG LÊN</strong>. <em>Là NGUỒN GỐC DUY NHẤT sinh ra $m$.</em></td>
+                    <td class="p-4 bg-teal-50 text-teal-800 font-bold">Tư bản Khả biến (v)</td>
+                    <td class="p-4 bg-white">Tiền lương công nhân. Qua lao động trừu tượng, giá trị của nó <strong>TĂNG LÊN</strong>. <em>Là NGUỒN GỐC DUY NHẤT sinh ra m.</em></td>
                 </tr>
             </tbody>
         </table>
@@ -471,9 +473,9 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
             </div>
         </div>
         <div class="grid grid-cols-2 gap-3 mb-4">
-            <div><label class="block text-xs font-bold mb-1">Giá trị thặng dư ($m$)</label><input type="number" id="calc-m-val" class="w-full border rounded px-2 py-1" value="400"></div>
-            <div><label class="block text-xs font-bold mb-1">Lương 1 người ($v$)</label><input type="number" id="calc-v-val" class="w-full border rounded px-2 py-1" value="200"></div>
-            <div class="col-span-2"><label class="block text-xs font-bold mb-1">Tổng quỹ lương ($V$) của công ty</label><input type="number" id="calc-V-total" class="w-full border rounded px-2 py-1" value="100000"></div>
+            <div><label class="block text-xs font-bold mb-1">Giá trị thặng dư (m)</label><input type="number" id="calc-m-val" class="w-full border rounded px-2 py-1" value="400"></div>
+            <div><label class="block text-xs font-bold mb-1">Lương 1 người (v)</label><input type="number" id="calc-v-val" class="w-full border rounded px-2 py-1" value="200"></div>
+            <div class="col-span-2"><label class="block text-xs font-bold mb-1">Tổng quỹ lương (V) của công ty</label><input type="number" id="calc-V-total" class="w-full border rounded px-2 py-1" value="100000"></div>
         </div>
         <button onclick="KTCT.calcSurplus()" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 rounded transition-colors">Đánh Giá Bóc Lột</button>
         <div id="res-surplus" class="mt-4 p-4 bg-stone-50 border border-stone-200 rounded text-sm hidden"></div>
@@ -483,15 +485,15 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
 <!-- Tích lũy tư bản -->
 <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
     <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Tích Lũy Tư Bản &amp; Hệ Quả</h3>
-    <p class="text-sm text-stone-600 mb-4">Thực chất là <em>tư bản hóa giá trị thặng dư</em> (lấy $m$ mua thêm $c$ và $v$ để mở rộng).</p>
+    <p class="text-sm text-stone-600 mb-4">Thực chất là <em>tư bản hóa giá trị thặng dư</em> (lấy m mua thêm c và v để mở rộng).</p>
     <div class="flex flex-col md:flex-row gap-4 text-sm">
         <div class="bg-stone-50 border border-stone-200 p-4 rounded-lg flex-1">
             <strong class="text-teal-700 block mb-1">Hệ quả 1: Cấu tạo hữu cơ (c/v) tăng</strong>
-            Phần vốn mua máy móc ($c$) ngày càng lớn hơn trả lương ($v$). Gây ra nạn thất nghiệp do máy móc thay người.
+            Phần vốn mua máy móc (c) ngày càng lớn hơn trả lương (v). Gây ra nạn thất nghiệp do máy móc thay người.
         </div>
         <div class="bg-stone-50 border border-stone-200 p-4 rounded-lg flex-1">
             <strong class="text-teal-700 block mb-1">Hệ quả 2: Tích tụ &amp; Tập trung TB</strong>
-            Doanh nghiệp nhỏ phá sản/sáp nhập. Tài sản xã hội tập trung vào số ít tài phiệt $\rightarrow$ Tạo tiền đề cho ĐỘC QUYỀN.
+            Doanh nghiệp nhỏ phá sản/sáp nhập. Tài sản xã hội tập trung vào số ít tài phiệt → Tạo tiền đề cho ĐỘC QUYỀN.
         </div>
     </div>
 </div>
@@ -520,7 +522,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
     </div>
 
     <div class="lg:col-span-2 bg-slate-800 text-white p-6 rounded-2xl shadow-sm">
-        <h3 class="font-bold text-lg text-teal-300 mb-6 border-b border-slate-700 pb-2">Tiến Hóa Các Hình Thức Tổ Chức (Từ thấp $\rightarrow$ cao)</h3>
+        <h3 class="font-bold text-lg text-teal-300 mb-6 border-b border-slate-700 pb-2">Tiến Hóa Các Hình Thức Tổ Chức (Từ thấp → cao)</h3>
         <div class="flex flex-col space-y-4 text-sm">
             <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">1. Cartel</div><div class="flex-1">Thỏa thuận giá/sản lượng lỏng lẻo. Vẫn độc lập SX &amp; Thương nghiệp.</div></div>
             <div class="flex gap-4 items-start"><div class="bg-teal-600 font-bold px-3 py-1 rounded">2. Syndicate</div><div class="flex-1">Độc lập SX, <strong>mất độc lập thương nghiệp</strong> (chung 1 ban quản trị mua/bán).</div></div>
@@ -589,7 +591,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
     <!-- Quan hệ lợi ích -->
     <div class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
         <h3 class="font-bold text-lg text-slate-800 mb-4 border-b pb-2">Giải Quyết Xung Đột Lợi Ích</h3>
-        <p class="text-sm text-stone-600 mb-4">Chuỗi lợi ích: <em>Cá nhân $\rightarrow$ Tập thể $\rightarrow$ Xã hội</em>. NN giải quyết mâu thuẫn bằng 4 bước:</p>
+        <p class="text-sm text-stone-600 mb-4">Chuỗi lợi ích: <em>Cá nhân → Tập thể → Xã hội</em>. NN giải quyết mâu thuẫn bằng 4 bước:</p>
         <ol class="list-decimal pl-5 text-sm space-y-2 font-semibold text-stone-800">
             <li>Bảo vệ lợi ích hợp pháp, khuyến khích làm giàu.</li>
             <li>Điều hòa lợi ích bằng luật (VD: Luật LĐ tránh ép lương).</li>
@@ -630,7 +632,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
                 <strong class="text-teal-700">1. Nền tảng số:</strong> Xây dựng Chính phủ điện tử, Kinh tế số. Ứng dụng AI, IoT.
             </div>
             <div>
-                <strong class="text-teal-700">2. Cơ cấu kinh tế:</strong> Giảm Nông nghiệp, tăng Công nghiệp/Dịch vụ. Nông nghiệp $\rightarrow$ Công nghệ cao.
+                <strong class="text-teal-700">2. Cơ cấu kinh tế:</strong> Giảm Nông nghiệp, tăng Công nghiệp/Dịch vụ. Nông nghiệp → Công nghệ cao.
             </div>
             <div>
                 <strong class="text-teal-700">3. Nguồn nhân lực:</strong> Yếu tố then chốt. Đổi mới giáo dục để vận hành hệ thống 4.0.
@@ -696,7 +698,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
             const resBox = document.getElementById('res-w');
             if (isNaN(c) || isNaN(v) || isNaN(m)) return;
             const W = c + v + m;
-            resBox.innerHTML = `Lượng giá trị $W$ = ${c} + ${v} + ${m} = <span class="text-teal-700 text-2xl font-black">${W}$</span>`;
+            resBox.innerHTML = `Lượng giá trị W = ${c} + ${v} + ${m} = <span class="text-teal-700 text-2xl font-black">${W}$</span>`;
             resBox.classList.remove('hidden');
         },
         calcM: function() {
@@ -706,7 +708,7 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
             const resBox = document.getElementById('res-m');
             if (isNaN(p) || isNaN(q) || isNaN(v) || v <= 0) return;
             const M = (p * q) / v;
-            resBox.innerHTML = `Tiền cần thiết $M$ = (${p} &times; ${q}) / ${v} = <span class="text-rose-700 text-2xl font-black">${M.toFixed(2)}$</span>`;
+            resBox.innerHTML = `Tiền cần thiết M = (${p} &times; ${q}) / ${v} = <span class="text-rose-700 text-2xl font-black">${M.toFixed(2)}$</span>`;
             resBox.classList.remove('hidden');
         },
         calcSurplus: function() {
@@ -721,9 +723,9 @@ body:has(#welcome-modal:not(.hidden)) { overflow: hidden; }
             
             resBox.innerHTML = `
                 <div class="mb-2"><strong class="text-rose-800">1. Tỷ suất GTTD (m'):</strong> ${m} / ${v} = <strong class="text-xl">${m_rate}%</strong> <br>
-                <em class="text-stone-500 text-xs">$\rightarrow$ Mức độ bóc lột: Công nhân làm 100 đồng cho mình thì làm ${m_rate} đồng không công cho tư bản.</em></div>
+                <em class="text-stone-500 text-xs">→ Mức độ bóc lột: Công nhân làm 100 đồng cho mình thì làm ${m_rate} đồng không công cho tư bản.</em></div>
                 <div class="border-t border-stone-200 pt-2"><strong class="text-rose-800">2. Khối lượng GTTD (M):</strong> ${m_rate}% &times; ${V} = <strong class="text-xl text-rose-700">${M_total}$</strong> <br>
-                <em class="text-stone-500 text-xs">$\rightarrow$ Tổng số tiền tư bản đút túi vào cuối chu kỳ.</em></div>
+                <em class="text-stone-500 text-xs">→ Tổng số tiền tư bản đút túi vào cuối chu kỳ.</em></div>
             `;
             resBox.classList.remove('hidden');
         }

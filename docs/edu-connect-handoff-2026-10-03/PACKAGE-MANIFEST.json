@@ -1,0 +1,235 @@
+{
+  "package_name": "EDU-CONNECT-Codex-handoff-2026-10-03",
+  "package_revision": 2,
+  "language": "vi",
+  "audit_base_sha": "5b0e619fb6838363a79dcb2966a6c138375a59ec",
+  "implementation_status": "PLAN_ONLY_NOT_IMPLEMENTED",
+  "production_deployment": "NOT_AUTHORIZED_IN_THIS_TASK",
+  "user_scope": "Agreed presentation issues; requested complete implementation plan/checklists packaged in one ZIP",
+  "prior_evidence": {
+    "desktop_viewport": [
+      1363,
+      936
+    ],
+    "theory_states": 82,
+    "practice_modes": 21,
+    "mobile_rendered": false,
+    "grading_tested": false,
+    "academic_sources_verified": false
+  },
+  "counts": {
+    "issues": 66,
+    "implementation_checklist": 66,
+    "theory_render_rows": 328,
+    "practice_render_rows": 84,
+    "home_render_rows": 4,
+    "total_render_rows": 416,
+    "copy_review_rows": 79,
+    "qa_rows": 51,
+    "preservation_rows": 24,
+    "practice_state_rows": 184,
+    "practice_sets_inventory_6_routes": 46
+  },
+  "planned_viewports": [
+    {
+      "width": 320,
+      "height": 740
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "width": 1366,
+      "height": 900
+    }
+  ],
+  "pending_note": "All AFTER checks unrun. Practice state rows include all known sets; random and saved-mistake sets require isolated fixtures and actual chosen question IDs.",
+  "entrypoint": "START-HERE.txt",
+  "files": [
+    {
+      "path": "ISSUE-REGISTER.csv",
+      "bytes": 38160,
+      "sha256": "125fbb3ca01d69c820711b983a3d4df3d21916c7904d3d5f1316acb74e369fd0"
+    },
+    {
+      "path": "ISSUE-REGISTER.json",
+      "bytes": 60559,
+      "sha256": "7e6b23ac7811c96312185b3727a36a7bf87e2e09caf45159f6af8a8b95ae0dad"
+    },
+    {
+      "path": "ISSUE-REGISTER.txt",
+      "bytes": 46839,
+      "sha256": "83c853630ad5c5c0d54e6470ad785382e175e506bde9ca0da99fc7f711267dfc"
+    },
+    {
+      "path": "PACKAGE-VALIDATION.json",
+      "bytes": 876,
+      "sha256": "124e98dfb203036e419f8a85b0b11d250a8cf6c1f3033aefc880392dbf251c5f"
+    },
+    {
+      "path": "ROUTE-STATE-MAP.csv",
+      "bytes": 3730,
+      "sha256": "a6022d77333bd4ae40a015a3d571a1a45ab2df6f8c037d6d0ee26769b09c09cb"
+    },
+    {
+      "path": "START-HERE.txt",
+      "bytes": 2389,
+      "sha256": "34b3832c940349a4128869f4a74c7ab382f91b08e89796fc41563fee40ecc97f"
+    },
+    {
+      "path": "baseline/CODEX-IMPLEMENT-EDU-CONNECT-2026-10-03.txt",
+      "bytes": 10685,
+      "sha256": "4086d3d56dcfcbb0d2ec0800d9bcd85a3c4c3dd985afce3c6a0f87f9b9fb189d"
+    },
+    {
+      "path": "baseline/EDU-CONNECT-audit-2026-10-03.pdf",
+      "bytes": 216981,
+      "sha256": "20214639f4ed7cad8e7e0724322dfb2d212e7359510b10654fdc95d4f323f111"
+    },
+    {
+      "path": "baseline/audit-verification-notes.json",
+      "bytes": 2773,
+      "sha256": "77416ba36196bd3b23b51ed28d99d297be379581e40e12ead8188f03237a0a47"
+    },
+    {
+      "path": "baseline/learner-copy-review.txt",
+      "bytes": 23443,
+      "sha256": "1bb14e302b0f93762728d678747f11f11397929954d76a44953a2a8de074abf3"
+    },
+    {
+      "path": "baseline/live-practice-audit.json",
+      "bytes": 26605,
+      "sha256": "3635200608688a87dc31bbfae34135767d3041924daceb04c900df99689401fa"
+    },
+    {
+      "path": "baseline/live-study-audit.json",
+      "bytes": 137050,
+      "sha256": "cccec4cc0a06aec5edf7f977c6e243ae515bc86c8bff32fa5bb3889dd42c25d3"
+    },
+    {
+      "path": "baseline/modern-source-review.txt",
+      "bytes": 12030,
+      "sha256": "3ac445654a633e48f70d4bc189e63f8ab2225e23529d59980f44bc570dc1faff"
+    },
+    {
+      "path": "baseline/practice-set-inventory.json",
+      "bytes": 33306,
+      "sha256": "4196b582ab28f60e2ce62017308640fc6f25d90253dee0a1239153472dd88585"
+    },
+    {
+      "path": "baseline/responsive-review.md",
+      "bytes": 12274,
+      "sha256": "6b38632ea768d74b8152377877585fbae26dfe650a4fb3b9e33ae0b3876239cc"
+    },
+    {
+      "path": "checklists/COPY-REVIEW-CHECKLIST.csv",
+      "bytes": 33125,
+      "sha256": "fd21c119d5d99a10482ab441d64d7ef71195089604440f07fd957e5f00ef5754"
+    },
+    {
+      "path": "checklists/HOW-TO-CLOSE-CHECKLISTS.txt",
+      "bytes": 2620,
+      "sha256": "ad536e14dd455a202651a5522edae9d265272a3eae8ec871d9f19e7c8c3a1b1e"
+    },
+    {
+      "path": "checklists/IMPLEMENTATION-CHECKLIST.csv",
+      "bytes": 21517,
+      "sha256": "11f0a6c5994be6bdde9bb750f83525914a70a9b4b6966aa110175853811a3288"
+    },
+    {
+      "path": "checklists/PRACTICE-STATE-CHECKLIST.csv",
+      "bytes": 57201,
+      "sha256": "a9765a5685baf532d3625dfd6082a8964e568f77238413be929ff8b24082c440"
+    },
+    {
+      "path": "checklists/PRESERVATION-CHECKLIST.csv",
+      "bytes": 7751,
+      "sha256": "21b27a51e23ced24681cc7b2e618157419b84090a6837d7095f0c2247c8d1e96"
+    },
+    {
+      "path": "checklists/QA-CHECKLIST.csv",
+      "bytes": 10277,
+      "sha256": "28414e7fa17ae9598ad0dde619c2ed3c2f4707a6042ea53eeb07228c838d88f1"
+    },
+    {
+      "path": "checklists/RENDER-COVERAGE-416.csv",
+      "bytes": 148318,
+      "sha256": "f2b669f59d48c23eed7e5b05b6da6e54261d059b39e4749db16a6f5c319e9080"
+    },
+    {
+      "path": "evidence/before/KTCT-formula.jpg",
+      "bytes": 283701,
+      "sha256": "87eb1a8385118a081156015d6ec95881b1953e5a7d79cb0117ed345d2347431d"
+    },
+    {
+      "path": "evidence/before/KTQT-intro.jpg",
+      "bytes": 115335,
+      "sha256": "09d1e4178abb83d1238c0dbed03fdbe708dffa702adb4dbc5bee99302842075a"
+    },
+    {
+      "path": "evidence/before/NLKT-flashcard.jpg",
+      "bytes": 80309,
+      "sha256": "c63a9d711597ca4be5788e58867f8a9da9d3f2815d41d69620b4f6179c5c76e7"
+    },
+    {
+      "path": "evidence/before/NLTTTC-chapter-offset.jpg",
+      "bytes": 95970,
+      "sha256": "ec93cd987de9ed32d47980dcb6dc6a8e4c3c76930799ae9353ae2b77ff223795"
+    },
+    {
+      "path": "evidence/before/NLTTTC-practice-overview.jpg",
+      "bytes": 104333,
+      "sha256": "0c7de275d2b96664db2c00bb9afad642f0c3de96a51b3279242a018771c5ba64"
+    },
+    {
+      "path": "evidence/before/NMLH-ch5.jpg",
+      "bytes": 297459,
+      "sha256": "89b1169dc82ad7125dff8f3f663ea2fa1475b04da437595471b30ff970377d0a"
+    },
+    {
+      "path": "evidence/before/NMLH-practice.jpg",
+      "bytes": 107766,
+      "sha256": "00aa91f58bd1297927af7c3117632b9dad4266eaf6f0efd26dcf2d644a0d4b45"
+    },
+    {
+      "path": "evidence/before/home.jpg",
+      "bytes": 133771,
+      "sha256": "459a56f3af1e5531299ee74a67006acfb54a27f2e4936881c7a63a6549de3e05"
+    },
+    {
+      "path": "instructions/ACADEMIC-QUESTIONS.txt",
+      "bytes": 2293,
+      "sha256": "8af8c3d6605509027a7d461c8c313fba20964fa7b07967c6c6bf64634257571e"
+    },
+    {
+      "path": "instructions/CODEX-TASK.txt",
+      "bytes": 2758,
+      "sha256": "0b6c14c28d2ff50d7ba99bccba8a5c850028cd1103b9f2fa4c24b6bf4d77b2d7"
+    },
+    {
+      "path": "instructions/COMPLETION-REPORT-TEMPLATE.txt",
+      "bytes": 1752,
+      "sha256": "05c1d0506491de2450f3cdc62bc5d06f253e5b53277c855b93440b1503f9bd86"
+    },
+    {
+      "path": "instructions/DESIGN-SPEC.txt",
+      "bytes": 3242,
+      "sha256": "86c1916efc63e0a96cf8c517d5d58cea2f73f771742a5cad177cf97a47afe46c"
+    },
+    {
+      "path": "instructions/IMPLEMENTATION-PLAN.txt",
+      "bytes": 8185,
+      "sha256": "6241d2cc6d48db2bc96d3ea2172223ccd8886de60c603b7c61ec2904629415da"
+    },
+    {
+      "path": "instructions/TEST-RUNBOOK.txt",
+      "bytes": 4911,
+      "sha256": "7ac9e5b1bb9f32af45194e477e68a033d009694e14d1335884f8639636819b68"
+    }
+  ]
+}

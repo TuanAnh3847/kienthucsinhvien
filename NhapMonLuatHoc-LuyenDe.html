@@ -39,6 +39,8 @@
 #practice-panel { scroll-margin-top: 96px; }
 </style>
 <link rel="stylesheet" href="/shared.css">
+<link rel="stylesheet" href="/reading.css">
+<script defer src="/reading.js"></script>
 </head>
 <body class="edu-practice-page bg-stone-50 text-slate-800 font-sans antialiased leading-relaxed">
 
@@ -178,7 +180,7 @@ function clearElement(element) {
 function createElement(tagName, className, text) {
   const element = document.createElement(tagName);
   if (className) element.className = className;
-  if (text !== undefined) element.textContent = safeText(text);
+  if (text !== undefined) element.textContent = typeof text === 'number' && Number.isFinite(text) ? String(text) : safeText(text);
   return element;
 }
 
@@ -239,11 +241,11 @@ function renderOverview() {
   const stats = document.getElementById('overview-stats');
   if (!stats) return;
   const chapter = exerciseSets.filter(s => s.category === 'chapter').length;
-  const quizQ = exerciseSets.filter(s => s.mode === 'mcq').reduce((sum,s) => sum + s.questions.length, 0);
+  const quizQ = new Set(exerciseSets.filter(s => s.mode === 'mcq').flatMap(s => s.questions.map(q => q.id))).size;
   clearElement(stats);
   [
     [chapter, 'bộ theo chương'],
-    [quizQ, 'câu trắc nghiệm']
+    [quizQ, 'câu trắc nghiệm riêng']
   ].forEach(([value, label]) => {
     const card = createElement('div', 'bg-white/10 rounded-xl p-4 border border-white/10');
     card.appendChild(createElement('div', 'text-2xl font-black', value));
@@ -281,7 +283,7 @@ function renderGrid(containerId, category) {
     const metrics = createElement('div', 'mt-5 grid grid-cols-3 gap-2 text-center text-xs');
     appendMetric(metrics, set.chapter, 'Chương');
     appendMetric(metrics, set.questions.length, 'Câu');
-    appendMetric(metrics, set.duration, 'Gợi ý', "'");
+    appendMetric(metrics, set.duration, 'Thời gian gợi ý', "'");
     article.appendChild(metrics);
     article.appendChild(createElement('button', 'mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-2.5 rounded-xl transition-colors', 'Mở bài luyện'));
     el.appendChild(article);

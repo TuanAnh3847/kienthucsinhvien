@@ -137,7 +137,38 @@
 
         button.title = chapter.mobileLabel;
     });
-    container.append(headerRow, desktopNav);
+    const chapterNavigation = element('div', 'edu-chapter-navigation');
+    const previousArrow = element('button', 'edu-chapter-arrow', '‹');
+    const nextArrow = element('button', 'edu-chapter-arrow', '›');
+    previousArrow.type = nextArrow.type = 'button';
+    previousArrow.setAttribute('aria-label', 'Cuộn tới các chương trước');
+    nextArrow.setAttribute('aria-label', 'Cuộn tới các chương sau');
+    previousArrow.setAttribute('aria-controls', 'nav-menu');
+    nextArrow.setAttribute('aria-controls', 'nav-menu');
+    function syncArrows() {
+        previousArrow.disabled = desktopNav.scrollLeft <= 1;
+        nextArrow.disabled = desktopNav.scrollLeft + desktopNav.clientWidth >= desktopNav.scrollWidth - 1;
+    }
+    function scrollChapters(direction) {
+        desktopNav.scrollBy({left:direction * desktopNav.clientWidth * .75, behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    }
+    previousArrow.addEventListener('click', () => scrollChapters(-1));
+    nextArrow.addEventListener('click', () => scrollChapters(1));
+    desktopNav.addEventListener('scroll', syncArrows, {passive:true});
+    chapterNavigation.append(previousArrow, desktopNav, nextArrow);
+    const pickerRow = element('div', 'edu-theory-picker');
+    const pickerLabel = element('label', 'edu-visually-hidden', 'Chọn chương');
+    const picker = element('select', 'edu-chapter-picker');
+    picker.id = 'edu-chapter-picker';
+    pickerLabel.htmlFor = picker.id;
+    chapters.forEach(chapter => {
+        const option = element('option', '', chapter.mobileLabel);
+        option.value = chapter.id;
+        picker.appendChild(option);
+    });
+    picker.addEventListener('change', () => switchTab(picker.value));
+    pickerRow.append(pickerLabel, picker);
+    container.append(headerRow, chapterNavigation, pickerRow);
     nav.appendChild(container);
     mount.replaceChildren(nav);
     mount.dataset.eduRoute = route;
@@ -157,7 +188,10 @@
     syncScrollState();
     window.addEventListener('resize', () => {
         if (activeTab) revealActiveTab();
+        syncArrows();
     });
+    document.fonts?.ready.then(syncArrows);
+    requestAnimationFrame(syncArrows);
 
     let activeTab = null;
     function revealActiveTab() {
@@ -199,10 +233,12 @@
             else button.removeAttribute('aria-current');
         });
         activeTab = tabId;
+        picker.value = tabId;
         revealActiveTab();
+        syncArrows();
 
         if (options.scroll !== false) {
-            const offset = desktopNav.getBoundingClientRect().height + 16;
+            const offset = Math.max(0, nav.getBoundingClientRect().bottom) + 24;
             const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset);
             const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             window.scrollTo({ top, behavior: options.behavior || (reducedMotion ? 'instant' : 'smooth') });

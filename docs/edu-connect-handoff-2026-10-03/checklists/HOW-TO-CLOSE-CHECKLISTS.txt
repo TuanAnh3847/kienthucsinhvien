@@ -1,0 +1,18 @@
+CÁCH ĐIỀN VÀ ĐÁNH DẤU HOÀN THÀNH
+
+IMPLEMENTATION: 66 issue đều có kết quả. VERIFIED_FIXED cần commit và evidence. VERIFIED_NO_FIX chỉ cho risk đã kiểm thực tế và UI đạt spec, kèm rationale. Guards PASS có thể ghi VERIFIED_FIXED với evidence. IMPLEMENTED chỉ có code, chưa nghiệm thu.
+RENDER-COVERAGE: 416 dòng cần after_status PASS sau khi xem hết body, font/heading/card/overflow/nav và interactions. Field không có component dùng N/A với note; overall PASS vẫn cần evidence. Dự đoán từ CSS không tính PASS.
+QA/PRESERVATION: PASS/FAIL/BLOCKED/NOT_RUN. Không dùng N/A cho gate bảo toàn hoặc coverage bắt buộc. Mọi exception có lý do và bằng chứng.
+COPY: EDITED_VERIFIED, PRESERVED_VERIFIED hoặc DUPLICATE_VERIFIED dẫn tới dòng đã xử lý. Nếu upstream không còn phrase, VERIFIED_NO_CHANGE kèm exact current context. Giữ nguyên candidate/source quote trong CSV, điền before/after ở cột riêng. Không xóa thuật ngữ hoặc qualifier chỉ vì là tiếng Anh.
+PRACTICE STATE: 184 dòng của 46 bộ/biến thể; điền mọi trạng thái hỗ trợ. Với bộ random/câu sai, ghi fixture và IDs thực tế. Empty mistakes được kiểm thêm trong QA. N/A timer cho bộ không countdown; guided case không autograde. Lock/retry/storage cần đối chiếu tính năng thực tế trước khi dùng N/A.
+
+Evidence là đường dẫn relative trong evidence/after hoặc review link đọc được. Tên gợi ý: ISSUE_ROUTE_STATE_WIDTH_ACTION.ext, ví dụ K01_KTCTMLN_ch2_390_calculator.png. Ghi viewport/zoom/commit cho ảnh; command/exit code/fixture cho log. Không lưu token, password hoặc thông tin tài khoản thật không cần thiết.
+Coverage có thể tham chiếu ảnh, video, contact sheet hoặc log kèm visual review; các lỗi đã sửa và VERIFIED_NO_FIX phải có ảnh riêng. Không bắt buộc 416 ảnh full-page, nhưng không được bỏ phần dưới trang.
+
+FULL_COMPLETE chỉ khi:
+1. Mọi issue và copy candidate đã xử lý, có evidence và allowlist chính xác.
+2. Đủ 416 render rows PASS, cùng targeted QA/zoom/breakpoints.
+3. Mọi bộ trắc nghiệm/case đã test, timer/storage/mistakes đúng khi có.
+4. Preservation/static/behavior gates PASS; không yếu hóa guards; diff sạch.
+5. Có trước/sau, branch/commit hoặc draft PR và báo cáo review được.
+Nếu thiếu gate, báo PARTIAL_WITH_BLOCKERS và mã issue. Checklist trong gói đều chưa chạy sau sửa, vì đây là bàn giao kế hoạch.

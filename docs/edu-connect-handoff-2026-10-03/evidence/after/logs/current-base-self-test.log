@@ -1,0 +1,24 @@
+PASS 404.html complete source
+PASS KE_TOAN_TAI_CHINH.html complete source
+PASS KINH_TE_QUOC_TE.html complete source
+PASS KTQT-LuyenDe.html complete source and bank
+PASS KinhTeChinhTriMacLeNin.html complete source
+PASS LTMQT-LuyenDe.html complete source and bank
+PASS LUAT_THUONG_MAI_QUOC_TE.html complete source
+PASS NGUYEN_LY_KE_TOAN.html complete source
+PASS NGUYEN_LY_THI_TRUONG_TAI_CHINH.html complete source
+PASS NLTTTC-LuyenDe.html complete source and bank
+PASS NguyenLyKeToan-LuyenDe.html complete source and bank
+PASS NhapMonLuatHoc-LuyenDe.html complete source and bank
+PASS NhapMonLuatHoc.html complete source
+PASS PHAT_TRIEN_BEN_VUNG.html complete source
+PASS SANG_TAO_KHOI_NGHIEP.html complete source
+PASS TAI_CHINH_CA_NHAN.html complete source
+PASS TAM_LY_UNG_DUNG.html complete source
+PASS TCCN-LuyenDe.html complete source and bank
+PASS VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html complete source
+PASS admin.html complete source
+PASS index.html complete source
+PASS privacy.html complete source
+PASS auth, Firebase, rules and routes unchanged
+PASS negative guards: completion IDs, numeric fact and pilot/finance answer mutations

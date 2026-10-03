@@ -22,8 +22,8 @@ let browser;
   await page.waitForTimeout(300);
   const name=route.slice(1)||'home';
   const item={route,widths:[],leakage:[],controls:[],errors};
-  for(const width of [1440,1366,390,375]) {
-   await page.setViewportSize({width,height:({1440:900,1366:768,390:844,375:812})[width]});
+  for(const width of [320,390,375,768,1366,1440]) {
+   await page.setViewportSize({width,height:({320:740,390:844,375:812,768:1024,1366:900,1440:900})[width]});
    await page.evaluate(()=>{window.scrollTo({top:0,behavior:'instant'});if(window.EduHeader)EduHeader.switchTab(EduHeader.config.defaultTab,{scroll:false,animate:false});});
    await page.waitForTimeout(250);
    await page.screenshot({path:path.join(out,`${name}-${width}-top.png`)});
@@ -33,14 +33,17 @@ let browser;
     continue;
    }
    assert.equal(await page.locator('.site-header-row').evaluate(e=>e.inert),false);
-   assert(await page.locator('#nav-menu [aria-current="page"]').evaluate(el=>{
+   if(await page.locator('#edu-chapter-picker').isVisible()) {
+    assert.equal(await page.locator('#edu-chapter-picker').inputValue(),await page.evaluate(()=>EduHeader.activeTab));
+   } else assert(await page.locator('#nav-menu [aria-current="page"]').evaluate(el=>{
     const r=el.getBoundingClientRect(),strip=el.parentElement.getBoundingClientRect();
     return r.left>=strip.left-2 && r.right<=strip.right+2;
    }),route+' active chapter stays in view after resize');
    await page.evaluate(()=>window.scrollTo({top:650,behavior:'instant'}));
    await page.waitForTimeout(250);
-   const sticky=await page.locator('#nav-menu').evaluate(e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,height:e.offsetHeight}));
-   assert(Math.abs(sticky.top)<2,route+' sticky strip must sit at viewport top');
+   const control=await require('./chapter-navigation.cjs').visibleChapterControl(page);
+   const sticky=await control.evaluate(e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,height:e.offsetHeight}));
+   assert(Math.abs(sticky.top)<2,route+' sticky strip or picker must sit at viewport top');
    assert.equal(await page.locator('.site-header-row').evaluate(e=>e.inert),true);
    await page.screenshot({path:path.join(out,`${name}-${width}-sticky.png`)});
    const chapters=await page.evaluate(()=>EduHeader.config.chapters.map(ch=>ch.id));

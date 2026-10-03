@@ -1,0 +1,23 @@
+EDU CONNECT — GÓI KẾ HOẠCH SỬA VÀ NGHIỆM THU CHO CODEX
+Bản đầy đủ 2026-10-03 · Ngôn ngữ làm việc: tiếng Việt
+
+Người dùng đã đồng ý các vấn đề trình bày được nêu và yêu cầu lập kế hoạch, đóng gói một ZIP để Codex triển khai toàn bộ. Đây là kế hoạch và bằng chứng trước sửa; chưa phải bản website đã sửa.
+
+CODEX: đọc và thực hiện các file theo thứ tự:
+1. instructions/CODEX-TASK.txt — yêu cầu triển khai và giới hạn.
+2. instructions/IMPLEMENTATION-PLAN.txt — các giai đoạn, phụ thuộc, điều kiện chuyển bước.
+3. instructions/DESIGN-SPEC.txt — thông số chữ, màu, card, navigation/mobile.
+4. ISSUE-REGISTER.txt hoặc .csv/.json — 66 mục sửa/kiểm tra/guard, mã ổn định, file gợi ý, cách nghiệm thu.
+5. checklists/ — điền kết quả thật, commit và evidence cho từng mục.
+6. baseline/ + evidence/before/ — JSON, review, PDF và ảnh trước sửa; giữ nguyên để đối chiếu.
+7. instructions/COMPLETION-REPORT-TEMPLATE.txt — báo cáo cuối, không chỉ nói đã xong.
+
+Phạm vi: homepage +12 môn/82tab lý thuyết +6route luyện tập/21mode. Ma trận render: 320x740,390x844,768x1024,1366x900 =416 trạng thái cần kiểm sau sửa. Một số component cần thêm breakpoint/zoom/landscape trong QA-CHECKLIST.
+Repo https://github.com/TuanAnh3847/kienthucsinhvien
+Web https://kienthucsinhvien.id.vn/
+Baseline audit 5b0e619fb6838363a79dcb2966a6c138375a59ec
+
+Chỉ merge main/deploy production khi người dùng chấp thuận riêng. Không cần xin lại việc sửa UI/copy an toàn trong nhánh được yêu cầu. Không bỏ môn, không tự thay học thuật/đáp án. Nếu môi trường chặn kiểm thử, ghi BLOCKED và tiếp tục phần độc lập; không biến phần chưa test thành PASS.
+
+Bản audit cũ trong baseline/CODEX-IMPLEMENT-EDU-CONNECT-2026-10-03.txt là tài liệu lịch sử. Nếu cách tổ chức gói hoặc số file khác, START-HERE và kế hoạch mới là entrypoint chính; phạm vi lỗi chi tiết từ source reviews vẫn phải xử lý đầy đủ.
+PACKAGE-MANIFEST.json ghi số lượng và SHA256 để xác nhận nội dung gói. CSV là UTF-8 BOM để mở tiếng Việt rõ trong Excel; TXT/JSON UTF-8.

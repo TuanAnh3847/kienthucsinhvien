@@ -1,0 +1,19 @@
+PASS /KTTC: chapters, titles, numeric tables, formulas, fields, answer/data attributes
+PASS /KTQT: chapter order, titles and fields; completion content checked separately
+PASS /KTCTMLN: chapters, titles, numeric tables, formulas, fields, answer/data attributes
+PASS /LTMQT: chapters, titles, numeric tables, formulas, fields, answer/data attributes
+PASS /NLKT: chapters, titles, numeric tables, formulas, fields, answer/data attributes
+PASS /NLTTTC: chapter order, titles and fields; completion content checked separately
+PASS /NMLH: chapters, titles, numeric tables, formulas, fields, answer/data attributes
+PASS /PTBV: chapters, titles, numeric tables, formulas, fields, answer/data attributes
+PASS /STKN: chapters, titles, numeric tables, formulas, fields, answer/data attributes
+PASS /TCCN: chapter order, titles and fields; completion content checked separately
+PASS /TLUD: chapter order, titles and fields; completion content checked separately
+PASS /VHDDTKD: chapters, titles, numeric tables, formulas, fields, answer/data attributes
+Running Academic Negative Guards...
+  PASS: TLUD Academic Negative Guards (contract checked; independent source status recorded in fixture provenance)
+  PASS: KTQT Academic Negative Guards (contract checked; independent source status recorded in fixture provenance)
+  PASS: TCCN Academic Negative Guards (contract checked; independent source status recorded in fixture provenance)
+  PASS: NLTTTC Academic Negative Guards & Quiz Consistency
+  PASS: Zero Public Builder / Source Leakage in Academic Targets
+PASS homepage cards (one reviewed class-neutral phrase) and unchanged Firebase short routes

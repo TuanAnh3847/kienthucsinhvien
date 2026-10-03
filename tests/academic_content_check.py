@@ -28,6 +28,12 @@ def expected_theory(file):
     for before,after in edits.get(file,[]) + code_fixes.get(file,[]):
         assert before in source, f'{file}: stale editorial entry {before}'
         source=source.replace(before,after)
+    # UI handoff edits have exact current-base records. The strict companion
+    # guard below covers all completed chapters, including historical gaps.
+    journal=root/'docs/edu-connect-handoff-2026-10-03/implementation/edit-journal.json'
+    if journal.exists():
+        for record in json.loads(journal.read_text(encoding='utf-8')):
+            if record['file']==file: source=source.replace(record['before'],record['after'])
     return source
 def finance_bank(source): return json.loads(re.search(r'<script id="question-data" type="application/json">([\s\S]*?)</script>',source)[1])
 def accounting_bank(source): return json.loads(re.search(r'const LOCAL_SETS = ([\s\S]*?);\r?\n',source)[1])
@@ -57,6 +63,8 @@ def check_frozen_completion(file, source):
     assert frozen_snapshot(expected_theory(file), file) == frozen_snapshot(source, file), f'{file}: frozen chapter, heading or runtime changed'
 
 def check():
+    from handoff_preservation import check as check_current_base
+    check_current_base()
     routes=json.loads(current('firebase.json'))['hosting']['rewrites']
     assert len(routes)==12,'Theory route coverage changed'
     chapters=0

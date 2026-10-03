@@ -91,3 +91,6 @@ tests/.python/
 tests/*-results.json
 tests/screenshots/
 tests/__pycache__/
+
+# Full browser captures are delivered in the local QA archive; retain structured results in Git.
+docs/edu-connect-handoff-2026-10-03/evidence/after/**/*.png

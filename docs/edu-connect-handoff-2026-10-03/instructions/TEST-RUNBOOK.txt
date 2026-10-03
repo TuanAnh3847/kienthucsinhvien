@@ -1,0 +1,45 @@
+KIỂM THỬ SAU IMPLEMENT — CHẠY TRONG REPO
+
+Đây là các lệnh cần chạy sau sửa, chưa phải kết quả PASS của website. Xem tests/README.md về dependencies; ghi environment, browser/version, CDN, fixture, base SHA, command, exit code và log.
+Không chạy lại các script authoring như editorial-polish.cjs, round2-copy.cjs, add-reviewed-practice.cjs, final-copy-polish.cjs để validation: chúng sửa source.
+
+STATIC VÀ BẢO TOÀN
+python tests/html_check.py
+node --check auth.js
+node --check admin.js
+node --check edu-header.js
+node --check edu-study.js
+python tests/preservation_check.py 5b0e619fb6838363a79dcb2966a6c138375a59ec
+python tests/content_check.py --self-test
+python tests/practice_trace_check.py
+git diff --check
+
+preservation_check dùng actual implementation base nếu upstream đã khác; lưu so sánh với audit base. content_check mặc định checkpoint lịch sử2f03f26... cùng exact edit records. Không truyền5b0... vào cùng allowlist cũ một cách máy móc vì entry có thể stale.
+Thêm các ngoại lệ chính xác cho copy, output-format, numeric renderer và TOC khi guard có kiểm script/text liên quan: file, before/after, occurrence count, context, rationale. Mọi numeric-renderer exception phải chỉ ảnh hưởng hiển thị, không thay bank/chấm điểm. Giữ negative/self-tests; không bỏ cả chapter hoặc dùng regex ignore rộng.
+Guard lịch sử có completion exceptions ở bốn môn nên không chứng minh toàn bộ hiện tại giữ nguyên. Thêm snapshot đối chiếu nghiêm văn bản/scripts/datasets của tất cả82tab và6practicebanks với implementation base, chỉ normalize whitespace và những exact exceptions được ghi. IDs/thứ tự/constraints/công thức/số liệu/đáp án vẫn được khóa.
+Compile executable inline scripts và generated handlers; không coi script application/json là JavaScript. Browser audit/theory interactions đã có việc compile handlers. Ghi số lượng thực tế sau sửa, không hardcode37 của snapshot cũ.
+
+BROWSER VÀ BEHAVIOR — FIREBASE/STORAGE FIXTURES CÔ LẬP
+node tests/serve.cjs
+node tests/audit.cjs
+node tests/regression.cjs
+node tests/practice-behavior.cjs
+node tests/student-acceptance.cjs
+node tests/theory-interactions.cjs
+node tests/component-overflow.cjs
+node tests/nightly-qa.cjs
+
+Nếu suite chưa có320/390/768/1366 hoặc thiếu bốn pilot, mở rộng configuration/coverage và giữ assertions cũ. Nếu header đổi sang picker, assertion #nav-menu phải thành strip HOẶC picker đang hiển thị; không xóa navigation test. Student acceptance ban đầu chỉ có hai practice subjects, cần thêm bốn pilot.
+Filtered run chỉ để chẩn đoán. Final full run phải lưu log; không gọi filtered result là full PASS.
+Dùng browser capability được môi trường cho phép. Nếu chỉ CUA được phép, kiểm qua CUA; không chạy browser automation ngoài để né policy. Nếu repo test runner được phép ở Codex environment, chạy suite. Trường hợp chặn, ghi giới hạn và dùng khả năng browser được phép để cover, giữ static checks.
+
+RENDER VÀ HÀNH TRÌNH NGƯỜI HỌC
+Điền416renderrows: scroll tới cuối mỗi tab, mở toggles/details, thẻ hai mặt, modal và results. Không chỉ screenshot đầu trang. Kiểm thêm767/768,1279/1280,641/800/820/900/1024, phone landscape và200% text zoom theo QA.
+Điền184practice-state rows của46bộ/biến thể. Ghi random IDs và fixtures cho quick/weak/mistakes; xem empty mistakes riêng. So đáp án/scoring/state với baseline. Kiểm countdown chỉ nơi có thật; pilot có thời gian gợi ý.
+Kiểm signed-out links và signed-in fixture, tên account dài và online count bốn chữ số. Không đưa auth token/password vào evidence; không nộp quiz thử lên production.
+Ảnh production trước sửa có viewport1363x936; AFTER chính1366x900. Ghi kích thước thật, không claim pixel-identical khi khác viewport. Nếu cần đối chiếu cùng size, render baseline cô lập ở cùng dimensions.
+416rows cần kết quả và evidence reference: ảnh/video/log/contact sheet kèm visual review. Không cần416ảnh full-page riêng, nhưng mỗi lỗi đã sửa/VERIFIED_NO_FIX phải có ảnh và mọi body phải được xem.
+
+PHÂN BIỆT METRICS VỚI LỖI THỰC TẾ
+scrollHeight>clientHeight chưa đủ chứng minh text bị cắt. Đo actual text bounds, nhìn border/glyphs và cả hai mặt thẻ. NMLHCh5 đã có padding overflow nhưng actual text desktop còn vừa.
+Phân biệt page overflow với wrapper cuộn bảng có chủ đích. Chụp sau fonts/animation ổn định; kiểm labels, đơn vị, quan hệ cột và thử keyboard/touch. Mobile source review không thay render PASS.

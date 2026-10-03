@@ -2,6 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { chromium } = require('playwright');
+const {chooseChapter} = require('./chapter-navigation.cjs');
 const fixture = fs.readFileSync(path.join(__dirname, 'firebase-fixture.js'), 'utf8');
 const root = path.resolve(__dirname, '..');
 const subjects = [
@@ -94,10 +95,10 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             const options = contract.config.chapters.map(chapter => chapter.id);
             assert.equal(await page.evaluate(()=>window.EduHeader.activeTab),contract.config.defaultTab);
             assert.equal(await page.locator('#'+contract.config.defaultTab).evaluate(el=>el.classList.contains('animate-fade-in')),false,'initial tab must not animate');
-            for (const width of [375,768,1280,1440]) {
+            for (const width of [320,390,375,767,768,1280,1366,1440]) {
                 await page.setViewportSize({width,height:812});
                 for (const id of options) {
-                    await page.locator(`#nav-menu [data-edu-tab="${id}"]`).click();
+                    await chooseChapter(page,id);
                     assert(await page.locator('#'+id).isVisible(),file+' chapter '+id);
                     assert.equal(await page.locator(`#nav-menu [data-edu-tab="${id}"]`).getAttribute('aria-current'),'page');
                     assert.equal(await page.evaluate(()=>window.EduHeader.activeTab),id);
@@ -107,7 +108,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
                     await checkLayout(page,file+' '+width+' '+id);
                 }
                 assert.equal(await page.locator('#mobile-nav').count(),0,'no chapter dropdown');
-                assert(await page.locator('#nav-menu').isVisible(),'chapter strip at every width');
+                assert(await page.locator('#nav-menu').isVisible() || await page.locator('#edu-chapter-picker').isVisible(),'chapter strip or native picker at every width');
             }
             if (file === 'KINH_TE_QUOC_TE.html') {
                 const replay = await page.evaluate(async () => {
@@ -150,7 +151,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             assert.deepEqual(page.errors,[]);
             assert.equal(await page.evaluate(()=>__firebaseTest.authListenerCount()),1,'shared auth only');
             await page.setViewportSize({width:375,height:812});
-            await page.locator(`#nav-menu [data-edu-tab="${options[0]}"]`).click();
+            await chooseChapter(page,options[0]);
             await page.waitForTimeout(500);
             await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
             await page.screenshot({path:path.join(__dirname,'screenshots',file.replace('.html','')+'-mobile.png')});
@@ -170,7 +171,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             assert.equal(await zone.locator('.drag-item').count(),1);
             await page.locator('#equation-classifier').getByRole('button',{name:'Làm lại',exact:true}).click();
             assert.equal(await page.locator('.drop-zone .drag-item').count(),0);
-            await page.locator('#nav-menu [data-edu-tab="ch5"]').click();
+            await chooseChapter(page,'ch5');
             await page.locator('#physical-choices button').first().click();
             assert((await page.locator('#physical-feedback').innerText()).trim().length > 0);
             assert.deepEqual(page.errors,[]);
@@ -332,7 +333,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             try {
                 const firstInput=Object.keys(values)[0];
                 const id=await page.locator('#'+firstInput).evaluate(e=>e.closest('.tab-content').id);
-                await page.locator(`#nav-menu [data-edu-tab="${id}"]`).click();
+                await chooseChapter(page,id);
                 for(const [input,value] of Object.entries(values)) await page.locator('#'+input).fill(value);
                 await page.evaluate(code=>window.eval(code),invoke);
                 const result = await page.locator('#'+output).innerText();

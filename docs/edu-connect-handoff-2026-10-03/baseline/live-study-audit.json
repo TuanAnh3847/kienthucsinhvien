@@ -1,0 +1,5380 @@
+[
+  {
+    "route": "/NLKT",
+    "tab": "Ch.1: Introduction",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Introduction to Accounting",
+    "height": 5884.40625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Bản đồ chương: từ quan sát đến thông tin"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Accounting — định nghĩa theo Luật Kế toán"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Hai chức năng được nhấn mạnh"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Đầu vào đo lường"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Giá trị tính toán (1.000 đồng)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Kế toán phục vụ ai?"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Yêu cầu thông tin kế toán"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Trách nhiệm kế toán"
+      }
+    ],
+    "navContentWidth": 1362,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLKT",
+    "tab": "Ch.2: Financial Statements",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Financial Statements",
+    "height": 4236.046875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Bốn loại thông tin trên báo cáo tài chính"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Financial position"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Financial performance"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Cash flows"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Notes"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Statement of Financial Position — cấu trúc & cân bằng"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Use 1"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Use 2"
+      }
+    ],
+    "navContentWidth": 1367,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLKT",
+    "tab": "Ch.3: Accounts & Double Entry",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Accounts and Double Entries",
+    "height": 4832.015625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "T-account: Debit trái, Credit phải — nhưng không đồng nghĩa tăng/giảm"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Account balance"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Temporary vs permanent"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Revenue / other income"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Expenses"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Income summary"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "T-account mô phỏng"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Double entry & journalizing"
+      }
+    ],
+    "navContentWidth": 1365,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLKT",
+    "tab": "Ch.4: Measurement",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Measurement Method",
+    "height": 3622.78125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Measurement: biểu hiện đối tượng kế toán bằng tiền"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Nguyên tắc ảnh hưởng"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Yếu tố ảnh hưởng"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Fixed assets — cost, depreciation, carrying amount"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Perpetual vs Periodic inventory"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Specific identification"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "FIFO"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Weighted Average"
+      }
+    ],
+    "navContentWidth": 1362,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLKT",
+    "tab": "Ch.5: Documents & Books",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: Accounting Documents, Accounting Books and Physical Counts",
+    "height": 4348.96875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Accounting documents"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Required contents"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Valid vs legal-compliance"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "By content"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "By procedure"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "By use"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "By place made"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Document flow & 5 bước luân chuyển"
+      }
+    ],
+    "navContentWidth": 1362,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLKT",
+    "tab": "Ch.6: Manufacturer",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: Recording Business Transactions in a Manufacturer",
+    "height": 4830.21875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Raw materials & fixed assets"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Account 152 — Raw materials"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Fixed assets — 211 / 213 / 214"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Payroll & deductions — 334 / 338"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Payable to employee"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Production cost → finished goods"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "621 — Direct materials"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "622 — Direct labor"
+      }
+    ],
+    "navContentWidth": 1363,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLKT",
+    "tab": "Chart of Accounts",
+    "chapter": "coa",
+    "clippingCandidates": [],
+    "heading": "Chart of Accounts Lookup",
+    "height": 11389.03125,
+    "moduleHeadings": [],
+    "navContentWidth": 1362,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLKT",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Review: Formula, Rules & Compact Review",
+    "height": 3344.5,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Formula & Rule Sheet"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "Debit / Credit Master Sheet"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "20px",
+        "text": "10 điểm dễ nhầm"
+      }
+    ],
+    "navContentWidth": 1358,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTTC",
+    "tab": "Ch.1: Main Transactions",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Accounting for Main Business Transactions in Enterprises",
+    "height": 10078.234375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "1A · Inventory & Tools/Supplies"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Inventory tools — worksheet + NRV allowance"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "1B · Fixed Assets"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "1C · Payroll & salary deductions"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "1D · Manufacturing cost & finished goods"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "1E · Sales & revenue deductions"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Inventory & tools — purchase, issue và allowance"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Fixed assets — acquisition, depreciation, disposal"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 31,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "Interactive"
+      },
+      {
+        "font": "12.8px",
+        "text": "Method"
+      },
+      {
+        "font": "12.8px",
+        "text": "Ghi chú và các bước thực hành"
+      },
+      {
+        "font": "12.8px",
+        "text": "Quantity"
+      },
+      {
+        "font": "12.8px",
+        "text": "Cost / unit"
+      },
+      {
+        "font": "12.8px",
+        "text": "NRV / unit"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTTC",
+    "tab": "Ch.2: Investments",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Accounting for Investments",
+    "height": 4217.28125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Sơ đồ tài khoản các khoản đầu tư tài chính"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Voting-right threshold visual"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Investment interactions"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Account-flow gallery"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Key account behavior · Chapter 2"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Theo dõi nghiệp vụ theo thời gian"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Structured Các bảng dữ liệu · Chapter 2"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Quick review · Chapter 2"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 10,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Voting rights (%)"
+      },
+      {
+        "font": "12.8px",
+        "text": "Contractual control exists"
+      },
+      {
+        "font": "12.8px",
+        "text": "Joint control exists"
+      },
+      {
+        "font": "12.8px",
+        "text": "Purpose / factsPurchased for resale to earn gainsTerm deposit / bond / loan intended to be held to maturityControl of investee20%–<50%, no control/joi"
+      },
+      {
+        "font": "12.8px",
+        "text": "Purchase consideration"
+      },
+      {
+        "font": "12.8px",
+        "text": "Transaction fee"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTTC",
+    "tab": "Ch.3: Receivables & Payables",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Accounting for Receivables and Payables / Payments",
+    "height": 5537,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Receivables & payables — the dual-balance warning"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "131 / 331 Balance Splitter"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Bad-debt lifecycle — 2293"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "VAT — 133 and 3331 stay distinct"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Current CIT — provisional vs final"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Core account flows"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Key account behavior · Chapter 3"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Scenario sorter — receivable/payable/tax/borrowing/deposit"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 8,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "131 balances (e.g. 100,-90,140)"
+      },
+      {
+        "font": "12.8px",
+        "text": "331 balances (e.g. 410,-200,-420)"
+      },
+      {
+        "font": "12.8px",
+        "text": "Required allowance"
+      },
+      {
+        "font": "12.8px",
+        "text": "Existing allowance"
+      },
+      {
+        "font": "12.8px",
+        "text": "EventPurchase with deductible input VATSale with output VATOffset deductible input VATVAT refunded by StateNon-deductible input VATSales return / allo"
+      },
+      {
+        "font": "12.8px",
+        "text": "Provisional CIT"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTTC",
+    "tab": "Ch.4: Other Activities & Result",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Other Activities and Determination of Business Results",
+    "height": 3735.1875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Other activities — 711 vs 811"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "711 vs 811 Scenario Sorter"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Account 911 — closing board"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Profit bridge — Công thức chain"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Key account behavior · Chapter 4"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Dữ liệu thực hành · Chapter 4"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Quick review · Chapter 4"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 14,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Tình huốngGain on asset contribution revaluationContract penalty receivedRecovery of written-off receivableGift/donation receivedCarrying amount/dispo"
+      },
+      {
+        "font": "12.8px",
+        "text": "Proceeds"
+      },
+      {
+        "font": "12.8px",
+        "text": "Carrying amount + disposal costs"
+      },
+      {
+        "font": "12.8px",
+        "text": "Sales"
+      },
+      {
+        "font": "12.8px",
+        "text": "Sales deductions"
+      },
+      {
+        "font": "12.8px",
+        "text": "COGS"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTTC",
+    "tab": "Ch.5: Equity",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: Equity",
+    "height": 4563.75,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Equity structure"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Owner-capital transaction flows"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Share Issue Splitter"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Treasury shares — Account 419 lifecycle"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Retained earnings timeline"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Equity SFP Preview"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Key account behavior · Chapter 5"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Quick review · Chapter 5"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 14,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Shares issued"
+      },
+      {
+        "font": "12.8px",
+        "text": "Par value / share"
+      },
+      {
+        "font": "12.8px",
+        "text": "Issue price / share"
+      },
+      {
+        "font": "12.8px",
+        "text": "Issuance costs"
+      },
+      {
+        "font": "12.8px",
+        "text": "EventPurchaseReissueShare dividend using treasury sharesCancellation"
+      },
+      {
+        "font": "12.8px",
+        "text": "Carrying amount / cost"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTTC",
+    "tab": "Ch.6: Financial Statements",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: Financial Statements",
+    "height": 5402.3125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Financial statements — what the set contains"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "6A · Statement of Profit or Loss"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "6B · Statement of Financial Position"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "6C · Statement of Cash Flows"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "6D · Notes to the Financial Statements"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Structured financial-statement Các bảng dữ liệu"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Quick review · Chapter 6"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 18,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "01 Sales"
+      },
+      {
+        "font": "12.8px",
+        "text": "02 Sales deductions"
+      },
+      {
+        "font": "12.8px",
+        "text": "11 COGS"
+      },
+      {
+        "font": "12.8px",
+        "text": "21 Financial revenues"
+      },
+      {
+        "font": "12.8px",
+        "text": "22 Financial expenses"
+      },
+      {
+        "font": "12.8px",
+        "text": "25 Selling expenses"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTTC",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Ôn tập toàn môn / Whole-course Review",
+    "height": 8339.171875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Master Chart of Accounts Navigator"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Dr / Cr Pattern Board"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Formula & Method Deck"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Confusion Matrix"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Whole-course Flow Review Map"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "nội dung ôn tập"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "19.2px",
+        "text": "Gợi ý tự luyện"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 246,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Search"
+      },
+      {
+        "font": "12.8px",
+        "text": "ChapterAllCh.1Ch.2Ch.3Ch.4Ch.5Global"
+      },
+      {
+        "font": "12.8px",
+        "text": "Role contains"
+      },
+      {
+        "font": "12px",
+        "text": "Vai trò: Asset"
+      },
+      {
+        "font": "12px",
+        "text": "Nguyên tắc ghi nhận & định khoản: Cash receipts increase; cash payments decrease; used throughout exercises."
+      },
+      {
+        "font": "12px",
+        "text": "Chương: Global"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TCCN",
+    "tab": "Ch.1: Overview",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Overview of Personal Finance",
+    "height": 7357.1875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Tài chính cá nhân là gì?"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "10 Principles of Personal Finance"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Psychology & Behavioral Biases"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Money Personality Types"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Personal Financial Planning Process"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "S.M.A.R.T Financial Goals"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Interactive Learning Lab"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Mindmap & Flashcards"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 25,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Điền đủ 5 phần theo mục tiêu SMART. Chú ý các tiêu chí Attainable và Relevant."
+      },
+      {
+        "font": "12.48px",
+        "text": "Specific"
+      },
+      {
+        "font": "12.48px",
+        "text": "Measurable"
+      },
+      {
+        "font": "12.48px",
+        "text": "Attainable"
+      },
+      {
+        "font": "12.48px",
+        "text": "Relevant"
+      },
+      {
+        "font": "12.48px",
+        "text": "Timebound"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TCCN",
+    "tab": "Ch.2: Career",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Career Planning",
+    "height": 6423.671875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Job ≠ Career"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "From self-understanding to career plan"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Benefits vs Costs of Career Choices"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Income, education & total rewards"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Career planning — ý chính"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Interactive Career Lab"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Mindmap & Flashcards"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 25,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Dùng các trường dưới đây để ghi kế hoạch của bạn."
+      },
+      {
+        "font": "12.48px",
+        "text": "Values"
+      },
+      {
+        "font": "12.48px",
+        "text": "Professional interests"
+      },
+      {
+        "font": "12.48px",
+        "text": "Work-style reflection"
+      },
+      {
+        "font": "12.48px",
+        "text": "Benefits"
+      },
+      {
+        "font": "12.48px",
+        "text": "Costs"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TCCN",
+    "tab": "Ch.3: Products",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Financial Instruments and Banking Services",
+    "height": 5364.71875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Financial products ecosystem"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Savings products"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Consumer loans & credit cards"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Bancassurance & non-bank payment services"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Financial investment instruments"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Interactive Product Lab"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Mindmap & Flashcards"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 16,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Phân loại các ví dụ vào đúng nhóm tương ứng."
+      },
+      {
+        "font": "13.76px",
+        "text": "Book of saving / certificate of deposit"
+      },
+      {
+        "font": "13.76px",
+        "text": "Mortgage"
+      },
+      {
+        "font": "13.76px",
+        "text": "Credit card"
+      },
+      {
+        "font": "13.76px",
+        "text": "Agreement between a bank and an insurance company"
+      },
+      {
+        "font": "13.76px",
+        "text": "Digital wallet service"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TCCN",
+    "tab": "Ch.4: Financial Health",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Personal Financial Statement and Spending Action Plan",
+    "height": 10342.875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Personal Financial Statements"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Exact Balance-Sheet Examples"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Personal Cash Flow"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Exact Cash-Flow Examples"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Financial Ratios — “financial thermometers”"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Budgeting"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Needs, Wants & Spending Control"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Time Value of Money & Interest"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 19,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Nhập tổng số tiền theo đúng các nhóm tương ứng; dùng cùng một currency/unit."
+      },
+      {
+        "font": "12.48px",
+        "text": "Monetary assets"
+      },
+      {
+        "font": "12.48px",
+        "text": "Tangible assets"
+      },
+      {
+        "font": "12.48px",
+        "text": "Investment assets"
+      },
+      {
+        "font": "12.48px",
+        "text": "Short-term liabilities"
+      },
+      {
+        "font": "12.48px",
+        "text": "Long-term liabilities"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TCCN",
+    "tab": "Ch.5: Protection",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: Personal Financial Protection Plan",
+    "height": 9106.203125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Risk & Risk Management"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Personal Financial Protection Strategy"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "The Risk-Management Process"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Insurance: mechanism, terms & types"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Homeowner’s Insurance"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Automobile Insurance & Claims"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Health Insurance"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Life Insurance"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 23,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Phân loại các định nghĩa và ví dụ thành speculative risk hoặc pure risk."
+      },
+      {
+        "font": "13.76px",
+        "text": "Stock-market investment"
+      },
+      {
+        "font": "13.76px",
+        "text": "Fire"
+      },
+      {
+        "font": "13.76px",
+        "text": "Automobile accident"
+      },
+      {
+        "font": "13.76px",
+        "text": "Illness"
+      },
+      {
+        "font": "13.76px",
+        "text": "Theft"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TCCN",
+    "tab": "Ch.6: Borrow & Repay",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: Personal Loan and Repayment",
+    "height": 8741.359375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Tổ chức tín dụng Việt Nam — sơ đồ phân cấp"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "3 Lending Methods"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Borrowing principles, conditions & application"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Principal & Interest Classification"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Credit Application, Credit History & Credit Score"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Advantages & Disadvantages of Credit / Loans"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Credit Cards"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Billing Cycle / Grace-Period Example"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 25,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Match 3 Các phương pháp."
+      },
+      {
+        "font": "13.76px",
+        "text": "Single loan; Các ví dụ include car, house, studying"
+      },
+      {
+        "font": "13.76px",
+        "text": "Credit limit facility; Sơ đồ shows many single loans within the facility"
+      },
+      {
+        "font": "13.76px",
+        "text": "Borrowing within an overdraft limit on a payment account"
+      },
+      {
+        "font": "12.8px",
+        "text": "Chọn đủ exactly 4 conditions từ."
+      },
+      {
+        "font": "12.8px",
+        "text": "Phân loại đúng các nhận định vào từng nhóm tương ứng."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TCCN",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Course Review Toolkit",
+    "height": 6002.4375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Sơ đồ tổng quan môn học"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Formula Sheet"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Compare Center"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Ghi nhớ qua câu hỏi luyện tập"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Six Chapter Mindmaps"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Quick Flashcard Deck"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Các điểm lưu ý và phân biệt quan trọng"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTQT",
+    "tab": "Ch.1: Classical Trade",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Classical Theories of International Trade",
+    "height": 6742.78125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(55, 48, 163)",
+        "font": "21.6px",
+        "text": "Từ “xuất siêu” đến chi phí cơ hội"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Mercantilism"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Nhận xét"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Absolute Advantage"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Comparative Advantage"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Opportunity Cost Theory"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Điểm nối giữa các lý thuyết"
+      },
+      {
+        "color": "rgb(55, 48, 163)",
+        "font": "21.6px",
+        "text": "Mercantilist policies & classical assumptions"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 43,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.36px",
+        "text": "Development line"
+      },
+      {
+        "font": "13.6px",
+        "text": "Ví dụ lịch sử còn nhắc đến New World, barometer và microscope trong nhóm hình minh họa thời kỳ."
+      },
+      {
+        "font": "13.6px",
+        "text": "Quan điểm cốt lõi: của cải quốc gia phụ thuộc vào năng lực sản xuất hàng hóa; mọi quốc gia đều có thể hưởng lợi từ tự do thương mại; ủng hộ tự do kinh"
+      },
+      {
+        "font": "11.36px",
+        "text": "phần giải thích"
+      },
+      {
+        "font": "11.36px",
+        "text": "Required comparison"
+      },
+      {
+        "font": "11.36px",
+        "text": "Productivity map"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTQT",
+    "tab": "Ch.2: Modern / Standard",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Modern / Standard Theory of International Trade",
+    "height": 7005.59375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Increasing Opportunity Costs"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Community Indifference Curve"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "MRT vs MRS"
+      },
+      {
+        "color": "rgb(109, 40, 217)",
+        "font": "21.6px",
+        "text": "IOC PPF + MRT tại A/B"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Tại sao PPF cong lõm về gốc?"
+      },
+      {
+        "color": "rgb(109, 40, 217)",
+        "font": "21.6px",
+        "text": "CIC & declining MRS"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Cách đọc"
+      },
+      {
+        "color": "rgb(109, 40, 217)",
+        "font": "21.6px",
+        "text": "Autarky → world price → gains from trade"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 33,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.6px",
+        "text": "MRSyx = ΔY/ΔX = MUx/MUy, và giảm khi đi xuống dọc CIC trong mô tả."
+      },
+      {
+        "font": "11.36px",
+        "text": "Interactive graph"
+      },
+      {
+        "font": "11.36px",
+        "text": "Interactive graph"
+      },
+      {
+        "font": "11.36px",
+        "text": "Trade equilibrium"
+      },
+      {
+        "font": "13.6px",
+        "text": "Exchange isolate: giữ production tại A, trade 20X for 20Y → T, IC1→IC2. Specialization isolate: production A→B, trade 60X for 60Y → E; so E vs T = +40"
+      },
+      {
+        "font": "11.36px",
+        "text": "Taste differences"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTQT",
+    "tab": "Ch.3: Tariffs",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: International Trade Policy — Tariffs",
+    "height": 4825.09375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Tariff"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "3 tariff types"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "6 primary functions"
+      },
+      {
+        "color": "rgb(190, 18, 60)",
+        "font": "21.6px",
+        "text": "Tariff-type calculator"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Ví dụ tính toán minh họa"
+      },
+      {
+        "color": "rgb(190, 18, 60)",
+        "font": "21.6px",
+        "text": "Consumer Surplus & Producer Surplus"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Consumer surplus (CS)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Producer surplus (PS)"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 36,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.6px",
+        "text": "Thuế quan là thuế gián thu vì người nộp thuế không nhất thiết là người cuối cùng chịu thuế."
+      },
+      {
+        "font": "11.36px",
+        "text": "Calculator"
+      },
+      {
+        "font": "12.8px",
+        "text": "Type"
+      },
+      {
+        "font": "12.8px",
+        "text": "Commodity value"
+      },
+      {
+        "font": "12.8px",
+        "text": "Ad valorem rate (%)"
+      },
+      {
+        "font": "12.8px",
+        "text": "Specific amount / unit"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTQT",
+    "tab": "Ch.4: Non-Tariff",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Non-Tariff Trade Barriers and the New Protectionism",
+    "height": 6695.203125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(180, 83, 9)",
+        "font": "21.6px",
+        "text": "Tóm tắt trước khi vào non-tariff tools"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Classical recap"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Modern recap"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Tariff recap"
+      },
+      {
+        "color": "rgb(180, 83, 9)",
+        "font": "21.6px",
+        "text": "6 lý do giải thích việc dùng công cụ phi thuế quan"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "1. Tariffs are blunt"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "2. Multi-stage value chains"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "3. Industrial / strategic policy"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 47,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.36px",
+        "text": "Bridge from earlier chapters"
+      },
+      {
+        "font": "11.36px",
+        "text": "Why NTMs?"
+      },
+      {
+        "font": "11.36px",
+        "text": "Instrument map"
+      },
+      {
+        "font": "13.76px",
+        "text": "Import quota"
+      },
+      {
+        "font": "13.76px",
+        "text": "Export quota"
+      },
+      {
+        "font": "13.76px",
+        "text": "VER"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTQT",
+    "tab": "Ch.5: Resource Mobility",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: International Mobility of Resources",
+    "height": 3772.890380859375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "1. Di chuyển vốn quốc tế & Mô hình VMPK hai quốc gia"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Bản chất di chuyển vốn"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Mô hình VMPK hai quốc gia"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Trạng thái cân bằng lãi suất"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Sơ đồ mô hình VMPK hai quốc gia"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Tác động phân phối nội bộ"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "2. Bài tập định lượng di chuyển vốn"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "3. Đầu tư trực tiếp nước ngoài (FDI) & Đầu tư gián tiếp (FPI)"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 4,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.36px",
+        "text": "Core Theory"
+      },
+      {
+        "font": "11.36px",
+        "text": "Worked Numerical Case"
+      },
+      {
+        "font": "11.36px",
+        "text": "FDI vs FPI"
+      },
+      {
+        "font": "11.36px",
+        "text": "Labor Migration"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTQT",
+    "tab": "Ch.6: Integration",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: International Economic Integration",
+    "height": 2447.453125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "1. 5 Cấp độ hội nhập kinh tế quốc tế"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Bản chất 5 cấp độ (Slide 4-13)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Ma trận so sánh các cấp độ hội nhập"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "2. Lý thuyết Liên minh Thuế quan (Jacob Viner)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Hiệu ứng Tạo lập thương mại (Trade Creation)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Hiệu ứng Chuyển hướng thương mại (Trade Diversion)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "3. Bài tập tình huống 3 quốc gia (Slide 218)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "4. Điều kiện nâng cao hiệu quả & Các tác động động"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 10,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.36px",
+        "text": "Hierarchy of Integration"
+      },
+      {
+        "font": "11.36px",
+        "text": "Customs Union Theory"
+      },
+      {
+        "font": "12px",
+        "text": "• Diện tích (b): Hiệu ứng sản xuất (Production Effect) — tiết kiệm chi phí sản xuất xã hội."
+      },
+      {
+        "font": "12px",
+        "text": "• Diện tích (d): Hiệu ứng tiêu dùng (Consumption Effect) — gia tăng tiêu dùng ở giá rẻ."
+      },
+      {
+        "font": "12px",
+        "text": "Kết luận: Tạo lập thương mại LUÔN LUÔN làm gia tăng phúc lợi kinh tế."
+      },
+      {
+        "font": "12px",
+        "text": "• Diện tích (b + d): Lợi ích sinh ra từ tạo lập thương mại bộ phận."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTQT",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Global Review: International Economics",
+    "height": 5137.671875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(3, 105, 161)",
+        "font": "21.6px",
+        "text": "Theory & instrument map"
+      },
+      {
+        "color": "rgb(3, 105, 161)",
+        "font": "21.6px",
+        "text": "Các công thức cần nhớ"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Labor cost ↔ productivity"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Absolute-advantage condition"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Comparative-advantage ratio block"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Opportunity cost"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Marginal Rate of Substitution"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Factor intensity"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 67,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.36px",
+        "text": "Master comparison"
+      },
+      {
+        "font": "11.36px",
+        "text": "Formula sheet"
+      },
+      {
+        "font": "13.6px",
+        "text": "α=1/a; β=1/b."
+      },
+      {
+        "font": "11.36px",
+        "text": "Graph revision gallery"
+      },
+      {
+        "font": "13.44px",
+        "text": "Axes / labels / numbers: Axes: two goods; frontier"
+      },
+      {
+        "font": "13.44px",
+        "text": "Takeaway: PPF separates feasible full/efficient resource-use combinations"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NMLH",
+    "tab": "Ch.1: Nhà Nước",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Những Vấn Đề Cơ Bản Về Nhà Nước",
+    "height": 1771,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "🌍 Các Học Thuyết Về Nguồn Gốc Nhà Nước"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "⏳ Quá Trình Hình Thành Nhà Nước"
+      },
+      {
+        "color": "rgb(19, 78, 74)",
+        "font": "20px",
+        "text": "Khái niệm Nhà Nước"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18px",
+        "text": "Bản Chất Của Nhà Nước"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "5 Đặc Trưng Cốt Lõi Của Nhà Nước"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 3,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "Lần 1: Chăn nuôi tách khỏi trồng trọt (Tạo ra của cải dư thừa)."
+      },
+      {
+        "font": "12px",
+        "text": "Lần 2: Thủ công nghiệp tách khỏi nông nghiệp."
+      },
+      {
+        "font": "12px",
+        "text": "Lần 3: Thương nghiệp xuất hiện (Thương nhân ra đời, đẩy nhanh tích lũy tư bản). Đây là yếu tố then chốt phá vỡ công xã nguyên thủy."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NMLH",
+    "tab": "Ch.2: IGOs",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Tổ Chức Liên Chính Phủ (IGOs)",
+    "height": 1541,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "🌐 Khái Niệm IGOs"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "✨ 4 Đặc Điểm Cốt Lõi"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "Ma Trận Phân Loại IGOs (Classification)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "Địa Vị Pháp Lý Của IGOs (Legal Status)"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NMLH",
+    "tab": "Ch.3: PL Chung",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Những Vấn Đề Chung Về Pháp Luật",
+    "height": 2642,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 94, 89)",
+        "font": "18px",
+        "text": "Định Nghĩa Quy Phạm Pháp Luật (Việt Nam)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "🌱 Pháp Luật Tự Nhiên vs Thực Định"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "📚 Nguồn Của Pháp Luật (Sources of Law)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "24px",
+        "text": "Hệ Thống Văn Bản Quy Phạm Pháp Luật Việt Nam"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 1,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "(Trích: Khoản 1, Điều 3 Luật Ban hành văn bản quy phạm pháp luật 2015)."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NMLH",
+    "tab": "Ch.4: QPPL",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Quy Phạm Pháp Luật (Legal Norms)",
+    "height": 1340,
+    "moduleHeadings": [
+      {
+        "color": "rgb(19, 78, 74)",
+        "font": "18px",
+        "text": "Khái niệm QPPL"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18px",
+        "text": "Đặc điểm nhận diện."
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "24px",
+        "text": "Cơ Cấu 3 Bộ Phận Của Quy Phạm Pháp Luật."
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 2,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "Phân loại: Giả định giản đơn và giả định phức tạp."
+      },
+      {
+        "font": "12px",
+        "text": "Có 2 loại: Quy định dứt khoát (Definitive) và Quy định tùy nghi/cho phép (Permissive)."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NMLH",
+    "tab": "Ch.5: QH Pháp Luật",
+    "chapter": "ch5",
+    "clippingCandidates": [
+      {
+        "class": "border border-blue-200 rounded-xl overflow-hidden shadow-sm",
+        "client": 318,
+        "scroll": 370,
+        "text": "🏢 Pháp Nhân (Juridical Persons)\n            \n                Bao gồm: Cơ quan nhà nước, tổ chức kin"
+      }
+    ],
+    "heading": "Chương 5: Quan Hệ Pháp Luật PREMIUM",
+    "height": 1513.4998779296875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 94, 89)",
+        "font": "20px",
+        "text": "Khái niệm & Đặc điểm"
+      },
+      {
+        "color": "rgb(120, 53, 15)",
+        "font": "20px",
+        "text": "Sự kiện pháp lý (Legal Facts)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "24px",
+        "text": "3 Yếu Tố Cấu Thành Quan Hệ Pháp Luật"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "Phân Tích Sâu: Năng Lực Chủ Thể"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 8,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "Khả năng hành động theo luật, yêu cầu chủ thể khác thực hiện nghĩa vụ hoặc yêu cầu NN bảo vệ. (Gồm quyền tuyệt đối & tương đối)."
+      },
+      {
+        "font": "12px",
+        "text": "Bắt buộc phải làm (hoặc không được làm) để đáp ứng quyền của bên kia (giao tài sản, làm việc...). Phải chịu trách nhiệm nếu vi phạm."
+      },
+      {
+        "font": "12px",
+        "text": "Vật chất (Xe cộ, tiền bạc)."
+      },
+      {
+        "font": "12px",
+        "text": "Kết quả trí tuệ (Bản quyền bài hát)."
+      },
+      {
+        "font": "12px",
+        "text": "Giá trị nhân thân (Danh dự, nhân phẩm)."
+      },
+      {
+        "font": "12px",
+        "text": "Quyền đòi nợ."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NMLH",
+    "tab": "Ch.6: Vi Phạm",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: Vi Phạm Pháp Luật & Trách Nhiệm Pháp Lý PREMIUM",
+    "height": 1706,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "🚨 4 Dấu Hiệu Vi Phạm Pháp Luật"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "🧩 4 Bộ Phận Cấu Thành (Components)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "24px",
+        "text": "Ma Trận Phân Loại Lỗi (Types of Fault)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "Trách Nhiệm Pháp Lý & 4 Loại Chế Tài"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 8,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "VD: A cầm dao đâm thẳng vào tim B để giết B. A biết sẽ chết và thực sự muốn B chết."
+      },
+      {
+        "font": "12px",
+        "text": "VD: A bẫy chuột bằng điện ngoài ruộng, biết có thể giật chết người đi ngang nhưng kệ, ai chết ráng chịu."
+      },
+      {
+        "font": "12px",
+        "text": "VD: X là tay lái lụa, cố phóng nhanh vượt ẩu qua ngã tư vì tự tin tài lái xe của mình sẽ không gây tai nạn, nhưng cuối cùng vẫn tông người."
+      },
+      {
+        "font": "12px",
+        "text": "VD: Y tá tiêm nhầm thuốc cho bệnh nhân vì không kiểm tra kỹ nhãn chai. Y tá không nghĩ bệnh nhân sẽ chết, nhưng lẽ ra với chuyên môn nghiệp vụ thì phả"
+      },
+      {
+        "font": "12px",
+        "text": "Nghiêm khắc nhất, chỉ do Tòa án quyết định (Tù giam, tử hình)."
+      },
+      {
+        "font": "12px",
+        "text": "Bồi thường thiệt hại vật chất/tinh thần, khôi phục tình trạng ban đầu."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NMLH",
+    "tab": "Ch.7: HTPL VN",
+    "chapter": "ch7",
+    "clippingCandidates": [],
+    "heading": "Chương 7: Hệ Thống Pháp Luật Việt Nam PREMIUM",
+    "height": 1277,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "🧬 Cấu Trúc Bên Trong (Internal Structure)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "🎯 Phương Pháp Điều Chỉnh (Regulated Methods)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "Hiệu Lực Văn Bản Quy Phạm Pháp Luật"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTCTMLN",
+    "tab": "Ch.1: Mở đầu",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Đối tượng, Phương pháp và Chức năng",
+    "height": 1154,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "⏳ Sự Hình Thành & Phát Triển"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18px",
+        "text": "🎯 Đối tượng & Mục đích Nghiên cứu"
+      },
+      {
+        "color": "rgb(120, 53, 15)",
+        "font": "18px",
+        "text": "Trừu Tượng Hóa Khoa Học"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTCTMLN",
+    "tab": "Ch.2: Hàng hóa",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Hàng hóa, Thị trường và Các chủ thể",
+    "height": 1588,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "🏭 2 Điều Kiện Sản Xuất Hàng Hóa"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "📦 Hàng Hóa & 2 Thuộc Tính"
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "font": "16px",
+        "text": "Tính Chất Hai Mặt Của Lao Động"
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "font": "16px",
+        "text": "Nhân Tố Ảnh Hưởng Lượng Giá Trị"
+      },
+      {
+        "color": "rgb(17, 94, 89)",
+        "font": "24px",
+        "text": "🧮 Máy Tính & Định Luật Trọng Tâm"
+      },
+      {
+        "color": "rgb(94, 234, 212)",
+        "font": "20px",
+        "text": "Tiền Tệ: Nguồn Gốc & 5 Chức Năng"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 6,
+    "rawTeX": [
+      "\\to",
+      "$L_{pt} = n \\times L_{gd}$",
+      "$W$",
+      "$M$"
+    ],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "c ($)"
+      },
+      {
+        "font": "12px",
+        "text": "v ($)"
+      },
+      {
+        "font": "12px",
+        "text": "m ($)"
+      },
+      {
+        "font": "12px",
+        "text": "P ($/sp)"
+      },
+      {
+        "font": "12px",
+        "text": "Q (sp)"
+      },
+      {
+        "font": "12px",
+        "text": "V (vòng)"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTCTMLN",
+    "tab": "Ch.3: Giá trị thặng dư",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Giá Trị Thặng Dư",
+    "height": 1205,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18px",
+        "text": "Mâu Thuẫn Công Thức Chung"
+      },
+      {
+        "color": "rgb(94, 234, 212)",
+        "font": "18px",
+        "text": "Hàng Hóa Sức Lao Động"
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "font": "16px",
+        "text": "Tư Bản Bất Biến (c) vs Khả Biến (v)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18px",
+        "text": "Tích Lũy Tư Bản & Hệ Quả"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 3,
+    "rawTeX": [
+      "$H - T - H$",
+      "$T - H - T'$",
+      "$m$",
+      "$T' = T + m$",
+      "$c$",
+      "$m$",
+      "$v$",
+      "$m$",
+      "$m$",
+      "$v$",
+      "$V$",
+      "$m$"
+    ],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "Giá trị thặng dư ($m$)"
+      },
+      {
+        "font": "12px",
+        "text": "Lương 1 người ($v$)"
+      },
+      {
+        "font": "12px",
+        "text": "Tổng quỹ lương ($V$) của công ty"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTCTMLN",
+    "tab": "Ch.4: Độc quyền",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Cạnh Tranh & Độc Quyền\n            PREMIUM",
+    "height": 827,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18px",
+        "text": "Sự Hình Thành Độc Quyền"
+      },
+      {
+        "color": "rgb(94, 234, 212)",
+        "font": "18px",
+        "text": "Tiến Hóa Các Hình Thức Tổ Chức (Từ thấp $\\rightarrow$ cao)"
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "font": "16px",
+        "text": "5 Đặc Điểm Kinh Tế Của Độc Quyền (V.I. Lênin)"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTCTMLN",
+    "tab": "Ch.5: KTTT ĐHXHCN",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: KTTT Định Hướng XHCN\n        PREMIUM",
+    "height": 647,
+    "moduleHeadings": [
+      {
+        "color": "rgb(255, 255, 255)",
+        "font": "16px",
+        "text": "Đặc Trưng Cơ Bản (KTTT ĐHXHCN)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18px",
+        "text": "Giải Quyết Xung Đột Lợi Ích"
+      },
+      {
+        "color": "rgb(94, 234, 212)",
+        "font": "18px",
+        "text": "4 Trụ Cột Hoàn Thiện Thể Chế"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/KTCTMLN",
+    "tab": "Ch.6: CNH, HĐH",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: CNH, HĐH & Hội Nhập\n        PREMIUM",
+    "height": 790,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "CMCN 4.0 & Nội Dung Cốt Lõi Ở VN"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "20px",
+        "text": "Các Mô Hình CNH Trên Thế Giới"
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "font": "16px",
+        "text": "Hội Nhập KTQT: Cơ Hội vs Thách Thức"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLTTTC",
+    "tab": "Ch.1: Money & Finance",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: An Overview of Money and Finance",
+    "height": 7863.71826171875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Finance: phạm vi, nhánh và mục tiêu"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Money ≠ Wealth ≠ Income"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Từ barter đến electronic money"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Tiền thời kỳ đầu và thời thuộc địa"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "4 đặc tính của money"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "4 chức năng của money"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Unit of account: vì sao money làm bảng giá đơn giản hơn?"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Barter: chuỗi nhu cầu tương thích"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 1,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.12px",
+        "text": "Kéo thẻ, hoặc chạm thẻ rồi chạm vào bucket trên mobile."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLTTTC",
+    "tab": "Ch.2: Financial Markets",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Overview of Financial Markets",
+    "height": 8856.46875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Financial system: từ saver-lender đến borrower-spender"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Economic units, financial claims, marketability"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Hai con đường tài trợ"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Institutional arrangements in direct finance"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "4 chiều phân loại financial markets"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Financial instruments: contract → asset + liability/equity"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Bonds"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Common stock"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 14,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.76px",
+        "text": "Borrowers obtain funds directly from lenders in financial markets by selling securities."
+      },
+      {
+        "font": "13.76px",
+        "text": "Intermediary issues claims to SSUs, then uses funds to buy claims issued by DSUs — claim transformation."
+      },
+      {
+        "font": "13.12px",
+        "text": "DSU issues a claim directly to SSU."
+      },
+      {
+        "font": "13.6px",
+        "text": "Giúp nhà đầu tư dễ dàng chuyển đổi chứng khoán thành tiền mặt."
+      },
+      {
+        "font": "13.6px",
+        "text": "Phản ánh cung cầu và định giá tài sản tài chính minh bạch."
+      },
+      {
+        "font": "13.6px",
+        "text": "Dẫn vốn đến các doanh nghiệp và dự án có hiệu quả sinh lời cao."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLTTTC",
+    "tab": "Ch.3: Asymmetric Info",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Asymmetric Information and the Roles of Financial Intermediaries",
+    "height": 4700.75,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Tại sao intermediaries tồn tại?"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Before transaction vs After transaction"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Các công cụ tài chính"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Principal–Agent Problem"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Taxonomy và lý do tồn tại"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 2,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.6px",
+        "text": "Ví dụ trong tài chính: fees/commissions, information search, security distribution, registration, time và hassle."
+      },
+      {
+        "font": "13.12px",
+        "text": "Có nhiều công cụ phù hợp; hãy chọn dựa trên đặc điểm của tình huống."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLTTTC",
+    "tab": "Ch.4: Asset Demand",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Theory of Asset Demand",
+    "height": 3244.15625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Theory of Asset Demand"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Risk & diversification — cách trình bày trong bài"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Exact direction table"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Re = Σ pi × Ri"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Market relationships"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 4,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.12px",
+        "text": "Wealth = all economic resources. Necessity asset elasticity <1; luxury asset elasticity >1."
+      },
+      {
+        "font": "13.12px",
+        "text": "Higher expected return raises demand for that asset, other things unchanged."
+      },
+      {
+        "font": "13.12px",
+        "text": "Most investors are described as risk averse."
+      },
+      {
+        "font": "13.12px",
+        "text": "Liquidity = convert to cash easily at low fee."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLTTTC",
+    "tab": "Ch.5: Interest Rate",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: Interest Rate",
+    "height": 6323.0625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Định nghĩa và classifications"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "4 instruments trong credit market"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Chọn đúng Phương pháp"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Bài tập minh họa — tự hoàn thiện kết quả"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Yield to Maturity"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Bond market: price, rate, demand, supply"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Bảng dữ liệu"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Movement vs shift"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 9,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.12px",
+        "text": "P"
+      },
+      {
+        "font": "13.12px",
+        "text": "i (%/year)"
+      },
+      {
+        "font": "13.12px",
+        "text": "t (years)"
+      },
+      {
+        "font": "13.28px",
+        "text": "(a) P=100m, i=10%/year, t = 3 years / 3 months / 9 months → asks FV."
+      },
+      {
+        "font": "13.28px",
+        "text": "(b) P=10m; FV được ghi là “12tr”; t=6 months / 1 year → asks rate."
+      },
+      {
+        "font": "13.28px",
+        "text": "(c) FV=50m; i=12%/year; t=1 month → asks PV."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLTTTC",
+    "tab": "Ch.6: Exchange Rate",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: The Basics of Exchange Rates",
+    "height": 4292.734375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Foreign Exchange Rate & transaction categories"
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "font": "20px",
+        "text": "Foreign exchange rate"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Commodity currency, term currency, direct & indirect quotation"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Law of One Price, PPP & long-term factors"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Law of One Price"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Purchasing Power Parity (PPP)"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Bảng yếu tố dài hạn — một số chiều tác động chưa được xác định"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Exchange-rate systems & policy limit"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 4,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.12px",
+        "text": "Currency whose value is expressed in another currency."
+      },
+      {
+        "font": "13.12px",
+        "text": "Currency used to define another currency’s value."
+      },
+      {
+        "font": "13.12px",
+        "text": "Domestic currency = term currency; foreign currency = commodity currency."
+      },
+      {
+        "font": "13.12px",
+        "text": "Foreign currency = term currency; domestic currency = commodity currency."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/NLTTTC",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Theory Review",
+    "height": 5930.453125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Ôn toàn bộ lý thuyết theo “điểm dễ nhầm”"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Bảng công thức"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "20 cặp / nhóm dễ nhầm"
+      },
+      {
+        "color": "rgb(23, 37, 84)",
+        "font": "23.2px",
+        "text": "Global compact deck"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/LTMQT",
+    "tab": "Ch.1: Overview & WTO",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Overview of International Trade Law & Global Trade Regime",
+    "height": 9113.3125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Từ toàn cầu hóa đến Luật Thương mại Quốc tế"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Globalisation — mặt tích cực"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Globalisation — vấn đề"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Economic globalisation"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "International Trade"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "International Business"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "International Trade Law"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Dòng phát triển lịch sử: từ mạng lưới cổ đại đến GATT/WTO"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 20,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "Foundation"
+      },
+      {
+        "font": "11.52px",
+        "text": "History"
+      },
+      {
+        "font": "11.52px",
+        "text": "Economic lenses"
+      },
+      {
+        "font": "11.52px",
+        "text": "Mercantilist flow"
+      },
+      {
+        "font": "12px",
+        "text": "Sơ đồ minh họa quan hệ colonies/raw materials → England/manufactured goods."
+      },
+      {
+        "font": "11.52px",
+        "text": "Invisible Hand"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/LTMQT",
+    "tab": "Ch.2: MFN",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Non-Discrimination — Most-Favoured-Nation Treatment (MFN)",
+    "height": 4134.8125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "MFN: ý niệm, lý do và phạm vi"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Concept"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Why MFN?"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Legal bases"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "MFN violation checklist — đúng 4 yếu tố"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "“Like products” — accordion metaphor + 4 criteria"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Xem xét từng vụ việc, không có một định nghĩa WTO cố định"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Advantage · immediate/unconditional · de jure/de facto"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 10,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "MFN core"
+      },
+      {
+        "font": "11.52px",
+        "text": "4-factor checklist"
+      },
+      {
+        "font": "11.52px",
+        "text": "Likeness"
+      },
+      {
+        "font": "12px",
+        "text": "Brazilian coffee và coffee từ các nước khác được xem là like vì cùng mục đích và đặc điểm; geography/farming/planting conditions không được dùng làm c"
+      },
+      {
+        "font": "11.52px",
+        "text": "Advantage & discrimination"
+      },
+      {
+        "font": "11.52px",
+        "text": "Án lệ minh họa"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/LTMQT",
+    "tab": "Ch.3: NT",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Non-Discrimination — National Treatment (NT)",
+    "height": 5117.09375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "National Treatment: concept, objectives, scope"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Concept & objectives"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "GATT III.1 scope"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Căn cứ pháp lý"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "First sentence vs second sentence — tuyệt đối không trộn test"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "III.2 — First sentence"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "III.2 — Second sentence"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Like products"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 13,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "NT core"
+      },
+      {
+        "font": "11.52px",
+        "text": "Article III.2"
+      },
+      {
+        "font": "11.52px",
+        "text": "Decision tree"
+      },
+      {
+        "font": "11.52px",
+        "text": "Drag to order"
+      },
+      {
+        "font": "11.52px",
+        "text": "Trade effects & protective application"
+      },
+      {
+        "font": "11.52px",
+        "text": "Exact tax data"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/LTMQT",
+    "tab": "Ch.4: Trade in Goods",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Trade in Goods",
+    "height": 8217.640625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Nền tảng trade in goods"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "GATT 1994"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Basic principles listed"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Annex 1A grouping in this lesson"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "4 tariff types — ghép định nghĩa"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Ad valorem Bài tập minh họa"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Specific examples"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Combined exercise"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 18,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "GATT goods"
+      },
+      {
+        "font": "11.52px",
+        "text": "Tariff barriers"
+      },
+      {
+        "font": "11.52px",
+        "text": "Tariff reduction & concessions"
+      },
+      {
+        "font": "11.52px",
+        "text": "Schedule hierarchy"
+      },
+      {
+        "font": "11.52px",
+        "text": "Tariff imposition"
+      },
+      {
+        "font": "11.52px",
+        "text": "HS layer explorer"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/LTMQT",
+    "tab": "Ch.5: Dispute Settlement",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: WTO Dispute Settlement Mechanism",
+    "height": 7536.171875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Từ GATT XXII/XXIII đến WTO dispute settlement"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Legal basis identified"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "GATT 3-step structure"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "GATT XXIII nullification/impairment bases"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Ưu điểm của GATT"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Hạn chế của GATT"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "16px",
+        "text": "Panel history figure"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "25.6px",
+        "text": "Security, predictability và phạm vi tranh chấp"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 14,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "GATT foundation"
+      },
+      {
+        "font": "11.52px",
+        "text": "WTO aims & jurisdiction"
+      },
+      {
+        "font": "11.52px",
+        "text": "Complaint types"
+      },
+      {
+        "font": "11.52px",
+        "text": "Institutions"
+      },
+      {
+        "font": "12px",
+        "text": "Số liệu mô hình minh họa; không phải thông tin cập nhật hiện hành."
+      },
+      {
+        "font": "11.52px",
+        "text": "Procedure"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/VHDDTKD",
+    "tab": "Ch.1: Culture & CCM",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Culture and Cross-Cultural Management",
+    "height": 6654.578125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "1. What is culture?"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "2. Culture has layers"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "3. Determinants of culture"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "4. Why culture matters in business"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "5. Responding to cultural difference"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "6. EPRG — strategic dispositions"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "7. Standardize or adapt?"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 4,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.16px",
+        "text": "Symbols → Heroes → Rituals → Values; Practices cuts across the visible layers."
+      },
+      {
+        "font": "12.48px",
+        "text": "Điểm chung cần nhớ: biểu hiện dễ quan sát nằm ở ngoài/bề mặt; values, beliefs và assumptions nằm sâu hơn."
+      },
+      {
+        "font": "12.16px",
+        "text": "Phần hệ thống chính trị và kinh tế tập trung vào các khái niệm trọng tâm cần nắm vững."
+      },
+      {
+        "font": "13.6px",
+        "text": "Ba giá trị được nêu cộng thành 90%; hãy dùng đúng các số liệu này và không suy ra 10% còn thiếu."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/VHDDTKD",
+    "tab": "Ch.2: Cultural Differences",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Cultural Differences in International Business",
+    "height": 8661.59375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "1. Three cultural models"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "2. Hofstede dimension explorer"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "3. Trompenaars dimension explorer"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "4. GLOBE — 9 cultural attributes"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "5. Compare models without inventing equivalences"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "6. Similarities, differences & stereotype caution"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 2,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Country filter All 8 countriesAustraliaCanadaHong KongIndiaSingaporeSouth AfricaUnited KingdomUnited States"
+      },
+      {
+        "font": "12.8px",
+        "text": "Sort by CountryPower DistanceIndividualismMasculinityUncertainty AvoidanceLong Term OrientationIndulgence"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/VHDDTKD",
+    "tab": "Ch.3: Org Culture & Diversity",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Organizational Culture & Diversity",
+    "height": 6066.1875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "1. What is organizational culture?"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "2. Three levels"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "3. How culture forms — and what it does"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "4. National culture meets organizational culture"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "5. Four corporate cultures"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "6. Cultural diversity in MNCs"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 3,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.8px",
+        "text": "Authority axisEquityHierarchy"
+      },
+      {
+        "font": "12.8px",
+        "text": "Emphasis axisPersonTask"
+      },
+      {
+        "font": "12.48px",
+        "text": "Tiến trình phát triển chuyển dần từ trọng tâm nội địa / sản phẩm tập trung sang chiến lược toàn cầu, phân cấp có điều phối, nhạy bén văn hóa và hợp tá"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/VHDDTKD",
+    "tab": "Ch.4: Motivation",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Motivation Across Cultures",
+    "height": 7736.5625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "1. Motivation basics"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "2. Content vs process — theory map"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "3. Maslow across cultures"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "4. Herzberg Two-Factor Theory"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "5. Achievement Motivation"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "6. Process theories"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "7. Applied motivation across cultures"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 1,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.16px",
+        "text": "Job design = job content, methods used, and how the job relates to other jobs. Chất lượng đời sống công việc có mối liên hệ trực tiếp với văn hóa của "
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/VHDDTKD",
+    "tab": "Ch.5: Ethics, CSR & Sustainability",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: Ethics, Corporate Social Responsibility, and Sustainability",
+    "height": 4193.609375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "1. What is ethics?"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "2. Five recurring international-business issue areas"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "3. Roots of unethical behavior"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "4. Philosophical approaches"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "5. Five-step ethical decision process"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "6. Building ethical organizations"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 1,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.48px",
+        "text": "Desktop: kéo thả. Mobile/keyboard: dùng ↑ ↓ để đổi vị trí."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/VHDDTKD",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Global Review",
+    "height": 2877.734375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "Eight compact mindmap guides"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "Confusion Busters"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "Formula sheet"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "Flashcards"
+      },
+      {
+        "color": "rgb(23, 32, 51)",
+        "font": "20px",
+        "text": "Cross-chapter review path"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/PTBV",
+    "tab": "Ch.1: Foundations",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Overview of Sustainable Development",
+    "height": 5340.921875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Growth → Development → Sustainable Development"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Sustainable Development — định nghĩa & định hướng dài hạn"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "3-domain Indicator Framework"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Indicator Sorter"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "5 goals · 3 pillars · 5 principles"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Three-Pillar Matching"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Mindmap & Flashcards"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 24,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "Foundation 01"
+      },
+      {
+        "font": "11.52px",
+        "text": "Foundation 02"
+      },
+      {
+        "font": "11.52px",
+        "text": "Measurement"
+      },
+      {
+        "font": "13.44px",
+        "text": "GDP per capita adjusted for inequality"
+      },
+      {
+        "font": "13.44px",
+        "text": "Unemployment rate"
+      },
+      {
+        "font": "13.44px",
+        "text": "Poverty rate"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/PTBV",
+    "tab": "Ch.2: Challenges & Opportunities",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Challenges and Opportunities for Sustainable Development",
+    "height": 3997.265625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "4 nhóm thách thức"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Poverty ≠ only lack of money"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Poverty Dimension Recognition"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "3 nhóm cơ hội song song"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Challenge vs Opportunity Sorter"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Challenge Recognition"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Mindmap, flashcards & quick checks"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 8,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "Challenges"
+      },
+      {
+        "font": "11.52px",
+        "text": "Poverty"
+      },
+      {
+        "font": "11.52px",
+        "text": "Interactive"
+      },
+      {
+        "font": "12px",
+        "text": "Minh họa các chiều nghèo đa chiều theo khung phân tích tiêu chuẩn."
+      },
+      {
+        "font": "11.52px",
+        "text": "Opportunities"
+      },
+      {
+        "font": "11.52px",
+        "text": "Interactive"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/PTBV",
+    "tab": "Ch.3: Stakeholders",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Stakeholders and Actions for Sustainable Development",
+    "height": 7515.796875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Individual → Community → Government → International organizations / NGOs"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Policy ≠ Strategy · Roles ≠ Instruments"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "7 contributions · 3 limitations · 4 enabling conditions"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Stakeholder Role Matching"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Government Policy Instrument Sorter"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Barrier → Condition + Stakeholder"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Government Policy Toolbox"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Mindmap, flashcards & quick checks"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 12,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "Stakeholder architecture"
+      },
+      {
+        "font": "13.76px",
+        "text": "Observe natural-resource exploitation; report violations."
+      },
+      {
+        "font": "13.76px",
+        "text": "Community rules/agreements for land, water, forests, public spaces."
+      },
+      {
+        "font": "13.76px",
+        "text": "Waste separation; Green Sunday; Tree Planting for Reforestation."
+      },
+      {
+        "font": "13.76px",
+        "text": "Co-manage forests/water/conservation; green-clean-beautiful neighborhood commitments."
+      },
+      {
+        "font": "11.52px",
+        "text": "Government"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/PTBV",
+    "tab": "Ch.4: International Cooperation",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: International Cooperation in Sustainable Development",
+    "height": 6008.15625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Vai trò Nhà nước trong international cooperation"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "International Financial Institutions"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Implementation of International Commitments"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Reorder the 4 steps"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Crisis · Conflict · Compromise"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "IFI Function vs Difficulty"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Crisis / Conflict / Compromise Sorter"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "State vs IFI — descriptive only"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 12,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "State"
+      },
+      {
+        "font": "11.52px",
+        "text": "IFIs"
+      },
+      {
+        "font": "12px",
+        "text": "Tham chiếu các tổ chức tài chính quốc tế và thỏa thuận phát triển bền vững tiêu biểu."
+      },
+      {
+        "font": "11.52px",
+        "text": "Process"
+      },
+      {
+        "font": "11.52px",
+        "text": "Interactive"
+      },
+      {
+        "font": "11.52px",
+        "text": "System thinking"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/PTBV",
+    "tab": "Ch.5: Vietnam",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: Nghiên cứu một số vấn đề về phát triển bền vững ở Việt Nam",
+    "height": 7588.578125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Mục tiêu phát triển bền vững của Việt Nam"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Chương trình nghị sự, nguyên tắc & cơ chế thực hiện"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Thực hiện SDGs tại Việt Nam — Thành tựu / Hạn chế / Giải pháp"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Chuyển đổi giao thông xanh"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Vietnam Agenda / Policy Timeline"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "17 SDG Learning Grid"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "17 mục tiêu quốc gia đến năm 2030"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "17 National Goals Review"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 10,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "5.1"
+      },
+      {
+        "font": "11.52px",
+        "text": "5.2"
+      },
+      {
+        "font": "11.52px",
+        "text": "5.3"
+      },
+      {
+        "font": "11.52px",
+        "text": "Ví dụ"
+      },
+      {
+        "font": "11.52px",
+        "text": "Interactive timeline"
+      },
+      {
+        "font": "11.52px",
+        "text": "17-goal visual"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/PTBV",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Review: Global Review",
+    "height": 2005.6717529296875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Sustainable Development — toàn khóa"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "8 comparison tools"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "8 câu phải tách rõ"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "23.2px",
+        "text": "Cardinality checklist"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 4,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "Master map"
+      },
+      {
+        "font": "11.52px",
+        "text": "High-yield"
+      },
+      {
+        "font": "11.52px",
+        "text": "Common confusions"
+      },
+      {
+        "font": "11.52px",
+        "text": "Compact deck"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/STKN",
+    "tab": "Ch.1: Creativity",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Creativity Skills",
+    "height": 6045.390625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Khái niệm sáng tạo"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "6 cấp độ sáng tạo"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Componential Theory of Individual Creativity"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Quy trình sáng tạo Graham Wallas (1926)"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Đặc điểm của Creative Person"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Yếu tố thúc đẩy sáng tạo trong tổ chức"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Creativity Killers"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Công cụ tư duy sáng tạo"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 8,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.28px",
+        "text": "Visual dùng nhãn Motivation / Creative Thinking Skills; prose của course dùng Task motivation / Creative thinking."
+      },
+      {
+        "font": "13.28px",
+        "text": "Chạm từng thẻ để xem nhóm tương ứng."
+      },
+      {
+        "font": "13.28px",
+        "text": "trình tự minh họa: center → first-level branches → subtopics → keywords → images/icons."
+      },
+      {
+        "font": "13.6px",
+        "text": "Positive · internal"
+      },
+      {
+        "font": "13.6px",
+        "text": "Negative · internal"
+      },
+      {
+        "font": "13.6px",
+        "text": "Positive · external"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/STKN",
+    "tab": "Ch.2: Brainstorm",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Brainstorm",
+    "height": 5556.453125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Brainstorming: khái niệm & nguồn gốc"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Ưu và nhược điểm"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "5 bước Brainstorming"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Generative Thinking"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "4 quy tắc Brainstorming"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Ideation Toolkit"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "DOs & DON’Ts khi Ideation"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "16px",
+        "text": "🧠 Chapter Map"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 17,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.44px",
+        "text": "Facts — what do you know / need to find out?— Chọn đáp án —White HatYellow HatBlack HatRed HatGreen HatBlue Hat"
+      },
+      {
+        "font": "13.44px",
+        "text": "Benefits — positives, values, benefits— Chọn đáp án —White HatYellow HatBlack HatRed HatGreen HatBlue Hat"
+      },
+      {
+        "font": "13.44px",
+        "text": "Cautions — what might go wrong?— Chọn đáp án —White HatYellow HatBlack HatRed HatGreen HatBlue Hat"
+      },
+      {
+        "font": "13.44px",
+        "text": "Feelings — feelings, fears, likes/dislikes— Chọn đáp án —White HatYellow HatBlack HatRed HatGreen HatBlue Hat"
+      },
+      {
+        "font": "13.44px",
+        "text": "Creativity — possibilities and alternatives— Chọn đáp án —White HatYellow HatBlack HatRed HatGreen HatBlue Hat"
+      },
+      {
+        "font": "13.44px",
+        "text": "Process — organizes process and guidelines— Chọn đáp án —White HatYellow HatBlack HatRed HatGreen HatBlue Hat"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/STKN",
+    "tab": "Ch.3: Critical Thinking",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Critical Thinking",
+    "height": 4008.187744140625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Critical Thinking: định nghĩa & giá trị"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "6 cấp độ Critical Thinking"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "2 loại Critical Thinking theo khóa học"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Vai trò của Critical Thinking"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "6 bước luyện Critical Thinking"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Ứng dụng theo cấp độ & ARES"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "16px",
+        "text": "🧠 Chapter Map"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 9,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.44px",
+        "text": "Arrive at the best answer using memory, surrounding resources, or logic.— Chọn đáp án —Convergent critical thinkingDivergent critical thinking"
+      },
+      {
+        "font": "13.44px",
+        "text": "Give one’s own opinion to criticize/compare other opinions on the same issue.— Chọn đáp án —Convergent critical thinkingDivergent critical thinking"
+      },
+      {
+        "font": "13.28px",
+        "text": "Nội dung trả lời mở dùng để tự đánh giá và rèn luyện kỹ năng; không chấm điểm tự động."
+      },
+      {
+        "font": "13.12px",
+        "text": "Topic"
+      },
+      {
+        "font": "13.12px",
+        "text": "Arguments"
+      },
+      {
+        "font": "13.12px",
+        "text": "Reasoning"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/STKN",
+    "tab": "Ch.4: Design Thinking",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Design Thinking",
+    "height": 8239.15625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Design Thinking là gì?"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "7 kỹ năng Designer cho Entrepreneur"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Needs & điều kiện của Design Thinking"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Human-centered: Desirability / Feasibility / Viability"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Empathy & Empathy Map"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Divergent vs Convergent Thinking"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Design Thinking Process"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "IDEO Brainstorming Rules"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 28,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.12px",
+        "text": "Stakeholder"
+      },
+      {
+        "font": "13.12px",
+        "text": "SAY"
+      },
+      {
+        "font": "13.12px",
+        "text": "THINK"
+      },
+      {
+        "font": "13.12px",
+        "text": "DO"
+      },
+      {
+        "font": "13.12px",
+        "text": "FEEL"
+      },
+      {
+        "font": "13.28px",
+        "text": "Divergence từ Inspiration sang Ideation; Convergence từ Ideation sang Implementation."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/STKN",
+    "tab": "Ch.5: Persuasion",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: Creative in Persuading",
+    "height": 3163.734375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Persuasion & Speech Acts"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Vai trò của Persuasion trong business"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Strategic Orientation for Persuasion"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Logos / Ethos / Pathos"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Barrier-first lesson từ bài Coca-Cola"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "16px",
+        "text": "🧠 Chapter Map"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 14,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.44px",
+        "text": "Woman says “Coke is the real thing.”— Chọn đáp án —Locutionary actIllocutionary actPerlocutionary act"
+      },
+      {
+        "font": "13.44px",
+        "text": "By saying it, she asserts Coke is “the real thing.”— Chọn đáp án —Locutionary actIllocutionary actPerlocutionary act"
+      },
+      {
+        "font": "13.44px",
+        "text": "The utterance persuades viewers that drinking Coke is worthwhile.— Chọn đáp án —Locutionary actIllocutionary actPerlocutionary act"
+      },
+      {
+        "font": "13.44px",
+        "text": "Evidence + logic / regular course of reasoning— Chọn đáp án —LogosEthosPathos"
+      },
+      {
+        "font": "13.44px",
+        "text": "Common moral norms: justice, fairness, responsibility— Chọn đáp án —LogosEthosPathos"
+      },
+      {
+        "font": "13.44px",
+        "text": "Audience feelings + emotional balance / empathy— Chọn đáp án —LogosEthosPathos"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/STKN",
+    "tab": "Ch.6: Opportunity",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: Entrepreneurship & Recognizing Entrepreneurial Opportunities",
+    "height": 7354.328125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Entrepreneurship: định nghĩa & hành động"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Vì sao trở thành Entrepreneur?"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "4 đặc điểm Entrepreneur thành công"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Corporate Entrepreneurship"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Tác động kinh tế & xã hội"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Opportunity là gì?"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "3 cách nhận diện Opportunity"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Yếu tố cá nhân hỗ trợ Opportunity Recognition"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 13,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12.48px",
+        "text": "Number-one characteristic in course; often tied to belief that the business can positively influence lives."
+      },
+      {
+        "font": "12.48px",
+        "text": "Strong focus on products and customers; entrepreneur described as a craftsperson at heart."
+      },
+      {
+        "font": "12.48px",
+        "text": "Persevere through setbacks/failures when doing something new."
+      },
+      {
+        "font": "12.48px",
+        "text": "Ability to turn a solid business idea into a viable business."
+      },
+      {
+        "font": "13.28px",
+        "text": "Dùng các ví dụ doanh nghiệp và cá nhân để thảo luận đặc điểm khởi nghiệp."
+      },
+      {
+        "font": "13.28px",
+        "text": "Kéo thẻ vào cột phù hợp; trên mobile có thể chạm thẻ rồi chạm vùng đích."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/STKN",
+    "tab": "Ch.7: Mindset",
+    "chapter": "ch7",
+    "clippingCandidates": [],
+    "heading": "Chương 7: The Entrepreneurial Mindset",
+    "height": 10645.765625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Entrepreneurship & Entrepreneur"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "6 Functions of Entrepreneurship"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "6 điểm Importance of Entrepreneurship"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Entrepreneurial Mindset"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Yếu tố cho Successful Start-up"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Entrepreneurial Process"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Entrepreneurial Model & Business-model Categories"
+      },
+      {
+        "color": "rgb(17, 24, 39)",
+        "font": "20px",
+        "text": "Business Model Canvas — 9 blocks"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 36,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.28px",
+        "text": "Không trộn visual này với 4 opportunity characteristics của Ch.6."
+      },
+      {
+        "font": "12.48px",
+        "text": "Who is the customer? Group key customers by pain points, demographics, buyer behavior, or relevant characteristics."
+      },
+      {
+        "font": "12.48px",
+        "text": "What makes you better than others? Solve customer problems / satisfy needs."
+      },
+      {
+        "font": "12.48px",
+        "text": "How communicate the value proposition? Marketing/distribution channels."
+      },
+      {
+        "font": "12.48px",
+        "text": "How will you make money? Primary/secondary/additional sources."
+      },
+      {
+        "font": "12.48px",
+        "text": "How interact with customers? Think through sales process and lead journey."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/STKN",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Review: Global Theory Map",
+    "height": 1881.5626220703125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "27 Framework Library"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "⚠️ Do not confuse"
+      },
+      {
+        "color": "rgb(30, 41, 59)",
+        "font": "18.4px",
+        "text": "Flashcards trọng tâm"
+      }
+    ],
+    "navContentWidth": 1216,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 7,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "13.44px",
+        "text": "Ch.1: Preparation → Incubation → Illumination → Verification."
+      },
+      {
+        "font": "13.44px",
+        "text": "Ch.6: Preparation → Incubation → Insight → Evaluation → Elaboration."
+      },
+      {
+        "font": "13.44px",
+        "text": "Ch.6: Attractive / Timely / Durable / creates-adds value."
+      },
+      {
+        "font": "13.44px",
+        "text": "Ch.7 visual: profitable / stable / timely / value proposition."
+      },
+      {
+        "font": "13.44px",
+        "text": "BMC = 9 building blocks."
+      },
+      {
+        "font": "13.44px",
+        "text": "Barringer/Ireland = 4 major sections."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TLUD",
+    "tab": "Ch.1: Introduction",
+    "chapter": "ch1",
+    "clippingCandidates": [],
+    "heading": "Chương 1: Introduction to Psychology",
+    "height": 4572.3125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Psychology là gì?"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "4 Goals of Psychology"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "8 Schools / Approaches"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "School visuals — bám sát nội dung bài recreation"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Theory ↔ Research"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Research methods"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Choose the research method"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Match school → emphasis"
+      }
+    ],
+    "navContentWidth": 1312,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 2,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "11.52px",
+        "text": "Sơ đồ tập trung vào các lớp và mối liên hệ chính."
+      },
+      {
+        "font": "12px",
+        "text": "Research được chia thành quantitative / qualitative."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TLUD",
+    "tab": "Ch.2: Feeling & Perception",
+    "chapter": "ch2",
+    "clippingCandidates": [],
+    "heading": "Chương 2: Feeling and Perception",
+    "height": 6034.125,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Sensation → Perception"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Taste illustration — nội dung giới hạn"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Thresholds & Weber’s Law"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Signal detection & sensory adaptation"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Bottom-up vs Top-down"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Context effect reveal"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Gestalt / perceptual organization — 6 nguyên tắc"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Ambiguous recognition visual — unscored"
+      }
+    ],
+    "navContentWidth": 1314,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 7,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "Câu hỏi uses 100 candles with K=0.08. Any number shown here is calculator output from the verified formula, not a worked solution."
+      },
+      {
+        "font": "12px",
+        "text": "Complete incomplete image into meaningful object."
+      },
+      {
+        "font": "12px",
+        "text": "Lines/shapes appear to exist but do not actually exist."
+      },
+      {
+        "font": "12px",
+        "text": "Close units often grouped together."
+      },
+      {
+        "font": "12px",
+        "text": "Stimulus images viewed in simplest possible way."
+      },
+      {
+        "font": "12px",
+        "text": "Similar-appearing things grouped together."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TLUD",
+    "tab": "Ch.3: Memory & Thinking",
+    "chapter": "ch3",
+    "clippingCandidates": [],
+    "heading": "Chương 3: Memory and Thinking",
+    "height": 6606.890625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Thời lượng, dung lượng và các lưu ý trọng tâm"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Memory-stage process"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Reorder the 4-stage memory flow"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Digit-span mô phỏng"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Chunking & S.F. experiment"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Long-term memory types"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Encoding & retrieval"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Visual imagery — Bower & Winzenz (1970)"
+      }
+    ],
+    "navContentWidth": 1314,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 1,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "Cách làm: đọc một dòng, che lại, viết ra và tiếp tục đến khi bắt đầu sai; dãy dài nhất nhớ đúng là digit span. Nếu nhớ đúng dãy dài nhất được hiển thị"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TLUD",
+    "tab": "Ch.4: Emotion & Stress",
+    "chapter": "ch4",
+    "clippingCandidates": [],
+    "heading": "Chương 4: Emotion, Stress and Motivation",
+    "height": 4674.375,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Emotion, mood & functions"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Bảy cảm xúc"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Culture and emotional expression"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Four emotion theories — snake stimulus"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Stress & stressors"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Phản ứng đối phó với căng thẳng / tổn thương — 5F"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "General Adaptation Syndrome (Selye, 1930)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Động lực học tập & Hành vi (Motivation Theory)"
+      }
+    ],
+    "navContentWidth": 1311,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 8,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "“I feel fear because I tremble.”"
+      },
+      {
+        "font": "12px",
+        "text": "“I tremble and feel fear at the same time.”"
+      },
+      {
+        "font": "12px",
+        "text": "“I suppose I’m trembling because I’m scared.”"
+      },
+      {
+        "font": "12px",
+        "text": "“I think this is a dangerous situation and that is why I am afraid and trembling.”"
+      },
+      {
+        "font": "12px",
+        "text": "Ví dụ: Đọc sách vì say mê tìm hiểu kiến thức mới."
+      },
+      {
+        "font": "12px",
+        "text": "Ví dụ: Học chăm để đạt học bổng hoặc tránh điểm liệt."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TLUD",
+    "tab": "Ch.5: Development",
+    "chapter": "ch5",
+    "clippingCandidates": [],
+    "heading": "Chương 5: Development Psychology",
+    "height": 1933.6561279296875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Tâm lý học phát triển & Ba tranh luận cốt lõi"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "4 Giai đoạn phát triển nhận thức của Jean Piaget"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "8 Giai đoạn phát triển tâm lý - xã hội của Erik Erikson"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Thuyết Gắn bó"
+      }
+    ],
+    "navContentWidth": 1311,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TLUD",
+    "tab": "Ch.6: Personality",
+    "chapter": "ch6",
+    "clippingCandidates": [],
+    "heading": "Chương 6: Personality",
+    "height": 1547,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Cấu trúc nhân cách theo Sigmund Freud"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Thuyết Nhân văn về Nhân cách (Carl Rogers)"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Mô hình 5 Đặc điểm Nhân cách Lớn (Big Five / OCEAN)"
+      }
+    ],
+    "navContentWidth": 1311,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 8,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "Hoàn toàn Vô thức"
+      },
+      {
+        "font": "12px",
+        "text": "Ý thức & Tiền ý thức"
+      },
+      {
+        "font": "12px",
+        "text": "Tiền ý thức & Ý thức"
+      },
+      {
+        "font": "12px",
+        "text": "Cởi mở với trải nghiệm"
+      },
+      {
+        "font": "12px",
+        "text": "Tận tâm / Chu đáo"
+      },
+      {
+        "font": "12px",
+        "text": "Hướng ngoại"
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TLUD",
+    "tab": "Supplement: Operant",
+    "chapter": "ch7",
+    "clippingCandidates": [],
+    "heading": "Chương 7: Supplement — Operant Conditioning Framework",
+    "height": 1098.90625,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Three-step classification procedure"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "2×2 operant matrix"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Kiểm tra nhanh bằng ma trận"
+      }
+    ],
+    "navContentWidth": 1313,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 1,
+    "rawTeX": [],
+    "smallExamples": [
+      {
+        "font": "12px",
+        "text": "Phần luyện đề có bộ 29 tình huống đầy đủ."
+      }
+    ],
+    "viewportWidth": 1363
+  },
+  {
+    "route": "/TLUD",
+    "tab": "Review",
+    "chapter": "review",
+    "clippingCandidates": [],
+    "heading": "Review: Course Review",
+    "height": 1912.9373779296875,
+    "moduleHeadings": [
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Course overview map"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Master Flashcard Deck"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "High-value distinctions"
+      },
+      {
+        "color": "rgb(15, 23, 42)",
+        "font": "21.6px",
+        "text": "Các thuật ngữ trọng tâm cần ghi nhớ"
+      }
+    ],
+    "navContentWidth": 1308,
+    "navWidth": 1216,
+    "pageWidth": 1355,
+    "proseBelow14": 0,
+    "rawTeX": [],
+    "smallExamples": [],
+    "viewportWidth": 1363
+  }
+]

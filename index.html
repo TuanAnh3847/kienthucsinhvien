@@ -34,8 +34,10 @@
         .bg-pattern { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
     </style>
     <link rel="stylesheet" href="/shared.css">
+<link rel="stylesheet" href="/reading.css">
+<script defer src="/reading.js"></script>
 </head>
-<body class="bg-stone-50 text-slate-800 font-sans antialiased bg-pattern min-h-screen flex flex-col">
+<body class="edu-home-page bg-stone-50 text-slate-800 font-sans antialiased bg-pattern min-h-screen flex flex-col">
 
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
@@ -317,7 +319,7 @@
 
 <!--Lưới chọn trắc nghiệm--> 
 
-   <div class="max-w-[1200px] mx-auto px-4 mb-16">
+   <div id="practice-courses" class="max-w-[1200px] mx-auto px-4 mb-16">
     <div class="flex items-center gap-3 mb-6">
         <div class="bg-amber-500 text-white p-2 rounded-xl shadow-md shadow-amber-500/20">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -325,7 +327,7 @@
             </svg>
         </div>
         <div>
-            <h2 class="text-xl md:text-2xl font-extrabold text-stone-800">Trung Tâm Luyện Đề Thực Chiến</h2>
+            <h2 class="text-xl md:text-2xl font-extrabold text-stone-800">Luyện tập theo môn</h2>
             <p class="text-xs md:text-sm text-stone-500 font-medium">Trắc nghiệm tự động chấm điểm &amp; bài tập tự luận có giải</p>
         </div>
     </div>
@@ -347,7 +349,7 @@
             <span class="absolute top-4 right-4 bg-amber-100 text-amber-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">Luyện tập</span>
             <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">🧮</div>
             <h3 class="font-extrabold text-lg text-stone-800 mb-1">Bài Tập Nguyên Lý Kế Toán</h3>
-            <p class="text-xs text-stone-500 leading-relaxed mb-4">Luyện định khoản nợ/có, lập bảng CĐKT, báo cáo P&amp;L và tập hợp chi phí giá thành sản phẩm.</p>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">Trắc nghiệm theo chương và bài tự luận kế toán có lời giải để tự đối chiếu.</p>
             <a href="/NguyenLyKeToan-LuyenDe" class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-colors">
                 Vào luyện đề &rarr;
             </a>
@@ -356,11 +358,23 @@
         <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden group">
             <span class="absolute top-4 right-4 bg-amber-100 text-amber-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">Luyện tập</span>
             <div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">⚖️</div>
-            <h3 class="font-extrabold text-lg text-stone-800 mb-1">Trắc Nghiệm Luật Học</h3>
-            <p class="text-xs text-stone-500 leading-relaxed mb-4">Bộ đề thi thử phân tích cấu trúc quy phạm pháp luật, xác định loại lỗi vi phạm và hệ thống văn bản pháp luật.</p>
-            <span class="text-sm font-bold text-stone-500" aria-disabled="true">Sắp ra mắt</span>
+            <h3 class="font-extrabold text-lg text-stone-800 mb-1">Trắc nghiệm Nhập môn Luật học</h3>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">Luyện thử 20 câu trắc nghiệm nền tảng, gồm 3 bộ theo chương và một đề tổng hợp; chấm điểm và xem giải thích.</p>
+            <a href="/NhapMonLuatHoc-LuyenDe" class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-700 hover:underline">Vào luyện tập &rarr;</a>
         </div>
 
+<div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col">
+<div class="text-2xl mb-4">🌐</div><h3 class="font-extrabold text-lg text-stone-800 mb-1">Kinh tế quốc tế</h3>
+<p class="text-sm text-stone-600 leading-relaxed mb-4">Luyện thử 20 câu trắc nghiệm riêng, gồm 4 bộ theo chương và một đề tổng hợp; có chấm điểm, giải thích và thời gian gợi ý.</p>
+<a href="/KTQT-LuyenDe" class="inline-flex items-center text-sm font-bold text-blue-700 hover:underline mt-auto">Vào luyện tập &rarr;</a></div>
+<div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col">
+<div class="text-2xl mb-4">⚖️</div><h3 class="font-extrabold text-lg text-stone-800 mb-1">Luật thương mại quốc tế</h3>
+<p class="text-sm text-stone-600 leading-relaxed mb-4">Luyện thử 20 câu trắc nghiệm riêng, gồm 5 bộ theo chương và một đề tổng hợp; có chấm điểm, giải thích và thời gian gợi ý.</p>
+<a href="/LTMQT-LuyenDe" class="inline-flex items-center text-sm font-bold text-blue-700 hover:underline mt-auto">Vào luyện tập &rarr;</a></div>
+<div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col">
+<div class="text-2xl mb-4">🏦</div><h3 class="font-extrabold text-lg text-stone-800 mb-1">Nguyên lý thị trường tài chính</h3>
+<p class="text-sm text-stone-600 leading-relaxed mb-4">Luyện thử 20 câu trắc nghiệm riêng, gồm 6 bộ theo chương và một đề tổng hợp; có chấm điểm, giải thích và thời gian gợi ý.</p>
+<a href="/NLTTTC-LuyenDe" class="inline-flex items-center text-sm font-bold text-blue-700 hover:underline mt-auto">Vào luyện tập &rarr;</a></div>
     </div>
 </div>
 

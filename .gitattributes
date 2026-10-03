@@ -1,0 +1,3 @@
+*.pdf binary
+docs/edu-connect-handoff-2026-10-03/baseline/** -text
+docs/edu-connect-handoff-2026-10-03/evidence/before/** -text

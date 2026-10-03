@@ -82,7 +82,7 @@ for (const s of good = regressionGood) {
         const chapters=await p.evaluate(()=>EduHeader.config.chapters.map(c=>c.id));
         const findings=[];
         for(const id of chapters){
-          await p.locator(`#nav-menu [data-edu-tab="${id}"]`).click();
+          await require('./chapter-navigation.cjs').chooseChapter(p,id);
           await p.waitForTimeout(100);
           const scan=await p.locator('#'+id).evaluate((el, pattern)=>{
             const rx=new RegExp(pattern, 'i');

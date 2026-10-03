@@ -1,0 +1,267 @@
+EDU CONNECT — KẾT QUẢ TRIỂN KHAI
+Phạm vi và yêu cầu gốc giữ trong CSV/JSON; trạng thái thực tế dưới đây.
+IMPLEMENTED = đã có code; chưa thay thế nghiệm thu bằng mắt.
+
+G01 [IMPLEMENTED] Font nội dung từ heading Chương xuống
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+G02 [IMPLEMENTED] Heading chương và module
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+G03 [IMPLEMENTED] Palette và tương phản
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+G04 [IMPLEMENTED] Card, spacing và grid lồng
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+G05 [IMPLEMENTED] Thanh chọn chương, tab cuối
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+G06 [IMPLEMENTED] Sticky header và offset
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+G07 [IMPLEMENTED] Mục lục trong chương dài
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+G08 [IMPLEMENTED] Bảng/sơ đồ cuộn có chủ đích
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+G09 [IMPLEMENTED] Accessibility và tương tác học
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+K01 [IMPLEMENTED] Ch2/3 công thức tĩnh và output máy tính
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+K02 [IMPLEMENTED] Ch2/3 input grid-cols-3
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+A01 [IMPLEMENTED] Flashcard fixed155px
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+A02 [IMPLEMENTED] Chart of Accounts và bảng định khoản
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+A03 [IMPLEMENTED] Ch2/6, coa: copy và giới hạn nguồn
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+F01 [IMPLEMENTED] Bảng620–680px và card-head badge
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+F02 [IMPLEMENTED] Ch2/3/4/6/review: nhãn nội bộ
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+N01 [IMPLEMENTED] Ch5 Pháp nhân: card padding overflow
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+N02 [IMPLEMENTED] Ch6 penalty grid và prose nhỏ
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+Q01 [IMPLEMENTED] Graphs/mindmap/tables, Ch5 ASCII
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+Q02 [IMPLEMENTED] Ch1/2/3 và review copy/phạm vi
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+T01 [IMPLEMENTED] Ch2:14salary cards và Harry Johnson goals rỗng
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+T02 [IMPLEMENTED] Ch5: six-position insurance visual
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+T03 [IMPLEMENTED] Ch1/4/5: đồ thị/khối thiếu dữ liệu
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+T04 [IMPLEMENTED] Ch4/5/6/review: copy, aria và bài tự luyện
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+T05 [IMPLEMENTED] Ch4/5/6 dài, calculator và worksheet
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+V01 [IMPLEMENTED] Flashcard absolute190px
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+V02 [IMPLEMENTED] lesson-section padding lồng
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+V03 [IMPLEMENTED] Culture matrix/continuum/concept map/sources
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+V04 [IMPLEMENTED] Ch2/3 copy mô hình và giới hạn nguồn
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+D01 [IMPLEMENTED] Flashcard min-height160px nhưng faces absolute
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+D02 [IMPLEMENTED] Ch7 matrix4 operant
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+D03 [IMPLEMENTED] Auto-fit grids/gallery, emotion strip
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+D04 [IMPLEMENTED] Ch1/2/7 copy và review deck phạm vi
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+S01 [IMPLEMENTED] Flashcards fixed150px
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+S02 [IMPLEMENTED] Venn/wheel transform scale
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+S03 [IMPLEMENTED] Empathy map/opportunity ring/workspaces
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+S04 [IMPLEMENTED] Dark interaction panels
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+S05 [IMPLEMENTED] Ch7 FPT/BMC/framework/copy người học
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+B01 [IMPLEMENTED] Flashcard170/190px
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+B02 [IMPLEMENTED] Function wheel/tablet source badges
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+B03 [IMPLEMENTED] Timelines5x220, tables/calculators
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+B04 [IMPLEMENTED] Decorative dark strips/market-map/stepper
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+B05 [IMPLEMENTED] Ch1/4/5/6/review: copy và ô dữ liệu trống
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+P01 [IMPLEMENTED] Quiz dual250px/goal-grid labels
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+P02 [IMPLEMENTED] Course-map modal/FAB
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+P03 [IMPLEMENTED] Timeline detail/FAB dark treatment
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+P04 [IMPLEMENTED] Ch5/review: cardinality/implementation copy
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+L01 [IMPLEMENTED] Flash-grid/match-row/sort-actions
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+L02 [IMPLEMENTED] Mindmap/tables/case organizers
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+L03 [IMPLEMENTED] Ch3/4 và comparisons: copy/limitations
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+X01 [IMPLEMENTED] Overview/card metrics/question index
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+X02 [IMPLEMENTED] Unique questions và duration labels
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+X03 [IMPLEMENTED] Palette/font/card overview/questions
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+X04 [IMPLEMENTED] Sticky actions, long account/subtitle/online count
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+X05 [IMPLEMENTED] Overview4bộ nhưng5 card đề thi
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+X06 [IMPLEMENTED] Guided cases quảng bá tự chấm
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+X07 [IMPLEMENTED] Longcase/generatedtables/metrics
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+X08 [IMPLEMENTED] Timer/mistakes/results/explanations
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+H01 [IMPLEMENTED] Coursecards descriptions/title/spacing
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+H02 [IMPLEMENTED] NMLH availability stale
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+H03 [IMPLEMENTED] Missingpractice entrypoints KTQT/LTMQT/NLTTTC
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+H04 [IMPLEMENTED] Practice section wording/NLKT description
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+FZ01 [VERIFIED_FIXED] Bảo toàn học thuật/IDs/scripts/routes
+Source and behavior guard PASS.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+FZ02 [VERIFIED_FIXED] Nháp stashed chưa được nghiệm thu
+Source and behavior guard PASS.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+FZ03 [VERIFIED_FIXED] Cô lập QA và giữ behavior
+Source and behavior guard PASS.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+
+FZ04 [IMPLEMENTED] Hoàn thành phải có evidence và coverage
+Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
+Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
