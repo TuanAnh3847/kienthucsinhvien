@@ -14,7 +14,11 @@ const results=[];
  try{
  await p.goto('http://127.0.0.1:4173/',{waitUntil:'load'});await p.waitForTimeout(550);await screenshot(p,{path:path.join(out,`final-home-${width}.png`)});
  for(const subject of ['NLKT','TCCN']){
-  await p.locator(`a[href="/${subject}"]`).click();await p.waitForTimeout(550);await screenshot(p,{path:path.join(out,`final-${subject}-${width}-top.png`)});
+  await p.locator(`a[href="/${subject}"]`).click();
+  // Capture used to wait for fonts implicitly; no-image QA waits for readiness.
+  await p.waitForFunction(()=>window.EduHeader);
+  await p.evaluate(()=>document.fonts.ready);
+  await screenshot(p,{path:path.join(out,`final-${subject}-${width}-top.png`)});
   const ids=await p.evaluate(()=>EduHeader.config.chapters.map(ch=>ch.id));await chooseChapter(p,ids[1]);await p.mouse.wheel(0,900);await p.waitForTimeout(550);
   assert(await (await visibleChapterControl(p)).evaluate(el=>Math.abs(el.getBoundingClientRect().top)<2));
   await screenshot(p,{path:path.join(out,`final-${subject}-${width}-sticky.png`)});
