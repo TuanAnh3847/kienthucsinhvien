@@ -56,7 +56,12 @@ body.edu-study-page.edu-route-KTQT .eyebrow { color:var(--edu-muted); font-size:
 body.edu-study-page.edu-route-TCCN :is(.kicker,.flash-label,.study-flip-face small,.review-map-node span,.text-slate-500,.text-slate-400,.text-slate-300) { color:var(--edu-muted); }
 body.edu-study-page.edu-route-TCCN :is(.flash-label,.study-flip-face small,.review-map-node span) { font-size:13px; line-height:1.5; }
 body.edu-study-page.edu-route-TCCN .skeleton-cell { color:var(--edu-muted); font-size:16px; line-height:1.65; }
+@media(max-width:640px) {
+  body.edu-study-page.edu-route-TCCN .flex:has(> .text-2xl.text-slate-400) { flex-direction:column; }
+  body.edu-study-page.edu-route-TCCN .flex:has(> .text-2xl.text-slate-400) > .text-2xl { transform:rotate(90deg); }
+}
 body.edu-home-page button.text-stone-500 { color:#57534e; font-size:13px; line-height:1.5; }
+body.edu-study-page.edu-route-TCCN .flex:has(> .text-2xl.text-slate-400) > .font-black { white-space:nowrap; flex-shrink:0; }
 @media (max-width:640px) {
   /* A rotated full-width arrow otherwise covers neighboring phone controls. */
   body.edu-study-page.edu-route-NLKT .flow-arrow { width:1.5em; height:1.5em; min-width:0; align-self:center; flex:none; }
