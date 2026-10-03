@@ -1,32 +1,37 @@
-[
-  [
-    "A03",
-    "NGUYEN_LY_KE_TOAN.html",
-    "Giới hạn tái dựng: Bố cục Company A/B chưa đủ rõ để ghép chắc chắn từng cột; phần này tập trung vào khái niệm và công thức net cash flow."
+{
+  "initial_unmatched": [
+    [
+      "A03",
+      "NGUYEN_LY_KE_TOAN.html",
+      "Giới hạn tái dựng: Bố cục Company A/B chưa đủ rõ để ghép chắc chắn từng cột; phần này tập trung vào khái niệm và công thức net cash flow."
+    ],
+    [
+      "A03",
+      "NGUYEN_LY_KE_TOAN.html",
+      "Giới hạn dữ liệu: tiêu chí giá trị TSCĐ theo quy định hiện hành được nhắc nhưng không có ngưỡng số; Nội dung chưa cung cấp threshold."
+    ],
+    [
+      "D04",
+      "TAM_LY_UNG_DUNG.html",
+      "Câu hỏi uses 100 candles with K=0.08. Any number shown here is calculator output from the verified formula, not a worked solution."
+    ],
+    [
+      "T04",
+      "TAI_CHINH_CA_NHAN.html",
+      "Ý chính: Quan hệ học thuật: visual compares two compounding paths to illustrate timing effects."
+    ],
+    [
+      "L03",
+      "LUAT_THUONG_MAI_QUOC_TE.html",
+      "Pros listed — ‘CONS?’ remains unanswered"
+    ],
+    [
+      "P04",
+      "PHAT_TRIEN_BEN_VUNG.html",
+      "Ghi nhớ Cấu trúc review 3 phần của implementation."
+    ]
   ],
-  [
-    "A03",
-    "NGUYEN_LY_KE_TOAN.html",
-    "Giới hạn dữ liệu: tiêu chí giá trị TSCĐ theo quy định hiện hành được nhắc nhưng không có ngưỡng số; Nội dung chưa cung cấp threshold."
-  ],
-  [
-    "D04",
-    "TAM_LY_UNG_DUNG.html",
-    "Câu hỏi uses 100 candles with K=0.08. Any number shown here is calculator output from the verified formula, not a worked solution."
-  ],
-  [
-    "T04",
-    "TAI_CHINH_CA_NHAN.html",
-    "Ý chính: Quan hệ học thuật: visual compares two compounding paths to illustrate timing effects."
-  ],
-  [
-    "L03",
-    "LUAT_THUONG_MAI_QUOC_TE.html",
-    "Pros listed — ‘CONS?’ remains unanswered"
-  ],
-  [
-    "P04",
-    "PHAT_TRIEN_BEN_VUNG.html",
-    "Ghi nhớ Cấu trúc review 3 phần của implementation."
-  ]
-]
+  "status": "RESOLVED",
+  "resolved_by": "apply-context-edits.py; exact journal zero-based entries 122–127",
+  "explanation": "Initial suggested plain text did not match literal HTML markup/quotation. Exact contextual replacements were reviewed and guarded."
+}

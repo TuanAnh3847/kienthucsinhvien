@@ -1,0 +1,626 @@
+[
+  {
+    "id": "THEORY-NLKT-ch1-320",
+    "tested": 185,
+    "excluded": 60,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLKT-ch2-320",
+    "tested": 148,
+    "excluded": 89,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLKT-ch3-320",
+    "tested": 251,
+    "excluded": 37,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLKT-ch4-320",
+    "tested": 81,
+    "excluded": 66,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLKT-ch5-320",
+    "tested": 191,
+    "excluded": 45,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLKT-ch6-320",
+    "tested": 126,
+    "excluded": 74,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLKT-coa-320",
+    "tested": 952,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLKT-review-320",
+    "tested": 69,
+    "excluded": 117,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTTC-ch1-320",
+    "tested": 516,
+    "excluded": 83,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTTC-ch2-320",
+    "tested": 215,
+    "excluded": 22,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTTC-ch3-320",
+    "tested": 241,
+    "excluded": 23,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTTC-ch4-320",
+    "tested": 252,
+    "excluded": 20,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTTC-ch5-320",
+    "tested": 183,
+    "excluded": 20,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTTC-ch6-320",
+    "tested": 284,
+    "excluded": 34,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTTC-review-320",
+    "tested": 824,
+    "excluded": 26,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TCCN-ch1-320",
+    "tested": 122,
+    "excluded": 215,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TCCN-ch2-320",
+    "tested": 106,
+    "excluded": 159,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TCCN-ch3-320",
+    "tested": 77,
+    "excluded": 170,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TCCN-ch4-320",
+    "tested": 617,
+    "excluded": 386,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TCCN-ch5-320",
+    "tested": 143,
+    "excluded": 234,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TCCN-ch6-320",
+    "tested": 93,
+    "excluded": 245,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TCCN-review-320",
+    "tested": 118,
+    "excluded": 285,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTQT-ch1-320",
+    "tested": 305,
+    "excluded": 35,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTQT-ch2-320",
+    "tested": 234,
+    "excluded": 28,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTQT-ch3-320",
+    "tested": 161,
+    "excluded": 26,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTQT-ch4-320",
+    "tested": 200,
+    "excluded": 45,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTQT-ch5-320",
+    "tested": 192,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTQT-ch6-320",
+    "tested": 164,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTQT-review-320",
+    "tested": 350,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NMLH-ch1-320",
+    "tested": 87,
+    "excluded": 13,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NMLH-ch2-320",
+    "tested": 70,
+    "excluded": 16,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NMLH-ch3-320",
+    "tested": 79,
+    "excluded": 14,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NMLH-ch4-320",
+    "tested": 75,
+    "excluded": 3,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NMLH-ch5-320",
+    "tested": 84,
+    "excluded": 12,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NMLH-ch6-320",
+    "tested": 99,
+    "excluded": 6,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NMLH-ch7-320",
+    "tested": 73,
+    "excluded": 3,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTCTMLN-ch1-320",
+    "tested": 62,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTCTMLN-ch2-320",
+    "tested": 106,
+    "excluded": 3,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTCTMLN-ch3-320",
+    "tested": 74,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTCTMLN-ch4-320",
+    "tested": 56,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTCTMLN-ch5-320",
+    "tested": 47,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "THEORY-KTCTMLN-ch6-320",
+    "tested": 48,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLTTTC-ch1-320",
+    "tested": 295,
+    "excluded": 35,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLTTTC-ch2-320",
+    "tested": 396,
+    "excluded": 24,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLTTTC-ch3-320",
+    "tested": 156,
+    "excluded": 22,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLTTTC-ch4-320",
+    "tested": 131,
+    "excluded": 12,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLTTTC-ch5-320",
+    "tested": 269,
+    "excluded": 22,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLTTTC-ch6-320",
+    "tested": 131,
+    "excluded": 18,
+    "failures": []
+  },
+  {
+    "id": "THEORY-NLTTTC-review-320",
+    "tested": 319,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-LTMQT-ch1-320",
+    "tested": 473,
+    "excluded": 23,
+    "failures": []
+  },
+  {
+    "id": "THEORY-LTMQT-ch2-320",
+    "tested": 193,
+    "excluded": 7,
+    "failures": []
+  },
+  {
+    "id": "THEORY-LTMQT-ch3-320",
+    "tested": 275,
+    "excluded": 11,
+    "failures": []
+  },
+  {
+    "id": "THEORY-LTMQT-ch4-320",
+    "tested": 414,
+    "excluded": 14,
+    "failures": []
+  },
+  {
+    "id": "THEORY-LTMQT-ch5-320",
+    "tested": 329,
+    "excluded": 29,
+    "failures": []
+  },
+  {
+    "id": "THEORY-VHDDTKD-ch1-320",
+    "tested": 247,
+    "excluded": 70,
+    "failures": []
+  },
+  {
+    "id": "THEORY-VHDDTKD-ch2-320",
+    "tested": 367,
+    "excluded": 128,
+    "failures": []
+  },
+  {
+    "id": "THEORY-VHDDTKD-ch3-320",
+    "tested": 215,
+    "excluded": 76,
+    "failures": []
+  },
+  {
+    "id": "THEORY-VHDDTKD-ch4-320",
+    "tested": 251,
+    "excluded": 90,
+    "failures": []
+  },
+  {
+    "id": "THEORY-VHDDTKD-ch5-320",
+    "tested": 99,
+    "excluded": 56,
+    "failures": []
+  },
+  {
+    "id": "THEORY-VHDDTKD-review-320",
+    "tested": 101,
+    "excluded": 25,
+    "failures": []
+  },
+  {
+    "id": "THEORY-PTBV-ch1-320",
+    "tested": 266,
+    "excluded": 26,
+    "failures": []
+  },
+  {
+    "id": "THEORY-PTBV-ch2-320",
+    "tested": 159,
+    "excluded": 20,
+    "failures": []
+  },
+  {
+    "id": "THEORY-PTBV-ch3-320",
+    "tested": 295,
+    "excluded": 26,
+    "failures": []
+  },
+  {
+    "id": "THEORY-PTBV-ch4-320",
+    "tested": 306,
+    "excluded": 20,
+    "failures": []
+  },
+  {
+    "id": "THEORY-PTBV-ch5-320",
+    "tested": 328,
+    "excluded": 25,
+    "failures": []
+  },
+  {
+    "id": "THEORY-PTBV-review-320",
+    "tested": 81,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-STKN-ch1-320",
+    "tested": 290,
+    "excluded": 93,
+    "failures": []
+  },
+  {
+    "id": "THEORY-STKN-ch2-320",
+    "tested": 241,
+    "excluded": 51,
+    "failures": []
+  },
+  {
+    "id": "THEORY-STKN-ch3-320",
+    "tested": 156,
+    "excluded": 47,
+    "failures": []
+  },
+  {
+    "id": "THEORY-STKN-ch4-320",
+    "tested": 283,
+    "excluded": 86,
+    "failures": []
+  },
+  {
+    "id": "THEORY-STKN-ch5-320",
+    "tested": 102,
+    "excluded": 31,
+    "failures": []
+  },
+  {
+    "id": "THEORY-STKN-ch6-320",
+    "tested": 319,
+    "excluded": 67,
+    "failures": []
+  },
+  {
+    "id": "THEORY-STKN-ch7-320",
+    "tested": 373,
+    "excluded": 105,
+    "failures": []
+  },
+  {
+    "id": "THEORY-STKN-review-320",
+    "tested": 115,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TLUD-ch1-320",
+    "tested": 202,
+    "excluded": 6,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TLUD-ch2-320",
+    "tested": 145,
+    "excluded": 18,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TLUD-ch3-320",
+    "tested": 287,
+    "excluded": 6,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TLUD-ch4-320",
+    "tested": 192,
+    "excluded": 10,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TLUD-ch5-320",
+    "tested": 109,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TLUD-ch6-320",
+    "tested": 85,
+    "excluded": 3,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TLUD-ch7-320",
+    "tested": 62,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "THEORY-TLUD-review-320",
+    "tested": 76,
+    "excluded": 13,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Tổng quan-320",
+    "tested": 22,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Theo chương-320",
+    "tested": 42,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Trắc nghiệm-320",
+    "tested": 20,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-KTQT-LuyenDe-Tổng quan-320",
+    "tested": 22,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-KTQT-LuyenDe-Theo chương-320",
+    "tested": 53,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-KTQT-LuyenDe-Trắc nghiệm-320",
+    "tested": 20,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-LTMQT-LuyenDe-Tổng quan-320",
+    "tested": 22,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-LTMQT-LuyenDe-Theo chương-320",
+    "tested": 64,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-LTMQT-LuyenDe-Trắc nghiệm-320",
+    "tested": 20,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NLTTTC-LuyenDe-Tổng quan-320",
+    "tested": 22,
+    "excluded": 2,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NLTTTC-LuyenDe-Theo chương-320",
+    "tested": 75,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NLTTTC-LuyenDe-Trắc nghiệm-320",
+    "tested": 20,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-TCCN-LuyenDe-Tổng quan-320",
+    "tested": 30,
+    "excluded": 3,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-TCCN-LuyenDe-Theo chương-320",
+    "tested": 37,
+    "excluded": 7,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-TCCN-LuyenDe-Test 20 câu-320",
+    "tested": 17,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-TCCN-LuyenDe-Luyện thi-320",
+    "tested": 49,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-TCCN-LuyenDe-Câu sai-320",
+    "tested": 12,
+    "excluded": 1,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NguyenLyKeToan-LuyenDe-Tổng quan-320",
+    "tested": 28,
+    "excluded": 3,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NguyenLyKeToan-LuyenDe-Theo chương-320",
+    "tested": 42,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NguyenLyKeToan-LuyenDe-Trắc nghiệm-320",
+    "tested": 31,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "PRACTICE-NguyenLyKeToan-LuyenDe-Luyện đề-320",
+    "tested": 53,
+    "excluded": 0,
+    "failures": []
+  },
+  {
+    "id": "HOME-home-homepage-320",
+    "tested": 95,
+    "excluded": 27,
+    "failures": []
+  }
+]

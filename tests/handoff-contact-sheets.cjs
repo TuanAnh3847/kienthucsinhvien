@@ -2,8 +2,11 @@
 // They supplement full-resolution inspection; they never mark visual review PASS.
 const fs=require('node:fs'),path=require('node:path'),sharp=require('sharp');
 const {evidence}=require('./handoff-browser.cjs');
-const root=path.join(evidence,'after/render'),out=path.join(evidence,'after/contact-sheets',process.env.CONTACT_ROUTES?process.env.CONTACT_ROUTES.replace(/\W/g,'_'):'');fs.mkdirSync(out,{recursive:true});
-const results=JSON.parse(fs.readFileSync(path.join(root,'results.json'),'utf8')).results.filter(r=>!process.env.CONTACT_ROUTES||process.env.CONTACT_ROUTES.split(',').includes(r.route));
+const selectedRoutes=process.env.CONTACT_ROUTES||process.env.RENDER_FILTER;
+const contactName=process.env.CONTACT_NAME;
+if(contactName&&!/^[a-z0-9-]+$/.test(contactName))throw Error('Invalid contact sheet folder name');
+const root=path.join(evidence,'after/render'),out=path.join(evidence,'after/contact-sheets',contactName||(selectedRoutes?selectedRoutes.replace(/\W/g,'_'):''));fs.mkdirSync(out,{recursive:true});
+const results=JSON.parse(fs.readFileSync(path.join(root,'results.json'),'utf8')).results.filter(r=>(!selectedRoutes||selectedRoutes.split(',').includes(r.route))&&(!process.env.CONTACT_IDS||process.env.CONTACT_IDS.split(',').includes(r.coverage_id)));
 (async()=>{
  const tiles=[],width=320,height=1500;
  for(const row of results){

@@ -1,0 +1,367 @@
+{
+  "purpose": "Visual survey; originals retained for reading at native size",
+  "tiles": 72,
+  "sheets": 6,
+  "index": [
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_320_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_320_keyboard_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_320_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_320_keyboard_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_320_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_320_touch_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_320_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_320_touch_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_390_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_390_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_390_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT-LuyenDe_390_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_320_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_320_keyboard_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_320_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_320_keyboard_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_320_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_320_touch_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_320_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_320_touch_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_390_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_390_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_390_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "LTMQT-LuyenDe_390_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_320_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_320_keyboard_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_320_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_320_keyboard_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_320_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_320_touch_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_320_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_320_touch_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_390_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_390_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_390_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC-LuyenDe_390_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NguyenLyKeToan-LuyenDe_320_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NguyenLyKeToan-LuyenDe_320_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NguyenLyKeToan-LuyenDe_320_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NguyenLyKeToan-LuyenDe_320_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NguyenLyKeToan-LuyenDe_390_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NguyenLyKeToan-LuyenDe_390_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NguyenLyKeToan-LuyenDe_390_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NguyenLyKeToan-LuyenDe_390_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NhapMonLuatHoc-LuyenDe_320_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NhapMonLuatHoc-LuyenDe_320_keyboard_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NhapMonLuatHoc-LuyenDe_320_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NhapMonLuatHoc-LuyenDe_320_keyboard_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_320_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_320_touch_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_320_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_320_touch_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_390_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_390_keyboard_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_390_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_390_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_390_touch_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NhapMonLuatHoc-LuyenDe_390_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN-LuyenDe_320_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN-LuyenDe_320_keyboard_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_320_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_320_keyboard_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_320_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_320_touch_correct.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_320_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_320_touch_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_390_keyboard_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_390_keyboard_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_390_keyboard_wrong.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_390_touch_correct.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_390_touch_wrong.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN-LuyenDe_390_touch_wrong.png",
+      "part": 2
+    }
+  ]
+}

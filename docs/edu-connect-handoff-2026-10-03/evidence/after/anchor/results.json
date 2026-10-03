@@ -1,0 +1,126 @@
+[
+  {
+    "width": 320,
+    "pass": true,
+    "labels": [
+      {
+        "value": "ANCHOR",
+        "font": 16,
+        "width": 105.0625,
+        "height": 52,
+        "textWidth": 71.0625,
+        "textHeight": 21
+      },
+      {
+        "value": "→",
+        "font": 24,
+        "width": 32,
+        "height": 20.71875,
+        "textWidth": 32,
+        "textHeight": 20.71875
+      },
+      {
+        "value": "Đánh giá các lựa chọn kế tiếp quanh điểm tham chiếu",
+        "font": 14,
+        "width": 220,
+        "height": 66,
+        "textWidth": 181.84375,
+        "textHeight": 39
+      }
+    ],
+    "evidence": "evidence/after/anchor/TCCN_anchor_320.png"
+  },
+  {
+    "width": 390,
+    "pass": true,
+    "labels": [
+      {
+        "value": "ANCHOR",
+        "font": 16,
+        "width": 105.0625,
+        "height": 52,
+        "textWidth": 71.0625,
+        "textHeight": 21
+      },
+      {
+        "value": "→",
+        "font": 24,
+        "width": 32,
+        "height": 20.71875,
+        "textWidth": 32,
+        "textHeight": 20.71875
+      },
+      {
+        "value": "Đánh giá các lựa chọn kế tiếp quanh điểm tham chiếu",
+        "font": 14,
+        "width": 290,
+        "height": 66,
+        "textWidth": 224.8125,
+        "textHeight": 39
+      }
+    ],
+    "evidence": "evidence/after/anchor/TCCN_anchor_390.png"
+  },
+  {
+    "width": 768,
+    "pass": true,
+    "labels": [
+      {
+        "value": "ANCHOR",
+        "font": 16,
+        "width": 105.0625,
+        "height": 52,
+        "textWidth": 71.0625,
+        "textHeight": 21
+      },
+      {
+        "value": "→",
+        "font": 24,
+        "width": 20.71875,
+        "height": 32,
+        "textWidth": 20.71875,
+        "textHeight": 32
+      },
+      {
+        "value": "Đánh giá các lựa chọn kế tiếp quanh điểm tham chiếu",
+        "font": 14,
+        "width": 366.203125,
+        "height": 46,
+        "textWidth": 332.203125,
+        "textHeight": 19
+      }
+    ],
+    "evidence": "evidence/after/anchor/TCCN_anchor_768.png"
+  },
+  {
+    "width": 1366,
+    "pass": true,
+    "labels": [
+      {
+        "value": "ANCHOR",
+        "font": 16,
+        "width": 105.0625,
+        "height": 52,
+        "textWidth": 71.0625,
+        "textHeight": 21
+      },
+      {
+        "value": "→",
+        "font": 24,
+        "width": 20.71875,
+        "height": 32,
+        "textWidth": 20.71875,
+        "textHeight": 32
+      },
+      {
+        "value": "Đánh giá các lựa chọn kế tiếp quanh điểm tham chiếu",
+        "font": 14,
+        "width": 194.21875,
+        "height": 86,
+        "textWidth": 154.328125,
+        "textHeight": 59
+      }
+    ],
+    "evidence": "evidence/after/anchor/TCCN_anchor_1366.png"
+  }
+]

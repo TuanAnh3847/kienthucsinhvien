@@ -1,0 +1,626 @@
+[
+  {
+    "route": "STKN",
+    "tab": "ch7",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 637,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 706,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 706,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 706,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 5192,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/STKN_ch7_320_text200_top.png",
+      "evidence/after/diagram-zoom/STKN_ch7_320_text200_middle.png",
+      "evidence/after/diagram-zoom/STKN_ch7_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch7",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 637,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 636,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 636,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 636,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 5122,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/STKN_ch7_390_text200_top.png",
+      "evidence/after/diagram-zoom/STKN_ch7_390_text200_middle.png",
+      "evidence/after/diagram-zoom/STKN_ch7_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch7",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 638,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 329,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 285,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 285,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 285,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 4760,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/STKN_ch7_768_text200_top.png",
+      "evidence/after/diagram-zoom/STKN_ch7_768_text200_middle.png",
+      "evidence/after/diagram-zoom/STKN_ch7_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch3",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 203,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 2207,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/STKN_ch3_320_text200_top.png",
+      "evidence/after/diagram-zoom/STKN_ch3_320_text200_middle.png",
+      "evidence/after/diagram-zoom/STKN_ch3_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch3",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 203,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 2137,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/STKN_ch3_390_text200_top.png",
+      "evidence/after/diagram-zoom/STKN_ch3_390_text200_middle.png",
+      "evidence/after/diagram-zoom/STKN_ch3_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch3",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 203,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 1775,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/STKN_ch3_768_text200_top.png",
+      "evidence/after/diagram-zoom/STKN_ch3_768_text200_middle.png",
+      "evidence/after/diagram-zoom/STKN_ch3_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch1",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 307,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Priorities of Cultural Values — 1 = most important; 10 = least",
+        "max": 495,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Dominant Western Values in Workforce — các giá trị nổi bật",
+        "max": 463,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Định hướng của MNC theo các nhóm EPRG",
+        "max": 765,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_320_text200_top.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_320_text200_middle.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch1",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 307,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Priorities of Cultural Values — 1 = most important; 10 = least",
+        "max": 425,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Dominant Western Values in Workforce — các giá trị nổi bật",
+        "max": 393,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Định hướng của MNC theo các nhóm EPRG",
+        "max": 695,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_390_text200_top.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_390_text200_middle.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch1",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 307,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Priorities of Cultural Values — 1 = most important; 10 = least",
+        "max": 81,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Dominant Western Values in Workforce — các giá trị nổi bật",
+        "max": 49,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Định hướng của MNC theo các nhóm EPRG",
+        "max": 351,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_768_text200_top.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_768_text200_middle.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch1_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch3",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 287,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "DOCSA organizational-culture dimensions",
+        "max": 766,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "European Management Characteristics",
+        "max": 677,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Bốn loại văn hóa tổ chức — tóm tắt",
+        "max": 920,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 398,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_320_text200_top.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_320_text200_middle.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch3",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 287,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "DOCSA organizational-culture dimensions",
+        "max": 696,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "European Management Characteristics",
+        "max": 607,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Bốn loại văn hóa tổ chức — tóm tắt",
+        "max": 850,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 328,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_390_text200_top.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_390_text200_middle.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch3",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 286,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "DOCSA organizational-culture dimensions",
+        "max": 352,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "European Management Characteristics",
+        "max": 263,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Bốn loại văn hóa tổ chức — tóm tắt",
+        "max": 506,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_768_text200_top.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_768_text200_middle.png",
+      "evidence/after/diagram-zoom/VHDDTKD_ch3_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch5",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 382,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 1328,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 678,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 396,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 396,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 444,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/LTMQT_ch5_320_text200_top.png",
+      "evidence/after/diagram-zoom/LTMQT_ch5_320_text200_middle.png",
+      "evidence/after/diagram-zoom/LTMQT_ch5_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch5",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 382,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 1258,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 608,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 326,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 326,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 374,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/LTMQT_ch5_390_text200_top.png",
+      "evidence/after/diagram-zoom/LTMQT_ch5_390_text200_middle.png",
+      "evidence/after/diagram-zoom/LTMQT_ch5_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch5",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 380,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 864,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 214,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/LTMQT_ch5_768_text200_top.png",
+      "evidence/after/diagram-zoom/LTMQT_ch5_768_text200_middle.png",
+      "evidence/after/diagram-zoom/LTMQT_ch5_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch1",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 210,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 436,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/TLUD_ch1_320_text200_top.png",
+      "evidence/after/diagram-zoom/TLUD_ch1_320_text200_middle.png",
+      "evidence/after/diagram-zoom/TLUD_ch1_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch1",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 210,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 366,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/TLUD_ch1_390_text200_top.png",
+      "evidence/after/diagram-zoom/TLUD_ch1_390_text200_middle.png",
+      "evidence/after/diagram-zoom/TLUD_ch1_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch1",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 213,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 129,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 429,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 429,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/diagram-zoom/TLUD_ch1_768_text200_top.png",
+      "evidence/after/diagram-zoom/TLUD_ch1_768_text200_middle.png",
+      "evidence/after/diagram-zoom/TLUD_ch1_768_text200_bottom.png"
+    ]
+  }
+]

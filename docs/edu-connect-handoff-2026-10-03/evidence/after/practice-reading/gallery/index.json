@@ -1,0 +1,2362 @@
+{
+  "purpose": "Visual survey; originals retained for reading at native size",
+  "tiles": 471,
+  "sheets": 40,
+  "index": [
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST001_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST001_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST001_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST001_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST002_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST002_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST002_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST003_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST003_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST004_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST004_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ST005_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST005_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST005_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST006_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST006_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST007_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST007_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST008_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST008_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST009_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST009_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST009_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "ST009_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST010_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST010_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST010_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST011_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST011_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST012_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST012_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST013_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST013_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST013_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST013_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ST014_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST014_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST014_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST015_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST015_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST016_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST016_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST017_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST017_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST017_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST017_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST018_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ST018_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST019_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST019_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST020_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST020_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST021_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST021_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST021_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST021_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST022_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST022_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST023_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "ST023_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST024_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST024_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST025_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST025_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST025_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST026_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST026_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST027_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST027_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST028_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST028_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "ST029_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST029_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST029_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST029_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST030_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST030_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST030_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST031_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST031_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST032_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST032_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST033_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "ST033_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST033_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST033_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST034_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST034_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST034_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST035_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST035_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST036_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST036_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST037_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST037_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "ST037_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST038_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST038_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST039_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST039_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST040_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST040_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST041_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST041_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST041_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST041_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST042_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "ST042_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST042_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST043_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST043_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST044_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST044_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST045_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST045_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST045_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST045_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST046_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST046_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-010.png",
+      "file": "ST046_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST047_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST047_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST048_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST048_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST049_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST049_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST049_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST049_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST050_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST050_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST050_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-011.png",
+      "file": "ST051_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST051_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST052_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST052_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST053_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST053_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST053_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST053_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST054_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST054_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST054_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST055_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-012.png",
+      "file": "ST055_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST056_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST056_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST057_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST057_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST057_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST057_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST058_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST058_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST058_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST059_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST059_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-013.png",
+      "file": "ST060_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST060_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST061_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST061_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST061_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST061_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST062_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST062_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST062_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST063_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST063_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST064_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-014.png",
+      "file": "ST064_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST065_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST065_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST065_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST065_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST066_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST066_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST066_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST067_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST067_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST068_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST068_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-015.png",
+      "file": "ST069_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST069_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST069_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST069_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST070_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST070_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST070_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST071_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST071_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST072_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST072_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST073_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-016.png",
+      "file": "ST073_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST073_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST073_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST074_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST074_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST075_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST075_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST076_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST076_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST077_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST077_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST077_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-017.png",
+      "file": "ST078_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST078_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST079_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST079_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST080_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST080_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST081_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST081_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST081_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST081_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST082_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST082_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-018.png",
+      "file": "ST083_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST083_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST084_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST084_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST085_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST085_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST085_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST085_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST086_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST086_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST086_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST087_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-019.png",
+      "file": "ST087_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST088_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST088_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST089_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST089_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST090_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST090_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST091_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST091_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST092_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST092_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST093_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-020.png",
+      "file": "ST093_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST094_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST094_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST095_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST095_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST096_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST096_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST097_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST097_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST098_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST098_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST099_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-021.png",
+      "file": "ST099_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST100_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST100_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST101_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST101_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST102_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST102_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST103_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST103_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST104_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST104_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST105_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-022.png",
+      "file": "ST105_solution.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST105_solution.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST106_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST106_solution.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST107_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST108_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST109_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST109_solution.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST109_solution.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST109_solution.png",
+      "part": 4
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST110_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST110_solution.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-023.png",
+      "file": "ST110_solution.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST111_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST112_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST113_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST113_solution.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST113_solution.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST113_solution.png",
+      "part": 4
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST114_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST114_solution.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST114_solution.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST115_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST116_solution.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-024.png",
+      "file": "ST117_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST117_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST118_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST118_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST119_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST119_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST120_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST120_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST121_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST121_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST122_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST122_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-025.png",
+      "file": "ST123_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST123_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST124_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST124_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST125_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST125_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST125_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST126_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST126_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST127_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST127_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST128_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-026.png",
+      "file": "ST128_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST129_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST129_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST129_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST130_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST130_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST130_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST131_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST131_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST132_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST132_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST133_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-027.png",
+      "file": "ST133_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST133_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST134_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST134_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST135_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST135_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST136_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST136_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST137_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST137_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST137_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST138_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-028.png",
+      "file": "ST138_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST138_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST139_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST139_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST140_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST140_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST141_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST141_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST141_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST142_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST142_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST142_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-029.png",
+      "file": "ST143_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST143_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST144_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST144_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST145_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST145_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST145_graded.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST145_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST145_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST146_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST146_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST146_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-030.png",
+      "file": "ST146_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST147_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST147_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST148_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST148_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST149_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST149_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST149_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST150_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST150_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST151_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST151_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-031.png",
+      "file": "ST152_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST152_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST153_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST153_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST153_graded.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST153_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST153_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST154_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST154_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST154_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST154_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST155_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-032.png",
+      "file": "ST155_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST156_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST156_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST157_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST157_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST157_graded.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST157_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST157_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST158_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST158_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST158_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST158_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-033.png",
+      "file": "ST159_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST159_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST160_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST160_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST161_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST161_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST161_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST161_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST162_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST162_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST162_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST163_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-034.png",
+      "file": "ST163_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST164_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST164_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST165_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST165_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST165_graded.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST165_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST165_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST166_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST166_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST166_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST166_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-035.png",
+      "file": "ST167_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST167_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST168_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST168_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST169_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST169_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST169_graded.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST169_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST169_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST170_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST170_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST170_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-036.png",
+      "file": "ST170_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST171_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST171_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST172_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST172_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST173_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST173_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST173_graded.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST173_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST173_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST174_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST174_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-037.png",
+      "file": "ST174_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST174_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST175_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST175_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST176_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST176_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST177_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST177_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST178_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST178_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST179_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST179_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-038.png",
+      "file": "ST180_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST180_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST181_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST181_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST181_graded.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST181_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST181_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST182_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST182_graded.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST182_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST182_open.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST183_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-039.png",
+      "file": "ST183_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-040.png",
+      "file": "ST184_graded.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-040.png",
+      "file": "ST184_open.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-040.png",
+      "file": "TCCN_diagnostic.png",
+      "part": 1
+    }
+  ]
+}

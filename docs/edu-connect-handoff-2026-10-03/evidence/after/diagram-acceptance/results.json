@@ -1,0 +1,795 @@
+[
+  {
+    "route": "STKN",
+    "tab": "ch7",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/BMC-320-0.png",
+      "evidence/after/diagram-acceptance/BMC-320-0-end.png",
+      "evidence/after/diagram-acceptance/BMC-320-1.png",
+      "evidence/after/diagram-acceptance/BMC-320-1-end.png",
+      "evidence/after/diagram-acceptance/BMC-320-2.png",
+      "evidence/after/diagram-acceptance/BMC-320-2-end.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch3",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/ARES-320.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch1",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/classification-320.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch1",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/iceberg-match-320.png"
+    ]
+  },
+  {
+    "route": "TCCN",
+    "tab": "ch6",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/credit-badges-320.png"
+    ]
+  },
+  {
+    "route": "KTQT",
+    "tab": "ch3",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/ERP-320.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch7",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/BMC-390-0.png",
+      "evidence/after/diagram-acceptance/BMC-390-0-end.png",
+      "evidence/after/diagram-acceptance/BMC-390-1.png",
+      "evidence/after/diagram-acceptance/BMC-390-1-end.png",
+      "evidence/after/diagram-acceptance/BMC-390-2.png",
+      "evidence/after/diagram-acceptance/BMC-390-2-end.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch3",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/ARES-390.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch1",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/classification-390.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch1",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/iceberg-match-390.png"
+    ]
+  },
+  {
+    "route": "TCCN",
+    "tab": "ch6",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/credit-badges-390.png"
+    ]
+  },
+  {
+    "route": "KTQT",
+    "tab": "ch3",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/ERP-390.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch7",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/BMC-768-0.png",
+      "evidence/after/diagram-acceptance/BMC-768-0-end.png",
+      "evidence/after/diagram-acceptance/BMC-768-1.png",
+      "evidence/after/diagram-acceptance/BMC-768-1-end.png",
+      "evidence/after/diagram-acceptance/BMC-768-2.png",
+      "evidence/after/diagram-acceptance/BMC-768-2-end.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch3",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/ARES-768.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch1",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/classification-768.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch1",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/iceberg-match-768.png"
+    ]
+  },
+  {
+    "route": "TCCN",
+    "tab": "ch6",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/credit-badges-768.png"
+    ]
+  },
+  {
+    "route": "KTQT",
+    "tab": "ch3",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/ERP-768.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch7",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/BMC-1366-0.png",
+      "evidence/after/diagram-acceptance/BMC-1366-1.png",
+      "evidence/after/diagram-acceptance/BMC-1366-2.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch3",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/ARES-1366.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch1",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/classification-1366.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch1",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/iceberg-match-1366.png"
+    ]
+  },
+  {
+    "route": "TCCN",
+    "tab": "ch6",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/credit-badges-1366.png"
+    ]
+  },
+  {
+    "route": "KTQT",
+    "tab": "ch3",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/ERP-1366.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch5",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/DSB-320.png",
+      "evidence/after/diagram-acceptance/DSB-320-end.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch5",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/DSB-390.png",
+      "evidence/after/diagram-acceptance/DSB-390-end.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch5",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/DSB-768.png",
+      "evidence/after/diagram-acceptance/DSB-768-end.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch5",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/DSB-1366.png",
+      "evidence/after/diagram-acceptance/DSB-1366-end.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch1",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/layer-320-0.png",
+      "evidence/after/diagram-acceptance/layer-320-1.png",
+      "evidence/after/diagram-acceptance/layer-320-2.png",
+      "evidence/after/diagram-acceptance/layer-320-3.png",
+      "evidence/after/diagram-acceptance/layer-320-4.png",
+      "evidence/after/diagram-acceptance/concept-320.png",
+      "evidence/after/diagram-acceptance/Toyota-320.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch3",
+    "width": 320,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/culture-320.png"
+    ],
+    "axes": [
+      {
+        "text": "Equity",
+        "rect": {
+          "x": 47.59375,
+          "y": 241.859375,
+          "width": 224.8125,
+          "height": 19.5,
+          "top": 241.859375,
+          "right": 272.40625,
+          "bottom": 261.359375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Hierarchy",
+        "rect": {
+          "x": 47.59375,
+          "y": 531.359375,
+          "width": 224.8125,
+          "height": 19.5,
+          "top": 531.359375,
+          "right": 272.40625,
+          "bottom": 550.859375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Person emphasis",
+        "rect": {
+          "x": 47.59375,
+          "y": 562.859375,
+          "width": 106.40625,
+          "height": 39,
+          "top": 562.859375,
+          "right": 154,
+          "bottom": 601.859375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Task emphasis",
+        "rect": {
+          "x": 166,
+          "y": 562.859375,
+          "width": 106.40625,
+          "height": 39,
+          "top": 562.859375,
+          "right": 272.40625,
+          "bottom": 601.859375,
+          "left": 166
+        }
+      },
+      {
+        "text": "Incubatorfulfillment-oriented",
+        "rect": {
+          "x": 47.59375,
+          "y": 273.359375,
+          "width": 106.40625,
+          "height": 117,
+          "top": 273.359375,
+          "right": 154,
+          "bottom": 390.359375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Guided Missileproject-oriented",
+        "rect": {
+          "x": 166,
+          "y": 273.359375,
+          "width": 106.40625,
+          "height": 117,
+          "top": 273.359375,
+          "right": 272.40625,
+          "bottom": 390.359375,
+          "left": 166
+        }
+      },
+      {
+        "text": "Familypower-oriented",
+        "rect": {
+          "x": 47.59375,
+          "y": 402.359375,
+          "width": 106.40625,
+          "height": 117,
+          "top": 402.359375,
+          "right": 154,
+          "bottom": 519.359375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Eiffel Towerrole-oriented",
+        "rect": {
+          "x": 166,
+          "y": 402.359375,
+          "width": 106.40625,
+          "height": 117,
+          "top": 402.359375,
+          "right": 272.40625,
+          "bottom": 519.359375,
+          "left": 166
+        }
+      }
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch1",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/layer-390-0.png",
+      "evidence/after/diagram-acceptance/layer-390-1.png",
+      "evidence/after/diagram-acceptance/layer-390-2.png",
+      "evidence/after/diagram-acceptance/layer-390-3.png",
+      "evidence/after/diagram-acceptance/layer-390-4.png",
+      "evidence/after/diagram-acceptance/concept-390.png",
+      "evidence/after/diagram-acceptance/Toyota-390.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch3",
+    "width": 390,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/culture-390.png"
+    ],
+    "axes": [
+      {
+        "text": "Equity",
+        "rect": {
+          "x": 47.59375,
+          "y": 258.859375,
+          "width": 294.8125,
+          "height": 19.5,
+          "top": 258.859375,
+          "right": 342.40625,
+          "bottom": 278.359375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Hierarchy",
+        "rect": {
+          "x": 47.59375,
+          "y": 534.359375,
+          "width": 294.8125,
+          "height": 19.5,
+          "top": 534.359375,
+          "right": 342.40625,
+          "bottom": 553.859375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Person emphasis",
+        "rect": {
+          "x": 47.59375,
+          "y": 565.859375,
+          "width": 141.40625,
+          "height": 19.5,
+          "top": 565.859375,
+          "right": 189,
+          "bottom": 585.359375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Task emphasis",
+        "rect": {
+          "x": 201,
+          "y": 565.859375,
+          "width": 141.40625,
+          "height": 19.5,
+          "top": 565.859375,
+          "right": 342.40625,
+          "bottom": 585.359375,
+          "left": 201
+        }
+      },
+      {
+        "text": "Incubatorfulfillment-oriented",
+        "rect": {
+          "x": 47.59375,
+          "y": 290.359375,
+          "width": 141.40625,
+          "height": 110,
+          "top": 290.359375,
+          "right": 189,
+          "bottom": 400.359375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Guided Missileproject-oriented",
+        "rect": {
+          "x": 201,
+          "y": 290.359375,
+          "width": 141.40625,
+          "height": 110,
+          "top": 290.359375,
+          "right": 342.40625,
+          "bottom": 400.359375,
+          "left": 201
+        }
+      },
+      {
+        "text": "Familypower-oriented",
+        "rect": {
+          "x": 47.59375,
+          "y": 412.359375,
+          "width": 141.40625,
+          "height": 110,
+          "top": 412.359375,
+          "right": 189,
+          "bottom": 522.359375,
+          "left": 47.59375
+        }
+      },
+      {
+        "text": "Eiffel Towerrole-oriented",
+        "rect": {
+          "x": 201,
+          "y": 412.359375,
+          "width": 141.40625,
+          "height": 110,
+          "top": 412.359375,
+          "right": 342.40625,
+          "bottom": 522.359375,
+          "left": 201
+        }
+      }
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch1",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/layer-768-0.png",
+      "evidence/after/diagram-acceptance/layer-768-1.png",
+      "evidence/after/diagram-acceptance/layer-768-2.png",
+      "evidence/after/diagram-acceptance/layer-768-3.png",
+      "evidence/after/diagram-acceptance/layer-768-4.png",
+      "evidence/after/diagram-acceptance/concept-768.png",
+      "evidence/after/diagram-acceptance/Toyota-768.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch3",
+    "width": 768,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/culture-768.png"
+    ],
+    "axes": [
+      {
+        "text": "Equity",
+        "rect": {
+          "x": 64.390625,
+          "y": 348.25,
+          "width": 639.21875,
+          "height": 19.5,
+          "top": 348.25,
+          "right": 703.609375,
+          "bottom": 367.75,
+          "left": 64.390625
+        }
+      },
+      {
+        "text": "Hierarchy",
+        "rect": {
+          "x": 64.390625,
+          "y": 623.75,
+          "width": 639.21875,
+          "height": 19.5,
+          "top": 623.75,
+          "right": 703.609375,
+          "bottom": 643.25,
+          "left": 64.390625
+        }
+      },
+      {
+        "text": "Person emphasis",
+        "rect": {
+          "x": 64.390625,
+          "y": 655.25,
+          "width": 313.609375,
+          "height": 19.5,
+          "top": 655.25,
+          "right": 378,
+          "bottom": 674.75,
+          "left": 64.390625
+        }
+      },
+      {
+        "text": "Task emphasis",
+        "rect": {
+          "x": 390,
+          "y": 655.25,
+          "width": 313.609375,
+          "height": 19.5,
+          "top": 655.25,
+          "right": 703.609375,
+          "bottom": 674.75,
+          "left": 390
+        }
+      },
+      {
+        "text": "Incubatorfulfillment-oriented",
+        "rect": {
+          "x": 64.390625,
+          "y": 379.75,
+          "width": 313.609375,
+          "height": 110,
+          "top": 379.75,
+          "right": 378,
+          "bottom": 489.75,
+          "left": 64.390625
+        }
+      },
+      {
+        "text": "Guided Missileproject-oriented",
+        "rect": {
+          "x": 390,
+          "y": 379.75,
+          "width": 313.609375,
+          "height": 110,
+          "top": 379.75,
+          "right": 703.609375,
+          "bottom": 489.75,
+          "left": 390
+        }
+      },
+      {
+        "text": "Familypower-oriented",
+        "rect": {
+          "x": 64.390625,
+          "y": 501.75,
+          "width": 313.609375,
+          "height": 110,
+          "top": 501.75,
+          "right": 378,
+          "bottom": 611.75,
+          "left": 64.390625
+        }
+      },
+      {
+        "text": "Eiffel Towerrole-oriented",
+        "rect": {
+          "x": 390,
+          "y": 501.75,
+          "width": 313.609375,
+          "height": 110,
+          "top": 501.75,
+          "right": 703.609375,
+          "bottom": 611.75,
+          "left": 390
+        }
+      }
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch1",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/layer-1366-0.png",
+      "evidence/after/diagram-acceptance/layer-1366-1.png",
+      "evidence/after/diagram-acceptance/layer-1366-2.png",
+      "evidence/after/diagram-acceptance/layer-1366-3.png",
+      "evidence/after/diagram-acceptance/layer-1366-4.png",
+      "evidence/after/diagram-acceptance/concept-1366.png",
+      "evidence/after/diagram-acceptance/Toyota-1366.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch3",
+    "width": 1366,
+    "pass": true,
+    "evidence": [
+      "evidence/after/diagram-acceptance/culture-1366.png"
+    ],
+    "axes": [
+      {
+        "text": "Equity",
+        "rect": {
+          "x": 115.390625,
+          "y": 349.09375,
+          "width": 1135.21875,
+          "height": 19.5,
+          "top": 349.09375,
+          "right": 1250.609375,
+          "bottom": 368.59375,
+          "left": 115.390625
+        }
+      },
+      {
+        "text": "Hierarchy",
+        "rect": {
+          "x": 115.390625,
+          "y": 624.59375,
+          "width": 1135.21875,
+          "height": 19.5,
+          "top": 624.59375,
+          "right": 1250.609375,
+          "bottom": 644.09375,
+          "left": 115.390625
+        }
+      },
+      {
+        "text": "Person emphasis",
+        "rect": {
+          "x": 115.390625,
+          "y": 656.09375,
+          "width": 561.609375,
+          "height": 19.5,
+          "top": 656.09375,
+          "right": 677,
+          "bottom": 675.59375,
+          "left": 115.390625
+        }
+      },
+      {
+        "text": "Task emphasis",
+        "rect": {
+          "x": 689,
+          "y": 656.09375,
+          "width": 561.609375,
+          "height": 19.5,
+          "top": 656.09375,
+          "right": 1250.609375,
+          "bottom": 675.59375,
+          "left": 689
+        }
+      },
+      {
+        "text": "Incubatorfulfillment-oriented",
+        "rect": {
+          "x": 115.390625,
+          "y": 380.59375,
+          "width": 561.609375,
+          "height": 110,
+          "top": 380.59375,
+          "right": 677,
+          "bottom": 490.59375,
+          "left": 115.390625
+        }
+      },
+      {
+        "text": "Guided Missileproject-oriented",
+        "rect": {
+          "x": 689,
+          "y": 380.59375,
+          "width": 561.609375,
+          "height": 110,
+          "top": 380.59375,
+          "right": 1250.609375,
+          "bottom": 490.59375,
+          "left": 689
+        }
+      },
+      {
+        "text": "Familypower-oriented",
+        "rect": {
+          "x": 115.390625,
+          "y": 502.59375,
+          "width": 561.609375,
+          "height": 110,
+          "top": 502.59375,
+          "right": 677,
+          "bottom": 612.59375,
+          "left": 115.390625
+        }
+      },
+      {
+        "text": "Eiffel Towerrole-oriented",
+        "rect": {
+          "x": 689,
+          "y": 502.59375,
+          "width": 561.609375,
+          "height": 110,
+          "top": 502.59375,
+          "right": 1250.609375,
+          "bottom": 612.59375,
+          "left": 689
+        }
+      }
+    ]
+  }
+]

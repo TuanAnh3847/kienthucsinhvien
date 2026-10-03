@@ -1,0 +1,547 @@
+{
+  "purpose": "Visual survey; originals retained for reading at native size",
+  "tiles": 108,
+  "sheets": 9,
+  "index": [
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTCTMLN_ch2_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT_ch5_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT_ch5_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTQT_ch5_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTQT_ch5_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTQT_ch5_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTQT_ch5_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTQT_ch5_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTQT_ch5_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTQT_ch5_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_review_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_review_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_review_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_review_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_review_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_review_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "KTTC_review_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "KTTC_review_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "KTTC_review_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "LTMQT_ch1_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLKT_ch1_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLTTTC_ch2_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLTTTC_ch2_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "NLTTTC_ch2_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NLTTTC_ch2_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NLTTTC_ch2_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NLTTTC_ch2_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NLTTTC_ch2_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NLTTTC_ch2_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NLTTTC_ch2_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NMLH_ch5_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NMLH_ch5_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NMLH_ch5_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NMLH_ch5_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NMLH_ch5_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "NMLH_ch5_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "NMLH_ch5_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "NMLH_ch5_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "NMLH_ch5_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "PTBV_ch2_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "STKN_ch6_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "TCCN_ch5_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "TCCN_ch5_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "TCCN_ch5_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TCCN_ch5_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TCCN_ch5_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TCCN_ch5_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TCCN_ch5_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TCCN_ch5_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TCCN_ch5_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TLUD_ch7_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TLUD_ch7_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TLUD_ch7_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TLUD_ch7_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TLUD_ch7_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "TLUD_ch7_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "TLUD_ch7_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "TLUD_ch7_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "TLUD_ch7_768_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_320_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_320_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_320_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_390_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_390_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_390_text200_top.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_768_text200_bottom.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_768_text200_middle.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-009.png",
+      "file": "VHDDTKD_ch2_768_text200_top.png",
+      "part": 1
+    }
+  ]
+}

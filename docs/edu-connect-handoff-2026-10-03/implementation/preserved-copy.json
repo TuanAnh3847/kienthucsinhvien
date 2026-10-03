@@ -1,0 +1,158 @@
+{
+  "CP006": [
+    {
+      "file": "KINH_TE_QUOC_TE.html",
+      "line": 110,
+      "exact": "Kết luận theo đơn vị hiện vật: Britain capital abundant; America labor abundant. Phần giá yếu tố sản xuất là câu hỏi tự luyện, chưa có lời giải mẫu.",
+      "count": 1
+    }
+  ],
+  "CP015": [
+    {
+      "file": "KE_TOAN_TAI_CHINH.html",
+      "line": 349,
+      "exact": "hoạt động này chưa hỗ trợ tính tự động.",
+      "count": 1
+    },
+    {
+      "file": "KE_TOAN_TAI_CHINH.html",
+      "line": 386,
+      "exact": "Công cụ yêu cầu nhập giá trị ghi sổ, chưa hỗ trợ tự tính bình quân di động.",
+      "count": 1
+    }
+  ],
+  "CP019": [
+    {
+      "file": "NGUYEN_LY_KE_TOAN.html",
+      "line": 224,
+      "exact": "tài khoản 112 có hai cách gọi",
+      "count": 2
+    },
+    {
+      "file": "NGUYEN_LY_KE_TOAN.html",
+      "line": 287,
+      "exact": "mô tả ghi Sep 19, General Journal ghi 18/9.",
+      "count": 1
+    }
+  ],
+  "CP025": [
+    {
+      "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+      "line": 123,
+      "exact": "Ba giá trị được nêu cộng thành 90%; hãy dùng đúng các số liệu này và không suy ra 10% còn thiếu.",
+      "count": 1
+    }
+  ],
+  "CP031": [
+    {
+      "file": "TAM_LY_UNG_DUNG.html",
+      "line": 231,
+      "exact": "Các cột chỉ thể hiện tương quan, không dùng để đọc giá trị tuyệt đối.",
+      "count": 1
+    },
+    {
+      "file": "TAM_LY_UNG_DUNG.html",
+      "line": 547,
+      "exact": "S.F. 3493 / “…2 seconds” / 3492:",
+      "count": 1
+    }
+  ],
+  "CP043": [
+    {
+      "file": "TAI_CHINH_CA_NHAN.html",
+      "line": 1475,
+      "exact": "Nhận định “Less than 2.5 is a red flag” chưa chỉ rõ 2.5 ứng với tỷ số nào; không áp dụng ngưỡng này cho một tỷ số cụ thể.",
+      "count": 1
+    },
+    {
+      "file": "TAI_CHINH_CA_NHAN.html",
+      "line": 1655,
+      "exact": "Vì vậy phần này dùng để xem lại ví dụ và chưa có máy tính IRR.",
+      "count": 1
+    },
+    {
+      "file": "TAI_CHINH_CA_NHAN.html",
+      "line": 3131,
+      "exact": "Bốn hành động; bài tập không chấm cách ghép cụ thể với Step 2/3.",
+      "count": 1
+    }
+  ],
+  "CP047": [
+    {
+      "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+      "line": 155,
+      "exact": "Số liệu lịch sử để luyện phân tích, không phải số liệu hiện hành.",
+      "count": 1
+    }
+  ],
+  "CP055": [
+    {
+      "file": "SANG_TAO_KHOI_NGHIEP.html",
+      "line": 1054,
+      "exact": "Hai cặp Myth ↔ Facts về Bill Gates và Mark Zuckerberg được dùng làm tình huống thảo luận trong bài, không phải hồ sơ tiểu sử đã kiểm chứng.",
+      "count": 1
+    },
+    {
+      "file": "SANG_TAO_KHOI_NGHIEP.html",
+      "line": 731,
+      "exact": "Không có đáp án mẫu cho các activity này.",
+      "count": 1
+    }
+  ],
+  "CP059": [
+    {
+      "file": "PHAT_TRIEN_BEN_VUNG.html",
+      "line": 641,
+      "exact": "Đây là ví dụ minh họa, không đại diện cho toàn bộ chương trình phát triển bền vững của Việt Nam.",
+      "count": 1
+    },
+    {
+      "file": "PHAT_TRIEN_BEN_VUNG.html",
+      "line": 636,
+      "exact": "coverage được nêu là >92%",
+      "count": 1
+    }
+  ],
+  "CP060": [
+    {
+      "file": "NhapMonLuatHoc.html",
+      "line": 759,
+      "exact": ">PREMIUM<",
+      "count": 3
+    },
+    {
+      "file": "KinhTeChinhTriMacLeNin.html",
+      "line": 508,
+      "exact": ">PREMIUM<",
+      "count": 3
+    }
+  ],
+  "CP062": [
+    {
+      "file": "index.html",
+      "line": 342,
+      "exact": "Luyện theo chương, làm bài nhanh hoặc đề tổng hợp có đồng hồ; xem kết quả và giải thích sau khi làm bài.",
+      "count": 1
+    },
+    {
+      "file": "index.html",
+      "line": 343,
+      "exact": "href=\"/TCCN-LuyenDe\"",
+      "count": 1
+    }
+  ],
+  "CP070": [
+    {
+      "file": "index.html",
+      "line": 312,
+      "exact": "⏳ Sắp ra mắt...",
+      "count": 1
+    },
+    {
+      "file": "TCCN-LuyenDe.html",
+      "line": 3285,
+      "exact": "Chưa có câu sai nào được lưu",
+      "count": 1
+    }
+  ]
+}

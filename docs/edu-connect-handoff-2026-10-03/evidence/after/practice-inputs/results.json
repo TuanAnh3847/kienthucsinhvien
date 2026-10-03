@@ -1,0 +1,362 @@
+[
+  {
+    "route": "/NhapMonLuatHoc-LuyenDe",
+    "width": 320,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NhapMonLuatHoc-LuyenDe_320_keyboard_correct.png",
+      "evidence/after/practice-inputs/NhapMonLuatHoc-LuyenDe_320_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 116,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NhapMonLuatHoc-LuyenDe",
+    "width": 320,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NhapMonLuatHoc-LuyenDe_320_touch_correct.png",
+      "evidence/after/practice-inputs/NhapMonLuatHoc-LuyenDe_320_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 116,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NhapMonLuatHoc-LuyenDe",
+    "width": 390,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NhapMonLuatHoc-LuyenDe_390_keyboard_correct.png",
+      "evidence/after/practice-inputs/NhapMonLuatHoc-LuyenDe_390_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 116,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NhapMonLuatHoc-LuyenDe",
+    "width": 390,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NhapMonLuatHoc-LuyenDe_390_touch_correct.png",
+      "evidence/after/practice-inputs/NhapMonLuatHoc-LuyenDe_390_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 116,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/KTQT-LuyenDe",
+    "width": 320,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/KTQT-LuyenDe_320_keyboard_correct.png",
+      "evidence/after/practice-inputs/KTQT-LuyenDe_320_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 116,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/KTQT-LuyenDe",
+    "width": 320,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/KTQT-LuyenDe_320_touch_correct.png",
+      "evidence/after/practice-inputs/KTQT-LuyenDe_320_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 116,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/KTQT-LuyenDe",
+    "width": 390,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/KTQT-LuyenDe_390_keyboard_correct.png",
+      "evidence/after/practice-inputs/KTQT-LuyenDe_390_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 116,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/KTQT-LuyenDe",
+    "width": 390,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/KTQT-LuyenDe_390_touch_correct.png",
+      "evidence/after/practice-inputs/KTQT-LuyenDe_390_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 116,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/LTMQT-LuyenDe",
+    "width": 320,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/LTMQT-LuyenDe_320_keyboard_correct.png",
+      "evidence/after/practice-inputs/LTMQT-LuyenDe_320_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 68,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/LTMQT-LuyenDe",
+    "width": 320,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/LTMQT-LuyenDe_320_touch_correct.png",
+      "evidence/after/practice-inputs/LTMQT-LuyenDe_320_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 68,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/LTMQT-LuyenDe",
+    "width": 390,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/LTMQT-LuyenDe_390_keyboard_correct.png",
+      "evidence/after/practice-inputs/LTMQT-LuyenDe_390_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 68,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/LTMQT-LuyenDe",
+    "width": 390,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/LTMQT-LuyenDe_390_touch_correct.png",
+      "evidence/after/practice-inputs/LTMQT-LuyenDe_390_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 68,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NLTTTC-LuyenDe",
+    "width": 320,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NLTTTC-LuyenDe_320_keyboard_correct.png",
+      "evidence/after/practice-inputs/NLTTTC-LuyenDe_320_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 80,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NLTTTC-LuyenDe",
+    "width": 320,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NLTTTC-LuyenDe_320_touch_correct.png",
+      "evidence/after/practice-inputs/NLTTTC-LuyenDe_320_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 80,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NLTTTC-LuyenDe",
+    "width": 390,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NLTTTC-LuyenDe_390_keyboard_correct.png",
+      "evidence/after/practice-inputs/NLTTTC-LuyenDe_390_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 80,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NLTTTC-LuyenDe",
+    "width": 390,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NLTTTC-LuyenDe_390_touch_correct.png",
+      "evidence/after/practice-inputs/NLTTTC-LuyenDe_390_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 80,
+      "excluded": 1,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NguyenLyKeToan-LuyenDe",
+    "width": 320,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NguyenLyKeToan-LuyenDe_320_keyboard_correct.png",
+      "evidence/after/practice-inputs/NguyenLyKeToan-LuyenDe_320_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 112,
+      "excluded": 3,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NguyenLyKeToan-LuyenDe",
+    "width": 320,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NguyenLyKeToan-LuyenDe_320_touch_correct.png",
+      "evidence/after/practice-inputs/NguyenLyKeToan-LuyenDe_320_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 112,
+      "excluded": 3,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NguyenLyKeToan-LuyenDe",
+    "width": 390,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NguyenLyKeToan-LuyenDe_390_keyboard_correct.png",
+      "evidence/after/practice-inputs/NguyenLyKeToan-LuyenDe_390_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 112,
+      "excluded": 3,
+      "failures": []
+    }
+  },
+  {
+    "route": "/NguyenLyKeToan-LuyenDe",
+    "width": 390,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/NguyenLyKeToan-LuyenDe_390_touch_correct.png",
+      "evidence/after/practice-inputs/NguyenLyKeToan-LuyenDe_390_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 112,
+      "excluded": 3,
+      "failures": []
+    }
+  },
+  {
+    "route": "/TCCN-LuyenDe",
+    "width": 320,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/TCCN-LuyenDe_320_keyboard_correct.png",
+      "evidence/after/practice-inputs/TCCN-LuyenDe_320_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 809,
+      "excluded": 5,
+      "failures": []
+    }
+  },
+  {
+    "route": "/TCCN-LuyenDe",
+    "width": 320,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/TCCN-LuyenDe_320_touch_correct.png",
+      "evidence/after/practice-inputs/TCCN-LuyenDe_320_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 809,
+      "excluded": 5,
+      "failures": []
+    }
+  },
+  {
+    "route": "/TCCN-LuyenDe",
+    "width": 390,
+    "method": "keyboard",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/TCCN-LuyenDe_390_keyboard_correct.png",
+      "evidence/after/practice-inputs/TCCN-LuyenDe_390_keyboard_wrong.png"
+    ],
+    "contrast": {
+      "tested": 809,
+      "excluded": 5,
+      "failures": []
+    }
+  },
+  {
+    "route": "/TCCN-LuyenDe",
+    "width": 390,
+    "method": "touch",
+    "pass": true,
+    "evidence": [
+      "evidence/after/practice-inputs/TCCN-LuyenDe_390_touch_correct.png",
+      "evidence/after/practice-inputs/TCCN-LuyenDe_390_touch_wrong.png"
+    ],
+    "contrast": {
+      "tested": 809,
+      "excluded": 5,
+      "failures": []
+    }
+  }
+]

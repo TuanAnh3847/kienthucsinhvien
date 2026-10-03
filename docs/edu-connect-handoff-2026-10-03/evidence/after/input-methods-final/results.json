@@ -1,0 +1,4130 @@
+[
+  {
+    "route": "NLKT",
+    "width": 320,
+    "controls": 373,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "checkEquationClassifier()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetEquationClassifier()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "answerPrinciple(this,\"Cost / historical cost\")",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "nextPrincipleQuestion()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": false,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "answerMcq(this,0,0)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkFsOne(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "showSfpCase(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "movePl(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "movePl(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkPlOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetPlOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "answerDc('Debit')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "nextDc()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkJournalBuilder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "revealJournalAnswer()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkTrialBalance()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "if(typeof attemptSwitchTab==='function') attemptSwitchTab('coa')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcMeasure()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "answerInvSystem(0,'Perpetual')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkFifo()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkMovingAverage()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkDocClass(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "moveDoc(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "moveDoc(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "checkDocOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetDocOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "answerPhysical(\"Reconciliation\")",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "nextPhysical()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "traceMorning('purchase',this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "calcProductionCost()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "showMfgNode('152')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "toggleMfgJournal()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkPurpose(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "moveClosing(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "moveClosing(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "checkClosingOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "resetClosingOrder()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTTC",
+    "width": 320,
+    "controls": 296,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "renderInventoryWork()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "calcNRV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "composeFA()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "mapCost('materials')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "calcFG()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.parentElement.remove()",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "addJELine('Dr')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "validateJE()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "classifyInvestment()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "splitTradeCost()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "adjustInvestmentAllowance()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch3",
+        "handler": "splitBalances()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "adjustBadDebt()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "badLifecycle('setup')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "calcCIT()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "sortRP()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch4",
+        "handler": "sortOther()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calc911()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "disposalAlert()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "profitBridge()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "splitShareIssue()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "treasuryLedger()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "retainedStep('profit')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "equityPreview()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "buildPL()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "classifySFP()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "splitBalancesC6()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "classifyCF()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "calcCashFlow()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTQT",
+    "width": 320,
+    "controls": 321,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NMLH",
+    "width": 320,
+    "controls": 34,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTCTMLN",
+    "width": 320,
+    "controls": 40,
+    "keyboard_activations": [
+      {
+        "id": "ch2",
+        "handler": "KTCT.calcW()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "KTCT.calcM()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "KTCT.calcSurplus()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "TCCN",
+    "width": 320,
+    "controls": 366,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "buildSmartGoal()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkOrder('planning')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetOrder('planning')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkSelectQuiz('bias')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildCareerReflection()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkSelectQuiz('careerBC')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildBenefitReflection()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildCareerTimeline()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkSelectQuiz('productCategory')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkRiskLabels()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetRiskLabels()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcBalanceSheet()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcCashFlow()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcFV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "showIrrExample('house',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcSolvency()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkSelectQuiz('riskType')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkOrder('risk')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetOrder('risk')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcHomeReimbursement()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcACV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showInsuranceReplay('selena',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkSelectQuiz('lending')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkBorrowConditions()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "resetBorrowConditions()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "revealTedStep(1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "saveS8Workspace()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "loadS8Workspace()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "clearS8Workspace()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NLTTTC",
+    "width": 320,
+    "controls": 367,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "timelinePrev()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "timelineNext()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkMatching('match-char')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetMatching('match-char')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "validateSort('sort-m1m2')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetSort('sort-m1m2')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkMatching('match-claim')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetMatching('match-claim')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "validateFundBuilder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "validateSort('sort-instruments')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetSort('sort-instruments')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "stepTony(-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "stepTony(1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkMultiValid('problem-solution-match')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkMatching('match-asset-direction')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "resetMatching('match-asset-direction')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcExpectedReturn()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcSimpleInterest()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "highlightEquilibrium()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "review",
+        "handler": "jumpToTab('ch1')",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "LTMQT",
+    "width": 320,
+    "controls": 431,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "VHDDTKD",
+    "width": 320,
+    "controls": 253,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "PTBV",
+    "width": 320,
+    "controls": 423,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "toggleReveal('growth-reveal',this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "checkSelectQuiz('quiz-indicators')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetSelectQuiz('quiz-indicators')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "toggleRecognition(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkRecognition('poverty-recognition',6)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetRecognition('poverty-recognition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkSelectQuiz('quiz-challenge-opportunity')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetSelectQuiz('quiz-challenge-opportunity')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch3",
+        "handler": "checkSelectQuiz('quiz-stakeholder-role')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetSelectQuiz('quiz-stakeholder-role')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkDualQuiz('quiz-barrier-condition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetDualQuiz('quiz-barrier-condition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "showGovTool('policy',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch4",
+        "handler": "moveOrder(this,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "moveOrder(this,1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkOrder('commitment-order')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "shuffleOrder('commitment-order')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkSelectQuiz('quiz-ifi')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "resetSelectQuiz('quiz-ifi')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "showStateIFI('role',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "showTransport('policy',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showTimeline(this,'Chương trình Nghị sự 21 của Việt Nam — mốc tham khảo: 2004.')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showNationalGoal(0,this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "checkSelectQuiz('quiz-vn-achievement')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetSelectQuiz('quiz-vn-achievement')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "STKN",
+    "width": 320,
+    "controls": 505,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "TLUD",
+    "width": 320,
+    "controls": 220,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NLKT",
+    "width": 390,
+    "controls": 373,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "checkEquationClassifier()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetEquationClassifier()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "answerPrinciple(this,\"Conservatism\")",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "nextPrincipleQuestion()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": false,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "answerMcq(this,0,0)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkFsOne(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "showSfpCase(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "movePl(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "movePl(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkPlOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetPlOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "answerDc('Debit')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "nextDc()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkJournalBuilder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "revealJournalAnswer()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkTrialBalance()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "if(typeof attemptSwitchTab==='function') attemptSwitchTab('coa')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcMeasure()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "answerInvSystem(0,'Perpetual')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkFifo()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkMovingAverage()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkDocClass(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "moveDoc(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "moveDoc(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "checkDocOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetDocOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "answerPhysical(\"Comprehensive\")",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "nextPhysical()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "traceMorning('purchase',this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "calcProductionCost()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "showMfgNode('152')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "toggleMfgJournal()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkPurpose(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "moveClosing(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "moveClosing(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "checkClosingOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "resetClosingOrder()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTTC",
+    "width": 390,
+    "controls": 296,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "renderInventoryWork()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "calcNRV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "composeFA()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "mapCost('materials')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "calcFG()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.parentElement.remove()",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "addJELine('Dr')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "validateJE()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "classifyInvestment()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "splitTradeCost()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "adjustInvestmentAllowance()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch3",
+        "handler": "splitBalances()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "adjustBadDebt()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "badLifecycle('setup')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "calcCIT()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "sortRP()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch4",
+        "handler": "sortOther()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calc911()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "disposalAlert()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "profitBridge()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "splitShareIssue()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "treasuryLedger()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "retainedStep('profit')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "equityPreview()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "buildPL()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "classifySFP()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "splitBalancesC6()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "classifyCF()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "calcCashFlow()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTQT",
+    "width": 390,
+    "controls": 318,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NMLH",
+    "width": 390,
+    "controls": 34,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTCTMLN",
+    "width": 390,
+    "controls": 40,
+    "keyboard_activations": [
+      {
+        "id": "ch2",
+        "handler": "KTCT.calcW()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "KTCT.calcM()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "KTCT.calcSurplus()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "TCCN",
+    "width": 390,
+    "controls": 366,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "buildSmartGoal()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkOrder('planning')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetOrder('planning')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkSelectQuiz('bias')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildCareerReflection()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkSelectQuiz('careerBC')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildBenefitReflection()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildCareerTimeline()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkSelectQuiz('productCategory')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkRiskLabels()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetRiskLabels()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcBalanceSheet()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcCashFlow()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcFV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "showIrrExample('house',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcSolvency()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkSelectQuiz('riskType')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkOrder('risk')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetOrder('risk')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcHomeReimbursement()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcACV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showInsuranceReplay('selena',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkSelectQuiz('lending')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkBorrowConditions()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "resetBorrowConditions()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "revealTedStep(1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "saveS8Workspace()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "loadS8Workspace()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "clearS8Workspace()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NLTTTC",
+    "width": 390,
+    "controls": 367,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "timelinePrev()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "timelineNext()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkMatching('match-char')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetMatching('match-char')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "validateSort('sort-m1m2')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetSort('sort-m1m2')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkMatching('match-claim')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetMatching('match-claim')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "validateFundBuilder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "validateSort('sort-instruments')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetSort('sort-instruments')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "stepTony(-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "stepTony(1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkMultiValid('problem-solution-match')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkMatching('match-asset-direction')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "resetMatching('match-asset-direction')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcExpectedReturn()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcSimpleInterest()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "highlightEquilibrium()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "review",
+        "handler": "jumpToTab('ch1')",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "LTMQT",
+    "width": 390,
+    "controls": 431,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "VHDDTKD",
+    "width": 390,
+    "controls": 253,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "PTBV",
+    "width": 390,
+    "controls": 423,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "toggleReveal('growth-reveal',this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "checkSelectQuiz('quiz-indicators')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetSelectQuiz('quiz-indicators')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "toggleRecognition(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkRecognition('poverty-recognition',6)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetRecognition('poverty-recognition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkSelectQuiz('quiz-challenge-opportunity')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetSelectQuiz('quiz-challenge-opportunity')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch3",
+        "handler": "checkSelectQuiz('quiz-stakeholder-role')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetSelectQuiz('quiz-stakeholder-role')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkDualQuiz('quiz-barrier-condition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetDualQuiz('quiz-barrier-condition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "showGovTool('policy',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch4",
+        "handler": "moveOrder(this,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "moveOrder(this,1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkOrder('commitment-order')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "shuffleOrder('commitment-order')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkSelectQuiz('quiz-ifi')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "resetSelectQuiz('quiz-ifi')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "showStateIFI('role',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "showTransport('policy',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showTimeline(this,'Chương trình Nghị sự 21 của Việt Nam — mốc tham khảo: 2004.')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showNationalGoal(0,this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "checkSelectQuiz('quiz-vn-achievement')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetSelectQuiz('quiz-vn-achievement')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "STKN",
+    "width": 390,
+    "controls": 504,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "TLUD",
+    "width": 390,
+    "controls": 220,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NLKT",
+    "width": 768,
+    "controls": 366,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "checkEquationClassifier()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetEquationClassifier()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "answerPrinciple(this,\"Conservatism\")",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "nextPrincipleQuestion()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": false,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "answerMcq(this,0,0)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkFsOne(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "showSfpCase(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "movePl(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "movePl(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkPlOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetPlOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "answerDc('Debit')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "nextDc()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkJournalBuilder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "revealJournalAnswer()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkTrialBalance()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "if(typeof attemptSwitchTab==='function') attemptSwitchTab('coa')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcMeasure()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "answerInvSystem(0,'Perpetual')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkFifo()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkMovingAverage()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkDocClass(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "moveDoc(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "moveDoc(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "checkDocOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetDocOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "answerPhysical(\"Physical count\")",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "nextPhysical()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "traceMorning('purchase',this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "calcProductionCost()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "showMfgNode('152')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "toggleMfgJournal()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkPurpose(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "moveClosing(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "moveClosing(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "checkClosingOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "resetClosingOrder()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTTC",
+    "width": 768,
+    "controls": 298,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "renderInventoryWork()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "calcNRV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "composeFA()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "mapCost('materials')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "calcFG()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.parentElement.remove()",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "addJELine('Dr')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "validateJE()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "classifyInvestment()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "splitTradeCost()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "adjustInvestmentAllowance()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch3",
+        "handler": "splitBalances()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "adjustBadDebt()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "badLifecycle('setup')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "calcCIT()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "sortRP()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch4",
+        "handler": "sortOther()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calc911()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "disposalAlert()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "profitBridge()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "splitShareIssue()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "treasuryLedger()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "retainedStep('profit')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "equityPreview()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "buildPL()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "classifySFP()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "splitBalancesC6()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "classifyCF()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "calcCashFlow()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTQT",
+    "width": 768,
+    "controls": 305,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NMLH",
+    "width": 768,
+    "controls": 34,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTCTMLN",
+    "width": 768,
+    "controls": 40,
+    "keyboard_activations": [
+      {
+        "id": "ch2",
+        "handler": "KTCT.calcW()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "KTCT.calcM()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "KTCT.calcSurplus()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "TCCN",
+    "width": 768,
+    "controls": 341,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "buildSmartGoal()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkOrder('planning')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetOrder('planning')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkSelectQuiz('bias')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildCareerReflection()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkSelectQuiz('careerBC')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildBenefitReflection()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildCareerTimeline()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkSelectQuiz('productCategory')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkRiskLabels()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetRiskLabels()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcBalanceSheet()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcCashFlow()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcFV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "showIrrExample('house',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcSolvency()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkSelectQuiz('riskType')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkOrder('risk')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetOrder('risk')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcHomeReimbursement()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcACV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showInsuranceReplay('selena',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkSelectQuiz('lending')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkBorrowConditions()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "resetBorrowConditions()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "revealTedStep(1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "saveS8Workspace()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "loadS8Workspace()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "clearS8Workspace()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NLTTTC",
+    "width": 768,
+    "controls": 359,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "timelinePrev()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "timelineNext()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkMatching('match-char')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetMatching('match-char')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "validateSort('sort-m1m2')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetSort('sort-m1m2')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkMatching('match-claim')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetMatching('match-claim')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "validateFundBuilder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "validateSort('sort-instruments')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetSort('sort-instruments')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "stepTony(-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "stepTony(1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkMultiValid('problem-solution-match')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkMatching('match-asset-direction')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "resetMatching('match-asset-direction')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcExpectedReturn()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcSimpleInterest()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "highlightEquilibrium()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "review",
+        "handler": "jumpToTab('ch1')",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "LTMQT",
+    "width": 768,
+    "controls": 412,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "VHDDTKD",
+    "width": 768,
+    "controls": 252,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "PTBV",
+    "width": 768,
+    "controls": 425,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "toggleReveal('growth-reveal',this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "checkSelectQuiz('quiz-indicators')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetSelectQuiz('quiz-indicators')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "toggleRecognition(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkRecognition('poverty-recognition',6)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetRecognition('poverty-recognition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkSelectQuiz('quiz-challenge-opportunity')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetSelectQuiz('quiz-challenge-opportunity')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch3",
+        "handler": "checkSelectQuiz('quiz-stakeholder-role')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetSelectQuiz('quiz-stakeholder-role')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkDualQuiz('quiz-barrier-condition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetDualQuiz('quiz-barrier-condition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "showGovTool('policy',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch4",
+        "handler": "moveOrder(this,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "moveOrder(this,1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkOrder('commitment-order')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "shuffleOrder('commitment-order')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkSelectQuiz('quiz-ifi')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "resetSelectQuiz('quiz-ifi')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "showStateIFI('role',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "showTransport('policy',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showTimeline(this,'Chương trình Nghị sự 21 của Việt Nam — mốc tham khảo: 2004.')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showNationalGoal(0,this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "checkSelectQuiz('quiz-vn-achievement')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetSelectQuiz('quiz-vn-achievement')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "STKN",
+    "width": 768,
+    "controls": 510,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "TLUD",
+    "width": 768,
+    "controls": 220,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NLKT",
+    "width": 1366,
+    "controls": 363,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "checkEquationClassifier()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetEquationClassifier()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "answerPrinciple(this,\"Conservatism\")",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "nextPrincipleQuestion()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": false,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "answerMcq(this,0,0)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkFsOne(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "showSfpCase(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "movePl(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "movePl(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkPlOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetPlOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "answerDc('Debit')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "nextDc()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkJournalBuilder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "revealJournalAnswer()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkTrialBalance()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "if(typeof attemptSwitchTab==='function') attemptSwitchTab('coa')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcMeasure()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "answerInvSystem(0,'Perpetual')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkFifo()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkMovingAverage()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkDocClass(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "moveDoc(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "moveDoc(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "checkDocOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetDocOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "answerPhysical(\"Unscheduled / spot\")",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "nextPhysical()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "traceMorning('purchase',this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "calcProductionCost()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "showMfgNode('152')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "toggleMfgJournal()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkPurpose(0)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "moveClosing(0,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "moveClosing(0,1)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "checkClosingOrder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "resetClosingOrder()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTTC",
+    "width": 1366,
+    "controls": 267,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "renderInventoryWork()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "calcNRV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "composeFA()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "mapCost('materials')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "calcFG()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.parentElement.remove()",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "addJELine('Dr')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "validateJE()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "classifyInvestment()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "splitTradeCost()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "adjustInvestmentAllowance()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch3",
+        "handler": "splitBalances()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "adjustBadDebt()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "badLifecycle('setup')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "calcCIT()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "sortRP()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch4",
+        "handler": "sortOther()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calc911()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "disposalAlert()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "profitBridge()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "splitShareIssue()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "treasuryLedger()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "retainedStep('profit')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "equityPreview()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch6",
+        "handler": "buildPL()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "classifySFP()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "splitBalancesC6()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "classifyCF()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "calcCashFlow()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "this.classList.toggle('flipped')",
+        "clicked": true,
+        "changed": true
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTQT",
+    "width": 1366,
+    "controls": 298,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NMLH",
+    "width": 1366,
+    "controls": 34,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "KTCTMLN",
+    "width": 1366,
+    "controls": 40,
+    "keyboard_activations": [
+      {
+        "id": "ch2",
+        "handler": "KTCT.calcW()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "KTCT.calcM()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "KTCT.calcSurplus()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "TCCN",
+    "width": 1366,
+    "controls": 332,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "buildSmartGoal()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkOrder('planning')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetOrder('planning')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkSelectQuiz('bias')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildCareerReflection()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkSelectQuiz('careerBC')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildBenefitReflection()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "buildCareerTimeline()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkSelectQuiz('productCategory')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkRiskLabels()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetRiskLabels()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcBalanceSheet()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcCashFlow()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcFV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "showIrrExample('house',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcSolvency()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkSelectQuiz('riskType')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "checkOrder('risk')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetOrder('risk')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcHomeReimbursement()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcACV()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showInsuranceReplay('selena',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkSelectQuiz('lending')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "checkBorrowConditions()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "resetBorrowConditions()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "revealTedStep(1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "saveS8Workspace()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "loadS8Workspace()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch6",
+        "handler": "clearS8Workspace()",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "NLTTTC",
+    "width": 1366,
+    "controls": 360,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "timelinePrev()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "timelineNext()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "checkMatching('match-char')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetMatching('match-char')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "validateSort('sort-m1m2')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetSort('sort-m1m2')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkMatching('match-claim')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetMatching('match-claim')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "validateFundBuilder()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "validateSort('sort-instruments')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetSort('sort-instruments')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "stepTony(-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "stepTony(1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkMultiValid('problem-solution-match')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkMatching('match-asset-direction')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "resetMatching('match-asset-direction')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "calcExpectedReturn()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "calcSimpleInterest()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "highlightEquilibrium()",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "review",
+        "handler": "jumpToTab('ch1')",
+        "clicked": true,
+        "changed": false
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "LTMQT",
+    "width": 1366,
+    "controls": 411,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "VHDDTKD",
+    "width": 1366,
+    "controls": 234,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "PTBV",
+    "width": 1366,
+    "controls": 422,
+    "keyboard_activations": [
+      {
+        "id": "ch1",
+        "handler": "toggleReveal('growth-reveal',this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch1",
+        "handler": "checkSelectQuiz('quiz-indicators')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "resetSelectQuiz('quiz-indicators')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch1",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "toggleRecognition(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch2",
+        "handler": "checkRecognition('poverty-recognition',6)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetRecognition('poverty-recognition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "checkSelectQuiz('quiz-challenge-opportunity')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "resetSelectQuiz('quiz-challenge-opportunity')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch2",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch3",
+        "handler": "checkSelectQuiz('quiz-stakeholder-role')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetSelectQuiz('quiz-stakeholder-role')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "checkDualQuiz('quiz-barrier-condition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "resetDualQuiz('quiz-barrier-condition')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "showGovTool('policy',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch3",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch4",
+        "handler": "moveOrder(this,-1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "moveOrder(this,1)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkOrder('commitment-order')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "shuffleOrder('commitment-order')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "checkSelectQuiz('quiz-ifi')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "resetSelectQuiz('quiz-ifi')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "showStateIFI('role',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch4",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "showTransport('policy',this)",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showTimeline(this,'Chương trình Nghị sự 21 của Việt Nam — mốc tham khảo: 2004.')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "showNationalGoal(0,this)",
+        "clicked": true,
+        "changed": true
+      },
+      {
+        "id": "ch5",
+        "handler": "checkSelectQuiz('quiz-vn-achievement')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "resetSelectQuiz('quiz-vn-achievement')",
+        "clicked": true,
+        "changed": false
+      },
+      {
+        "id": "ch5",
+        "handler": "flipCard(this)",
+        "clicked": true,
+        "changed": true
+      }
+    ],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "STKN",
+    "width": 1366,
+    "controls": 501,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  },
+  {
+    "route": "TLUD",
+    "width": 1366,
+    "controls": 215,
+    "keyboard_activations": [],
+    "failures": [],
+    "pass": true
+  }
+]

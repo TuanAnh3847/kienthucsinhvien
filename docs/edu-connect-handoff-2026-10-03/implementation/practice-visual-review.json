@@ -1,0 +1,2036 @@
+{
+  "ST001": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST001_open.png",
+      "evidence/after/practice-reading/ST001_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-001.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST005": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST005_open.png",
+      "evidence/after/practice-reading/ST005_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-001.png",
+      "evidence/after/practice-reading/gallery/gallery-002.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST009": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST009_open.png",
+      "evidence/after/practice-reading/ST009_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-002.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST013": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST013_open.png",
+      "evidence/after/practice-reading/ST013_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-003.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST002": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST002_open.png",
+      "evidence/after/practice-reading/ST002_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-001.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST006": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST006_open.png",
+      "evidence/after/practice-reading/ST006_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-002.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST010": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST010_open.png",
+      "evidence/after/practice-reading/ST010_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-003.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST014": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST014_open.png",
+      "evidence/after/practice-reading/ST014_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-003.png",
+      "evidence/after/practice-reading/gallery/gallery-004.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST003": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST003_open.png",
+      "evidence/after/practice-reading/ST003_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-001.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST007": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST007_open.png",
+      "evidence/after/practice-reading/ST007_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-002.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST011": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST011_open.png",
+      "evidence/after/practice-reading/ST011_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-003.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST015": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST015_open.png",
+      "evidence/after/practice-reading/ST015_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-004.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST004": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST004_open.png",
+      "evidence/after/practice-reading/ST004_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-001.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST008": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST008_open.png",
+      "evidence/after/practice-reading/ST008_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-002.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST012": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST012_open.png",
+      "evidence/after/practice-reading/ST012_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-003.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST016": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST016_open.png",
+      "evidence/after/practice-reading/ST016_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-004.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST017": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST017_open.png",
+      "evidence/after/practice-reading/ST017_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-004.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST021": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST021_open.png",
+      "evidence/after/practice-reading/ST021_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-005.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST025": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST025_open.png",
+      "evidence/after/practice-reading/ST025_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-006.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST029": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST029_open.png",
+      "evidence/after/practice-reading/ST029_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-006.png",
+      "evidence/after/practice-reading/gallery/gallery-007.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST033": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST033_open.png",
+      "evidence/after/practice-reading/ST033_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-007.png",
+      "evidence/after/practice-reading/gallery/gallery-008.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST018": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST018_open.png",
+      "evidence/after/practice-reading/ST018_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-004.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST022": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST022_open.png",
+      "evidence/after/practice-reading/ST022_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-005.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST026": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST026_open.png",
+      "evidence/after/practice-reading/ST026_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-006.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST030": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST030_open.png",
+      "evidence/after/practice-reading/ST030_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-007.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST034": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST034_open.png",
+      "evidence/after/practice-reading/ST034_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-008.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST019": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST019_open.png",
+      "evidence/after/practice-reading/ST019_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-005.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST023": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST023_open.png",
+      "evidence/after/practice-reading/ST023_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-005.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST027": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST027_open.png",
+      "evidence/after/practice-reading/ST027_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-006.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST031": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST031_open.png",
+      "evidence/after/practice-reading/ST031_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-007.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST035": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST035_open.png",
+      "evidence/after/practice-reading/ST035_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-008.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST020": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST020_open.png",
+      "evidence/after/practice-reading/ST020_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-005.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST024": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST024_open.png",
+      "evidence/after/practice-reading/ST024_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-006.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST028": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST028_open.png",
+      "evidence/after/practice-reading/ST028_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-006.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST032": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST032_open.png",
+      "evidence/after/practice-reading/ST032_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-007.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST036": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST036_open.png",
+      "evidence/after/practice-reading/ST036_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-008.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST037": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST037_open.png",
+      "evidence/after/practice-reading/ST037_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-008.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST041": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST041_open.png",
+      "evidence/after/practice-reading/ST041_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-009.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST045": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST045_open.png",
+      "evidence/after/practice-reading/ST045_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-010.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST049": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST049_open.png",
+      "evidence/after/practice-reading/ST049_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-011.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST053": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST053_open.png",
+      "evidence/after/practice-reading/ST053_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-012.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST057": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST057_open.png",
+      "evidence/after/practice-reading/ST057_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-013.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST038": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST038_open.png",
+      "evidence/after/practice-reading/ST038_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-009.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST042": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST042_open.png",
+      "evidence/after/practice-reading/ST042_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-009.png",
+      "evidence/after/practice-reading/gallery/gallery-010.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST046": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST046_open.png",
+      "evidence/after/practice-reading/ST046_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-010.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST050": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST050_open.png",
+      "evidence/after/practice-reading/ST050_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-011.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST054": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST054_open.png",
+      "evidence/after/practice-reading/ST054_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-012.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST058": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST058_open.png",
+      "evidence/after/practice-reading/ST058_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-013.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST039": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST039_open.png",
+      "evidence/after/practice-reading/ST039_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-009.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST043": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST043_open.png",
+      "evidence/after/practice-reading/ST043_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-010.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST047": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST047_open.png",
+      "evidence/after/practice-reading/ST047_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-011.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST051": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST051_open.png",
+      "evidence/after/practice-reading/ST051_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-011.png",
+      "evidence/after/practice-reading/gallery/gallery-012.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST055": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST055_open.png",
+      "evidence/after/practice-reading/ST055_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-012.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST059": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST059_open.png",
+      "evidence/after/practice-reading/ST059_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-013.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST040": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST040_open.png",
+      "evidence/after/practice-reading/ST040_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-009.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST044": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST044_open.png",
+      "evidence/after/practice-reading/ST044_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-010.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST048": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST048_open.png",
+      "evidence/after/practice-reading/ST048_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-011.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST052": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST052_open.png",
+      "evidence/after/practice-reading/ST052_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-012.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST056": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST056_open.png",
+      "evidence/after/practice-reading/ST056_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-013.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST060": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST060_open.png",
+      "evidence/after/practice-reading/ST060_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-013.png",
+      "evidence/after/practice-reading/gallery/gallery-014.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST061": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST061_open.png",
+      "evidence/after/practice-reading/ST061_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-014.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST065": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST065_open.png",
+      "evidence/after/practice-reading/ST065_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-015.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST069": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST069_open.png",
+      "evidence/after/practice-reading/ST069_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-015.png",
+      "evidence/after/practice-reading/gallery/gallery-016.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST073": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST073_open.png",
+      "evidence/after/practice-reading/ST073_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-016.png",
+      "evidence/after/practice-reading/gallery/gallery-017.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST077": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST077_open.png",
+      "evidence/after/practice-reading/ST077_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-017.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST081": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST081_open.png",
+      "evidence/after/practice-reading/ST081_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-018.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST085": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST085_open.png",
+      "evidence/after/practice-reading/ST085_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-019.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST062": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST062_open.png",
+      "evidence/after/practice-reading/ST062_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-014.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST066": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST066_open.png",
+      "evidence/after/practice-reading/ST066_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-015.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST070": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST070_open.png",
+      "evidence/after/practice-reading/ST070_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-016.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST074": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST074_open.png",
+      "evidence/after/practice-reading/ST074_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-017.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST078": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST078_open.png",
+      "evidence/after/practice-reading/ST078_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-017.png",
+      "evidence/after/practice-reading/gallery/gallery-018.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST082": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST082_open.png",
+      "evidence/after/practice-reading/ST082_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-018.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST086": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST086_open.png",
+      "evidence/after/practice-reading/ST086_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-019.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST063": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST063_open.png",
+      "evidence/after/practice-reading/ST063_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-014.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST067": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST067_open.png",
+      "evidence/after/practice-reading/ST067_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-015.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST071": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST071_open.png",
+      "evidence/after/practice-reading/ST071_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-016.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST075": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST075_open.png",
+      "evidence/after/practice-reading/ST075_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-017.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST079": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST079_open.png",
+      "evidence/after/practice-reading/ST079_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-018.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST083": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST083_open.png",
+      "evidence/after/practice-reading/ST083_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-018.png",
+      "evidence/after/practice-reading/gallery/gallery-019.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST087": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST087_open.png",
+      "evidence/after/practice-reading/ST087_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-019.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST064": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST064_open.png",
+      "evidence/after/practice-reading/ST064_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-014.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST068": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST068_open.png",
+      "evidence/after/practice-reading/ST068_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-015.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST072": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST072_open.png",
+      "evidence/after/practice-reading/ST072_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-016.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST076": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST076_open.png",
+      "evidence/after/practice-reading/ST076_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-017.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST080": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST080_open.png",
+      "evidence/after/practice-reading/ST080_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-018.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST084": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST084_open.png",
+      "evidence/after/practice-reading/ST084_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-019.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST088": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST088_open.png",
+      "evidence/after/practice-reading/ST088_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-020.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST089": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST089_open.png",
+      "evidence/after/practice-reading/ST089_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-020.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST093": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST093_open.png",
+      "evidence/after/practice-reading/ST093_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-020.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST097": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST097_open.png",
+      "evidence/after/practice-reading/ST097_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-021.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST101": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST101_open.png",
+      "evidence/after/practice-reading/ST101_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-022.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST105": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST105_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-022.png",
+      "evidence/after/practice-reading/gallery/gallery-023.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST109": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST109_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-023.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST113": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST113_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-024.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST117": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST117_open.png",
+      "evidence/after/practice-reading/ST117_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-024.png",
+      "evidence/after/practice-reading/gallery/gallery-025.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST121": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST121_open.png",
+      "evidence/after/practice-reading/ST121_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-025.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST090": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST090_open.png",
+      "evidence/after/practice-reading/ST090_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-020.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST094": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST094_open.png",
+      "evidence/after/practice-reading/ST094_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-021.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST098": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST098_open.png",
+      "evidence/after/practice-reading/ST098_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-021.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST102": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST102_open.png",
+      "evidence/after/practice-reading/ST102_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-022.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST106": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST106_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-023.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST110": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST110_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-023.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST114": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST114_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-024.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST118": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST118_open.png",
+      "evidence/after/practice-reading/ST118_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-025.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST122": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST122_open.png",
+      "evidence/after/practice-reading/ST122_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-025.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST091": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST091_open.png",
+      "evidence/after/practice-reading/ST091_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-020.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST095": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST095_open.png",
+      "evidence/after/practice-reading/ST095_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-021.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST099": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST099_open.png",
+      "evidence/after/practice-reading/ST099_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-021.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST103": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST103_open.png",
+      "evidence/after/practice-reading/ST103_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-022.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST107": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST107_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-023.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST111": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST111_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-024.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST115": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST115_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-024.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST119": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST119_open.png",
+      "evidence/after/practice-reading/ST119_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-025.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST123": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST123_open.png",
+      "evidence/after/practice-reading/ST123_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-025.png",
+      "evidence/after/practice-reading/gallery/gallery-026.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST092": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST092_open.png",
+      "evidence/after/practice-reading/ST092_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-020.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST096": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST096_open.png",
+      "evidence/after/practice-reading/ST096_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-021.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST100": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST100_open.png",
+      "evidence/after/practice-reading/ST100_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-022.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST104": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST104_open.png",
+      "evidence/after/practice-reading/ST104_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-022.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST108": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST108_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-023.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST112": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST112_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-024.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST116": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST116_solution.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-024.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST120": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST120_open.png",
+      "evidence/after/practice-reading/ST120_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-025.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST124": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST124_open.png",
+      "evidence/after/practice-reading/ST124_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-026.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST125": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST125_open.png",
+      "evidence/after/practice-reading/ST125_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-026.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST129": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST129_open.png",
+      "evidence/after/practice-reading/ST129_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-027.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST133": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST133_open.png",
+      "evidence/after/practice-reading/ST133_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-027.png",
+      "evidence/after/practice-reading/gallery/gallery-028.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST137": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST137_open.png",
+      "evidence/after/practice-reading/ST137_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-028.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST141": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST141_open.png",
+      "evidence/after/practice-reading/ST141_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-029.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST145": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST145_open.png",
+      "evidence/after/practice-reading/ST145_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-030.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST149": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST149_open.png",
+      "evidence/after/practice-reading/ST149_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-031.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST153": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST153_open.png",
+      "evidence/after/practice-reading/ST153_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-032.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST157": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST157_open.png",
+      "evidence/after/practice-reading/ST157_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-033.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST161": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST161_open.png",
+      "evidence/after/practice-reading/ST161_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-034.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST165": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST165_open.png",
+      "evidence/after/practice-reading/ST165_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-035.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST169": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST169_open.png",
+      "evidence/after/practice-reading/ST169_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-036.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST173": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST173_open.png",
+      "evidence/after/practice-reading/ST173_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-037.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST177": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST177_open.png",
+      "evidence/after/practice-reading/ST177_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-038.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST181": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST181_open.png",
+      "evidence/after/practice-reading/ST181_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-039.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST126": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST126_open.png",
+      "evidence/after/practice-reading/ST126_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-026.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST130": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST130_open.png",
+      "evidence/after/practice-reading/ST130_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-027.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST134": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST134_open.png",
+      "evidence/after/practice-reading/ST134_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-028.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST138": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST138_open.png",
+      "evidence/after/practice-reading/ST138_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-028.png",
+      "evidence/after/practice-reading/gallery/gallery-029.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST142": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST142_open.png",
+      "evidence/after/practice-reading/ST142_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-029.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST146": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST146_open.png",
+      "evidence/after/practice-reading/ST146_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-030.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST150": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST150_open.png",
+      "evidence/after/practice-reading/ST150_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-031.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST154": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST154_open.png",
+      "evidence/after/practice-reading/ST154_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-032.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST158": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST158_open.png",
+      "evidence/after/practice-reading/ST158_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-033.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST162": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST162_open.png",
+      "evidence/after/practice-reading/ST162_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-034.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST166": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST166_open.png",
+      "evidence/after/practice-reading/ST166_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-035.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST170": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST170_open.png",
+      "evidence/after/practice-reading/ST170_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-036.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST174": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST174_open.png",
+      "evidence/after/practice-reading/ST174_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-037.png",
+      "evidence/after/practice-reading/gallery/gallery-038.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST178": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST178_open.png",
+      "evidence/after/practice-reading/ST178_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-038.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST182": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST182_open.png",
+      "evidence/after/practice-reading/ST182_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-039.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST127": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST127_open.png",
+      "evidence/after/practice-reading/ST127_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-026.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST131": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST131_open.png",
+      "evidence/after/practice-reading/ST131_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-027.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST135": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST135_open.png",
+      "evidence/after/practice-reading/ST135_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-028.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST139": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST139_open.png",
+      "evidence/after/practice-reading/ST139_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-029.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST143": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST143_open.png",
+      "evidence/after/practice-reading/ST143_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-029.png",
+      "evidence/after/practice-reading/gallery/gallery-030.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST147": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST147_open.png",
+      "evidence/after/practice-reading/ST147_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-031.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST151": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST151_open.png",
+      "evidence/after/practice-reading/ST151_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-031.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST155": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST155_open.png",
+      "evidence/after/practice-reading/ST155_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-032.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST159": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST159_open.png",
+      "evidence/after/practice-reading/ST159_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-033.png",
+      "evidence/after/practice-reading/gallery/gallery-034.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST163": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST163_open.png",
+      "evidence/after/practice-reading/ST163_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-034.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST167": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST167_open.png",
+      "evidence/after/practice-reading/ST167_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-035.png",
+      "evidence/after/practice-reading/gallery/gallery-036.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST171": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST171_open.png",
+      "evidence/after/practice-reading/ST171_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-037.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST175": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST175_open.png",
+      "evidence/after/practice-reading/ST175_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-038.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST179": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST179_open.png",
+      "evidence/after/practice-reading/ST179_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-038.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST183": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST183_open.png",
+      "evidence/after/practice-reading/ST183_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-039.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST128": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST128_open.png",
+      "evidence/after/practice-reading/ST128_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-026.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST132": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST132_open.png",
+      "evidence/after/practice-reading/ST132_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-027.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST136": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST136_open.png",
+      "evidence/after/practice-reading/ST136_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-028.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST140": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST140_open.png",
+      "evidence/after/practice-reading/ST140_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-029.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST144": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST144_open.png",
+      "evidence/after/practice-reading/ST144_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-030.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST148": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST148_open.png",
+      "evidence/after/practice-reading/ST148_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-031.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST152": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST152_open.png",
+      "evidence/after/practice-reading/ST152_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-031.png",
+      "evidence/after/practice-reading/gallery/gallery-032.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST156": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST156_open.png",
+      "evidence/after/practice-reading/ST156_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-033.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST160": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST160_open.png",
+      "evidence/after/practice-reading/ST160_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-034.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST164": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST164_open.png",
+      "evidence/after/practice-reading/ST164_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-035.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST168": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST168_open.png",
+      "evidence/after/practice-reading/ST168_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-036.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST172": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST172_open.png",
+      "evidence/after/practice-reading/ST172_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-037.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST176": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST176_open.png",
+      "evidence/after/practice-reading/ST176_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-038.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST180": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST180_open.png",
+      "evidence/after/practice-reading/ST180_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-038.png",
+      "evidence/after/practice-reading/gallery/gallery-039.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  },
+  "ST184": {
+    "status": "PASS",
+    "evidence": [
+      "evidence/after/practice-reading/ST184_open.png",
+      "evidence/after/practice-reading/ST184_graded.png"
+    ],
+    "reviewed_sheets": [
+      "evidence/after/practice-reading/gallery/gallery-040.png"
+    ],
+    "notes": "All question/option/explanation bounds checked; longest open and graded cards or complete guided-case body actually inspected. Sticky headers can intersect auto-scrolled element captures; whole-body/native scrolling views supplement those regions."
+  }
+}

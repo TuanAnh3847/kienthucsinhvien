@@ -1,0 +1,18 @@
+[
+  {
+    "id": "q-e3_q29",
+    "text": "Personal finance skills = manage income/expenses/investments.",
+    "tag": "P",
+    "class": "text-amber-800 mb-2",
+    "visible": true,
+    "textBox": {
+      "width": 216.859375,
+      "height": 73.78125
+    },
+    "box": {
+      "width": 190,
+      "height": 79.171875
+    },
+    "font": "16px"
+  }
+]

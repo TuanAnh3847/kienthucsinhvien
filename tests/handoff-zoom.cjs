@@ -1,7 +1,9 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');const {open,evidence}=require('./handoff-browser.cjs');
-const out=path.join(evidence,'after/zoom');fs.mkdirSync(out,{recursive:true});const results=[];
-const cases=[['NLKT','ch1'],['KTTC','review'],['KTQT','ch5'],['NMLH','ch5'],['KTCTMLN','ch2'],['TCCN','ch5'],['NLTTTC','ch2'],['LTMQT','ch1'],['VHDDTKD','ch2'],['PTBV','ch2'],['STKN','ch6'],['TLUD','ch7']];
+const out=path.join(evidence,process.env.ZOOM_DIAGRAMS?'after/diagram-zoom':'after/zoom');fs.mkdirSync(out,{recursive:true});
+const previous=process.env.ZOOM_ROUTES&&fs.existsSync(path.join(out,'results.json'))?JSON.parse(fs.readFileSync(path.join(out,'results.json'),'utf8')):[];
+const results=previous.filter(r=>!process.env.ZOOM_ROUTES.split(',').includes(r.route));
+const cases=process.env.ZOOM_DIAGRAMS?[['STKN','ch7'],['STKN','ch3'],['VHDDTKD','ch1'],['VHDDTKD','ch3'],['LTMQT','ch5'],['TLUD','ch1']]:[['NLKT','ch1'],['KTTC','review'],['KTQT','ch5'],['NMLH','ch5'],['KTCTMLN','ch2'],['TCCN','ch5'],['NLTTTC','ch2'],['LTMQT','ch1'],['VHDDTKD','ch2'],['PTBV','ch2'],['STKN','ch6'],['TLUD','ch7']];
 (async()=>{const b=await chromium.launch({channel:'msedge',headless:true});try{
  for(const [route,tab]of cases.filter(([route])=>!process.env.ZOOM_ROUTES||process.env.ZOOM_ROUTES.split(',').includes(route)))for(const width of [320,390,768]){
   const record={route,tab,width,method:'200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged',pass:false};const p=await open(b,'/'+route,width,width===768?1024:844);
@@ -23,7 +25,7 @@ const cases=[['NLKT','ch1'],['KTTC','review'],['KTQT','ch5'],['NMLH','ch5'],['KT
    assert(record.scroll_regions.every(r=>r.reached&&r.name));
    const images=[];for(const position of ['top','middle','bottom']){
     await p.evaluate(position=>{const max=document.documentElement.scrollHeight-innerHeight;scrollTo({top:position==='top'?0:position==='middle'?max/2:max,behavior:'instant'})},position);await p.waitForTimeout(60);
-    const file=`${route}_${tab}_${width}_text200_${position}.png`;await p.screenshot({path:path.join(out,file)});images.push('evidence/after/zoom/'+file);
+    const file=`${route}_${tab}_${width}_text200_${position}.png`;await p.screenshot({path:path.join(out,file)});images.push('evidence/'+path.relative(evidence,path.join(out,file)).replace(/\\/g,'/'));
    }record.evidence=images;record.pass=true;console.log('PASS',route,tab,width);
   }catch(e){record.error=e.stack;record.wide_boxes=await p.evaluate(()=>[...document.querySelectorAll('main *')].filter(e=>e.getClientRects().length&&e.scrollWidth>e.clientWidth+3&&!e.closest('.edu-scroll-region')).map(e=>({tag:e.tagName,class:e.className,scroll:e.scrollWidth,client:e.clientWidth,overflow:getComputedStyle(e).overflowX,text:e.textContent.trim().slice(0,80)})).slice(-30));await p.screenshot({path:path.join(out,`${route}_${tab}_${width}_failed.png`)});console.error('FAIL',route,tab,width,e.message)}finally{await p.close();results.push(record);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(results,null,2))}
  }

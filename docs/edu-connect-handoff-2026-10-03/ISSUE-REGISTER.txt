@@ -1,267 +1,267 @@
 EDU CONNECT — KẾT QUẢ TRIỂN KHAI
 Phạm vi và yêu cầu gốc giữ trong CSV/JSON; trạng thái thực tế dưới đây.
-IMPLEMENTED = đã có code; chưa thay thế nghiệm thu bằng mắt.
+VERIFIED_FIXED = đã sửa, kiểm thử và nghiệm thu bằng ảnh thực tế.
 
-G01 [IMPLEMENTED] Font nội dung từ heading Chương xuống
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G01 [VERIFIED_FIXED] Font nội dung từ heading Chương xuống
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-G02 [IMPLEMENTED] Heading chương và module
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G02 [VERIFIED_FIXED] Heading chương và module
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-G03 [IMPLEMENTED] Palette và tương phản
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G03 [VERIFIED_FIXED] Palette và tương phản
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-G04 [IMPLEMENTED] Card, spacing và grid lồng
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G04 [VERIFIED_FIXED] Card, spacing và grid lồng
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-G05 [IMPLEMENTED] Thanh chọn chương, tab cuối
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G05 [VERIFIED_FIXED] Thanh chọn chương, tab cuối
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-G06 [IMPLEMENTED] Sticky header và offset
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G06 [VERIFIED_FIXED] Sticky header và offset
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-G07 [IMPLEMENTED] Mục lục trong chương dài
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G07 [VERIFIED_FIXED] Mục lục trong chương dài
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-G08 [IMPLEMENTED] Bảng/sơ đồ cuộn có chủ đích
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G08 [VERIFIED_FIXED] Bảng/sơ đồ cuộn có chủ đích
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-G09 [IMPLEMENTED] Accessibility và tương tác học
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+G09 [VERIFIED_FIXED] Accessibility và tương tác học
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-K01 [IMPLEMENTED] Ch2/3 công thức tĩnh và output máy tính
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+K01 [VERIFIED_FIXED] Ch2/3 công thức tĩnh và output máy tính
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-K02 [IMPLEMENTED] Ch2/3 input grid-cols-3
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+K02 [VERIFIED_FIXED] Ch2/3 input grid-cols-3
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-A01 [IMPLEMENTED] Flashcard fixed155px
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+A01 [VERIFIED_FIXED] Flashcard fixed155px
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-A02 [IMPLEMENTED] Chart of Accounts và bảng định khoản
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+A02 [VERIFIED_FIXED] Chart of Accounts và bảng định khoản
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-A03 [IMPLEMENTED] Ch2/6, coa: copy và giới hạn nguồn
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+A03 [VERIFIED_FIXED] Ch2/6, coa: copy và giới hạn nguồn
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-F01 [IMPLEMENTED] Bảng620–680px và card-head badge
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+F01 [VERIFIED_FIXED] Bảng620–680px và card-head badge
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-F02 [IMPLEMENTED] Ch2/3/4/6/review: nhãn nội bộ
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+F02 [VERIFIED_FIXED] Ch2/3/4/6/review: nhãn nội bộ
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-N01 [IMPLEMENTED] Ch5 Pháp nhân: card padding overflow
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+N01 [VERIFIED_FIXED] Ch5 Pháp nhân: card padding overflow
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-N02 [IMPLEMENTED] Ch6 penalty grid và prose nhỏ
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+N02 [VERIFIED_FIXED] Ch6 penalty grid và prose nhỏ
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-Q01 [IMPLEMENTED] Graphs/mindmap/tables, Ch5 ASCII
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+Q01 [VERIFIED_FIXED] Graphs/mindmap/tables, Ch5 ASCII
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-Q02 [IMPLEMENTED] Ch1/2/3 và review copy/phạm vi
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+Q02 [VERIFIED_FIXED] Ch1/2/3 và review copy/phạm vi
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-T01 [IMPLEMENTED] Ch2:14salary cards và Harry Johnson goals rỗng
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+T01 [VERIFIED_FIXED] Ch2:14salary cards và Harry Johnson goals rỗng
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-T02 [IMPLEMENTED] Ch5: six-position insurance visual
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+T02 [VERIFIED_FIXED] Ch5: six-position insurance visual
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-T03 [IMPLEMENTED] Ch1/4/5: đồ thị/khối thiếu dữ liệu
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+T03 [VERIFIED_FIXED] Ch1/4/5: đồ thị/khối thiếu dữ liệu
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-T04 [IMPLEMENTED] Ch4/5/6/review: copy, aria và bài tự luyện
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+T04 [VERIFIED_FIXED] Ch4/5/6/review: copy, aria và bài tự luyện
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-T05 [IMPLEMENTED] Ch4/5/6 dài, calculator và worksheet
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+T05 [VERIFIED_FIXED] Ch4/5/6 dài, calculator và worksheet
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-V01 [IMPLEMENTED] Flashcard absolute190px
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+V01 [VERIFIED_FIXED] Flashcard absolute190px
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-V02 [IMPLEMENTED] lesson-section padding lồng
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+V02 [VERIFIED_FIXED] lesson-section padding lồng
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-V03 [IMPLEMENTED] Culture matrix/continuum/concept map/sources
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+V03 [VERIFIED_FIXED] Culture matrix/continuum/concept map/sources
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-V04 [IMPLEMENTED] Ch2/3 copy mô hình và giới hạn nguồn
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+V04 [VERIFIED_FIXED] Ch2/3 copy mô hình và giới hạn nguồn
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-D01 [IMPLEMENTED] Flashcard min-height160px nhưng faces absolute
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+D01 [VERIFIED_FIXED] Flashcard min-height160px nhưng faces absolute
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-D02 [IMPLEMENTED] Ch7 matrix4 operant
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+D02 [VERIFIED_FIXED] Ch7 matrix4 operant
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-D03 [IMPLEMENTED] Auto-fit grids/gallery, emotion strip
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+D03 [VERIFIED_FIXED] Auto-fit grids/gallery, emotion strip
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-D04 [IMPLEMENTED] Ch1/2/7 copy và review deck phạm vi
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+D04 [VERIFIED_FIXED] Ch1/2/7 copy và review deck phạm vi
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-S01 [IMPLEMENTED] Flashcards fixed150px
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+S01 [VERIFIED_FIXED] Flashcards fixed150px
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-S02 [IMPLEMENTED] Venn/wheel transform scale
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+S02 [VERIFIED_FIXED] Venn/wheel transform scale
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-S03 [IMPLEMENTED] Empathy map/opportunity ring/workspaces
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+S03 [VERIFIED_FIXED] Empathy map/opportunity ring/workspaces
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-S04 [IMPLEMENTED] Dark interaction panels
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+S04 [VERIFIED_FIXED] Dark interaction panels
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-S05 [IMPLEMENTED] Ch7 FPT/BMC/framework/copy người học
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+S05 [VERIFIED_FIXED] Ch7 FPT/BMC/framework/copy người học
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-B01 [IMPLEMENTED] Flashcard170/190px
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+B01 [VERIFIED_FIXED] Flashcard170/190px
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-B02 [IMPLEMENTED] Function wheel/tablet source badges
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+B02 [VERIFIED_FIXED] Function wheel/tablet source badges
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-B03 [IMPLEMENTED] Timelines5x220, tables/calculators
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+B03 [VERIFIED_FIXED] Timelines5x220, tables/calculators
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-B04 [IMPLEMENTED] Decorative dark strips/market-map/stepper
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+B04 [VERIFIED_FIXED] Decorative dark strips/market-map/stepper
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-B05 [IMPLEMENTED] Ch1/4/5/6/review: copy và ô dữ liệu trống
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+B05 [VERIFIED_FIXED] Ch1/4/5/6/review: copy và ô dữ liệu trống
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-P01 [IMPLEMENTED] Quiz dual250px/goal-grid labels
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+P01 [VERIFIED_FIXED] Quiz dual250px/goal-grid labels
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-P02 [IMPLEMENTED] Course-map modal/FAB
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+P02 [VERIFIED_FIXED] Course-map modal/FAB
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-P03 [IMPLEMENTED] Timeline detail/FAB dark treatment
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+P03 [VERIFIED_FIXED] Timeline detail/FAB dark treatment
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-P04 [IMPLEMENTED] Ch5/review: cardinality/implementation copy
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+P04 [VERIFIED_FIXED] Ch5/review: cardinality/implementation copy
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-L01 [IMPLEMENTED] Flash-grid/match-row/sort-actions
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+L01 [VERIFIED_FIXED] Flash-grid/match-row/sort-actions
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-L02 [IMPLEMENTED] Mindmap/tables/case organizers
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+L02 [VERIFIED_FIXED] Mindmap/tables/case organizers
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-L03 [IMPLEMENTED] Ch3/4 và comparisons: copy/limitations
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+L03 [VERIFIED_FIXED] Ch3/4 và comparisons: copy/limitations
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-X01 [IMPLEMENTED] Overview/card metrics/question index
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+X01 [VERIFIED_FIXED] Overview/card metrics/question index
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-X02 [IMPLEMENTED] Unique questions và duration labels
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+X02 [VERIFIED_FIXED] Unique questions và duration labels
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-X03 [IMPLEMENTED] Palette/font/card overview/questions
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+X03 [VERIFIED_FIXED] Palette/font/card overview/questions
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-X04 [IMPLEMENTED] Sticky actions, long account/subtitle/online count
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+X04 [VERIFIED_FIXED] Sticky actions, long account/subtitle/online count
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-X05 [IMPLEMENTED] Overview4bộ nhưng5 card đề thi
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+X05 [VERIFIED_FIXED] Overview4bộ nhưng5 card đề thi
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-X06 [IMPLEMENTED] Guided cases quảng bá tự chấm
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+X06 [VERIFIED_FIXED] Guided cases quảng bá tự chấm
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-X07 [IMPLEMENTED] Longcase/generatedtables/metrics
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+X07 [VERIFIED_FIXED] Longcase/generatedtables/metrics
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-X08 [IMPLEMENTED] Timer/mistakes/results/explanations
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+X08 [VERIFIED_FIXED] Timer/mistakes/results/explanations
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-H01 [IMPLEMENTED] Coursecards descriptions/title/spacing
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+H01 [VERIFIED_FIXED] Coursecards descriptions/title/spacing
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-H02 [IMPLEMENTED] NMLH availability stale
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+H02 [VERIFIED_FIXED] NMLH availability stale
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-H03 [IMPLEMENTED] Missingpractice entrypoints KTQT/LTMQT/NLTTTC
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+H03 [VERIFIED_FIXED] Missingpractice entrypoints KTQT/LTMQT/NLTTTC
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-H04 [IMPLEMENTED] Practice section wording/NLKT description
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+H04 [VERIFIED_FIXED] Practice section wording/NLKT description
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
 FZ01 [VERIFIED_FIXED] Bảo toàn học thuật/IDs/scripts/routes
 Source and behavior guard PASS.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
 FZ02 [VERIFIED_FIXED] Nháp stashed chưa được nghiệm thu
 Source and behavior guard PASS.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
 FZ03 [VERIFIED_FIXED] Cô lập QA và giữ behavior
 Source and behavior guard PASS.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
 
-FZ04 [IMPLEMENTED] Hoàn thành phải có evidence và coverage
-Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist.
-Evidence: evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json
+FZ04 [VERIFIED_FIXED] Hoàn thành phải có evidence và coverage
+Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work.
+Evidence: implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json

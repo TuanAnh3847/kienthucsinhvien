@@ -1,0 +1,1018 @@
+[
+  {
+    "route": "NLKT",
+    "tab": "ch1",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 247,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 602,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 366,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/NLKT_ch1_320_text200_top.png",
+      "evidence/after/zoom/NLKT_ch1_320_text200_middle.png",
+      "evidence/after/zoom/NLKT_ch1_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "NLKT",
+    "tab": "ch1",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 247,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 532,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 296,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/NLKT_ch1_390_text200_top.png",
+      "evidence/after/zoom/NLKT_ch1_390_text200_middle.png",
+      "evidence/after/zoom/NLKT_ch1_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "NLKT",
+    "tab": "ch1",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 248,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 209,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 138,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/NLKT_ch1_768_text200_top.png",
+      "evidence/after/zoom/NLKT_ch1_768_text200_middle.png",
+      "evidence/after/zoom/NLKT_ch1_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTQT",
+    "tab": "ch5",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 183,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 889,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 503,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 503,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/KTQT_ch5_320_text200_top.png",
+      "evidence/after/zoom/KTQT_ch5_320_text200_middle.png",
+      "evidence/after/zoom/KTQT_ch5_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTQT",
+    "tab": "ch5",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 183,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 819,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 433,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 433,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/KTQT_ch5_390_text200_top.png",
+      "evidence/after/zoom/KTQT_ch5_390_text200_middle.png",
+      "evidence/after/zoom/KTQT_ch5_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTQT",
+    "tab": "ch5",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 183,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 793,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 407,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 407,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/KTQT_ch5_768_text200_top.png",
+      "evidence/after/zoom/KTQT_ch5_768_text200_middle.png",
+      "evidence/after/zoom/KTQT_ch5_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "NMLH",
+    "tab": "ch5",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 87,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/NMLH_ch5_320_text200_top.png",
+      "evidence/after/zoom/NMLH_ch5_320_text200_middle.png",
+      "evidence/after/zoom/NMLH_ch5_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "NMLH",
+    "tab": "ch5",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 87,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/NMLH_ch5_390_text200_top.png",
+      "evidence/after/zoom/NMLH_ch5_390_text200_middle.png",
+      "evidence/after/zoom/NMLH_ch5_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "NMLH",
+    "tab": "ch5",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 87,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/NMLH_ch5_768_text200_top.png",
+      "evidence/after/zoom/NMLH_ch5_768_text200_middle.png",
+      "evidence/after/zoom/NMLH_ch5_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTCTMLN",
+    "tab": "ch2",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 99,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/KTCTMLN_ch2_320_text200_top.png",
+      "evidence/after/zoom/KTCTMLN_ch2_320_text200_middle.png",
+      "evidence/after/zoom/KTCTMLN_ch2_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTCTMLN",
+    "tab": "ch2",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 99,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/KTCTMLN_ch2_390_text200_top.png",
+      "evidence/after/zoom/KTCTMLN_ch2_390_text200_middle.png",
+      "evidence/after/zoom/KTCTMLN_ch2_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTCTMLN",
+    "tab": "ch2",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 99,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/KTCTMLN_ch2_768_text200_top.png",
+      "evidence/after/zoom/KTCTMLN_ch2_768_text200_middle.png",
+      "evidence/after/zoom/KTCTMLN_ch2_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TCCN",
+    "tab": "ch5",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 419,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 697,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 697,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 395,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/TCCN_ch5_320_text200_top.png",
+      "evidence/after/zoom/TCCN_ch5_320_text200_middle.png",
+      "evidence/after/zoom/TCCN_ch5_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TCCN",
+    "tab": "ch5",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 419,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 627,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 627,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 325,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/TCCN_ch5_390_text200_top.png",
+      "evidence/after/zoom/TCCN_ch5_390_text200_middle.png",
+      "evidence/after/zoom/TCCN_ch5_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TCCN",
+    "tab": "ch5",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 418,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 265,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 265,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/TCCN_ch5_768_text200_top.png",
+      "evidence/after/zoom/TCCN_ch5_768_text200_middle.png",
+      "evidence/after/zoom/TCCN_ch5_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "NLTTTC",
+    "tab": "ch2",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 440,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Bảng so sánh —",
+        "max": 374,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/NLTTTC_ch2_320_text200_top.png",
+      "evidence/after/zoom/NLTTTC_ch2_320_text200_middle.png",
+      "evidence/after/zoom/NLTTTC_ch2_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "NLTTTC",
+    "tab": "ch2",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 440,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Bảng so sánh —",
+        "max": 304,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/NLTTTC_ch2_390_text200_top.png",
+      "evidence/after/zoom/NLTTTC_ch2_390_text200_middle.png",
+      "evidence/after/zoom/NLTTTC_ch2_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "NLTTTC",
+    "tab": "ch2",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 440,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/NLTTTC_ch2_768_text200_top.png",
+      "evidence/after/zoom/NLTTTC_ch2_768_text200_middle.png",
+      "evidence/after/zoom/NLTTTC_ch2_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch1",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 578,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 410,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 639,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 407,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 366,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 396,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/LTMQT_ch1_320_text200_top.png",
+      "evidence/after/zoom/LTMQT_ch1_320_text200_middle.png",
+      "evidence/after/zoom/LTMQT_ch1_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch1",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 578,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 340,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 569,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 337,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 296,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 326,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/LTMQT_ch1_390_text200_top.png",
+      "evidence/after/zoom/LTMQT_ch1_390_text200_middle.png",
+      "evidence/after/zoom/LTMQT_ch1_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "LTMQT",
+    "tab": "ch1",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 576,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 175,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/LTMQT_ch1_768_text200_top.png",
+      "evidence/after/zoom/LTMQT_ch1_768_text200_middle.png",
+      "evidence/after/zoom/LTMQT_ch1_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch2",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 602,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Three cultural models",
+        "max": 557,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 982,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "GLOBE Cultural Variable Results",
+        "max": 487,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Hofstede ↔ GLOBE correspondence visual",
+        "max": 463,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Hofstede vs GLOBE — research comparison as shown",
+        "max": 463,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Các nhóm trong ma trận Trompenaars",
+        "max": 865,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "10 economies improving the most across three or more Doing Business areas in 2018/19",
+        "max": 463,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/VHDDTKD_ch2_320_text200_top.png",
+      "evidence/after/zoom/VHDDTKD_ch2_320_text200_middle.png",
+      "evidence/after/zoom/VHDDTKD_ch2_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch2",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 602,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Three cultural models",
+        "max": 487,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 912,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "GLOBE Cultural Variable Results",
+        "max": 417,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Hofstede ↔ GLOBE correspondence visual",
+        "max": 393,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Hofstede vs GLOBE — research comparison as shown",
+        "max": 393,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Các nhóm trong ma trận Trompenaars",
+        "max": 795,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "10 economies improving the most across three or more Doing Business areas in 2018/19",
+        "max": 393,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/VHDDTKD_ch2_390_text200_top.png",
+      "evidence/after/zoom/VHDDTKD_ch2_390_text200_middle.png",
+      "evidence/after/zoom/VHDDTKD_ch2_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "VHDDTKD",
+    "tab": "ch2",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 602,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Three cultural models",
+        "max": 143,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 550,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "GLOBE Cultural Variable Results",
+        "max": 73,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Hofstede ↔ GLOBE correspondence visual",
+        "max": 49,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Hofstede vs GLOBE — research comparison as shown",
+        "max": 49,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Các nhóm trong ma trận Trompenaars",
+        "max": 451,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "10 economies improving the most across three or more Doing Business areas in 2018/19",
+        "max": 49,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/VHDDTKD_ch2_768_text200_top.png",
+      "evidence/after/zoom/VHDDTKD_ch2_768_text200_middle.png",
+      "evidence/after/zoom/VHDDTKD_ch2_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch6",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 390,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 3831,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/STKN_ch6_320_text200_top.png",
+      "evidence/after/zoom/STKN_ch6_320_text200_middle.png",
+      "evidence/after/zoom/STKN_ch6_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch6",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 390,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 3761,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/STKN_ch6_390_text200_top.png",
+      "evidence/after/zoom/STKN_ch6_390_text200_middle.png",
+      "evidence/after/zoom/STKN_ch6_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "STKN",
+    "tab": "ch6",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 391,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 329,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 3399,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/STKN_ch6_768_text200_top.png",
+      "evidence/after/zoom/STKN_ch6_768_text200_middle.png",
+      "evidence/after/zoom/STKN_ch6_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch7",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 58,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 206,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/TLUD_ch7_320_text200_top.png",
+      "evidence/after/zoom/TLUD_ch7_320_text200_middle.png",
+      "evidence/after/zoom/TLUD_ch7_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch7",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 58,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 136,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/TLUD_ch7_390_text200_top.png",
+      "evidence/after/zoom/TLUD_ch7_390_text200_middle.png",
+      "evidence/after/zoom/TLUD_ch7_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "TLUD",
+    "tab": "ch7",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 58,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/TLUD_ch7_768_text200_top.png",
+      "evidence/after/zoom/TLUD_ch7_768_text200_middle.png",
+      "evidence/after/zoom/TLUD_ch7_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "PTBV",
+    "tab": "ch2",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 245,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/PTBV_ch2_320_text200_top.png",
+      "evidence/after/zoom/PTBV_ch2_320_text200_middle.png",
+      "evidence/after/zoom/PTBV_ch2_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "PTBV",
+    "tab": "ch2",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 245,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [],
+    "evidence": [
+      "evidence/after/zoom/PTBV_ch2_390_text200_top.png",
+      "evidence/after/zoom/PTBV_ch2_390_text200_middle.png",
+      "evidence/after/zoom/PTBV_ch2_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "PTBV",
+    "tab": "ch2",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 246,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 183,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/PTBV_ch2_768_text200_top.png",
+      "evidence/after/zoom/PTBV_ch2_768_text200_middle.png",
+      "evidence/after/zoom/PTBV_ch2_768_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTTC",
+    "tab": "review",
+    "width": 320,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 849,
+    "document_width": 320,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 428,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/KTTC_review_320_text200_top.png",
+      "evidence/after/zoom/KTTC_review_320_text200_middle.png",
+      "evidence/after/zoom/KTTC_review_320_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTTC",
+    "tab": "review",
+    "width": 390,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 849,
+    "document_width": 390,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 358,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/KTTC_review_390_text200_top.png",
+      "evidence/after/zoom/KTTC_review_390_text200_middle.png",
+      "evidence/after/zoom/KTTC_review_390_text200_bottom.png"
+    ]
+  },
+  {
+    "route": "KTTC",
+    "tab": "review",
+    "width": 768,
+    "method": "200% text size and computed line metrics in reading content and chapter controls; SVG coordinates unchanged",
+    "pass": true,
+    "text_nodes": 851,
+    "document_width": 768,
+    "clipped": [],
+    "scroll_regions": [
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 4,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 334,
+        "reached": true
+      },
+      {
+        "role": "region",
+        "name": "Nội dung có thể cuộn ngang",
+        "max": 334,
+        "reached": true
+      }
+    ],
+    "evidence": [
+      "evidence/after/zoom/KTTC_review_768_text200_top.png",
+      "evidence/after/zoom/KTTC_review_768_text200_middle.png",
+      "evidence/after/zoom/KTTC_review_768_text200_bottom.png"
+    ]
+  }
+]

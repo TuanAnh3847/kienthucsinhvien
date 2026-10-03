@@ -1,0 +1,764 @@
+{
+  "purpose": "Full-body layout survey only; read text, contrast and interactions in full-resolution captures/tests.",
+  "states": 84,
+  "tiles": 108,
+  "sheets": 9,
+  "index": [
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Tổng quan-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Tổng quan-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Theo chương-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Theo chương-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Trắc nghiệm-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Tổng quan-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Theo chương-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Theo chương-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Trắc nghiệm-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Tổng quan-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Theo chương-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Trắc nghiệm-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Tổng quan-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Theo chương-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-NhapMonLuatHoc-LuyenDe-Trắc nghiệm-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Tổng quan-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Tổng quan-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Theo chương-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Theo chương-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Trắc nghiệm-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Tổng quan-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Theo chương-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Theo chương-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Trắc nghiệm-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Tổng quan-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Theo chương-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Trắc nghiệm-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Tổng quan-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Theo chương-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-KTQT-LuyenDe-Trắc nghiệm-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Tổng quan-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Tổng quan-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Theo chương-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Theo chương-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Trắc nghiệm-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Tổng quan-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Theo chương-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Theo chương-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Trắc nghiệm-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Tổng quan-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Theo chương-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Trắc nghiệm-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Tổng quan-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Theo chương-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-LTMQT-LuyenDe-Trắc nghiệm-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Tổng quan-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Tổng quan-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Theo chương-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Theo chương-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Theo chương-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Trắc nghiệm-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Tổng quan-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Theo chương-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Theo chương-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Trắc nghiệm-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Tổng quan-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Theo chương-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Trắc nghiệm-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Tổng quan-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Theo chương-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-NLTTTC-LuyenDe-Trắc nghiệm-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Tổng quan-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Tổng quan-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Theo chương-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Theo chương-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Test 20 câu-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Luyện thi-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Luyện thi-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Câu sai-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Tổng quan-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Tổng quan-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Theo chương-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Theo chương-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Test 20 câu-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Luyện thi-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Luyện thi-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Câu sai-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Tổng quan-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Theo chương-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Test 20 câu-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Luyện thi-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Câu sai-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Tổng quan-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Theo chương-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Test 20 câu-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Luyện thi-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-TCCN-LuyenDe-Câu sai-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Tổng quan-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Tổng quan-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Theo chương-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Theo chương-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Trắc nghiệm-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Luyện đề-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Luyện đề-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Tổng quan-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Tổng quan-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Theo chương-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Trắc nghiệm-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Luyện đề-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Luyện đề-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Tổng quan-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Theo chương-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Trắc nghiệm-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Luyện đề-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Tổng quan-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Theo chương-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Trắc nghiệm-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "PRACTICE-NguyenLyKeToan-LuyenDe-Luyện đề-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    }
+  ]
+}

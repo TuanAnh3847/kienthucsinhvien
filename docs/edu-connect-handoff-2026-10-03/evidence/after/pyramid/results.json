@@ -1,0 +1,386 @@
+[
+  {
+    "width": 320,
+    "zoom": 100,
+    "pass": true,
+    "labels": [
+      {
+        "text": "Physiological",
+        "width": 204.234375,
+        "textWidth": 104.453125,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Safety",
+        "width": 192,
+        "textWidth": 49.84375,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Love / belonging",
+        "width": 192,
+        "textWidth": 133.578125,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Esteem",
+        "width": 192,
+        "textWidth": 56.359375,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Self-actualization",
+        "width": 192,
+        "textWidth": 137.75,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      }
+    ],
+    "evidence": "evidence/after/pyramid/TLUD_pyramid_320_100.png"
+  },
+  {
+    "width": 320,
+    "zoom": 200,
+    "pass": true,
+    "labels": [
+      {
+        "text": "Physiological",
+        "width": 222,
+        "textWidth": 208.90625,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Safety",
+        "width": 222,
+        "textWidth": 99.6875,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Love / belonging",
+        "width": 222,
+        "textWidth": 159.625,
+        "height": 123.1875,
+        "textHeight": 95,
+        "font": 32
+      },
+      {
+        "text": "Esteem",
+        "width": 222,
+        "textWidth": 112.703125,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Self-actualization",
+        "width": 222,
+        "textWidth": 202.59375,
+        "height": 123.1875,
+        "textHeight": 95,
+        "font": 32
+      }
+    ],
+    "evidence": "evidence/after/pyramid/TLUD_pyramid_320_200.png"
+  },
+  {
+    "width": 390,
+    "zoom": 100,
+    "pass": true,
+    "labels": [
+      {
+        "text": "Physiological",
+        "width": 268.625,
+        "textWidth": 104.453125,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Safety",
+        "width": 227.75,
+        "textWidth": 49.84375,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Love / belonging",
+        "width": 192,
+        "textWidth": 133.578125,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Esteem",
+        "width": 192,
+        "textWidth": 56.359375,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Self-actualization",
+        "width": 192,
+        "textWidth": 137.75,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      }
+    ],
+    "evidence": "evidence/after/pyramid/TLUD_pyramid_390_100.png"
+  },
+  {
+    "width": 390,
+    "zoom": 200,
+    "pass": true,
+    "labels": [
+      {
+        "text": "Physiological",
+        "width": 292,
+        "textWidth": 208.90625,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Safety",
+        "width": 292,
+        "textWidth": 99.6875,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Love / belonging",
+        "width": 292,
+        "textWidth": 267.15625,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Esteem",
+        "width": 292,
+        "textWidth": 112.703125,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Self-actualization",
+        "width": 292,
+        "textWidth": 202.59375,
+        "height": 123.1875,
+        "textHeight": 95,
+        "font": 32
+      }
+    ],
+    "evidence": "evidence/after/pyramid/TLUD_pyramid_390_200.png"
+  },
+  {
+    "width": 768,
+    "zoom": 100,
+    "pass": true,
+    "labels": [
+      {
+        "text": "Physiological",
+        "width": 631.09375,
+        "textWidth": 104.453125,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Safety",
+        "width": 535.0625,
+        "textWidth": 49.84375,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Love / belonging",
+        "width": 439.015625,
+        "textWidth": 133.578125,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Esteem",
+        "width": 342.984375,
+        "textWidth": 56.359375,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Self-actualization",
+        "width": 246.953125,
+        "textWidth": 137.75,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      }
+    ],
+    "evidence": "evidence/after/pyramid/TLUD_pyramid_768_100.png"
+  },
+  {
+    "width": 768,
+    "zoom": 200,
+    "pass": true,
+    "labels": [
+      {
+        "text": "Physiological",
+        "width": 631.09375,
+        "textWidth": 208.90625,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Safety",
+        "width": 535.0625,
+        "textWidth": 99.6875,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Love / belonging",
+        "width": 439.015625,
+        "textWidth": 267.15625,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Esteem",
+        "width": 384,
+        "textWidth": 112.703125,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Self-actualization",
+        "width": 384,
+        "textWidth": 275.5,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      }
+    ],
+    "evidence": "evidence/after/pyramid/TLUD_pyramid_768_200.png"
+  },
+  {
+    "width": 1366,
+    "zoom": 100,
+    "pass": true,
+    "labels": [
+      {
+        "text": "Physiological",
+        "width": 1087.421875,
+        "textWidth": 104.453125,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Safety",
+        "width": 921.9375,
+        "textWidth": 49.84375,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Love / belonging",
+        "width": 756.46875,
+        "textWidth": 133.578125,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Esteem",
+        "width": 590.984375,
+        "textWidth": 56.359375,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      },
+      {
+        "text": "Self-actualization",
+        "width": 425.5,
+        "textWidth": 137.75,
+        "height": 45.1875,
+        "textHeight": 21,
+        "font": 16
+      }
+    ],
+    "evidence": "evidence/after/pyramid/TLUD_pyramid_1366_100.png"
+  },
+  {
+    "width": 1366,
+    "zoom": 200,
+    "pass": true,
+    "labels": [
+      {
+        "text": "Physiological",
+        "width": 1087.421875,
+        "textWidth": 208.90625,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Safety",
+        "width": 921.9375,
+        "textWidth": 99.6875,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Love / belonging",
+        "width": 756.46875,
+        "textWidth": 267.15625,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Esteem",
+        "width": 590.984375,
+        "textWidth": 112.703125,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      },
+      {
+        "text": "Self-actualization",
+        "width": 425.5,
+        "textWidth": 275.5,
+        "height": 71.1875,
+        "textHeight": 43,
+        "font": 32
+      }
+    ],
+    "evidence": "evidence/after/pyramid/TLUD_pyramid_1366_200.png"
+  }
+]

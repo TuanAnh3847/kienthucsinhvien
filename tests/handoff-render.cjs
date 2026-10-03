@@ -71,7 +71,7 @@ const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.t
      if(metrics.splitNumbers.length)failures.push('numeric table token split across lines');
      if(row.kind!=='HOME' && metrics.smallButtons.length)failures.push('buttons below 44px');
      if(p.errors.length)failures.push('runtime errors');
-     if(/\$\\(?:to|rightarrow|times)|\$[Wm]\$|�|â€/.test(text))failures.push('raw notation or broken encoding');
+     if(/\$\\(?:to|rightarrow|times)|\$[Wm]\$|�|â€|'\+formula\(/.test(text))failures.push('raw notation or broken encoding');
      results.push({coverage_id:row.coverage_id,route:row.route,state:row.state,width:+row.width,height:+row.height,tested_source_hashes:sourceHashes,automated_status:failures.length?'FAIL':'PASS',full_body_visual_review:'PENDING',failures,metrics,interactions,capture:captured,errors:[...p.errors],evidence:`evidence/after/render/${screenshot}`});
      console.log([failures.length?'FAIL':'RENDER',row.coverage_id,failures.join(';'),metrics.tiny.length?'small prose:'+metrics.tiny.length:''].filter(Boolean).join(' '));
      await p.locator(section).evaluate(section=>section.querySelectorAll('details').forEach(d=>d.open=false));

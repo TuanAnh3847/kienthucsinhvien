@@ -1,0 +1,542 @@
+[
+  {
+    "route": "KTTC",
+    "width": 320,
+    "cards": 42,
+    "disclosures": 26,
+    "button_families": 35,
+    "evidence": [
+      "evidence/after/touch/KTTC_ch1_320_back.png",
+      "evidence/after/touch/KTTC_ch2_320_back.png",
+      "evidence/after/touch/KTTC_ch3_320_back.png",
+      "evidence/after/touch/KTTC_ch4_320_back.png",
+      "evidence/after/touch/KTTC_ch5_320_back.png",
+      "evidence/after/touch/KTTC_ch6_320_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "KTQT",
+    "width": 320,
+    "cards": 0,
+    "disclosures": 10,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NMLH",
+    "width": 320,
+    "cards": 0,
+    "disclosures": 7,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "KTCTMLN",
+    "width": 320,
+    "cards": 0,
+    "disclosures": 6,
+    "button_families": 3,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NLTTTC",
+    "width": 320,
+    "cards": 72,
+    "disclosures": 27,
+    "button_families": 20,
+    "evidence": [
+      "evidence/after/touch/NLTTTC_ch1_320_back.png",
+      "evidence/after/touch/NLTTTC_review_320_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "STKN",
+    "width": 320,
+    "cards": 12,
+    "disclosures": 67,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/STKN_review_320_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "TLUD",
+    "width": 320,
+    "cards": 6,
+    "disclosures": 18,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/TLUD_ch1_320_back.png",
+      "evidence/after/touch/TLUD_ch2_320_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "KTTC",
+    "width": 390,
+    "cards": 42,
+    "disclosures": 26,
+    "button_families": 35,
+    "evidence": [
+      "evidence/after/touch/KTTC_ch1_390_back.png",
+      "evidence/after/touch/KTTC_ch2_390_back.png",
+      "evidence/after/touch/KTTC_ch3_390_back.png",
+      "evidence/after/touch/KTTC_ch4_390_back.png",
+      "evidence/after/touch/KTTC_ch5_390_back.png",
+      "evidence/after/touch/KTTC_ch6_390_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "KTQT",
+    "width": 390,
+    "cards": 0,
+    "disclosures": 10,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NMLH",
+    "width": 390,
+    "cards": 0,
+    "disclosures": 7,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "KTCTMLN",
+    "width": 390,
+    "cards": 0,
+    "disclosures": 6,
+    "button_families": 3,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NLTTTC",
+    "width": 390,
+    "cards": 72,
+    "disclosures": 27,
+    "button_families": 20,
+    "evidence": [
+      "evidence/after/touch/NLTTTC_ch1_390_back.png",
+      "evidence/after/touch/NLTTTC_review_390_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "STKN",
+    "width": 390,
+    "cards": 12,
+    "disclosures": 67,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/STKN_review_390_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "TLUD",
+    "width": 390,
+    "cards": 6,
+    "disclosures": 18,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/TLUD_ch1_390_back.png",
+      "evidence/after/touch/TLUD_ch2_390_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "KTTC",
+    "width": 768,
+    "cards": 42,
+    "disclosures": 26,
+    "button_families": 35,
+    "evidence": [
+      "evidence/after/touch/KTTC_ch1_768_back.png",
+      "evidence/after/touch/KTTC_ch2_768_back.png",
+      "evidence/after/touch/KTTC_ch3_768_back.png",
+      "evidence/after/touch/KTTC_ch4_768_back.png",
+      "evidence/after/touch/KTTC_ch5_768_back.png",
+      "evidence/after/touch/KTTC_ch6_768_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "KTQT",
+    "width": 768,
+    "cards": 0,
+    "disclosures": 10,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NMLH",
+    "width": 768,
+    "cards": 0,
+    "disclosures": 7,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "KTCTMLN",
+    "width": 768,
+    "cards": 0,
+    "disclosures": 6,
+    "button_families": 3,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NLTTTC",
+    "width": 768,
+    "cards": 72,
+    "disclosures": 27,
+    "button_families": 20,
+    "evidence": [
+      "evidence/after/touch/NLTTTC_ch1_768_back.png",
+      "evidence/after/touch/NLTTTC_review_768_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "STKN",
+    "width": 768,
+    "cards": 12,
+    "disclosures": 67,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/STKN_review_768_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "TLUD",
+    "width": 768,
+    "cards": 6,
+    "disclosures": 18,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/TLUD_ch1_768_back.png",
+      "evidence/after/touch/TLUD_ch2_768_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "KTTC",
+    "width": 1366,
+    "cards": 42,
+    "disclosures": 26,
+    "button_families": 35,
+    "evidence": [
+      "evidence/after/touch/KTTC_ch1_1366_back.png",
+      "evidence/after/touch/KTTC_ch2_1366_back.png",
+      "evidence/after/touch/KTTC_ch3_1366_back.png",
+      "evidence/after/touch/KTTC_ch4_1366_back.png",
+      "evidence/after/touch/KTTC_ch5_1366_back.png",
+      "evidence/after/touch/KTTC_ch6_1366_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "KTQT",
+    "width": 1366,
+    "cards": 0,
+    "disclosures": 10,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NMLH",
+    "width": 1366,
+    "cards": 0,
+    "disclosures": 7,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "KTCTMLN",
+    "width": 1366,
+    "cards": 0,
+    "disclosures": 6,
+    "button_families": 3,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NLTTTC",
+    "width": 1366,
+    "cards": 72,
+    "disclosures": 27,
+    "button_families": 20,
+    "evidence": [
+      "evidence/after/touch/NLTTTC_ch1_1366_back.png",
+      "evidence/after/touch/NLTTTC_review_1366_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "STKN",
+    "width": 1366,
+    "cards": 12,
+    "disclosures": 67,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/STKN_review_1366_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "TLUD",
+    "width": 1366,
+    "cards": 6,
+    "disclosures": 18,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/TLUD_ch1_1366_back.png",
+      "evidence/after/touch/TLUD_ch2_1366_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "LTMQT",
+    "width": 320,
+    "cards": 0,
+    "disclosures": 28,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "PTBV",
+    "width": 320,
+    "cards": 0,
+    "disclosures": 54,
+    "button_families": 30,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "LTMQT",
+    "width": 390,
+    "cards": 0,
+    "disclosures": 28,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "PTBV",
+    "width": 390,
+    "cards": 0,
+    "disclosures": 54,
+    "button_families": 30,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "LTMQT",
+    "width": 768,
+    "cards": 0,
+    "disclosures": 28,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "PTBV",
+    "width": 768,
+    "cards": 0,
+    "disclosures": 54,
+    "button_families": 30,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "LTMQT",
+    "width": 1366,
+    "cards": 0,
+    "disclosures": 28,
+    "button_families": 0,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "PTBV",
+    "width": 1366,
+    "cards": 0,
+    "disclosures": 54,
+    "button_families": 30,
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "route": "NLKT",
+    "width": 320,
+    "cards": 11,
+    "disclosures": 20,
+    "button_families": 37,
+    "evidence": [
+      "evidence/after/touch/NLKT_ch1_320_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "NLKT",
+    "width": 390,
+    "cards": 11,
+    "disclosures": 20,
+    "button_families": 37,
+    "evidence": [
+      "evidence/after/touch/NLKT_ch1_390_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "NLKT",
+    "width": 768,
+    "cards": 11,
+    "disclosures": 20,
+    "button_families": 37,
+    "evidence": [
+      "evidence/after/touch/NLKT_ch1_768_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "NLKT",
+    "width": 1366,
+    "cards": 11,
+    "disclosures": 20,
+    "button_families": 37,
+    "evidence": [
+      "evidence/after/touch/NLKT_ch1_1366_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "VHDDTKD",
+    "width": 320,
+    "cards": 8,
+    "disclosures": 11,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/VHDDTKD_review_320_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "VHDDTKD",
+    "width": 390,
+    "cards": 8,
+    "disclosures": 11,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/VHDDTKD_review_390_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "VHDDTKD",
+    "width": 768,
+    "cards": 8,
+    "disclosures": 11,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/VHDDTKD_review_768_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "VHDDTKD",
+    "width": 1366,
+    "cards": 8,
+    "disclosures": 11,
+    "button_families": 0,
+    "evidence": [
+      "evidence/after/touch/VHDDTKD_review_1366_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "TCCN",
+    "width": 320,
+    "cards": 58,
+    "disclosures": 34,
+    "button_families": 29,
+    "evidence": [
+      "evidence/after/touch/TCCN_ch1_320_back.png",
+      "evidence/after/touch/TCCN_ch2_320_back.png",
+      "evidence/after/touch/TCCN_ch3_320_back.png",
+      "evidence/after/touch/TCCN_ch4_320_back.png",
+      "evidence/after/touch/TCCN_ch5_320_back.png",
+      "evidence/after/touch/TCCN_ch6_320_back.png",
+      "evidence/after/touch/TCCN_review_320_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "TCCN",
+    "width": 390,
+    "cards": 58,
+    "disclosures": 34,
+    "button_families": 29,
+    "evidence": [
+      "evidence/after/touch/TCCN_ch1_390_back.png",
+      "evidence/after/touch/TCCN_ch2_390_back.png",
+      "evidence/after/touch/TCCN_ch3_390_back.png",
+      "evidence/after/touch/TCCN_ch4_390_back.png",
+      "evidence/after/touch/TCCN_ch5_390_back.png",
+      "evidence/after/touch/TCCN_ch6_390_back.png",
+      "evidence/after/touch/TCCN_review_390_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "TCCN",
+    "width": 768,
+    "cards": 58,
+    "disclosures": 34,
+    "button_families": 29,
+    "evidence": [
+      "evidence/after/touch/TCCN_ch1_768_back.png",
+      "evidence/after/touch/TCCN_ch2_768_back.png",
+      "evidence/after/touch/TCCN_ch3_768_back.png",
+      "evidence/after/touch/TCCN_ch4_768_back.png",
+      "evidence/after/touch/TCCN_ch5_768_back.png",
+      "evidence/after/touch/TCCN_ch6_768_back.png",
+      "evidence/after/touch/TCCN_review_768_back.png"
+    ],
+    "pass": true
+  },
+  {
+    "route": "TCCN",
+    "width": 1366,
+    "cards": 58,
+    "disclosures": 34,
+    "button_families": 29,
+    "evidence": [
+      "evidence/after/touch/TCCN_ch1_1366_back.png",
+      "evidence/after/touch/TCCN_ch2_1366_back.png",
+      "evidence/after/touch/TCCN_ch3_1366_back.png",
+      "evidence/after/touch/TCCN_ch4_1366_back.png",
+      "evidence/after/touch/TCCN_ch5_1366_back.png",
+      "evidence/after/touch/TCCN_ch6_1366_back.png",
+      "evidence/after/touch/TCCN_review_1366_back.png"
+    ],
+    "pass": true
+  }
+]

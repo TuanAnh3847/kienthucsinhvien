@@ -1,0 +1,10 @@
+EDU CONNECT — ĐỌC GÓI KẾT QUẢ QA
+
+1. Đọc COMPLETION-REPORT.txt để xem kết quả, phạm vi và giới hạn kiểm thử.
+2. Sáu CSV trong checklists/ là bản nghiệm thu cuối. ISSUE-REGISTER có 66 mục đã đóng.
+3. implementation/visual-review.json và practice-visual-review.json chỉ rõ ảnh được chấp nhận. evidence/after/ giữ cả ảnh lịch sử để truy vết; ảnh lịch sử không tự chứng minh trạng thái cuối.
+4. QA-MANIFEST.json ghi SHA256 từng file trong ZIP. QA-ARCHIVE-VALIDATION.json nằm ngoài ZIP vì chứa SHA256 của chính archive cuối.
+5. Nguồn ứng dụng, assets, fixture và scripts kiểm thử được kèm. Chạy preview bằng node tests/serve.cjs ở thư mục gốc; kiểm thử trình duyệt dùng Playwright, Microsoft Edge và Firebase fixture, chặn database/auth production. CSS/font từ CDN vẫn cần truy cập mạng.
+6. Chạy lại static checks cần Python 3.12 + html5lib; browser checks cần Node + Playwright; contact sheets dùng sharp. tests/handoff-runbook.cjs đang ghi đường dẫn Python đã dùng trên máy này; chỉnh đường dẫn nếu chạy trên máy khác.
+7. Preservation checks so với audit base cần Git checkout chứa commit 5b0e619fb6838363a79dcb2966a6c138375a59ec. ZIP không chứa .git hoặc các dependency/runtime đã cài. Mã và bằng chứng đủ để review; dùng repository gốc để chạy lại phép so lịch sử.
+8. START-HERE.txt và PACKAGE-MANIFEST.json là tài liệu/manifest archive đầu vào. Thay đổi hiện đã nằm trên nhánh codex/edu-connect-reading-polish; xem source-commit.txt và Git history. Chưa push, merge hoặc deploy production.

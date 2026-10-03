@@ -1,0 +1,432 @@
+{
+  "purpose": "Visual survey; originals retained for reading at native size",
+  "tiles": 85,
+  "sheets": 8,
+  "index": [
+    {
+      "sheet": "gallery-001.png",
+      "file": "ARES-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ARES-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ARES-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "ARES-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "BMC-1366-0.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "BMC-1366-1.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "BMC-1366-2.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "BMC-320-0-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "BMC-320-0.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "BMC-320-1-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "BMC-320-1.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "BMC-320-2-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-320-2.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-390-0-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-390-0.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-390-1-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-390-1.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-390-2-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-390-2.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-768-0-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-768-0.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-768-1-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-768-1.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "BMC-768-2-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "BMC-768-2.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "DSB-1366-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "DSB-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "DSB-320-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "DSB-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "DSB-390-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "DSB-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "DSB-768-end.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "DSB-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ERP-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ERP-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "ERP-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "ERP-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "Toyota-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "Toyota-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "Toyota-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "Toyota-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "classification-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "classification-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "classification-320.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "classification-320.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "classification-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "classification-390.png",
+      "part": 2
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "classification-390.png",
+      "part": 3
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "classification-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "concept-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "concept-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "concept-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "concept-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "credit-badges-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "credit-badges-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "credit-badges-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "credit-badges-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "culture-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "culture-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "culture-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "culture-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "iceberg-match-1366.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "iceberg-match-320.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "iceberg-match-390.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "iceberg-match-768.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "layer-1366-0.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "layer-1366-1.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "layer-1366-2.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "layer-1366-3.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "layer-1366-4.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "layer-320-0.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "layer-320-1.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-320-2.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-320-3.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-320-4.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-390-0.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-390-1.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-390-2.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-390-3.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-390-4.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-768-0.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-768-1.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-768-2.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "layer-768-3.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-008.png",
+      "file": "layer-768-4.png",
+      "part": 1
+    }
+  ]
+}

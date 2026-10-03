@@ -1,0 +1,407 @@
+{
+  "purpose": "Visual survey; originals retained for reading at native size",
+  "tiles": 80,
+  "sheets": 7,
+  "index": [
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch1_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch1_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch1_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch1_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch2_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch2_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch2_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch2_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch3_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch3_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch3_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-001.png",
+      "file": "KTTC_ch3_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch4_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch4_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch4_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch4_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch5_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch5_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch5_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch5_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch6_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch6_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch6_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-002.png",
+      "file": "KTTC_ch6_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLKT_ch1_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLKT_ch1_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLKT_ch1_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLKT_ch1_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC_ch1_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC_ch1_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC_ch1_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC_ch1_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC_review_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC_review_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC_review_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-003.png",
+      "file": "NLTTTC_review_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "STKN_review_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "STKN_review_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "STKN_review_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "STKN_review_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "TCCN_ch1_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "TCCN_ch1_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "TCCN_ch1_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "TCCN_ch1_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "TCCN_ch2_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "TCCN_ch2_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "TCCN_ch2_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-004.png",
+      "file": "TCCN_ch2_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch3_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch3_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch3_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch3_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch4_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch4_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch4_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch4_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch5_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch5_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch5_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-005.png",
+      "file": "TCCN_ch5_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN_ch6_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN_ch6_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN_ch6_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN_ch6_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN_review_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN_review_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN_review_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TCCN_review_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TLUD_ch1_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TLUD_ch1_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TLUD_ch1_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-006.png",
+      "file": "TLUD_ch1_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "TLUD_ch2_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "TLUD_ch2_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "TLUD_ch2_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "TLUD_ch2_768_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "VHDDTKD_review_1366_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "VHDDTKD_review_320_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "VHDDTKD_review_390_back.png",
+      "part": 1
+    },
+    {
+      "sheet": "gallery-007.png",
+      "file": "VHDDTKD_review_768_back.png",
+      "part": 1
+    }
+  ]
+}

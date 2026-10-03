@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "counts": {
+    "COPY-REVIEW-CHECKLIST.csv": {
+      "status": {
+        "EDITED_VERIFIED": 63,
+        "PRESERVED_VERIFIED": 12,
+        "DUPLICATE_VERIFIED": 4
+      }
+    },
+    "IMPLEMENTATION-CHECKLIST.csv": {
+      "status": {
+        "VERIFIED_FIXED": 66
+      }
+    },
+    "PRACTICE-STATE-CHECKLIST.csv": {
+      "open_and_long_text": {
+        "PASS": 184
+      }
+    },
+    "PRESERVATION-CHECKLIST.csv": {
+      "status": {
+        "PASS": 24
+      }
+    },
+    "QA-CHECKLIST.csv": {
+      "status": {
+        "PASS": 51
+      }
+    },
+    "RENDER-COVERAGE-416.csv": {
+      "after_status": {
+        "PASS": 416
+      }
+    }
+  },
+  "checked_evidence_paths": 3512,
+  "issue_csv_json_match": true
+}

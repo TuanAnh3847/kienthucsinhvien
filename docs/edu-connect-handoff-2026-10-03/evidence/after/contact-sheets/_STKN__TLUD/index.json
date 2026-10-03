@@ -1,0 +1,2472 @@
+{
+  "purpose": "Full-body layout survey only; read text, contrast and interactions in full-resolution captures/tests.",
+  "states": 64,
+  "tiles": 352,
+  "sheets": 30,
+  "index": [
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-001.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 13,
+      "scaled_top": 18000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 14,
+      "scaled_top": 19500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch1-320",
+      "part": 15,
+      "scaled_top": 21000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-002.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch2-320",
+      "part": 13,
+      "scaled_top": 18000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-003.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch3-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-004.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 13,
+      "scaled_top": 18000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 14,
+      "scaled_top": 19500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 15,
+      "scaled_top": 21000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch4-320",
+      "part": 16,
+      "scaled_top": 22500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch5-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch5-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch5-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch5-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch5-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch5-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-005.png",
+      "coverage_id": "THEORY-STKN-ch5-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-006.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 13,
+      "scaled_top": 18000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 14,
+      "scaled_top": 19500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 15,
+      "scaled_top": 21000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 16,
+      "scaled_top": 22500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 17,
+      "scaled_top": 24000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch6-320",
+      "part": 18,
+      "scaled_top": 25500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-007.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 13,
+      "scaled_top": 18000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 14,
+      "scaled_top": 19500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 15,
+      "scaled_top": 21000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 16,
+      "scaled_top": 22500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 17,
+      "scaled_top": 24000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-008.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 18,
+      "scaled_top": 25500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 19,
+      "scaled_top": 27000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 20,
+      "scaled_top": 28500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-ch7-320",
+      "part": 21,
+      "scaled_top": 30000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-review-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-review-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-review-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-review-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-review-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-009.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch1-390",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-010.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch2-390",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch3-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch3-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch3-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch3-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch3-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch3-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch3-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-011.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch4-390",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-012.png",
+      "coverage_id": "THEORY-STKN-ch5-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch5-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch5-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch5-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch5-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-013.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch6-390",
+      "part": 13,
+      "scaled_top": 18000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-014.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 13,
+      "scaled_top": 18000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 14,
+      "scaled_top": 19500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-ch7-390",
+      "part": 15,
+      "scaled_top": 21000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-review-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-review-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-review-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-015.png",
+      "coverage_id": "THEORY-STKN-review-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch1-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch1-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch1-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch1-768",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch2-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch2-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch2-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch3-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch3-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch3-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch4-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-016.png",
+      "coverage_id": "THEORY-STKN-ch4-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch4-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch4-768",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch5-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch5-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch6-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch6-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch6-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch6-768",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch6-768",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch7-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch7-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-017.png",
+      "coverage_id": "THEORY-STKN-ch7-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch7-768",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch7-768",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch7-768",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-review-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-review-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch1-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch1-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch2-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch2-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch3-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch3-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-018.png",
+      "coverage_id": "THEORY-STKN-ch4-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-STKN-ch4-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-STKN-ch5-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-STKN-ch6-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-STKN-ch6-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-STKN-ch7-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-STKN-ch7-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-STKN-ch7-1366",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-STKN-review-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-019.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch1-320",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-020.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch2-320",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-021.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 10,
+      "scaled_top": 13500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 11,
+      "scaled_top": 15000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch3-320",
+      "part": 12,
+      "scaled_top": 16500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-022.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch4-320",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch5-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch5-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch5-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch5-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch5-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch6-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch6-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch6-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch6-320",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch6-320",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-023.png",
+      "coverage_id": "THEORY-TLUD-ch7-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch7-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch7-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-review-320",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-review-320",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-review-320",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 320
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch1-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch1-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch1-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch1-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch1-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch1-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-024.png",
+      "coverage_id": "THEORY-TLUD-ch1-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch2-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch2-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch2-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch2-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch2-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch2-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch2-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-025.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 8,
+      "scaled_top": 10500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch3-390",
+      "part": 9,
+      "scaled_top": 12000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch4-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch4-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch4-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch4-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch4-390",
+      "part": 5,
+      "scaled_top": 6000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch4-390",
+      "part": 6,
+      "scaled_top": 7500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch4-390",
+      "part": 7,
+      "scaled_top": 9000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-026.png",
+      "coverage_id": "THEORY-TLUD-ch5-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch5-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch5-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch5-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch6-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch6-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch6-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch6-390",
+      "part": 4,
+      "scaled_top": 4500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch7-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-ch7-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-review-390",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-review-390",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-027.png",
+      "coverage_id": "THEORY-TLUD-review-390",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 390
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch1-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch1-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch1-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch2-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch2-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch2-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch3-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch3-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch3-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch4-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch4-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-028.png",
+      "coverage_id": "THEORY-TLUD-ch4-768",
+      "part": 3,
+      "scaled_top": 3000,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch5-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch5-768",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch6-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch7-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-review-768",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 768
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch1-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch1-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch2-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch2-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch3-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch3-1366",
+      "part": 2,
+      "scaled_top": 1500,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-029.png",
+      "coverage_id": "THEORY-TLUD-ch4-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-030.png",
+      "coverage_id": "THEORY-TLUD-ch5-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-030.png",
+      "coverage_id": "THEORY-TLUD-ch6-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-030.png",
+      "coverage_id": "THEORY-TLUD-ch7-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    },
+    {
+      "sheet": "sheet-030.png",
+      "coverage_id": "THEORY-TLUD-review-1366",
+      "part": 1,
+      "scaled_top": 0,
+      "source_width": 1366
+    }
+  ]
+}

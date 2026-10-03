@@ -12,11 +12,11 @@
     "acceptance": "Đủ 82 tab ở bốn viewport; dấu tiếng Việt đúng, đoạn dài dễ đọc, bảng/sơ đồ không bị tăng chữ hàng loạt.",
     "source_refs": "baseline/live-study-audit.json; baseline/responsive-review.md",
     "depends_on": "",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "G02",
@@ -31,11 +31,11 @@
     "acceptance": "Heading cùng cấp đồng bộ; không cắt glyph, không chiếm quá nhiều màn hình phone; cấu trúc h1/h2/h3 hợp lý.",
     "source_refs": "baseline/live-study-audit.json",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "G03",
@@ -50,11 +50,11 @@
     "acceptance": "Không còn chữ trắng trên surface trắng; trạng thái và nhóm kiến thức vẫn phân biệt được; có số đo tương phản đại diện.",
     "source_refs": "baseline/live-study-audit.json; baseline/modern-source-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "G04",
@@ -69,11 +69,11 @@
     "acceptance": "Đủ chữ, không overlap/cắt; layout cao tự nhiên; không dùng overflow:hidden hoặc giảm font để che lỗi.",
     "source_refs": "baseline/responsive-review.md; baseline/modern-source-review.txt",
     "depends_on": "G01|G02",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "G05",
@@ -88,11 +88,11 @@
     "acceptance": "Chọn đầu/giữa/cuối, sau cuộn sâu, keyboard/touch; resize767/768; focus rõ; active nằm trong vùng nhìn; regression vẫn kiểm strip HOẶC picker hiện.",
     "source_refs": "baseline/live-study-audit.json; evidence/before/NLKT-flashcard.jpg",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "G06",
@@ -107,11 +107,11 @@
     "acceptance": "Heading không nằm dưới header; anchor/TOC focus đúng; không bị header nhảy/chen tại320/390/767/768/1366.",
     "source_refs": "baseline/audit-verification-notes.json; baseline/responsive-review.md; evidence/before/NLTTTC-chapter-offset.jpg",
     "depends_on": "G05",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "G07",
@@ -126,11 +126,11 @@
     "acceptance": "Mỗi anchor đến đúng khối dưới sticky header; TOC thu gọn, keyboard được, không sinh ID trùng hoặc đổi thứ tự học.",
     "source_refs": "baseline/live-study-audit.json",
     "depends_on": "G05|G06",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "G08",
@@ -145,11 +145,11 @@
     "acceptance": "Document không cuộn ngang; wrapper có thể cuộn tới cột cuối; labels/đơn vị/legend nguyên; không ép dữ liệu thành font bé.",
     "source_refs": "baseline/responsive-review.md",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "G09",
@@ -164,11 +164,11 @@
     "acceptance": "Tab/Enter/Space và touch hoạt động; không phụ thuộc hover; zoom 200% không mất nội dung; feedback có chữ, không chỉ màu.",
     "source_refs": "baseline/responsive-review.md; baseline/modern-source-review.txt",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "K01",
@@ -183,11 +183,11 @@
     "acceptance": "Không còn TeX thô trong UI; Ch2 c1000/v200/m200=>1400, M=50x1000/5=>10000.00; cả calculator khác/ch3 so kết quả baseline ở nhiều bộ input hợp lệ.",
     "source_refs": "baseline/live-study-audit.json; evidence/before/KTCT-formula.jpg",
     "depends_on": "",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "K02",
@@ -202,11 +202,11 @@
     "acceptance": "Nhập số dài và đọc label được320/390; không che submit/result; kết quả không đổi.",
     "source_refs": "baseline/responsive-review.md",
     "depends_on": "K01|G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "A01",
@@ -221,11 +221,11 @@
     "acceptance": "Hai mặt mọi thẻ, đáp án dài nhất320/390 và zoom 200% đầy đủ, không chồng card kế; click/Enter vẫn flip.",
     "source_refs": "baseline/audit-verification-notes.json; baseline/responsive-review.md; evidence/before/NLKT-flashcard.jpg",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "A02",
@@ -240,11 +240,11 @@
     "acceptance": "Tra mã dài, clear/filter, tới mục cuối; columns không mất và bộ dữ liệu tài khoản nguyên.",
     "source_refs": "baseline/responsive-review.md; baseline/learner-copy-review.txt",
     "depends_on": "G07|G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "A03",
@@ -259,11 +259,11 @@
     "acceptance": "Đã xem đủ từng bullet mục3, ghi exact before/after; mức bất định và dữ kiện nguyên.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "F01",
@@ -278,11 +278,11 @@
     "acceptance": "Cột cuối reachable320/390; heading/badge không tràn; flashcard cả hai mặt nguyên.",
     "source_refs": "baseline/responsive-review.md",
     "depends_on": "G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "F02",
@@ -297,11 +297,11 @@
     "acceptance": "Đủ14badge xử lý;33events giữ; exact substitutions, mọi công cụ không được quảng bá đã chấm khi chưa chấm.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "N01",
@@ -316,11 +316,11 @@
     "acceptance": "Text từng đoạn và padding trong border ở320/390/desktop; ghi rõ kết quả tái hiện, không xóa nội dung để làm hết overflow.",
     "source_refs": "baseline/audit-verification-notes.json; evidence/before/NMLH-ch5.jpg",
     "depends_on": "G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "N02",
@@ -335,11 +335,11 @@
     "acceptance": "Tên hình phạt/dẫn giải đủ và dễ so sánh; không đổi legal facts.",
     "source_refs": "baseline/responsive-review.md",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "Q01",
@@ -354,11 +354,11 @@
     "acceptance": "Không mất đơn vị/nhãn; sơ đồ không giả định số chưa có; desktop/mobile readable.",
     "source_refs": "baseline/responsive-review.md; baseline/learner-copy-review.txt",
     "depends_on": "G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "Q02",
@@ -373,11 +373,11 @@
     "acceptance": "Từng bullet có kết quả; không phục dựng công thức p31 hoặc tuyên bố ôn đủ6chương.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "T01",
@@ -392,11 +392,11 @@
     "acceptance": "Không còn14thẻ lặp vô ích; thông tin gốc vẫn truy cập; limitation trung thực, không số giả.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "T02",
@@ -411,11 +411,11 @@
     "acceptance": "Người học biết dữ liệu thiếu thứ tự; danh sách gốc giữ; không dựng quy trình giả.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "T03",
@@ -430,11 +430,11 @@
     "acceptance": "Age/contribution, premium, insurance odds, life-cycle rà từng khối; không bỏ diagram có ý nghĩa hoặc biến minh họa thành dữ liệu định lượng.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "T01|T02",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "T04",
@@ -449,11 +449,11 @@
     "acceptance": "Đã xem hết before/after mục6; không chấm tự động bài chưa chấm; claimsStep2/3, IRR, Michelle/Jason còn qualifier.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "T05",
@@ -468,11 +468,11 @@
     "acceptance": "Anchor đúng, nhập/bật lời giải/worksheet hoạt động; longprose và bảng đọc được bốnviewport.",
     "source_refs": "baseline/live-study-audit.json; baseline/responsive-review.md",
     "depends_on": "G07|G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "V01",
@@ -487,11 +487,11 @@
     "acceptance": "Cả hai mặt tất cả thẻ đủ chữ320/390/768/1366, zoom 200%, keyboard/touch; không overlap.",
     "source_refs": "baseline/responsive-review.md; baseline/modern-source-review.txt",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "V02",
@@ -506,11 +506,11 @@
     "acceptance": "320px đo container/child; concept/culture matrix không bị padding hai lần; đủ kích thước đọc.",
     "source_refs": "baseline/responsive-review.md",
     "depends_on": "G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "V03",
@@ -525,11 +525,11 @@
     "acceptance": "Ch2/3 và mọi sơ đồ kiểm320/390/768; labels/ngưỡng/trục nguyên; không sửa90%Toyota thành100%.",
     "source_refs": "baseline/responsive-review.md; baseline/modern-source-review.txt",
     "depends_on": "V02|G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "V04",
@@ -544,11 +544,11 @@
     "acceptance": "Toàn bộ bullets/modern bổ sung đã xử lý; six guidelines vẫn checklist không thành chuỗi nhân quả.",
     "source_refs": "baseline/learner-copy-review.txt; baseline/modern-source-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "D01",
@@ -563,11 +563,11 @@
     "acceptance": "Tất cả thẻ, longest answer/zoom 200%,320/390 không clip; flip/reset/filter giữ.",
     "source_refs": "baseline/modern-source-review.txt; baseline/responsive-review.md",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "D02",
@@ -582,11 +582,11 @@
     "acceptance": "320/390 đọc cả3 cột, không che nội dung; so ma trận baseline; keyboard phù hợp.",
     "source_refs": "baseline/responsive-review.md; baseline/modern-source-review.txt",
     "depends_on": "G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "D03",
@@ -601,11 +601,11 @@
     "acceptance": "Nestedcontainer320/390/zoom không pageoverflow; captions và category labels đủ.",
     "source_refs": "baseline/modern-source-review.txt",
     "depends_on": "G04|G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "D04",
@@ -620,11 +620,11 @@
     "acceptance": "Ch5–6 không bị hứa có thẻ; không thêm thẻ/answers; qualifiers SF3493/3492/taste/forgetting giữ.",
     "source_refs": "baseline/learner-copy-review.txt; baseline/modern-source-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "S01",
@@ -639,11 +639,11 @@
     "acceptance": "Tất cả mặt dài320/390/zoom 200% và keyboard/touch không clip/overlap.",
     "source_refs": "baseline/modern-source-review.txt",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "S02",
@@ -658,11 +658,11 @@
     "acceptance": "320–768 không overflow/overlap, label/control dễ đọc; model không mất thành phần/quan hệ.",
     "source_refs": "baseline/modern-source-review.txt",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "S03",
@@ -677,11 +677,11 @@
     "acceptance": "320/390/641/768/820/900/1024 kiểm input/labels; giữ modelCh6/7 khác nhau và thông tin người dùng.",
     "source_refs": "baseline/modern-source-review.txt; baseline/responsive-review.md",
     "depends_on": "G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "S04",
@@ -696,11 +696,11 @@
     "acceptance": "Mọi interaction/sort/drop-zone đủ contrast, không chữ trắng biến mất; trạng thái vẫn rõ.",
     "source_refs": "baseline/modern-source-review.txt",
     "depends_on": "G03",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "S05",
@@ -715,11 +715,11 @@
     "acceptance": "Tất cả copy candidates xử lý/contextchecked; ARES Evidences/đáp án nguyên;6levels không tự relabel.",
     "source_refs": "baseline/learner-copy-review.txt; baseline/modern-source-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "B01",
@@ -734,11 +734,11 @@
     "acceptance": "Cả hai mặt và đáp án dài nhất320/390/zoom 200% khôngcắt/chồng.",
     "source_refs": "baseline/modern-source-review.txt",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "B02",
@@ -753,11 +753,11 @@
     "acceptance": "768/820/900/1024 vàphone: centre+4 chức năng không giao nhau; sources attached/văn bản đầy đủ.",
     "source_refs": "baseline/modern-source-review.txt",
     "depends_on": "G01|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "B03",
@@ -772,11 +772,11 @@
     "acceptance": "Scrolltới cuối, tất cả labels/đơn vị đủ; calculator outputs vàconstraints nguyên320/390/768.",
     "source_refs": "baseline/responsive-review.md; baseline/modern-source-review.txt",
     "depends_on": "G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "B04",
@@ -791,11 +791,11 @@
     "acceptance": "Goal/fact/signal/claim/map/stepper/definition tất cả đủ contrast; không mất cue/trạng thái.",
     "source_refs": "baseline/modern-source-review.txt",
     "depends_on": "G03",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "B05",
@@ -810,11 +810,11 @@
     "acceptance": "Ô còn thiếu ch5/6 vẫn thiếu rõ, signs/conventions không đổi; tất cả candidates được xét.",
     "source_refs": "baseline/learner-copy-review.txt; baseline/modern-source-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "P01",
@@ -829,11 +829,11 @@
     "acceptance": "320/390/641/768/800, nhãn SDG dài/options đủ; check/reset/scoring nguyên.",
     "source_refs": "baseline/modern-source-review.txt; baseline/responsive-review.md",
     "depends_on": "G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "P02",
@@ -848,11 +848,11 @@
     "acceptance": "320x568,390landscape,768; toànroadmap reachable; keyboard không bị kẹt; không giấu lastcard.",
     "source_refs": "baseline/modern-source-review.txt; baseline/responsive-review.md",
     "depends_on": "G09",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "P03",
@@ -867,11 +867,11 @@
     "acceptance": "Timeline/FAB đủ contrast/focus, categories không đổi.",
     "source_refs": "baseline/modern-source-review.txt",
     "depends_on": "G03",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "P04",
@@ -886,11 +886,11 @@
     "acceptance": "Copy checklist đủ; không đổi coverage>92% hoặc biến Crisis/Conflict/Compromise thành tiếntrình.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "L01",
@@ -905,11 +905,11 @@
     "acceptance": "320/390/641/768/zoom; matching/sort/reset works, text nguyên và touchtargets đủ.",
     "source_refs": "baseline/modern-source-review.txt; baseline/responsive-review.md",
     "depends_on": "G04|G09",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "L02",
@@ -924,11 +924,11 @@
     "acceptance": "Các sơ đồ/case tables toàn bộ cột reachable320/390; không làm đổi căn cứ/kết luận.",
     "source_refs": "baseline/responsive-review.md",
     "depends_on": "G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "L03",
@@ -943,11 +943,11 @@
     "acceptance": "Không chèn điều luật/thuế suất hiện hành; qualifier sát nội dung; everycandidate reviewed.",
     "source_refs": "baseline/learner-copy-review.txt; baseline/modern-source-review.txt",
     "depends_on": "G01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "X01",
@@ -962,11 +962,11 @@
     "acceptance": "Overview/cards hiện 3/4/5/6bộ theo chương, số câu/duration từ dữ liệu, indices1..n; undefined/null/NaN không in rác; no handler đổi.",
     "source_refs": "baseline/live-practice-audit.json; baseline/audit-verification-notes.json; evidence/before/NLTTTC-practice-overview.jpg; evidence/before/NMLH-practice.jpg",
     "depends_on": "",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "X02",
@@ -981,11 +981,11 @@
     "acceptance": "20 câu riêngvs40 lượt xuất hiện kiểm exact IDs từngbank; count không duplicate; label đúng mọi mode.",
     "source_refs": "baseline/audit-verification-notes.json; baseline/learner-copy-review.txt",
     "depends_on": "X01",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "X03",
@@ -1000,11 +1000,11 @@
     "acceptance": "21modesx4viewport; title/option/explanation đủ contrast/font; activeunderline/picker rõ và controls44px.",
     "source_refs": "baseline/live-practice-audit.json; baseline/responsive-review.md",
     "depends_on": "G01|G03|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "X04",
@@ -1019,11 +1019,11 @@
     "acceptance": "320/390/768/1279/1280/1366; câu cuối/nút nộp/retry reachable; keyboard không che thao tác.",
     "source_refs": "baseline/responsive-review.md",
     "depends_on": "X03|G09",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "X05",
@@ -1038,11 +1038,11 @@
     "acceptance": "Overview và Luyệnthi khớp5 hiện tại; data/remix eligibility/timer không đổi.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "X06",
@@ -1057,11 +1057,11 @@
     "acceptance": "Caseopen/solutiontoggle/reset giữ; không tạoautograder hoặc hứachấm khi không có.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "X07",
@@ -1076,11 +1076,11 @@
     "acceptance": "Tất cả9sets mở/checkcase4viewports; lời giải đầy đủ, buttons không tràn.",
     "source_refs": "baseline/responsive-review.md",
     "depends_on": "X03|G08",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "X08",
@@ -1095,11 +1095,11 @@
     "acceptance": "Wrong/change/correct/unanswered/submit/lock/retry/expiry/emptymistakes/storagefail tested; không ghi dữ liệu production.",
     "source_refs": "baseline/responsive-review.md; baseline/audit-verification-notes.json",
     "depends_on": "X03|X04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "H01",
@@ -1114,11 +1114,11 @@
     "acceptance": "Homepage4viewports, tiêu đề dàiwrap, fontViệtđúng; không bỏNLKT/cácmôn.",
     "source_refs": "baseline/audit-verification-notes.json; evidence/before/home.jpg",
     "depends_on": "G01|G03|G04",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "H02",
@@ -1133,11 +1133,11 @@
     "acceptance": "CTA hoạtđộng guest/signedin, route 20 câu; không hứa fullbank/countdown.",
     "source_refs": "baseline/learner-copy-review.txt; evidence/before/home.jpg",
     "depends_on": "X01|X02",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "H03",
@@ -1152,11 +1152,11 @@
     "acceptance": "6practice entrypoints khớp map, không 404 hoặc CTA hỏng; LuậtDN khônggắnroute giả.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "X01|X02",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "H04",
@@ -1171,11 +1171,11 @@
     "acceptance": "Cam kết tính năng khớp6MCQ/3 bài tự luận có lời giải,thời gian gợi ý của bốn pilot, TCCN realtimer; no inflatedcoverage.",
     "source_refs": "baseline/learner-copy-review.txt",
     "depends_on": "X02|X06",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   },
   {
     "issue_id": "FZ01",
@@ -1192,8 +1192,8 @@
     "depends_on": "",
     "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
     "notes": "Source and behavior guard PASS."
   },
   {
@@ -1211,8 +1211,8 @@
     "depends_on": "",
     "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
     "notes": "Source and behavior guard PASS."
   },
   {
@@ -1230,8 +1230,8 @@
     "depends_on": "",
     "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
     "notes": "Source and behavior guard PASS."
   },
   {
@@ -1247,10 +1247,10 @@
     "acceptance": "KhôngTODO/FAIL/BLOCKED chưaghi; verifiednofixneedsactualproof; do notdeclarefullcompletewhenblockersremain.",
     "source_refs": "baseline/audit-verification-notes.json",
     "depends_on": "",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED_FIXED",
     "owner": "Codex",
-    "commit": "codex/edu-connect-reading-polish (implementation commit recorded in COMPLETION-REPORT.txt)",
-    "result_evidence": "evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
-    "notes": "Code implemented and automatic tests PASS; mandatory visual acceptance remains open where indicated by QA/render checklist."
+    "commit": "2f6eadb67fd1d5e07e58f4684dab5812002458f2",
+    "result_evidence": "implementation/visual-review.json; implementation/practice-visual-review.json; evidence/after/render/results.json; evidence/after/targeted/results.json; evidence/after/accessibility/results.json; evidence/after/logs/runbook-results.json; implementation/edit-journal.json",
+    "notes": "Implemented, tested and explicitly inspected in whole-body/scoped replacement images. No remaining mandatory work."
   }
 ]
