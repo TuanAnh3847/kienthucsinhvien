@@ -2,8 +2,8 @@
 // They supplement full-resolution inspection; they never mark visual review PASS.
 const fs=require('node:fs'),path=require('node:path'),sharp=require('sharp');
 const {evidence}=require('./handoff-browser.cjs');
-const root=path.join(evidence,'after/render'),out=path.join(evidence,'after/contact-sheets');fs.mkdirSync(out,{recursive:true});
-const results=JSON.parse(fs.readFileSync(path.join(root,'results.json'),'utf8')).results;
+const root=path.join(evidence,'after/render'),out=path.join(evidence,'after/contact-sheets',process.env.CONTACT_ROUTES?process.env.CONTACT_ROUTES.replace(/\W/g,'_'):'');fs.mkdirSync(out,{recursive:true});
+const results=JSON.parse(fs.readFileSync(path.join(root,'results.json'),'utf8')).results.filter(r=>!process.env.CONTACT_ROUTES||process.env.CONTACT_ROUTES.split(',').includes(r.route));
 (async()=>{
  const tiles=[],width=320,height=1500;
  for(const row of results){

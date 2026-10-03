@@ -2,9 +2,12 @@ const fs=require('node:fs'),path=require('node:path');
 const {chromium}=require('playwright');
 const {open,root,evidence}=require('./handoff-browser.cjs');
 const {readCSV}=require('./csv-records.cjs');
+const {capture}=require('./handoff-capture-page.cjs');
 const {createHash}=require('node:crypto');
 const rows=readCSV(path.join(root,'docs/edu-connect-handoff-2026-10-03/checklists/RENDER-COVERAGE-416.csv'));
 const output=path.join(evidence,'after/render');fs.mkdirSync(output,{recursive:true});
+const shard=process.env.RENDER_SHARD===undefined?null:+process.env.RENDER_SHARD,shards=+(process.env.RENDER_SHARDS||2);
+const resultsFile=path.join(output,shard===null?'results.json':`results-shard-${shard}.json`);
 const previous=process.env.RENDER_FILTER && fs.existsSync(path.join(output,'results.json')) ? JSON.parse(fs.readFileSync(path.join(output,'results.json'),'utf8')).results : [];
 const results=previous.filter(r=>!process.env.RENDER_FILTER.split(',').includes(r.route));
 const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.test(f)||['reading.css','reading.js','edu-header.js','edu-study.js','shared.css'].includes(f)).map(f=>[f,createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex')]));
@@ -13,7 +16,8 @@ const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.t
  try{
   // Reuse one page per route/viewport; every configured state still gets a capture.
   const groups=new Map();for(const row of rows){const key=row.route+'@'+row.width;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(row);}
-  for(const group of groups.values()){
+  let groupIndex=0;for(const group of groups.values()){
+   if(shard!==null&&groupIndex++%shards!==shard)continue;
    if(process.env.RENDER_FILTER && !process.env.RENDER_FILTER.split(',').includes(group[0].route))continue;
    const p=await open(b,group[0].route,+group[0].width,+group[0].height);
    try{
@@ -52,24 +56,28 @@ const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.t
        if(tr.height>r.height+3)clipped.push({text:face.textContent.trim().slice(0,100),textHeight:tr.height,height:r.height});
       }
       const ids=[...document.querySelectorAll('[id]')].map(e=>e.id);
-      return {width:innerWidth,documentWidth:document.documentElement.scrollWidth,height:section.scrollHeight,tiny,clipped,duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),heading:section.querySelector('h2')?.textContent.trim()};
+      const smallButtons=[...section.querySelectorAll('button')].filter(visible).filter(e=>{const r=e.getBoundingClientRect();return r.width<43.9||r.height<43.9}).map(e=>({text:e.textContent.slice(0,80),width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height}));
+      const splitNumbers=[...section.querySelectorAll('.edu-number-cell')].filter(visible).filter(e=>{const range=document.createRange();range.selectNodeContents(e);return range.getBoundingClientRect().height>parseFloat(getComputedStyle(e).lineHeight)+2}).map(e=>e.textContent.trim());
+      return {width:innerWidth,documentWidth:document.documentElement.scrollWidth,height:section.scrollHeight,tiny,clipped,smallButtons,splitNumbers,duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),heading:section.querySelector('h2')?.textContent.trim()};
      });
      await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
      const screenshot=row.coverage_id+'.png';
-     await p.screenshot({path:path.join(output,screenshot),fullPage:true});
+     const captured=await capture(p,path.join(output,screenshot),+row.width);
      const failures=[];
      if(metrics.documentWidth>metrics.width+1)failures.push('document overflow');
      if(metrics.clipped.length)failures.push('flashcard text bounds exceed face');
      if(metrics.duplicateIds.length)failures.push('duplicate IDs');
+     if(metrics.splitNumbers.length)failures.push('numeric table token split across lines');
+     if(row.kind!=='HOME' && metrics.smallButtons.length)failures.push('buttons below 44px');
      if(p.errors.length)failures.push('runtime errors');
      if(/\$\\(?:to|rightarrow|times)|\$[Wm]\$|�|â€/.test(text))failures.push('raw notation or broken encoding');
-     results.push({coverage_id:row.coverage_id,route:row.route,state:row.state,width:+row.width,height:+row.height,automated_status:failures.length?'FAIL':'PASS',full_body_visual_review:'PENDING',failures,metrics,interactions,errors:[...p.errors],evidence:`evidence/after/render/${screenshot}`});
-     console.log(failures.length?'FAIL':'RENDER',row.coverage_id,failures.join(';'),metrics.tiny.length?'small prose:'+metrics.tiny.length:'');
+     results.push({coverage_id:row.coverage_id,route:row.route,state:row.state,width:+row.width,height:+row.height,automated_status:failures.length?'FAIL':'PASS',full_body_visual_review:'PENDING',failures,metrics,interactions,capture:captured,errors:[...p.errors],evidence:`evidence/after/render/${screenshot}`});
+     console.log([failures.length?'FAIL':'RENDER',row.coverage_id,failures.join(';'),metrics.tiny.length?'small prose:'+metrics.tiny.length:''].filter(Boolean).join(' '));
      await p.locator(section).evaluate(section=>section.querySelectorAll('details').forEach(d=>d.open=false));
     }
    }finally{await p.close();}
-   fs.writeFileSync(path.join(output,'results.json'),JSON.stringify({browser:b.version(),source_hashes:sourceHashes,results},null,2));
+   fs.writeFileSync(resultsFile,JSON.stringify({browser:b.version(),source_hashes:sourceHashes,shard,shards,results},null,2));
   }
  }finally{await b.close();}
  if(results.some(r=>r.failures.length))process.exitCode=1;
-})().catch(e=>{console.error(e);fs.writeFileSync(path.join(output,'results.json'),JSON.stringify({error:e.stack,results},null,2));process.exitCode=1});
+})().catch(e=>{console.error(e);fs.writeFileSync(resultsFile,JSON.stringify({error:e.stack,results},null,2));process.exitCode=1});

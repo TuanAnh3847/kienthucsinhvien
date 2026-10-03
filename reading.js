@@ -70,6 +70,10 @@
         let scheduled = false;
         function refresh() {
             scheduled = false;
+            // Preserve numeric tokens as one item while their table scrolls locally.
+            document.querySelectorAll('main td,main th,#practice-content td,#practice-content th').forEach(cell => {
+                cell.classList.toggle('edu-number-cell', /^[+−-]?(?:\d[\d,.]*(?:\s*%|\s*(?:USD|VND|đồng|million|billion))?)$/.test(cell.textContent.trim()));
+            });
             document.querySelectorAll('main .flip-card,main .flip-card-local').forEach(card => {
                 const flipped = card.classList.contains('flipped') || card.classList.contains('is-flipped');
                 card.setAttribute('aria-pressed', String(flipped));
