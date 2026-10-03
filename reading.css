@@ -12,6 +12,11 @@ body.edu-study-page.edu-route-NLKT .coa-table :is(td,th):first-child { white-spa
 body.edu-study-page .tab-content :is(p,li,h3,h4,strong,.pill,.t-title,.acct-name,.flip-front,.flip-back) { overflow-wrap:anywhere; }
 body.edu-study-page :is(.account-grid,.grid-3,.grid-4,.grid-5,.trio,.pill-row,.flash-grid,.flip-inner) > * { min-width:0; }
 body.edu-study-page.edu-route-KTTC .account-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); }
+body.edu-study-page.edu-route-KTTC :is(.flow-arrow small,.flow-node span,.flow-node small) { font-size:13px; line-height:1.5; white-space:normal; }
+@media (max-width:760px) {
+  body.edu-study-page.edu-route-KTTC .flow-arrow { transform:none; }
+  body.edu-study-page.edu-route-KTTC .edu-flow-symbol { display:inline-block; transform:rotate(90deg); }
+}
 body.edu-study-page .pill { max-width:100%; }
 body.edu-study-page :is(.mini-badge,.chapter-objective,.learn-card-body,.edu-choice,summary,.study-flip-face) { white-space:normal; overflow-wrap:anywhere; }
 body.edu-study-page :is(.study-flip-inner,.study-flip-face) { min-width:0; }
@@ -43,9 +48,18 @@ body.edu-study-page.edu-route-STKN .venn.dfv .c1 > span { color:#92400e; }
 body.edu-practice-page .bg-teal-600 { background-color:#0f766e; }
 body.edu-practice-page :is(header,nav) .text-green-600 { color:#15803d; font-size:13px; }
 body.edu-practice-page :is(.bg-amber-500,.hover\:bg-amber-600:hover) { background-color:#b45309; }
+body.edu-practice-page #practice-content p { overflow-wrap:anywhere; }
+body.edu-study-page.edu-route-TCCN .pill.font-bold.text-teal-700 { flex-shrink:0; white-space:nowrap; overflow-wrap:normal; }
+@media (max-width:640px) {
+  /* A rotated full-width arrow otherwise covers neighboring phone controls. */
+  body.edu-study-page.edu-route-NLKT .flow-arrow { width:1.5em; height:1.5em; min-width:0; align-self:center; flex:none; }
+}
 body.edu-study-page.edu-route-STKN .flip-front small { color:inherit; }
 body.edu-study-page.edu-route-TLUD .ice-conscious { background:#0369a1; }
 body.edu-study-page.edu-route-TLUD .pyr:is(.p2,.p3) { background:#0f766e; }
+/* Give the hierarchy room for its full labels, including enlarged text. */
+body.edu-study-page.edu-route-TLUD .svg-card:has(.pyramid) { grid-column:1 / -1; }
+body.edu-study-page.edu-route-TLUD .pyr { min-width:min(100%,12em); overflow-wrap:normal; word-break:normal; }
 body.edu-study-page.edu-route-VHDDTKD .distribution-labels { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
 body.edu-study-page.edu-route-VHDDTKD .distribution-labels span { min-width:0; width:auto; overflow-wrap:anywhere; }
 body.edu-study-page :is(.course-intro-title, main > div:first-child > h1) { font-size:clamp(28px,3vw,34px); line-height:1.25; }
@@ -130,6 +144,7 @@ body.edu-study-page.edu-route-TLUD :is(.grid-auto,.flip-grid) { grid-template-co
 body.edu-study-page.edu-route-TLUD .gallery { grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); }
 body.edu-study-page.edu-route-TLUD :is(.match-columns,.match-list,.match-item) { min-width:0; max-width:100%; }
 body.edu-study-page.edu-route-TLUD .match-item { white-space:normal; overflow-wrap:break-word; font-size:16px; }
+body.edu-study-page.edu-route-TLUD button.match-item { display:block; overflow-wrap:anywhere; }
 body.edu-study-page .tab-content :is(.quiz-row,.quiz-item,.quiz-q,.classifier,.account-card,.path-card,.factor,.exercise-grid,.quote-defs,.comparison-hub,.knowledge-card,.learning-card,.card,.panel,.example-card,.source-data-visual,.scenario,.detail-body) p { font-size:16px; line-height:1.7; }
 body.edu-study-page .tab-content :is(p.text-sm,p.small) { font-size:16px; line-height:1.7; }
 body.edu-study-page .tab-content :is(p.text-xs,p.source-note,p.center-note,p.interaction-hint) { font-size:15px; line-height:1.65; }
@@ -145,10 +160,40 @@ body.edu-study-page.edu-route-LTMQT .flash-grid { grid-template-columns:repeat(a
 body.edu-study-page.edu-route-LTMQT .sort-item { flex-wrap:wrap; gap:12px; }
 body.edu-study-page.edu-route-LTMQT .sort-item > span { flex:1 1 180px; min-width:0; }
 body.edu-study-page.edu-route-LTMQT .sort-actions { flex-shrink:0; }
+body.edu-study-page.edu-route-LTMQT .flow-row .flow-node { min-width:170px; flex:0 0 170px; }
+body.edu-study-page.edu-route-VHDDTKD .layer-stage { flex-direction:column; gap:16px; }
+body.edu-study-page.edu-route-VHDDTKD .layer-stage > :first-child { flex-shrink:0; max-width:100%; }
+body.edu-study-page.edu-route-VHDDTKD .onion { width:min(260px,100%); height:auto; aspect-ratio:1; border-width:12px; box-shadow:inset 0 0 0 22px #fb7185,inset 0 0 0 44px #a78bfa,inset 0 0 0 66px #60a5fa; }
+body.edu-study-page.edu-route-VHDDTKD .onion span { max-width:100%; text-align:center; }
+body.edu-study-page.edu-route-VHDDTKD .barstack { min-height:32px; }
+body.edu-study-page.edu-route-VHDDTKD .barstack > span { padding:0; min-width:0; min-height:32px; }
+.edu-data-legend { display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:12px; font-size:16px; line-height:1.65; }
+.edu-data-legend > span { flex:1 1 160px; }
+body.edu-study-page.edu-route-VHDDTKD .circle-stack { width:min(290px,100%); height:auto; aspect-ratio:1; padding:16px; }
+body.edu-study-page.edu-route-VHDDTKD .circle-stack > div { height:auto; min-height:100%; padding:16px; text-align:center; }
+body.edu-study-page.edu-route-VHDDTKD .circle-stack > div > div { height:auto; min-height:100%; padding:12px; font-size:16px; line-height:1.5; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix { grid-template-rows:auto 1fr 1fr auto auto; min-height:0; padding:16px; gap:12px; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix :is(.axis-y,.axis-x) { position:static; font-size:13px; line-height:1.5; letter-spacing:0; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .axis-y.top { grid-column:1 / -1; grid-row:1; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .axis-y.bottom { grid-column:1 / -1; grid-row:4; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .axis-x.left { grid-column:1; grid-row:5; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .axis-x.right { grid-column:2; grid-row:5; text-align:right; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .q { min-height:110px; padding:12px; text-align:center; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .q1 { grid-column:1; grid-row:2; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .q2 { grid-column:2; grid-row:2; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .q3 { grid-column:1; grid-row:3; }
+body.edu-study-page.edu-route-VHDDTKD .culture-matrix .q4 { grid-column:2; grid-row:3; }
 body.edu-study-page.edu-route-STKN :is(.scenario-grid,.workspace-grid) { grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); }
 body.edu-study-page.edu-route-STKN .match-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); }
 body.edu-study-page.edu-route-STKN .match-row, body.edu-study-page.edu-route-STKN .match-row > label { min-width:0; max-width:100%; }
 body.edu-study-page.edu-route-STKN .match-row select { width:100%; min-width:0; }
+body.edu-study-page.edu-route-STKN .reveal-class-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:12px; }
+body.edu-study-page.edu-route-STKN .reveal-class-card { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px; border:1px solid var(--edu-border); border-radius:12px; background:var(--edu-soft); font-size:16px; line-height:1.65; text-align:left; }
+body.edu-study-page.edu-route-STKN .reveal-class-card > span { min-width:0; }
+body.edu-study-page.edu-route-STKN .reveal-class-card > b { flex-shrink:0; }
+/* Keep the original five-column canvas readable inside its local scroll region. */
+body.edu-study-page.edu-route-STKN .bmc-grid { min-width:960px; }
+body.edu-study-page.edu-route-STKN .bmc-cell b { font-size:16px; line-height:1.65; }
 body.edu-study-page.edu-route-STKN .interaction { background:white; color:var(--edu-body); box-shadow:none; border:1px solid var(--edu-border); }
 body.edu-study-page.edu-route-STKN .interaction :is(.micro-note,.interaction-kicker,.interaction-badge) { color:var(--edu-muted); }
 body.edu-study-page.edu-route-STKN .interaction :is(.sort-bank,.drop-zone,.source-prompt-stack,.source-exercise-brief) { background:var(--edu-soft); color:var(--edu-body); border-color:#94a3b8; }
@@ -179,6 +224,7 @@ body.edu-study-page.edu-route-PTBV footer { padding-bottom:6rem; }
   body.edu-study-page.edu-route-STKN .opportunity-ring strong { position:static; transform:none; width:auto; height:auto; grid-column:1 / -1; grid-row:1; border-radius:12px; padding:16px; }
 }
 @media(max-width:800px) {
+  body.edu-study-page.edu-route-STKN .ares-row { grid-template-columns:repeat(2,minmax(0,1fr)); }
   body.edu-study-page.edu-route-STKN .venn { display:grid; grid-template-columns:1fr; gap:12px; transform:none; margin-bottom:0; height:auto; min-height:0; }
   body.edu-study-page.edu-route-STKN .venn .circle { position:static; width:auto; height:auto; min-height:100px; border-radius:16px; padding:20px; transform:none; font-size:16px; }
   body.edu-study-page.edu-route-STKN .wheel { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; width:100%; height:auto; transform:none; margin-bottom:0; background:transparent; }
@@ -210,6 +256,7 @@ body.edu-study-page.edu-route-PTBV footer { padding-bottom:6rem; }
   body.edu-study-page.edu-route-PTBV :is(.goal-grid,.map-cols) { grid-template-columns:minmax(0,1fr); }
   body.edu-study-page.edu-route-STKN :is(.empathy-grid,.opportunity-ring,.wheel) { grid-template-columns:minmax(0,1fr); }
   body.edu-study-page.edu-route-VHDDTKD :is(.concept-map,.dual-continuum) { grid-template-columns:minmax(0,1fr); }
+  body.edu-study-page.edu-route-VHDDTKD .concept-map .concept-center { grid-column:1 / -1; }
   body.edu-practice-page .site-header-row h1 { font-size:16px; }
   body.edu-practice-page .exercise-card .grid-cols-3 { grid-template-columns:minmax(0,1fr); text-align:left; }
   body.edu-practice-page .exercise-card .grid-cols-3 > div { display:flex; align-items:center; justify-content:space-between; gap:12px; }

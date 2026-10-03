@@ -1278,5 +1278,13 @@
     "count": 16,
     "issue": "FZ02-whitespace",
     "reason": "Remove whitespace-only lines introduced by collapsing incomplete illustrations; no visible or academic change."
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "before": "'+formula('Công thức','Te = (t − ai·ti)/(1 − ai) = t + [ai(t−ti)]/(1−ai)','<p class=\"small\">Comparative cases: ai=0 → Te=t; t=ti → Te=t; t&gt;ti → Te&gt;t; t&lt;ti → Te&lt;t; t↑ → Te↑; t↓ → Te↓; ti↑ → Te↓; ti↓ → Te↑.</p>')+'",
+    "after": "<div class=\"formula-line\">Te = (t − ai·ti)/(1 − ai) = t + [ai(t−ti)]/(1−ai)</div><p class=\"small\">Comparative cases: ai=0 → Te=t; t=ti → Te=t; t&gt;ti → Te&gt;t; t&lt;ti → Te&lt;t; t↑ → Te↑; t↓ → Te↓; ti↑ → Te↓; ti↓ → Te↑.</p>",
+    "count": 1,
+    "issue": "FZ02-formula-wrapper",
+    "reason": "Replace a literal template-concatenation fragment visible in ERP teaching content with native formula and paragraph markup. Preserve exact expression and comparative cases."
   }
 ]

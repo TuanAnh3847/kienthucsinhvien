@@ -8,6 +8,28 @@
         const mapLauncher = document.querySelector('.course-map-fab');
         const headerContainer = header?.querySelector('.edu-subject-header > div');
         if (mapLauncher && headerContainer) headerContainer.append(mapLauncher);
+        // Rotate only the flow symbol on phones; relationship labels stay horizontal.
+        document.querySelectorAll('body.edu-route-KTTC .flow-arrow').forEach(arrow => {
+            [...arrow.childNodes].filter(node => node.nodeType===Node.TEXT_NODE && node.textContent.includes('→')).forEach(node => {
+                const symbol = document.createElement('span');
+                symbol.className = 'edu-flow-symbol';
+                symbol.textContent = node.textContent;
+                node.replaceWith(symbol);
+            });
+        });
+        // Keep the source percentages proportional; put labels below narrow segments.
+        document.querySelectorAll('body.edu-route-VHDDTKD .barstack').forEach(bar => {
+            const legend = document.createElement('div');
+            legend.className = 'edu-data-legend';
+            [...bar.children].forEach(segment => {
+                const label = document.createElement('span');
+                label.textContent = segment.textContent;
+                segment.setAttribute('aria-label', segment.textContent);
+                segment.textContent = '';
+                legend.append(label);
+            });
+            bar.after(legend);
+        });
         const updateOffset = () => document.documentElement.style.setProperty('--edu-visible-header', `${Math.max(0,header?.getBoundingClientRect().bottom || 0)}px`);
         window.addEventListener('scroll', updateOffset, {passive:true});
         window.addEventListener('resize', updateOffset);
