@@ -50,6 +50,13 @@ body.edu-practice-page :is(header,nav) .text-green-600 { color:#15803d; font-siz
 body.edu-practice-page :is(.bg-amber-500,.hover\:bg-amber-600:hover) { background-color:#b45309; }
 body.edu-practice-page #practice-content p { overflow-wrap:anywhere; }
 body.edu-study-page.edu-route-TCCN .pill.font-bold.text-teal-700 { flex-shrink:0; white-space:nowrap; overflow-wrap:normal; }
+/* Secondary labels must remain readable on the original pale gradient surfaces. */
+body.edu-study-page.edu-route-KTTC :is(.t0,.t20,.t50,.t100) { color:var(--edu-muted); font-size:13px; line-height:1.5; }
+body.edu-study-page.edu-route-KTQT .eyebrow { color:var(--edu-muted); font-size:13px; line-height:1.5; }
+body.edu-study-page.edu-route-TCCN :is(.kicker,.flash-label,.study-flip-face small,.review-map-node span,.text-slate-500,.text-slate-400,.text-slate-300) { color:var(--edu-muted); }
+body.edu-study-page.edu-route-TCCN :is(.flash-label,.study-flip-face small,.review-map-node span) { font-size:13px; line-height:1.5; }
+body.edu-study-page.edu-route-TCCN .skeleton-cell { color:var(--edu-muted); font-size:16px; line-height:1.65; }
+body.edu-home-page button.text-stone-500 { color:#57534e; font-size:13px; line-height:1.5; }
 @media (max-width:640px) {
   /* A rotated full-width arrow otherwise covers neighboring phone controls. */
   body.edu-study-page.edu-route-NLKT .flow-arrow { width:1.5em; height:1.5em; min-width:0; align-self:center; flex:none; }
