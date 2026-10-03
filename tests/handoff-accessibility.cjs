@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');
 const {open,evidence}=require('./handoff-browser.cjs');
@@ -24,7 +25,7 @@ function contrast(a,b){const lum=s=>{const rgb=s.match(/[\d.]+/g).slice(0,3).map
     assert.match(anchor.tag,/H[1-6]/);assert(anchor.top>=anchor.header+16,'TOC target below visible header');
    }
    const bounds=await p.locator('#edu-header').evaluate(e=>({scroll:e.scrollWidth,width:e.clientWidth}));assert(bounds.scroll<=bounds.width+1,'long fixture header fits');
-   const file=`${route}_${width}_header_keyboard.png`;await p.screenshot({path:path.join(out,file)});
+   const file=`${route}_${width}_header_keyboard.png`;await screenshot(p,{path:path.join(out,file)});
    assert.deepEqual(p.errors,[]);return {route,width,chapters:ids,anchor,header:bounds,online:1234,evidence:'evidence/after/accessibility/'+file};
   }finally{await p.close()}
  });
@@ -59,7 +60,7 @@ function contrast(a,b){const lum=s=>{const rgb=s.match(/[\d.]+/g).slice(0,3).map
    const trigger=p.locator('.course-map-fab');await trigger.focus();await p.keyboard.press('Enter');const modal=p.locator('#course-map-modal');assert(await modal.isVisible());
    const close=p.locator('.map-close');await close.focus();await p.keyboard.press('Shift+Tab');assert(await modal.evaluate(e=>e.contains(document.activeElement)));
    const body=p.locator('.map-card');await body.evaluate(e=>e.scrollTop=e.scrollHeight);assert(await body.evaluate(e=>e.scrollTop+e.clientHeight>=e.scrollHeight-1));
-   const file=`PTBV_modal_${width}x${height}.png`;await p.screenshot({path:path.join(out,file)});await p.keyboard.press('Escape');assert(!await modal.isVisible());assert(await trigger.evaluate(e=>document.activeElement===e));
+   const file=`PTBV_modal_${width}x${height}.png`;await screenshot(p,{path:path.join(out,file)});await p.keyboard.press('Escape');assert(!await modal.isVisible());assert(await trigger.evaluate(e=>document.activeElement===e));
    return {evidence:'evidence/after/accessibility/'+file};
   }finally{await p.close()}
  });

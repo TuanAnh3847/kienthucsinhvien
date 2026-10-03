@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 // Rendered evidence and behavior checks for the nightly UI pass.
 const fs = require('node:fs');
 const path = require('node:path');
@@ -26,7 +27,7 @@ let browser;
    await page.setViewportSize({width,height:({320:740,390:844,375:812,768:1024,1366:900,1440:900})[width]});
    await page.evaluate(()=>{window.scrollTo({top:0,behavior:'instant'});if(window.EduHeader)EduHeader.switchTab(EduHeader.config.defaultTab,{scroll:false,animate:false});});
    await page.waitForTimeout(250);
-   await page.screenshot({path:path.join(out,`${name}-${width}-top.png`)});
+   await screenshot(page,{path:path.join(out,`${name}-${width}-top.png`)});
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),route+' page overflow '+width);
    if(route==='/') {
     item.widths.push({width,cards:await page.locator('.course-card').evaluateAll(es=>es.map(e=>e.offsetHeight))});
@@ -45,13 +46,13 @@ let browser;
    const sticky=await control.evaluate(e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,height:e.offsetHeight}));
    assert(Math.abs(sticky.top)<2,route+' sticky strip or picker must sit at viewport top');
    assert.equal(await page.locator('.site-header-row').evaluate(e=>e.inert),true);
-   await page.screenshot({path:path.join(out,`${name}-${width}-sticky.png`)});
+   await screenshot(page,{path:path.join(out,`${name}-${width}-sticky.png`)});
    const chapters=await page.evaluate(()=>EduHeader.config.chapters.map(ch=>ch.id));
    for(const chapter of chapters) {
     await page.evaluate(id=>EduHeader.switchTab(id,{behavior:'instant',animate:false}),chapter);
     await page.waitForTimeout(80);
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),route+' '+chapter+' overflow '+width);
-    await page.screenshot({path:path.join(out,`${name}-${width}-${chapter}.png`)});
+    await screenshot(page,{path:path.join(out,`${name}-${width}-${chapter}.png`)});
     if(width===1440) {
      const suspect=await page.locator('#'+chapter).evaluate(el=>[...el.querySelectorAll('p,li,h2,h3,h4,summary,td,th,.source-tag,.source-note,.source-line')].map(e=>e.textContent.trim()).filter(t=>/\bslides?\b|\bsource\b|lecturer|canonical|trích xuất|học liệu|CLO\d|\bCO[12]\b|course direction|build pack|blueprint|compiler|renderer|\[cite:|S\d\s*p\.|SB-|CFX-|AMB-|LIM-|trang này|trang không|không tự|không dựng|không infer|không normalize|Theory phase|Practice phase|bài học-bounded/i.test(t)));
      item.leakage.push(...suspect.map(text=>({chapter,text})));
@@ -69,7 +70,7 @@ let browser;
     await first.locator('input:checked').focus();
     await page.keyboard.press('ArrowRight');
     assert.equal(await first.locator('select').inputValue(),await first.locator('input:checked').inputValue());
-    await page.screenshot({path:path.join(out,`${name}-${width}-choices.png`)});
+    await screenshot(page,{path:path.join(out,`${name}-${width}-choices.png`)});
     item.controls.push({width,groups:await page.locator('.edu-choice-group').count(),grids:await page.locator('.edu-compact-activity').count()});
    }
    await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
@@ -98,7 +99,7 @@ let browser;
    for(const width of [1440,375]) {
     await page.setViewportSize({width,height:1000});
     await activity.evaluate(e=>window.scrollTo({top:e.getBoundingClientRect().top+scrollY-90,behavior:'instant'}));
-    await page.screenshot({path:path.join(out,`PTBV-${width}-sorter.png`)});
+    await screenshot(page,{path:path.join(out,`PTBV-${width}-sorter.png`)});
    }
    item.sorter='correct answers, scoring and reset PASS';
   }
@@ -122,7 +123,7 @@ let browser;
     if(type==='flashcard') await target.click();
     await target.evaluate(el=>window.scrollTo({top:el.getBoundingClientRect().top+scrollY-85,behavior:'instant'}));
     await page.waitForTimeout(type==='flashcard'?650:180);
-    await page.screenshot({path:path.join(out,`${name}-component-${type}.png`)});
+    await screenshot(page,{path:path.join(out,`${name}-component-${type}.png`)});
     item.components.push({type,chapter});
    }
   }

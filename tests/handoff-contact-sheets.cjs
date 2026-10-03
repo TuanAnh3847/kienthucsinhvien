@@ -1,3 +1,4 @@
+if(process.env.QA_SCREENSHOTS!=='1'){console.log('Image artifacts disabled by default; set QA_SCREENSHOTS=1 to opt in.');process.exit(0);}
 // Layout survey sheets preserve every pixel of each full-page capture.
 // They supplement full-resolution inspection; they never mark visual review PASS.
 const fs=require('node:fs'),path=require('node:path'),sharp=require('sharp');

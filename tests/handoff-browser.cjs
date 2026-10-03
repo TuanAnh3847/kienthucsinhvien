@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const { chromium } = require('playwright');
@@ -7,6 +8,8 @@ const evidence = path.join(root, 'docs/edu-connect-handoff-2026-10-03/evidence')
 const routes = JSON.parse(fs.readFileSync(path.join(root, 'firebase.json'))).hosting.rewrites.map(r => r.source);
 async function open(browser, route, width, height = 900) {
   const page = await browser.newPage({viewport:{width,height}, reducedMotion:'reduce'});
+  // BrowserContext.newPage ignores options; touch contexts still need the width.
+  await page.setViewportSize({width,height});
   page.errors = [];
   page.on('pageerror', e => page.errors.push(e.message));
   await page.addInitScript(() => { window.__fixtureOptions = {user:{uid:'handoff-fixture',displayName:'Sinh viên có họ và tên rất dài để kiểm tra bố cục',email:'student@example.test'}}; });
@@ -28,7 +31,7 @@ async function baseline() {
       const page = await open(browser,route,width,width===320?740:900);
       if (tab!=='home' && tab!=='overview') await page.evaluate(id=>EduHeader.switchTab(id,{scroll:false,animate:false}),tab);
       const name = `${route.slice(1)||'home'}_${tab}_${width}.png`;
-      await page.screenshot({path:path.join(evidence,'baseline-local',name),fullPage:true});
+      await screenshot(page,{path:path.join(evidence,'baseline-local',name),fullPage:true});
       results.push({route,tab,width,errors:page.errors,evidence:`evidence/baseline-local/${name}`});
       await page.close();
       console.log('BASELINE',route,tab,width);

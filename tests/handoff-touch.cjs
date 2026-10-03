@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');const {open,evidence}=require('./handoff-browser.cjs');
 const routes=['NLKT','KTTC','KTQT','NMLH','KTCTMLN','TCCN','NLTTTC','LTMQT','VHDDTKD','PTBV','STKN','TLUD'].filter(r=>!process.env.TOUCH_ROUTES||process.env.TOUCH_ROUTES.split(',').includes(r));
@@ -12,7 +13,7 @@ const results=previous.filter(r=>!process.env.TOUCH_ROUTES?.split(',').includes(
     const cards=p.locator('#'+id+' .flip-card,#'+id+' .flip-card-local,#'+id+' .study-flip');
     const sizes=await cards.evaluateAll(es=>es.map((e,index)=>({index,height:e.getBoundingClientRect().height})));const longest=[...sizes].sort((a,b)=>b.height-a.height)[0]?.index;
     for(let i=0;i<sizes.length;i++){const card=cards.nth(i),before=await card.getAttribute('class');await card.tap();await p.waitForTimeout(25);assert.notEqual(await card.getAttribute('class'),before,'touch did not flip');
-     if(i===longest){await card.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(700);const file=`${route}_${id}_${width}_back.png`;await card.screenshot({path:path.join(out,file)});row.evidence.push('evidence/after/touch/'+file)}
+     if(i===longest){await card.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(700);const file=`${route}_${id}_${width}_back.png`;await screenshot(card,{path:path.join(out,file)});row.evidence.push('evidence/after/touch/'+file)}
      await card.tap();assert.equal(await card.getAttribute('class'),before);row.cards++;
     }
     const disclosures=p.locator('#'+id+' details > summary');for(let i=0;i<await disclosures.count();i++){const s=disclosures.nth(i),before=await s.evaluate(e=>e.parentElement.open);await s.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(160);await s.tap();assert.notEqual(await s.evaluate(e=>e.parentElement.open),before);await s.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(160);await s.tap();assert.equal(await s.evaluate(e=>e.parentElement.open),before);row.disclosures++}

@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path');
 const {chromium}=require('playwright');
 const fixture=fs.readFileSync(path.join(__dirname,'firebase-fixture.js'),'utf8');
@@ -12,7 +13,7 @@ const fixture=fs.readFileSync(path.join(__dirname,'firebase-fixture.js'),'utf8')
  await p.getByRole('button',{name:'Nộp bài',exact:true}).click();await p.getByRole('button',{name:'Nộp bài',exact:true}).click();
  console.log('NLKT duplicate writes',await p.evaluate(()=>__firebaseTest.writes.filter(w=>w.path==='accountingAttempts').length));
  console.log('NLKT result',await p.locator('#result-box').innerText());
- await p.screenshot({path:path.join(__dirname,'screenshots/round2/before-NLKT-result.png')});
+ await screenshot(p,{path:path.join(__dirname,'screenshots/round2/before-NLKT-result.png')});
  await p.getByRole('button',{name:'Làm lại',exact:true}).click();
  await p.getByRole('button',{name:'← Quay lại danh sách',exact:true}).click();
  console.log('NLKT back tab',await p.locator('.tab-content:visible').getAttribute('id'));
@@ -23,7 +24,7 @@ const fixture=fs.readFileSync(path.join(__dirname,'firebase-fixture.js'),'utf8')
  await p.getByRole('button',{name:'Nộp bài',exact:true}).click();await p.getByRole('button',{name:'Nộp bài',exact:true}).click();
  console.log('TCCN duplicate attempts',await p.evaluate(()=>getAttempts().length));
  console.log('TCCN unanswered label',await p.locator('.question-card').nth(1).innerText());
- await p.screenshot({path:path.join(__dirname,'screenshots/round2/before-TCCN-result.png')});
+ await screenshot(p,{path:path.join(__dirname,'screenshots/round2/before-TCCN-result.png')});
  await p.evaluate(()=>localStorage.setItem('edu_tccn_wrong_ids_v1','{}'));
  const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.reload();
  console.log('TCCN malformed storage errors',errors);

@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright'),{open,evidence}=require('./handoff-browser.cjs');
 const out=path.join(evidence,'after/pyramid');fs.mkdirSync(out,{recursive:true});
@@ -11,7 +12,7 @@ const out=path.join(evidence,'after/pyramid');fs.mkdirSync(out,{recursive:true})
    r.labels=await card.locator('.pyr').evaluateAll(es=>es.map(e=>{const range=document.createRange();range.selectNodeContents(e);const text=range.getBoundingClientRect(),box=e.getBoundingClientRect();return {text:e.textContent.trim(),width:box.width,textWidth:text.width,height:box.height,textHeight:text.height,font:parseFloat(getComputedStyle(e).fontSize)}}));
    assert.equal(r.labels.length,5);assert(r.labels.every(l=>l.width>=Math.min(width-100,6*l.font)&&l.textWidth<=l.width+2&&l.textHeight<=l.height+2&&l.textHeight<=3*l.font*1.65),'labels fit their hierarchy band without letter-by-letter wrapping');
    assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'document fits');
-   await card.scrollIntoViewIfNeeded();const file=`TLUD_pyramid_${width}_${zoom}.png`;await card.screenshot({path:path.join(out,file)});r.evidence='evidence/after/pyramid/'+file;r.pass=true;console.log('PASS',width,zoom);
+   await card.scrollIntoViewIfNeeded();const file=`TLUD_pyramid_${width}_${zoom}.png`;await screenshot(card,{path:path.join(out,file)});r.evidence='evidence/after/pyramid/'+file;r.pass=true;console.log('PASS',width,zoom);
   }catch(e){r.error=e.stack;console.error('FAIL',width,zoom,e.message)}finally{await p.close();results.push(r);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(results,null,2))}
  }
 }finally{await b.close()}if(results.some(r=>!r.pass))process.exitCode=1;})().catch(e=>{console.error(e);process.exitCode=1});

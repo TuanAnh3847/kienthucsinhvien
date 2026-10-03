@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');const {open,evidence}=require('./handoff-browser.cjs');
 const out=path.join(evidence,process.env.ZOOM_DIAGRAMS?'after/diagram-zoom':'after/zoom');fs.mkdirSync(out,{recursive:true});
@@ -25,8 +26,8 @@ const cases=process.env.ZOOM_DIAGRAMS?[['STKN','ch7'],['STKN','ch3'],['VHDDTKD',
    assert(record.scroll_regions.every(r=>r.reached&&r.name));
    const images=[];for(const position of ['top','middle','bottom']){
     await p.evaluate(position=>{const max=document.documentElement.scrollHeight-innerHeight;scrollTo({top:position==='top'?0:position==='middle'?max/2:max,behavior:'instant'})},position);await p.waitForTimeout(60);
-    const file=`${route}_${tab}_${width}_text200_${position}.png`;await p.screenshot({path:path.join(out,file)});images.push('evidence/'+path.relative(evidence,path.join(out,file)).replace(/\\/g,'/'));
+    const file=`${route}_${tab}_${width}_text200_${position}.png`;await screenshot(p,{path:path.join(out,file)});images.push('evidence/'+path.relative(evidence,path.join(out,file)).replace(/\\/g,'/'));
    }record.evidence=images;record.pass=true;console.log('PASS',route,tab,width);
-  }catch(e){record.error=e.stack;record.wide_boxes=await p.evaluate(()=>[...document.querySelectorAll('main *')].filter(e=>e.getClientRects().length&&e.scrollWidth>e.clientWidth+3&&!e.closest('.edu-scroll-region')).map(e=>({tag:e.tagName,class:e.className,scroll:e.scrollWidth,client:e.clientWidth,overflow:getComputedStyle(e).overflowX,text:e.textContent.trim().slice(0,80)})).slice(-30));await p.screenshot({path:path.join(out,`${route}_${tab}_${width}_failed.png`)});console.error('FAIL',route,tab,width,e.message)}finally{await p.close();results.push(record);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(results,null,2))}
+  }catch(e){record.error=e.stack;record.wide_boxes=await p.evaluate(()=>[...document.querySelectorAll('main *')].filter(e=>e.getClientRects().length&&e.scrollWidth>e.clientWidth+3&&!e.closest('.edu-scroll-region')).map(e=>({tag:e.tagName,class:e.className,scroll:e.scrollWidth,client:e.clientWidth,overflow:getComputedStyle(e).overflowX,text:e.textContent.trim().slice(0,80)})).slice(-30));await screenshot(p,{path:path.join(out,`${route}_${tab}_${width}_failed.png`)});console.error('FAIL',route,tab,width,e.message)}finally{await p.close();results.push(record);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(results,null,2))}
  }
 }finally{await b.close()}if(results.some(r=>!r.pass))process.exitCode=1;})().catch(e=>{console.error(e);process.exitCode=1});

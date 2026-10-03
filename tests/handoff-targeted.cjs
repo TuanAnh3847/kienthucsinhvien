@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');
 const {open,evidence}=require('./handoff-browser.cjs');
@@ -18,7 +19,7 @@ async function test(name,fn){try{const data=await fn();results.push({name,pass:t
     const a=shape.children[i].rect,c=shape.children[j].rect;
     assert(!(a.right>c.left+2&&c.right>a.left+2&&a.bottom>c.top+2&&c.bottom>a.top+2),'diagram nodes overlap '+shape.class);
    }
-   const file=`${route.slice(1)}_${tab}_${width}.png`;await p.screenshot({path:path.join(out,file),fullPage:true});
+   const file=`${route.slice(1)}_${tab}_${width}.png`;await screenshot(p,{path:path.join(out,file),fullPage:true});
    return {route,tab,width,shapes,evidence:'evidence/after/targeted/'+file};
   });}finally{await p.close();}
  }
@@ -39,7 +40,7 @@ async function test(name,fn){try{const data=await fn();results.push({name,pass:t
       if(text.height>box.height+3||text.width>box.width+3)errors.push(face.textContent.slice(0,100));
      }c.click();c.click();});return errors;
     });assert.deepEqual(bad,[],'long card face clipping');cards+=await p.locator(selector).count();
-    const file=`${route.slice(1)}_${tab}_${width}_text200.png`;await p.screenshot({path:path.join(out,file),fullPage:true});images.push('evidence/after/targeted/'+file);
+    const file=`${route.slice(1)}_${tab}_${width}_text200.png`;await screenshot(p,{path:path.join(out,file),fullPage:true});images.push('evidence/after/targeted/'+file);
    }
    assert(cards>0,'flashcards exist');assert.deepEqual(p.errors,[]);return {route,width,cards,evidence:images};
   }finally{await p.close();}
@@ -50,7 +51,7 @@ async function test(name,fn){try{const data=await fn();results.push({name,pass:t
    assert(await p.locator('#course-map-modal').isVisible());
    assert(await p.locator('.map-close').evaluate(e=>e===document.activeElement));
    await p.keyboard.press('Tab');assert(await p.locator('#course-map-modal').evaluate(e=>e.contains(document.activeElement)));
-   await p.locator('.map-card').evaluate(e=>e.scrollTop=e.scrollHeight);await p.screenshot({path:path.join(out,'PTBV_landscape_modal.png')});
+   await p.locator('.map-card').evaluate(e=>e.scrollTop=e.scrollHeight);await screenshot(p,{path:path.join(out,'PTBV_landscape_modal.png')});
    await p.keyboard.press('Escape');assert(!await p.locator('#course-map-modal').isVisible());assert(await button.evaluate(e=>e===document.activeElement));
    return {evidence:'evidence/after/targeted/PTBV_landscape_modal.png'};
   }finally{await p.close();}
@@ -78,7 +79,7 @@ async function test(name,fn){try{const data=await fn();results.push({name,pass:t
    });
    // The existing regression covers each page-owned calculator; this records notation as rendered.
    assert(!/\$W\$|\\rightarrow/.test(await p.locator('#ch2').innerText()));
-   await p.screenshot({path:path.join(out,'KTCT_ch2_390_math.png'),fullPage:true});
+   await screenshot(p,{path:path.join(out,'KTCT_ch2_390_math.png'),fullPage:true});
    return {outputs,evidence:'evidence/after/targeted/KTCT_ch2_390_math.png'};
   }finally{await p.close();}
  });

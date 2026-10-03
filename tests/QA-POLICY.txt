@@ -1,0 +1,19 @@
+Independent review R04 — QA image capture is disabled by default.
+
+All layout, font, grading, navigation, overflow and preservation assertions
+remain enabled. qa-screenshot.cjs and handoff-capture-page.cjs only capture
+images when QA_SCREENSHOTS=1. Image-only contact/gallery tools skip by default.
+Legacy runners may retain historical PNG reference fields in their JSON;
+those references are image artifacts only when QA_SCREENSHOTS=1. They are
+not evidence that a default run created or visually inspected any image.
+
+New review runners write measured JSON, with source commit and explicit image
+mode, in docs/edu-connect-handoff-2026-10-03/independent-review. Set RENDER_OUTPUT
+and RUNBOOK_OUTPUT to that review folder to keep historical handoff evidence.
+
+reading-font-gate.cjs selects paragraphs, chapter objectives, explicit notes
+and semantic label classes in the active reading region. Roles do not depend
+on computed size. Prose requires >=16px and line-height 1.65–1.75; supporting
+notes >=15px and line-height >=1.65; labels/metadata >=13px and >=1.5. Data-cell
+and SVG text is explicitly excluded and remains subject to numeric, diagram
+and local-scroll checks. Unknown paragraph text defaults to prose.

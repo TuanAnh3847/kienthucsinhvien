@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -154,7 +155,7 @@ async function checkLayout(page, label) { const value = await layout(page); asse
             await chooseChapter(page,options[0]);
             await page.waitForTimeout(500);
             await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
-            await page.screenshot({path:path.join(__dirname,'screenshots',file.replace('.html','')+'-mobile.png')});
+            await screenshot(page,{path:path.join(__dirname,'screenshots',file.replace('.html','')+'-mobile.png')});
         } finally { await page.close(); }
     });
     await test('Accounting theory choices respond and classification works with keyboard', async () => {

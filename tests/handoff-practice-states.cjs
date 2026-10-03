@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');
 const {open,root,evidence}=require('./handoff-browser.cjs');
@@ -65,7 +66,7 @@ async function openSet(page,row){
      assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'practice page overflow');item.tests.open_and_long_text='AUTOMATED_LAYOUT_PASS_VISUAL_PENDING';
      assert.deepEqual(p.errors,[]);item.automated_status='PASS';
      if(row===group[0]||row.kind==='GUIDED_CASE'||row.set_id==='exam-final-mix'){
-      const image=row.state_test_id+'.png';await p.screenshot({path:path.join(out,image),fullPage:true});item.evidence='evidence/after/practice-states/'+image;
+      const image=row.state_test_id+'.png';await screenshot(p,{path:path.join(out,image),fullPage:true});item.evidence='evidence/after/practice-states/'+image;
      }else item.evidence='evidence/after/practice-states/results.json#'+row.state_test_id;
     }catch(error){item.automated_status='FAIL';item.errors.push(error.message);console.error('FAIL',row.state_test_id,error.message);}
     results.push(item);console.log('STATE',row.state_test_id,item.automated_status);

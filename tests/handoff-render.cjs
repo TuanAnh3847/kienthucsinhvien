@@ -3,9 +3,11 @@ const {chromium}=require('playwright');
 const {open,root,evidence}=require('./handoff-browser.cjs');
 const {readCSV}=require('./csv-records.cjs');
 const {capture}=require('./handoff-capture-page.cjs');
+const {measureReadingFonts}=require('./reading-font-gate.cjs');
 const {createHash}=require('node:crypto');
+const sourceCommit=require('node:child_process').execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',windowsHide:true}).trim();
 const rows=readCSV(path.join(root,'docs/edu-connect-handoff-2026-10-03/checklists/RENDER-COVERAGE-416.csv'));
-const output=path.join(evidence,'after/render');fs.mkdirSync(output,{recursive:true});
+const output=process.env.RENDER_OUTPUT ? path.resolve(root,process.env.RENDER_OUTPUT) : path.join(evidence,'after/render');fs.mkdirSync(output,{recursive:true});
 const shard=process.env.RENDER_SHARD===undefined?null:+process.env.RENDER_SHARD,shards=+(process.env.RENDER_SHARDS||2);
 const resultsFile=path.join(output,shard===null?'results.json':`results-shard-${shard}.json`);
 const old=process.env.RENDER_FILTER && fs.existsSync(path.join(output,'results.json')) ? JSON.parse(fs.readFileSync(path.join(output,'results.json'),'utf8')) : null;
@@ -15,7 +17,7 @@ const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.t
 (async()=>{
  const b=await chromium.launch({channel:'msedge',headless:true});
  try{
-  // Reuse one page per route/viewport; every configured state still gets a capture.
+  // Reuse one page per route/viewport; every configured state runs the gates.
   const groups=new Map();for(const row of rows){const key=row.route+'@'+row.width;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(row);}
   let groupIndex=0;for(const group of groups.values()){
    if(shard!==null&&groupIndex++%shards!==shard)continue;
@@ -62,6 +64,7 @@ const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.t
       return {width:innerWidth,documentWidth:document.documentElement.scrollWidth,height:section.scrollHeight,tiny,clipped,smallButtons,splitNumbers,duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),heading:section.querySelector('h2')?.textContent.trim()};
      });
      await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+     metrics.fonts=await p.locator(section).evaluate(measureReadingFonts);
      const screenshot=row.coverage_id+'.png';
      const captured=await capture(p,path.join(output,screenshot),+row.width);
      const failures=[];
@@ -69,15 +72,16 @@ const sourceHashes=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.html$/.t
      if(metrics.clipped.length)failures.push('flashcard text bounds exceed face');
      if(metrics.duplicateIds.length)failures.push('duplicate IDs');
      if(metrics.splitNumbers.length)failures.push('numeric table token split across lines');
-     if(row.kind!=='HOME' && metrics.smallButtons.length)failures.push('buttons below 44px');
+     if(metrics.smallButtons.length)failures.push('buttons below 44px');
+     if(metrics.fonts.failures.length)failures.push('reading font/line-height below role requirements');
      if(p.errors.length)failures.push('runtime errors');
      if(/\$\\(?:to|rightarrow|times)|\$[Wm]\$|�|â€|'\+formula\(/.test(text))failures.push('raw notation or broken encoding');
-     results.push({coverage_id:row.coverage_id,route:row.route,state:row.state,width:+row.width,height:+row.height,tested_source_hashes:sourceHashes,automated_status:failures.length?'FAIL':'PASS',full_body_visual_review:'PENDING',failures,metrics,interactions,capture:captured,errors:[...p.errors],evidence:`evidence/after/render/${screenshot}`});
+     results.push({coverage_id:row.coverage_id,route:row.route,state:row.state,width:+row.width,height:+row.height,tested_source_hashes:sourceHashes,automated_status:failures.length?'FAIL':'PASS',full_body_visual_review:process.env.QA_SCREENSHOTS==='1'?'PENDING':'NOT_REQUESTED',failures,metrics,interactions,capture:captured,errors:[...p.errors],evidence:process.env.QA_SCREENSHOTS==='1'?path.relative(root,path.join(output,screenshot)):null});
      console.log([failures.length?'FAIL':'RENDER',row.coverage_id,failures.join(';'),metrics.tiny.length?'small prose:'+metrics.tiny.length:''].filter(Boolean).join(' '));
      await p.locator(section).evaluate(section=>section.querySelectorAll('details').forEach(d=>d.open=false));
     }
    }finally{await p.close();}
-   fs.writeFileSync(resultsFile,JSON.stringify({browser:b.version(),source_hashes:sourceHashes,source_provenance:'Each row records the exact source hashes captured; filtered reruns retain earlier provenance for unaffected rows.',shard,shards,results},null,2));
+   fs.writeFileSync(resultsFile,JSON.stringify({browser:b.version(),source_commit:sourceCommit,screenshots_enabled:process.env.QA_SCREENSHOTS==='1',source_hashes:sourceHashes,source_provenance:'Each row records the exact source hashes measured; filtered reruns retain earlier provenance for unaffected rows.',shard,shards,results},null,2));
   }
  }finally{await b.close();}
  if(results.some(r=>r.failures.length))process.exitCode=1;

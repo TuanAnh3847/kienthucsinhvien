@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path');
 const {chromium}=require('playwright');
 const {open,evidence}=require('./handoff-browser.cjs');
@@ -24,8 +25,8 @@ const {open,evidence}=require('./handoff-browser.cjs');
     }return {width:document.documentElement.scrollWidth,bad};
    })));
   }
-  await p.screenshot({path:path.join(evidence,'after',`${route.slice(1)}_ch1_320_probe.png`),fullPage:true});
-  if(route==='/STKN') {await p.evaluate(()=>EduHeader.switchTab('ch3',{scroll:false,animate:false}));await p.screenshot({path:path.join(evidence,'after','STKN_ch3_320_probe.png'),fullPage:true});}
+  await screenshot(p,{path:path.join(evidence,'after',`${route.slice(1)}_ch1_320_probe.png`),fullPage:true});
+  if(route==='/STKN') {await p.evaluate(()=>EduHeader.switchTab('ch3',{scroll:false,animate:false}));await screenshot(p,{path:path.join(evidence,'after','STKN_ch3_320_probe.png'),fullPage:true});}
   await p.close();
  }}finally{await b.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

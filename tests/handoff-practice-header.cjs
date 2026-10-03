@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');const {open,evidence}=require('./handoff-browser.cjs');
 const out=path.join(evidence,'after/practice-header');fs.mkdirSync(out,{recursive:true});const results=[];
@@ -11,7 +12,7 @@ async function test(name,fn){try{results.push({name,pass:true,...await fn()});co
    else{await p.locator('#nav-menu button').last().focus();await p.keyboard.press('Enter');}
    const last=await picker.locator('option').last().getAttribute('value');assert.equal(await picker.inputValue(),last);assert(await p.locator('#'+last).isVisible());
    assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-   const file=route.slice(1)+'_'+width+'.png';await p.screenshot({path:path.join(out,file)});return {width,last,evidence:'evidence/after/practice-header/'+file};
+   const file=route.slice(1)+'_'+width+'.png';await screenshot(p,{path:path.join(out,file)});return {width,last,evidence:'evidence/after/practice-header/'+file};
   });}finally{await p.close()}
  }
  for(const width of [390,1366])await test('TCCN real interval expiry '+width,async()=>{

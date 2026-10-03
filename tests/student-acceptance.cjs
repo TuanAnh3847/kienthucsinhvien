@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 // End-to-end UI journey: begin at home, study, practice, review, retry, return.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');
@@ -11,12 +12,12 @@ const results=[];
  await p.addInitScript(()=>window.__fixtureOptions={user:{uid:'test-user',email:'student@example.test',displayName:'Sinh viên'}});
  await p.route(/https:\/\/www\.gstatic\.com\/firebasejs\/.+\.js/,r=>r.fulfill({contentType:'text/javascript',body:r.request().url().includes('firebase-app-compat')?fixture:''}));
  try{
- await p.goto('http://127.0.0.1:4173/',{waitUntil:'load'});await p.waitForTimeout(550);await p.screenshot({path:path.join(out,`final-home-${width}.png`)});
+ await p.goto('http://127.0.0.1:4173/',{waitUntil:'load'});await p.waitForTimeout(550);await screenshot(p,{path:path.join(out,`final-home-${width}.png`)});
  for(const subject of ['NLKT','TCCN']){
-  await p.locator(`a[href="/${subject}"]`).click();await p.waitForTimeout(550);await p.screenshot({path:path.join(out,`final-${subject}-${width}-top.png`)});
+  await p.locator(`a[href="/${subject}"]`).click();await p.waitForTimeout(550);await screenshot(p,{path:path.join(out,`final-${subject}-${width}-top.png`)});
   const ids=await p.evaluate(()=>EduHeader.config.chapters.map(ch=>ch.id));await chooseChapter(p,ids[1]);await p.mouse.wheel(0,900);await p.waitForTimeout(550);
   assert(await (await visibleChapterControl(p)).evaluate(el=>Math.abs(el.getBoundingClientRect().top)<2));
-  await p.screenshot({path:path.join(out,`final-${subject}-${width}-sticky.png`)});
+  await screenshot(p,{path:path.join(out,`final-${subject}-${width}-sticky.png`)});
   await chooseChapter(p,ids[2]);await p.waitForTimeout(600);
   assert(await p.locator('.tab-content:visible > header').evaluate(el=>el.getBoundingClientRect().top>=Math.max(0,document.getElementById('edu-header').getBoundingClientRect().bottom)-2),'chapter title not covered after switching deeply scrolled');
   await chooseChapter(p,ids[0]);await p.waitForTimeout(500);
@@ -38,13 +39,13 @@ const results=[];
    await p.getByRole('button',{name:'Nộp bài',exact:true}).click();
   }
   await p.waitForTimeout(650);assert(await p.locator('#result-box').isVisible());assert.match(await p.locator('#result-box').innerText(),/% correct/);
-  await p.screenshot({path:path.join(out,`final-${subject}-${width}-result.png`)});
-  await p.locator('#question-list > div').first().scrollIntoViewIfNeeded();await p.waitForTimeout(300);await p.screenshot({path:path.join(out,`final-${subject}-${width}-explanation.png`)});
+  await screenshot(p,{path:path.join(out,`final-${subject}-${width}-result.png`)});
+  await p.locator('#question-list > div').first().scrollIntoViewIfNeeded();await p.waitForTimeout(300);await screenshot(p,{path:path.join(out,`final-${subject}-${width}-explanation.png`)});
   await p.getByRole('button',{name:'Làm lại',exact:true}).click();assert(!await p.locator('#result-box').isVisible());
   await p.waitForFunction(()=>{const el=document.getElementById('practice-panel');return Math.abs(el.getBoundingClientRect().top-parseFloat(getComputedStyle(el).scrollMarginTop))<3},{},{timeout:3000});
   const retryPosition=await p.locator('#practice-panel').evaluate(el=>({top:el.getBoundingClientRect().top,margin:getComputedStyle(el).scrollMarginTop,padding:getComputedStyle(document.documentElement).scrollPaddingTop,scroll:scrollY}));
   assert(Math.abs(retryPosition.top-parseFloat(retryPosition.margin))<3,subject+' '+width+' retry position '+JSON.stringify(retryPosition));
-  await p.screenshot({path:path.join(out,`final-${subject}-${width}-practice.png`)});
+  await screenshot(p,{path:path.join(out,`final-${subject}-${width}-practice.png`)});
   assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await p.locator('.practice-theory-link a').click();assert.equal(new URL(p.url()).pathname,'/'+subject);
   await p.getByRole('link',{name:'Về trang chủ Edu Connect'}).click();
@@ -66,7 +67,7 @@ const results=[];
   assert(await p.locator('#result-box').isVisible());
   assert((await p.locator('#q-'+q.id).innerText()).includes(q.explanation));
   await p.getByRole('button',{name:'Làm lại',exact:true}).click();assert(!await p.locator('#result-box').isVisible());
-  await p.screenshot({path:path.join(out,`final-${subject}-${width}-pilot.png`)});
+  await screenshot(p,{path:path.join(out,`final-${subject}-${width}-pilot.png`)});
   await p.locator('.practice-theory-link a').click();assert.equal(new URL(p.url()).pathname,'/'+subject);
   await p.getByRole('link',{name:'Về trang chủ Edu Connect'}).click();
  }

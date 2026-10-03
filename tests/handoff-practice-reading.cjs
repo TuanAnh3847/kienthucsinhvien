@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 // Inspect all question boxes and capture the longest actual question/graded explanation per set.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');const {open,evidence}=require('./handoff-browser.cjs');const {readCSV}=require('./csv-records.cjs');
@@ -20,14 +21,14 @@ async function boxes(p){return p.locator('[id^="q-"]').evaluateAll(es=>es.map(e=
    },{id:r.set_id,finance});await p.waitForTimeout(60);
    if(r.kind==='GUIDED_CASE'){
     await p.getByRole('button',{name:'Xem / Ẩn lời giải',exact:true}).click();
-    const file=r.state_test_id+'_solution.png';await p.locator('#practice-panel').screenshot({path:path.join(out,file)});row.evidence.push('evidence/after/practice-reading/'+file);
+    const file=r.state_test_id+'_solution.png';await screenshot(p.locator('#practice-panel'),{path:path.join(out,file)});row.evidence.push('evidence/after/practice-reading/'+file);
    }else{
     row.question_ids=await p.evaluate(finance=>(finance?currentSession:currentSet).questions.map(q=>q.id),finance);
     for(const state of ['open','graded']){
      if(state==='graded')await p.evaluate(finance=>{const qs=(finance?currentSession:currentSet).questions;qs.forEach((q,i)=>selectAnswer(q.id,i===0?q.answer:(q.answer+1)%q.options.length));if(finance){currentSession.showInstant?finishStudySession():submitSession(false)}else submitQuiz()},finance);
      await p.waitForTimeout(60);const all=await boxes(p);row[state+'_boxes']=all;assert.equal(all.length,row.question_ids.length);assert(all.every(q=>!q.bad.length),'question text exceeds card');
      const longest=[...all].sort((a,b)=>b.height-a.height)[0],file=r.state_test_id+'_'+state+'.png';
-     await p.locator('#'+longest.id).screenshot({path:path.join(out,file)});row.evidence.push('evidence/after/practice-reading/'+file);row[state+'_longest']=longest.id;
+     await screenshot(p.locator('#'+longest.id),{path:path.join(out,file)});row.evidence.push('evidence/after/practice-reading/'+file);row[state+'_longest']=longest.id;
     }
    }assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));assert.deepEqual(p.errors,[]);row.pass=true;console.log('PASS',r.state_test_id);
    }catch(e){row.error=e.stack;console.error('FAIL',r.state_test_id,e.message)}results.push(row);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(results,null,2));

@@ -1,3 +1,4 @@
+const {screenshot}=require('./qa-screenshot.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');const {open,evidence}=require('./handoff-browser.cjs');
 const {readCSV}=require('./csv-records.cjs');
@@ -20,7 +21,7 @@ async function activate(p,button,method,key='Enter'){
    await activate(p,p.getByRole('button',{name:/^Nộp bài/}).first(),method);
    assert(await p.evaluate(finance=>finance?sessionSubmitted:lastScore!==null,finance));
    assert(await p.locator('[id^="q-"] button').evaluateAll(es=>es.every(e=>e.disabled)));
-   for(let i=0;i<2;i++){const file=`${route.slice(1)}_${width}_${method}_${i===0?'correct':'wrong'}.png`;await p.locator('#q-'+qs[i].id).screenshot({path:path.join(out,file)});r.evidence.push('evidence/after/practice-inputs/'+file)}
+   for(let i=0;i<2;i++){const file=`${route.slice(1)}_${width}_${method}_${i===0?'correct':'wrong'}.png`;await screenshot(p.locator('#q-'+qs[i].id),{path:path.join(out,file)});r.evidence.push('evidence/after/practice-inputs/'+file)}
    r.contrast=await p.evaluate(require('./handoff-contrast-measure.cjs'));assert.deepEqual(r.contrast.failures,[],'graded state contrast');
    await activate(p,p.getByRole('button',{name:/^Làm lại/}).first(),method);
    assert(await p.evaluate(finance=>finance?!sessionSubmitted:lastScore===null,finance));assert.equal(await p.locator('[id^="q-"] button[aria-pressed="true"]').count(),0);

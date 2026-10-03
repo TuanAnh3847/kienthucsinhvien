@@ -1,3 +1,4 @@
+if(process.env.QA_SCREENSHOTS!=='1'){console.log('Image artifacts disabled by default; set QA_SCREENSHOTS=1 to opt in.');process.exit(0);}
 const fs=require('node:fs'),path=require('node:path'),sharp=require('sharp');
 const {chromium}=require('playwright');const {open,evidence}=require('./handoff-browser.cjs');
 const dir=path.join(evidence,'after/render'),file=path.join(dir,'results.json');

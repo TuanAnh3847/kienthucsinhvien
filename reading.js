@@ -36,6 +36,43 @@
         updateOffset();
 
         if (document.body.classList.contains('edu-study-page')) {
+            let navigation = 0;
+            const nextLayout = () => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+            async function navigateHeading(heading) {
+                const section = heading.closest('main .tab-content');
+                if (!section || !window.EduHeader) return;
+                const current = ++navigation;
+                if (window.EduHeader.activeTab !== section.id) {
+                    window.EduHeader.switchTab(section.id, {scroll:false, animate:false});
+                }
+                // Open every enclosing disclosure, including nested source examples.
+                for (let parent = heading.parentElement; parent && parent !== section; parent = parent.parentElement) {
+                    if (parent.tagName === 'DETAILS') parent.open = true;
+                }
+                await document.fonts?.ready;
+                await nextLayout();
+                if (current !== navigation || window.EduHeader.activeTab !== section.id) return;
+                updateOffset();
+                heading.scrollIntoView({block:'start', behavior:'instant'});
+                await nextLayout();
+                if (current !== navigation || window.EduHeader.activeTab !== section.id) return;
+                // Sticky header bounds can change after the first scroll.
+                updateOffset();
+                const clearance = Math.max(0, header?.getBoundingClientRect().bottom || 0) + 24;
+                window.scrollBy({top:heading.getBoundingClientRect().top - clearance, behavior:'instant'});
+                heading.tabIndex = -1;
+                heading.focus({preventScroll:true});
+            }
+            function restoreFragment() {
+                ++navigation;
+                let id;
+                try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+                const heading = id ? document.getElementById(id) : null;
+                // Only real headings in a configured reading section are destinations.
+                if (heading?.matches('h1,h2,h3,h4,h5,h6') && heading.closest('main .tab-content')) {
+                    void navigateHeading(heading);
+                }
+            }
             document.querySelectorAll('main .tab-content').forEach(section => {
                 const headings = [...section.querySelectorAll('h3')].filter(h => h.textContent.trim() && !h.closest('.flip-card,.flip-card-local'));
                 if (headings.length < 3) return;
@@ -53,15 +90,12 @@
                     heading.classList.add('edu-reading-anchor');
                     const li = document.createElement('li');
                     const link = document.createElement('a');
-                    link.href = '#' + heading.id;
+                    link.href = '#' + encodeURIComponent(heading.id);
                     link.textContent = heading.textContent.trim();
                     link.addEventListener('click', event => {
                         event.preventDefault();
-                        updateOffset();
-                        heading.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
-                        heading.tabIndex = -1;
-                        heading.focus({preventScroll:true});
-                        history.replaceState(null,'','#'+heading.id);
+                        history.replaceState(null,'','#'+encodeURIComponent(heading.id));
+                        void navigateHeading(heading);
                     });
                     li.append(link); list.append(li);
                 });
@@ -69,6 +103,9 @@
                 const opening = section.querySelector(':scope > .chapter-opening,:scope > h2,:scope > header');
                 if (opening) opening.after(toc); else section.prepend(toc);
             });
+            window.addEventListener('hashchange', restoreFragment);
+            if (window.EduHeader) restoreFragment();
+            else window.addEventListener('edu:headerready', restoreFragment, {once:true});
         }
 
         // Keep the three-column operant comparison intact in its own scroll region.

@@ -1,5 +1,6 @@
 const sharp=require('sharp');
 async function capture(page,file,width){
+ if(process.env.QA_SCREENSHOTS!=='1')return {method:'disabled by default',screenshots_enabled:false};
  const height=await page.evaluate(()=>document.documentElement.scrollHeight);
  if(height<=8000){await page.screenshot({path:file,fullPage:true});return {method:'full page below 8000px',height}}
  const tiles=[],steps=[];let end=0;

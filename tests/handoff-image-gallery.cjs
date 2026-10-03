@@ -1,3 +1,4 @@
+if(process.env.QA_SCREENSHOTS!=='1'){console.log('Image artifacts disabled by default; set QA_SCREENSHOTS=1 to opt in.');process.exit(0);}
 // Build labeled survey sheets while retaining the original evidence images.
 const fs=require('node:fs'),path=require('node:path'),sharp=require('sharp');
 const folder=path.resolve(process.argv[2]),out=path.join(folder,'gallery');fs.mkdirSync(out,{recursive:true});
