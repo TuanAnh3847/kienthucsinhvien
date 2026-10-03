@@ -1,0 +1,74 @@
+[
+  {
+    "route": "/KTTC",
+    "chapters": 7,
+    "repeatedActions": 8,
+    "pass": true
+  },
+  {
+    "route": "/KTQT",
+    "chapters": 7,
+    "repeatedActions": 18,
+    "pass": true
+  },
+  {
+    "route": "/KTCTMLN",
+    "chapters": 6,
+    "repeatedActions": 4,
+    "pass": true
+  },
+  {
+    "route": "/LTMQT",
+    "chapters": 5,
+    "repeatedActions": 56,
+    "pass": true
+  },
+  {
+    "route": "/NLKT",
+    "chapters": 8,
+    "repeatedActions": 42,
+    "pass": true
+  },
+  {
+    "route": "/NLTTTC",
+    "chapters": 7,
+    "repeatedActions": 26,
+    "pass": true
+  },
+  {
+    "route": "/NMLH",
+    "chapters": 7,
+    "repeatedActions": 0,
+    "pass": true
+  },
+  {
+    "route": "/PTBV",
+    "chapters": 6,
+    "repeatedActions": 36,
+    "pass": true
+  },
+  {
+    "route": "/STKN",
+    "chapters": 8,
+    "repeatedActions": 32,
+    "pass": true
+  },
+  {
+    "route": "/TCCN",
+    "chapters": 7,
+    "repeatedActions": 42,
+    "pass": true
+  },
+  {
+    "route": "/TLUD",
+    "chapters": 8,
+    "repeatedActions": 14,
+    "pass": true
+  },
+  {
+    "route": "/VHDDTKD",
+    "chapters": 6,
+    "repeatedActions": 24,
+    "pass": true
+  }
+]

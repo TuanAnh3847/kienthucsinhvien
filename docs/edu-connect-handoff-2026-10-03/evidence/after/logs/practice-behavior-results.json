@@ -1,0 +1,94 @@
+[
+  {
+    "name": "NguyenLyKeToan-LuyenDe: blank/zero, duplicate submit, locked answers, explanations, retry and blocked storage",
+    "pass": true
+  },
+  {
+    "name": "KTQT-LuyenDe: blank/zero, duplicate submit, locked answers, explanations, retry and blocked storage",
+    "pass": true
+  },
+  {
+    "name": "NhapMonLuatHoc-LuyenDe: blank/zero, duplicate submit, locked answers, explanations, retry and blocked storage",
+    "pass": true
+  },
+  {
+    "name": "NLTTTC-LuyenDe: blank/zero, duplicate submit, locked answers, explanations, retry and blocked storage",
+    "pass": true
+  },
+  {
+    "name": "LTMQT-LuyenDe: blank/zero, duplicate submit, locked answers, explanations, retry and blocked storage",
+    "pass": true
+  },
+  {
+    "name": "Accounting: wrong/change/submit twice, lock, reset, return category",
+    "pass": true
+  },
+  {
+    "name": "Accounting: every MCQ key maps to full score and one saved attempt",
+    "pass": true
+  },
+  {
+    "name": "Accounting: duplicate question IDs rejected in incoming sets",
+    "pass": true
+  },
+  {
+    "name": "Finance: exam change answer, submit twice, lock, unanswered, retake",
+    "pass": true
+  },
+  {
+    "name": "Finance: study first-answer lock and final summary are stable",
+    "pass": true
+  },
+  {
+    "name": "Finance: clock catches elapsed time and submits once",
+    "pass": true
+  },
+  {
+    "name": "Finance: malformed stored values do not break practice",
+    "pass": true
+  },
+  {
+    "name": "Finance: storage unavailable still allows scoring and retry",
+    "pass": true
+  },
+  {
+    "name": "Finance: all chapter banks and randomized sets have unique questions and accurate keys",
+    "pass": true
+  },
+  {
+    "name": "KTQT: wrong/change/submit twice, lock, reset, return category",
+    "pass": true
+  },
+  {
+    "name": "KTQT: every MCQ key maps to full score",
+    "pass": true
+  },
+  {
+    "name": "NMLH: wrong/change/submit twice, lock, reset, return category",
+    "pass": true
+  },
+  {
+    "name": "NMLH: every MCQ key maps to full score",
+    "pass": true
+  },
+  {
+    "name": "NLTTTC: wrong/change/submit twice, lock, reset, return category",
+    "pass": true
+  },
+  {
+    "name": "NLTTTC: every MCQ key maps to full score",
+    "pass": true
+  },
+  {
+    "name": "LTMQT: wrong/change/submit twice, lock, reset, return category",
+    "pass": true
+  },
+  {
+    "name": "LTMQT: every MCQ key maps to full score",
+    "pass": true
+  },
+  {
+    "name": "Practice routes, theory links and six viewport widths",
+    "pass": true
+  }
+]

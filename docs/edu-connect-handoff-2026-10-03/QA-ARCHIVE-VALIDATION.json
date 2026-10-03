@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "archive": "EDU-CONNECT-QA-2026-10-03.zip",
+  "members": 2100,
+  "bytes": 824069958,
+  "sha256": "de434f7356c96a8d9280eec367abb152fe46d10878eb5af7e6b4c812c399cdcf",
+  "all_member_hashes_verified": true,
+  "mandatory_gates": "PASS"
+}

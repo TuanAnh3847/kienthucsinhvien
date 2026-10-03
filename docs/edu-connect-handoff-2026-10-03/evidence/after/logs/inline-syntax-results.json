@@ -1,0 +1,3201 @@
+[
+  {
+    "file": "admin.html",
+    "element": 15,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "admin.html",
+    "element": 20,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "admin.html",
+    "element": 24,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "admin.html",
+    "element": 26,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "index.html",
+    "element": 46,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "index.html",
+    "element": 52,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "index.html",
+    "element": 80,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "index.html",
+    "element": 81,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "index.html",
+    "element": 84,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 24,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 40,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 43,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 135,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 148,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 277,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 397,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 398,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 399,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 400,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 401,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 414,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 424,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 426,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 428,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 430,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 432,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 914,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 915,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 916,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 921,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 927,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 933,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 939,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 945,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 951,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 957,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 963,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1009,
+    "kind": "oninput",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1019,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1021,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1036,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1045,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1058,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1063,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1290,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1296,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1302,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1308,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1314,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1320,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1362,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1375,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1380,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1381,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1382,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1383,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1409,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1426,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1605,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1687,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1693,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1699,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1705,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1711,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1717,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1723,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1729,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1783,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1817,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1826,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 1952,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2100,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2106,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2112,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2118,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2124,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2130,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2234,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2304,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2343,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2344,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2345,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2346,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2365,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2406,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2412,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2418,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2424,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2430,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2436,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2609,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2650,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2660,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2700,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2708,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2966,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2972,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2978,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2984,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2990,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 2996,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 3002,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 3008,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 3284,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 3285,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KE_TOAN_TAI_CHINH.html",
+    "element": 3286,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "element": 23,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "element": 38,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "element": 41,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KINH_TE_QUOC_TE.html",
+    "element": 2268,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 31,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 47,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 54,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 54,
+    "kind": "onmouseover",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 54,
+    "kind": "onmouseout",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 247,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 270,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 368,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KinhTeChinhTriMacLeNin.html",
+    "element": 526,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 40,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 44,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 45,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 46,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 48,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 63,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 64,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 93,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "KTQT-LuyenDe.html",
+    "element": 102,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 40,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 44,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 45,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 46,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 48,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 63,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 64,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 93,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LTMQT-LuyenDe.html",
+    "element": 102,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "element": 24,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "element": 42,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+    "element": 2623,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 24,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 42,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 219,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 220,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 286,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 463,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 464,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 465,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 466,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 467,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 504,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 505,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 592,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 593,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 594,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 604,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 630,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 635,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 636,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 726,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 846,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 898,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 973,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 983,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1049,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1064,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1082,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1173,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1174,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1199,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1269,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1377,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1378,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1379,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1526,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1554,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1572,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1581,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1582,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1593,
+    "kind": "oninput",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1594,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1698,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_KE_TOAN.html",
+    "element": 1699,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 24,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 42,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 151,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 152,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 248,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 249,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 318,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 319,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 413,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 414,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 678,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 679,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 721,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 894,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 895,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 967,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1183,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1184,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1263,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1499,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1500,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1540,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1688,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1713,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1817,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 1932,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2066,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2253,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2256,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2259,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2262,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2265,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2268,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2899,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+    "element": 2900,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 40,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 44,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 45,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 46,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 47,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 49,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 65,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 66,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 104,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NguyenLyKeToan-LuyenDe.html",
+    "element": 113,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 40,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 44,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 45,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 46,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 48,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 63,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 64,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 93,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc-LuyenDe.html",
+    "element": 102,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc.html",
+    "element": 30,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc.html",
+    "element": 46,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc.html",
+    "element": 53,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc.html",
+    "element": 53,
+    "kind": "onmouseover",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NhapMonLuatHoc.html",
+    "element": 53,
+    "kind": "onmouseout",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 40,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 44,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 45,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 46,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 48,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 63,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 64,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 93,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "NLTTTC-LuyenDe.html",
+    "element": 102,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 24,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 42,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 116,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 328,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 329,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 465,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 466,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 496,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 503,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 510,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 517,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 524,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 531,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 538,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 545,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 628,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 629,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 630,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 631,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 632,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 633,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 635,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 636,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 724,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 725,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 770,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 771,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 789,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 796,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 803,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 810,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 817,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 824,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 831,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1219,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1220,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1318,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1319,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1496,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1497,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1505,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1506,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1507,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1508,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1509,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1510,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1534,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1541,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1548,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1555,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1562,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1569,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1576,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1583,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1590,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1597,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1861,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1862,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1867,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1868,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1873,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1874,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1879,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1880,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1882,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 1883,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2000,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2001,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2058,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2059,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2068,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2069,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2070,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2071,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2095,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2102,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2109,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2116,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2123,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2130,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2137,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2347,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2348,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2349,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2359,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2362,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2365,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2368,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2371,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2374,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2377,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2380,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2383,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2386,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2510,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2513,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2516,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2519,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2522,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2525,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2528,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2531,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2534,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2537,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2540,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2543,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2546,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2549,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2552,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2555,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2558,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2625,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2626,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2659,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2666,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2673,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2680,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2687,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2694,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2701,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2827,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2828,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2832,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "PHAT_TRIEN_BEN_VUNG.html",
+    "element": 2853,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "element": 24,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "element": 42,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "element": 3770,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "element": 3771,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "SANG_TAO_KHOI_NGHIEP.html",
+    "element": 3772,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 24,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 42,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 374,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 382,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 383,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 391,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 398,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 755,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 762,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 789,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 811,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 1108,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 1115,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 1123,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 1131,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 1132,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 2608,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 2624,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 2647,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 2654,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 2655,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 2669,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3203,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3211,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3212,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3220,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3244,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3261,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3267,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3268,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3603,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3610,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3611,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3619,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3626,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3632,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3633,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3634,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3635,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3713,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3714,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 3715,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAI_CHINH_CA_NHAN.html",
+    "element": 4435,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "element": 23,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "element": 38,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "element": 41,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "element": 1748,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TAM_LY_UNG_DUNG.html",
+    "element": 1749,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 43,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 44,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 48,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 49,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 50,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 51,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 52,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 54,
+    "kind": "onchange",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 71,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 72,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 107,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 112,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 128,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "TCCN-LuyenDe.html",
+    "element": 140,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "element": 24,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "element": 39,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "element": 42,
+    "kind": "onclick",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+    "element": 2080,
+    "kind": "inline script",
+    "exit_code": 0,
+    "diagnostics": ""
+  }
+]
