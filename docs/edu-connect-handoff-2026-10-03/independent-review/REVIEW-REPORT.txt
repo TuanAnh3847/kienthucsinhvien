@@ -1,0 +1,24 @@
+ĐÃ SỬA R01–R03, R05; BÀN GIAO R04 — PASS
+Nguồn: 05c6b80cdca5b8dcda66bd26d9514ece41ca6d25
+Nhánh: codex/edu-connect-reading-polish
+File chính: reading.js, reading.css; thêm test điều hướng/font/zoom và chỉnh các runner QA để mặc định không ảnh.
+
+R01 PASS — /NLKT ch1, hai đích edu-reading-ch1-4/-5: 24 lượt Enter/touch, cả details lồng nhau đều mở và heading nhận focus.
+Độ rộng 320/390/768/1366px: heading/header lần lượt 85,9/62; 86,4/62; 82,2/58; 82,2/58px (mẫu đích đầu, Enter). Clearance mọi ca R01: 23,58–24,42px.
+
+R02 PASS — 48 lượt mở mới/reload/hashchange trên /TCCN ch5, /KTTC review, /NLKT ch1 và ID nguồn tony-step-title của /NLTTTC ch3 ở cả bốn độ rộng. Active tab và picker lần lượt đúng ch5/review/ch1/ch3; focus đúng heading; clearance 23,52–24,48px. Fragment lạ, mã hóa lỗi và chuỗi giống HTML không crash.
+
+R03 PASS — cả bốn HOME viewport: nút chữ 128,1×44px, X 44×44px, icon 16×16px; không đè tiêu đề. Cả hai nút tap đóng được; reload hiển thị lại theo hành vi cũ. Khóa lưu trữ ổn định giữ nguyên; loại riêng last_active_time do auth tự cập nhật khi người dùng chạm. Kiểm thêm các nút HOME khi đăng xuất: PASS.
+
+R05 PASS — 11.882 lượt đo: prose 16–18px / LH 1,65–1,70; note 15–16px / LH 1,65; label 13–15px / LH 1,50–1,65. Ba ca chữ nhỏ và ba ca giãn dòng nhỏ đều bị gate từ chối. 128 trường hợp data-cell/SVG được phân loại ngoại lệ, kiểm bằng gate bảng/sơ đồ riêng.
+
+Phạm vi: full render 416/416 (328 theory +84 practice +4 HOME), 320×740/390×844/768×1024/1366×900. Review 81/81: 328 lượt chương, 3.592 link hợp lệ, 648 lượt Enter đích đầu/cuối. Zoom 200% thực: 22/22; Edge viewport 1.336→668px, DPR 1→2, font CSS 16px giữ nguyên, pinch scale=1.
+Chiều cao ca chuyên biệt: R01/shared TOC 740/844/1024/844; R02 link 844/844/1024/844; R03 touch 740/844/844/844 theo thứ tự bốn độ rộng. Invalid fragment và signed-out HOME dùng chiều cao 900px.
+
+Hồi quy: 19/19 kết quả cuối PASS. Đã chạy full runbook; một scoped rerun student-acceptance sau sửa runner chờ header/fonts. Log FAIL ban đầu giữ nguyên. Hành trình mới PASS 320×740,375×812,390×844,768×1024,1366×900,1440×900 trên sáu môn luyện tập.
+Bảo toàn/cú pháp: html_check.py; preservation_check.py baseline; content_check.py --self-test; handoff_preservation.py --self-test; practice_trace_check.py; handoff_inline_syntax.py (37 script +420 handler); node --check (54 file); git diff --check baseline..HEAD: PASS.
+
+Provenance: render/review/zoom đo tại 1587f64; 05c6b80 chỉ sửa readiness của test. Đã đối chiếu 27 file giao diện/HTML giống nhau; JSON lưu commit/hash theo phạm vi. Các kiểm tra auth/Firebase/rules/routes và ngân hàng câu hỏi được giữ nguyên.
+Giới hạn: Edge headless, touch mô phỏng, Firebase fixture; không kiểm thị giác toàn trang hoặc auth/dữ liệu production trong lượt này. Không có lỗi còn lại trong phạm vi đã đo.
+Preview cục bộ: http://127.0.0.1:4173/TCCN#edu-reading-ch5-1
+Không chụp ảnh/tạo ZIP mới; chưa push, merge hoặc deploy.

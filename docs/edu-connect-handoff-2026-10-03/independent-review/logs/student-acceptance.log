@@ -1,0 +1,7 @@
+page.evaluate: ReferenceError: EduHeader is not defined
+    at eval (eval at evaluate (:311:30), <anonymous>:1:31)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at D:\kienthucsinhvien-main\tests\student-acceptance.cjs:18:21 {
+  log: []
+}

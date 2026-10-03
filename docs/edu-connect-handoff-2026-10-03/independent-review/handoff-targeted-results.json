@@ -1,0 +1,813 @@
+{
+  "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+  "screenshots_enabled": false,
+  "started_utc": "2026-10-03T07:46:47.400Z",
+  "finished_utc": "2026-10-03T07:47:31.319Z",
+  "note": "Legacy PNG reference fields are not image artifacts produced in this run.",
+  "results": [
+    {
+      "name": "/STKN ch3 breakpoint 320",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 320,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_320.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 390",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 390,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_390.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 641",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 641,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_641.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 767",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 767,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_767.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 768",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 768,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_768.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 800",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 800,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_800.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 820",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 820,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_820.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 900",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 900,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_900.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 1024",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 1024,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_1024.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 1279",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 1279,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_1279.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 1280",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 1280,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_1280.png"
+    },
+    {
+      "name": "/STKN ch3 breakpoint 1366",
+      "pass": true,
+      "route": "/STKN",
+      "tab": "ch3",
+      "width": 1366,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/STKN_ch3_1366.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 320",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 320,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_320.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 390",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 390,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_390.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 641",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 641,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_641.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 767",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 767,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_767.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 768",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 768,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_768.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 800",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 800,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_800.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 820",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 820,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_820.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 900",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 900,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_900.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 1024",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 1024,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_1024.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 1279",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 1279,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_1279.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 1280",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 1280,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_1280.png"
+    },
+    {
+      "name": "/NLTTTC ch2 breakpoint 1366",
+      "pass": true,
+      "route": "/NLTTTC",
+      "tab": "ch2",
+      "width": 1366,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/NLTTTC_ch2_1366.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 320",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 320,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_320.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 390",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 390,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_390.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 641",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 641,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_641.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 767",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 767,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_767.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 768",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 768,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_768.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 800",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 800,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_800.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 820",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 820,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_820.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 900",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 900,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_900.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 1024",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 1024,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_1024.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 1279",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 1279,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_1279.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 1280",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 1280,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_1280.png"
+    },
+    {
+      "name": "/TLUD ch7 breakpoint 1366",
+      "pass": true,
+      "route": "/TLUD",
+      "tab": "ch7",
+      "width": 1366,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/TLUD_ch7_1366.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 320",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 320,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_320.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 390",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 390,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_390.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 641",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 641,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_641.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 767",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 767,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_767.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 768",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 768,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_768.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 800",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 800,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_800.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 820",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 820,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_820.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 900",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 900,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_900.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 1024",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 1024,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_1024.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 1279",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 1279,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_1279.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 1280",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 1280,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_1280.png"
+    },
+    {
+      "name": "/PTBV ch2 breakpoint 1366",
+      "pass": true,
+      "route": "/PTBV",
+      "tab": "ch2",
+      "width": 1366,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/PTBV_ch2_1366.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 320",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 320,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_320.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 390",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 390,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_390.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 641",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 641,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_641.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 767",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 767,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_767.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 768",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 768,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_768.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 800",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 800,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_800.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 820",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 820,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_820.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 900",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 900,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_900.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 1024",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 1024,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_1024.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 1279",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 1279,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_1279.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 1280",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 1280,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_1280.png"
+    },
+    {
+      "name": "/VHDDTKD ch2 breakpoint 1366",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "tab": "ch2",
+      "width": 1366,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/VHDDTKD_ch2_1366.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 320",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 320,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_320.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 390",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 390,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_390.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 641",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 641,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_641.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 767",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 767,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_767.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 768",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 768,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_768.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 800",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 800,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_800.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 820",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 820,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_820.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 900",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 900,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_900.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 1024",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 1024,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_1024.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 1279",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 1279,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_1279.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 1280",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 1280,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_1280.png"
+    },
+    {
+      "name": "/LTMQT ch1 breakpoint 1366",
+      "pass": true,
+      "route": "/LTMQT",
+      "tab": "ch1",
+      "width": 1366,
+      "shapes": [],
+      "evidence": "evidence/after/targeted/LTMQT_ch1_1366.png"
+    },
+    {
+      "name": "/NLKT two faces at 200% text 320",
+      "pass": true,
+      "route": "/NLKT",
+      "width": 320,
+      "cards": 11,
+      "evidence": [
+        "evidence/after/targeted/NLKT_ch1_320_text200.png"
+      ]
+    },
+    {
+      "name": "/NLKT two faces at 200% text 390",
+      "pass": true,
+      "route": "/NLKT",
+      "width": 390,
+      "cards": 11,
+      "evidence": [
+        "evidence/after/targeted/NLKT_ch1_390_text200.png"
+      ]
+    },
+    {
+      "name": "/NLTTTC two faces at 200% text 320",
+      "pass": true,
+      "route": "/NLTTTC",
+      "width": 320,
+      "cards": 72,
+      "evidence": [
+        "evidence/after/targeted/NLTTTC_ch1_320_text200.png",
+        "evidence/after/targeted/NLTTTC_review_320_text200.png"
+      ]
+    },
+    {
+      "name": "/NLTTTC two faces at 200% text 390",
+      "pass": true,
+      "route": "/NLTTTC",
+      "width": 390,
+      "cards": 72,
+      "evidence": [
+        "evidence/after/targeted/NLTTTC_ch1_390_text200.png",
+        "evidence/after/targeted/NLTTTC_review_390_text200.png"
+      ]
+    },
+    {
+      "name": "/STKN two faces at 200% text 320",
+      "pass": true,
+      "route": "/STKN",
+      "width": 320,
+      "cards": 12,
+      "evidence": [
+        "evidence/after/targeted/STKN_review_320_text200.png"
+      ]
+    },
+    {
+      "name": "/STKN two faces at 200% text 390",
+      "pass": true,
+      "route": "/STKN",
+      "width": 390,
+      "cards": 12,
+      "evidence": [
+        "evidence/after/targeted/STKN_review_390_text200.png"
+      ]
+    },
+    {
+      "name": "/TLUD two faces at 200% text 320",
+      "pass": true,
+      "route": "/TLUD",
+      "width": 320,
+      "cards": 6,
+      "evidence": [
+        "evidence/after/targeted/TLUD_ch1_320_text200.png",
+        "evidence/after/targeted/TLUD_ch2_320_text200.png"
+      ]
+    },
+    {
+      "name": "/TLUD two faces at 200% text 390",
+      "pass": true,
+      "route": "/TLUD",
+      "width": 390,
+      "cards": 6,
+      "evidence": [
+        "evidence/after/targeted/TLUD_ch1_390_text200.png",
+        "evidence/after/targeted/TLUD_ch2_390_text200.png"
+      ]
+    },
+    {
+      "name": "/VHDDTKD two faces at 200% text 320",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "width": 320,
+      "cards": 8,
+      "evidence": [
+        "evidence/after/targeted/VHDDTKD_review_320_text200.png"
+      ]
+    },
+    {
+      "name": "/VHDDTKD two faces at 200% text 390",
+      "pass": true,
+      "route": "/VHDDTKD",
+      "width": 390,
+      "cards": 8,
+      "evidence": [
+        "evidence/after/targeted/VHDDTKD_review_390_text200.png"
+      ]
+    },
+    {
+      "name": "PTBV modal keyboard, Escape, focus return and short landscape",
+      "pass": true,
+      "evidence": "evidence/after/targeted/PTBV_landscape_modal.png"
+    },
+    {
+      "name": "KTCT rendered math and unchanged arithmetic at custom inputs",
+      "pass": true,
+      "outputs": [
+        {
+          "inputs": [
+            1000,
+            200,
+            200
+          ],
+          "text": "Lượng giá trị W = 1000 + 200 + 200 = 1400$"
+        },
+        {
+          "inputs": [
+            1234,
+            456,
+            789
+          ],
+          "text": "Lượng giá trị W = 1234 + 456 + 789 = 2479$"
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            0
+          ],
+          "text": "Lượng giá trị W = 0 + 0 + 0 = 0$"
+        },
+        {
+          "inputs": [
+            50,
+            1000,
+            5
+          ],
+          "text": "Tiền cần thiết M = (50 × 1000) / 5 = 10000.00$"
+        },
+        {
+          "inputs": [
+            123,
+            456,
+            7
+          ],
+          "text": "Tiền cần thiết M = (123 × 456) / 7 = 8012.57$"
+        }
+      ],
+      "evidence": "evidence/after/targeted/KTCT_ch2_390_math.png"
+    }
+  ]
+}

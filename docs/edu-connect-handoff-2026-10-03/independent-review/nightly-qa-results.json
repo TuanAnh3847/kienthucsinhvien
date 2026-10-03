@@ -1,0 +1,1319 @@
+{
+  "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+  "screenshots_enabled": false,
+  "started_utc": "2026-10-03T07:45:28.554Z",
+  "finished_utc": "2026-10-03T07:47:57.247Z",
+  "note": "Legacy PNG reference fields are not image artifacts produced in this run.",
+  "results": [
+    {
+      "route": "/",
+      "widths": [
+        {
+          "width": 320,
+          "cards": [
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            205,
+            233,
+            233,
+            233,
+            205,
+            205
+          ]
+        },
+        {
+          "width": 390,
+          "cards": [
+            233,
+            233,
+            233,
+            233,
+            233,
+            205,
+            205,
+            233,
+            233,
+            233,
+            205,
+            205
+          ]
+        },
+        {
+          "width": 375,
+          "cards": [
+            233,
+            233,
+            233,
+            233,
+            233,
+            205,
+            205,
+            233,
+            233,
+            233,
+            205,
+            205
+          ]
+        },
+        {
+          "width": 768,
+          "cards": [
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            205,
+            205
+          ]
+        },
+        {
+          "width": 1366,
+          "cards": [
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233
+          ]
+        },
+        {
+          "width": 1440,
+          "cards": [
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233,
+            233
+          ]
+        }
+      ],
+      "leakage": [],
+      "controls": [],
+      "errors": []
+    },
+    {
+      "route": "/KTTC",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        }
+      ],
+      "leakage": [],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "timeline",
+          "chapter": "ch2"
+        },
+        {
+          "type": "formula",
+          "chapter": "ch1"
+        },
+        {
+          "type": "flashcard",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/KTQT",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        }
+      ],
+      "leakage": [
+        {
+          "chapter": "ch5",
+          "text": "4 Hình thức FDI chủ yếu (Slide 15)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "Tác động hai mặt của FDI đối với nền kinh tế nước tiếp nhận (Slide 16)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "Mô hình VMPL hai quốc gia (Slide 18-24)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "Bài tập định lượng di chuyển lao động (Slide 25)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "Đề bài nguyên gốc (Slide 17): Hai quốc gia A và B cùng sản xuất với đường cầu vốn (capital demand curve): Q_K = -5r + 80 (trong đó Q_K là lượng vốn sử dụng tính bằng tỷ USD, r là lãi suất tính theo %). Trước khi di chuyển vốn, lãi suất của Quốc gia 1 là r₁ = 2%, Quốc gia 2 là r₂ = 4%."
+        },
+        {
+          "chapter": "ch5",
+          "text": "5 Mục đích chính của FDI (Slide 14):"
+        },
+        {
+          "chapter": "ch5",
+          "text": "4 Hình thức FDI chủ yếu (Slide 15)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "Tác động hai mặt của FDI đối với nền kinh tế nước tiếp nhận (Slide 16)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "✓ 6 Lợi ích cốt lõi (Pros - Slide 16)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "⚠ 6 Rủi ro & Hạn chế (Cons - Slide 16)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "Mô hình VMPL hai quốc gia (Slide 18-24)"
+        },
+        {
+          "chapter": "ch5",
+          "text": "Bài tập định lượng di chuyển lao động (Slide 25)"
+        },
+        {
+          "chapter": "ch6",
+          "text": "Bản chất 5 cấp độ (Slide 4-13)"
+        },
+        {
+          "chapter": "ch6",
+          "text": "3. Bài tập tình huống 3 quốc gia (Slide 218)"
+        },
+        {
+          "chapter": "ch6",
+          "text": "Bản chất 5 cấp độ (Slide 4-13)"
+        },
+        {
+          "chapter": "ch6",
+          "text": "3. Bài tập tình huống 3 quốc gia (Slide 218)"
+        }
+      ],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "timeline",
+          "chapter": "ch1"
+        },
+        {
+          "type": "diagram",
+          "chapter": "ch1"
+        },
+        {
+          "type": "formula",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/KTCTMLN",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        }
+      ],
+      "leakage": [],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/LTMQT",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 5
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 5
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 5
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 5
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 5
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 5
+        }
+      ],
+      "leakage": [],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "timeline",
+          "chapter": "ch1"
+        },
+        {
+          "type": "mindmap",
+          "chapter": "ch1"
+        },
+        {
+          "type": "diagram",
+          "chapter": "ch1"
+        },
+        {
+          "type": "flashcard",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        },
+        {
+          "type": "callout",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/NLKT",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        }
+      ],
+      "leakage": [],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "formula",
+          "chapter": "ch1"
+        },
+        {
+          "type": "tool",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        },
+        {
+          "type": "callout",
+          "chapter": "ch2"
+        }
+      ]
+    },
+    {
+      "route": "/NLTTTC",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        }
+      ],
+      "leakage": [],
+      "controls": [
+        {
+          "width": 320,
+          "groups": 16,
+          "grids": 4
+        },
+        {
+          "width": 390,
+          "groups": 16,
+          "grids": 4
+        },
+        {
+          "width": 375,
+          "groups": 16,
+          "grids": 4
+        },
+        {
+          "width": 768,
+          "groups": 16,
+          "grids": 4
+        },
+        {
+          "width": 1366,
+          "groups": 16,
+          "grids": 4
+        },
+        {
+          "width": 1440,
+          "groups": 16,
+          "grids": 4
+        }
+      ],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "timeline",
+          "chapter": "ch1"
+        },
+        {
+          "type": "mindmap",
+          "chapter": "ch1"
+        },
+        {
+          "type": "formula",
+          "chapter": "ch4"
+        },
+        {
+          "type": "flashcard",
+          "chapter": "ch1"
+        },
+        {
+          "type": "tool",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        },
+        {
+          "type": "callout",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/NMLH",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        }
+      ],
+      "leakage": [],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/PTBV",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        }
+      ],
+      "leakage": [],
+      "controls": [
+        {
+          "width": 320,
+          "groups": 59,
+          "grids": 7
+        },
+        {
+          "width": 390,
+          "groups": 59,
+          "grids": 7
+        },
+        {
+          "width": 375,
+          "groups": 59,
+          "grids": 7
+        },
+        {
+          "width": 768,
+          "groups": 59,
+          "grids": 7
+        },
+        {
+          "width": 1366,
+          "groups": 59,
+          "grids": 7
+        },
+        {
+          "width": 1440,
+          "groups": 59,
+          "grids": 7
+        }
+      ],
+      "errors": [],
+      "sorter": "correct answers, scoring and reset PASS",
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "timeline",
+          "chapter": "ch5"
+        },
+        {
+          "type": "mindmap",
+          "chapter": "ch1"
+        },
+        {
+          "type": "diagram",
+          "chapter": "ch2"
+        },
+        {
+          "type": "flashcard",
+          "chapter": "ch1"
+        },
+        {
+          "type": "tool",
+          "chapter": "ch3"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        },
+        {
+          "type": "callout",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/STKN",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        }
+      ],
+      "leakage": [],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "mindmap",
+          "chapter": "ch1"
+        },
+        {
+          "type": "diagram",
+          "chapter": "ch1"
+        },
+        {
+          "type": "flashcard",
+          "chapter": "review"
+        },
+        {
+          "type": "tool",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/TCCN",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 7
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 7
+        }
+      ],
+      "leakage": [
+        {
+          "chapter": "ch6",
+          "text": "Cơ cấu 5 yếu tố cốt lõi quyết định điểm tín dụng theo slide bài giảng môn học:"
+        }
+      ],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "timeline",
+          "chapter": "ch1"
+        },
+        {
+          "type": "mindmap",
+          "chapter": "ch1"
+        },
+        {
+          "type": "diagram",
+          "chapter": "ch1"
+        },
+        {
+          "type": "formula",
+          "chapter": "ch4"
+        },
+        {
+          "type": "flashcard",
+          "chapter": "ch1"
+        },
+        {
+          "type": "tool",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        },
+        {
+          "type": "callout",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/TLUD",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 8
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 8
+        }
+      ],
+      "leakage": [],
+      "controls": [],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "mindmap",
+          "chapter": "review"
+        },
+        {
+          "type": "diagram",
+          "chapter": "ch1"
+        },
+        {
+          "type": "formula",
+          "chapter": "ch2"
+        },
+        {
+          "type": "flashcard",
+          "chapter": "ch1"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        },
+        {
+          "type": "callout",
+          "chapter": "ch1"
+        }
+      ]
+    },
+    {
+      "route": "/VHDDTKD",
+      "widths": [
+        {
+          "width": 320,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 390,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 375,
+          "sticky": {
+            "top": 0,
+            "bottom": 61,
+            "height": 61
+          },
+          "chapters": 6
+        },
+        {
+          "width": 768,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        },
+        {
+          "width": 1366,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        },
+        {
+          "width": 1440,
+          "sticky": {
+            "top": 0,
+            "bottom": 57,
+            "height": 57
+          },
+          "chapters": 6
+        }
+      ],
+      "leakage": [],
+      "controls": [
+        {
+          "width": 320,
+          "groups": 6,
+          "grids": 0
+        },
+        {
+          "width": 390,
+          "groups": 6,
+          "grids": 0
+        },
+        {
+          "width": 375,
+          "groups": 6,
+          "grids": 0
+        },
+        {
+          "width": 768,
+          "groups": 6,
+          "grids": 0
+        },
+        {
+          "width": 1366,
+          "groups": 6,
+          "grids": 0
+        },
+        {
+          "width": 1440,
+          "groups": 6,
+          "grids": 0
+        }
+      ],
+      "errors": [],
+      "components": [
+        {
+          "type": "table",
+          "chapter": "ch1"
+        },
+        {
+          "type": "formula",
+          "chapter": "ch4"
+        },
+        {
+          "type": "flashcard",
+          "chapter": "review"
+        },
+        {
+          "type": "disclosure",
+          "chapter": "ch1"
+        },
+        {
+          "type": "callout",
+          "chapter": "ch1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+PASS /STKN ch3 breakpoint 320
+PASS /STKN ch3 breakpoint 390
+PASS /STKN ch3 breakpoint 641
+PASS /STKN ch3 breakpoint 767
+PASS /STKN ch3 breakpoint 768
+PASS /STKN ch3 breakpoint 800
+PASS /STKN ch3 breakpoint 820
+PASS /STKN ch3 breakpoint 900
+PASS /STKN ch3 breakpoint 1024
+PASS /STKN ch3 breakpoint 1279
+PASS /STKN ch3 breakpoint 1280
+PASS /STKN ch3 breakpoint 1366
+PASS /NLTTTC ch2 breakpoint 320
+PASS /NLTTTC ch2 breakpoint 390
+PASS /NLTTTC ch2 breakpoint 641
+PASS /NLTTTC ch2 breakpoint 767
+PASS /NLTTTC ch2 breakpoint 768
+PASS /NLTTTC ch2 breakpoint 800
+PASS /NLTTTC ch2 breakpoint 820
+PASS /NLTTTC ch2 breakpoint 900
+PASS /NLTTTC ch2 breakpoint 1024
+PASS /NLTTTC ch2 breakpoint 1279
+PASS /NLTTTC ch2 breakpoint 1280
+PASS /NLTTTC ch2 breakpoint 1366
+PASS /TLUD ch7 breakpoint 320
+PASS /TLUD ch7 breakpoint 390
+PASS /TLUD ch7 breakpoint 641
+PASS /TLUD ch7 breakpoint 767
+PASS /TLUD ch7 breakpoint 768
+PASS /TLUD ch7 breakpoint 800
+PASS /TLUD ch7 breakpoint 820
+PASS /TLUD ch7 breakpoint 900
+PASS /TLUD ch7 breakpoint 1024
+PASS /TLUD ch7 breakpoint 1279
+PASS /TLUD ch7 breakpoint 1280
+PASS /TLUD ch7 breakpoint 1366
+PASS /PTBV ch2 breakpoint 320
+PASS /PTBV ch2 breakpoint 390
+PASS /PTBV ch2 breakpoint 641
+PASS /PTBV ch2 breakpoint 767
+PASS /PTBV ch2 breakpoint 768
+PASS /PTBV ch2 breakpoint 800
+PASS /PTBV ch2 breakpoint 820
+PASS /PTBV ch2 breakpoint 900
+PASS /PTBV ch2 breakpoint 1024
+PASS /PTBV ch2 breakpoint 1279
+PASS /PTBV ch2 breakpoint 1280
+PASS /PTBV ch2 breakpoint 1366
+PASS /VHDDTKD ch2 breakpoint 320
+PASS /VHDDTKD ch2 breakpoint 390
+PASS /VHDDTKD ch2 breakpoint 641
+PASS /VHDDTKD ch2 breakpoint 767
+PASS /VHDDTKD ch2 breakpoint 768
+PASS /VHDDTKD ch2 breakpoint 800
+PASS /VHDDTKD ch2 breakpoint 820
+PASS /VHDDTKD ch2 breakpoint 900
+PASS /VHDDTKD ch2 breakpoint 1024
+PASS /VHDDTKD ch2 breakpoint 1279
+PASS /VHDDTKD ch2 breakpoint 1280
+PASS /VHDDTKD ch2 breakpoint 1366
+PASS /LTMQT ch1 breakpoint 320
+PASS /LTMQT ch1 breakpoint 390
+PASS /LTMQT ch1 breakpoint 641
+PASS /LTMQT ch1 breakpoint 767
+PASS /LTMQT ch1 breakpoint 768
+PASS /LTMQT ch1 breakpoint 800
+PASS /LTMQT ch1 breakpoint 820
+PASS /LTMQT ch1 breakpoint 900
+PASS /LTMQT ch1 breakpoint 1024
+PASS /LTMQT ch1 breakpoint 1279
+PASS /LTMQT ch1 breakpoint 1280
+PASS /LTMQT ch1 breakpoint 1366
+PASS /NLKT two faces at 200% text 320
+PASS /NLKT two faces at 200% text 390
+PASS /NLTTTC two faces at 200% text 320
+PASS /NLTTTC two faces at 200% text 390
+PASS /STKN two faces at 200% text 320
+PASS /STKN two faces at 200% text 390
+PASS /TLUD two faces at 200% text 320
+PASS /TLUD two faces at 200% text 390
+PASS /VHDDTKD two faces at 200% text 320
+PASS /VHDDTKD two faces at 200% text 390
+PASS PTBV modal keyboard, Escape, focus return and short landscape
+PASS KTCT rendered math and unchanged arithmetic at custom inputs

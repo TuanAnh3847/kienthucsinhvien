@@ -1,0 +1,97 @@
+{
+  "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+  "screenshots_enabled": false,
+  "started_utc": "2026-10-03T07:41:26.065Z",
+  "finished_utc": "2026-10-03T07:43:24.196Z",
+  "note": "Legacy PNG reference fields are not image artifacts produced in this run.",
+  "results": [
+    {
+      "name": "KE_TOAN_TAI_CHINH.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "KINH_TE_QUOC_TE.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "KinhTeChinhTriMacLeNin.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "LUAT_THUONG_MAI_QUOC_TE.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "NGUYEN_LY_KE_TOAN.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "NhapMonLuatHoc.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "PHAT_TRIEN_BEN_VUNG.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "SANG_TAO_KHOI_NGHIEP.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "TAI_CHINH_CA_NHAN.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "TAM_LY_UNG_DUNG.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html: chapters, headers, tools and profile",
+      "pass": true
+    },
+    {
+      "name": "Accounting theory choices respond and classification works with keyboard",
+      "pass": true
+    },
+    {
+      "name": "Guest modal focus, short viewport, Escape and clean routes",
+      "pass": true
+    },
+    {
+      "name": "Login deduplication, profile fallback, listener cleanup, keyboard logout",
+      "pass": true
+    },
+    {
+      "name": "Popup cancellation and logout failure remain usable",
+      "pass": true
+    },
+    {
+      "name": "Idle initialization, expiry, activity, and stalled presence writes",
+      "pass": true
+    },
+    {
+      "name": "Online configuration handles malformed data",
+      "pass": true
+    },
+    {
+      "name": "Practice: accounting quiz grading, retry, solutions, and failed cloud writes",
+      "pass": true
+    },
+    {
+      "name": "Practice: finance quick quiz, exam, timer, mistakes, and restart",
+      "pass": true
+    },
+    {
+      "name": "Current subject calculators and visual replays respond to input",
+      "pass": true
+    },
+    {
+      "name": "Admin responsive controls and history modal",
+      "pass": true
+    }
+  ]
+}

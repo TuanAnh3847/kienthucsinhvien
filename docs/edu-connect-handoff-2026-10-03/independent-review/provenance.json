@@ -1,0 +1,117 @@
+{
+  "product_source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+  "test_readiness_commit": "05c6b80cdca5b8dcda66bd26d9514ece41ca6d25",
+  "changes_between_commits": [
+    "tests/student-acceptance.cjs"
+  ],
+  "product_files_unchanged": [
+    {
+      "file": "reading.js",
+      "normalized_sha256": "4f77f04953681d54e668d57a8e972ad4746588f9106a7075c1c5913461cefa59"
+    },
+    {
+      "file": "reading.css",
+      "normalized_sha256": "79dca2a99d9d15e8303320291d4036b7e187a7653984cda0f98dab6b62663710"
+    },
+    {
+      "file": "edu-header.js",
+      "normalized_sha256": "caf5f6fdd8c23490679cacf477b7cbf8db5d205dea388c3b0366e5955517ab3c"
+    },
+    {
+      "file": "edu-study.js",
+      "normalized_sha256": "58069895f35d460b8b83efa24618622a61eaaacf6f8bc501b2a03edbcc6bfe11"
+    },
+    {
+      "file": "shared.css",
+      "normalized_sha256": "de5405644a5ec3bfe77f3e5c18ec14727018f65a7ebaf79fbff431c4aa86b270"
+    },
+    {
+      "file": "404.html",
+      "normalized_sha256": "25108f1fee8341a7f055ad5f8d696281b76b3f788b7e34f3c243b20e6593cb49"
+    },
+    {
+      "file": "admin.html",
+      "normalized_sha256": "c4450db5879f170d3f3cd596b6f956882fd6261c18c24b9a867f04c5edaf654d"
+    },
+    {
+      "file": "index.html",
+      "normalized_sha256": "81c259fa6706ce772e62ea909ecffa292eb9f27ed649cdc7661857675361e7d5"
+    },
+    {
+      "file": "KE_TOAN_TAI_CHINH.html",
+      "normalized_sha256": "9f7d330447a754c5c1d8ba702a92e7ae7de77c20f4005836f66f352e354cc5ce"
+    },
+    {
+      "file": "KinhTeChinhTriMacLeNin.html",
+      "normalized_sha256": "1b24715448c79d42cd661d19ba484a315a9cd3bd9266fd4c31ef5e221f385ed1"
+    },
+    {
+      "file": "KINH_TE_QUOC_TE.html",
+      "normalized_sha256": "2e3db95e18b780243b1c91703062d197f43d5dc210c42a20f31692dfded66ebe"
+    },
+    {
+      "file": "KTQT-LuyenDe.html",
+      "normalized_sha256": "688664b885758987899f4f025900c94bcbe1b460bfb18e12b56f675ef965ed1b"
+    },
+    {
+      "file": "LTMQT-LuyenDe.html",
+      "normalized_sha256": "9cc26bff617a8aab901fb274e800e83fe57df292f16f3adf7a88f5116b059fa5"
+    },
+    {
+      "file": "LUAT_THUONG_MAI_QUOC_TE.html",
+      "normalized_sha256": "0c89c96dad08537e6db02ec3b257e6486bd67ac32ec936cd6e635b6481398264"
+    },
+    {
+      "file": "NguyenLyKeToan-LuyenDe.html",
+      "normalized_sha256": "4dd7a61ce15fd044e3cfbf5f1fd2fd5d719b7fe419de6f393694f73cb53bc119"
+    },
+    {
+      "file": "NGUYEN_LY_KE_TOAN.html",
+      "normalized_sha256": "5f965de6fc9063d22a95934fb2eab144140496c3130e9986bfce34381981ae6a"
+    },
+    {
+      "file": "NGUYEN_LY_THI_TRUONG_TAI_CHINH.html",
+      "normalized_sha256": "a2fe8e32fab51fec0c486d6b71246a2de940f19c4fc4bd6ed5814eca39549a7f"
+    },
+    {
+      "file": "NhapMonLuatHoc-LuyenDe.html",
+      "normalized_sha256": "7750164d0789ddc1d044aaf620c62c606fb97bbb656498f5b5784622881b381f"
+    },
+    {
+      "file": "NhapMonLuatHoc.html",
+      "normalized_sha256": "da35e2261c272fe51e7f7246e48d03905fe0535036728b9b52c38036ba291d27"
+    },
+    {
+      "file": "NLTTTC-LuyenDe.html",
+      "normalized_sha256": "554dc5390ab2df98d48eb0ea94aab2ffdc1da55865e3ad71e14f0a1fdd0bb2fe"
+    },
+    {
+      "file": "PHAT_TRIEN_BEN_VUNG.html",
+      "normalized_sha256": "9ffe8af49993b207303abe8377e7b914a0d3ed8dc40e638dbab11dcb940e690f"
+    },
+    {
+      "file": "privacy.html",
+      "normalized_sha256": "31b35baca28569270d780532a46c85df95534ba447e5454dddd29a98c6964d7e"
+    },
+    {
+      "file": "SANG_TAO_KHOI_NGHIEP.html",
+      "normalized_sha256": "88820ab619ffec95b8f09058bbb224711f12a281d9d67057fbc21d36d22fb9a3"
+    },
+    {
+      "file": "TAI_CHINH_CA_NHAN.html",
+      "normalized_sha256": "6b74228447362217a451b6d2a161300192008b752f5b74efad855f8b29717f77"
+    },
+    {
+      "file": "TAM_LY_UNG_DUNG.html",
+      "normalized_sha256": "fb17aa42dbecef94278d1f6722e5384bb583cc924f40052f1ef98794dfa0f4a7"
+    },
+    {
+      "file": "TCCN-LuyenDe.html",
+      "normalized_sha256": "beaf22f6f57ca0941f3e890490b1c12d20978a7deb7322eb18d2bcc4dbdd2c3a"
+    },
+    {
+      "file": "VAN_HOA_VA_DAO_DUC_TRONG_KINH_DOANH_QUOC_TE.html",
+      "normalized_sha256": "70df757cececa0a62753f22bbc6e0bb1568e36f16418b00750892e62468cab9f"
+    }
+  ]
+}

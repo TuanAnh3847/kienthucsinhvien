@@ -1,0 +1,282 @@
+{
+  "source_commit": "05c6b80cdca5b8dcda66bd26d9514ece41ca6d25",
+  "product_source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+  "branch": "codex/edu-connect-reading-polish",
+  "status": {
+    "R01": "PASS",
+    "R02": "PASS",
+    "R03": "PASS",
+    "R04": "PASS",
+    "R05": "PASS"
+  },
+  "screenshots_enabled": false,
+  "new_png_files": 0,
+  "coverage": {
+    "render_states": 416,
+    "theory_chapter_viewports": 328,
+    "practice_mode_viewports": 84,
+    "home_viewports": 4,
+    "review_scenarios": 81,
+    "toc_links_checked": 3592,
+    "toc_enter_actions": 648,
+    "actual_zoom_scenarios": 22,
+    "runbook_latest_pass": 19,
+    "runbook_method": "Full 19-check run, followed by one scoped student-acceptance retry after test readiness repair; original failed attempt retained.",
+    "inline_scripts": 37,
+    "inline_handlers": 420,
+    "syntax_files": 54
+  },
+  "fonts": {
+    "prose": {
+      "measurements": 8044,
+      "font_px": [
+        16,
+        18
+      ],
+      "line_height_ratio": [
+        1.65,
+        1.7000000000000002
+      ]
+    },
+    "note": {
+      "measurements": 1112,
+      "font_px": [
+        15,
+        16
+      ],
+      "line_height_ratio": [
+        1.65,
+        1.65
+      ]
+    },
+    "label": {
+      "measurements": 2726,
+      "font_px": [
+        13,
+        15
+      ],
+      "line_height_ratio": [
+        1.5,
+        1.65
+      ]
+    }
+  },
+  "effective_runbook_results": [
+    {
+      "name": "html5",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "python.exe tests/html_check.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:12.155Z",
+      "finished_utc": "2026-10-03T07:41:13.027Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/html5.log"
+    },
+    {
+      "name": "preservation",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "python.exe tests/preservation_check.py 5b0e619fb6838363a79dcb2966a6c138375a59ec",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:13.028Z",
+      "finished_utc": "2026-10-03T07:41:15.690Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/preservation.log"
+    },
+    {
+      "name": "academic-self-test",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "python.exe tests/content_check.py --self-test",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:15.691Z",
+      "finished_utc": "2026-10-03T07:41:22.551Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/academic-self-test.log"
+    },
+    {
+      "name": "current-base-self-test",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "python.exe tests/handoff_preservation.py --self-test",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:22.552Z",
+      "finished_utc": "2026-10-03T07:41:24.891Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/current-base-self-test.log"
+    },
+    {
+      "name": "practice-trace",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "python.exe tests/practice_trace_check.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:24.892Z",
+      "finished_utc": "2026-10-03T07:41:25.613Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/practice-trace.log"
+    },
+    {
+      "name": "syntax-auth.js",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe --check auth.js",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:25.613Z",
+      "finished_utc": "2026-10-03T07:41:25.694Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/syntax-auth.js.log"
+    },
+    {
+      "name": "syntax-admin.js",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe --check admin.js",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:25.695Z",
+      "finished_utc": "2026-10-03T07:41:25.772Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/syntax-admin.js.log"
+    },
+    {
+      "name": "syntax-edu-header.js",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe --check edu-header.js",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:25.773Z",
+      "finished_utc": "2026-10-03T07:41:25.848Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/syntax-edu-header.js.log"
+    },
+    {
+      "name": "syntax-edu-study.js",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe --check edu-study.js",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:25.849Z",
+      "finished_utc": "2026-10-03T07:41:25.914Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/syntax-edu-study.js.log"
+    },
+    {
+      "name": "syntax-reading.js",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe --check reading.js",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:25.915Z",
+      "finished_utc": "2026-10-03T07:41:25.984Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/syntax-reading.js.log"
+    },
+    {
+      "name": "diff-check",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:25.985Z",
+      "finished_utc": "2026-10-03T07:41:26.057Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/diff-check.log"
+    },
+    {
+      "name": "audit",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe tests/audit.cjs",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:26.058Z",
+      "finished_utc": "2026-10-03T07:43:18.272Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/audit.log"
+    },
+    {
+      "name": "regression",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe tests/regression.cjs",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:41:26.065Z",
+      "finished_utc": "2026-10-03T07:43:24.196Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/regression.log"
+    },
+    {
+      "source_commit": "05c6b80cdca5b8dcda66bd26d9514ece41ca6d25",
+      "name": "student-acceptance",
+      "screenshots_enabled": false,
+      "started_utc": "2026-10-03T07:45:13.388Z",
+      "finished_utc": "2026-10-03T07:51:21.188Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "student-acceptance-retry.log"
+    },
+    {
+      "name": "practice-behavior",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe tests/practice-behavior.cjs",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:43:18.273Z",
+      "finished_utc": "2026-10-03T07:45:14.202Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/practice-behavior.log"
+    },
+    {
+      "name": "component-overflow",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe tests/component-overflow.cjs",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:45:14.203Z",
+      "finished_utc": "2026-10-03T07:45:28.553Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/component-overflow.log"
+    },
+    {
+      "name": "theory-interactions",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe tests/theory-interactions.cjs",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:43:28.458Z",
+      "finished_utc": "2026-10-03T07:46:47.399Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/theory-interactions.log"
+    },
+    {
+      "name": "handoff-targeted",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe tests/handoff-targeted.cjs",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:46:47.400Z",
+      "finished_utc": "2026-10-03T07:47:31.319Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/handoff-targeted.log"
+    },
+    {
+      "name": "nightly-qa",
+      "source_commit": "1587f64d364651dcebff21e544b997a6607852d3",
+      "screenshots_enabled": false,
+      "command": "node.exe tests/nightly-qa.cjs",
+      "exit_code": 0,
+      "status": "PASS",
+      "started_utc": "2026-10-03T07:45:28.554Z",
+      "finished_utc": "2026-10-03T07:47:57.247Z",
+      "log": "docs/edu-connect-handoff-2026-10-03/independent-review/logs/nightly-qa.log"
+    }
+  ],
+  "provenance": "416 render + 81 review + 22 zoom tested product commit 1587f64. Commit 05c6b80 only changes student runner readiness. provenance.json verifies identical application files.",
+  "limits": [
+    "Edge headless and simulated touch; Firebase fixture used.",
+    "No manual full-page visual review in this follow-up.",
+    "Production authentication/data/deployment not exercised; original preservation guards passed."
+  ],
+  "preview": "http://127.0.0.1:4173/TCCN#edu-reading-ch5-1",
+  "push_merge_deploy": false
+}
